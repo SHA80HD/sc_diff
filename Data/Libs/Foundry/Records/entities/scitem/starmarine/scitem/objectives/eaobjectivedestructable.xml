@@ -1,0 +1,104 @@
+<EntityClassDefinition.EAObjectiveDestructable Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="e0b657a1-3288-4f0c-a42d-027b24aad180" __path="libs/foundry/records/entities/scitem/starmarine/scitem/objectives/eaobjectivedestructable.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SHealthComponentParams Health="1000" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/buildingsets/human/hightech/prop/storage/cell/cell_power_1_array_a.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <EAPhaseObjectiveComponentDef sortingPosition="0" name="@sm_ui_CTRL_A" phase="1" defaultTeam="00000000-0000-0000-0000-000000000000" scaleMarkerByDistance="1" availableToDefaultTeam="1" percentageString="@ea_ui_SymbolPercentage" removeMarkerOnCapture="1" showMarker="1" canTriggerOvertime="0" onInteractDamageToObjective="0" onInteractDamageRadius="10" gamefeedNeutralizedStatus="@ea_ui_gamefeed_ParamNeutralizedParam" gamefeedCapturedStatus="@ea_ui_gamefeed_ParamCapturedParam" gameTokenName="" gameTokenValue="" affectsPhaseProgress="1" __type="DataForgeComponentParams" __polymorphicType="EAPhaseObjectiveComponentDef">
+      <capturedNotification messagePriority="3" messageDuration="9" message="@sm_ui_CTRL_Captured" __type="SEACriticalMessageDef" />
+      <lostNotification messagePriority="3" messageDuration="9" message="@sm_ui_CTRL_Lost" __type="SEACriticalMessageDef" />
+      <neutralizedNotification messagePriority="1" messageDuration="5" message="@sm_ui_CTRL_Neutralized" __type="SEACriticalMessageDef" />
+      <objectiveMarkerMessages captureMessage="@ea_ui_objectivestatus_DestroyObjective" defendMessage="@ea_ui_objectivestatus_Defend" capturedMessage="@ea_ui_objectivestatus_Captured" lostMessage="@LOC_EMPTY" capturingMessage="@ea_ui_objectivestatus_Hacking" boostCapturingMessage="@ea_ui_objectivestatus_HackingPlus" contestedMessage="@ea_ui_objectivestatus_Contested" resettingMessage="@ea_ui_objectivestatus_Resetting" offlineMessage="@ea_ui_objectivestatus_Offline" __type="SEAObjectiveMarkerStatusMessages" />
+      <objectiveMarkerSettings>
+        <SEAObjectiveMarkerStateSettings state="Default" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Default" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Capturing" markerFillProgress="0" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="MultipleCapturing" markerFillProgress="0" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Contesting" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="ReturningToOwner" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Cooldown" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+      </objectiveMarkerSettings>
+      <captureStartedNotification messagePriority="3" messageDuration="9" message="@ea_ui_objective_UnderAttack" __type="SEACriticalMessageDef" />
+      <objectiveAnnouncerParams>
+        <SObjectiveAnnouncerSettingsDef __type="SObjectiveAnnouncerSettingsDef">
+          <beginCapturingObjective>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="FPS_AccessingControlPoint" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </beginCapturingObjective>
+          <objectiveGainedLocal>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Captured" globalAnnouncementVO="FPS_ControlPointGained" teamAnnouncementVO="FPS_TeamControlPointGained_Local" __type="SEAAnnouncerParamsDef" />
+          </objectiveGainedLocal>
+          <objectiveGainedRemote>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Captured" globalAnnouncementVO="FPS_ControlPointGained" teamAnnouncementVO="FPS_TeamControlPointGained_Remote" __type="SEAAnnouncerParamsDef" />
+          </objectiveGainedRemote>
+          <objectiveLost>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Lost" globalAnnouncementVO="FPS_ControlPointLost" teamAnnouncementVO="FPS_TeamControlPointLost" __type="SEAAnnouncerParamsDef" />
+          </objectiveLost>
+          <objectiveLostNeutral>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Lost_Neutral" globalAnnouncementVO="FPS_ControlPointLost_Neutral" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </objectiveLostNeutral>
+          <objectiveContested>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="FPS_ControlPointContested" teamAnnouncementVO="FPS_TeamControlPointContested" __type="SEAAnnouncerParamsDef" />
+          </objectiveContested>
+          <finalObjective>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="FPS_TeamFinalControlPoint" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </finalObjective>
+        </SObjectiveAnnouncerSettingsDef>
+      </objectiveAnnouncerParams>
+    </EAPhaseObjectiveComponentDef>
+  </Components>
+</EntityClassDefinition.EAObjectiveDestructable>

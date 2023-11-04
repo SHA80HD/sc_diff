@@ -1,0 +1,89 @@
+<EntityClassDefinition.Mission_InvisibleItemPort_Spawner_TripMine Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="5c30330d-8692-40de-a09c-0e9b42f5fe99" __path="libs/foundry/records/entities/scitem/missionstorage/shelf/mission_invisibleitemport_spawner_tripmine.xml">
+  <tags>
+    <Reference value="00ead468-9073-485b-a6df-ca6b94053603" />
+  </tags>
+  <StaticEntityClassData />
+  <Components>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityStaticPhysicsControllerParams Mass="0" aiNavigationType="Included" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityStaticPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+        </SEntityStaticPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SSpawnerParams spawnOnGameStart="1" spawnWithinPlayerRange="1" startActive="1" groupIndex="0" faction="00000000-0000-0000-0000-000000000000" onRequestSpawn="0" spawnInMovement="0" __type="DataForgeComponentParams" __polymorphicType="SSpawnerParams">
+      <spawnRules>
+        <SSpawnOnDestroy timeAfterDestroy="1800" spawnOnDone="1" __type="SSpawnRules" __polymorphicType="SSpawnOnDestroy" />
+      </spawnRules>
+      <despawnRules despawnDelaySeconds="300" __type="SDespawnRules">
+        <rules>
+          <SDespawnRule_OnDestroyed ruleDelaySeconds="0" __type="SDespawnRule" __polymorphicType="SDespawnRule_OnDestroyed" />
+        </rules>
+      </despawnRules>
+      <portRefillData>
+        <IndividualPortRefillData __type="BasePortRefillData" __polymorphicType="IndividualPortRefillData">
+          <portRefillData>
+            <PortRefillData Port="Ports" Delay="0" __type="PortRefillData" />
+          </portRefillData>
+        </IndividualPortRefillData>
+      </portRefillData>
+      <prerequisite>
+      </prerequisite>
+      <entitiesToSpawn>
+        <SSpawnEntity entity="94831bea-4116-4010-a699-e55d9a426aa8" attachToItemPort="1" itemPortName="$slot_1" vehicleSpawnFlightReady="0" vehicleSpawnDeployLandingGears="0" infiniteMissiles="0" triggerAreas="0" __type="SSpawnEntity">
+          <spawnOffset x="0" y="0" z="0" __type="Vec3" />
+        </SSpawnEntity>
+      </entitiesToSpawn>
+      <wildcardPorts />
+    </SSpawnerParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="$slot_1" DisplayName="" PortTags="" RequiredPortTags="MissionQuestItem" Flags="" MinSize="1" MaxSize="2" InteractionPointSize="0.5" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Misc" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+            <SItemPortDefTypes Type="Cargo" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+  </Components>
+</EntityClassDefinition.Mission_InvisibleItemPort_Spawner_TripMine>

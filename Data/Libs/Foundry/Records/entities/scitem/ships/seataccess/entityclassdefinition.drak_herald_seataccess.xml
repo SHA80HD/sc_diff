@@ -1,0 +1,664 @@
+<EntityClassDefinition.DRAK_Herald_SeatAccess Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="9417a231-0109-4220-a011-01c009e0031c" __path="libs/foundry/records/entities/scitem/ships/seataccess/entityclassdefinition.drak_herald_seataccess.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="SeatAccess" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="6116471c-891d-4830-8968-650b6deafc00" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences />
+    </SEntityComponentSequencerParams>
+    <SCItemSeatAccessParams humanPassageADB="animations/mannequin/adb/spaceships/ships/drak/herald/drak_herald_humananims.adb" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatAccessParams">
+      <gateways>
+        <SCSeatAccessGatewayInteractionParams name="ShipDoor" fragmentOverride="Side_Door" audioCanopyTreatment="0" openDuration="1" closeDuration="1" audioThreshold="0.2" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessGatewayInteractionParams">
+          <conditions idle="Either" landed="Either" docked="Either" zeroG="Either" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <openState>
+            <SCSeatAccessGatewayInteractionStateParams interaction="Interactable.SharedInteractions[6]" fragmentTags="Open" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessGatewayInteractionStateParams" />
+          </openState>
+          <closeState>
+            <SCSeatAccessGatewayInteractionStateParams interaction="Interactable.SharedInteractions[7]" fragmentTags="Close" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessGatewayInteractionStateParams" />
+          </closeState>
+        </SCSeatAccessGatewayInteractionParams>
+      </gateways>
+      <entrances>
+        <SCSeatAccessEntranceInteractionParams name="PilotEntrance" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessEntranceInteractionParams">
+          <conditions idle="Either" landed="Either" docked="Either" zeroG="Either" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <seatConnection seatTag="00000000-0000-0000-0000-000000000000" __type="SCSeatConnectionParams">
+            <seatItemPort>
+              <SCSeatItemPort itemPortName="hardpoint_seat_pilot" __type="SCSeatItemPort" />
+            </seatItemPort>
+          </seatConnection>
+          <dashboardConnection itemPort="" __type="SCDashboardConnectionParams" />
+          <seatEnterExitAngleParams>
+          </seatEnterExitAngleParams>
+          <enterState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[0]" fragmentTags="" deployRetractFragmentTags="" skipState="SkipDeploy" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="pilot_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </enterState>
+          <exitState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[1]" fragmentTags="" deployRetractFragmentTags="" skipState="SkipRetract" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="pilot_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </exitState>
+          <linkedGateways />
+        </SCSeatAccessEntranceInteractionParams>
+        <SCSeatAccessEntranceInteractionParams name="SupportEntrance" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessEntranceInteractionParams">
+          <conditions idle="Either" landed="Either" docked="Either" zeroG="Either" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <seatConnection seatTag="00000000-0000-0000-0000-000000000000" __type="SCSeatConnectionParams">
+            <seatItemPort>
+              <SCSeatItemPort itemPortName="hardpoint_seat_station" __type="SCSeatItemPort" />
+            </seatItemPort>
+          </seatConnection>
+          <dashboardConnection itemPort="" __type="SCDashboardConnectionParams" />
+          <seatEnterExitAngleParams>
+          </seatEnterExitAngleParams>
+          <enterState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[2]" fragmentTags="Right" deployRetractFragmentTags="" skipState="None" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="seat_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </enterState>
+          <exitState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[4]" fragmentTags="Right" deployRetractFragmentTags="" skipState="None" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="seat_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </exitState>
+          <linkedGateways />
+        </SCSeatAccessEntranceInteractionParams>
+        <SCSeatAccessEntranceInteractionParams name="SupportEntranceRear" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessEntranceInteractionParams">
+          <conditions idle="Either" landed="Either" docked="Either" zeroG="Either" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <seatConnection seatTag="00000000-0000-0000-0000-000000000000" __type="SCSeatConnectionParams">
+            <seatItemPort>
+              <SCSeatItemPort itemPortName="hardpoint_seat_station" __type="SCSeatItemPort" />
+            </seatItemPort>
+          </seatConnection>
+          <dashboardConnection itemPort="" __type="SCDashboardConnectionParams" />
+          <seatEnterExitAngleParams>
+          </seatEnterExitAngleParams>
+          <enterState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[3]" fragmentTags="Left" deployRetractFragmentTags="" skipState="None" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="seat_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </enterState>
+          <exitState>
+            <SCSeatAccessEntranceInteractionStateParams interaction="Interactable.SharedInteractions[5]" fragmentTags="Left" deployRetractFragmentTags="" skipState="None" interiorEntrance="1" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessEntranceInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Seat" boneName="seat_sit_pos" stance="Seated" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessEntranceInteractionStateParams>
+          </exitState>
+          <linkedGateways />
+        </SCSeatAccessEntranceInteractionParams>
+      </entrances>
+      <passages>
+        <SCSeatAccessPassageInteractionParams name="Entrance_Side_Door_Player" fragmentOverride="Entrance_Side_Door_Player" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessPassageInteractionParams">
+          <conditions idle="Either" landed="Either" docked="Either" zeroG="False" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <enterState>
+            <SCSeatAccessPassageInteractionStateParams interaction="Interactable.SharedInteractions[8]" fragmentTags="Enter" condition="ExteriorOnly" distance="3" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessPassageInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Host" boneName="helper_door_main_outside" stance="Stand" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessPassageInteractionStateParams>
+          </enterState>
+          <exitState>
+            <SCSeatAccessPassageInteractionStateParams interaction="Interactable.SharedInteractions[9]" fragmentTags="Exit" condition="InteriorOnly" distance="3" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessPassageInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Host" boneName="helper_door_main_inside" stance="Stand" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessPassageInteractionStateParams>
+          </exitState>
+          <linkedGateways>
+            <SCSeatAccessLinkedGatewayParams gateway="gateways" syncToEntranceState="0" oneWaySequencer="0" ignoreCloseOnExit="0" __type="SCSeatAccessLinkedGatewayParams">
+              <openSequenceParams dependencyType="Never" enterSequenceDelay="0" exitSequenceDelay="0" __type="SCSeatAccessLinkedGatewaySequenceParams" />
+              <closeSequenceParams dependencyType="Never" enterSequenceDelay="0" exitSequenceDelay="0" __type="SCSeatAccessLinkedGatewaySequenceParams" />
+            </SCSeatAccessLinkedGatewayParams>
+          </linkedGateways>
+        </SCSeatAccessPassageInteractionParams>
+        <SCSeatAccessPassageInteractionParams name="Entrance_Side_Door_ZeroG" fragmentOverride="Entrance_Side_Door_Player" __type="SCSeatAccessBaseInteractionParams" __polymorphicType="SCSeatAccessPassageInteractionParams">
+          <conditions idle="Either" landed="False" docked="Either" zeroG="True" landingGearDown="Either" landingGearUp="Either" inQuantum="Either" __type="SCSeatAccessInteractionConditionParams" />
+          <enterState>
+            <SCSeatAccessPassageInteractionStateParams interaction="Interactable.SharedInteractions[10]" fragmentTags="Enter+ZeroG" condition="ExteriorOnly" distance="3" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessPassageInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Host" boneName="ZeroG_Enter_Start" stance="Stand" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessPassageInteractionStateParams>
+          </enterState>
+          <exitState>
+            <SCSeatAccessPassageInteractionStateParams interaction="Interactable.SharedInteractions[11]" fragmentTags="Exit+ZeroG" condition="InteriorOnly" distance="3" __type="SSequencerDefTaskParams" __polymorphicType="SCSeatAccessPassageInteractionStateParams">
+              <attachment>
+                <SCSeatActorAttachmentParams type="Host" boneName="ZeroG_Exit_Start" stance="Stand" __type="SCSeatActorAttachmentParams" />
+              </attachment>
+            </SCSeatAccessPassageInteractionStateParams>
+          </exitState>
+          <linkedGateways>
+            <SCSeatAccessLinkedGatewayParams gateway="gateways" syncToEntranceState="0" oneWaySequencer="0" ignoreCloseOnExit="0" __type="SCSeatAccessLinkedGatewayParams">
+              <openSequenceParams dependencyType="Never" enterSequenceDelay="0" exitSequenceDelay="0" __type="SCSeatAccessLinkedGatewaySequenceParams" />
+              <closeSequenceParams dependencyType="Never" enterSequenceDelay="0" exitSequenceDelay="0" __type="SCSeatAccessLinkedGatewaySequenceParams" />
+            </SCSeatAccessLinkedGatewayParams>
+          </linkedGateways>
+        </SCSeatAccessPassageInteractionParams>
+      </passages>
+    </SCItemSeatAccessParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="PilotEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_enter_pilot_seat" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="79c089b7-584e-4c4d-8416-11734d5cc356" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="PilotExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SupportEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_use_support_seat" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="a762cc02-259b-4594-aadf-0b7670be50b6" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SupportEnterLeft" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_use_support_seat" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SupportExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_right" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SupportExitLeft" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_left" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DoorOpen" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_open_door" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DoorClose" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_close_door" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ShipEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_enter_ship" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="f66fe29a-4be1-4712-b08b-4b79d2eb1b18" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ShipExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_ship" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ShipZeroGEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_enter_zerog" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ShipZeroGExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_zerog" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Cockpit" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.5" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SHardPointHighlightNode itemPortName="hardpoint_seat_pilot" __type="SHighlightBehaviorNodeParams" __polymorphicType="SHardPointHighlightNode" />
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes>
+                      <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                        <HighlightBehaviorNodeParams>
+                          <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                            <boneNames>
+                              <String value="pilot_chair_mesh" />
+                            </boneNames>
+                          </SBonesHighlightNode>
+                        </HighlightBehaviorNodeParams>
+                        <nextNodes />
+                      </SHighlightBehaviorNode>
+                    </nextNodes>
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="20" y="0" z="180" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Support" TextJustification="Right" TextOrientation="FixedRotation" TextScale="1.5" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.3" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SHardPointHighlightNode itemPortName="hardpoint_seat_station" __type="SHighlightBehaviorNodeParams" __polymorphicType="SHardPointHighlightNode" />
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes>
+                      <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                        <HighlightBehaviorNodeParams>
+                          <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                            <boneNames>
+                              <String value="console_seat_base" />
+                            </boneNames>
+                          </SBonesHighlightNode>
+                        </HighlightBehaviorNodeParams>
+                        <nextNodes />
+                      </SHighlightBehaviorNode>
+                    </nextNodes>
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="100" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[2]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_SupportRear" TextJustification="Right" TextOrientation="FixedRotation" TextScale="1.5" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.3" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SHardPointHighlightNode itemPortName="hardpoint_seat_station" __type="SHighlightBehaviorNodeParams" __polymorphicType="SHardPointHighlightNode" />
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes>
+                      <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                        <HighlightBehaviorNodeParams>
+                          <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                            <boneNames>
+                              <String value="console_seat_base" />
+                            </boneNames>
+                          </SBonesHighlightNode>
+                        </HighlightBehaviorNodeParams>
+                        <nextNodes />
+                      </SHighlightBehaviorNode>
+                    </nextNodes>
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="-0.3" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="100" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[2]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Pass_Ext_Open" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="3" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                        <boneNames>
+                          <String value="Anim_Door" />
+                          <String value="SideDoor_A001" />
+                          <String value="main_door" />
+                          <String value="ladder_pad" />
+                          <String value="ladder_rail" />
+                          <String value="ladder_sides" />
+                          <String value="ladder_guides" />
+                          <String value="ladder_bracket" />
+                          <String value="ladder_upper" />
+                          <String value="ladder_rail_02" />
+                          <String value="ladder_lower" />
+                          <String value="ladder_rung_upper" />
+                        </boneNames>
+                      </SBonesHighlightNode>
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes />
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="270" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[8]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[10]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[6]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Pass_Ext_Close" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="3" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                        <boneNames>
+                          <String value="Anim_Door" />
+                          <String value="SideDoor_A001" />
+                          <String value="main_door" />
+                          <String value="ladder_pad" />
+                          <String value="ladder_rail" />
+                          <String value="ladder_sides" />
+                          <String value="ladder_guides" />
+                          <String value="ladder_bracket" />
+                          <String value="ladder_upper" />
+                          <String value="ladder_rail_02" />
+                          <String value="ladder_lower" />
+                          <String value="ladder_rung_upper" />
+                        </boneNames>
+                      </SBonesHighlightNode>
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes />
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="270" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[7]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Pass_Int" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="2" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SRootEntityHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SRootEntityHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes>
+                  <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                    <HighlightBehaviorNodeParams>
+                      <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                        <boneNames>
+                          <String value="Anim_Door" />
+                          <String value="SideDoor_A001" />
+                          <String value="main_door" />
+                          <String value="ladder_pad" />
+                          <String value="ladder_rail" />
+                          <String value="ladder_sides" />
+                          <String value="ladder_guides" />
+                          <String value="ladder_bracket" />
+                          <String value="ladder_upper" />
+                          <String value="ladder_rail_02" />
+                          <String value="ladder_lower" />
+                          <String value="ladder_rung_upper" />
+                        </boneNames>
+                      </SBonesHighlightNode>
+                    </HighlightBehaviorNodeParams>
+                    <nextNodes />
+                  </SHighlightBehaviorNode>
+                </nextNodes>
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="90" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[9]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[11]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[6]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[7]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects\Spaceships\Ships\DRAK\Herald\DRAK_Herald_SeatAccess.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="1" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeZoneHostVehicle RootVehicle="0" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeZoneHostVehicle" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_ladder" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes>
+                <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="OpenTrigger" localInteraction="Interactable.SharedInteractions[6]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+                <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="CloseTrigger" localInteraction="Interactable.SharedInteractions[7]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+              </executeNodes>
+              <nextNodes />
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets />
+    </SEntityTraversingTreeParams>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+  </Components>
+</EntityClassDefinition.DRAK_Herald_SeatAccess>

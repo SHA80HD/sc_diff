@@ -1,0 +1,128 @@
+<InteractionConditionPreset.CarryItem_Grab_BespokeEnvironmentSuit __type="InteractionConditionPreset" __ref="ac7e24f2-6794-46ac-818f-b6b8e6406ab5" __path="libs/foundry/records/interactionconditions/presets/fpsitems/carryitem_grab_bespokeenvironmentsuit.xml">
+  <conditions>
+    <InteractionConditionCheckItemWeight __type="InteractionConditionParams" __polymorphicType="InteractionConditionCheckItemWeight">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_tooHeavyToCarry" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+    </InteractionConditionCheckItemWeight>
+    <InteractionConditionLootableNotBeingViewedByAnyOtherInventory __type="InteractionConditionParams" __polymorphicType="InteractionConditionLootableNotBeingViewedByAnyOtherInventory">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_InUseByAnother" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+    </InteractionConditionLootableNotBeingViewedByAnyOtherInventory>
+    <InteractionConditionNAND __type="InteractionConditionParams" __polymorphicType="InteractionConditionNAND">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_equipUndersuit_wearingArmour" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+      <firstCondition>
+        <InteractionConditionInteractableEntityOwnerHasArmorAttached __type="InteractionConditionParams" __polymorphicType="InteractionConditionInteractableEntityOwnerHasArmorAttached">
+          <conditionDisplay>
+          </conditionDisplay>
+        </InteractionConditionInteractableEntityOwnerHasArmorAttached>
+      </firstCondition>
+      <secondCondition>
+        <InteractionConditionEntityIsAttachedToOtherActor __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityIsAttachedToOtherActor">
+          <conditionDisplay>
+          </conditionDisplay>
+        </InteractionConditionEntityIsAttachedToOtherActor>
+      </secondCondition>
+    </InteractionConditionNAND>
+  </conditions>
+  <conditionToHideParams>
+    <InteractionConditionEntityTags CheckParent="1" __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityTags">
+      <conditionDisplay>
+      </conditionDisplay>
+      <tags __type="TagsDNFTerm">
+        <positiveTags>
+          <Reference value="24b19932-58a9-467c-81e4-7955c1b73b24" />
+        </positiveTags>
+        <negativeTags />
+      </tags>
+    </InteractionConditionEntityTags>
+    <InteractionConditionAND __type="InteractionConditionParams" __polymorphicType="InteractionConditionAND">
+      <conditionDisplay>
+      </conditionDisplay>
+      <firstCondition>
+        <InteractionConditionGameMode __type="InteractionConditionParams" __polymorphicType="InteractionConditionGameMode">
+          <conditionDisplay>
+          </conditionDisplay>
+          <gameModes>
+            <Enum value="S42_Default" />
+          </gameModes>
+        </InteractionConditionGameMode>
+      </firstCondition>
+      <secondCondition>
+        <InteractionConditionOR __type="InteractionConditionParams" __polymorphicType="InteractionConditionOR">
+          <conditionDisplay>
+          </conditionDisplay>
+          <firstCondition>
+            <InteractionConditionEntityIsAttachedToOtherActor __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityIsAttachedToOtherActor">
+              <conditionDisplay>
+              </conditionDisplay>
+            </InteractionConditionEntityIsAttachedToOtherActor>
+          </firstCondition>
+          <secondCondition>
+            <InteractionConditionEntityTags CheckParent="0" __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityTags">
+              <conditionDisplay>
+              </conditionDisplay>
+              <tags __type="TagsDNFTerm">
+                <positiveTags>
+                  <Reference value="c209260a-5512-4893-ab4f-e4a173e6341a" />
+                </positiveTags>
+                <negativeTags />
+              </tags>
+            </InteractionConditionEntityTags>
+          </secondCondition>
+        </InteractionConditionOR>
+      </secondCondition>
+    </InteractionConditionAND>
+  </conditionToHideParams>
+</InteractionConditionPreset.CarryItem_Grab_BespokeEnvironmentSuit>

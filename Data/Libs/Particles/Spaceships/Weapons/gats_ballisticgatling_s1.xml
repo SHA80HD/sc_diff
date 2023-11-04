@@ -1,0 +1,27 @@
+<ParticleLibrary Name="GATS_BallisticGatling_s1" SandboxVersion="1.0.93.17850" ParticleVersion="38">
+  <Particles Name="MuzzleFlash.S1">
+    <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Color="(x=0.6795426,y=0.3185468,z=0.1221388)" TessellationAmount="Low" DiffuseLighting="0" EmissiveLighting="1" MoveRelativeEmitter="true,IgnoreRotation=false" OrientToVelocity="true" />
+    <Childs>
+      <Particles Name="light">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" ParticleLifeTime="0.05" PositionOffset="y=-4" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Color="(x=0.6724433,y=0.33716366,z=0.12743771)" TessellationAmount="Low" DiffuseLighting="0" EmissiveLighting="1" LightSource="Radius=15,SoftBulb=true,Intensity=(5,Random=0.3,ParticleAge=(v=1,flags=32;t=1,v=0.024,flags=4)),AffectsThisAreaOnly=true" MoveRelativeEmitter="true,IgnoreRotation=false" RandomAngles="y=20" />
+      </Particles>
+      <Particles Name="break">
+        <Params Inheritance="System" Count="2" ParticleSystem="RParticleGPU" ParticleLifeTime="0.05" EmitAngle="4,Random=1" VerticalSpread="4,Random=1" BlendType="Additive" Texture="textures/vfx/weapons/weapons_general/fire4_muz_radialblur_6x6.tif" HeatMax="2.21763" TextureAnimation="NumFramesU=6,NumFramesV=6,Loop=true,FirstFrameIntervalEnd=64" RandomFlipU="true" Alpha="Random=0.6,ParticleAge=(v=1,flags=32;t=1,flags=4)" DiffuseLighting="0" EmissiveLighting="4,Random=0.2" Speed="40,Random=0.5" MoveRelativeEmitter="true" Size="12,Random=0.3,SizeY=4" PivotY="0.3" MinPixels="2" InitAngles="x=90" Facing="Free" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="MuzzleFlash.S1_3rd">
+    <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Color="(x=0.6795426,y=0.3185468,z=0.1221388)" TessellationAmount="Low" DiffuseLighting="0" EmissiveLighting="1" MoveRelativeEmitter="true,IgnoreRotation=false" Facing="Free" />
+    <Childs>
+      <Particles Name="light">
+        <Params Inheritance="System" Spawn="FromParentBirth" Count="1,DistanceLOD=(t=0.973,v=1;t=1)" MaxDistanceLOD="1001" ParticleSystem="CryEngine" ParticleLifeTime="0.1" PositionOffset="y=0.05" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Color="(x=0.6938719,y=0.4019778,z=0.17788844)" TessellationAmount="Low" DiffuseLighting="0" EmissiveLighting="1" LightSource="Radius=(20,EmitterStrength=(v=0.46,flags=32;t=1,v=1,flags=4)),SoftBulb=true,Intensity=(10,Random=0.3,EmitterStrength=(v=0.475,flags=32;t=1,v=1,flags=4),ParticleAge=(v=1;t=0.08,v=1;t=1,v=0.024)),AffectsThisAreaOnly=true" MoveRelativeEmitter="true,IgnoreRotation=false" RandomAngles="y=20" CameraMaxDistance="1000" />
+      </Particles>
+      <Particles Name="break1">
+        <Params Inheritance="System" Spawn="FromParentBirth" Count="2" MaxDistanceLOD="500" ParticleSystem="RParticleGPU" ParticleLifeTime="0.1" PositionOffset="y=0.15" EmissionRoundness="1" EmitAngle="4.81605" VerticalSpread="4.81605" HorizontalSpread="200" BlendType="Additive" Texture="textures/vfx/weapons/weapons_general/fire4_muz_radialblur_6x6.tif" HeatMax="2.21763" TextureAnimation="NumFramesU=6,NumFramesV=6,Loop=true,FirstFrameIntervalEnd=64" RandomFlipU="true" DiffuseLighting="0" EmissiveLighting="1" Speed="9.27152,Random=1,DistanceLOD=(v=1;t=1)" InheritVelocity="1" Drag="40" MoveRelativeEmitter="true" Size="3,Random=0.5,ParticleAge=(v=1,flags=32;t=1,v=0.54,flags=4)" PivotY="0.415978" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="2" OrientToVelocity="true" CameraMaxDistance="1000" />
+      </Particles>
+      <Particles Name="flare">
+        <Params Inheritance="System" Spawn="FromParentBirth" Count="1" ParticleSystem="CryEngine" PositionOffset="y=0.05" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Color="(x=0.71569365,y=0.3467041,z=0.18447502)" TessellationAmount="Low" DiffuseLighting="0" EmissiveLighting="1" LightSource="Radius=40,SoftBulb=true,Intensity=(500,Random=0.3,ParticleAge=(v=1;t=0.08,v=1;t=1,v=0.024))" Flare="Gladius_VFX_Flares.Gladius_Thruster_Flares.gladius_thruster_flare" FakeLight="true" MoveRelativeEmitter="true,IgnoreRotation=false" Size="10" RandomAngles="y=20" />
+      </Particles>
+    </Childs>
+  </Particles>
+</ParticleLibrary>

@@ -1,0 +1,322 @@
+<EntityClassDefinition.SoftLock_Terminal_Standard_Prison_DepositTerminal Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="c25db6ea-57d6-49d6-bb2d-638688002f89" __path="libs/foundry/records/entities/scitem/mission_entities/softlock_terminal/softlock_terminal_standard_prison_depositterminal.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/buildingsets/human/lowtech/prop/prison/machine/machine_hopper_1_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+          <EntityEffectSystem_MaterialCategory enabled="1" allowMultipleTags="0" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_MaterialCategory">
+            <tagEffects>
+              <EntityEffectSystem_MaterialTagEffect name="HeaderGlow" enabled="0" tag="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="00000000-0000-0000-0000-000000000000" materialProperty="Glow" subMeshName="mesh_machine_hopper_1_a" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideValueModifier overrideValue="7" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideValueModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+              <EntityEffectSystem_MaterialTagEffect name="ScreenGlow" enabled="1" tag="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="00000000-0000-0000-0000-000000000000" materialProperty="Glow" subMeshName="mesh_screen_1" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideValueModifier overrideValue="1" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideValueModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_MaterialCategory>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects>
+              <SEntityEffectSystem_SoundTagEffect name="Console_Loop" enabled="1" multiPosition="0" useDefaultProxy="0" tag="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_UI_MCCS_Console_Loop_AEGS_c" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="-0.1" z="1.1" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <UIOwnerEntityComponentParams startOpen="1" areScreens3D="0" areSounds3D="0" hasActions="0" element="235bfc85-aa63-4fd5-b5d1-821fb3522a39" domainName="global" loadDistance="20" moviePath="" variantName="" invariantName="" movieAutoPlay="0" loopMovie="0" forceFlashColourCorrection="0" ignoreTrackviewUnloadRequests="0" reflectLocalStateMachine="1" reflectLinkedStateMachines="0" graph="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIOwnerEntityComponentParams">
+      <visibiltyTags />
+    </UIOwnerEntityComponentParams>
+    <UIRenderToTextureEntityComponentParams directRenderStage="None" compositeMaterialName="" hideRenderNodeOnUnload="0" aspectRatioOverride="0" interactionDistance="2" transparentListDepthBias="0" renderFlashBeforeCamera="0" fieldOfView="90" renderType="DEFERRED" fallbackTextureOnOnload="" grabCameraControlParams="00000000-0000-0000-0000-000000000000" pickableCollision="Opaque" pickableTag="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIRenderToTextureEntityComponentParams">
+      <secondaryTarget>
+      </secondaryTarget>
+    </UIRenderToTextureEntityComponentParams>
+    <UIBuildingBlocksEntityComponentParams enableFullScreenMouse="0" defaultStyle="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIBuildingBlocksEntityComponentParams">
+      <layers>
+        <BuildingBlocksLayer layerName="OpenScreen" renderTarget="All" defaultView="layers.BuildingBlocksLayer.views[0]" __type="BuildingBlocksLayer">
+          <views>
+            <BuildingBlocksView name="Attract" __type="BuildingBlocksView">
+              <component canvas="a596eef4-994d-497a-94c4-18bcd92d3348" __type="CtxGraph_Node" __polymorphicType="UIGraph_BuildingBlocksContextComponent" />
+            </BuildingBlocksView>
+            <BuildingBlocksView name="Open" __type="BuildingBlocksView">
+              <component canvas="56e74740-6b9f-426d-8f53-36575c1f7bb5" __type="CtxGraph_Node" __polymorphicType="UIGraph_BuildingBlocksContextComponent" />
+            </BuildingBlocksView>
+          </views>
+        </BuildingBlocksLayer>
+      </layers>
+    </UIBuildingBlocksEntityComponentParams>
+    <KioskInteractionEntityComponentParams onlyShowCursorWhenLockedByKiosk="0" initialForceLookAtLerpTime="0.4" defaultForceLookAtLerpTime="0.05" forceLookAtDecayFactor="2" forceLookAtIncreaseFactor="1" forceLookAtThreshold="0.8" FOVSpeedFactor="0.5" FOVHaltDistanceMax="0.1" FOVHaltDistanceMin="0.075" FOVMax="1.3" FOVMin="0.3" lookInputFactor="0.8" inActivityTimer="60" blockLookInputs="0" supportWalkToAlign="1" openInteraction="Interactable.SharedInteractions[0]" isAccessedFromVehicleSeat="0" __type="DataForgeComponentParams" __polymorphicType="KioskInteractionEntityComponentParams">
+      <attractTransitions>
+        <UIOwnerContextTransitionPair layerName="OpenScreen" viewName="Attract" __type="UIOwnerContextTransitionPair" />
+      </attractTransitions>
+      <openTransitions>
+        <UIOwnerContextTransitionPair layerName="OpenScreen" viewName="Open" __type="UIOwnerContextTransitionPair" />
+      </openTransitions>
+      <powerOffTransitions />
+      <abilityLocks>
+        <Enum value="Crouch" />
+        <Enum value="Prone" />
+        <Enum value="Run" />
+        <Enum value="Sprint" />
+      </abilityLocks>
+      <lookAtOffset x="0" y="0" z="0" __type="Vec3" />
+    </KioskInteractionEntityComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="UseConsole" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags>
+              <Reference value="021cf2be-7655-4e7e-9ecc-3aa5f9a1ac9d" />
+            </QueryTags>
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ExitConsole" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_Exit" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="PrisonerInteracted" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="MainScreen" bindingsMethod="States" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Idle" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="MainMenu" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Deposited" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <SKioskInteractionStateModifier onKioskInteractionOpen="StateTypes.SInteractionStateType.States[1]" onKioskInteractionClose="StateTypes.SInteractionStateType.States[0]" __type="SStateModifier" __polymorphicType="SKioskInteractionStateModifier" />
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SCInteractionStateGameplayTriggerComponentParams __type="DataForgeComponentParams" __polymorphicType="SCInteractionStateGameplayTriggerComponentParams">
+      <onInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes.SInteractionStateType.States[1]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <STerminalLoginGameplayTrigger login="1" __type="SBaseInteractionGameplayTrigger" __polymorphicType="STerminalLoginGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes.SInteractionStateType.States[0]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <STerminalLoginGameplayTrigger login="0" __type="SBaseInteractionGameplayTrigger" __polymorphicType="STerminalLoginGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+      </onInteractionStateChangeTriggers>
+      <onInteractionSuccessTriggers />
+      <onInteractionFailedTriggers />
+    </SCInteractionStateGameplayTriggerComponentParams>
+    <UIBindingsInteractionsComponentParams interactionDistance="50" __type="DataForgeComponentParams" __polymorphicType="UIBindingsInteractionsComponentParams" />
+    <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
+    <UIBindingsConsumerEntityComponentParams linkToPort="0" __type="DataForgeComponentParams" __polymorphicType="UIBindingsConsumerEntityComponentParams" />
+    <UIAudioComponentEntityComponentParams UIAudioDef="92b70797-9d27-4bc7-844e-f360c880a858" useEntityClass="00000000-0000-0000-0000-000000000000" dialogueContext="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIAudioComponentEntityComponentParams">
+      <offset>
+        <UIAudioComponent_ManualOffset __type="UIAudioComponent_Offset" __polymorphicType="UIAudioComponent_ManualOffset">
+          <offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="1.55" z="1.55" __type="Vec3" />
+          </offset>
+        </UIAudioComponent_ManualOffset>
+      </offset>
+      <videoAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioPauseTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioResumeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+    </UIAudioComponentEntityComponentParams>
+    <UserVariablesComponentParams AlwaysUseDefaultValues="0" __type="DataForgeComponentParams" __polymorphicType="UserVariablesComponentParams">
+      <floats />
+      <ints />
+      <bools />
+      <strings />
+      <locStrings>
+        <LocStringUserVariable name="ClickText" defaultValue="@Prison_Deposit_Click" __type="LocStringUserVariable" />
+        <LocStringUserVariable name="HeaderText" defaultValue="@Prison_Deposit_AttractScreen" __type="LocStringUserVariable" />
+      </locStrings>
+    </UserVariablesComponentParams>
+    <PrisonSentenceUIProviderParams updateTimeSeconds="0.1" __type="DataForgeComponentParams" __polymorphicType="PrisonSentenceUIProviderParams" />
+    <PrisonDepositKioskParams __type="DataForgeComponentParams" __polymorphicType="PrisonDepositKioskParams" />
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="$IP_enter" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="$IP_enter" __type="SItemPortDefHelperNode">
+                <Helper Name="$IP_enter" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+  </Components>
+</EntityClassDefinition.SoftLock_Terminal_Standard_Prison_DepositTerminal>

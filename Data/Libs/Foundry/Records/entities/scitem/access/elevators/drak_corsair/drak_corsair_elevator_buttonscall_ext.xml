@@ -1,0 +1,586 @@
+<EntityClassDefinition.DRAK_Corsair_Elevator_ButtonsCall_Ext Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="340f365d-2e97-4303-989f-f9309ecaf0ef" __path="libs/foundry/records/entities/scitem/access/elevators/drak_corsair/drak_corsair_elevator_buttonscall_ext.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="UNDEFINED" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemInteractionGeometryMapParams __type="DataForgeComponentParams" __polymorphicType="SCItemInteractionGeometryMapParams">
+      <Entries>
+        <SCInteractionGeometryMapEntryParams Interaction="Interactable.SharedInteractions[0]" GeometryTag="WaitingForAscend" __type="SCInteractionGeometryMapEntryParams" />
+        <SCInteractionGeometryMapEntryParams Interaction="Interactable.SharedInteractions[1]" GeometryTag="WaitingForDescend" __type="SCInteractionGeometryMapEntryParams" />
+        <SCInteractionGeometryMapEntryParams Interaction="Interactable.SharedInteractions[2]" GeometryTag="" __type="SCInteractionGeometryMapEntryParams" />
+      </Entries>
+    </SCItemInteractionGeometryMapParams>
+    <SCItemInteractionEffectsMapParams __type="DataForgeComponentParams" __polymorphicType="SCItemInteractionEffectsMapParams">
+      <Entries>
+        <SCInteractionEffectsMapEntryParams Interaction="Interactable.SharedInteractions[0]" __type="SCInteractionEffectsMapEntryParams">
+          <enableEffectTags>
+            <Reference value="fb5ee7d5-f5ba-4bf6-91de-15e04c9659d6" />
+          </enableEffectTags>
+          <disableEffectTags />
+        </SCInteractionEffectsMapEntryParams>
+        <SCInteractionEffectsMapEntryParams Interaction="Interactable.SharedInteractions[1]" __type="SCInteractionEffectsMapEntryParams">
+          <enableEffectTags>
+            <Reference value="fb5ee7d5-f5ba-4bf6-91de-15e04c9659d6" />
+          </enableEffectTags>
+          <disableEffectTags />
+        </SCInteractionEffectsMapEntryParams>
+      </Entries>
+    </SCItemInteractionEffectsMapParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Ascend" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Descend" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="ElevatorArrived" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="LightsOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="188dd83d-a39f-4efd-99f8-942cd1250764" DisplayName="@ui_interactor_lights_on" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="LightsLow" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="c83e5313-3bd2-451c-9683-aedbc14c24b4" DisplayName="@ui_interactor_lights_off" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="RequestFloor1" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="ForeignOnly" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Button_Door" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="10" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                    <boneNames>
+                      <String value="button_door" />
+                    </boneNames>
+                  </SBonesHighlightNode>
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="270" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@ui_interactor_call_elevator" IsPrimary="1" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Button_Light" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="6" UseHorizontalDistance="0" MaxCursorScreenDistance="0.5" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                    <boneNames>
+                      <String value="button_light" />
+                    </boneNames>
+                  </SBonesHighlightNode>
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="270" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[3]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[4]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Button_MessHall" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="6" UseHorizontalDistance="0" MaxCursorScreenDistance="0.5" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                    <boneNames>
+                      <String value="button_messhall" />
+                    </boneNames>
+                  </SBonesHighlightNode>
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="270" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[5]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Spaceships/Ships/DRAK/Corsair/modular_kits/DRAK_Corsair_Control_Elevator.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects />
+            <triggerEffects>
+              <SEntityEffectSystem_SoundTriggerEffect name="" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="fb5ee7d5-f5ba-4bf6-91de-15e04c9659d6" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_UI_Levski_Elevator_Button" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="SCItem_MOLever" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+          <EntityEffectSystem_LightCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_LightCategory">
+            <tagEffects>
+              <EntityEffectSystem_LightTagEffect name="ElevatorButton" enabled="1" useTemperature="1" colorTemperature="1600" diffuseMultiplier="0.001" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="1" b="1" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="decal_ramp_call" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="LightButton" enabled="1" useTemperature="1" colorTemperature="1600" diffuseMultiplier="0.001" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="e0793f0f-a72a-4d77-8417-acfa33f3d643" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="1" b="1" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="decal_light" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="MessHallLights" enabled="1" useTemperature="1" colorTemperature="1600" diffuseMultiplier="0.001" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="83cfb9f7-e9d4-43c1-b0bd-f85305c99b3f" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="1" b="1" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="decal_messhall" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_LightCategory>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="ElevatorButtonUse" bindingsMethod="None" DefaultState="StateTypes[0].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="ElevatorButtonAwaitingPress" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[0]" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ElevatorButtonPressed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="03228d89-5cf3-42cd-9ece-936d37cd6da2" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[0]" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[0].SInteractionStateType.States[0]" Delay="0.2" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="LightButtonUse" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="LightButtonAwaitingPress" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[1]" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="StateTypes[1].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="StateTypes[1].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="LightButtonPressed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="e0793f0f-a72a-4d77-8417-acfa33f3d643" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[1]" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[1].SInteractionStateType.States[0]" Delay="0.2" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="MessHallButtonUse" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="MessHallButtonAwaitingPress" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[2]" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[5]" NextState="StateTypes[2].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="MessHallButtonPressed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="83cfb9f7-e9d4-43c1-b0bd-f85305c99b3f" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[2]" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[2].SInteractionStateType.States[0]" Delay="0.2" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+        <AnimationJointControl __type="AnimationJointControl">
+          <variables>
+            <AnimationFloatVariable name="VAR_btn_Elevator" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="0.1" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+            <AnimationFloatVariable name="VAR_btn_Lights" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="0.1" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+            <AnimationFloatVariable name="VAR_btn_MessHall" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="0.1" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+          </variables>
+          <movements>
+            <AnimationJointMovement joint="button_door" __type="AnimationJointMovement">
+              <rotations>
+              </rotations>
+              <translations>
+                <AnimationJointLinearTranslation variable="AnimationJointControls.AnimationJointControl.variables[0]" fromStartValus="0" fromEndValus="1" toStartOffset="0" toEndOffset="-0.003" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearTranslation" />
+              </translations>
+            </AnimationJointMovement>
+            <AnimationJointMovement joint="button_light" __type="AnimationJointMovement">
+              <rotations>
+              </rotations>
+              <translations>
+                <AnimationJointLinearTranslation variable="AnimationJointControls.AnimationJointControl.variables[1]" fromStartValus="0" fromEndValus="1" toStartOffset="0" toEndOffset="-0.003" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearTranslation" />
+              </translations>
+            </AnimationJointMovement>
+            <AnimationJointMovement joint="button_messhall" __type="AnimationJointMovement">
+              <rotations>
+              </rotations>
+              <translations>
+                <AnimationJointLinearTranslation variable="AnimationJointControls.AnimationJointControl.variables[2]" fromStartValus="0" fromEndValus="1" toStartOffset="0" toEndOffset="-0.003" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearTranslation" />
+              </translations>
+            </AnimationJointMovement>
+          </movements>
+          <animations />
+        </AnimationJointControl>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="DRAK_Corsair" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeZoneHostVehicle RootVehicle="0" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeZoneHostVehicle" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="Exterior_Elevator_Door" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_elevator_door_ext_lower" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes>
+                <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="LightsOn" localInteraction="Interactable.SharedInteractions[3]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+                <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="LightsLow" localInteraction="Interactable.SharedInteractions[4]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+              </executeNodes>
+              <nextNodes />
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets />
+    </SEntityTraversingTreeParams>
+  </Components>
+</EntityClassDefinition.DRAK_Corsair_Elevator_ButtonsCall_Ext>

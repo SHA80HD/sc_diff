@@ -1,0 +1,140 @@
+<EntityClassDefinition.TransitCarriage_ugFacilityLTA Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="88f8a1fe-3395-47d7-bd99-2df858f0629c" __path="libs/foundry/records/transitsystem/transitcarriage/transitcarriage_ugfacilitylta.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SStreamingObjectContainerComponentParams objectContainer="" __type="DataForgeComponentParams" __polymorphicType="SStreamingObjectContainerComponentParams" />
+    <TransitCarriageParams hasExternalAnimations="0" animationLength="2" fragment="CarriageState" fragmentArrived="Arrived" fragmentArriving="Arriving" fragmentDeparting="Departing" fragmentDeparted="Departed" causesCertainDeath="1" collisionDamage="0" __type="DataForgeComponentParams" __polymorphicType="TransitCarriageParams">
+      <defaultInteriorOC path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceObjectContainer" />
+      <audio maxStoppingTime="6.5" turnRTPCScaler="1" __type="TransitCarriageAudio">
+        <startTriggerID audioTrigger="Play_MCLF_Lorville_Underground_Elevator_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <startTriggerIDOneShot audioTrigger="Play_MCLF_Lorville_Underground_Elevator_Descend" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stoppingTriggerID audioTrigger="Stop_MCLF_Lorville_Underground_Elevator_Descend" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stopTriggerID audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stopTriggerIDOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <speedRTPC rtpc="UGF_Elevator_Speed" __type="AudioRtpc" />
+        <turnRTPC rtpc="Transit_Carriage_Turn" __type="AudioRtpc" />
+        <dialogueContexts />
+      </audio>
+      <effects inTransitTag="522b9eb9-1944-4d9f-9e5b-4e396dfab324" __type="TransitCarriageEffects" />
+    </TransitCarriageParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="0" NeverAffectTriggers="1" UseManualGridTransition="1" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+            <SEntityGridProperty __type="SEntityGridProperty">
+              <gravity x="0" y="0" z="-9.81" __type="Vec3" />
+              <gridGeometry path="objects/buildingsets/human/lowtech/bravo/int/elevator_transit/elevator_cab_08x06x04_c_physgrid.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+            </SEntityGridProperty>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SAnimationControllerParams AnimationDatabase="Transit/TransitCarriage_Anims.adb" AnimationController="Transit/TransitCarriage_ControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="TransitCarriage" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports />
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <SCommunicationUserComponentParams voiceBundle="00000000-0000-0000-0000-000000000000" voiceSingle="00000000-0000-0000-0000-000000000000" communicationConfig="4163bafb-9a11-4136-ab7e-9d54ad54d1f5" contextualDialog="" __type="DataForgeComponentParams" __polymorphicType="SCommunicationUserComponentParams" />
+    <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
+    <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects>
+              <SEntityEffectSystem_SoundTagEffect name="Scrape Left" enabled="1" multiPosition="0" useDefaultProxy="0" tag="522b9eb9-1944-4d9f-9e5b-4e396dfab324" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_MCLF_Lorville_Underground_Elevator_Scrapes_Left" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="2.9" y="5.7" z="0.5" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Scrape Right" enabled="1" multiPosition="0" useDefaultProxy="0" tag="522b9eb9-1944-4d9f-9e5b-4e396dfab324" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_MCLF_Lorville_Underground_Elevator_Scrapes_Right" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="-2.9" y="5.7" z="0.5" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+  </Components>
+</EntityClassDefinition.TransitCarriage_ugFacilityLTA>

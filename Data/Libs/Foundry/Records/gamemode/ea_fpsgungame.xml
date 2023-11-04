@@ -1,0 +1,512 @@
+<GameMode.EA_FPSGunGame id="EA_FPSGunGame" requiredPass="EA_FPSGunGame" playedBadgeId="EA_Played_GunGame" locDisplayName="@ea_ui_mode_FPSGunGame" description="@ea_ui_modedesc_FPSGunGame" thumbnail="ui/frontend/assets/tif/gametypesmaps/gunrush.tif" icon="" alias="GG" leaderboardMatchCode="GG" shardPersistenceEnabled="0" enableCustomization="0" allowMapSelection="1" __type="GameMode" __ref="05e50211-3a3f-4b60-9b65-423ed652e4f1" __path="libs/foundry/records/gamemode/ea_fpsgungame.xml">
+  <backgroundVideos />
+  <loadingScreenInfo loadingScreenType="ElectronicAccess" imagePath="UI/GlobalGameUI/assets/TIF/LoadingScreen/SM.dds" primaryTitle="@ui_GameTitle_ArenaCommander" secondaryTitle="@ea_ui_mode_Elimination" subtitle="@ea_ui_mode_FPSGunGame" description="@ea_ui_modedesc_FPSGunGame" __type="SLoadingScreenInformationDef">
+    <tips />
+  </loadingScreenInfo>
+  <validNetworkTypes>
+    <Enum value="Online" />
+    <Enum value="Custom" />
+  </validNetworkTypes>
+  <filters>
+    <GameModeFilter id="Released" visibleToPlayers="1" displayName="@ea_ui_frontend_filter_Released" __type="GameModeFilter" />
+    <GameModeFilter id="FPS" visibleToPlayers="1" displayName="@ea_ui_frontend_filter_FPS" __type="GameModeFilter" />
+    <GameModeFilter id="PvP" visibleToPlayers="1" displayName="@ea_ui_frontend_filter_PvP" __type="GameModeFilter" />
+    <GameModeFilter id="Experimental" visibleToPlayers="0" displayName="@ea_ui_frontend_filter_Experimental" __type="GameModeFilter" />
+  </filters>
+  <params>
+    <SStandardParams moduleType="ElectronicAccess" gameModule="f3a008ad-fa7b-4f54-8f48-425adfedf304" fallbackMegamap="00000000-0000-0000-0000-000000000000" persistentDataPolicy="ReadOnly" locDisclaimer="@LOC_EMPTY" feedbackHyperlink="robertsspaceindustries.com/spectrum/community/SC/forum/4?page=1&amp;sort=hot" maxSquadSize="12" maxTeamSize="0" maxTotalPlayerSize="12" newGameMode="1" spawnInSpaceship="0" enableQuantumTravel="0" enableMasterModes="0" enableQuantumBoost="0" enableWingmanCommands="0" enableAiming2="0" enableTargeting2="0" enableTurretHud="0" enableNewHudAR="0" enableNewSpaceshipThrottleBehaviour="0" enableShipRecall="0" disableOrbitalMarkers="1" isSurvivalMode="0" allowVehicleExit="1" useSelfDestructPenalty="0" recentHitTime="60" allowEditLoadoutWhenDead="1" allowIngameMenu="1" maxUnattendedVehicleMarkers="0" musicSuite="97d0d71a-6a8e-4ef9-afcb-08deeaa55054" audioOcclusionMaxDist="500" requiresBuildingBlocksRoundTimer="0" scanningEnabled="1" allShipsModifiable="0" canJoinLobbies="0" canAccessMobiGlass="0" planetMaxPatchesOverride="0" planetPatchTimeoutOverride="0" arModeSettings="0ec4a1f8-ab97-4120-abe2-45bedc6a50a1" restrictGasExchanges="1" showGreenZoneWeaponsOnlineOffline="1" allowPartyInvite="1" joinOpenChannelOnStartup="1" commsMaxValidRange="-1" shipComputerMode="Default" canRestrain="0" canPlayerUnrestrain="0" canRestrainFriendly="0" canHaveTakeDownLethalOption="1" canTakeDownsFail="0" canTakedownFriendly="0" canApplyForcesToFriendly="0" disableKillMessage="0" hasPlanetaryEffects="1" missionsWaitForSpawn="0" persistSubsumptionVariables="0" showNonPlayerJoinFeed="0" reputationJournalEntryParams="00000000-0000-0000-0000-000000000000" shopInventoryAlertsJournalEntry="00000000-0000-0000-0000-000000000000" quantumDriveGlobalParams="1b25f9c9-630f-47f6-865d-0f0bb199215a" allowQuickFromInventory="0" enableRigidGForceApplication="0" allowQuickPlayerChoiceSelection="0" showQuickPlayerChoiceShortcuts="0" allowSwapOutfit="0" usePrototypeMobiGlas="0" allowDensityManagement="1" allowFullscreenTutorials="0" allowFPSCrosshair="0" allowFPSHitmarker="0" allowPlayerSkills="0" enableDegradationThroughUsage="0" ignoreDisplayPriorityForObjectives="0" useOnlyStandaloneObjectiveMarkers="1" useNewNotificationSystem="0" useNewEVAMarker="0" disableOldMFDs="0" allowHarvestables="0" __type="DataForgeComponentParams" __polymorphicType="SStandardParams">
+      <audioSwitchStates>
+        <String value="SC_Game:Simulation_StarMarine" />
+        <String value="SC_GameMode:FPS_Elimination" />
+      </audioSwitchStates>
+      <legacyUIOptions updateProgressBar="0" showFrameProgressBar="0" requiresScoreboard="0" requiresGameDetails="0" __type="LegacyUIOptionsParams" />
+      <announcerParams announcer="22a5bb8b-383b-495b-9444-502324949125" announcerGameModeTokenName="fps_elimination" __type="SGameRulesAnnouncerParams" />
+      <playerCamerasAllowed firstPersonAllowed="1" chaseAllowed="0" orbitAllowed="0" __type="SPlayerCameraTypeAllowedParams" />
+      <fireParams enabledMode="Disabled" __type="FireParams">
+        <behaviors>
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="0" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+          <Bool value="1" />
+        </behaviors>
+      </fireParams>
+      <actorMechanics allowZeroGTraversal="0" allowEVAIronman="0" allowSwimming="0" allowSliding="0" allowInAirLedgeGrab="1" allowLadderV2="0" allowProneV2="0" allowKioskWalkToAlign="0" allowKioskV2="0" allowFirstSelects="0" allowUnlimitedEVAFuel="1" allowEVARefuelFromAtmosphere="0" allowNPCInfiniteAmmo="1" __type="ActorMechanicsParams">
+        <outfitParams />
+      </actorMechanics>
+      <AIActorLocomotion useSplineTransitions="0" __type="AIActorLocomotionParams" />
+      <playerInteractionParams allowPITMenu="1" allowPITLootingScreen="0" allowPITInventory="0" allowPITSwapWheel="0" allowPISWheel="0" allowQuickInteractImprovements="0" allowDefaultActions="0" allowControlHints="1" allowInteractionPrompts="0" allowPISAngularSelection="0" allowQSAngularSelection="1" allowBuildingBlocksHints="0" allowPlayerAnimatedInteractions="0" allowPlayerAnimatedWeaponCustomization="0" allowItemDropsToSwapBackToWeapon="1" allowRelaxedPoseInSeats="0" allowPersonalInventoryReload="0" allowAmmoRepool="0" allowDashboardActionInteractionOverrides="0" __type="PlayerInteractionParams" />
+      <uiV2MarkerParams useNewMarkers="0" __type="UIV2Markers">
+        <useV2Provider>
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+        </useV2Provider>
+        <useV2TrackerType>
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+          <Bool value="0" />
+        </useV2TrackerType>
+      </uiV2MarkerParams>
+      <radarOptionParams useFPSTagging="0" useFPSScanMode="0" __type="RadarOptionParams" />
+    </SStandardParams>
+  </params>
+  <bettingModule>
+  </bettingModule>
+  <camerasModule>
+    <SCamerasBaseModule gameEndCameraRecord="00000000-0000-0000-0000-000000000000" onFootDeathCameraRecord="2b242c88-e685-4c29-8ff5-4e9e95c2c2c4" vehicleDeathCameraRecord="1b4dd091-b89a-4212-8ab5-0465aea2f629" deathCameraDuration="8" useFadeOut="0" fadeOutTriggerTime="0" allowConstantDOF="0" __type="DataForgeComponentParams" __polymorphicType="SCamerasBaseModule" />
+  </camerasModule>
+  <chatSystemOptions>
+    <ChatSystemOptions chatChannelFilterRecord="fce8901f-4060-45cc-9e9f-063956ec70bd" voiceChannelSettingsRecord="585a4dce-9fa8-4e95-9fe3-bb8a767e2fe7" __type="DataForgeComponentParams" __polymorphicType="ChatSystemOptions" />
+  </chatSystemOptions>
+  <damageHandling>
+    <SSCDamageHandling damageDisabled="0" bulletsInstaKillActors="0" __type="DataForgeComponentParams" __polymorphicType="SSCDamageHandling" />
+  </damageHandling>
+  <difficultyModule>
+    <BaseDifficultyParams defaultDifficulty="None" enableDynamicScaling="0" difficultyModifiers="b912fb16-86f6-4f5d-8e4d-bf07edfbb072" __type="DataForgeComponentParams" __polymorphicType="BaseDifficultyParams">
+      <fpsDynamicScaling failureResetTime="600" minDifficultyPoints="-10" maxDifficultyPoints="10" __type="SDynamicDifficultyParams">
+        <failPointsData />
+        <killPointsData />
+      </fpsDynamicScaling>
+      <shipDynamicScaling failureResetTime="600" minDifficultyPoints="-10" maxDifficultyPoints="10" __type="SDynamicDifficultyParams">
+        <failPointsData />
+        <killPointsData />
+      </shipDynamicScaling>
+    </BaseDifficultyParams>
+  </difficultyModule>
+  <hostility>
+    <SNonTeamHostility __type="DataForgeComponentParams" __polymorphicType="SNonTeamHostility" />
+  </hostility>
+  <layerEntitiesGroupManager>
+  </layerEntitiesGroupManager>
+  <notifications>
+  </notifications>
+  <objectives>
+  </objectives>
+  <pickup>
+  </pickup>
+  <playerSetup>
+    <SStandardPlayerSetup __type="DataForgeComponentParams" __polymorphicType="SStandardPlayerSetup" />
+  </playerSetup>
+  <playerStats>
+    <SFPSPlayerStats serverKickPlayersFriendlyDamage="1500" serverKickPlayersDamageForInfraction="800" serverKickPlayersIgnoreDamageTimeAfterInfraction="2" serverKickPlayersNumberOfInfractionsToKick="4" serverKickPlayersDamageDecayHalflife="4" secondsToMergeHits="0.5" deathScreenMaxItemsPerColumn="4" deathScreenMaxSecondsStatValid="60" teamDamageCaution="@dfm_ui_Critical_Local_TeamDamage_Caution" teamDamageWarning="@dfm_ui_Critical_Local_TeamDamage_Warning" teamDamageKicked="@dfm_ui_Critical_Local_TeamDamage_Dismissal" __type="DataForgeComponentParams" __polymorphicType="SFPSPlayerStats" />
+  </playerStats>
+  <reputationModule>
+    <SGameRulesReputationBaseParamsDef __type="DataForgeComponentParams" __polymorphicType="SGameRulesReputationBaseParamsDef" />
+  </reputationModule>
+  <rounds>
+  </rounds>
+  <stateModule>
+    <EAStateParams allowOffline="0" __type="DataForgeComponentParams" __polymorphicType="EAStateParams">
+      <pregame enabled="1" requiredPlayers="2" enableIntro="1" movementEnabled="0" gameStartCountdown="10" announceCountdown="1" restrictJoiningToPreGame="0" saturateScreen="1" initialSpawnType="AutoSpawnStay" __type="GameRulesEAStatePreGameParams">
+        <readySystem enabled="0" requiredPlayers="2" forceReadyTime="-1" __type="ReadySystemParams" />
+      </pregame>
+      <postgame enabled="1" enableOutro="1" outroDuration="0.5" shutdownDelay="10" awardsDisplayTime="8" __type="GameRulesEAStatePostGameParams">
+        <scoreboard enabled="1" scoreboardTime="12" postScoreboardLogoTime="0.5" __type="PostGameScoreboardParams" />
+        <matchCycle type="NewServer" matchCycleTimeout="180" __type="MatchCycleParams" />
+      </postgame>
+    </EAStateParams>
+  </stateModule>
+  <scoring>
+    <EAScoringParams countScoreDown="0" RECMultiplier="3" mvpType="Score" killsForAceKill="5" aceBonusCap="5" killsForKillingSpree="5" killingSpreeBonusCap="5" killsForNemesisKill="3" deathCountForResurgentKill="3" underdogBonusScalar="0.2" saviorTime="5" teamRevengeKillTime="15" itemDamageFactor="0.1" enableScoreBalancing="0" scoreBalancingMirrorScore="1000" useCompetitiveScoring="1" positiveCurveHeight="2" negativeCurveHeight="0.5" ratingScoreMultiplier="FiveThousand" __type="DataForgeComponentParams" __polymorphicType="EAScoringParams">
+      <playerScoring>
+        <SPlayerScoring __type="SPlayerScoring">
+          <playerScoreEvents>
+            <SScoreEvent points="100" type="PlayerKill" __type="SScoreEvent" />
+            <SScoreEvent points="-200" type="Accident" __type="SScoreEvent" />
+            <SScoreEvent points="-200" type="Suicide" __type="SScoreEvent" />
+            <SScoreEvent points="25" type="Award_Hemorrhage" __type="SScoreEvent" />
+            <SScoreEvent points="75" type="PlayerBledOut" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_FirstBlood" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_Ace" __type="SScoreEvent" />
+            <SScoreEvent points="20" type="Award_AceBonus" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_AceKill" __type="SScoreEvent" />
+            <SScoreEvent points="20" type="Award_AceKillBonus" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_KillingSpree" __type="SScoreEvent" />
+            <SScoreEvent points="20" type="Award_KillingSpreeBonus" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_KillingSpreeKill" __type="SScoreEvent" />
+            <SScoreEvent points="20" type="Award_KillingSpreeKillBonus" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_NemesisKill" __type="SScoreEvent" />
+            <SScoreEvent points="50" type="Award_RedemptionKill" __type="SScoreEvent" />
+            <SScoreEvent points="20" type="Award_SquadronRevengeKill" __type="SScoreEvent" />
+            <SScoreEvent points="50" type="Award_Headshot" __type="SScoreEvent" />
+            <SScoreEvent points="50" type="Award_MeleeKill" __type="SScoreEvent" />
+            <SScoreEvent points="50" type="Award_Savior" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="DamageShip" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="DamageItem" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="DestroyedShip" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="PlayerKillEjected" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="Award_ForcedError" __type="SScoreEvent" />
+            <SScoreEvent points="1" type="Award_ForcedEject" __type="SScoreEvent" />
+            <SScoreEvent points="100" type="Award_ResurgentKill" __type="SScoreEvent" />
+            <SScoreEvent points="10" type="Award_CrashRoberts" __type="SScoreEvent" />
+            <SScoreEvent points="150" type="Award_TakeDown" __type="SScoreEvent" />
+          </playerScoreEvents>
+        </SPlayerScoring>
+      </playerScoring>
+      <teamScoring>
+      </teamScoring>
+      <gameCompletionAward>
+        <EAScoreboardPlacementAwardParams type="ScoreboardPlacement" participationAward="500" isLosingTeamEligible="1" __type="EAGameCompletionAwardBaseParams" __polymorphicType="EAScoreboardPlacementAwardParams">
+          <placementAwards>
+            <Int32 value="2000" />
+            <Int32 value="1500" />
+            <Int32 value="1000" />
+          </placementAwards>
+        </EAScoreboardPlacementAwardParams>
+      </gameCompletionAward>
+      <assistParams enabled="0" teamSpecificScoring="0" timeout="12000" maxAssistScore="-1" assistScoreMultiplier="1" __type="EAScoringAssistParams">
+        <assistThresholds />
+      </assistParams>
+    </EAScoringParams>
+  </scoring>
+  <spawning>
+    <SEASpawning respawnInvulnerableTime="3" swapSpawnsOnNewRound="0" hideRespawnPrompt="0" playerCanSuicide="1" autoEnterRemoteTurret="0" spawnScreenMode="Disabled" __type="DataForgeComponentParams" __polymorphicType="SEASpawning">
+      <localization locTimeToRespawn="@dfm_ui_Time_To_Respawn_msg" locPressOpenSpawnScreen="@ui_Press_KEY_ToOpenSpawnScreen" locHoldToRespawn="@ui_Hold_KEY_ToRespawn" locPressToRespawn="@ui_Press_KEY_ToRespawn" locRespawning="@dfm_ui_Respawning" __type="SEASpawningLocalization" />
+      <respawnScheduler>
+        <SEASpawnRespawnIndividualSchedulerParams forceRespawnTimer="6" signalRespawnTimer="6" __type="SEASpawnRespawnSchedulerParams" __polymorphicType="SEASpawnRespawnIndividualSchedulerParams" />
+      </respawnScheduler>
+      <livesGovernor>
+      </livesGovernor>
+      <playerSpawnProperties autoEquipDefaultWeapon="1" enableAllCarrableInteractions="0" enableAllGrenadePickups="0" rezOutLoadoutTime="0" eventLoadouts="34e7543b-5670-4311-a654-8ecc0a0eb14b" __type="SEAPlayerSpawnProperties">
+        <loadoutSetup>
+          <SEALoadoutFPSGunGameSetup defaultGrenade="00000000-0000-0000-0000-000000000000" defaultMedPen="3f945a3e-8e82-43d3-b68d-8c3d47945685" defaultUndersuit="aa63b636-4870-4470-8507-309a883a4c5c" defaultMelee="9c86b8cf-28de-49fc-aded-5b1a5bff2d42" startingArmorLevel="Medium" armorDeathsForLevelPromotion="1" armorKillsForLevelDemotion="1" startCatchupMax="6" rankMessageTime="2.5" locIdRankUp="@ea_ui_msg_gungame_RankUp" locIdRankDown="@ea_ui_msg_gungame_RankDown" __type="SEALoadoutSetup" __polymorphicType="SEALoadoutFPSGunGameSetup">
+            <baseLoadout __type="SEALoadout" __polymorphicType="SEALoadoutManual">
+              <loadout>
+                <SItemPortLoadoutXMLParams loadoutPath="Scripts/Loadouts/Player/DefaultLoadouts/Naked_Default.xml" __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutXMLParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                </SItemPortLoadoutXMLParams>
+              </loadout>
+            </baseLoadout>
+            <weaponList>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="6f1674b1-fb58-4661-9114-f418862751d2" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="28fa64a1-2a7b-4bcc-9581-9b86c6ccae16" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="b13a3815-92e7-4e09-962f-b24bcdaf3a42" />
+                  <Reference value="78300945-3145-4747-9b71-893a37152048" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="71ffee18-c359-4809-a4d0-3cb79bc32d30" />
+                  <Reference value="00d29b14-baf9-496b-8f46-d9a139446e3d" />
+                  <Reference value="dba2eef6-a4eb-4021-befc-d67d0ad19f35" />
+                  <Reference value="12d0e35b-c357-4893-af64-46543e483676" />
+                  <Reference value="ea52b726-ce0e-43f2-8e97-02dd578d4cf1" />
+                  <Reference value="eb2d231f-cbdb-4342-b60b-1ce448b7fbc8" />
+                  <Reference value="57b40b0c-90da-40c5-ba9d-07aec1a8e595" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="75809555-848a-4f4d-81a0-db4457edba2d" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="0ff9144c-970d-4861-ae27-b27ee3c969a9" />
+                  <Reference value="716624c5-8d5d-4357-8900-65d44197347b" />
+                  <Reference value="cdf93f20-7fec-4a8f-a284-09a18a1b8969" />
+                  <Reference value="ff264701-b252-403c-b265-9f9362efe380" />
+                  <Reference value="bb87b6e9-427b-4698-9a7e-fdb84c30a3fe" />
+                  <Reference value="1955753f-3472-4f04-ab9e-044af04a22f4" />
+                  <Reference value="20d6478d-2cf5-4fe7-8f24-4d29e2ae1b88" />
+                  <Reference value="258dda8b-e0f4-4313-8ab1-a25eeea974cf" />
+                  <Reference value="d1d33afb-779f-4d4d-977a-5ce26f384cf0" />
+                  <Reference value="5d94d393-8bb2-49dc-aeae-dbd4fb450842" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="3b6d199f-9eaa-4bcd-b607-398f7f50482c" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="a6688dce-f8c7-4b73-b657-bd1e17f951d3" />
+                  <Reference value="5d8e354f-5f52-467a-9546-9c5a981f4257" />
+                  <Reference value="e4a479eb-e58d-4fba-8d48-037af894b7b9" />
+                  <Reference value="6a0c7828-4e94-4428-8363-c5431835a040" />
+                  <Reference value="ae624a69-7d45-430e-9d58-134a4f04f85b" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="ecbc4c11-95f3-4bd3-9fad-49bba798a942" ironSightAttachment="a9d588a7-1023-410e-a001-73a973700faa" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="8bc41f99-ad80-4050-99ff-958c0b54c973" />
+                  <Reference value="09fd07d6-01f6-45a1-a7d3-bd4d35a076b8" />
+                  <Reference value="8c46f63f-5434-4273-a2f3-7500d03d6948" />
+                  <Reference value="d7fc6971-8061-4cab-bf2e-020a922a43e5" />
+                  <Reference value="37a17020-c433-4775-acac-725ec28a4a74" />
+                  <Reference value="4a1b92d4-103b-42b5-97b1-8dee5479e770" />
+                  <Reference value="4f481fd2-8f6e-4c2b-ac19-0d45d79f63db" />
+                  <Reference value="0bb6d34b-143e-4632-a72f-9e42ec87d470" />
+                  <Reference value="35bbb045-3b35-47a9-a603-42cce6a804b4" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="39086302-d8f9-457d-a746-255c511ea6cf" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="6bbaa189-c154-4524-b2c1-6df305bb9533" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="3ec76bc1-de5a-44f8-8469-783ec803d89d" />
+                  <Reference value="ab479579-efda-45e3-b2f5-a08650708cf7" />
+                  <Reference value="bfd81a96-9369-4430-b057-432eac9512d8" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="a9d588a7-1023-410e-a001-73a973700faa" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="e5b42569-10da-40a5-a16f-497f5b84cf3c" />
+                  <Reference value="9752372c-6e3f-46f5-9cd8-6d3c64561097" />
+                  <Reference value="991d151a-4c5d-4976-acd4-228fdc36a4a3" />
+                  <Reference value="dad885fd-d3e7-442f-b511-a11bfde19a2f" />
+                  <Reference value="4d1c4182-f460-4009-84e4-1df97d3f0547" />
+                  <Reference value="4432aa90-a96c-4e93-ab6b-ea1634e39164" />
+                  <Reference value="1a929345-8ecb-4489-af43-152378e5fd06" />
+                  <Reference value="76a46ad5-0232-417a-94c2-5fdbba94385f" />
+                  <Reference value="5accfcef-7e4b-4ccf-a92e-782b40ea8a05" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="4505b54f-0e2b-4dfa-8c15-3c9073561f93" underBarrelAttachment="6bbaa189-c154-4524-b2c1-6df305bb9533" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="01f2b88a-9752-4cd8-9f73-d151b4b2ca61" />
+                  <Reference value="ee6a1e19-269b-42d6-9449-12e833316b2d" />
+                  <Reference value="01fd5799-233a-4151-93c8-5977b6be77a3" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="718aca95-c774-4266-a0e2-50ba2a56088e" underBarrelAttachment="6bbaa189-c154-4524-b2c1-6df305bb9533" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="5ea1071e-2dc7-4c96-8ae7-aa10775a093a" />
+                  <Reference value="2e418f00-1e0f-4870-9392-c9c36c369d0a" />
+                  <Reference value="effc4f70-077f-49e3-ad97-53193626aabd" />
+                  <Reference value="8b266e43-6a55-4fe5-b2d4-21e67d5d9795" />
+                  <Reference value="1cb72e0a-59b6-403e-bd96-81a8aab1ab40" />
+                  <Reference value="cd549fac-17bb-44af-b824-9e81384bd1be" />
+                  <Reference value="acc2a73d-8492-4492-89f4-fb1dacd84fd5" />
+                  <Reference value="a82ee2bb-7eca-4f2c-916c-ce742740089b" />
+                  <Reference value="4d8016a5-fee2-4dc1-a63a-4bb0d2dcd619" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="00000000-0000-0000-0000-000000000000" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="699db405-4ca1-4993-ba58-a9f90001ae6b" />
+                  <Reference value="517834f4-9343-4aaa-907c-6d911d221936" />
+                  <Reference value="35e6ac2c-6734-47d7-bc9a-b7e5084dc48e" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="00000000-0000-0000-0000-000000000000" ironSightAttachment="718aca95-c774-4266-a0e2-50ba2a56088e" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="7623e7fa-3be9-4e9d-891c-597482c448b5" />
+                  <Reference value="fc4903e4-7e46-44d8-a20d-3db7e0062e26" />
+                  <Reference value="e5d03198-b83c-4da2-b51e-f7d5337be50e" />
+                  <Reference value="0563ba71-7903-46f7-ae55-87f108c56c46" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+              <SEAFPSGunGameWeaponSetup barrelAttachment="0ff25cf5-6f7b-47e8-8842-f12d8abfe68b" ironSightAttachment="fd9d06a9-5cf8-4325-9149-538d576e5146" underBarrelAttachment="00000000-0000-0000-0000-000000000000" __type="SEAFPSGunGameWeaponSetup">
+                <weaponVariants>
+                  <Reference value="71c3e4fe-226c-47e7-953c-708493db212b" />
+                </weaponVariants>
+              </SEAFPSGunGameWeaponSetup>
+            </weaponList>
+            <armorSets>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="1208181e-d6ff-4407-a9e6-c2e91bfcfa2e" armorHelmet="3d06b920-80a4-4db2-b5be-51268afb09b5" armorLegs="3714af80-6da5-4c42-8b78-60166d1b5987" armorTorso="d134f428-2f9e-47c4-8e69-2edbcd68cce4" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="f1183bfe-f860-465f-94bb-9c6d463e0de4" armorHelmet="81471107-53e9-4978-9490-b242d5474f36" armorLegs="bf9e7f98-fee7-4d17-8588-02238efcb637" armorTorso="43b3e729-5fb2-4396-a9d7-02b7ab9e6844" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="8fd1742f-d8d6-46bb-a2a6-bf07dd7a5bd6" armorHelmet="35e498db-02e4-4963-9afa-ee08970c2036" armorLegs="67985f0c-9d48-44f6-ab8c-ea9ba38b211a" armorTorso="cf98d3f9-24d1-47b2-9cb9-f7ba09e3571f" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="1da24aff-2be4-4374-a0d0-666323ef710c" armorHelmet="9dede6cd-110d-45a9-aeeb-7dffe89883a9" armorLegs="1d6987f1-51c0-4a3a-b564-0e599d24f905" armorTorso="805e384f-750d-4ead-9e3d-419274577e87" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="743be4e4-f6d3-41d1-aec9-c5880520eb97" armorHelmet="ca6ecaf1-c4ef-4324-8584-9d16e54f9d71" armorLegs="99202bc9-5db7-4e0d-b8c6-7c038e8053ab" armorTorso="0368d9db-58d5-48ea-8a1b-5d646c4ad66a" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="7daa0c89-f14e-4cb9-ae4c-411332ebcaf9" armorHelmet="5fc35e71-19ff-4e2a-9f82-f9c968721838" armorLegs="d8177e36-e202-470f-8465-8f57dbebd1d7" armorTorso="d1be54f2-e270-4aa1-8b14-9560711a39ae" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="f96b59a9-6670-48b0-b51b-5894d40f0bbf" armorHelmet="54e02a42-5165-423e-b19d-6f964555f4c4" armorLegs="acb79b6d-ad70-40c7-918b-5ec9da00284a" armorTorso="60ad3ebc-07cb-4b1a-b8a0-fdbc7fcc4e47" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="3f16bfca-14b1-48a4-bd39-1f50db97b599" armorHelmet="74a449c4-e358-4f00-8fa9-531ede632ee5" armorLegs="9a1f56b5-5cf2-4755-94a3-3e1d9a8d0efe" armorTorso="87bf8c56-c86a-4732-b6b0-51783d174a8c" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="eeef5072-9099-44a3-8950-efec5769fdf2" armorHelmet="138c137e-9678-40ed-824e-eafeee5ef410" armorLegs="21e4238f-5563-4c25-9014-b0e64e3697b0" armorTorso="3032438e-76c3-4fe9-a25f-2e59013b5904" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="19986a8a-ecfa-4f0c-ac68-47839a6e80a6" armorHelmet="5341b8bb-ad4e-4f4a-9a33-d5dc03b77cea" armorLegs="10bd760e-5fef-4ca4-a767-d3911549ff69" armorTorso="3e73a2a2-bba5-4483-8415-95b6643c57d3" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="72b8d295-fcbd-45ae-a155-389ecdae8c3c" armorHelmet="a0916eed-a3b0-4e6f-9c32-f1b95fb6bbfb" armorLegs="f7cff000-a26b-4f5b-a8ae-14c94b2ce9e0" armorTorso="0860d4f1-efa4-4ec9-93e4-557337d644ba" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="fc1dbf5c-f386-473d-8099-d3bc27598896" armorHelmet="43ba9e3a-ed00-42db-95ac-dd7e14f3cb18" armorLegs="cd5f4f54-3426-4030-ae86-addf74c94d96" armorTorso="f3213ddb-0cf8-41ea-bd56-30de1ff8fd6e" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="35c3fa48-0b58-4eb1-8ed4-60a020de25d1" armorHelmet="f94242b2-ff4d-4330-ad9f-4fbb95b6efb6" armorLegs="00a7a4ee-b8b0-4731-9be8-2070ef48e22d" armorTorso="6f3a2cdc-4230-4fc4-b4a1-f26317cf63d4" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="e1ea64d1-abf5-4088-aab1-b3e5eb1c8bbf" armorHelmet="3b2ad422-e01d-4f09-b69b-25e93bf987ad" armorLegs="004c9406-31c4-45d4-a052-2d2453315726" armorTorso="ebd4d90b-c276-4d7e-9bf0-99741e3a71af" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="94e46e68-570d-4cc6-abae-a9f719e23786" armorHelmet="78177158-4b2e-4d90-b1ff-b2173529697d" armorLegs="1ffc8d57-5293-4e60-b0e9-9669ec9615dc" armorTorso="0d59459b-a1bc-4922-8531-169f271013f5" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="8a5ffcee-61b3-4306-963d-2e3117e8c462" armorHelmet="963a2e3b-7a40-4678-83a9-3638a72e177a" armorLegs="286d9720-cdf9-48c3-b07b-12317153cf31" armorTorso="914d2896-860d-425a-891c-30e338eb1723" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="c6ead4a8-1769-4d2e-b48d-452651801cd8" armorHelmet="a8be87b7-182c-4429-b19c-4809f3e3a74e" armorLegs="a514dfdf-fe27-4921-87ef-81b47b49b844" armorTorso="65cfb9a4-e98a-4aba-8bc7-3a3d08d41f2b" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="2fb6bcac-f717-4600-be64-b9590565c91c" armorHelmet="ec0a0668-d3aa-4665-b6b6-8b76a1c0aaf1" armorLegs="f77d51be-57d7-4761-bb56-4d0c7bfe8107" armorTorso="7c2b7cfe-1dfc-405c-804b-72503d2ebfed" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="61e84df8-0cfe-4be7-8eb1-2faa25996714" armorHelmet="17aae62d-5415-4bae-9d06-b991860dd156" armorLegs="cd2815a5-bc11-4327-8c8c-ad7a1db289e7" armorTorso="c51d801c-a4f2-4f3d-b5c3-77ddcc6167dd" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="f7a124a8-f5c8-4b6f-8d00-ddc77378c6d9" armorHelmet="bda1a03c-589e-4b09-a621-5a46feb3851a" armorLegs="915f57e4-a00b-416f-8c19-e4b88cd071e7" armorTorso="7a84d329-ec99-420b-8a40-3d6521e5602e" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="0c3a431a-6aa9-4d1e-9deb-fd87b27c2cfa" armorHelmet="2f0875e4-bb6c-4a07-90a3-7a5f49a7f043" armorLegs="d8e8a84d-812a-4969-8965-95f7b96b0081" armorTorso="49dd9b84-23cd-45de-abcf-63170b082b11" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="46f303ef-6d23-42ae-bcd2-f42867677216" armorHelmet="7cc35dc1-d184-4d5b-a397-8d62fc351890" armorLegs="b29cf453-505d-4b48-8944-d6deb6205037" armorTorso="c5dbb105-ac5c-42b1-b8d4-22b6099ac5cf" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="85f1ce17-dc5b-42f7-bf69-fc879a47517c" armorHelmet="f86c916f-751d-4c69-9926-0066621acb1b" armorLegs="4f7dae90-0366-431c-9f65-79b17f571512" armorTorso="33f0bca9-3e7f-4412-8f1f-aea1e2cceb3f" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="a7b17816-d8ba-4795-8c59-64413227ce29" armorHelmet="985c8040-1405-45ca-85e8-cbc3a2d26827" armorLegs="febdefcd-df09-43ef-8cae-436aa68867e5" armorTorso="fe6dadf7-e2e0-4004-8925-c84483454e8a" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="2762c5fb-4246-4d07-9cf7-7339c89bc470" armorHelmet="c43bd2f8-3c3f-4d65-a60b-d47decd619bc" armorLegs="e76d0e26-cd03-4b93-8abd-e94813ccec43" armorTorso="dbae4e2e-410d-4d60-a5a4-a484a33c61cb" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="3c3e5108-171d-43be-913d-805a6ee2733b" armorHelmet="4cbdcb40-b22e-4418-a2c0-858d9fff8482" armorLegs="19b443a4-b5d2-42f2-85a6-6849d9a4ca38" armorTorso="317c1bbf-9a74-4ab9-b4fb-ed94e885b93f" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="9e2d5873-d585-457c-b7e3-44438fb3a2b9" armorHelmet="a834a5db-1ff6-46e5-a336-39c06ad32e25" armorLegs="1e1edec0-3bd3-45dd-a5c1-581ad4f12208" armorTorso="5f6c37ae-8654-4d36-880b-2fae2813790d" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="568b97c6-8474-4b13-9d9a-a15fee167c62" armorHelmet="b3417970-c0e5-48fa-b568-4d070da3995d" armorLegs="3c33ac15-c543-4462-86ce-75a2e965bfd0" armorTorso="93cfbe4d-b598-43a8-9ec7-a054a64edb68" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="ad0434c4-0244-461a-b45a-ee1105153d06" armorHelmet="0c18e5a2-e0c4-4e9b-855a-e9dfea9525d2" armorLegs="ee473fc2-9edd-4c01-adff-2f97a14a9d9c" armorTorso="cb27c023-fb27-4bd6-b799-8fb6deb8b4cd" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="b2e2dfd2-84ed-419d-b38b-8b8f8ee6f263" armorHelmet="046ced2a-fe82-46f9-b5cf-c3d0942ab4a5" armorLegs="38354858-f9cb-45ed-8d60-fc930ef43060" armorTorso="aaaccbc3-aa86-4107-a249-152bb1313e32" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="aa1cecfa-f9ce-459f-beb1-4459e381bb83" armorHelmet="62ea6e32-bed9-4ce6-982c-d8a2a8ee328f" armorLegs="360975a4-2088-452d-be3d-dc4bb7c2428b" armorTorso="86762ab1-359e-4afb-bc9e-e37cacc4ba6c" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="624585d4-a288-40a9-a2ee-37d9996e217c" armorHelmet="850d09ee-c2c0-4a78-b14c-db5db1f54d66" armorLegs="6909c564-75b1-4b76-8673-efec8e7c3374" armorTorso="bcd929fd-09e7-4c5d-bf4c-4d4469e9cd93" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="aa589dc1-2cb7-4c58-9062-4810ad134844" armorHelmet="51e87c01-182f-4276-bc8c-149c31846def" armorLegs="f26950df-7f53-4afa-9575-397543dcbfbd" armorTorso="01785efd-b9d8-49fb-a634-3aab7b7cb115" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+              <SEAFPSGunGameArmorSet __type="SEAFPSGunGameArmorSet">
+                <armorLevels>
+                  <SEAFPSGunGameArmorLevel armorArms="8a24e0e2-7bba-4e95-879d-6c864a6d758a" armorHelmet="82070439-9c9d-46a5-9328-3c197b00bed7" armorLegs="1ffe9071-a197-4bb6-811c-fbf617514036" armorTorso="8db259bf-a608-4187-8d3e-ab3f11b54582" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="5678c265-729d-4963-87a2-660d558d5c95" armorHelmet="5d4c2654-3e4b-4a13-8d1b-cd3efcd32c0e" armorLegs="d83b35bf-d498-4c13-bac8-b3d81ecabf0a" armorTorso="da4b51b9-b8c1-457a-a146-cbee110bb9e6" __type="SEAFPSGunGameArmorLevel" />
+                  <SEAFPSGunGameArmorLevel armorArms="e433a9c7-776b-41e1-8bb7-a5bc0312a375" armorHelmet="f44a56dd-522f-404f-800c-c501407252e8" armorLegs="3d57d3c4-185a-4426-8d92-239fc8f0a59a" armorTorso="bd7a1487-f335-410a-964d-d612fa689cfb" __type="SEAFPSGunGameArmorLevel" />
+                </armorLevels>
+              </SEAFPSGunGameArmorSet>
+            </armorSets>
+            <lastKillHelmets>
+              <Reference value="668ceefd-5d1f-42da-898c-c6bd39b3966c" />
+              <Reference value="762b1a5c-55c5-4976-8633-c438aa4d811a" />
+              <Reference value="e0985785-fc61-416f-8a6c-cf9b5db86bbc" />
+              <Reference value="312b9243-2d66-46d2-98f8-c46fbcf01fb3" />
+              <Reference value="cd23a5c4-f027-4a49-baf4-40993a6b13ff" />
+              <Reference value="0090e00a-4340-4032-82b8-32def1b39d99" />
+            </lastKillHelmets>
+          </SEALoadoutFPSGunGameSetup>
+        </loadoutSetup>
+        <abilityLocks>
+          <Enum value="Place" />
+          <Enum value="LootingInteraction" />
+          <Enum value="Take" />
+        </abilityLocks>
+      </playerSpawnProperties>
+      <vehicleSpawnProperties enableSpawnScreenSelection="0" spawnWithLandingOffset="0" explosionOnSelfDestruct="1" overrideSelfDestructTimer="0" selfDestructTimer="0" rezOutDestructTime="8" __type="SEAVehicleSpawnProperties">
+        <ownedEntitlement>
+        </ownedEntitlement>
+        <communalEntitlement>
+        </communalEntitlement>
+      </vehicleSpawnProperties>
+    </SEASpawning>
+  </spawning>
+  <spectator>
+    <SFPSSpectator __type="DataForgeComponentParams" __polymorphicType="SFPSSpectator">
+      <modes>
+        <SpectatorModeParams spectatorMode="SM_Fixed" cameraRecord="9eb3fa42-e9f7-4c5c-aeb8-49295eb8a29f" availableToPlayers="1" __type="SpectatorModeParams" />
+        <SpectatorModeParams spectatorMode="SM_Follow" cameraRecord="94688a95-9e34-4fec-92ee-a5f68a888762" availableToPlayers="1" __type="SpectatorModeParams" />
+        <SpectatorModeParams spectatorMode="SM_Free" cameraRecord="53dab46b-4c8c-4939-afc2-c8fc5e357a1a" availableToPlayers="0" __type="SpectatorModeParams" />
+        <SpectatorModeParams spectatorMode="SM_FirstPerson" cameraRecord="d200e716-ce68-4c28-8ebd-a222bbe71968" availableToPlayers="1" __type="SpectatorModeParams" />
+      </modes>
+    </SFPSSpectator>
+  </spectator>
+  <statsRecording>
+    <SAuthoritativeStatsRecording __type="DataForgeComponentParams" __polymorphicType="SAuthoritativeStatsRecording" />
+  </statsRecording>
+  <subsumptionMissionModule>
+    <SSubsumptionMission startOnIntialCountdown="0" __type="DataForgeComponentParams" __polymorphicType="SSubsumptionMission">
+      <spawningTagFilter __type="TagList">
+        <tags>
+          <Reference value="5a9670c9-d060-4bad-b042-e538f90e24e3" />
+        </tags>
+      </spawningTagFilter>
+    </SSubsumptionMission>
+  </subsumptionMissionModule>
+  <teams>
+  </teams>
+  <victoryConditions>
+    <SDFMVictoryConditionsPlayer timeLimit="15" timeRemainingNoNewPlayers="2" scoreLimit="16" checkScore="1" checkTime="1" checkScoreAsTime="0" decideRoundWinnerUsingRoundPoints="0" decideGameWinnerWithTeamScore="0" playHalfwaySound="1" playHalfwaySoundAfterUpdatingTimeLimit="0" playTimeAnnouncements="1" canPlayMusicMoods="1" doOpponentDisconnectedCheck="1" narrowMatchWinRatio="1.1" bigRoundWinRatio="2" narrowMatchDefeatRatio="1.05" bigRoundDefeatRatio="2" endOnKill="1" endOnAllOthersRanOutOfLives="0" winAwardId="GunGame_Win" scoringType="GunGameLevel" nextKillWins="1" __type="DataForgeComponentParams" __polymorphicType="SDFMVictoryConditionsPlayer">
+      <playerHUDParams scoreVScoreActive="1" scoreDisplayType="Score" scoreVScoreFillableActive="0" timeElapsedActive="0" timeRemainingActive="1" lapTimeActive="0" lapsActive="0" racePlacementActive="0" roundsActive="0" livesActive="0" wavesActive="0" numScoresToDisplayClient="1" numScoresToDisplayLeader="1" __type="EAPlayerHUDParams" />
+    </SDFMVictoryConditionsPlayer>
+  </victoryConditions>
+  <votingModule>
+    <EAVotingModule __type="DataForgeComponentParams" __polymorphicType="EAVotingModule">
+      <genericLocParams __type="VoteGenericLocParams">
+        <locIds>
+          <LocID value="@ea_ui_voting_VotePassed" />
+          <LocID value="@ea_ui_voting_VoteFailed" />
+          <LocID value="@ea_ui_voting_VotedYes" />
+          <LocID value="@ea_ui_voting_VotedNo" />
+          <LocID value="@ea_ui_voting_VoteStartedBy" />
+          <LocID value="@ea_ui_voting_VoteActionPrompts" />
+        </locIds>
+      </genericLocParams>
+      <nextLevelParams>
+        <VoteNextLevelParams bodyLocId="@ea_ui_voting_NextMapVoteDetail" __type="VoteBaseParams" __polymorphicType="VoteNextLevelParams" />
+      </nextLevelParams>
+    </EAVotingModule>
+  </votingModule>
+  <validMaps>
+    <GameModeValidMap levelReference="20ee8cab-a2db-436e-9b8d-7187cfb22d44" devOnly="0" __type="GameModeValidMap" />
+    <GameModeValidMap levelReference="3d7a467a-63f5-45a8-9e5a-40ad6359a76a" devOnly="0" __type="GameModeValidMap" />
+    <GameModeValidMap levelReference="7c0a83d6-8b74-45f5-b468-9cc6524e6eb5" devOnly="0" __type="GameModeValidMap" />
+    <GameModeValidMap levelReference="0231e5f5-7e10-418f-ae6e-5eaa99081654" devOnly="0" __type="GameModeValidMap" />
+  </validMaps>
+  <customSettings>
+    <GameModeCustomSetting name="TimeLimit" displayName="@dfm_ac_ui_RulesTimeLimit" description="@dfm_ac_ui_RulesTimeLimit" min="2" max="30" step="1" defaultValue="10" __type="GameModeCustomSetting" />
+  </customSettings>
+</GameMode.EA_FPSGunGame>

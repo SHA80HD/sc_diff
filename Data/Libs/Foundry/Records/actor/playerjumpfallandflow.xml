@@ -1,0 +1,257 @@
+<JumpFallLandConfig.PlayerJumpFalLandFlow __type="JumpFallLandConfig" __ref="bceeb3fe-dd5f-4365-b6fe-372fbcee1c59" __path="libs/foundry/records/actor/playerjumpfallandflow.xml">
+  <jumpNodes>
+    <ActorJumpNode configVariant="Default" arcUseHandOverlay="1" arcAllowTurning="1" fallOverlay="" fall="" landing="" __type="ActorJumpNode">
+      <launch fragment="" __type="FragmentInfo">
+        <additionalTags />
+      </launch>
+      <arc fragment="MotionJumpV2" __type="FragmentInfo">
+        <additionalTags />
+      </arc>
+      <durationTags />
+    </ActorJumpNode>
+    <ActorJumpNode configVariant="KnockdownForward" arcUseHandOverlay="0" arcAllowTurning="0" fallOverlay="" fall="" landing="" __type="ActorJumpNode">
+      <launch fragment="" __type="FragmentInfo">
+        <additionalTags />
+      </launch>
+      <arc fragment="MotionKnockdownJump" __type="FragmentInfo">
+        <additionalTags />
+      </arc>
+      <durationTags>
+        <DurationTags minDuration="0" __type="DurationTags">
+          <tags>
+            <String value="KnockdownDurationShort" />
+          </tags>
+        </DurationTags>
+        <DurationTags minDuration="0.6" __type="DurationTags">
+          <tags>
+            <String value="KnockdownDurationLong" />
+          </tags>
+        </DurationTags>
+      </durationTags>
+    </ActorJumpNode>
+    <ActorJumpNode configVariant="KnockdownBackward" arcUseHandOverlay="0" arcAllowTurning="0" fallOverlay="" fall="" landing="" __type="ActorJumpNode">
+      <launch fragment="" __type="FragmentInfo">
+        <additionalTags />
+      </launch>
+      <arc fragment="MotionKnockdownJump" __type="FragmentInfo">
+        <additionalTags />
+      </arc>
+      <durationTags>
+        <DurationTags minDuration="0" __type="DurationTags">
+          <tags>
+            <String value="KnockdownDurationShort" />
+          </tags>
+        </DurationTags>
+        <DurationTags minDuration="0.6" __type="DurationTags">
+          <tags>
+            <String value="KnockdownDurationLong" />
+          </tags>
+        </DurationTags>
+      </durationTags>
+    </ActorJumpNode>
+  </jumpNodes>
+  <fallNodes>
+    <ActorFallNode configVariant="Default" introUseHandOverlay="1" loopUseHandOverlay="1" outroUseHandOverlay="1" introAllowTurning="1" loopAllowTurning="1" outroAllowTurning="1" loopBlendStartTime="1" loopBlendEndTime="3" outroTimeToLand="1" outroMinDelay="1" outroMinSpeed="10" fallOverlay="" landing="" __type="ActorFallNode">
+      <intro fragment="" __type="FragmentInfo">
+        <additionalTags />
+      </intro>
+      <loop fragment="MotionFallV2" __type="FragmentRequiredInfo">
+        <additionalTags>
+          <String value="FromJump" />
+        </additionalTags>
+      </loop>
+      <outro fragment="MotionFallV2" __type="FragmentInfo">
+        <additionalTags>
+          <String value="FromJump" />
+        </additionalTags>
+      </outro>
+      <alternateLandings />
+    </ActorFallNode>
+    <ActorFallNode configVariant="Default" introUseHandOverlay="1" loopUseHandOverlay="1" outroUseHandOverlay="1" introAllowTurning="1" loopAllowTurning="1" outroAllowTurning="1" loopBlendStartTime="1" loopBlendEndTime="3" outroTimeToLand="1" outroMinDelay="1" outroMinSpeed="10" fallOverlay="" landing="" __type="ActorFallNode">
+      <intro fragment="" __type="FragmentInfo">
+        <additionalTags />
+      </intro>
+      <loop fragment="MotionFallV2" __type="FragmentRequiredInfo">
+        <additionalTags />
+      </loop>
+      <outro fragment="MotionFallV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+      <alternateLandings />
+    </ActorFallNode>
+    <ActorFallNode configVariant="KnockdownForward" introUseHandOverlay="0" loopUseHandOverlay="1" outroUseHandOverlay="1" introAllowTurning="0" loopAllowTurning="1" outroAllowTurning="1" loopBlendStartTime="1" loopBlendEndTime="3" outroTimeToLand="1" outroMinDelay="1" outroMinSpeed="10" fallOverlay="" landing="" __type="ActorFallNode">
+      <intro fragment="MotionKnockdownFall" __type="FragmentInfo">
+        <additionalTags />
+      </intro>
+      <loop fragment="MotionFallV2" __type="FragmentRequiredInfo">
+        <additionalTags />
+      </loop>
+      <outro fragment="MotionFallV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+      <alternateLandings>
+        <LandingSelection animEventName="LandingStand" landing="" __type="LandingSelection" />
+      </alternateLandings>
+    </ActorFallNode>
+    <ActorFallNode configVariant="KnockdownBackward" introUseHandOverlay="0" loopUseHandOverlay="1" outroUseHandOverlay="1" introAllowTurning="0" loopAllowTurning="1" outroAllowTurning="1" loopBlendStartTime="1" loopBlendEndTime="3" outroTimeToLand="1" outroMinDelay="1" outroMinSpeed="10" fallOverlay="" landing="" __type="ActorFallNode">
+      <intro fragment="MotionKnockdownFall" __type="FragmentInfo">
+        <additionalTags />
+      </intro>
+      <loop fragment="MotionFallV2" __type="FragmentRequiredInfo">
+        <additionalTags />
+      </loop>
+      <outro fragment="MotionFallV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+      <alternateLandings>
+        <LandingSelection animEventName="LandingStand" landing="" __type="LandingSelection" />
+      </alternateLandings>
+    </ActorFallNode>
+  </fallNodes>
+  <landingNodes>
+    <ActorLandingNode configVariant="Default" proceduralLandingSetup="404d1dda-1c80-46ed-a37a-1fbc8e082b00" __type="ActorLandingNode">
+      <landingAnimations>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Medium" minVelocity="6" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Heavy" minVelocity="9" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Impact" minVelocity="15" condition="None" playProceduralLanding="0" lockMovement="1" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingImpact" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+      </landingAnimations>
+    </ActorLandingNode>
+    <ActorLandingNode configVariant="Vault" proceduralLandingSetup="e82b842d-59e7-4bdf-9f5a-a8848804ddb5" __type="ActorLandingNode">
+      <landingAnimations>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Medium" minVelocity="6" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Heavy" minVelocity="9" condition="None" playProceduralLanding="1" lockMovement="0" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingOverlay" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Impact" minVelocity="15" condition="None" playProceduralLanding="0" lockMovement="1" exitStance="Stand" __type="LandingAnimationSetup">
+          <fragment fragment="MotionLandingImpact" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+      </landingAnimations>
+    </ActorLandingNode>
+    <ActorLandingNode configVariant="KnockdownForward" proceduralLandingSetup="00000000-0000-0000-0000-000000000000" __type="ActorLandingNode">
+      <landingAnimations>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="ADSTriggered" playProceduralLanding="0" lockMovement="1" exitStance="Prone" __type="LandingAnimationSetup">
+          <fragment fragment="MotionKnockdownLanding" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="None" playProceduralLanding="0" lockMovement="1" exitStance="Prone" __type="LandingAnimationSetup">
+          <fragment fragment="MotionKnockdownLanding" __type="FragmentInfo">
+            <additionalTags>
+              <String value="KnockdownLandingVariantSloppy" />
+            </additionalTags>
+          </fragment>
+        </LandingAnimationSetup>
+      </landingAnimations>
+    </ActorLandingNode>
+    <ActorLandingNode configVariant="KnockdownBackward" proceduralLandingSetup="00000000-0000-0000-0000-000000000000" __type="ActorLandingNode">
+      <landingAnimations>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="ADSTriggered" playProceduralLanding="0" lockMovement="1" exitStance="ProneBack" __type="LandingAnimationSetup">
+          <fragment fragment="MotionKnockdownLanding" __type="FragmentInfo">
+            <additionalTags />
+          </fragment>
+        </LandingAnimationSetup>
+        <LandingAnimationSetup landingStrength="Light" minVelocity="0" condition="None" playProceduralLanding="0" lockMovement="1" exitStance="ProneBack" __type="LandingAnimationSetup">
+          <fragment fragment="MotionKnockdownLanding" __type="FragmentInfo">
+            <additionalTags>
+              <String value="KnockdownLandingVariantSloppy" />
+            </additionalTags>
+          </fragment>
+        </LandingAnimationSetup>
+      </landingAnimations>
+    </ActorLandingNode>
+  </landingNodes>
+  <fallOverlayNodes>
+    <ActorFallOverlayNode configVariant="Default" transitionFromInterruptDelay="2" transitionFromInterruptDuration="3" __type="ActorFallOverlayNode">
+      <arc fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags />
+      </arc>
+      <loop fragment="MotionFallOverlayV2" __type="FragmentRequiredInfo">
+        <additionalTags />
+      </loop>
+      <outro fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+    </ActorFallOverlayNode>
+    <ActorFallOverlayNode configVariant="Default" transitionFromInterruptDelay="2" transitionFromInterruptDuration="3" __type="ActorFallOverlayNode">
+      <arc fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags>
+          <String value="FromJump" />
+        </additionalTags>
+      </arc>
+      <loop fragment="MotionFallOverlayV2" __type="FragmentRequiredInfo">
+        <additionalTags>
+          <String value="FromJump" />
+        </additionalTags>
+      </loop>
+      <outro fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+    </ActorFallOverlayNode>
+    <ActorFallOverlayNode configVariant="Default" transitionFromInterruptDelay="2" transitionFromInterruptDuration="3" __type="ActorFallOverlayNode">
+      <arc fragment="" __type="FragmentInfo">
+        <additionalTags>
+          <String value="" />
+        </additionalTags>
+      </arc>
+      <loop fragment="MotionFallOverlayV2" __type="FragmentRequiredInfo">
+        <additionalTags>
+          <String value="" />
+        </additionalTags>
+      </loop>
+      <outro fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+    </ActorFallOverlayNode>
+    <ActorFallOverlayNode configVariant="Default" transitionFromInterruptDelay="2" transitionFromInterruptDuration="3" __type="ActorFallOverlayNode">
+      <arc fragment="" __type="FragmentInfo">
+        <additionalTags>
+          <String value="" />
+        </additionalTags>
+      </arc>
+      <loop fragment="MotionFallOverlayV2" __type="FragmentRequiredInfo">
+        <additionalTags>
+          <String value="FromJump" />
+        </additionalTags>
+      </loop>
+      <outro fragment="MotionFallOverlayV2" __type="FragmentInfo">
+        <additionalTags />
+      </outro>
+    </ActorFallOverlayNode>
+  </fallOverlayNodes>
+  <variantConfigNodes>
+    <ActorJumpFallLandVariantConfigNode variant="Default" jump="" fall="" land="" __type="ActorJumpFallLandVariantConfigNode" />
+    <ActorJumpFallLandVariantConfigNode variant="Vault" jump="" fall="" land="" __type="ActorJumpFallLandVariantConfigNode" />
+    <ActorJumpFallLandVariantConfigNode variant="KnockdownForward" jump="" fall="" land="" __type="ActorJumpFallLandVariantConfigNode" />
+    <ActorJumpFallLandVariantConfigNode variant="KnockdownBackward" jump="" fall="" land="" __type="ActorJumpFallLandVariantConfigNode" />
+  </variantConfigNodes>
+</JumpFallLandConfig.PlayerJumpFalLandFlow>

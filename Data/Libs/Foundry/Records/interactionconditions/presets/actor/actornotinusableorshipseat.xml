@@ -1,0 +1,44 @@
+<InteractionConditionPreset.ActorNotInUsableOrShipSeat __type="InteractionConditionPreset" __ref="69128f9d-3fd7-48ee-b9a3-786406626c1c" __path="libs/foundry/records/interactionconditions/presets/actor/actornotinusableorshipseat.xml">
+  <conditions>
+    <InteractionConditionAND __type="InteractionConditionParams" __polymorphicType="InteractionConditionAND">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_exitSeat" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="1" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+      <firstCondition>
+        <InteractionConditionNOT __type="InteractionConditionParams" __polymorphicType="InteractionConditionNOT">
+          <conditionDisplay>
+          </conditionDisplay>
+          <condition>
+            <InteractionConditionSeatUserRegistered __type="InteractionConditionParams" __polymorphicType="InteractionConditionSeatUserRegistered">
+              <conditionDisplay>
+              </conditionDisplay>
+            </InteractionConditionSeatUserRegistered>
+          </condition>
+        </InteractionConditionNOT>
+      </firstCondition>
+      <secondCondition>
+        <IneractionConditionUserNotInUsable __type="InteractionConditionParams" __polymorphicType="IneractionConditionUserNotInUsable">
+          <conditionDisplay>
+          </conditionDisplay>
+        </IneractionConditionUserNotInUsable>
+      </secondCondition>
+    </InteractionConditionAND>
+  </conditions>
+  <conditionToHideParams />
+</InteractionConditionPreset.ActorNotInUsableOrShipSeat>

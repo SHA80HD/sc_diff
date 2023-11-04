@@ -1,0 +1,27 @@
+<AtmosphereBehavior.Stanton1 enableAtmosphericHeating="1" enableActorVectorFields="0" atmosphereEnvironmentTag="ae7b18a2-0478-4ff4-8e86-9799af4759b6" __type="AtmosphereBehavior" __ref="7696bb55-6344-4a8d-9d97-228f76dfae92" __path="libs/foundry/records/roomsystem/atmospherebehaviors/stanton1.xml">
+  <vehicleEffects enableEngineTrails="0" enableEngineContrails="1" __type="Behavior_VehicleEffectParams" __polymorphicType="Behavior_AtmosphereVehicleEffectParams">
+    <customVehicleEffects>
+    </customVehicleEffects>
+    <aerodynamicTrailCalculation>
+      <AerodynamicTrailCalculationDefault __type="AerodynamicTrailCalculation" __polymorphicType="AerodynamicTrailCalculationDefault" />
+    </aerodynamicTrailCalculation>
+  </vehicleEffects>
+  <turbulence>
+  </turbulence>
+  <weather>
+    <AtmosphereBehavior_WeatherParams planetCloudCondensationAmount="0" enableSurfaceWaterEffects="1" __type="AtmosphereBehavior_WeatherParams">
+      <planetCloudDensityCondensationRange minimum="0.1" maximum="0.9" __type="Range" />
+      <effects>
+        <WeatherEffects_Atmosphere_VolumetricCloudDensity __type="WeatherEffects_Atmosphere" __polymorphicType="WeatherEffects_Atmosphere_VolumetricCloudDensity">
+          <spaceLoopEffect updateStrength="1" updateCount="1" __type="WeatherEffects_SpaceLoopEffect">
+            <effect path="Environments\PlanED\volumetric_cloud_spaceloops.planet_default.stanton1_hurston" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          </spaceLoopEffect>
+          <interpolationRange minimum="0.01" maximum="1" __type="Range" />
+        </WeatherEffects_Atmosphere_VolumetricCloudDensity>
+      </effects>
+    </AtmosphereBehavior_WeatherParams>
+  </weather>
+  <atmospherePressureRtpc rtpc="EnvironmentFeedback_Atmosphere_Pressure" __type="AudioRtpc" />
+  <atmosphereTemperatureRtpc rtpc="EnvironmentFeedback_Atmosphere_Temperature" __type="AudioRtpc" />
+  <atmosphereHumidityRtpc rtpc="EnvironmentFeedback_Atmosphere_Humidity" __type="AudioRtpc" />
+</AtmosphereBehavior.Stanton1>

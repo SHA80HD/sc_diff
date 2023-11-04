@@ -1,0 +1,1002 @@
+<EntityClassDefinition.ActorMovable_Trolley_diagnostic_computer_1_a Category="ActorMovable" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="6806e86f-6517-46b4-82a7-b747f77cf212" __type="EntityClassDefinition" __ref="7c76976b-569f-47aa-8e37-bae036f1241f" __path="libs/foundry/records/entities/scitem/actormovables/actormovable_trolley_diagnostic_computer_1_a.xml">
+  <tags>
+    <Reference value="0d49bd5b-fba9-42db-aeac-2d79fda480b7" />
+    <Reference value="5c5fa754-3ab1-4102-a70b-c661d2ec99d1" />
+  </tags>
+  <StaticEntityClassData />
+  <Components>
+    <SEntityWheeledPhysicsComponentParams __type="DataForgeComponentParams" __polymorphicType="SEntityWheeledPhysicsComponentParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="50" maxLoggedCollisions="1" Damping="0" DampingFreefall="0.05" PushableByPlayers="0" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+      <wheels>
+        <SEntityPhysicsWheel wheelJoint="mesh_wheel_spin_1" castorJoint="wheel_turn_1" radius="0.125" __type="SEntityPhysicsWheel">
+          <offset x="0.025" y="0" z="0.025" __type="Vec3" />
+        </SEntityPhysicsWheel>
+        <SEntityPhysicsWheel wheelJoint="mesh_wheel_spin_2" castorJoint="wheel_turn_2" radius="0.125" __type="SEntityPhysicsWheel">
+          <offset x="-0.025" y="0" z="0.025" __type="Vec3" />
+        </SEntityPhysicsWheel>
+        <SEntityPhysicsWheel wheelJoint="mesh_wheel_spin_3" castorJoint="wheel_turn_3" radius="0.125" __type="SEntityPhysicsWheel">
+          <offset x="0.025" y="0" z="0.025" __type="Vec3" />
+        </SEntityPhysicsWheel>
+        <SEntityPhysicsWheel wheelJoint="mesh_wheel_spin_4" castorJoint="wheel_turn_4" radius="0.125" __type="SEntityPhysicsWheel">
+          <offset x="-0.025" y="0" z="0.025" __type="Vec3" />
+        </SEntityPhysicsWheel>
+      </wheels>
+    </SEntityWheeledPhysicsComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Grip" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_grip" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="b0774a40-4a84-408c-bbe8-b1827a2d5e27" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Release" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_release" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_1" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.25" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.5" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0.0875" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="80" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@interaction_grip" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@interaction_release" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/buildingsets/human/universal/prop/medical/diagnostic/diagnostic_computer_1_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry>
+          <SGeometryNodeParams Tags="Destroyed" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="0" VisFP="0" VisShadow="0" VisSecondaryViews="0" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+        </SubGeometry>
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SPersistentComponentParams __type="DataForgeComponentParams" __polymorphicType="SPersistentComponentParams" />
+    <SCEntityActorMovableParams moveInteraction="Interactable.SharedInteractions[0]" exitInteraction="Interactable.SharedInteractions[1]" limits="84914756-400f-4811-a0f4-943ec095bb84" IntroFragmentId="ActorMovable" IntroFragTag="IntroHorizontal" OutroFragmentId="ActorMovable" OutroFragTag="OutroHorizontal" __type="DataForgeComponentParams" __polymorphicType="SCEntityActorMovableParams">
+      <grips>
+        <SMovableGrip gripName="1" canBeUsedBy="All" handMode="RightHand" width="0" AllowStrafe="1" AllowPush="1" AllowPull="1" interactionPoint="Interactable.InteractionPoints" __type="SMovableGrip">
+          <handGrip gripID="RightHand" optionalHelper="$grip_right_1" __type="SGrip">
+            <gripShapeParameters gripShape="gs_horizontal" dimension="12" wristRotation="0" __type="SGripShapeParams" />
+            <offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </offset>
+          </handGrip>
+          <offHandGrip>
+            <SGrip gripID="LeftHand" optionalHelper="$grip_left_1" __type="SGrip">
+              <gripShapeParameters gripShape="gs_horizontal" dimension="12" wristRotation="0" __type="SGripShapeParams" />
+              <offset __type="QuatT">
+                <Rotation x="0" y="0" z="0" __type="Ang3" />
+                <Position x="0" y="0" z="0" __type="Vec3" />
+              </offset>
+            </SGrip>
+          </offHandGrip>
+          <userOffset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </userOffset>
+        </SMovableGrip>
+      </grips>
+    </SCEntityActorMovableParams>
+    <EntityPhysicalAudioParams minimumImpulseContinuous="10" minimumImpulseTransient="1000" minimumVelocityNoImpulse="100" slideThreshold="0.1" rollThreshold="0.1" momentumScale="1" useAABBCentre="0" oneShotTag="0d401f6c-38a4-4c52-bb02-26059dd8d98a" oneShotCooldown="0.2" dragOnly="0" __type="DataForgeComponentParams" __polymorphicType="EntityPhysicalAudioParams">
+      <collisionTriggers>
+        <PhysicalAudioCollisionTrigger oneShotMinPlayTime="0.25" attachToObject="0" __type="PhysicalAudioCollisionTrigger">
+          <trigger audioTrigger="Play_PHOB_Physics_Objects_Wheeled_Trolley_Small_Impacts" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        </PhysicalAudioCollisionTrigger>
+        <PhysicalAudioCollisionTrigger oneShotMinPlayTime="0.25" attachToObject="0" __type="PhysicalAudioCollisionTrigger">
+          <trigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        </PhysicalAudioCollisionTrigger>
+      </collisionTriggers>
+      <slideStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <slideStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStartTrigger audioTrigger="Play_PHOB_Physics_Objects_Wheeled_Trolley_Medium_Rolling" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStopTrigger audioTrigger="Stop_PHOB_Physics_Objects_Wheeled_Trolley_Medium_Rolling" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickupTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickFromOwnerTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <dropTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <placeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rtpcSlideVelocity rtpc="PhysicalAudio_Velocity" __type="AudioRtpc" />
+      <rtpcMassSelf rtpc="PhysicalAudio_MassSelf" __type="AudioRtpc" />
+      <rtpcMassOther rtpc="PhysicalAudio_MassOther" __type="AudioRtpc" />
+      <rtpcDampening rtpc="PhysicalAudio_Damping" __type="AudioRtpc" />
+      <rtpcRollVelocity rtpc="PhysicalAudio_RollVelocity" __type="AudioRtpc" />
+      <rtpcHealth rtpc="PhysicalAudio_Health" __type="AudioRtpc" />
+      <rtpcMovement rtpc="PhysicalAudio_Movement" __type="AudioRtpc" />
+      <rtpcRotation rtpc="PhysicalAudio_Rotation" __type="AudioRtpc" />
+      <rtpcTimeSinceLastOneshot rtpc="PhysicalAudio_TimeSinceLastOneshot" __type="AudioRtpc" />
+      <rtpcMomentum rtpc="PhysicalAudio_Momentum" __type="AudioRtpc" />
+      <rtpcCarried rtpc="PhysicalAudio_CarryState" __type="AudioRtpc" />
+    </EntityPhysicalAudioParams>
+    <SHealthComponentParams Health="50" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="Destroyed" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SActorUsableParams archetype="f5752731-b3c0-4ca4-8dc7-9a058afa0371" fragmentTag="" isExterior="0" allowDeadOrUnconscious="0" __type="DataForgeComponentParams" __polymorphicType="SActorUsableParams">
+      <useSlots>
+        <UsableUseSlot name="Handle" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="98f57d83-2c9b-44a8-8deb-41fc6fd244ac" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[0]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts />
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[1]" />
+            <WeakPointer useSlotsToDisable="useSlots[2]" />
+            <WeakPointer useSlotsToDisable="useSlots[3]" />
+            <WeakPointer useSlotsToDisable="useSlots[4]" />
+            <WeakPointer useSlotsToDisable="useSlots[5]" />
+            <WeakPointer useSlotsToDisable="useSlots[6]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load1" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[1]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[1]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[0]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load2" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[2]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[2]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[1]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load3" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[3]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[3]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[2]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load4" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[4]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[4]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[3]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load5" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[5]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[5]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[4]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+        <UsableUseSlot name="Take/Load6" available="1" useSlotReenablePoint="UseChannelCompletion" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="bd2174d2-aed7-481e-9ef9-6315352f63ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[6]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="6c0a6437-2ade-4873-8526-bbc6ad725484" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="socket_trolley" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[6]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts>
+            <UsableItemPort itemPort="Ports[5]" itemPortFragmentTag="" recurseThroughInventoryWhenFindingItemProvider="0" __type="UsableItemPort">
+              <conditionTags __type="TagsDNF">
+                <terms>
+                  <TagsDNFTerm __type="TagsDNFTerm">
+                    <positiveTags>
+                      <Reference value="df4bd3a7-55e9-4b14-91f7-b05dd474ce95" />
+                    </positiveTags>
+                    <negativeTags />
+                  </TagsDNFTerm>
+                </terms>
+              </conditionTags>
+            </UsableItemPort>
+          </usableItemPorts>
+          <useSlotsToDisable>
+            <WeakPointer useSlotsToDisable="useSlots[0]" />
+          </useSlotsToDisable>
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+      </useSlots>
+      <alignmentSlots>
+        <PointAlignmentSlot name="Handle" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_handle" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="1" useADIK="1" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints>
+            <WeakPointer interactionPoints="Interactable.InteractionPoints" />
+          </interactionPoints>
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="-1.9" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="Interactable.SharedInteractions[0]" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="0" exitOnMovement="0" exitOnJump="1" exitOnDamageTaken="0" exitInteraction="Interactable.SharedInteractions[1]" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack1" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad1" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="90" __type="Ang3" />
+            <Position x="1.2" y="0.8" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack2" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad2" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="-90" __type="Ang3" />
+            <Position x="-1.2" y="0.8" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack3" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad3" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="90" __type="Ang3" />
+            <Position x="1.2" y="0.1" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack4" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad4" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="-90" __type="Ang3" />
+            <Position x="-1.2" y="0.1" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack5" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad5" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="90" __type="Ang3" />
+            <Position x="1.2" y="-0.6" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="Stack6" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_TakeLoad6" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="-90" __type="Ang3" />
+            <Position x="-1.2" y="-0.6" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="0" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+      </alignmentSlots>
+      <slottingSetups>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[0]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[1]" />
+          </useSlots>
+        </UsableSlottingSetup>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[1]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[2]" />
+          </useSlots>
+        </UsableSlottingSetup>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[2]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[3]" />
+          </useSlots>
+        </UsableSlottingSetup>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[3]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[4]" />
+          </useSlots>
+        </UsableSlottingSetup>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[4]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[5]" />
+          </useSlots>
+        </UsableSlottingSetup>
+        <UsableSlottingSetup fragmentTagsForSlot="socket_trolley" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingReferenceItemPort itemPort="Ports[5]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingReferenceItemPort" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="useSlots[6]" />
+          </useSlots>
+        </UsableSlottingSetup>
+      </slottingSetups>
+      <views />
+      <abilityLocks />
+      <usableSequencerTasks />
+      <specializedData __type="SSpecializedData">
+        <specializedDataEntry />
+      </specializedData>
+    </SActorUsableParams>
+    <SCActorCollisionAvoidanceParams passRadiusAgent="1.55" passRadiusObstacleMoving="1.55" passRadiusObstacleStatic="1.55" baseAgentAvoidanceRange="10" baseObstacleAvoidanceRange="20" baseNavmeshEdgeAvoidanceRange="7.5" velocityInfluenceMultiplier="1" timeHorizonScale="1" agentAvoidanceTimeHorizon="1" obstacleAvoidanceTimeHorizon="2" navmeshEdgeAvoidanceTimeHorizon="0.75" alwaysAnObstacle="0" __type="DataForgeComponentParams" __polymorphicType="SCActorCollisionAvoidanceParams">
+      <offsetAgent x="0" y="0" __type="Vec2" />
+      <offsetObstacle x="0" y="0" __type="Vec2" />
+    </SCActorCollisionAvoidanceParams>
+    <SSCSignatureSystemParams bindingURLPrefix="" scanCustomData="00000000-0000-0000-0000-000000000000" scanDisplayLayoutOverride="00000000-0000-0000-0000-000000000000" isOverridden="0" enableDetectionOnItemPort="0" __type="DataForgeComponentParams" __polymorphicType="SSCSignatureSystemParams">
+      <radarProperties>
+        <SSCRadarContactProperites contactType="d7fd8fa4-1591-46c4-b2fa-e15de9b1f05b" __type="SSCRadarContactProperites">
+          <baseSignatureParams>
+            <SSCSignatureSystemBaseSignatureParams __type="SSCSignatureParamsBase" __polymorphicType="SSCSignatureSystemBaseSignatureParams">
+              <signatures>
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="30" />
+              </signatures>
+              <taggedSignatures />
+            </SSCSignatureSystemBaseSignatureParams>
+          </baseSignatureParams>
+          <crossSectionParams>
+          </crossSectionParams>
+          <emissionModifierParams>
+          </emissionModifierParams>
+          <scanBounds>
+          </scanBounds>
+        </SSCRadarContactProperites>
+      </radarProperties>
+      <audioParams>
+      </audioParams>
+      <embeddedScanInfo>
+      </embeddedScanInfo>
+      <detectionTags />
+      <overriddenSize x="0" y="0" z="0" __type="Vec3" />
+    </SSCSignatureSystemParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="StackingPoint1" DisplayName="$IP_StackingPoint1" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$IP_StackingPoint1" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="-90" __type="Ang3" />
+                    <Position x="0.3" y="0.8" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="StackingPoint2" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="90" __type="Ang3" />
+                    <Position x="-0.3" y="0.8" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="StackingPoint3" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="-90" __type="Ang3" />
+                    <Position x="0.3" y="0.1" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="StackingPoint4" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="90" __type="Ang3" />
+                    <Position x="-0.3" y="0.1" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="StackingPoint5" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="-90" __type="Ang3" />
+                    <Position x="0.3" y="-0.6" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="StackingPoint6" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="90" __type="Ang3" />
+                    <Position x="-0.3" y="-0.6" z="0.35" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <SEntityLootableContainerParams initialLocalPlayerAccess="1" radius="1.6" mainInteractionPoint="null" validTagsOnSwapOutfit="" blockingTagsOnSwapOutfit="" infiniteLootable="0" smartRefillAmmo="0" smartRefillGrenadesAndAmmo="0" fragmentTags="" forceFirstSelect="0" placeIntoPortInteraction="null" bespokePlace="0" exactPlaceIntoPort="null" __type="DataForgeComponentParams" __polymorphicType="SEntityLootableContainerParams">
+      <maxOffsetTranslation x="0" y="0" z="0" __type="Vec3" />
+      <maxOffsetRotation x="0" y="0" z="0" __type="Ang3" />
+      <mainInteractions />
+      <placeOutfitRules />
+      <takeExclussionRules />
+      <lootInventoryParams>
+      </lootInventoryParams>
+      <itemPortRules />
+      <outfitHangerGroups />
+      <coreInventoryItems />
+    </SEntityLootableContainerParams>
+  </Components>
+</EntityClassDefinition.ActorMovable_Trolley_diagnostic_computer_1_a>

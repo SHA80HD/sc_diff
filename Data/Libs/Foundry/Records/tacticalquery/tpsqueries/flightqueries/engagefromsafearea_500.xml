@@ -1,0 +1,69 @@
+<TacticalQuery.EngageFromSafeArea_500 name="EngageFromSafeArea_500" type="TacticalPointQuery" __type="TacticalQuery" __ref="bc108399-2853-4a09-9ff5-0e1776f31a6e" __path="libs/foundry/records/tacticalquery/tpsqueries/flightqueries/engagefromsafearea_500.xml">
+  <options>
+    <TQSEmbeddedOption __type="TQSOption" __polymorphicType="TQSEmbeddedOption">
+      <requirements __type="TagsDNF">
+        <terms />
+      </requirements>
+      <content __type="TQSOptionContent">
+        <parameters>
+          <TQSInputFloatValue condition="density" value="150" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="maximumDistance" value="500" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </parameters>
+        <generation>
+          <TQSInputFloatValue condition="sphere_around_host" value="500" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </generation>
+        <conditions>
+          <TQSInputBoolValue condition="isInside_of_area" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="8cfd65e2-1ab6-476f-8765-59ec700b09f7" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSInputBoolValue>
+        </conditions>
+        <weights>
+          <TQSWeightInputValue condition="positiveSDFToAllSources" weight="1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="random" weight="0.1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="distance_to_attentionTarget" weight="-0.25" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+        </weights>
+      </content>
+      <optionOverrides />
+    </TQSEmbeddedOption>
+  </options>
+</TacticalQuery.EngageFromSafeArea_500>

@@ -1,0 +1,198 @@
+<ControlHints_Preset.ControlHintsConfig_PU_Boat __type="ControlHints_Preset" __ref="364c3915-9d6f-4063-88d2-24d3c9b895ab" __path="libs/foundry/records/ui/visor/controlhints/controlhintsconfig_pu_boat.xml">
+  <hintSlots>
+    <ControlHint_Entry name="BoatSlot_01" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Dirty Visor - WIPE VISOR" __type="ControlHintDef">
+          <condition>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_visor_dirty_wipe" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_general:visor_wipe" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power Off - POWER ON" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+              <condition>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </condition>
+            </ControlHintCondition_NOT>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_boats_power_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_general:v_flightready" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Any - MOVE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_boats_movement" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_move_forward" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_boats_movement" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_move" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="BoatSlot_02" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Power Off - INTERACT/LOOK " __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                    <keynames>
+                      <ControlHints_KeyInput name="maxis_x" deviceType="Mouse" __type="ControlHints_KeyInput" />
+                    </keynames>
+                  </ControlHints_LocalizedKeyInput>
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                    <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                      <keynames>
+                        <ControlHints_KeyInput name="thumbrx" deviceType="Gamepad" __type="ControlHints_KeyInput" />
+                      </keynames>
+                    </ControlHints_LocalizedKeyInput>
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power On - STEER" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_boats_steer" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_boats_steer" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="BoatSlot_03" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Base - EXIT" __type="ControlHintDef">
+          <condition>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_pl_exit" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Visor NOT Dirty - Always show - SCAN" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+              <condition>
+                <ControlHintCondition_ActorSuitState suitState="VisorDirty" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSuitState" />
+              </condition>
+            </ControlHintCondition_NOT>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_scan_quick" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_radar:v_invoke_ping" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+  </hintSlots>
+</ControlHints_Preset.ControlHintsConfig_PU_Boat>

@@ -1,0 +1,64 @@
+<EntityClassDefinition.Controller_Shield_AEGS_Gladius Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="23904279-3b05-4f2e-9506-5694e317acf1" __path="libs/foundry/records/entities/scitem/ships/controller/controller_shield_aegs_gladius.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="ShieldController" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="flightReady" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_Name_SHLD_Controller" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemShieldEmitterParams FaceType="Bubble" MaxReallocation="1" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputResistance="31bcecca-c88c-447f-b800-1333a6206dfe" ReconfigurationCooldown="2.5" MaxElectricalChargeDamageRate="100" regenerateEffectTag="2fea78a9-16ad-4074-9873-426769d025c5" shieldMeshDeprecated="" shieldEffectType="2063cb39-ac3f-4118-b3b5-4c53d67d3c75" __type="DataForgeComponentParams" __polymorphicType="SCItemShieldEmitterParams">
+      <ShieldMaterial path="materials/shield/shield_godi_q2.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+    </SCItemShieldEmitterParams>
+    <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
+    <ItemResourceComponentParams isResourceNetworked="1" isRelay="0" isConnectedToRoom="0" wirelessConnection="0" defaultPriority="50" __type="DataForgeComponentParams" __polymorphicType="ItemResourceComponentParams">
+      <states>
+        <ItemResourceState name="Consuming Shields" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaConsumption minimumConsumptionFraction="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaConsumption">
+              <consumption resource="Shield" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="1000000" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values />
+              </consumptionComposition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+            </ItemResourceDeltaConsumption>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+      </states>
+      <controlParameters />
+      <controlBlocks />
+      <signatureParams nominalEM="0" decayRate="0.15" __type="ItemResourceSignatureParams" />
+    </ItemResourceComponentParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports />
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+  </Components>
+</EntityClassDefinition.Controller_Shield_AEGS_Gladius>

@@ -1,0 +1,663 @@
+<SActorForceReactionsDef.XianForceReactionsSetup physicsImpulseScale="3" explosionsImpulseScale="1" meleeImpulseScale="1" bulletImpulseScale="1" __type="SActorForceReactionsDef" __ref="e05f3507-3ba6-4d35-8047-f397d2978a90" __path="libs/foundry/records/actor/externalforceresponse/xianforcereactionssetup.xml">
+  <externalImpulseConfig enabled="1" __type="SActorForceReactionExternalImpulseDef">
+    <externalCollisionToImpulseRange minimum="0" maximum="100" __type="Range" />
+  </externalImpulseConfig>
+  <sustainedForceConfig leanForceSmoothing="0.8" impulseTriggerDelay="1" impulseUpdateDelay="0.25" sustainedForceSmoothing="1" __type="SActorForceReactionSustainedForceDef">
+    <GForceToLeanForceRange minimum="0.6" maximum="1" __type="Range" />
+    <windToLeanForceRange minimum="10" maximum="25" __type="Range" />
+    <GForceImpulseConfig enabled="0" forceSmoothingDuration="0.35" predictionUncertaintyPercent="20" minForceToTriggerImpulse="25" __type="SActorForceReactionSustainedImpulseDef">
+      <sustainedToImpulseRange minimum="3" maximum="6" __type="Range" />
+    </GForceImpulseConfig>
+    <windImpulseConfig enabled="1" forceSmoothingDuration="0.17" predictionUncertaintyPercent="20" minForceToTriggerImpulse="25" __type="SActorForceReactionSustainedImpulseDef">
+      <sustainedToImpulseRange minimum="0.01" maximum="50" __type="Range" />
+    </windImpulseConfig>
+    <GForceToSustainedForceRange minimum="0.1" maximum="2" __type="Range" />
+    <windToSustainedForceRange minimum="10" maximum="24" __type="Range" />
+  </sustainedForceConfig>
+  <vehicleForceDampeningConfig>
+    <SActorForceReactionsVehicleForceDampeningDef minMass="1E+08" gForceCutoff="1.95" gForceScale="0.05" externalImpulseCutoff="0.01" externalImpulseScale="1.03" __type="SActorForceReactionsVehicleForceDampeningDef" />
+    <SActorForceReactionsVehicleForceDampeningDef minMass="3.7E+07" gForceCutoff="1.5" gForceScale="0.1" externalImpulseCutoff="0.01" externalImpulseScale="1.05" __type="SActorForceReactionsVehicleForceDampeningDef" />
+    <SActorForceReactionsVehicleForceDampeningDef minMass="3000000" gForceCutoff="1" gForceScale="0.15" externalImpulseCutoff="0.01" externalImpulseScale="1.27" __type="SActorForceReactionsVehicleForceDampeningDef" />
+    <SActorForceReactionsVehicleForceDampeningDef minMass="1000000" gForceCutoff="0.6" gForceScale="0.2" externalImpulseCutoff="0.01" externalImpulseScale="1.46" __type="SActorForceReactionsVehicleForceDampeningDef" />
+    <SActorForceReactionsVehicleForceDampeningDef minMass="200000" gForceCutoff="0.5" gForceScale="0.28" externalImpulseCutoff="0.01" externalImpulseScale="1.55" __type="SActorForceReactionsVehicleForceDampeningDef" />
+    <SActorForceReactionsVehicleForceDampeningDef minMass="0" gForceCutoff="0.1" gForceScale="0.35" externalImpulseCutoff="0.01" externalImpulseScale="1.6" __type="SActorForceReactionsVehicleForceDampeningDef" />
+  </vehicleForceDampeningConfig>
+  <stunConfig stunToImpulseRate="1" minImpulse="2" maxImpulseScale="2.99" affectsProjectiles="1" affectsMelee="1" affectsPhysics="0" affectsIndirect="0" affectsSustainedDelta="0" __type="SActorForceReactionsStunDef" />
+  <reactionLimits weaponTwitchMaxOffset="0.1" aimPunchMaxAngle="20" headRecoilMaxAngleHor="20" headRecoilMaxAngleVert="20" headRecoilMaxAngleRoll="20" __type="SActorForceReactionLimitDef" />
+  <staggerGlobalConfig viewPitchRangeDeg="120" viewYawRangeDeg="90" __type="SActorForceReactionGlobalStaggerConfig">
+    <movementReferenceVelocity minimum="0.2" maximum="5" __type="Range" />
+    <staggerDistance minimum="0.5" maximum="2" __type="Range" />
+    <distanceTags>
+      <SActorForceReactionStaggerTagConfig mannequinTag="StaggerDistance_Short" minDistance="0" __type="SActorForceReactionStaggerTagConfig" />
+      <SActorForceReactionStaggerTagConfig mannequinTag="StaggerDistance_Long" minDistance="1.2" __type="SActorForceReactionStaggerTagConfig" />
+    </distanceTags>
+  </staggerGlobalConfig>
+  <impulseAccumulationConfig enabled="1" decay="5" accumulationFraction="0.5" cooldown="7" __type="SActorForceReactionImpulseAccumulationConfig" />
+  <effectGlobalConfig aimPunchFrontMaxAngle="45" aimPunchBackMaxAngle="45" headRecoilFrontMaxAngle="45" headRecoilBackMaxAngle="45" __type="SActorForceReactionGlobalEffectConfig">
+    <effectCurves>
+      <SActorForceReactionCurve curveName="Simple Overshoot" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.08607375" y="0.2855099" __type="Vec2" />
+            <Vec2 x="0.02709896" y="0.03436082" __type="Vec2" />
+            <Vec2 x="0.1402717" y="-0.2167881" __type="Vec2" />
+            <Vec2 x="0.7037751" y="-0.3673192" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="1.296225" y="0.3673192" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+      <SActorForceReactionCurve curveName="AimPunchCurve" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="0" y="0" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="0" __type="Vec2" />
+            <Vec2 x="0.6" y="0" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="0.9606426" y="0.1605106" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+      <SActorForceReactionCurve curveName="WeaponTwitchCurve" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="0" y="0" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="0" __type="Vec2" />
+            <Vec2 x="0.6" y="0" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="0.9606426" y="0.1605106" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+      <SActorForceReactionCurve curveName="HeadRecoil_Horizontal" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="0" y="0" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.25" y="1" __type="Vec2" />
+            <Vec2 x="0.25" y="-2.512711" __type="Vec2" />
+            <Vec2 x="0.35" y="0.07728919" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="0.9606426" y="0.1605106" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+      <SActorForceReactionCurve curveName="HeadRecoil_Vertical" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="0" y="0" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="0" __type="Vec2" />
+            <Vec2 x="0.6" y="0" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="0.9606426" y="0.1605106" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+      <SActorForceReactionCurve curveName="HeadRecoil_Roll" __type="SActorForceReactionCurve">
+        <curve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="0" y="0" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="1" __type="Vec2" />
+            <Vec2 x="0.1" y="0" __type="Vec2" />
+            <Vec2 x="0.6" y="0" __type="Vec2" />
+            <Vec2 x="1" y="0" __type="Vec2" />
+            <Vec2 x="0.9606426" y="0.1605106" __type="Vec2" />
+          </points>
+        </curve>
+      </SActorForceReactionCurve>
+    </effectCurves>
+    <aimPunchDefaults yieldMagnitudeMinScale="1.5" returnYieldDelay="0.25" returnYieldMagnitude="0.0001" __type="SActorForceReactionEffectDefaults" />
+    <weaponTwitchDefaults yieldMagnitudeMinScale="1.5" returnYieldDelay="0.25" returnYieldMagnitude="0.0001" __type="SActorForceReactionEffectDefaults" />
+    <headRecoilPlanarDefaults yieldMagnitudeMinScale="1.5" returnYieldDelay="0.25" returnYieldMagnitude="0.0001" __type="SActorForceReactionEffectDefaults" />
+    <headRecoilRollDefaults yieldMagnitudeMinScale="1.5" returnYieldDelay="0.25" returnYieldMagnitude="0.0001" __type="SActorForceReactionEffectDefaults" />
+    <headRecoilRollAxis x="1" y="0" z="0" __type="Vec3" />
+  </effectGlobalConfig>
+  <filters>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="1" minImpulse="0.0001" maxImpulse="40" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="1" minImpulse="40" maxImpulse="80" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="80" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="1" minImpulse="0.0001" maxImpulse="40" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="1" minImpulse="40" maxImpulse="80" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="80" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="1" minImpulse="0.0001" maxImpulse="40" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="1" minImpulse="40" maxImpulse="80" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="80" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="1" minImpulse="0" maxImpulse="100" defaultLeanPose="Standing" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="1" minImpulse="1" maxImpulse="40" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="1" minImpulse="40" maxImpulse="70" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="1" minImpulse="70" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="1" minImpulse="0.01" maxImpulse="20.99" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="0" minImpulse="0" maxImpulse="100" defaultLeanPose="Crouching" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="1" minImpulse="1" maxImpulse="10" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="0" minImpulse="0" maxImpulse="100" defaultLeanPose="Standing" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="1" minImpulse="1" maxImpulse="30" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="1" minImpulse="30" maxImpulse="60" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="60" maxImpulse="80" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="1" minImpulse="1" maxImpulse="20" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="21" maxImpulse="59" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="1" minImpulse="60" maxImpulse="80" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="0" minImpulse="0" maxImpulse="100" defaultLeanPose="Standing" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="1" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="1" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="1" minImpulse="0" maxImpulse="100" defaultLeanPose="Sitting" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="0" minImpulse="0" maxImpulse="100" defaultLeanPose="Standing" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+    <SActorForceReactionFilterDef __type="SActorForceReactionFilterDef">
+      <stateConfig delayStaggersWhileInState="0" staggerDelayTimeout="1" __type="SActorForceReactionStateConfig" />
+      <twitches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <directKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <flinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <indirectKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaFlinches enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaStaggers enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedDeltaKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedStumble enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <sustainedKnockdowns enabled="0" minImpulse="0" maxImpulse="100" __type="SActorForceReactionFilterItemDef" />
+      <lean enabled="0" minImpulse="0" maxImpulse="100" defaultLeanPose="Standing" __type="SActorForceReactionFilterItemDef" __polymorphicType="SActorForceReactionLeanFilterItemDef" />
+    </SActorForceReactionFilterDef>
+  </filters>
+  <twitchConfigs>
+    <SActorForceReactionTwitchConfigDef filterByForceType="Any" filterByAimStanceState="Any" filterByHeldItemType="Any" filterByStanceState="Any" filterByState="Any" __type="SActorForceReactionTwitchConfigDef">
+      <twitchRanges>
+        <SActorForceReactionTwitchRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionTwitchRangeDef">
+          <aimPunch adsZoomScaleFactor="1" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+            <horizontalAimPunchRange minimum="0.12" maximum="0.3" __type="Range" />
+            <verticalAimPunchRange minimum="0.12" maximum="0.3" __type="Range" />
+            <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </aimPunch>
+          <weaponTwitch adsZoomScaleFactor="1" offsetAtMinImpulse="0.004" offsetAtMaxImpulse="0.006" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+            <curveConfig attackDuration="0.03" returnDuration="0.07" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </weaponTwitch>
+          <headRecoil planarADSZoomScaleFactor="1" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+            <horizontalRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+            <verticalRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+            <rollRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+            <planarCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            <rollCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </headRecoil>
+          <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+            <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+          </FOVScale>
+          <animationTwitch blendspaceMin="1" __type="SActorForceReactionAnimationTwitchConfig" />
+          <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+        </SActorForceReactionTwitchRangeDef>
+      </twitchRanges>
+    </SActorForceReactionTwitchConfigDef>
+  </twitchConfigs>
+  <flinchConfigs>
+    <SActorForceReactionFlinchConfigDef filterByAimStanceState="Any" filterByHeldItemType="Any" filterByStanceState="Any" filterByState="Any" __type="SActorForceReactionFlinchConfigDef">
+      <flinchRanges>
+        <SActorForceReactionFlinchRangeDef effectRangeMin="1" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionFlinchRangeDef">
+          <aimPunch adsZoomScaleFactor="1" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+            <horizontalAimPunchRange minimum="0.12" maximum="0.3" __type="Range" />
+            <verticalAimPunchRange minimum="0.12" maximum="0.3" __type="Range" />
+            <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </aimPunch>
+          <weaponTwitch adsZoomScaleFactor="1" offsetAtMinImpulse="0.004" offsetAtMaxImpulse="0.004" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+            <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </weaponTwitch>
+          <headRecoil planarADSZoomScaleFactor="1" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+            <horizontalRecoilRange minimum="3" maximum="3" __type="Range" />
+            <verticalRecoilRange minimum="3" maximum="3" __type="Range" />
+            <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+            <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </headRecoil>
+          <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+            <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+          </FOVScale>
+          <animationFlinch blendspaceMin="0.9" __type="SActorForceReactionAnimationFlinchConfig" />
+          <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+        </SActorForceReactionFlinchRangeDef>
+      </flinchRanges>
+    </SActorForceReactionFlinchConfigDef>
+  </flinchConfigs>
+  <sustainedDeltaFlinchConfigs>
+    <SActorForceReactionFlinchConfigDef filterByAimStanceState="Any" filterByHeldItemType="Any" filterByStanceState="Any" filterByState="Any" __type="SActorForceReactionFlinchConfigDef">
+      <flinchRanges>
+        <SActorForceReactionFlinchRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionFlinchRangeDef">
+          <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+            <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+            <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+            <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </aimPunch>
+          <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+            <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </weaponTwitch>
+          <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+            <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+            <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+            <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+            <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          </headRecoil>
+          <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+            <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+          </FOVScale>
+          <animationFlinch blendspaceMin="0.1" __type="SActorForceReactionAnimationFlinchConfig" />
+          <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+        </SActorForceReactionFlinchRangeDef>
+      </flinchRanges>
+    </SActorForceReactionFlinchConfigDef>
+  </sustainedDeltaFlinchConfigs>
+  <directStaggerConfig __type="SActorForceReactionFilteredStaggerConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="0" sustainedDeltaKnockdownDisableDuration="0" sustainedKnockdownDisableDuration="0" useEffortSetWhileDisablingReactions="0" __type="SActorForceReactionBlockConfig" />
+    <staggerFilters>
+      <SActorForceReactionFilteredStaggerRangeDef filterByForceType="Any" filterByAimStanceState="Any" filterByHeldItemType="Any" filterByStanceState="Any" filterByState="Any" __type="SActorForceReactionFilteredStaggerRangeDef">
+        <staggerRanges>
+          <SActorForceReactionStaggerRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionStaggerRangeDef">
+            <aimPunch adsZoomScaleFactor="1" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+              <horizontalAimPunchRange minimum="0.14" maximum="0.24" __type="Range" />
+              <verticalAimPunchRange minimum="0.14" maximum="0.24" __type="Range" />
+              <curveConfig attackDuration="0.1" returnDuration="0.07" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </aimPunch>
+            <weaponTwitch adsZoomScaleFactor="1" offsetAtMinImpulse="0.004" offsetAtMaxImpulse="0.006" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+              <curveConfig attackDuration="0.03" returnDuration="0.07" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </weaponTwitch>
+            <headRecoil planarADSZoomScaleFactor="1" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+              <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+              <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+              <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+              <planarCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+              <rollCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </headRecoil>
+            <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+              <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+            </FOVScale>
+            <animationStagger blendspaceMin="0.1" fragmentTag="" __type="SActorForceReactionAnimationStaggerConfig" />
+            <blockADS blockADS="1" triggerADSBlockDuration="1.4" heldADSBlockDuration="1.4" __type="SActorForceReactionBlockADSConfig" />
+          </SActorForceReactionStaggerRangeDef>
+        </staggerRanges>
+      </SActorForceReactionFilteredStaggerRangeDef>
+    </staggerFilters>
+  </directStaggerConfig>
+  <indirectStaggerConfig __type="SActorForceReactionFilteredStaggerConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="8" sustainedDeltaKnockdownDisableDuration="0" sustainedKnockdownDisableDuration="0" useEffortSetWhileDisablingReactions="0" __type="SActorForceReactionBlockConfig" />
+    <staggerFilters>
+      <SActorForceReactionFilteredStaggerRangeDef filterByForceType="Any" filterByAimStanceState="Any" filterByHeldItemType="Any" filterByStanceState="Any" filterByState="Any" __type="SActorForceReactionFilteredStaggerRangeDef">
+        <staggerRanges>
+          <SActorForceReactionStaggerRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionStaggerRangeDef">
+            <aimPunch adsZoomScaleFactor="1" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+              <horizontalAimPunchRange minimum="0.14" maximum="0.24" __type="Range" />
+              <verticalAimPunchRange minimum="0.14" maximum="0.24" __type="Range" />
+              <curveConfig attackDuration="0.1" returnDuration="0.07" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </aimPunch>
+            <weaponTwitch adsZoomScaleFactor="1" offsetAtMinImpulse="0.004" offsetAtMaxImpulse="0.006" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+              <curveConfig attackDuration="0.03" returnDuration="0.07" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </weaponTwitch>
+            <headRecoil planarADSZoomScaleFactor="1" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="4" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+              <horizontalRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+              <verticalRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+              <rollRecoilRange minimum="1.6" maximum="2.6" __type="Range" />
+              <planarCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+              <rollCurveConfig attackDuration="0.08" returnDuration="0.16" returnCurve="" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+            </headRecoil>
+            <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+              <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+            </FOVScale>
+            <animationStagger blendspaceMin="0.1" fragmentTag="" __type="SActorForceReactionAnimationStaggerConfig" />
+            <blockADS blockADS="1" triggerADSBlockDuration="1.4" heldADSBlockDuration="1.4" __type="SActorForceReactionBlockADSConfig" />
+          </SActorForceReactionStaggerRangeDef>
+        </staggerRanges>
+      </SActorForceReactionFilteredStaggerRangeDef>
+    </staggerFilters>
+  </indirectStaggerConfig>
+  <sustainedDeltaStaggerConfig __type="SActorForceReactionUnfilteredStaggerConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="10" sustainedDeltaKnockdownDisableDuration="15" sustainedKnockdownDisableDuration="15" useEffortSetWhileDisablingReactions="1" __type="SActorForceReactionBlockConfig" />
+    <staggerRanges>
+      <SActorForceReactionStaggerRangeDef effectRangeMin="0" effectRangeMax="50" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionStaggerRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <animationStagger blendspaceMin="0.1" fragmentTag="ImpactLow" __type="SActorForceReactionAnimationStaggerConfig" />
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionStaggerRangeDef>
+      <SActorForceReactionStaggerRangeDef effectRangeMin="50" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionStaggerRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <animationStagger blendspaceMin="0.1" fragmentTag="ImpactHigh" __type="SActorForceReactionAnimationStaggerConfig" />
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionStaggerRangeDef>
+    </staggerRanges>
+  </sustainedDeltaStaggerConfig>
+  <directKnockdownConfig __type="SActorForceReactionKnockdownConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="0" sustainedDeltaKnockdownDisableDuration="15" sustainedKnockdownDisableDuration="15" useEffortSetWhileDisablingReactions="0" __type="SActorForceReactionBlockConfig" />
+    <knockdownRanges>
+      <SActorForceReactionKnockdownRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionKnockdownRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0.05" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <launch minDistance="0.5" maxDistance="1.5" __type="SActorForceReactionMovementLaunchConfig">
+          <durations>
+            <SActorForceReactionFlightDurationConfig forcePercent="33" flightDuration="0.55" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="66" flightDuration="0.6" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="67" flightDuration="0.65" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="100" flightDuration="0.73" __type="SActorForceReactionFlightDurationConfig" />
+          </durations>
+        </launch>
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionKnockdownRangeDef>
+    </knockdownRanges>
+  </directKnockdownConfig>
+  <indirectKnockdownConfig __type="SActorForceReactionKnockdownConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="0" sustainedDeltaKnockdownDisableDuration="15" sustainedKnockdownDisableDuration="15" useEffortSetWhileDisablingReactions="0" __type="SActorForceReactionBlockConfig" />
+    <knockdownRanges>
+      <SActorForceReactionKnockdownRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionKnockdownRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <launch minDistance="0.5" maxDistance="3" __type="SActorForceReactionMovementLaunchConfig">
+          <durations>
+            <SActorForceReactionFlightDurationConfig forcePercent="33" flightDuration="0.55" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="66" flightDuration="0.6" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="67" flightDuration="0.65" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="100" flightDuration="0.73" __type="SActorForceReactionFlightDurationConfig" />
+          </durations>
+        </launch>
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionKnockdownRangeDef>
+    </knockdownRanges>
+  </indirectKnockdownConfig>
+  <sustainedDeltaKnockdownConfig __type="SActorForceReactionKnockdownConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="8" sustainedDeltaKnockdownDisableDuration="15" sustainedKnockdownDisableDuration="15" useEffortSetWhileDisablingReactions="1" __type="SActorForceReactionBlockConfig" />
+    <knockdownRanges>
+      <SActorForceReactionKnockdownRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionKnockdownRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <launch minDistance="0.5" maxDistance="3" __type="SActorForceReactionMovementLaunchConfig">
+          <durations>
+            <SActorForceReactionFlightDurationConfig forcePercent="33" flightDuration="0.55" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="66" flightDuration="0.6" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="67" flightDuration="0.65" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="100" flightDuration="0.73" __type="SActorForceReactionFlightDurationConfig" />
+          </durations>
+        </launch>
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionKnockdownRangeDef>
+    </knockdownRanges>
+  </sustainedDeltaKnockdownConfig>
+  <sustainedKnockdownConfig __type="SActorForceReactionKnockdownConfigDef">
+    <reactionBlock directTwitchDisableDuration="0" directStaggerDisableDuration="0" directKnockdownDisableDuration="0" indirectFlinchDisableDuration="0" indirectStaggerDisableDuration="0" indirectKnockdownDisableDuration="0" sustainedDeltaFlinchDisableDuration="0" sustainedDeltaStaggerDisableDuration="0" sustainedDeltaKnockdownDisableDuration="0" sustainedKnockdownDisableDuration="0" useEffortSetWhileDisablingReactions="0" __type="SActorForceReactionBlockConfig" />
+    <knockdownRanges>
+      <SActorForceReactionKnockdownRangeDef effectRangeMin="0" effectRangeMax="100" __type="SActorForceReactionEffectRangeDef" __polymorphicType="SActorForceReactionKnockdownRangeDef">
+        <aimPunch adsZoomScaleFactor="0" aimPunchDirConeAngle="30" horizontalRandomAimPunchAtMaxImpulse="0" verticalRandomAimPunchAtMaxImpulse="0" __type="SActorForceReactionAimPunchConfig">
+          <horizontalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <verticalAimPunchRange minimum="0" maximum="0" __type="Range" />
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </aimPunch>
+        <weaponTwitch adsZoomScaleFactor="0" offsetAtMinImpulse="0" offsetAtMaxImpulse="0" offsetRandomAtMaxImpulse="0" __type="SActorForceReactionWeaponTwitchConfig">
+          <curveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </weaponTwitch>
+        <headRecoil planarADSZoomScaleFactor="0" rollADSZoomScaleFactor="0" planarDirConeAngle="30" horizontalRandomRecoilAtMaxImpulse="0" verticalRandomRecoilAtMaxImpulse="0" rollRandomRecoilAtMaxImpulse="0" rollAxisInfluencePct="100" __type="SActorForceReactionHeadRecoilConfig">
+          <horizontalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <verticalRecoilRange minimum="0" maximum="0" __type="Range" />
+          <rollRecoilRange minimum="0" maximum="0" __type="Range" />
+          <planarCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+          <rollCurveConfig attackDuration="0.1" returnDuration="0.5" returnCurve="null" returnYieldDelay="-1" returnYieldMagnitude="-1" __type="SActorForceReactionCurveConfig" />
+        </headRecoil>
+        <FOVScale adsZoomScaleFactor="0" FOVScaleAtMinImpulse="1" FOVScaleAtMaxImpulse="1" __type="SActorForceReactionFOVScaleConfig">
+          <envelope attackDuration="0.1" sustainDuration="0" releaseDuration="0.5" __type="SActorForceReactionEnvelope" />
+        </FOVScale>
+        <launch minDistance="0.5" maxDistance="3" __type="SActorForceReactionMovementLaunchConfig">
+          <durations>
+            <SActorForceReactionFlightDurationConfig forcePercent="0" flightDuration="1" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="0" flightDuration="1" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="0" flightDuration="1" __type="SActorForceReactionFlightDurationConfig" />
+            <SActorForceReactionFlightDurationConfig forcePercent="0" flightDuration="1" __type="SActorForceReactionFlightDurationConfig" />
+          </durations>
+        </launch>
+        <blockADS blockADS="0" triggerADSBlockDuration="0" heldADSBlockDuration="0" __type="SActorForceReactionBlockADSConfig" />
+      </SActorForceReactionKnockdownRangeDef>
+    </knockdownRanges>
+  </sustainedKnockdownConfig>
+  <sustainedStumbleConfig minAdditionalSpeed="0.1" maxAdditionalSpeed="5" __type="SActorForceReactionStumbleConfigDef" />
+  <leanConfig forceSmoothDuration="0.5" minLeanForceForEffort="10" __type="SActorForceReactionLeanConfigDef">
+    <leanFilters>
+      <SActorForceReactionLeanFilterDef hipVOffset="0" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Prone" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="0" backward="0" left="0" right="0" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Crouch" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="10" backward="10" left="10" right="10" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="ADS" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="5" backward="5" left="5" right="5" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="MeleeBlock" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="8" backward="8" left="8" right="8" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Idle" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="15" backward="15" left="15" right="15" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Sprint" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="5" backward="15" left="15" right="15" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Ground" filterByMotionSpeed="Movement" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="10" backward="10" left="10" right="10" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.05" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Seated" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="15" backward="5" left="15" right="15" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Usable" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Stand" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="15" backward="15" left="15" right="15" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+      <SActorForceReactionLeanFilterDef hipVOffset="0.1" __type="SActorForceReactionLeanFilterDef">
+        <filter filterName="New Filter" filterByState="Usable" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Seated" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="ActorMotionStateFilter" />
+        <leanAngleLimits forward="15" backward="15" left="15" right="15" __type="SActorForceReactionLeanAngleLimitsDef" />
+      </SActorForceReactionLeanFilterDef>
+    </leanFilters>
+    <procLeanPoseDef>
+      <SActorForceReactionProceduralXianLeanPoseList __type="SActorForceReactionProceduralLeanPoseList" __polymorphicType="SActorForceReactionProceduralXianLeanPoseList">
+        <poseTypes>
+          <SActorForceReactionProceduralXianLeanPose hipOffsetScaleFB="0.5" hipOffsetScaleLR="0.5" footOffsetScale="0.5" firstPersonLeanPitchScale="0" firstPersonLeanRollScale="0" __type="SActorForceReactionProceduralLeanPose" __polymorphicType="SActorForceReactionProceduralXianLeanPose">
+            <spineBones>
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+            </spineBones>
+          </SActorForceReactionProceduralXianLeanPose>
+          <SActorForceReactionProceduralXianLeanPose hipOffsetScaleFB="0.5" hipOffsetScaleLR="0.5" footOffsetScale="0.5" firstPersonLeanPitchScale="0" firstPersonLeanRollScale="0" __type="SActorForceReactionProceduralLeanPose" __polymorphicType="SActorForceReactionProceduralXianLeanPose">
+            <spineBones>
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+            </spineBones>
+          </SActorForceReactionProceduralXianLeanPose>
+          <SActorForceReactionProceduralXianLeanPose hipOffsetScaleFB="0.5" hipOffsetScaleLR="0.5" footOffsetScale="0.5" firstPersonLeanPitchScale="0" firstPersonLeanRollScale="0" __type="SActorForceReactionProceduralLeanPose" __polymorphicType="SActorForceReactionProceduralXianLeanPose">
+            <spineBones>
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+              <SActorForceReactionLeanBoneDef leanWeightFB="1" leanWeightLR="1" __type="SActorForceReactionLeanBoneDef" />
+            </spineBones>
+          </SActorForceReactionProceduralXianLeanPose>
+        </poseTypes>
+      </SActorForceReactionProceduralXianLeanPoseList>
+    </procLeanPoseDef>
+  </leanConfig>
+</SActorForceReactionsDef.XianForceReactionsSetup>

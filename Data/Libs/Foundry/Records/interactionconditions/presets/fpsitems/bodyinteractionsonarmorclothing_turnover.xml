@@ -1,0 +1,70 @@
+<InteractionConditionPreset.BodyInteractionsOnArmorClothing_TurnOver __type="InteractionConditionPreset" __ref="689aaab4-6b99-48f1-a865-91175eaa6720" __path="libs/foundry/records/interactionconditions/presets/fpsitems/bodyinteractionsonarmorclothing_turnover.xml">
+  <conditions>
+    <InteractionConditionLootableNotBeingViewedByAnyOtherInventory __type="InteractionConditionParams" __polymorphicType="InteractionConditionLootableNotBeingViewedByAnyOtherInventory">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_InUseByAnother" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+    </InteractionConditionLootableNotBeingViewedByAnyOtherInventory>
+    <InteractionConditionAND __type="InteractionConditionParams" __polymorphicType="InteractionConditionAND">
+      <conditionDisplay>
+        <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+          <blockedText>
+            <BlockedTextParams blockedText="@interaction_condition_InProne" __type="BlockedTextParams" />
+          </blockedText>
+          <blockedCursor>
+            <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+          </blockedCursor>
+          <blockedColor>
+            <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+          </blockedColor>
+          <blockedHint>
+          </blockedHint>
+          <autoStoreOption>
+          </autoStoreOption>
+          <blockedInteractionAttemptMonologue>
+          </blockedInteractionAttemptMonologue>
+        </ConditionDisplayParams>
+      </conditionDisplay>
+      <firstCondition>
+        <InteractionConditionActorAbility abilityType="TurnOverApply" __type="InteractionConditionParams" __polymorphicType="InteractionConditionActorAbility">
+          <conditionDisplay>
+          </conditionDisplay>
+        </InteractionConditionActorAbility>
+      </firstCondition>
+      <secondCondition>
+        <InteractionConditionCheckActorState conditionResult="Fail" targetActor="Interactor" __type="InteractionConditionParams" __polymorphicType="InteractionConditionCheckActorState">
+          <conditionDisplay>
+          </conditionDisplay>
+          <actorState filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Prone" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" __type="ActorStateFilter" />
+        </InteractionConditionCheckActorState>
+      </secondCondition>
+    </InteractionConditionAND>
+  </conditions>
+  <conditionToHideParams>
+    <InteractionConditionEntityIsHeldByInteractor __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityIsHeldByInteractor">
+      <conditionDisplay>
+      </conditionDisplay>
+    </InteractionConditionEntityIsHeldByInteractor>
+    <InteractionConditionEntityIsAttachedToInteractor __type="InteractionConditionParams" __polymorphicType="InteractionConditionEntityIsAttachedToInteractor">
+      <conditionDisplay>
+      </conditionDisplay>
+      <ignoreItemPorts />
+    </InteractionConditionEntityIsAttachedToInteractor>
+  </conditionToHideParams>
+</InteractionConditionPreset.BodyInteractionsOnArmorClothing_TurnOver>

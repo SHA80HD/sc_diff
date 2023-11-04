@@ -1,0 +1,1152 @@
+<EntityClassDefinition.Turret_Automated_KBAR_AA_Ground_PU_CIV_SemiLawful Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="1" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="61f5ac39-4c07-45f7-aff5-c0420604406e" __path="libs/foundry/records/entities/scitem/weapons/turret_unmanned/turret_automated_kbar_aa_ground_pu_civ_semilawful.xml">
+  <tags>
+    <Reference value="88826664-a875-4cef-9b99-0c8a1b886d0c" />
+    <Reference value="00ead468-9073-485b-a6df-ca6b94053603" />
+  </tags>
+  <StaticEntityClassData>
+    <EntityUIDisplayParams displayDescription="@LOC_UNINITIALIZED" displayThumbnail="" displayImage="" displayIcon="" sortString="" __type="EntityClassStaticDataParams" __polymorphicType="EntityUIDisplayParams">
+      <trackerProperties>
+        <SVehicleEntryTrackerParams __type="SObjectDataBankEntryTrackerParams" __polymorphicType="SVehicleEntryTrackerParams" />
+      </trackerProperties>
+    </EntityUIDisplayParams>
+  </StaticEntityClassData>
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="Turret" SubType="MannedTurret" Size="1" Grade="1" Manufacturer="cf4a74bf-eb2c-462a-9b78-f7f2724c31d2" inheritParentManufacturer="0" Tags="" RequiredTags="NOPE" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_NameBRAA_groundturret_AA" ShortName="@LOC_EMPTY" Description="@item_DescBRAA_groundturret_AA" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemTurretParams rotationStyle="SingleAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="0" miningOperatorMode="0" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="00000000-0000-0000-0000-000000000000" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
+      <recenterTask>
+      </recenterTask>
+      <resumeControlTask>
+      </resumeControlTask>
+      <setMovementTagTasks />
+      <setLimiterTagTasks />
+      <movementTagNames />
+      <movementList>
+        <SCItemTurretJointMovementParams movementTag="00000000-0000-0000-0000-000000000000" jointName="yaw_control" slavedOnly="0" restrictTargetAngles="0" __type="SCItemTurretMovementParams" __polymorphicType="SCItemTurretJointMovementParams">
+          <pitchAxis>
+          </pitchAxis>
+          <rollAxis>
+          </rollAxis>
+          <yawAxis>
+            <SCItemTurretJointMovementAxisParams enableIKRotationalSpeed="0" speed="90" acceleration="250" accelerationDecay="12" __type="SCItemTurretJointMovementAxisParams">
+              <audioRtpcMoveToTarget rtpc="Turret_Unmanned_Movement_Axis_Speed" __type="AudioRtpc" />
+              <audioRtpcMoveToTargetDistance rtpc="Turret_Unmanned_Movement_Axis_Differential" __type="AudioRtpc" />
+              <startRotateAudioTrigger audioTrigger="Play_WPHT_Turret_Unmanned_Rotation_Yaw" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <stopRotateAudioTrigger audioTrigger="Stop_WPHT_Turret_Unmanned_Rotation_Yaw" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <angleLimits>
+                <SCItemTurretStandardAngleLimitParams LowestAngle="-180" HighestAngle="180" __type="SCItemTurretAngleLimitParams" __polymorphicType="SCItemTurretStandardAngleLimitParams">
+                  <limitOverwrites />
+                </SCItemTurretStandardAngleLimitParams>
+              </angleLimits>
+            </SCItemTurretJointMovementAxisParams>
+          </yawAxis>
+        </SCItemTurretJointMovementParams>
+        <SCItemTurretJointMovementParams movementTag="00000000-0000-0000-0000-000000000000" jointName="pitch_control" slavedOnly="0" restrictTargetAngles="0" __type="SCItemTurretMovementParams" __polymorphicType="SCItemTurretJointMovementParams">
+          <pitchAxis>
+            <SCItemTurretJointMovementAxisParams enableIKRotationalSpeed="0" speed="180" acceleration="250" accelerationDecay="12" __type="SCItemTurretJointMovementAxisParams">
+              <audioRtpcMoveToTarget rtpc="Turret_Unmanned_Movement_Axis_Speed" __type="AudioRtpc" />
+              <audioRtpcMoveToTargetDistance rtpc="Turret_Unmanned_Movement_Axis_Differential" __type="AudioRtpc" />
+              <startRotateAudioTrigger audioTrigger="Play_WPHT_Turret_Unmanned_Rotation_Pitch" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <stopRotateAudioTrigger audioTrigger="Stop_WPHT_Turret_Unmanned_Rotation_Pitch" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <angleLimits>
+                <SCItemTurretStandardAngleLimitParams LowestAngle="-90" HighestAngle="90" __type="SCItemTurretAngleLimitParams" __polymorphicType="SCItemTurretStandardAngleLimitParams">
+                  <limitOverwrites />
+                </SCItemTurretStandardAngleLimitParams>
+              </angleLimits>
+            </SCItemTurretJointMovementAxisParams>
+          </pitchAxis>
+          <rollAxis>
+          </rollAxis>
+          <yawAxis>
+          </yawAxis>
+        </SCItemTurretJointMovementParams>
+      </movementList>
+      <maxSpeedPerGimbalMode>
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+      </maxSpeedPerGimbalMode>
+      <weaponModifierInterpolationFactor>
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+      </weaponModifierInterpolationFactor>
+      <gyroStabilize>
+      </gyroStabilize>
+      <remoteTurret>
+      </remoteTurret>
+      <turretSensitivity increaseSensitivityInteraction="null" decreaseSensitivityInteraction="null" resetSensitivityInteraction="null" sensitivityDelta="0.1" __type="SCItemTurretSensitivityParams" />
+      <audioRtpcHealthRatio rtpc="Turret_Health" __type="AudioRtpc" />
+    </SCItemTurretParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/buildingsets/human/universal/prop/weapon/turret/turret_kbar_1_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="0" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SSCItemControllableManagerParams defaultMasterMode="SCM" masterModeSpoolTime="6" __type="DataForgeComponentParams" __polymorphicType="SSCItemControllableManagerParams">
+      <controllerParams>
+        <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+          <priorityGroups />
+        </SCItemControllableGroupParams>
+      </controllerParams>
+    </SSCItemControllableManagerParams>
+    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
+      <loadout>
+        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+          <WearRange>
+          </WearRange>
+          <InventoryItems />
+          <entries>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_aimodule" entityClassName="AIModule_Automated_PU_CIV" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weaponright" entityClassName="HRST_LaserRepeater_S4_Turret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weaponleft" entityClassName="HRST_LaserRepeater_S4_Turret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_powerplant" entityClassName="POWR_AEGS_S01_Regulus_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weaponcontroller" entityClassName="Controller_Weapon_UnmannedTurret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_targetselector" entityClassName="Controller_TargetSelector" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_energycontroller" entityClassName="Controller_Energy" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_coolercontroller" entityClassName="Controller_Cooler" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_radar" entityClassName="RADR_Unmaned_Turret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_missilecontroller" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cooler1" entityClassName="COOL_AEGS_S02_Avalanche_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cooler2" entityClassName="COOL_AEGS_S02_Avalanche_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_regen_pool_turrets" entityClassName="WeaponRegenPool_Turret_Default" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+          </entries>
+        </SItemPortLoadoutManualParams>
+      </loadout>
+    </SEntityComponentDefaultLoadoutParams>
+    <SObjectDataBankParams __type="DataForgeComponentParams" __polymorphicType="SObjectDataBankParams" />
+    <SEntityComponentHostilityCompositeParams emptyFaction="00000000-0000-0000-0000-000000000000" useOnlyPrimaryChildForHostility="0" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentHostilityCompositeParams">
+      <wantedLevelHostility>
+        <SHostilityWantedLevelParams wantedLevel="4" comparison="EqualOrGreater" __type="SHostilityWantedLevelParams" />
+      </wantedLevelHostility>
+    </SEntityComponentHostilityCompositeParams>
+    <SSCSignatureSystemParams bindingURLPrefix="" scanCustomData="00000000-0000-0000-0000-000000000000" scanDisplayLayoutOverride="00000000-0000-0000-0000-000000000000" isOverridden="0" enableDetectionOnItemPort="0" __type="DataForgeComponentParams" __polymorphicType="SSCSignatureSystemParams">
+      <radarProperties>
+        <SSCRadarContactProperites contactType="b0e09ca6-93e7-45f2-bcfe-281963951ef5" __type="SSCRadarContactProperites">
+          <baseSignatureParams>
+            <SSCSignatureSystemBaseSignatureParams __type="SSCSignatureParamsBase" __polymorphicType="SSCSignatureSystemBaseSignatureParams">
+              <signatures>
+                <Single value="1000" />
+                <Single value="1000" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+              </signatures>
+              <taggedSignatures />
+            </SSCSignatureSystemBaseSignatureParams>
+          </baseSignatureParams>
+          <crossSectionParams>
+          </crossSectionParams>
+          <emissionModifierParams>
+          </emissionModifierParams>
+          <scanBounds>
+          </scanBounds>
+        </SSCRadarContactProperites>
+      </radarProperties>
+      <audioParams>
+      </audioParams>
+      <embeddedScanInfo>
+      </embeddedScanInfo>
+      <detectionTags />
+      <overriddenSize x="0" y="0" z="0" __type="Vec3" />
+    </SSCSignatureSystemParams>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SHealthComponentParams Health="1000" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="destroyed" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates>
+        <HealthDamageState geometryTag="" effectTrigger="00000000-0000-0000-0000-000000000000" effectTag="00000000-0000-0000-0000-000000000000" __type="HealthDamageState" />
+        <HealthDamageState geometryTag="" effectTrigger="00000000-0000-0000-0000-000000000000" effectTag="daf8c7b7-5e14-4620-8316-3b788181b827" __type="HealthDamageState" />
+        <HealthDamageState geometryTag="" effectTrigger="00000000-0000-0000-0000-000000000000" effectTag="693291dc-d148-4444-9132-695ed3626c18" __type="HealthDamageState" />
+        <HealthDamageState geometryTag="" effectTrigger="00000000-0000-0000-0000-000000000000" effectTag="cef7444e-ba6e-4a49-ba3c-f56e1511b231" __type="HealthDamageState" />
+      </HealthLevelStates>
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects>
+              <SEntityEffectSystem_ParticleTagEffect name="HP1_SMOKE" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="daf8c7b7-5e14-4620-8316-3b788181b827" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Smoke_FX.LT_Smoke_HitFx.lt_smoke_HitFx_50cm_trail" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="0" __type="Ang3" />
+                      <Position x="0.7867" y="-0.6299" z="1.9743" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP2_SMOKE" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="693291dc-d148-4444-9132-695ed3626c18" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Smoke_FX.LT_Smoke_HitFx.lt_smoke_HitFx_50cm_trail" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="0" __type="Ang3" />
+                      <Position x="0.7867" y="-0.6299" z="1.9743" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP3_SMOKE" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="cef7444e-ba6e-4a49-ba3c-f56e1511b231" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Smoke_FX.LT_Smoke_HitFx.lt_smoke_HitFx_50cm_trail" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="0" __type="Ang3" />
+                      <Position x="0.7867" y="-0.6299" z="1.9743" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP2_SPARKS" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="693291dc-d148-4444-9132-695ed3626c18" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Sparks_FX.LT_Sparks.lt_sparks_2m_loop_fixed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="10.6221" y="-40.1239" z="-11.5825" __type="Ang3" />
+                      <Position x="-0.2656" y="0.6019" z="1.0821" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP2_Explosion" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="693291dc-d148-4444-9132-695ed3626c18" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Explode_FX.LT_Explode.lt_explode_10cm_once_fixed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="24" y="0" z="85.9999" __type="Ang3" />
+                      <Position x="-1.4581" y="-0.1729" z="0.4811" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP3_SPARKS" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="cef7444e-ba6e-4a49-ba3c-f56e1511b231" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Sparks_FX.LT_Sparks.lt_sparks_2m_loop_fixed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="10.6221" y="-40.1239" z="-11.5825" __type="Ang3" />
+                      <Position x="-0.2656" y="0.6019" z="1.0821" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="HP3_Explosion" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="cef7444e-ba6e-4a49-ba3c-f56e1511b231" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Explode_FX.LT_Explode.lt_explode_10cm_once_fixed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="yaw_control" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="24" y="0" z="85.9999" __type="Ang3" />
+                      <Position x="-1.4581" y="-0.1729" z="0.4811" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+            </tagEffects>
+            <triggerEffects>
+              <SEntityEffectSystem_ParticleTriggerEffect name="EXPLOSION" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="c7d52ac4-2a9e-4951-b660-e3c34387ebb0" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Damage\LT_Damage\LT_Explode_FX.LT_Explode.lt_explode_2m_once_fixed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="2" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects />
+            <triggerEffects>
+              <SEntityEffectSystem_SoundTriggerEffect name="" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="c7d52ac4-2a9e-4951-b660-e3c34387ebb0" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Ship_Part_Destruction_Generic_Medium_MidTech_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+        <SItemPortMasterControllerParams __type="SItemPortMasterControllerParams">
+          <Pipes>
+            <SEnergyPipeDefinition Name="MainPower" Klass="Power" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="MainHeat" Klass="Heat" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="CoolerHeat" Klass="Heat" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponRegenTurret" Klass="WeaponRegen" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponAmmoLoadTurret" Klass="WeaponAmmoLoad" __type="SEnergyPipeDefinition" />
+          </Pipes>
+        </SItemPortMasterControllerParams>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="hardpoint_aimodule" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="0" MaxSize="10" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+            <SCItemControlAIModuleParams __type="SCItemControlBaseParams" __polymorphicType="SCItemControlAIModuleParams">
+              <aiModuleObserve>
+                <SCItemObservableParams __type="SCItemObservableParams">
+                  <observableGroups>
+                    <SCItemObservableGroupParams itemType="WeaponController" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="EnergyController" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="Radar" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="CoolerController" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="TargetSelector" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="MissileController" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                    <SCItemObservableGroupParams itemType="AIModule" __type="SCItemObservableGroupParams">
+                      <screens />
+                    </SCItemObservableGroupParams>
+                  </observableGroups>
+                </SCItemObservableParams>
+              </aiModuleObserve>
+              <aiModuleControl>
+                <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+                  <priorityGroups>
+                    <SCItemPriorityGroupParam itemType="WeaponController" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="EnergyController" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="Radar" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="CoolerController" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="TargetSelector" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="MissileController" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="AIModule" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                  </priorityGroups>
+                </SCItemControllableGroupParams>
+              </aiModuleControl>
+            </SCItemControlAIModuleParams>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="AIModule" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="yaw_control" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_weaponleft" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="0" MaxSize="10" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="WeaponRegenTurret" Klass="WeaponRegen" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="WeaponAmmoLoadTurret" Klass="WeaponAmmoLoad" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="turret_left" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_weaponright" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="0" MaxSize="10" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="WeaponRegenTurret" Klass="WeaponRegen" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="WeaponAmmoLoadTurret" Klass="WeaponAmmoLoad" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="turret_right" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_powerplant" DisplayName="" PortTags="" RequiredPortTags="" Flags="invisible uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="PowerPlant" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="yaw_control" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_weaponcontroller" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+            <SCItemControlUsableParams __type="SCItemControlBaseParams" __polymorphicType="SCItemControlUsableParams">
+              <usableControl>
+                <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+                  <priorityGroups>
+                    <SCItemPriorityGroupParam itemType="Turret" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="WeaponGun" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                  </priorityGroups>
+                </SCItemControllableGroupParams>
+              </usableControl>
+            </SCItemControlUsableParams>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_targetselector" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="TargetSelector" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_energycontroller" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+            <SCItemControlUsableParams __type="SCItemControlBaseParams" __polymorphicType="SCItemControlUsableParams">
+              <usableControl>
+                <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+                  <priorityGroups>
+                    <SCItemPriorityGroupParam itemType="PowerPlant" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                  </priorityGroups>
+                </SCItemControllableGroupParams>
+              </usableControl>
+            </SCItemControlUsableParams>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="EnergyController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_coolercontroller" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+            <SCItemControlUsableParams __type="SCItemControlBaseParams" __polymorphicType="SCItemControlUsableParams">
+              <usableControl>
+                <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+                  <priorityGroups>
+                    <SCItemPriorityGroupParam itemType="Cooler" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                  </priorityGroups>
+                </SCItemControllableGroupParams>
+              </usableControl>
+            </SCItemControlUsableParams>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="CoolerController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_radar" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="CoolerController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_missilecontroller" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+            <SCItemControlUsableParams __type="SCItemControlBaseParams" __polymorphicType="SCItemControlUsableParams">
+              <usableControl>
+                <SCItemControllableGroupParams __type="SCItemControllableParams" __polymorphicType="SCItemControllableGroupParams">
+                  <priorityGroups>
+                    <SCItemPriorityGroupParam itemType="Missile" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                    <SCItemPriorityGroupParam itemType="MissileLauncher" defaultPriority="10" __type="SCItemPriorityGroupParam">
+                      <tags />
+                    </SCItemPriorityGroupParam>
+                  </priorityGroups>
+                </SCItemControllableGroupParams>
+              </usableControl>
+            </SCItemControlUsableParams>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="MissileController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_cooler1" DisplayName="" PortTags="" RequiredPortTags="" Flags="invisible uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Cooler" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_cooler2" DisplayName="" PortTags="" RequiredPortTags="" Flags="invisible uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="MainPower" Klass="Power" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="MainHeat" Klass="Heat" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Cooler" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_weapon_regen_pool_turrets" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections>
+            <SItemPortConnectionParam Name="WeaponRegenTurret" Klass="WeaponRegen" __type="SItemPortConnectionParam" />
+            <SItemPortConnectionParam Name="WeaponAmmoLoadTurret" Klass="WeaponAmmoLoad" __type="SItemPortConnectionParam" />
+          </Connections>
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <ItemControlComponentParams turnedOnByDefault="1" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
+    <AITargetableComponentParams targetableSettings="c2966440-e8ea-4c57-81a0-3ae37280be13" __type="DataForgeComponentParams" __polymorphicType="AITargetableComponentParams">
+      <formations />
+    </AITargetableComponentParams>
+    <SCItemAimableComponentParams __type="DataForgeComponentParams" __polymorphicType="SCItemAimableComponentParams" />
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Enable" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Disable" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnablePowerPlant" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisablePowerPlant" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks>
+          <SSequencerInteractionTask interaction="EnablePowerPlant" triggerType="Self" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerInteractionTask" />
+          <SSequencerInteractionTask interaction="DisablePowerPlant" triggerType="Self" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerInteractionTask" />
+        </interactionTasks>
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="Enable" interaction="Interactable.SharedInteractions[0]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+        <SReplicatedSequencerDefSequenceParams name="Disable" interaction="Interactable.SharedInteractions[1]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="PowerPlant" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_powerplant" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+          </entityTraversingType>
+          <executeNodes>
+            <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="EnablePowerPlant" localInteraction="Interactable.SharedInteractions[2]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+            <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="DisablePowerPlant" localInteraction="Interactable.SharedInteractions[3]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+          </executeNodes>
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets />
+    </SEntityTraversingTreeParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SObservableComponentParams defaultEntityObservablePoint="null" defaultAimingObservablePoint="null" __type="DataForgeComponentParams" __polymorphicType="SObservableComponentParams">
+      <perceptionTypes>
+        <Enum value="Turret" />
+      </perceptionTypes>
+      <observablePoints />
+      <observableExtensions />
+    </SObservableComponentParams>
+  </Components>
+</EntityClassDefinition.Turret_Automated_KBAR_AA_Ground_PU_CIV_SemiLawful>

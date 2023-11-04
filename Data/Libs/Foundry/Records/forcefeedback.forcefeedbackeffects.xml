@@ -1,0 +1,266 @@
+<ForceFeedback.ForceFeedbackEffects __type="ForceFeedback" __ref="027448c3-9ee9-486f-99ef-91c6d7739ef2" __path="libs/foundry/records/forcefeedback.forcefeedbackeffects.xml">
+  <Patterns>
+    <ForceFeedbackPattern name="100" samples="1" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="75" samples="0.75" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="50" samples="0.5" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="30" samples="0.3" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="20" samples="0.2" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="12" samples="0.12" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="square" samples="1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0" __type="ForceFeedbackPattern" />
+    <ForceFeedbackPattern name="triangle" samples="0,0.15,0.3,0.45,0.6,0.75,0.9,1,1,0.9,0.75,0.6,0.45,0.3,0.15,0" __type="ForceFeedbackPattern" />
+  </Patterns>
+  <Envelopes>
+    <ForceFeedbackEnvelope name="linearDecrease" samples="1,0" __type="ForceFeedbackEnvelope" />
+    <ForceFeedbackEnvelope name="Gate" samples="1,1,1,1,1,1,1,0" __type="ForceFeedbackEnvelope" />
+    <ForceFeedbackEnvelope name="CosineDecrease" samples="1,0.98,0.92,0.83,0.69,0.54,0.25,0" __type="ForceFeedbackEnvelope" />
+    <ForceFeedbackEnvelope name="constant" samples="1" __type="ForceFeedbackEnvelope" />
+    <ForceFeedbackEnvelope name="50constant" samples="0.5" __type="ForceFeedbackEnvelope" />
+    <ForceFeedbackEnvelope name="Gausscharge" samples="0,0,0,0,1,1,1,1" __type="ForceFeedbackEnvelope" />
+  </Envelopes>
+  <Effects>
+    <ForceFeedbackEffect name="smallexplosion" time="1" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="100" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="suitactiveateFF" time="1.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="suitdeactiveateFF" time="1.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="12" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="cloakactiveateFF" time="1.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="cloakactiveFF" time="-1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="12" envelope="constant" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="landFF" time="0.1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="75" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="jumpFF" time="0.1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="75" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfirerapidsmall" time="0.05" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfirerapidsmall_slow" time="0.07" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfirerapidsmall_fast" time="-0.05" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfiresinglesmall" time="0.2" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfirerapidmedium" time="0.1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfiresinglemedium" time="0.2" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfirerapidheavy" time="0.12" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="20" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfiresingleheavy" time="0.2" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfiresinglegauss" time="1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="75" envelope="Gausscharge" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weaponfiresinglemassive" time="0.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="75" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="75" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="reloadsmallFF" time="0.1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="reloadshortFF" time="0.1" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="30" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="weakFF" time="0.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="12" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="mediumFF" time="0.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="strongFF" time="0.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="100" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="gForceY" time="0.5" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="12" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="eject" time="3" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="linearDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="afterburner" time="2" __type="ForceFeedbackEffect">
+      <MotorAB>
+        <ForceFeedbackMotor frequency="1" pattern="12" envelope="CosineDecrease" __type="ForceFeedbackMotor" />
+      </MotorAB>
+      <MotorA>
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+    <ForceFeedbackEffect name="WeaponFire_RapidSmall_Looped" time="-0.05" __type="ForceFeedbackEffect">
+      <MotorAB>
+      </MotorAB>
+      <MotorA>
+        <ForceFeedbackMotor frequency="1" pattern="50" envelope="Gate" __type="ForceFeedbackMotor" />
+      </MotorA>
+      <MotorB>
+      </MotorB>
+    </ForceFeedbackEffect>
+  </Effects>
+</ForceFeedback.ForceFeedbackEffects>

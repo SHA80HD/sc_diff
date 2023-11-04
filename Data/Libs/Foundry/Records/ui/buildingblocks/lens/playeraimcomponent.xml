@@ -1,0 +1,2617 @@
+<BuildingBlocks_Canvas.PlayerAimComponent coordinateMethod="useRaw" style="00000000-0000-0000-0000-000000000000" proxyRootNode="null" defaultButtonDownSoundTag="00000000-0000-0000-0000-000000000000" defaultRightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" defaultLeftClickSoundTag="00000000-0000-0000-0000-000000000000" defaultRightClickSoundTag="00000000-0000-0000-0000-000000000000" defaultLeftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" defaultRollOverSoundTag="00000000-0000-0000-0000-000000000000" defaultRollOffSoundTag="00000000-0000-0000-0000-000000000000" collisionType="Cutout" overrideDefaultTooltipCanvas="00000000-0000-0000-0000-000000000000" overrideDefaultCalloutCanvas="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Canvas" __ref="7d4e35a9-29c1-4767-87f0-2bcae837c7ee" __path="libs/foundry/records/ui/buildingblocks/lens/playeraimcomponent.xml">
+  <size x="1920" y="1080" z="0" __type="Vec3" />
+  <embeddedStyles>
+    <BuildingBlocks_StyleEntry name="AimReticleCore" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="fe179932-b017-474a-b395-f21b07e8ed32" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierNumber field="SizeX" value="16" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+        <BuildingBlocks_FieldModifierNumber field="SizeY" value="16" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+      </modifiers>
+      <transitions>
+        <BuildingBlocks_FieldTransitionNumber duration="0.1" delay="0" delayRandomRange="0" field="SizeX" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+        <BuildingBlocks_FieldTransitionNumber duration="0.1" delay="0" delayRandomRange="0" field="SizeY" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+      </transitions>
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleCoreFiring" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="dba5a063-e91b-44bb-acb1-f13aa3467355" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+            <BuildingBlocks_StyleSelectorConditionTag tag="fe179932-b017-474a-b395-f21b07e8ed32" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierNumber field="SizeX" value="10" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+        <BuildingBlocks_FieldModifierNumber field="SizeY" value="10" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleCoreChildren" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionParent __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionParent">
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="fe179932-b017-474a-b395-f21b07e8ed32" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionParent>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierColor field="BackgroundColor" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleFrameChildren" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionParent __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionParent">
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionParent>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierColor field="BorderColorTop" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+        <BuildingBlocks_FieldModifierColor field="BorderColorRight" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+        <BuildingBlocks_FieldModifierColor field="BorderColorBottom" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+        <BuildingBlocks_FieldModifierColor field="BorderColorLeft" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="VJoyLine" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="286fe11d-f29c-4649-9e63-42c4fb3fd549" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierColor field="StrokeColor" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="VJoyElement" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="6296b99f-6c3c-451d-b8ea-201d8ce4fa1b" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierColor field="FillColor" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="CenterReferenceElement" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="8e686598-6e8f-4579-b0a9-2ad9b6993dcd" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierColor field="FillColor" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConesBoth" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="b8842cc4-f3d2-4e0f-ba73-0f5bd9166643" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="4ae0a534-b850-47a2-9b5c-1e7830ab09cc" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierBoolean field="IsActive" value="0" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierBoolean" />
+        <BuildingBlocks_FieldModifierColor field="StrokeColor" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierColor">
+          <color>
+            <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+              <color r="151" g="218" b="252" a="255" __type="SRGBA8" />
+            </BuildingBlocks_ColorSolid>
+          </color>
+        </BuildingBlocks_FieldModifierColor>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConesBothActive" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="b8842cc4-f3d2-4e0f-ba73-0f5bd9166643" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="4ae0a534-b850-47a2-9b5c-1e7830ab09cc" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierBoolean field="IsActive" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierBoolean" />
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConeActive" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="b8842cc4-f3d2-4e0f-ba73-0f5bd9166643" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.6" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="Alpha" value="0" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="1.2" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="1.2" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="1" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="Alpha" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConeTargetActive" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="4ae0a534-b850-47a2-9b5c-1e7830ab09cc" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.6" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="Alpha" value="0" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="0.8" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="0.8" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="1" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="Alpha" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConeTargetContainer" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="362423d0-2b59-4fc2-a26a-714d0d76fe02" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers />
+      <transitions>
+        <BuildingBlocks_FieldTransitionNumber duration="0.4" delay="0" delayRandomRange="0" field="SizeX" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+        <BuildingBlocks_FieldTransitionNumber duration="0.4" delay="0" delayRandomRange="0" field="SizeY" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+        <BuildingBlocks_FieldTransitionNumber duration="0.3" delay="0" delayRandomRange="0" field="Alpha" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+        <BuildingBlocks_FieldTransitionNumber duration="0.3" delay="0" delayRandomRange="0" field="GapAngle" __type="BuildingBlocks_FieldTransitionBase" __polymorphicType="BuildingBlocks_FieldTransitionNumber">
+          <timingFunction>
+            <BuildingBlocks_TimingFunctionPreset preset="EaseOutCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+          </timingFunction>
+        </BuildingBlocks_FieldTransitionNumber>
+      </transitions>
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AutoGimbalConeTargetContainerAutoAiming" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="362423d0-2b59-4fc2-a26a-714d0d76fe02" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="32968717-c316-4947-8701-523de3ba0685" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierNumber field="SizeX" value="0.2" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+        <BuildingBlocks_FieldModifierNumber field="SizeY" value="0.2" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+        <BuildingBlocks_FieldModifierNumber field="Alpha" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+        <BuildingBlocks_FieldModifierNumber field="GapAngle" value="7.5" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="FixedReticleComponent" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="42074fc2-0cfe-4924-b433-2b9241c9a56e" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierBoolean field="IsActive" value="0" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierBoolean" />
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="FixedReticleComponentActive" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="42074fc2-0cfe-4924-b433-2b9241c9a56e" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionTag tag="6d7f2105-9472-4799-b1d6-494f175c72a5" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuildingBlocks_FieldModifierBoolean field="IsActive" value="1" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierBoolean" />
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleFrameSizeAnimationAllStates" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="GimbalLocked" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="d7ed395a-c2c9-4a61-a4af-fb57eb7dc86f" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+        <BuildingBlocks_StyleConditionList name="GimbalTarg" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+        <BuildingBlocks_StyleConditionList name="GimbalAuto" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="07b8b7c6-f711-44fd-b4c3-40395e4eff7f" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.4" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0.2" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="42" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="42" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="0.4" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="38" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="38" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="0.6" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="38" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="38" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="0.8" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="22" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="22" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                  <BuildingBlocks_Keyframe percent="1" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="26" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="Linear" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="26" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleFrameChildrenLocked" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionParent __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionParent">
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionParent>
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="d7ed395a-c2c9-4a61-a4af-fb57eb7dc86f" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.4" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0.6" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="12" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="12" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleFrameChildrenTarg" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionParent __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionParent">
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionParent>
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.4" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0.6" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="5" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="5" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+    <BuildingBlocks_StyleEntry name="AimReticleFrameChildrenAuto" __type="BuildingBlocks_StyleEntry">
+      <conditionsList>
+        <BuildingBlocks_StyleConditionList name="New Condition List" __type="BuildingBlocks_StyleConditionList">
+          <conditions>
+            <BuildingBlocks_StyleSelectorConditionParent __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionParent">
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="296934a4-52c3-44cc-b6d5-97b7f94d9465" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionParent>
+            <BuildingBlocks_StyleSelectorConditionAncestor __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionAncestor">
+              <breakConditions />
+              <conditions>
+                <BuildingBlocks_StyleSelectorConditionTag tag="07b8b7c6-f711-44fd-b4c3-40395e4eff7f" __type="BuildingBlocks_StyleSelectorConditionBase" __polymorphicType="BuildingBlocks_StyleSelectorConditionTag" />
+              </conditions>
+            </BuildingBlocks_StyleSelectorConditionAncestor>
+          </conditions>
+        </BuildingBlocks_StyleConditionList>
+      </conditionsList>
+      <modifiers>
+        <BuidlingBlocks_FieldModifierAnimation __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuidlingBlocks_FieldModifierAnimation">
+          <value duration="0.4" delay="0" delayRandomRange="0" direction="Forward" fillMode="Forward" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+            <animationTimeline>
+              <BuildingBlocks_TimelineTypeEmbedded __type="BuildingBlocks_TimelineTypeBase" __polymorphicType="BuildingBlocks_TimelineTypeEmbedded">
+                <keyframes>
+                  <BuildingBlocks_Keyframe percent="0.6" __type="BuildingBlocks_Keyframe">
+                    <modifiers>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeX" value="8" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                      <BuildingBlocks_KeyframeModifierData __type="BuildingBlocks_KeyframeModifierData">
+                        <timingFunction>
+                          <BuildingBlocks_TimingFunctionPreset preset="EaseInCubic" __type="BuildingBlocks_TimingFunctionBase" __polymorphicType="BuildingBlocks_TimingFunctionPreset" />
+                        </timingFunction>
+                        <modifier>
+                          <BuildingBlocks_FieldModifierNumber field="SizeY" value="8" __type="BuildingBlocks_FieldModifierBase" __polymorphicType="BuildingBlocks_FieldModifierNumber" />
+                        </modifier>
+                      </BuildingBlocks_KeyframeModifierData>
+                    </modifiers>
+                  </BuildingBlocks_Keyframe>
+                </keyframes>
+              </BuildingBlocks_TimelineTypeEmbedded>
+            </animationTimeline>
+          </value>
+        </BuidlingBlocks_FieldModifierAnimation>
+      </modifiers>
+      <transitions />
+    </BuildingBlocks_StyleEntry>
+  </embeddedStyles>
+  <defaultStyles sharedStyles="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_DefaultStyles">
+    <entries />
+  </defaultStyles>
+  <brandStyles />
+  <entityPreviewScene>
+    <BuildingBlocks_PreviewSceneEntityRoot renderLayer="Default" __type="BuildingBlocks_PreviewScreenBase" __polymorphicType="BuildingBlocks_PreviewSceneEntityRoot" />
+  </entityPreviewScene>
+  <rttPreviewScene>
+    <BuildingBlocks_PreviewSceneRttRoot renderLayer="Default" entityScale="1" __type="BuildingBlocks_PreviewScreenBase" __polymorphicType="BuildingBlocks_PreviewSceneRttRoot">
+      <entityOrientation x="0" y="0" z="0" __type="Deg3" />
+    </BuildingBlocks_PreviewSceneRttRoot>
+  </rttPreviewScene>
+  <arPreviewScene>
+    <BuildingBlocks_PreviewSceneAugmentedRealityRtt renderLayer="Default" __type="BuildingBlocks_PreviewScreenBase" __polymorphicType="BuildingBlocks_PreviewSceneAugmentedRealityRtt" />
+  </arPreviewScene>
+  <previewScenes />
+  <staticVariables />
+  <scene>
+    <BuildingBlocks_DisplayWidget name="base" rendererType="Flash" parent="null" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="0" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_DisplayWidget">
+      <styleTags />
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0" y="0" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+          <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+            <color r="223" g="21" b="21" a="255" __type="SRGBA8" />
+          </BuildingBlocks_ColorSolid>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+    </BuildingBlocks_DisplayWidget>
+    <BuildingBlocks_WidgetCanvas name="VJoyComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="52e03666-3469-46e0-bf35-1b2fdb073c2d" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="7ac9ed93-3d35-4c7c-b9af-1c65575cbb69" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0" y="0" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="FixedReticleComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="75148b1d-29e7-48a0-b941-3e07a00b9cb7" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="42074fc2-0cfe-4924-b433-2b9241c9a56e" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="GimbalReticleComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="2fe020d5-e45e-4592-be50-0ec3310c5232" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="4d7b808e-4a24-4ed1-af00-dfbd9f0328ef" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0.5" y="0.5" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="CenterReferenceComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="0a4fdd83-1523-40a1-9bf0-fbc0dc84b259" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="cfbed7ac-3cd0-42af-8387-413b83869b72" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="AutoGimbalConeComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="9e70af37-9330-432c-bbaa-f72ee8718b18" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="fd6236e1-3bda-4a4d-a316-c18174b69d06" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="AutoGimbalConeTargetComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="97e0c252-4a8c-4ed9-9d8a-afe99445f5d6" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="f23ea02a-bd65-4c9f-823f-d3ed9e3c3d4d" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="VJoyLineComponent" rendererType="Flash" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="e7ee7a06-5ac0-48f6-a171-8a42a344722c" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="2324e007-7c57-4bb1-bd7d-50197f7c5cdb" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0" y="0" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+          <BuildingBlocks_ColorSolid __type="BuildingBlocks_ColorBase" __polymorphicType="BuildingBlocks_ColorSolid">
+            <color r="195" g="16" b="232" a="255" __type="SRGBA8" />
+          </BuildingBlocks_ColorSolid>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="VJoyDeadzoneComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="0" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="887f482b-1c33-4e7d-a018-b5c028052787" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="fd6236e1-3bda-4a4d-a316-c18174b69d06" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0.5" y="0.5" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="TurretData" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="a6aa6f96-7a6b-4361-bc3d-3c48e661fa16" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags>
+        <Reference value="fd6236e1-3bda-4a4d-a316-c18174b69d06" />
+      </styleTags>
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="Small3DReticleComponent" rendererType="None" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="18a27dea-e364-4267-b4e2-f8b7f879a6d0" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags />
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0.5" y="0.5" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="MissileLockConeComponent" rendererType="Flash" parent="" previewScene="null" previewSceneFlattened="null" isActive="0" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="0.5" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="0efbf94a-b21d-462a-9556-c8e3dc8d1cc0" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags />
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0" __type="Vec3" />
+      <anchor x="0.5" y="0.5" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="WeaponsOperatorComponent" rendererType="Flash" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="324e474d-d707-4361-9cd8-fc56407877e0" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags />
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0.5" __type="Vec3" />
+      <anchor x="0.5" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+    <BuildingBlocks_WidgetCanvas name="AttitudeMarker" rendererType="Flash" parent="" previewScene="null" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" instantiated="1" urlOptional="" urlPostfix="" canvas="4ee174f1-7325-4ccd-94fe-04b50bbeb721" sizingMethod="Size" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetCanvas">
+      <styleTags />
+      <rendererPolicy>
+        <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
+      </rendererPolicy>
+      <primitiveSettings primitiveMaterialPath="" isUValuePerPixel="0" isVValuePerPixel="0" __type="BuildingBlocks_PrimitiveSettings">
+        <UVStart x="0" y="0" __type="Vec2" />
+        <UVSize x="1" y="1" __type="Vec2" />
+      </primitiveSettings>
+      <position x="0" y="0" z="0" __type="Vec3" />
+      <positionOffset x="0" y="0" z="0" __type="Vec3" />
+      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientationOffset x="0" y="0" z="0" __type="Deg3" />
+      <scale x="1" y="1" z="1" __type="Vec3" />
+      <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
+        <width value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <height value="1" behavior="Percent" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <depth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <minHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxWidth value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <maxHeight value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+      </sizing>
+      <padding top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <margin top="0" right="0" bottom="0" left="0" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      <pivot x="0.5" y="0.5" z="0.5" __type="Vec3" />
+      <anchor x="0.5" y="0" z="0" __type="Vec3" />
+      <background enable="0" __type="BuildingBlocks_Background">
+        <color>
+        </color>
+      </background>
+      <segmentedFill enable="0" angle="0" xOffset="0" barFill="0" __type="BuildingBlocks_SegmentedFill">
+        <segmentSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <spaceSize value="64" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        <segmentColor>
+        </segmentColor>
+      </segmentedFill>
+      <svgFill svgPath="" __type="BuildingBlocks_SvgFill">
+        <nineSliceRect top="0.25" right="0.75" bottom="0.75" left="0.25" front="0" back="0" __type="BuildingBlocks_TRBL" />
+      </svgFill>
+      <border __type="BuildingBlocks_Border">
+        <top width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </top>
+        <right width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </right>
+        <bottom width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </bottom>
+        <left width="0" __type="BuildingBlocks_BorderSide">
+          <color>
+          </color>
+        </left>
+        <topLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topLeftRadius>
+        <topRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </topRightRadius>
+        <bottomLeftRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomLeftRadius>
+        <bottomRightRadius chamfer="0" __type="BuildingBlocks_BorderRadiusCorner">
+          <radius value="0" behavior="Fixed" __type="BuildingBlocks_FixedOrRelativeValue" />
+        </bottomRightRadius>
+      </border>
+      <layoutPolicy>
+      </layoutPolicy>
+      <layoutPolicyItem>
+      </layoutPolicyItem>
+      <layoutItemCommon>
+      </layoutItemCommon>
+      <dropTargetPolicy>
+      </dropTargetPolicy>
+      <draggablePolicy>
+      </draggablePolicy>
+      <tooltipPolicy>
+      </tooltipPolicy>
+      <contextMenuPolicy>
+      </contextMenuPolicy>
+      <grabControlsPolicy>
+      </grabControlsPolicy>
+      <calloutSettings>
+      </calloutSettings>
+      <overflow overflow="Visible" widthFadeThreshold="0" heightFadeThreshold="0" depthFadeThreshold="0" fadeXAxis="1" fadeYAxis="1" fadeZAxis="1" __type="BuildingBlocks_Overflow" />
+      <scrollPolicy>
+      </scrollPolicy>
+      <radialTransform transformMultiplier="0" curvatureAxis="Z" mouseTestShape="1" polyResolution="45" conicSlantFactor="0" __type="BuildingBlocks_RadialTransform" />
+      <radialTransformChild inheritRotation="1" inheritShapeWarp="1" maintainGapLength="1" __type="BuildingBlocks_RadialTransformChild" />
+      <animation duration="1" delay="0" delayRandomRange="0" direction="Forward" fillMode="None" iterationCount="1" loopIndefinitely="0" timeSync="0" additive="1" __type="BuildingBlocks_Animation">
+        <animationTimeline>
+        </animationTimeline>
+      </animation>
+      <interactions canInteract="0" disabled="0" selected="0" collideLeftClick="1" collideRightClick="1" collideMouseWheel="0" hitDetectionOffset="1" propagateInteractionStates="0" inheritHoverState="0" inheritDownState="0" inheritSelectedState="0" inheritDisabledState="0" blocksCursor="0" buttonDownSoundTag="00000000-0000-0000-0000-000000000000" rightButtonDownSoundTag="00000000-0000-0000-0000-000000000000" leftClickSoundTag="00000000-0000-0000-0000-000000000000" rightClickSoundTag="00000000-0000-0000-0000-000000000000" leftDoubleClickSoundTag="00000000-0000-0000-0000-000000000000" rollOverSoundTag="00000000-0000-0000-0000-000000000000" rollOffSoundTag="00000000-0000-0000-0000-000000000000" __type="BuildingBlocks_Interactions">
+        <onLeftClick />
+        <onRightClick />
+        <onLeftDoubleClick />
+        <onRollOver />
+        <onRollOff />
+        <boundRestrictionShape>
+        </boundRestrictionShape>
+        <twoVariablePicker>
+        </twoVariablePicker>
+      </interactions>
+      <inlineStyles />
+      <paramInputValues />
+    </BuildingBlocks_WidgetCanvas>
+  </scene>
+  <library />
+  <operations>
+    <BuildingBlocks_BindingsNumberVariable binding="x" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="AimControl" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="FixedPosition" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberVariable binding="y" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="AimControl" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="FixedPosition" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsIntegerVariable binding="AimState" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsIntegerVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsIntegerVariable>
+    <BuildingBlocks_BindingsTagFromIntegerSwitch defaultValue="00000000-0000-0000-0000-000000000000" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsTagFromIntegerSwitch">
+      <values>
+        <BuildingBlocks_IntegerTagPair first="1" second="d7ed395a-c2c9-4a61-a4af-fb57eb7dc86f" __type="BuildingBlocks_IntegerTagPair" />
+        <BuildingBlocks_IntegerTagPair first="2" second="7447e618-7e0a-4c54-83a2-f4c867498a44" __type="BuildingBlocks_IntegerTagPair" />
+        <BuildingBlocks_IntegerTagPair first="3" second="07b8b7c6-f711-44fd-b4c3-40395e4eff7f" __type="BuildingBlocks_IntegerTagPair" />
+      </values>
+    </BuildingBlocks_BindingsTagFromIntegerSwitch>
+    <BuildingBlocks_BindingsStringField widget="" field="PrimaryStateTag" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsStringField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="IsAutoAiming" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsTagFromBoolean isTrue="32968717-c316-4947-8701-523de3ba0685" isFalse="00000000-0000-0000-0000-000000000000" inputTrue="null" inputFalse="null" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsTagFromBoolean" />
+    <BuildingBlocks_BindingsStringField widget="" field="SecondaryStateTag" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsStringField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="ShowFixedWeaponAim" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanVariable binding="IsFixedWeaponFiring" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsNumberVariable binding="x" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="AimPosition" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberVariable binding="y" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="AimPosition" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsTagFromBoolean isTrue="dba5a063-e91b-44bb-acb1-f13aa3467355" isFalse="00000000-0000-0000-0000-000000000000" inputTrue="null" inputFalse="null" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsTagFromBoolean" />
+    <BuildingBlocks_BindingsStringField widget="" field="SecondaryStateTag" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsStringField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsTagFromBoolean isTrue="6d7f2105-9472-4799-b1d6-494f175c72a5" isFalse="00000000-0000-0000-0000-000000000000" inputTrue="null" inputFalse="null" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsTagFromBoolean" />
+    <BuildingBlocks_BindingsStringField widget="" field="PrimaryStateTag" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsStringField" />
+    <BuildingBlocks_BindingsBooleanFromInteger type="Equal" inputL="" inputR="null" value="4" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanFromInteger" />
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsBooleanEvaluateOr __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateOr">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateOr>
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsBooleanFromInteger type="Equal" inputL="" inputR="null" value="3" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanFromInteger" />
+    <BuildingBlocks_BindingsBooleanEvaluateOr __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateOr">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateOr>
+    <BuildingBlocks_BindingsBooleanVariable binding="VjoyVisibleByUserPreference" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberVariable binding="HeadRollAngle" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="ShowData" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="Turret" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanField widget="" field="Instantiated" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsNumberVariable binding="FovScale" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="AimControl" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="IsAutoAiming" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BindingsOperations_AudioEvent widget="" triggerEvent="ChangeToTrue" input="" soundTag="49378a10-d0a4-46dc-8d36-45ca1f7add7e" triggerOnInitialValue="0" __type="BuildingBlocks_Node" __polymorphicType="BindingsOperations_AudioEvent" />
+    <BindingsOperations_AudioEvent widget="" triggerEvent="ChangeToFalse" input="" soundTag="9cd552a5-3fe1-4feb-9275-5b2236ac02e3" triggerOnInitialValue="0" __type="BuildingBlocks_Node" __polymorphicType="BindingsOperations_AudioEvent" />
+    <BuildingBlocks_BindingsBooleanVariable binding="IsInMiningMode" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="turret" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsBooleanVariable binding="MissileController/InMissileMode" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path />
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="MissileController/IsLocking" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path />
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="MissileController/IsBombing" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path />
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsBooleanField widget="" field="Instantiated" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="InTurret" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="WeaponOperator" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsBooleanEvaluateAnd __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanEvaluateAnd">
+      <inputs>
+        <WeakPointer inputs="" />
+        <WeakPointer inputs="" />
+      </inputs>
+    </BuildingBlocks_BindingsBooleanEvaluateAnd>
+    <BuildingBlocks_BindingsBooleanVariable binding="ShowData" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="WeaponOperator" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="OrientationZ" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="ScaleY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsNumberVariable binding="x" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="VJoyCenterScreen" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberVariable binding="y" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberVariable">
+      <path>
+        <BuildingBlocks_BindingsPathStructure name="aimcontrol" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+        <BuildingBlocks_BindingsPathStructure name="VJoyCenterScreen" __type="BuildingBlocks_BindingsPathBase" __polymorphicType="BuildingBlocks_BindingsPathStructure" />
+      </path>
+    </BuildingBlocks_BindingsNumberVariable>
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
+    <BuildingBlocks_BindingsBooleanVariable binding="aimcontrol/turret/projectedHud/enabled" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+      <path />
+    </BuildingBlocks_BindingsBooleanVariable>
+    <BuildingBlocks_BindingsBooleanInvert input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanInvert" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorX" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+    <BuildingBlocks_BindingsNumberField widget="" field="AnchorY" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsNumberField" />
+  </operations>
+</BuildingBlocks_Canvas.PlayerAimComponent>

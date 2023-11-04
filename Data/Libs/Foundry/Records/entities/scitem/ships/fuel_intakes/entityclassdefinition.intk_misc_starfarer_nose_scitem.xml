@@ -1,0 +1,77 @@
+<EntityClassDefinition.INTK_MISC_Starfarer_Nose_SCItem Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="a153bc13-b348-47a4-8bae-1ce22b0b4023" __type="EntityClassDefinition" __ref="d8913855-325b-46f1-ba5f-22c0c2ef1ea2" __path="libs/foundry/records/entities/scitem/ships/fuel_intakes/entityclassdefinition.intk_misc_starfarer_nose_scitem.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="FuelIntake" SubType="Fuel" Size="6" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="flightReady $MISC_Starfarer_Base" RequiredTags="$MISC_Starfarer_Base" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_NameMISC_Starfarer_FuelIntake" ShortName="@LOC_EMPTY" Description="@item_DescMISC_Starfarer_FuelIntake" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemFuelIntakeParams fuelPushRate="120" minimumRate="0.2" __type="DataForgeComponentParams" __polymorphicType="SCItemFuelIntakeParams" />
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/spaceships/intakes/misc/misc_starfarer_fuelintake.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="10" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <EntityComponentHeatConnection TemperatureToIR="0.5" StartIRTemperature="250" OverpowerHeat="0" OverclockThresholdMinHeat="0" OverclockThresholdMaxHeat="0" ThermalEnergyBase="10" ThermalEnergyDraw="20" ThermalConductivity="3" SpecificHeatCapacity="13" Mass="200" SurfaceArea="50" StartCoolingTemperature="300" MaxCoolingRate="1" MaxTemperature="450" OverheatTemperature="370" RecoveryTemperature="350" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
+    <EntityComponentPowerConnection PowerBase="0.5" PowerDraw="1" TimeToReachDrawRequest="0" SafeguardPriority="0" DisplayedInPoweredItemList="0" IsThrottleable="0" IsOverclockable="0" OverclockThresholdMin="0" OverclockThresholdMax="0" OverpowerPerformance="0" OverclockPerformance="0" PowerToEM="50" DecayRateOfEM="0.15" WarningDelayTime="0.3" WarningDisplayTime="8" MisfireItemTypeLocID="@LOC_PLACEHOLDER" __type="DataForgeComponentParams" __polymorphicType="EntityComponentPowerConnection">
+      <MisfireGenerationParams>
+      </MisfireGenerationParams>
+      <MisfireEvents __type="SMisfireEvents">
+        <MinorMisfires />
+        <MajorMisfires />
+        <CriticalMisfires />
+      </MisfireEvents>
+    </EntityComponentPowerConnection>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+  </Components>
+</EntityClassDefinition.INTK_MISC_Starfarer_Nose_SCItem>

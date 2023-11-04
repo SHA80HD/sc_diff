@@ -1,0 +1,683 @@
+<EntityClassDefinition.BEHR_LaserCannon_S1 Category="Items" Icon="Default.bmp" Invisible="0" BBoxSelection="1" entityDensityClass="a153bc13-b348-47a4-8bae-1ce22b0b4023" __type="EntityClassDefinition" __ref="42e2ddb1-7397-4299-88ee-2ddfaa0efc67" __path="libs/foundry/records/entities/scitem/ships/weapons/behr_lasercannon_s1.xml">
+  <tags />
+  <StaticEntityClassData>
+    <DefaultEntitlementEntityParams entitlementPolicy="6df1749c-48ea-43e5-bae5-8084d9fe5aca" canEntitleThroughWebsite="1" __type="EntityClassStaticDataParams" __polymorphicType="DefaultEntitlementEntityParams" />
+  </StaticEntityClassData>
+  <Components>
+    <EntityComponentPowerConnection PowerBase="220" PowerDraw="220" TimeToReachDrawRequest="0" SafeguardPriority="20" DisplayedInPoweredItemList="1" IsThrottleable="0" IsOverclockable="0" OverclockThresholdMin="0.25" OverclockThresholdMax="0.53" OverpowerPerformance="0.3" OverclockPerformance="0.24" PowerToEM="0.25" DecayRateOfEM="0.2" WarningDelayTime="0.3" WarningDisplayTime="8" MisfireItemTypeLocID="@LOC_PLACEHOLDER" __type="DataForgeComponentParams" __polymorphicType="EntityComponentPowerConnection">
+      <MisfireGenerationParams>
+      </MisfireGenerationParams>
+      <MisfireEvents __type="SMisfireEvents">
+        <MinorMisfires />
+        <MajorMisfires />
+        <CriticalMisfires />
+      </MisfireEvents>
+    </EntityComponentPowerConnection>
+    <EntityComponentHeatConnection TemperatureToIR="0.5" StartIRTemperature="250" OverpowerHeat="0.8" OverclockThresholdMinHeat="0.52" OverclockThresholdMaxHeat="0.76" ThermalEnergyBase="100" ThermalEnergyDraw="200" ThermalConductivity="0.05" SpecificHeatCapacity="0.5" Mass="210" SurfaceArea="0.05" StartCoolingTemperature="300" MaxCoolingRate="61.8181" MaxTemperature="700" OverheatTemperature="650" RecoveryTemperature="550" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
+    <SHealthComponentParams Health="550" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="0" DetachFromItemPortOnDeath="1" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SDegradationParams MaxLifetimeHours="20" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="1" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+      <EffectCurve useLUT="0" __type="BezierCurve">
+        <points>
+          <Vec2 x="-0.599739" y="-0.04465957" __type="Vec2" />
+          <Vec2 x="0" y="0" __type="Vec2" />
+          <Vec2 x="0.599739" y="0.04465957" __type="Vec2" />
+          <Vec2 x="0.4339558" y="0.02270212" __type="Vec2" />
+          <Vec2 x="0.6" y="0.05" __type="Vec2" />
+          <Vec2 x="0.7660442" y="0.07729788" __type="Vec2" />
+          <Vec2 x="0.765241" y="0.05159574" __type="Vec2" />
+          <Vec2 x="0.85" y="0.2" __type="Vec2" />
+          <Vec2 x="0.934759" y="0.3484043" __type="Vec2" />
+          <Vec2 x="0.9174899" y="0.5021064" __type="Vec2" />
+          <Vec2 x="1" y="0.9" __type="Vec2" />
+          <Vec2 x="1.08251" y="0.9978936" __type="Vec2" />
+        </points>
+      </EffectCurve>
+      <DegradationPercentageRTPC rtpc="" __type="AudioRtpc" />
+    </SDegradationParams>
+    <SAmmoContainerComponentParams initialAmmoCount="0" maxAmmoCount="0" ammoParamsRecord="30b11a49-ed2b-497b-97bb-cacd6b351f87" secondaryAmmoParamsRecord="00000000-0000-0000-0000-000000000000" ammoContainerType="Primary" despawnEmptyAmmoContainer="1" allowAmmoRepool="1" emptyGeometryTag="empty" ammoCountAnimationBlendTime="0" __type="DataForgeComponentParams" __polymorphicType="SAmmoContainerComponentParams">
+      <ammoCountFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
+      <hideAttachments />
+      <attachableEntities />
+    </SAmmoContainerComponentParams>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="WeaponGun" SubType="Gun" Size="1" Grade="1" Manufacturer="65a5d887-3b21-4046-a718-6912c0c7c3be" inheritParentManufacturer="0" Tags="BEHR LaserCannon flightReady weaponMountUsable" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_NameBEHR_LaserCannon_S1" ShortName="@item_NameBEHR_LaserCannon_S1_short" Description="@item_DescBEHR_LaserCannon_S1" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="84000" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.4466009" y="0.801895" z="1.105504" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+          <Vec3 x="0.38" y="0.7" z="0.38" __type="Vec3" />
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemWeaponComponentParams ammoContainerRecord="00000000-0000-0000-0000-000000000000" ShouldIgnorePrimaryAmmoContainer="0" geometryTags="" supplementaryFireTime="0" proceduralAnimationRecord="00000000-0000-0000-0000-000000000000" actorProceduralRecoilConfig="00000000-0000-0000-0000-000000000000" autoAimMuzzleAngleOverwrite="-1" aimableAnglesRecord="98b2a8ad-2064-48cd-be3d-e0be7cfefb76" gimbalModeModifierRecord="d2357515-cf1a-4064-8552-52e0e24b5cd9" useAdsHelper="1" isAllowedInGreenZones="0" uncollapseOnTurnedOn="0" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponComponentParams">
+      <secondaryAmmoContainers />
+      <defaultAdsCameraOffset x="0" y="0" z="0" __type="Vec3" />
+      <onAttachParams />
+      <reticleParams defaultReticle="LC" adsReticle="none" __type="SWeaponReticleParams" />
+      <weaponAIData idealCombatRange="50" CombatRangeCategory="Medium" baseAccuracy="1" impactRadiusForFriendlyFire="0" canShootWhenObstructed="0" __type="SWeaponAIDataParams">
+        <accuracyRange minimum="1" maximum="100" __type="Range" />
+        <accuracyRangeCurve useLUT="0" __type="BezierCurve">
+          <points />
+        </accuracyRangeCurve>
+        <shootingTimeAccuracyData maxShootingTime="10" __type="SWeaponAIShootingTimeAccuracyData">
+          <timePrecisionCurve useLUT="0" __type="BezierCurve">
+            <points />
+          </timePrecisionCurve>
+        </shootingTimeAccuracyData>
+        <aiFiringActionParams />
+      </weaponAIData>
+      <connectionParams powerActiveCooldown="0.49" heatRateOnline="12" lockOnOnverheat="0" maxGlow="100" glowTag="00000000-0000-0000-0000-000000000000" heatReduceWhenOverheatIsFixed="100000" __type="SWeaponConnectionParams">
+        <noPowerStats fireRate="0" fireRateMultiplier="0" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
+            <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
+            <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
+              <maxMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickMultiplier x="1" y="1" __type="Vec2" />
+            </aimRecoilModifier>
+            <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
+              <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </positionModifiers>
+              <rotationModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </rotationModifiers>
+              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+            </curveRecoil>
+            <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
+              <positionModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionModifier>
+              <rotationModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationModifier>
+            </curveRecoilHead>
+          </recoilModifier>
+          <spreadModifier minMultiplier="1" maxMultiplier="1" firstAttackMultiplier="1" attackMultiplier="1" decayMultiplier="1" additiveModifier="0" __type="SSpreadModifier" />
+          <aimModifier zoomScale="1" zoomTimeScale="1" hideWeaponInADS="0" __type="SAimModifier" />
+          <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
+        </noPowerStats>
+        <underpowerStats fireRate="0" fireRateMultiplier="0.1" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
+            <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
+            <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
+              <maxMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickMultiplier x="1" y="1" __type="Vec2" />
+            </aimRecoilModifier>
+            <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
+              <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </positionModifiers>
+              <rotationModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </rotationModifiers>
+              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+            </curveRecoil>
+            <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
+              <positionModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionModifier>
+              <rotationModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationModifier>
+            </curveRecoilHead>
+          </recoilModifier>
+          <spreadModifier minMultiplier="1" maxMultiplier="1" firstAttackMultiplier="1" attackMultiplier="1" decayMultiplier="1" additiveModifier="0" __type="SSpreadModifier" />
+          <aimModifier zoomScale="1" zoomTimeScale="1" hideWeaponInADS="0" __type="SAimModifier" />
+          <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
+        </underpowerStats>
+        <overpowerStats fireRate="0" fireRateMultiplier="1.2" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
+            <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
+            <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
+              <maxMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickMultiplier x="1" y="1" __type="Vec2" />
+            </aimRecoilModifier>
+            <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
+              <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </positionModifiers>
+              <rotationModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </rotationModifiers>
+              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+            </curveRecoil>
+            <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
+              <positionModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionModifier>
+              <rotationModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationModifier>
+            </curveRecoilHead>
+          </recoilModifier>
+          <spreadModifier minMultiplier="1" maxMultiplier="1" firstAttackMultiplier="1" attackMultiplier="1" decayMultiplier="1" additiveModifier="0" __type="SSpreadModifier" />
+          <aimModifier zoomScale="1" zoomTimeScale="1" hideWeaponInADS="0" __type="SAimModifier" />
+          <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
+        </overpowerStats>
+        <overclockStats fireRate="0" fireRateMultiplier="1.5" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
+            <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
+            <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
+              <maxMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickMultiplier x="1" y="1" __type="Vec2" />
+            </aimRecoilModifier>
+            <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
+              <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </positionModifiers>
+              <rotationModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </rotationModifiers>
+              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+            </curveRecoil>
+            <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
+              <positionModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionModifier>
+              <rotationModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationModifier>
+            </curveRecoilHead>
+          </recoilModifier>
+          <spreadModifier minMultiplier="1" maxMultiplier="1" firstAttackMultiplier="1" attackMultiplier="1" decayMultiplier="1" additiveModifier="0" __type="SSpreadModifier" />
+          <aimModifier zoomScale="1" zoomTimeScale="1" hideWeaponInADS="0" __type="SAimModifier" />
+          <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
+        </overclockStats>
+        <heatStats fireRate="0" fireRateMultiplier="1" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
+            <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
+            <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
+              <maxMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
+              <shotKickMultiplier x="1" y="1" __type="Vec2" />
+            </aimRecoilModifier>
+            <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
+              <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </positionModifiers>
+              <rotationModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
+              </rotationModifiers>
+              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+            </curveRecoil>
+            <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
+              <positionModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionModifier>
+              <rotationModifier __type="SHeadRecoilNoiseModifier">
+                <offsetModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationModifier>
+            </curveRecoilHead>
+          </recoilModifier>
+          <spreadModifier minMultiplier="1" maxMultiplier="1" firstAttackMultiplier="1" attackMultiplier="1" decayMultiplier="1" additiveModifier="0" __type="SSpreadModifier" />
+          <aimModifier zoomScale="1" zoomTimeScale="1" hideWeaponInADS="0" __type="SAimModifier" />
+          <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
+        </heatStats>
+        <rangedHeatStats />
+        <overheatLockedStats>
+        </overheatLockedStats>
+        <overheatTag tag="" __type="SMannequinTagParams" />
+        <overheatEffects />
+      </connectionParams>
+      <weaponRegenConsumerParams>
+        <SWeaponRegenConsumerParams requestedRegenPerSec="1700" regenerationCooldown="0.75" regenerationCostPerBullet="43" requestedAmmoLoad="10200" __type="SWeaponRegenConsumerParams" />
+      </weaponRegenConsumerParams>
+      <aimAction>
+      </aimAction>
+      <fireActions>
+        <SWeaponActionSequenceParams name="Single" localisedName="@FireMode_Single" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="7484099b-acb0-433a-afad-bc40bb5d2b2f" aiShootingMode="Single" mode="Looping" __type="SWeaponActionParams" __polymorphicType="SWeaponActionSequenceParams">
+          <mannequinTag tag="" __type="SMannequinTagParams" />
+          <entityTags __type="TagList">
+            <tags />
+          </entityTags>
+          <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <selectableCondition>
+          </selectableCondition>
+          <sequenceEntries>
+            <SWeaponSequenceEntryParams delay="240" unit="RPM" repetitions="1" __type="SWeaponSequenceEntryParams">
+              <weaponAction>
+                <SWeaponActionFireSingleParams name="Single" localisedName="@FireMode_Rapid" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="7484099b-acb0-433a-afad-bc40bb5d2b2f" aiShootingMode="Single" fireRate="240" heatPerShot="3000" wearPerShot="0" recoil="00000000-0000-0000-0000-000000000000" misfire="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSingleParams">
+                  <mannequinTag tag="" __type="SMannequinTagParams" />
+                  <entityTags __type="TagList">
+                    <tags />
+                  </entityTags>
+                  <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <selectableCondition>
+                  </selectableCondition>
+                  <launchParams>
+                    <SProjectileLauncher fireHelper="muzzle_out" muzzleHelper="" ammoCost="1" pelletCount="1" damageMultiplier="1" soundRadius="50" projectileType="Primary" __type="SLauncherBase" __polymorphicType="SProjectileLauncher">
+                      <spreadParams min="0" max="0.25" firstAttack="0.025" attack="0.025" decay="0.05" __type="SSpreadParams" />
+                    </SProjectileLauncher>
+                  </launchParams>
+                  <fireFragment fragment="barrel_recoil" forceWeaponController="0" __type="SFragmentParams" />
+                  <fireAudioTrigger audioTrigger="Play_WPHA_BEHR_LaserCannon_S1_Fire" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <dryFireAudioTrigger audioTrigger="Play_WPHD_DryFire_Cannon" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <cooldownStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <cooldownStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <fireEffects>
+                    <SWeaponParticleEffectParams helper="muzzle_out" triggerTag="00000000-0000-0000-0000-000000000000" modifierSource="None" delay="0" scale="0.6" retriggerOnViewModeChange="0" __type="SWeaponParticleEffectParams">
+                      <firstPerson path="Spaceships\Weapons_Templates\template_laser.template_laser.s1-3_muzzle_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                      <thirdPerson path="Spaceships\Weapons_Templates\template_laser.template_laser.s1-3_muzzle" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                    </SWeaponParticleEffectParams>
+                  </fireEffects>
+                  <vibrationParams normalVibration="0" playerVibration="0" __type="SWeaponVibrationParams" />
+                  <explosionParams>
+                  </explosionParams>
+                </SWeaponActionFireSingleParams>
+              </weaponAction>
+            </SWeaponSequenceEntryParams>
+          </sequenceEntries>
+          <startFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
+          <loopingFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
+          <stopFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
+          <startAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <stopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <dryFireAudioTrigger audioTrigger="Play_WPHD_DryFire_Cannon" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <fireRateRTPC rtpc="Weapon_Fire_Rate" __type="AudioRtpc" />
+          <effects />
+        </SWeaponActionSequenceParams>
+      </fireActions>
+      <audioParams visorAudioAvailable="0" __type="SWeaponAudioParams">
+        <ammoCountRTPC rtpc="Ammo_Count_Normalised" __type="AudioRtpc" />
+        <weaponPowerRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
+        <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <weaponHeatRTPC rtpc="Weapon_Heat_Level" __type="AudioRtpc" />
+        <overheatAudioTrigger audioTrigger="Play_WPHO_Overheat_Cannon_Offline" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <overheatEndAudioTrigger audioTrigger="Play_WPHO_Overheat_Cannon_Online" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      </audioParams>
+      <audioReportEnvironmentParams maxTriggers="6" __type="SWeaponAudioReportEnvironmentParams">
+        <reportEnvironments>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Metal_Tiny" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Metal_Small" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Metal_Medium" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Metal_Large" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Cave_Small" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_INT_Cave_Large" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_EXT_Tiny" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_EXT_Small" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_EXT_Medium" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_EXT_Large" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+          <SWeaponAudioReportEnvironment wwiseEnvironmentName="VERB_SYS_EXT__Space" __type="SWeaponAudioReportEnvironment">
+            <reportAudioTrigger audioTrigger="Play_WPHR_Report_Planetary_s3_Heavy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </SWeaponAudioReportEnvironment>
+        </reportEnvironments>
+      </audioReportEnvironmentParams>
+      <specialEffectsParams>
+        <SWeaponParticleEffectParamsArray __type="SWeaponParticleEffectParamsArray">
+          <effects />
+        </SWeaponParticleEffectParamsArray>
+        <SWeaponParticleEffectParamsArray __type="SWeaponParticleEffectParamsArray">
+          <effects />
+        </SWeaponParticleEffectParamsArray>
+        <SWeaponParticleEffectParamsArray __type="SWeaponParticleEffectParamsArray">
+          <effects />
+        </SWeaponParticleEffectParamsArray>
+      </specialEffectsParams>
+      <turnedOnEffects />
+      <fireSpinAnimationParams>
+      </fireSpinAnimationParams>
+      <weaponDegradationModifier>
+      </weaponDegradationModifier>
+      <misfireParams __type="SWeaponMisfireParams">
+        <majorMisfireEffects />
+        <criticalMisfireEffects />
+      </misfireParams>
+      <overrideDisplayStats>
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+        <Single value="-1" />
+      </overrideDisplayStats>
+    </SCItemWeaponComponentParams>
+    <SAnimationControllerParams AnimationDatabase="Items\Weapons\BEHR\BEHR_LaserCannon_S1.adb" AnimationController="Items\Weapons\weaponControllerDef.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="Weapon" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/spaceships/weapons/behr/behr_lasercannon_s1/behr_lasercannon_s1.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects />
+            <triggerEffects />
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SCItemPurchasableParams displayName="@item_NameBEHR_LaserCannon_S1" displayType="@item_displayType_Cannon" displayThumbnail="" allowTryOn="0" allowQuickBuy="0" tryOnInteractionText="@shop_ui_item_action_preview" defaultAttachToPortName="" interactionPointTemplate="f00575ab-66be-4edc-850e-b4475d52a833" __type="DataForgeComponentParams" __polymorphicType="SCItemPurchasableParams">
+      <Display>
+      </Display>
+      <disabledLoadoutInteractions />
+      <tutorialParams>
+      </tutorialParams>
+      <interactionPoints />
+    </SCItemPurchasableParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="115" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SARDataComponentParams dataType="ShopItem" rangeMin="1" rangeMax="5" labelMovementType="FacingPlayer" visibleThroughWalls="1" labelZOrientationOffset="0" title1="@LOC_EMPTY" title2="@LOC_EMPTY" subtitle1="@LOC_EMPTY" subtitle2="@LOC_EMPTY" description="@LOC_EMPTY" scaleCapDistance="10" __type="DataForgeComponentParams" __polymorphicType="SARDataComponentParams">
+      <labelAttachOffset x="0" y="0" z="0" __type="Vec3" />
+      <queryOffset x="0" y="0" z="0" __type="Vec3" />
+      <labelScale x="1" y="1" z="1" __type="Vec3" />
+    </SARDataComponentParams>
+    <SDistortionParams DecayDelay="1.5" DecayRate="15" Maximum="400" WarningRatio="0.75" RecoveryRatio="0.51" PowerRatioAtMaxDistortion="0" PowerChangeOnlyAtMaxDistortion="0" __type="DataForgeComponentParams" __polymorphicType="SDistortionParams" />
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="BAR1" DisplayName="Barrel Attachment 1" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponAttachment" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="Barrel" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_bar" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="MEC" DisplayName="Firing Mechanism Attachment" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponAttachment" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="FiringMechanism" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_mec" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="POW" DisplayName="Power Array Attachment" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponAttachment" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="PowerArray" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_pow" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="VEN" DisplayName="Ventilation Attachment" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponAttachment" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="Ventilation" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_ven" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <SCItemAimableComponentParams __type="DataForgeComponentParams" __polymorphicType="SCItemAimableComponentParams" />
+    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
+      <loadout>
+        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+          <WearRange>
+          </WearRange>
+          <InventoryItems />
+          <entries />
+        </SItemPortLoadoutManualParams>
+      </loadout>
+    </SEntityComponentDefaultLoadoutParams>
+  </Components>
+</EntityClassDefinition.BEHR_LaserCannon_S1>

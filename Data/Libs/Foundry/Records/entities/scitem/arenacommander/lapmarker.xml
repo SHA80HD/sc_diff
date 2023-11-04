@@ -1,0 +1,208 @@
+<EntityClassDefinition.LapMarker Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="be46e374-ffde-4e0a-b41c-68b8b7dc9fa4" __path="libs/foundry/records/entities/scitem/arenacommander/lapmarker.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/buildingsets/human/universal/prop/racing/sign/sign_holographic_1_lapindicator_a.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="objects/buildingsets/human/universal/prop/racing/sign/sign_holographic_1_lapindicator_a.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Start" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="FinishLine" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Lap" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="states" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Start" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="45b64551-a13d-40cd-9c0b-038a4212ac45" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Go" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="83cfb9f7-e9d4-43c1-b0bd-f85305c99b3f" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="45b64551-a13d-40cd-9c0b-038a4212ac45" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="StateTypes.SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Lap" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="c84ecfe7-4c4f-42fc-8d16-118a80b40ea6" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="83cfb9f7-e9d4-43c1-b0bd-f85305c99b3f" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[3]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="FinishLine" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="79c0bbed-035f-4063-9949-e0d258f75f16" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="c84ecfe7-4c4f-42fc-8d16-118a80b40ea6" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+          <SEntityEffectSystem_UIOwnerCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_UIOwnerCategory">
+            <tagEffects>
+              <SEntityEffectSystem_UIOwnerTagEffect name="Start" enabled="1" tag="45b64551-a13d-40cd-9c0b-038a4212ac45" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_UIOwnerTagEffect">
+                <uiOwnerStartEvent>
+                  <EntityEffectSystem_UIOwnerEvent_Goto timelineName="startline" __type="EntityEffectSystem_UIOwnerEvent_Goto" />
+                </uiOwnerStartEvent>
+                <uiOwnerStopEvent>
+                </uiOwnerStopEvent>
+              </SEntityEffectSystem_UIOwnerTagEffect>
+              <SEntityEffectSystem_UIOwnerTagEffect name="Go" enabled="1" tag="83cfb9f7-e9d4-43c1-b0bd-f85305c99b3f" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_UIOwnerTagEffect">
+                <uiOwnerStartEvent>
+                  <EntityEffectSystem_UIOwnerEvent_Goto timelineName="Go" __type="EntityEffectSystem_UIOwnerEvent_Goto" />
+                </uiOwnerStartEvent>
+                <uiOwnerStopEvent>
+                </uiOwnerStopEvent>
+              </SEntityEffectSystem_UIOwnerTagEffect>
+              <SEntityEffectSystem_UIOwnerTagEffect name="Lap" enabled="1" tag="c84ecfe7-4c4f-42fc-8d16-118a80b40ea6" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_UIOwnerTagEffect">
+                <uiOwnerStartEvent>
+                  <EntityEffectSystem_UIOwnerEvent_Goto timelineName="lap" __type="EntityEffectSystem_UIOwnerEvent_Goto" />
+                </uiOwnerStartEvent>
+                <uiOwnerStopEvent>
+                </uiOwnerStopEvent>
+              </SEntityEffectSystem_UIOwnerTagEffect>
+              <SEntityEffectSystem_UIOwnerTagEffect name="Finishline" enabled="1" tag="79c0bbed-035f-4063-9949-e0d258f75f16" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_UIOwnerTagEffect">
+                <uiOwnerStartEvent>
+                  <EntityEffectSystem_UIOwnerEvent_Goto timelineName="finishline" __type="EntityEffectSystem_UIOwnerEvent_Goto" />
+                </uiOwnerStartEvent>
+                <uiOwnerStopEvent>
+                </uiOwnerStopEvent>
+              </SEntityEffectSystem_UIOwnerTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_UIOwnerCategory>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <UIRenderToTextureEntityComponentParams directRenderStage="None" compositeMaterialName="" hideRenderNodeOnUnload="0" aspectRatioOverride="0" interactionDistance="2" transparentListDepthBias="0" renderFlashBeforeCamera="0" fieldOfView="90" renderType="FORWARD" fallbackTextureOnOnload="" grabCameraControlParams="00000000-0000-0000-0000-000000000000" pickableCollision="Opaque" pickableTag="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIRenderToTextureEntityComponentParams">
+      <secondaryTarget>
+      </secondaryTarget>
+    </UIRenderToTextureEntityComponentParams>
+    <UIOwnerEntityComponentParams startOpen="1" areScreens3D="0" areSounds3D="0" hasActions="0" element="59620bc1-c8b3-4124-a29a-35910cc3e737" domainName="Global" loadDistance="800" moviePath="" variantName="" invariantName="" movieAutoPlay="0" loopMovie="0" forceFlashColourCorrection="0" ignoreTrackviewUnloadRequests="0" reflectLocalStateMachine="0" reflectLinkedStateMachines="0" graph="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIOwnerEntityComponentParams">
+      <visibiltyTags />
+    </UIOwnerEntityComponentParams>
+  </Components>
+</EntityClassDefinition.LapMarker>

@@ -1,0 +1,2443 @@
+<ControlHints_Preset.ControlHintsConfig_PU_Vehicle __type="ControlHints_Preset" __ref="092c3194-557d-41de-9fbc-1de416e3f15e" __path="libs/foundry/records/ui/visor/controlhints/controlhintsconfig_pu_vehicle.xml">
+  <hintSlots>
+    <ControlHint_Entry name="VehicleSlot_01" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Vehicle SoftDeath - Has Ejector Seat - EJECT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEjectorSeat ejectorSeat="EjectorSeat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEjectorSeat" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_eject" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_eject" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Helmet Visor Needs Wiping - WIPE VISOR" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_ActorSuitState suitState="VisorDirty" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSuitState" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_visor_wipe" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_hud:visor_wipe" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="QTM - QT Ready To Engage - QT ENGAGE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="QuantumNavigation" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_VehicleQuantumTravel quantumTravelState="QT_ReadyToEngage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleQuantumTravel" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_qtm_engage" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Hold" actionName="spaceship_quantum:v_toggle_qdrive_engagement" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Vehicle Health &amp;lt; 10% or MainThrustersDestroyed - Exits Into Interior - EJECT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleHealthState vehicleHealthState="Below10Percent" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleHealthState" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Destroyed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEjectorSeat ejectorSeat="EjectorSeat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEjectorSeat" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_eject" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_eject" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Locked Target: Hostile + Guns Equipped + OM:Combat - FIRE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Guns" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Combat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_fire" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group2" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Incoming Missiles - No Decoy - Health &amp;lt; 30% - Has Ejection Seat - EJECT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                      <conditions>
+                        <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                        <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                          <condition>
+                            <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                          </condition>
+                        </ControlHintCondition_NOT>
+                      </conditions>
+                    </ControlHintCondition_AND>
+                    <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                      <conditions>
+                        <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                        <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                          <condition>
+                            <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                          </condition>
+                        </ControlHintCondition_NOT>
+                      </conditions>
+                    </ControlHintCondition_AND>
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleHealthState vehicleHealthState="Below30Percent" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleHealthState" />
+                <ControlHintCondition_VehicleEjectorSeat ejectorSeat="EjectorSeat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEjectorSeat" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_eject" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_eject" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Docked - UNDOCK" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_docking_undock" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_docking:v_invoke_docking" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Docked - Can Auto Dock - AUTO-DOCK" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_VehicleDocking docking="CanAutoDock" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_docking_auto-dock" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Hold" actionName="spaceship_docking:v_invoke_docking" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Current Target: Can Dock With - Not Attacker - TARGET HAIL (for docking)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleDocking docking="DockingTargetValid" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleDocking docking="NoDockingTube" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_target_request_docking" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_target_hailing:v_target_hail" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Near Docking ATC - REQUEST DOCKING" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleDocking docking="NearDockingStation" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_VehicleDocking docking="NoDockingTube" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_atc_request_docking" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_atc_request" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Near Landing ATC - REQUEST LANDING" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleLandingArea landingArea="NearLandingArea" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_atc_request_landing" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_atc_request" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Bombs - Ship in SCM: Missile O.Mode. - Has Bomb Target - DROP BOMB" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Bombs" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_VehicleState state="BombTargetActive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_drop" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_drop" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_toggle_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Bombs - Ship in SCM: Missile O.Mode. - Has Bomb Target - DROP BOMB" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Bombs" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_VehicleState state="BombTargetActive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_drop" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_drop" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_toggle_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Bombs - Ship in SCM: Missile O.Mode. - No Bomb Target - SET BOMB TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Bombs" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="BombTargetActive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_setImpactPoint" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Hold" actionName="spaceship_missiles:v_weapon_bombing_toggle_desired_impact_point_hold" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_setImpactPoint" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_bombing_toggle_desired_impact_point" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has No Missiles - Ship in SCM: Missile O.Mode. - BLANK" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet />
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Missiles - Ship in SCM: Missile O.Mode. - LAUNCH MISSILE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_launch" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_toggle_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_launch" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_launch_missile" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Salvage Mode - BEAM TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_beamtoggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Mining Mode - Power On - FIRE (TOGGLE)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_fire" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_toggle_mining_laser_fire" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Locked Target: Hostile - Ship Has Guns - Ship in SCM:Combat - Ship Has gun group 1 &amp;amp; 2 - FIRE (mouse1 &amp;amp; 2)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Guns" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Inactive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Flight" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Combat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Turret" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleWeaponState vehicleWeaponState="WeaponGroup1Set" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleWeaponState" />
+                    <ControlHintCondition_VehicleWeaponState vehicleWeaponState="WeaponGroup2Set" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleWeaponState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_fire" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group2" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Locked Target: Hostile - Ship Has Guns - Ship in SCM:Combat - Ship Has gun group 1 - FIRE (mouse1)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Guns" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Inactive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Flight" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Combat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Turret" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleWeaponState vehicleWeaponState="WeaponGroup1Set" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleWeaponState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_fire" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Locked Target: Hostile - Ship Has Guns - Ship in SCM:Combat - Ship Has gun group 2 - FIRE (mouse2)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Guns" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Inactive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Flight" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Combat" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Turret" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleWeaponState vehicleWeaponState="WeaponGroup2Set" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleWeaponState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_fire" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group2" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Landing Gear Deployed - Not Landed - Auto Land Ready - AUTOLAND " __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleAutoLand autoLandState="Ready" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoLand" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_landing_autoland" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_autoland" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Landing Gear Deployed - Not Landed - In Landing Zone OR scm - Thrusters On - MOVEMENT XY" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_strafe_xy-plane" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_forward" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_back" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_ships_strafe_xy-plane" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_lateral" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power Off OR Landed + Power On + At reserved landed pad - POWER TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_OR>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_power_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_power:v_power_toggle" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Any - STAR MAP (Open)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_ActorSkeleton skeleton="Any" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSkeleton" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_moboglas_open_map" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_hud:v_starmap" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="VehicleSlot_02" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Incoming Missiles - Susceptible to Decoy &amp;amp; Noise - Has Decoy &amp;amp; Noise Countermeasures - LAUNCH DECOY/NOISE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_cm_decoy_noise_launch" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_decoy_launch" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_noise_launch" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Incoming Missiles - Susceptible to Decoy - Has Decoy Countermeasures - LAUNCH DECOY" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_cm_decoy_launch" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_decoy_launch" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Incoming Missiles - Susceptible to Noise - Has Noise Countermeasures - LAUNCH NOISE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasChaff" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_cm_noise_launch" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_noise_launch" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Docked - Docking Mode On - DOCKING MODE TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_docking_modetoggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_docking:v_toggle_docking_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Near Landing ATC - MOBIGLASS COMMLINK (Docking Request)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleDocking docking="NearDockingStation" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_VehicleDocking docking="NoDockingTube" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mobiGlas_commlink_docking" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:toggle_contact" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Near Landing ATC - MOBIGLASS COMMLINK (Landing Request)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleLandingArea landingArea="NearLandingArea" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mobiGlas_commlink_landing" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:toggle_contact" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Bombs - Ship in SCM: Missile OM - BOMB CYCLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Bombs" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_cycle_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_cycle_missile_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Missiles - Ship in SCM: Missile OM - MISSILE CYCLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_cycle_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_cycle_missile_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Locked Target: Hostile or Attacker - Ship Has Missiles - Ship in SCM OR - Missile OM + No Missiles - MISSILE MODE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="QuantumNavigation" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                      <conditions>
+                        <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                        <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                          <condition>
+                            <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                          </condition>
+                        </ControlHintCondition_NOT>
+                        <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                          <conditions>
+                            <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                            <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                          </conditions>
+                        </ControlHintCondition_OR>
+                      </conditions>
+                    </ControlHintCondition_AND>
+                    <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                      <conditions>
+                        <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                          <condition>
+                            <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                          </condition>
+                        </ControlHintCondition_NOT>
+                        <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                      </conditions>
+                    </ControlHintCondition_AND>
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_missile_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Thrusters Off - TOGGLE THRUSTERS" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Off" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Destroyed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_thrusters_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_power:v_power_toggle_thrusters" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Current Select Target: Attacker - No or Friendly Locked Target - LOCK TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="None" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Friendly" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleAutoSelectedContact autoSelectedContact="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoSelectedContact" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_attacker_inview" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_in_view_reset" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Attacker Contacts Present - No Current Hostile Target - LOCK Attacker TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="HostileOnRadar" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_attackers_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_attacker_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Salvage Mode - GIMBAL TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_gimbal" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_toggle_gimbal_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Mining Mode - Power On - POWER THROTTLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_power_range" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_mining_throttle" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_power_range" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_increase_mining_throttle" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Current Select Target: Hostile - No or Friendly Locked Target - LOCK TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="None" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Friendly" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleAutoSelectedContact autoSelectedContact="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoSelectedContact" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_hostile_inview" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_in_view_reset" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Attacker Contact Soft Select - No Current Attacker or Hostile Target - LOCK ATTACKER TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleAutoSelectedContact autoSelectedContact="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoSelectedContact" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Attacker" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_attackers_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_attacker_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Hostile Contacts Present - No Current Hostile Target - LOCK HOSTILE TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="HostileOnRadar" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="Hostile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_hostiles_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_hostile_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Current Select Target - LOCK TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleLockedTarget lockedTarget="None" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                <ControlHintCondition_VehicleAutoSelectedContact autoSelectedContact="All" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoSelectedContact" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_inview" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting:v_target_lock_selected" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_inview" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_in_view_reset" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power + Thrusters On - Landing Gear Down - MOVE UP/DOWN" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_VehicleLandingGearState landingGearState="Down" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingGearState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="0" name="@LOC_EMPTY" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions />
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_ships_strafe_z" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_vertical" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_strafe_z_up" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_up" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_strafe_z_down" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_strafe_down" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power &amp;amp; Thrusters On &amp;amp; SCM Mode Active - SPEED RANGE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleMasterMode masterMode="SCM" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMasterMode" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_scm_speedlimit" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_speed_range_rel" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Any - PIS/LOOK AROUND" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_ActorSkeleton skeleton="Any" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSkeleton" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                    <keynames>
+                      <ControlHints_KeyInput name="maxis_x" deviceType="Mouse" __type="ControlHints_KeyInput" />
+                    </keynames>
+                  </ControlHints_LocalizedKeyInput>
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                    <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                      <keynames>
+                        <ControlHints_KeyInput name="thumbrx" deviceType="Gamepad" __type="ControlHints_KeyInput" />
+                      </keynames>
+                    </ControlHints_LocalizedKeyInput>
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="VehicleSlot_03" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="SoftDeath or MainThrustersDestroyed - Seat exits to exterior - EXIT SHIP" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToExterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Destroyed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_exit_ship" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Incoming Missiles - Has Decoy Countermeasures - BURST +/-" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_cm_decoy_burst_increase_decrease" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_decoy_burst_increase" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_decoy_burst_decrease" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Incoming Missiles - Has Decoy Countermeasures - DECOY PANIC LAUNCH" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEnvironment environment="IncomingMissiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEnvironment" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="IncomingCounterWithFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+                <ControlHintCondition_VehicleCounterMeasureState vehicleCounterMeasureState="HasFlare" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleCounterMeasureState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_cm_decoy_panic" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_defensive:v_weapon_countermeasure_decoy_launch_panic" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Vehicle Health &amp;lt; 10% or SoftDeath or MainThrustersDestroyed - Exits Into Interior - EXIT SEAT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleHealthState vehicleHealthState="Below10Percent" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleHealthState" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Destroyed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_OR>
+                <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToInterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_exit" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Quantum Travel Mode - Power On - EXIT Quantum Mode" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Quantum" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_qtm_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_quantum_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Bombs - Ship in SCM: Missile O.Mode. - Has Bomb Target - CANCEL BOMB TARGET" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Bombs" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_VehicleState state="BombTargetActive" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_canceltImpactPoint" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Hold" actionName="spaceship_missiles:v_weapon_bombing_toggle_desired_impact_point_hold" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_bombs_canceltImpactPoint" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_bombing_toggle_desired_impact_point" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Ship Has Missiles - Ship in SCM: Missile OM - +MAX MISSILES  and RESET MISSILE COUNT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleEquippedComponents equippedComponents="Missiles" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleEquippedComponents" />
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Missile" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_armedMissiles_increase_decrease" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_increase_max_missiles" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_decrease_max_missiles" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_missileMode_armedMissiles_reset" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_missiles:v_weapon_reset_max_missiles" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Salvage Mode - CYCLE MODIFIERS" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_cyclemodifiers" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_cycle_modifiers_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_cycle_modifiers_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_beam_axis_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_toggle_beam_spacing_axis" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_salvage_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Mining Mode - Power On - Fracture Mode - LASTER TYPE (EXTRACT)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+                <ControlHintCondition_VehicleMiningLaserMode miningLaserMode="Fracture" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMiningLaserMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_change_laser_type_extract" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_toggle_mining_laser_type" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Mining Mode - Power On - Extract Mode - LASTER TYPE (FRACTURE)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+                <ControlHintCondition_VehicleMiningLaserMode miningLaserMode="Extractor" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMiningLaserMode" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_change_laser_type_fracture" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_toggle_mining_laser_type" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Mining Mode - Power On - EXIT MINING MODE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Mining" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_mining_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_mining_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Docked - Docking Mode On - DOCKING MODE CAMERA TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Docked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleDocking docking="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_AND>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleDocking docking="NoDockingTube" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleDocking" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_docking_camtoggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_docking:v_dock_toggle_view" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Current Select or Locked Target - No Pinned Targets - PIN TARGET " __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehiclePinnedTarget pinnedTarget="None" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehiclePinnedTarget" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleAutoSelectedContact autoSelectedContact="All" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAutoSelectedContact" />
+                    <ControlHintCondition_VehicleLockedTarget lockedTarget="All" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLockedTarget" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_pin" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting:v_target_toggle_pin_index_1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Landed &amp;amp; Out Of Landing Area &amp;amp; Gear Down - Thrusters On - LANDING GEAR TOGGLE (to raise)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleLandingGearState landingGearState="Down" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingGearState" />
+                <ControlHintCondition_VehicleLandingArea landingArea="NoLandingArea" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="0" name="@LOC_EMPTY" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_retract_landing_system" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_landing_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_toggle_landing_system" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Landed &amp;amp; Has Assigned Landing Area &amp;amp; Gear Up - Thrusters On - LANDING GEAR TOGGLE (to lower)" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleLandingGearState landingGearState="Up" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingGearState" />
+                <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="0" name="@LOC_EMPTY" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_deploy_landing_system" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_landing_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_toggle_landing_system" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Quantum Travel Mode - Power On - Can Travel" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleQuantumTravel quantumTravelState="QT_CanTravel" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleQuantumTravel" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Quantum" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_qtm_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_quantum_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power &amp;amp; Thrusters On &amp;amp; SCM Mode Active &amp;amp; Accelerating - AFTERBURN" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleOperatorMode operatorMode="QuantumNavigation" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_VehicleSystems systems="PlayerAcceleration_Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_thrusters_afterburners" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_afterburner" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Not Accelerating - Seat Exits to Interior - EXIT SEAT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToInterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="PlayerAcceleration_Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_exit" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Landed - Power Off or Thrusters Off - Seat exits to interior - EXIT SEAT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToInterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                      <condition>
+                        <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                      </condition>
+                    </ControlHintCondition_NOT>
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Off" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_exit" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Landed - Power Off or Thrusters Off - Seat exits to exterior - EXIT SHIP" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToExterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                      <condition>
+                        <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                      </condition>
+                    </ControlHintCondition_NOT>
+                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Off" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_seat_exit_ship" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="In Decoupled Mode ON - Power &amp;amp; Thrusters On - Always Show - DECOUPLE TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_VehicleSystems systems="DecoupledMode_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_decoupled_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_ifcs_toggle_vector_decoupling" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="In Cruise Control Mode ON - Power &amp;amp; Thrusters On - Always Show - CRUISE CONTROL TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_VehicleSystems systems="DecoupledMode_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="0" name="@LOC_EMPTY" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_ifcs_toggle_cruise_control" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="***:( *** G-Force Safety OFF - Power &amp;amp; Thrusters On - Always Show - G-FORCE SAFETY TOGGLE *** G-Safe_On check always false = DISABLED" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="GForceSafety_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_ActorSkeleton skeleton="Vanduul" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSkeleton" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_gforce_safety_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_ifcs_toggle_gforce_safety" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Rotation Lock ON - Power &amp;amp; Thrusters On - Always Show - ROTATION LOCK TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_VehicleSystems systems="Rotation_Locked" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_rotationlock_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_lock_rotation" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Volatile Cargo - Always Show -  JETTISON" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleState state="VolatileCargoExplosionSoon" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+            <ControlHintAlwaysDisplay_WhenConditionsPass __type="ControlHintAlwaysDisplayCondition" __polymorphicType="ControlHintAlwaysDisplay_WhenConditionsPass" />
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_volatileCargo_jettison" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_mining:v_jettison_volatile_cargo" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+  </hintSlots>
+</ControlHints_Preset.ControlHintsConfig_PU_Vehicle>

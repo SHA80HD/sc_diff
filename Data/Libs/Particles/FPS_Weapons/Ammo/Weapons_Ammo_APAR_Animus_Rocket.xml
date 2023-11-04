@@ -1,0 +1,75 @@
+<ParticleLibrary Name="Weapons_Ammo_APAR_Animus_Rocket" SandboxVersion="3.17.122.6883" ParticleVersion="46">
+  <Particles Name="Impact">
+    <Params Inheritance="System" ParticleSystem="CryEngine" OrientToInitialVelocity="true" />
+    <Childs>
+      <Particles Name="Fire">
+        <Params Inheritance="System" Count="6.37168" ParticleSystem="RParticleGPU" ParticleLifeTime="0.07" EmitAngle="180,Random=1" VerticalSpread="180,Random=1" BlendType="Additive" Texture="textures/vfx/smoke/smoke_generic1_36frames_diff.tif" TextureAnimation="NumFramesU=6,NumFramesV=6,AnimCurve=(flags=32;t=1,v=1),FrameBlend=true" SoftParticleV2="true,FadeThickness=0.765027,DepthOffset=0.255009" Alpha="ParticleAge=(;t=0.016,v=1;t=0.596,v=1;t=1)" Color="(x=0.6724433,y=0.27049783,z=0.066625945)" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="420000" Speed="11.8584,Random=0.397086" Size="1.89388,ParticleAge=(v=0.663,flags=32;t=1,v=1)" PivotY="0.111504" RandomAngles="y=90" OrientToVelocity="true" ResponsiveAA="true" SortOffset="-0.0442478" AllocSize="6" />
+      </Particles>
+      <Particles Name="debris_parent">
+        <Params Inheritance="System" Count="5.5102" ParticleSystem="RParticleGPU" ParticleLifeTime="0.15" EmitAngle="45,Random=1" VerticalSpread="45,Random=1" Alpha="0" DiffuseLighting="0" Reflectiveness="0" Speed="16.9388" SpawnBuffSize="x=5" AllocSize="5" />
+        <Childs>
+          <Particles Name="debris">
+            <Params Inheritance="System" Spawn="FromParentBirth" Count="17.551" ParticleSystem="RParticleGPU" ParticleLifeTime="5,Random=0.229508" EmitAngle="18,Random=1" VerticalSpread="18,Random=1" Texture="textures/vfx/debris/pebbles_dif.tif" TextureSharpness="1" NormalTexture="textures/vfx/debris/pebbles_ddn.tif" TextureAnimation="NumFramesU=4,NumFramesV=2,LifetimeRate=false,AnimRate=0" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true,FadeThickness=0" Alpha="ParticleAge=(v=1;t=0.847,v=1;t=1,flags=4)" Color="(x=0.1559265,y=0.1559265,z=0.1559265)" Speed="2.65306,Random=0.728597" InheritVelocity="0.555102,Random=0.918033" GravityScale="1" Drag="0.1" Size="0.05,Random=0.712204,SizeY=0" RandomAngles="y=360" ZBuffer="true" Elasticity="0.169388,Random=0.293249" Behaviour="Slide" StopSpeed="1" Friction="1" SlideTransFrac="0.114286" ResponsiveAA="true" AllocSize="90" />
+          </Particles>
+        </Childs>
+      </Particles>
+      <Particles Name="Core_flash">
+        <Params Inheritance="System" Count="1" ParticleSystem="RParticleGPU" ParticleLifeTime="0.05" BlendType="Additive" Texture="textures/vfx/sparks/spark_core1_diff.tif" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true,FadeThickness=0.510018,DepthOffset=0" Alpha="ParticleAge=(v=1,flags=32;t=1)" Color="(x=0.6724433,y=0.27049783,z=0.066625945)" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="10000" Size="2.46372" RandomAngles="y=360" SortOffset="0.0831858" AllocSize="1" />
+      </Particles>
+      <Particles Name="Smoke">
+        <Params Inheritance="System" Count="5.91837" ParticleSystem="RParticleGPU" SpawnDelay="0.06" ParticleLifeTime="3,Random=0.367089" EmissionRoundness="1" EmissionDistribution="1" EmitAngle="90,Random=1" FocusGravityDir="true" VerticalSpread="90,Random=1" Texture="textures/vfx/smoke/smoke_wispy_top_5x5_dif.tif" TextureSharpness="1" NormalTexture="textures/vfx/smoke/smoke_wispy_top_5x5_ddn.tif" FlowTexture="textures/vfx/smoke/smoke_wispy_top_5x5_vector_fume_0.2.tif" FlowMapIntensity="0.0625" TextureAnimation="NumFramesU=5,NumFramesV=5,Loop=true,FrameBlend=true" SoftParticleV2="true,FadeThickness=0.473588,DepthOffset=0" Alpha="ParticleAge=(t=0.682,v=1;t=1)" Color="(x=0.28744087,y=0.28744087,z=0.28744087)" DecoupledLighting="true,AtlasInstDim=D64x64,ShadowPenumbraScale=0,SampleDepthRange=1" DiffuseBacklighting="0.193878" Scattering="Translucency=0.193878" CurvatureV2="0.959184" ReceiveShadows="true" Speed="1,Random=1" GravityScale="-0.01" Drag="1,Random=0.163934" WindScale="1" Size="4,Random=0.263713,ParticleAge=(v=0.61,flags=32;t=1,v=1),SizeY=0" RandomAngles="y=45" OrientToInitialVelocity="true" PlaneAlignBlendDistance="15.497322" SortingMode="DepthSort" AllocSize="5" />
+      </Particles>
+      <Particles Name="Light">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" ParticleLifeTime="0.15" PositionOffset="y=1" FocusGravityDir="true" Color="(x=0.6724433,y=0.27049783,z=0.066625945)" DiffuseLighting="0" Curvature="0" LightSource="Radius=95,Intensity=(200,ParticleAge=(v=1,flags=32;t=1))" FlareRenderDistance="10000" />
+      </Particles>
+      <Particles Name="Sound">
+        <Params Inheritance="System" ParticleSystem="CryEngine" />
+      </Particles>
+      <Particles Name="Flare">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" ParticleLifeTime="0.12" Color="(x=0.7681513,y=0.45078582,z=0.23455061)" DiffuseLighting="0" Curvature="0" LightSource="Radius=10,SoftBulb=true,Intensity=(2,ParticleAge=(v=1;t=1))" Flare="Volume_Flares.Banu_QD_Flare" FlareEnabled="true" FakeLight="true" FlareRenderDistance="15000" Size="1.5" CameraDistanceOffset="-40" />
+      </Particles>
+      <Particles Name="spark_parent1">
+        <Params Inheritance="System" Count="18.8" ParticleSystem="CryEngine" ParticleLifeTime="0.1,Random=0.462366" EmitAngle="180,Random=1" VerticalSpread="180,Random=1" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Speed="50,Random=0.670251" />
+        <Childs>
+          <Particles Name="spark">
+            <Params Inheritance="System" Spawn="FromParentBirth" Count="75.2613" ParticleSystem="CryEngine" ParticleLifeTime="0.15,Random=0.370968" EmitAngle="180,Random=1" VerticalSpread="180,Random=1" BlendType="Additive" Texture="textures/vfx/sparks/spark_single1_diff.tif" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Alpha="ParticleAge=(t=0.13;t=0.235,v=1;t=0.667,v=1;t=1,flags=4)" Color="(x=0.6724433,y=0.27049783,z=0.066625945)" DiffuseLighting="0" EmissiveLighting="2000" Curvature="0" Speed="12.892,Random=1" InheritVelocity="1" AirResistance="10,Random=1,WindScale=0" Size="0.01" Stretch="0.005" MinPixels="1.5" OrientToVelocity="true" CameraMaxDistance="100" SortOffset="-0.01" />
+          </Particles>
+        </Childs>
+      </Particles>
+      <Particles Name="spark_parent_mid">
+        <Params Inheritance="System" Count="25.784" ParticleSystem="CryEngine" ParticleLifeTime="0.1,Random=0.462366" EmitAngle="180,Random=1" VerticalSpread="180,Random=1" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Speed="26.1324,Random=1" />
+        <Childs>
+          <Particles Name="spark">
+            <Params Inheritance="System" Spawn="FromParentBirth" Count="28.3972" ParticleSystem="CryEngine" ParticleLifeTime="0.1,Random=0.370968" EmitAngle="180,Random=1" VerticalSpread="180,Random=1" BlendType="Additive" Texture="textures/vfx/sparks/spark_single1_diff.tif" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" Alpha="ParticleAge=(t=0.667,v=1;t=1,flags=4)" Color="(x=0.6724433,y=0.27049783,z=0.066625945)" DiffuseLighting="0" EmissiveLighting="1000" Curvature="0" Speed="7.49129,Random=1" InheritVelocity="1" AirResistance="0.783972,WindScale=0" Size="0.025,Random=0.204301" Stretch="0.0121951" OrientToVelocity="true" SortOffset="-0.0940766" />
+          </Particles>
+        </Childs>
+      </Particles>
+      <Particles Name="screen_shake">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" TriggerScreenEffectOnSpawn="true" CamShakeDistance="50" CamShakeTime="1" CamShakeRot="(x=0.57295775,y=0.57295775,z=0.57295775)" CamShakeFreq="44.4223" />
+      </Particles>
+      <Particles Name="refract">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" ParticleLifeTime="0.1" SoftParticle="true" Alpha="ParticleAge=(t=0.455,v=1;t=1,flags=4)" Material="Materials/VFX/explosion_refractsphere" Size="3.15102,ParticleAge=(flags=32;t=1,v=1,flags=4)" CameraDistanceOffset="-1" />
+      </Particles>
+      <Particles Name="decal">
+        <Params Inheritance="System" Count="1" ParticleSystem="CryEngine" ParticleLifeTime="5" Alpha="ParticleAge=(t=0.804,v=1;t=1)" Material="Materials/VFX/Weapons/Decals/LaserPistol_BurnDecal_01" Curvature="0" Size="1.79688" RandomAngles="y=360" Facing="Decal" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Rocket_Trail">
+    <Params Inheritance="System" ParticleSystem="CryEngine" />
+    <Childs>
+      <Particles Name="Smoke">
+        <Params Inheritance="System" Count="4700" ParticleSystem="RParticleGPU" Continuous="true" EmitterLifeTime="10" ParticleLifeTime="3,Random=0.0856102" Texture="textures/vfx/smoke/smoke_medium_2k_diff.tif" TextureBrightness="1" NormalTexture="textures/vfx/smoke/smoke_medium_2k_ddn.tif" TextureAnimation="NumFramesU=9,NumFramesV=9,Loop=true" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true" Alpha="0.25,EmitterStrength=(flags=32;t=0.01,v=1),ParticleAge=(v=1;t=0.098,v=1;t=1)" Color="(x=0.03560132,y=0.03560132,z=0.03560132)" DecoupledLighting="true,AtlasInstDim=D16x16" DiffuseBacklighting="0.5" Scattering="Translucency=0.5" CurvatureV2="1" ReceiveShadows="true" InheritVelocity="-0.02,Random=0.204007" Drag="1" WindScale="0.3,Random=0.772152" CurlNoise="true,Type=Wind,Amplitude=(x=0.1),SpatialFrequency=(x=0.1)" Size="0.293878,Random=0.223629,ParticleAge=(v=0.51,flags=32;t=1,v=1)" VelocityStretch="0.0469388,SpawnFullyStretched=true" RandomAngles="y=45" OrientToInitialVelocity="true" CameraMaxDistanceFraction="1" SortingMode="DepthSort" />
+      </Particles>
+      <Particles Name="jet">
+        <Params Inheritance="System" Count="7" ParticleSystem="RParticleGPU" Continuous="true" ParticleLifeTime="0.05,Random=0.803279" BlendType="Additive" Texture="textures/vfx/weapons/weapons_general/muz_flash2_16frames_dt.tif" TextureAnimation="NumFramesU=4,NumFramesV=4,FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" RandomFlipU="true" SoftParticleV2="true,FadeThickness=0.309654,DepthOffset=0" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="18000" Speed="2.12389,Random=0.790528" MoveRelativeEmitter="true" Size="0.113274,Random=0.284153,SizeY=0" PivotY="0.656637" VelocityStretch="0.210619" RandomAngles="y=16" OrientToVelocity="true" ResponsiveAA="true" />
+      </Particles>
+      <Particles Name="sparks">
+        <Params Inheritance="System" Count="33.6283" ParticleSystem="RParticleGPU" Continuous="true" ParticleLifeTime="0.15,Random=0.8051" EmissionSize="x=0.01,z=0.01" EmitAngle="7.32743,Random=1" VerticalSpread="7.32743,Random=1" BlendType="Additive" Texture="textures/vfx/sparks/spark_multiple1_5x2_diff.tif" TextureAnimation="NumFramesU=5,NumFramesV=2,LifetimeRate=false,AnimRate=0,FirstFrameIntervalEnd=10" RandomFlipU="true" Color="(y=0.9734454,z=0.37626216)" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="31000" Speed="3.71681,Random=0.477231" Drag="10.0885" CurlNoise="true,Amplitude=(x=10.29),SpatialFrequency=(x=27.5),TemporalFrequency=5" MoveRelativeEmitter="true" Size="0.003,Random=0.205829,SizeY=0.001" VelocityStretch="0.0025,AlphaFade=0.728597" OrientToVelocity="true" ResponsiveAA="true" />
+      </Particles>
+      <Particles Name="light">
+        <Params Inheritance="System" Count="2" ParticleSystem="CryEngine" Continuous="true" ParticleLifeTime="0.1" Color="(x=0.9911022,y=0.5332765,z=0.06301002)" DiffuseLighting="0" Curvature="0" LightSource="Radius=1.53005,SoftBulb=true,Intensity=(0.02,Random=1)" MoveRelativeEmitter="true,IgnoreRotation=false" />
+      </Particles>
+    </Childs>
+  </Particles>
+</ParticleLibrary>

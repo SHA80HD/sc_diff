@@ -1,0 +1,300 @@
+<ControlHints_Preset.ControlHintsConfig_PU_GroundVehicle __type="ControlHints_Preset" __ref="50669d52-5ffe-4c55-adb3-4027e693c820" __path="libs/foundry/records/ui/visor/controlhints/controlhintsconfig_pu_groundvehicle.xml">
+  <hintSlots>
+    <ControlHint_Entry name="GroundVehicle_Slot01" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Helmet Visor Needs Wiping - WIPE VISOR" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_ActorSuitState suitState="VisorDirty" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_ActorSuitState" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_visor_wipe" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_general:visor_wipe" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power Off OR Landed + Power On + At reserved landed pad - POWER TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_OR>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_power_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_power:v_power_toggle" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power On - Engines Off - ENGINE TOGGLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="Off" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_engine_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_power:v_power_toggle_thrusters" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Near Garage ATC - REQUEST GARAGE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleState state="Landed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleState" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleLandingArea landingArea="Reserved" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                  </condition>
+                </ControlHintCondition_NOT>
+                <ControlHintCondition_VehicleLandingArea landingArea="NearLandingArea" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleLandingArea" />
+                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_AND>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_atc_request_garage" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_movement:v_atc_request" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Any - MOVE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_movement" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_move_forward" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_move_back" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_groundVehicle_movement" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_move" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="GroundVehicle_Slot02" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Power Off - INTERACT/LOOK " __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_NOT __type="ControlHintCondition" __polymorphicType="ControlHintCondition_NOT">
+                  <condition>
+                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </condition>
+                </ControlHintCondition_NOT>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                    <keynames>
+                      <ControlHints_KeyInput name="maxis_x" deviceType="Mouse" __type="ControlHints_KeyInput" />
+                    </keynames>
+                  </ControlHints_LocalizedKeyInput>
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_look_pis" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="player_choice:pc_interaction_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                    <ControlHints_LocalizedKeyInput activationMode="Default" __type="ControlHints_Input" __polymorphicType="ControlHints_LocalizedKeyInput">
+                      <keynames>
+                        <ControlHints_KeyInput name="thumbrx" deviceType="Gamepad" __type="ControlHints_KeyInput" />
+                      </keynames>
+                    </ControlHints_LocalizedKeyInput>
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Power On - STEER" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_steer" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+                <ControlHints_HintDisplayInfoAction overrideName="1" name="@ui_controlhint_groundVehicle_steer" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                  <actions>
+                    <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_yaw" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  </actions>
+                </ControlHints_HintDisplayInfoAction>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+    <ControlHint_Entry name="GroundVehicle_Slot03" __type="ControlHint_Entry">
+      <controlHintList>
+        <ControlHintDef description="Accelerating OR Max Speed - BRAKE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_OR __type="ControlHintCondition" __polymorphicType="ControlHintCondition_OR">
+                  <conditions>
+                    <ControlHintCondition_VehicleSystems systems="AtMaxSpeed" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                    <ControlHintCondition_VehicleSystems systems="PlayerAcceleration_Active" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                  </conditions>
+                </ControlHintCondition_OR>
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_brake" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="vehicle_driver:v_brake" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Seat Exits to Interior - EXIT SEAT" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToInterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_seat_exit_interior" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Base - Seat Exits to Exterior - EXIT VEHICLE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_VehicleSeatTypeState vehicleSeatTypeState="SeatToExterior" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSeatTypeState" />
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_groundVehicle_seat_exit_exterior" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="default:pl_exit" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+      </controlHintList>
+    </ControlHint_Entry>
+  </hintSlots>
+</ControlHints_Preset.ControlHintsConfig_PU_GroundVehicle>

@@ -1,0 +1,482 @@
+<EntityClassDefinition.machine_vending_repairable_MASTER Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="c70d7e47-c12c-4884-8b88-dd6b0f9c9699" __path="libs/foundry/records/entities/scitem/mission_entities/machine_vending_repairable_master.xml">
+  <tags>
+    <Reference value="520872be-94dd-4f48-b2da-97751e3ff03c" />
+  </tags>
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/buildingsets/human/lowtech/prop/appliance/machine/machine_vending/machine_vending_01x01x02_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="Objects/buildingsets/human/template/int/template_int_a.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="objects/buildingsets/human/lowtech/prop/appliance/machine/machine_vending/machine_vending_1_a.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+          <EntityEffectSystem_MaterialCategory enabled="1" allowMultipleTags="0" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_MaterialCategory">
+            <tagEffects>
+              <EntityEffectSystem_MaterialTagEffect name="" enabled="1" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="00000000-0000-0000-0000-000000000000" materialProperty="Glow" subMeshName="" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideValueModifier overrideValue="6" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideValueModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+              <EntityEffectSystem_MaterialTagEffect name="Front Activated" enabled="1" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="00000000-0000-0000-0000-000000000000" materialProperty="Glow" subMeshName="" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_PatternModifier startDelay="0" maximumValue="20" duration="2" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_PatternModifier">
+                        <patternCurve useLUT="0" __type="BezierCurve">
+                          <points>
+                            <Vec2 x="0.1104418" y="0.05957447" __type="Vec2" />
+                            <Vec2 x="0" y="0" __type="Vec2" />
+                            <Vec2 x="0.1104418" y="0.2723404" __type="Vec2" />
+                            <Vec2 x="0.0928514" y="0.9849362" __type="Vec2" />
+                            <Vec2 x="0.1" y="1" __type="Vec2" />
+                            <Vec2 x="0.1071486" y="1.015064" __type="Vec2" />
+                            <Vec2 x="0.1329317" y="0.2829788" __type="Vec2" />
+                            <Vec2 x="0.2" y="0.2808511" __type="Vec2" />
+                            <Vec2 x="0.2670683" y="0.2787234" __type="Vec2" />
+                            <Vec2 x="0.2265863" y="0.997532" __type="Vec2" />
+                            <Vec2 x="0.25" y="1" __type="Vec2" />
+                            <Vec2 x="0.2734137" y="1.002468" __type="Vec2" />
+                            <Vec2 x="0.2184739" y="0.5127659" __type="Vec2" />
+                            <Vec2 x="0.3" y="0.5" __type="Vec2" />
+                            <Vec2 x="0.3815261" y="0.4872341" __type="Vec2" />
+                            <Vec2 x="0.273253" y="0.8165957" __type="Vec2" />
+                            <Vec2 x="0.4" y="0.8" __type="Vec2" />
+                            <Vec2 x="0.526747" y="0.7834042" __type="Vec2" />
+                            <Vec2 x="0.4257028" y="0.1956595" __type="Vec2" />
+                            <Vec2 x="0.5" y="0.187234" __type="Vec2" />
+                            <Vec2 x="0.5742972" y="0.1788085" __type="Vec2" />
+                            <Vec2 x="0.5178313" y="0.3897872" __type="Vec2" />
+                            <Vec2 x="0.6" y="0.4" __type="Vec2" />
+                            <Vec2 x="0.6821687" y="0.4102128" __type="Vec2" />
+                            <Vec2 x="0.6604819" y="0.3110638" __type="Vec2" />
+                            <Vec2 x="0.7" y="0.3106383" __type="Vec2" />
+                            <Vec2 x="0.739518" y="0.3102128" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.4181277" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.7330213" __type="Vec2" />
+                            <Vec2 x="0.791245" y="0.9817873" __type="Vec2" />
+                            <Vec2 x="0.8" y="1" __type="Vec2" />
+                            <Vec2 x="0.808755" y="1.018213" __type="Vec2" />
+                            <Vec2 x="0.8001606" y="0.6920851" __type="Vec2" />
+                            <Vec2 x="0.9" y="0.7" __type="Vec2" />
+                            <Vec2 x="0.9998393" y="0.7079149" __type="Vec2" />
+                            <Vec2 x="0.8893173" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="0.9873896" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="1.085462" y="0.008765951" __type="Vec2" />
+                          </points>
+                        </patternCurve>
+                      </SEntityEffectSystem_PatternModifier>
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+              <EntityEffectSystem_MaterialTagEffect name="Front Deactivated" enabled="1" tag="0f3f7525-7177-471e-91b4-2d4e76682148" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="00000000-0000-0000-0000-000000000000" materialProperty="Glow" subMeshName="" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_PatternModifier startDelay="0" maximumValue="20" duration="2" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_PatternModifier">
+                        <patternCurve useLUT="0" __type="BezierCurve">
+                          <points>
+                            <Vec2 x="0.1104418" y="0.05957447" __type="Vec2" />
+                            <Vec2 x="0" y="0" __type="Vec2" />
+                            <Vec2 x="0.1104418" y="0.2723404" __type="Vec2" />
+                            <Vec2 x="0.0928514" y="0.9849362" __type="Vec2" />
+                            <Vec2 x="0.1" y="1" __type="Vec2" />
+                            <Vec2 x="0.1071486" y="1.015064" __type="Vec2" />
+                            <Vec2 x="0.1329317" y="0.2829788" __type="Vec2" />
+                            <Vec2 x="0.2" y="0.2808511" __type="Vec2" />
+                            <Vec2 x="0.2670683" y="0.2787234" __type="Vec2" />
+                            <Vec2 x="0.2265863" y="0.997532" __type="Vec2" />
+                            <Vec2 x="0.25" y="1" __type="Vec2" />
+                            <Vec2 x="0.2734137" y="1.002468" __type="Vec2" />
+                            <Vec2 x="0.2184739" y="0.5127659" __type="Vec2" />
+                            <Vec2 x="0.3" y="0.5" __type="Vec2" />
+                            <Vec2 x="0.3815261" y="0.4872341" __type="Vec2" />
+                            <Vec2 x="0.273253" y="0.8165957" __type="Vec2" />
+                            <Vec2 x="0.4" y="0.8" __type="Vec2" />
+                            <Vec2 x="0.526747" y="0.7834042" __type="Vec2" />
+                            <Vec2 x="0.4257028" y="0.1956595" __type="Vec2" />
+                            <Vec2 x="0.5" y="0.187234" __type="Vec2" />
+                            <Vec2 x="0.5742972" y="0.1788085" __type="Vec2" />
+                            <Vec2 x="0.5178313" y="0.3897872" __type="Vec2" />
+                            <Vec2 x="0.6" y="0.4" __type="Vec2" />
+                            <Vec2 x="0.6821687" y="0.4102128" __type="Vec2" />
+                            <Vec2 x="0.6604819" y="0.3110638" __type="Vec2" />
+                            <Vec2 x="0.7" y="0.3106383" __type="Vec2" />
+                            <Vec2 x="0.739518" y="0.3102128" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.4181277" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.7330213" __type="Vec2" />
+                            <Vec2 x="0.791245" y="0.9817873" __type="Vec2" />
+                            <Vec2 x="0.8" y="1" __type="Vec2" />
+                            <Vec2 x="0.808755" y="1.018213" __type="Vec2" />
+                            <Vec2 x="0.8001606" y="0.6920851" __type="Vec2" />
+                            <Vec2 x="0.9" y="0.7" __type="Vec2" />
+                            <Vec2 x="0.9998393" y="0.7079149" __type="Vec2" />
+                            <Vec2 x="0.8893173" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="0.9873896" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="1.085462" y="0.008765951" __type="Vec2" />
+                          </points>
+                        </patternCurve>
+                      </SEntityEffectSystem_PatternModifier>
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_MaterialCategory>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects>
+              <SEntityEffectSystem_SoundTagEffect name="Music" enabled="1" multiPosition="0" useDefaultProxy="0" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_STAM_Alpha_Station_Noodle_Machine" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+          <EntityEffectSystem_LightCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_LightCategory">
+            <tagEffects>
+              <EntityEffectSystem_LightTagEffect name="Emitted Activated" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.75" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="0" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="0.3231432" b="0" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_ProjectorLight radius="4" fovAngle="140" attenuationBulbSize="0" texturePath="textures/lights/light_area_soft.tif" focusedBeam="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_ProjectorLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_machine_vending_01x01x02_a" linkIgnoresColor="1" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="-90" __type="Ang3" />
+                      <Position x="0.5" y="0.5" z="1.05" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <EntityEffectSystem_LightPropertyLink parameterName="00000000-0000-0000-0000-000000000000" lightProperty="Intensity" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_LightPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_PatternModifier startDelay="0" maximumValue="1" duration="2" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_PatternModifier">
+                        <patternCurve useLUT="0" __type="BezierCurve">
+                          <points>
+                            <Vec2 x="0.1104418" y="0.05957447" __type="Vec2" />
+                            <Vec2 x="0" y="0" __type="Vec2" />
+                            <Vec2 x="0.1104418" y="0.2723404" __type="Vec2" />
+                            <Vec2 x="0.0928514" y="0.9849362" __type="Vec2" />
+                            <Vec2 x="0.1" y="1" __type="Vec2" />
+                            <Vec2 x="0.1071486" y="1.015064" __type="Vec2" />
+                            <Vec2 x="0.1329317" y="0.2829788" __type="Vec2" />
+                            <Vec2 x="0.2" y="0.2808511" __type="Vec2" />
+                            <Vec2 x="0.2670683" y="0.2787234" __type="Vec2" />
+                            <Vec2 x="0.2265863" y="0.997532" __type="Vec2" />
+                            <Vec2 x="0.25" y="1" __type="Vec2" />
+                            <Vec2 x="0.2734137" y="1.002468" __type="Vec2" />
+                            <Vec2 x="0.2184739" y="0.5127659" __type="Vec2" />
+                            <Vec2 x="0.3" y="0.5" __type="Vec2" />
+                            <Vec2 x="0.3815261" y="0.4872341" __type="Vec2" />
+                            <Vec2 x="0.273253" y="0.8165957" __type="Vec2" />
+                            <Vec2 x="0.4" y="0.8" __type="Vec2" />
+                            <Vec2 x="0.526747" y="0.7834042" __type="Vec2" />
+                            <Vec2 x="0.4257028" y="0.1956595" __type="Vec2" />
+                            <Vec2 x="0.5" y="0.187234" __type="Vec2" />
+                            <Vec2 x="0.5742972" y="0.1788085" __type="Vec2" />
+                            <Vec2 x="0.5178313" y="0.3897872" __type="Vec2" />
+                            <Vec2 x="0.6" y="0.4" __type="Vec2" />
+                            <Vec2 x="0.6821687" y="0.4102128" __type="Vec2" />
+                            <Vec2 x="0.6604819" y="0.3110638" __type="Vec2" />
+                            <Vec2 x="0.7" y="0.3106383" __type="Vec2" />
+                            <Vec2 x="0.739518" y="0.3102128" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.4181277" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0" __type="Vec2" />
+                            <Vec2 x="0.7496386" y="0.7330213" __type="Vec2" />
+                            <Vec2 x="0.791245" y="0.9817873" __type="Vec2" />
+                            <Vec2 x="0.8" y="1" __type="Vec2" />
+                            <Vec2 x="0.808755" y="1.018213" __type="Vec2" />
+                            <Vec2 x="0.8001606" y="0.6920851" __type="Vec2" />
+                            <Vec2 x="0.9" y="0.7" __type="Vec2" />
+                            <Vec2 x="0.9998393" y="0.7079149" __type="Vec2" />
+                            <Vec2 x="0.8893173" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="0.9873896" y="0.008765951" __type="Vec2" />
+                            <Vec2 x="1.085462" y="0.008765951" __type="Vec2" />
+                          </points>
+                        </patternCurve>
+                      </SEntityEffectSystem_PatternModifier>
+                    </modifiers>
+                  </EntityEffectSystem_LightPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="screen_1" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.75" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="0" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="0.08228271" g="0.9734453" b="0.9559733" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_screen_1" linkIgnoresColor="1" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="-90" __type="Ang3" />
+                      <Position x="0.5" y="0.5" z="1.05" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="Disabled Emitted" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="1" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="0" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="0f3f7525-7177-471e-91b4-2d4e76682148" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="0.4" b="0" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_ProjectorLight radius="4" fovAngle="140" attenuationBulbSize="0" texturePath="textures/lights/light_area_soft.tif" focusedBeam="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_ProjectorLight" />
+                </lightType>
+                <lightLink>
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="-90" __type="Ang3" />
+                      <Position x="0.5" y="0.5" z="1.05" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <EntityEffectSystem_LightPropertyLink parameterName="00000000-0000-0000-0000-000000000000" lightProperty="Intensity" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_LightPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_BlinkingModifier startDelay="0" minimumValue="0" minimumDuration="0.5" maximumValue="1" maximumDuration="3" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_BlinkingModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_LightPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="Rebooting Emitted" enabled="1" useTemperature="1" colorTemperature="6500" diffuseMultiplier="1" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="0" affectsFog="1" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="6237d5ba-0549-4059-be21-ca36310914ef" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="0.4" b="0" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_ProjectorLight radius="4" fovAngle="140" attenuationBulbSize="0" texturePath="textures/lights/light_area_soft.tif" focusedBeam="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_ProjectorLight" />
+                </lightType>
+                <lightLink>
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="90" y="0" z="-90" __type="Ang3" />
+                      <Position x="0.5" y="0.5" z="1.05" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <EntityEffectSystem_LightPropertyLink parameterName="00000000-0000-0000-0000-000000000000" lightProperty="Intensity" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_LightPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_BlinkingModifier startDelay="0" minimumValue="0" minimumDuration="0.05" maximumValue="1" maximumDuration="0.1" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_BlinkingModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_LightPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_LightTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_LightCategory>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="UNDEFINED" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Fix" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="1" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$proxy_box_interaction" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="States" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Working" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="03228d89-5cf3-42cd-9ece-936d37cd6da2" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="0f3f7525-7177-471e-91b4-2d4e76682148" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Broken" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="0f3f7525-7177-471e-91b4-2d4e76682148" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="6237d5ba-0549-4059-be21-ca36310914ef" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[2]" Delay="10" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions" NextState="StateTypes.SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Rebooting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="6237d5ba-0549-4059-be21-ca36310914ef" />
+              </enterStateEffectTags>
+              <exitStateEffectTags>
+                <Reference value="03228d89-5cf3-42cd-9ece-936d37cd6da2" />
+              </exitStateEffectTags>
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[0]" Delay="3" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+  </Components>
+</EntityClassDefinition.machine_vending_repairable_MASTER>

@@ -1,0 +1,149 @@
+<EntityClassDefinition.VFX_ShipRig Category="VFX/ShipRig" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="000b36c0-35e6-4e7a-a355-ed1ae63bf373" __path="libs/foundry/records/entities/vfx/vfx_shiprigs/vfx_shiprig.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Spaceships/Ships/PROP/S42_VNCL_Figures/vncl_blade_cinematic.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects>
+              <SEntityEffectSystem_ParticleTagEffect name="thrusters" enabled="1" primed="1" holographic="0" updateEntityBounds="1" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="070c07d2-5fe9-44c4-a144-c787dc71fa82" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\ShipRigs\shiprig_template.thrusters" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="abe0ff67-5069-4031-a1ed-52c868263a83" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideValueModifier overrideValue="1" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideValueModifier" />
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="damage" enabled="1" primed="1" holographic="0" updateEntityBounds="1" clipToVisArea="None" gpuVisAreaCullingMode="Default" tag="e5e2abc8-70f3-4303-ac9e-7b45465c454c" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\ShipRigs\shiprig_template.damaged" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="aeaa7181-2440-4a2c-8d0b-8cb15bae9f3d" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="firing" enabled="1" primed="1" holographic="0" updateEntityBounds="1" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="94ac485d-90a3-4951-87f0-21e51168476c" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\ShipRigs\shiprig_template.firing" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="418a49bf-6a38-498d-8548-4755b0b81a96" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="destroyed" enabled="1" primed="1" holographic="0" updateEntityBounds="1" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="d0d10a88-1cd5-4844-94a8-a5fd9230375a" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Deathmasks\vncl_s42_suite_deathmasks.Vanduul_DeathMasks.Fighter_Deathmasks" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="43438aa2-034b-4c86-918e-2ef43ef3d763" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="shield" enabled="1" primed="1" holographic="0" updateEntityBounds="1" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="f83df9a6-0381-4541-a735-070531e52b75" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\ShipRigs\shiprig_template.shield" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="b356ac43-2e8e-4403-8070-bb312775a7f9" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+          <EntityEffectSystem_MaterialCategory enabled="1" allowMultipleTags="0" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_MaterialCategory">
+            <tagEffects>
+              <EntityEffectSystem_MaterialTagEffect name="HIdeGeometry" enabled="1" tag="d0d10a88-1cd5-4844-94a8-a5fd9230375a" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_MaterialTagEffect">
+                <propertyLinks>
+                  <EntityEffectSystem_MaterialPropertyLink parameterName="803c7a01-f44a-4856-868c-76375303919c" materialProperty="Dissolve" subMeshName="*" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="EntityEffectSystem_MaterialPropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideValueModifier overrideValue="1" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideValueModifier" />
+                    </modifiers>
+                  </EntityEffectSystem_MaterialPropertyLink>
+                </propertyLinks>
+              </EntityEffectSystem_MaterialTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_MaterialCategory>
+        </materialEffects>
+        <soundEffects>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad>
+        <Reference value="070c07d2-5fe9-44c4-a144-c787dc71fa82" />
+      </tagsToEnableOnLoad>
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+  </Components>
+</EntityClassDefinition.VFX_ShipRig>

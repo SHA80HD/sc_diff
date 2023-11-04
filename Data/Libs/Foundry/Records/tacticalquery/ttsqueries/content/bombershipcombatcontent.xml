@@ -1,0 +1,137 @@
+<TQSOptionContentRecord.BomberShipCombatContent __type="TQSOptionContentRecord" __ref="1c1f6826-51d0-4713-a27a-8410e7341311" __path="libs/foundry/records/tacticalquery/ttsqueries/content/bombershipcombatcontent.xml">
+  <content __type="TQSOptionContent">
+    <parameters>
+      <TQSInputFloatValue condition="maximumDistance" value="30000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+      <TQSInputFloatValue condition="maximumRecentDamage" value="20000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+    </parameters>
+    <generation>
+      <TQSInputFloatValue condition="perceivedHostileTargets_around_host" value="100000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+    </generation>
+    <conditions>
+      <TQSInputBoolValue condition="isShip" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputBoolValue>
+      <TQSInputBoolValue condition="isAlive" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputBoolValue>
+    </conditions>
+    <weights>
+      <TQSWeightInputValue condition="distance_to_host" weight="-1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="attackerScoreToCapacityRatioExcluding_the_entity" weight="-0.4" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="hasEnoughAttackerCapacityForAI" weight="1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="damageDealtAsAPortionOfHealth_to_host" weight="1.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides>
+          <TQSWeightInputValue condition="damageDealtAsAPortionOfHealth_to_host" weight="5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="5311f4e0-b3bd-4bd0-92d7-0a011c02b6e8" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+        </overrides>
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="totalRecentDamageDealt" weight="1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="isPriorityTarget" weight="2.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms>
+            <TagsDNFTerm __type="TagsDNFTerm">
+              <positiveTags>
+                <Reference value="3b47cf95-71fd-41b5-9702-40e474041c6d" />
+              </positiveTags>
+              <negativeTags />
+            </TagsDNFTerm>
+          </terms>
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputTagValue condition="hasTag" weight="100" __type="TQSInput" __polymorphicType="TQSWeightInputTagValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <value __type="TagsDNF">
+          <terms>
+            <TagsDNFTerm __type="TagsDNFTerm">
+              <positiveTags>
+                <Reference value="b0f055b9-9586-4d10-82ee-1d822953c956" />
+              </positiveTags>
+              <negativeTags />
+            </TagsDNFTerm>
+          </terms>
+        </value>
+        <overrides />
+      </TQSWeightInputTagValue>
+      <TQSWeightInputTagValue condition="hasTag" weight="10" __type="TQSInput" __polymorphicType="TQSWeightInputTagValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <value __type="TagsDNF">
+          <terms>
+            <TagsDNFTerm __type="TagsDNFTerm">
+              <positiveTags>
+                <Reference value="88ed4ceb-6819-414e-b6f2-7c93f13c527f" />
+              </positiveTags>
+              <negativeTags />
+            </TagsDNFTerm>
+            <TagsDNFTerm __type="TagsDNFTerm">
+              <positiveTags>
+                <Reference value="63897a88-9b61-476d-94f4-1fe138ca648e" />
+              </positiveTags>
+              <negativeTags />
+            </TagsDNFTerm>
+          </terms>
+        </value>
+        <overrides />
+      </TQSWeightInputTagValue>
+    </weights>
+  </content>
+</TQSOptionContentRecord.BomberShipCombatContent>

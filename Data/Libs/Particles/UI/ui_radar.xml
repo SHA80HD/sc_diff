@@ -1,0 +1,177 @@
+<ParticleLibrary Name="ui_radar" SandboxVersion="3.14.116.36214" ParticleVersion="39">
+  <Particles Name="all.radar_wave">
+    <Params Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.28,v=(x=0.28,y=0.7,z=0.8);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" TextureAnimation="NumFramesU=0,NumFramesV=0" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="50" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_blob">
+    <Params Inheritance="System" Count="150,ScaleWithEmissionSizeScale=true,MaximumCountScale=1" ParticleSystem="RParticleGPU" Continuous="true" SpawnDelay="0.2,Random=0.8" EmitterLifeTime="0.5" ParticleLifeTime="15,Random=0.2" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/glows/glow_ring3.tif" TextureSharpness="0.5" Alpha="ParticleAge=(v=1;t=1)" Color="ParticleAge=(t=0.28,v=(x=0.28,y=0.7,z=0.8);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="2000,ParticleAge=(;t=0.047,v=1;t=1)" NotAffectedByFog="true" Drag="1" Size="200,DistanceLOD=(v=0.19,flags=32;t=1,v=1,flags=4)" MinPixels="5" MaxPixels="20" PlaneAlignBlendDistance="0" MaxDistanceLOD="500000" CameraMaxDistance="500000" CameraMinDistance="1000" CameraMinDistanceFraction="0.5" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="per_blob_pulse">
+        <Params Inheritance="Parent" Spawn="FromParentBirth" Count="10" ParticleSystem="RParticleGPU" SpawnDelay="0.1" ParticleLifeTime="0.5" EmissionSize="x=0,y=0,z=0" TextureSharpness="0" TextureAnimation="FirstFrameIntervalEnd=1" Alpha="0.1,ParticleAge=(flags=32;t=0.09,v=0.914;t=1,flags=4)" Color="(x=0.19461785,y=0.6239605,z=0.9559735)" EmissiveLighting="300,ParticleAge=(v=1,flags=32;t=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="2200,Random=0.4,ParticleAge=(v=0.46,flags=32;t=1,v=1,flags=4)" MaxPixels="160" />
+      </Particles>
+      <Particles Name="central_pulse">
+        <Params Inheritance="System" Count="1" ParticleSystem="RParticleGPU" SpawnDelay="0.1" ParticleLifeTime="0.5" BlendType="Additive" Texture="textures/vfx/glows/glow_ring3.tif" TextureSharpness="1" Alpha="0.1,ParticleAge=(;t=0.055,v=1;t=1)" Color="(x=0.19461785,y=0.6239605,z=0.9559735),ParticleAge=(t=0.06,v=(x=0.196,y=0.624,z=0.957))" EmissiveLighting="10" Size="4000,ParticleAge=(v=0.54,flags=32;t=1,v=1,flags=4)" MaxDistanceLOD="500000" CameraMaxDistance="500000" CameraMinDistance="1000" CameraMinDistanceFraction="0.5" ResponsiveAA="true" ParticleUpdate="Force" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_blob_far">
+    <Params Inheritance="System" Count="150,ScaleWithEmissionSizeScale=true,MaximumCountScale=1" ParticleSystem="RParticleGPU" Continuous="true" SpawnDelay="0.2,Random=0.8" EmitterLifeTime="0.5" ParticleLifeTime="15,Random=0.2" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/glows/glow_ring3.tif" TextureSharpness="0.5" Alpha="ParticleAge=(v=1;t=1)" Color="ParticleAge=(t=0.28,v=(x=0.28,y=0.7,z=0.8);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="2000,ParticleAge=(;t=0.047,v=1;t=1)" NotAffectedByFog="true" Drag="1" Size="200,DistanceLOD=(v=0.19,flags=32;t=1,v=1,flags=4)" MinPixels="5" MaxPixels="20" PlaneAlignBlendDistance="0" ResponsiveAA="true" SortBoundsScale="100000" />
+    <Childs>
+      <Particles Name="per_blob_pulse">
+        <Params Inheritance="Parent" Spawn="FromParentBirth" Count="10" ParticleSystem="RParticleGPU" SpawnDelay="0.1" EmissionSize="x=0,y=0,z=0" TextureSharpness="1" TextureAnimation="FirstFrameIntervalEnd=1" Alpha="0.1,DistanceLOD=(v=0.17,flags=32;t=1,v=1,flags=4),ParticleAge=(flags=32;t=0.09,v=0.914;t=1,flags=4)" Color="(x=0.19461785,y=0.6239605,z=0.9559735)" EmissiveLighting="30000,ParticleAge=(v=1,flags=32;t=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="22000,Random=0.4,ParticleAge=(v=0.46,flags=32;t=1,v=1,flags=4)" MaxPixels="160" MaxDistanceLOD="5000000" />
+      </Particles>
+      <Particles Name="central_pulse">
+        <Params Inheritance="System" Count="1" ParticleSystem="RParticleGPU" SpawnDelay="0.1" ParticleLifeTime="0.5" BlendType="Additive" Texture="textures/vfx/glows/glow_ring3.tif" TextureSharpness="1" Alpha="0.1,ParticleAge=(;t=0.055,v=1;t=1)" Color="(x=0.19461785,y=0.6239605,z=0.9559735),ParticleAge=(t=0.06,v=(x=0.196,y=0.624,z=0.957))" EmissiveLighting="100000" Size="400,ParticleAge=(v=0.54,flags=32;t=1,v=1,flags=4)" MaxPixels="200" MaxDistanceLOD="500000" CameraMaxDistance="500000" CameraMinDistance="1000" CameraMinDistanceFraction="0.5" ResponsiveAA="true" ParticleUpdate="Force" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.debug_emissionscale">
+    <Params Inheritance="System" StrengthCurveController="ForceFromAge" Count="100,ScaleWithEmissionSizeScale=true,MaximumCountScale=10" ParticleSystem="RParticleGPU" Continuous="true" EmitterLifeTime="1" ParticleLifeTime="4" EmissionSize="x=1,y=1,z=1" EmissionDistribution="1" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/testers/white.tif" SoftParticleV2="FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),DistanceLOD=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="Random=(1,RandomHue=true),EmitterStrength=(v=(x=1,y=1,z=1);t=1),DistanceLOD=(v=(x=1,y=1,z=1);t=1),ParticleAge=(v=(x=1,y=1,z=1);t=1)" EmissiveLighting="1000" MoveRelativeEmitter="true,IgnoreRotation=false" Facing="Free" OrientToInitialVelocity="true" ResponsiveAA="true" SortOffset="1" />
+  </Particles>
+  <Particles Name="all.radar_wave_x2">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x4">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x8">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x16">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x32">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x64">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="all.radar_wave_x128">
+    <Params Enabled="false" Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.282,v=(x=0.937,y=0.208,z=0.784);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_vertical">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+      </Particles>
+      <Particles Name="radar_pulse_wave_vertical1">
+        <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+      </Particles>
+      <Particles Name="pulse_spherical">
+        <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Texture="textures/vfx/glows/glow_ring1.tif" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="tests.radar_wave_noStretch">
+    <Params Inheritance="System" ParticleSystem="RParticleGPU" PositionOffset="z=-10" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="0.1,EmitterStrength=(v=1,flags=32;t=1,flags=4),DistanceLOD=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="(x=0.2788943,y=0.701102,z=0.79910284),EmitterStrength=(v=(x=1,y=1,z=1);t=1),DistanceLOD=(v=(x=1,y=1,z=1);t=1),ParticleAge=(v=(x=1,y=1,z=1);t=1)" EmissiveLighting="1000" Speed="500,Random=0.05" InheritVelocity="1" MoveRelativeEmitter="IgnoreRotation=false" Size="0.5,Random=0.5" MinPixels="2" OrientToVelocity="true" OrientToInitialVelocity="true" TrailTime="0.1" TrailFade="1" MaxDistanceLOD="100" CameraMaxDistance="1000" ResponsiveAA="true" CameraBlur="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_horizontal">
+        <Params Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="2" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid.tif" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.28,v=(x=0.28,y=0.7,z=0.8);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" InheritVelocity="0.1" MoveRelativeEmitter="IgnoreRotation=false" Size="20" MinPixels="1" MaxPixels="15" Facing="CameraZ" CameraMaxDistance="500000" ResponsiveAA="true" />
+        <Childs>
+          <Particles Name="radar_pulse_wave_vertical">
+            <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+          </Particles>
+          <Particles Name="radar_pulse_wave_vertical1">
+            <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+          </Particles>
+          <Particles Name="pulse_spherical">
+            <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="5" MaxPixels="0" Facing="Camera" OrientToVelocity="true" />
+          </Particles>
+        </Childs>
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="tests.radar_wave_45degrees">
+    <Params Inheritance="System" ParticleSystem="RParticleGPU" PositionOffset="z=-10" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="0.1,EmitterStrength=(v=1,flags=32;t=1,flags=4),DistanceLOD=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="(x=0.2788943,y=0.701102,z=0.79910284),EmitterStrength=(v=(x=1,y=1,z=1);t=1),DistanceLOD=(v=(x=1,y=1,z=1);t=1),ParticleAge=(v=(x=1,y=1,z=1);t=1)" EmissiveLighting="1000" Speed="500,Random=0.05" InheritVelocity="1" MoveRelativeEmitter="IgnoreRotation=false" Size="0.5,Random=0.5" MinPixels="2" OrientToVelocity="true" OrientToInitialVelocity="true" TrailTime="0.1" TrailFade="1" MaxDistanceLOD="100" CameraMaxDistance="1000" ResponsiveAA="true" CameraBlur="true" />
+    <Childs>
+      <Particles Name="radar_pulse_wave_horizontal">
+        <Params Inheritance="System" StrengthCurveController="ForceFromAge" Count="500" ParticleSystem="RParticleGPU" ParticleLifeTime="4" PositionOffset="z=-5" EmissionSize="x=0.1,z=0.1" EmissionRoundness="1" EmissionDistribution="1" AttachForm="Surface" EmitOffsetDir="true" EmissionRotation="x=90,z=90" EmissionAngle="y=90" VelDirFromShape="true" BlendType="Additive" Texture="textures/vfx/misc/scanning_grid_2x2.tif" TextureAnimation="NumFramesU=2,NumFramesV=2,LifetimeRate=false,FirstFrameIntervalStart=4,FirstFrameIntervalEnd=4" SoftParticleV2="true,FadeThickness=1,CurveController=1" Alpha="EmitterStrength=(v=1,flags=32;t=1,flags=4),ParticleAge=(v=1,flags=32;t=1,flags=4)" Color="ParticleAge=(t=0.28,v=(x=0.28,y=0.7,z=0.8);t=0.824,v=(x=0.565,y=0.035,z=0.035))" EmissiveLighting="500" Mode="Artistic" Speed="440000,ParticleAge=(;t=0.082,v=0.035;t=0.894,v=0.19,flags=4;t=1,v=1,flags=4)" MoveRelativeEmitter="IgnoreRotation=false" Size="10" VelocityStretch="0.2,SpawnFullyStretched=true" MinPixels="1" MaxPixels="15" CameraMaxDistance="500000" ResponsiveAA="true" />
+        <Childs>
+          <Particles Name="radar_pulse_wave_vertical">
+            <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" />
+          </Particles>
+          <Particles Name="radar_pulse_wave_vertical1">
+            <Params Inheritance="Parent" ParticleSystem="RParticleGPU" EmissionRotation="x=-45" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" MaxDistanceLOD="100" />
+          </Particles>
+          <Particles Name="pulse_spherical">
+            <Params Inheritance="Parent" Count="800" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" AttachForm="Vertices" EmitOffsetDir="false" SpawnGeometry="objects/vfx/mesheffects/cagesphere.cgf" EmissionRotation="z=0" EmissionAngle="y=0" VelDirFromShape="false" Alpha="ParticleAge=(t=0.125,v=1;t=1,flags=4)" Size="15,ParticleAge=(v=0.19,flags=32;t=1,v=1)" VelocityStretch="0" MaxPixels="30" Facing="CameraZ" />
+          </Particles>
+        </Childs>
+      </Particles>
+    </Childs>
+  </Particles>
+</ParticleLibrary>

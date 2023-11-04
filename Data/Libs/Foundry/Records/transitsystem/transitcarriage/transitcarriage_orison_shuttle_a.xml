@@ -1,0 +1,180 @@
+<EntityClassDefinition.TransitCarriage_Orison_Shuttle_A Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="3ecd443f-a3e3-4e67-b9c8-84249660a6bc" __path="libs/foundry/records/transitsystem/transitcarriage/transitcarriage_orison_shuttle_a.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SStreamingObjectContainerComponentParams objectContainer="" __type="DataForgeComponentParams" __polymorphicType="SStreamingObjectContainerComponentParams" />
+    <TransitCarriageParams hasExternalAnimations="0" animationLength="2.2" fragment="CarriageState" fragmentArrived="Arrived" fragmentArriving="Arriving" fragmentDeparting="Departing" fragmentDeparted="Departed" causesCertainDeath="1" collisionDamage="0" __type="DataForgeComponentParams" __polymorphicType="TransitCarriageParams">
+      <defaultInteriorOC path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceObjectContainer" />
+      <audio maxStoppingTime="4" turnRTPCScaler="0.1" __type="TransitCarriageAudio">
+        <startTriggerID audioTrigger="Play_VREN_Orison_Transit_Carriage_Movement" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <startTriggerIDOneShot audioTrigger="Play_VREN_Orison_Transit_Carriage_Start" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stoppingTriggerID audioTrigger="Play_VREN_Orison_Transit_Carriage_Stopping" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stopTriggerID audioTrigger="Stop_VREN_Orison_Transit_Carriage_Movement" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <stopTriggerIDOneShot audioTrigger="Play_VREN_Orison_Transit_Carriage_Stopped" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <speedRTPC rtpc="Transit_Carriage_Velocity" __type="AudioRtpc" />
+        <turnRTPC rtpc="Transit_Carriage_Turn" __type="AudioRtpc" />
+        <dialogueContexts />
+      </audio>
+      <effects inTransitTag="00000000-0000-0000-0000-000000000000" __type="TransitCarriageEffects" />
+    </TransitCarriageParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="0" NeverAffectTriggers="1" UseManualGridTransition="1" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+            <SEntityGridProperty __type="SEntityGridProperty">
+              <gravity x="0" y="0" z="-9.81" __type="Vec3" />
+              <gridGeometry path="Objects/buildingsets/human/hightech/delta/int/transit/shuttle/hightech_ce_transit_shuttle_a_physicsgrid.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+            </SEntityGridProperty>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityAudioControllerParams audioControllerEntityType="TransitCarriage" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/buildingsets/human/hightech/delta/int/transit/shuttle/hightech_ce_transit_shuttle_a_exterior.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="538ca41a-0e52-4171-a7d1-ae2b9b4304ee" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SAnimationControllerParams AnimationDatabase="Transit/TransitCarriage_Anims.adb" AnimationController="Transit/TransitCarriage_ControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="TransitCarriage" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="door_attachment_a" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="door_attachment_a" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="door_attachment_b" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="door_attachment_b" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <SCommunicationUserComponentParams voiceBundle="00000000-0000-0000-0000-000000000000" voiceSingle="00000000-0000-0000-0000-000000000000" communicationConfig="4163bafb-9a11-4136-ab7e-9d54ad54d1f5" contextualDialog="" __type="DataForgeComponentParams" __polymorphicType="SCommunicationUserComponentParams" />
+    <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
+    <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
+      <loadout>
+        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+          <WearRange>
+          </WearRange>
+          <InventoryItems />
+          <entries>
+            <SItemPortLoadoutEntryParams itemPortName="door_attachment_a" entityClassName="Ht_Shuttle_Doors" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="door_attachment_b" entityClassName="Ht_Shuttle_Doors" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+          </entries>
+        </SItemPortLoadoutManualParams>
+      </loadout>
+    </SEntityComponentDefaultLoadoutParams>
+    <SecurityClearanceGiverComponentParams grantWhenInsideHostedZone="1" grantWhenInsideLinkedArea="0" __type="DataForgeComponentParams" __polymorphicType="SecurityClearanceGiverComponentParams">
+      <securityTokens>
+        <Reference value="92c14c84-1432-4bb9-92e3-ef895a146ae3" />
+      </securityTokens>
+    </SecurityClearanceGiverComponentParams>
+    <AudioRayOcclusionParams occlusionType="SingleRayCentre" occlusionCalcRule="Average" rayTargetBoneName="" __type="DataForgeComponentParams" __polymorphicType="AudioRayOcclusionParams" />
+  </Components>
+</EntityClassDefinition.TransitCarriage_Orison_Shuttle_A>

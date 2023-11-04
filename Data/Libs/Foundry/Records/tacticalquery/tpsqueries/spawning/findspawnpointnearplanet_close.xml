@@ -1,0 +1,69 @@
+<TacticalQuery.FindSpawnPointNearPlanet_Close name="FindSpawnPointNearPlanet_Close" type="TacticalPointQuery" __type="TacticalQuery" __ref="a699a688-6478-4758-a0f9-3d8da81210de" __path="libs/foundry/records/tacticalquery/tpsqueries/spawning/findspawnpointnearplanet_close.xml">
+  <options>
+    <TQSEmbeddedOption __type="TQSOption" __polymorphicType="TQSEmbeddedOption">
+      <requirements __type="TagsDNF">
+        <terms />
+      </requirements>
+      <content __type="TQSOptionContent">
+        <parameters>
+          <TQSInputFloatValue condition="density" value="100" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="maximumDistance" value="1000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </parameters>
+        <generation>
+          <TQSInputFloatValue condition="sphereExcludingAABBs_around_referencePoint" value="1000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </generation>
+        <conditions>
+          <TQSInputFloatValue condition="min_altitudeAbovePlanetTerrain" value="500" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </conditions>
+        <weights>
+          <TQSWeightInputValue condition="distance_to_referencePoint" weight="1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="random" weight="0.1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="objectsDot_to_referencePoint" weight="-0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="a0ded372-b328-411f-8898-9bd5b9cec938" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+        </weights>
+      </content>
+      <optionOverrides />
+    </TQSEmbeddedOption>
+  </options>
+</TacticalQuery.FindSpawnPointNearPlanet_Close>

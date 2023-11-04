@@ -1,0 +1,62 @@
+<MissionLocationTemplate.Orison_August_Dunlow_SpacePort __type="MissionLocationTemplate" __ref="90161b8f-8f2d-439d-b4c5-49d2bfed67bc" __path="libs/foundry/records/missiondata/pu_locations/templates/spaceport/orison_august_dunlow_spaceport.xml">
+  <locationData allowPartialOCStreamingForInit="0" isSecurityNetworkHost="0" defaultSecurityNetworkManifest="00000000-0000-0000-0000-000000000000" disabled="0" __type="MissionLocationData">
+    <generalTags __type="MissionLocationTags">
+      <tags>
+        <Reference value="1179e711-4e4d-4b3b-95ae-e6d6d43b9a98" />
+        <Reference value="d409f56e-728d-436a-aa59-4a1d30abf688" />
+      </tags>
+    </generalTags>
+    <producesTags __type="TagSearchTerm">
+      <positiveTags />
+      <negativeTags />
+    </producesTags>
+    <consumesTags __type="TagSearchTerm">
+      <positiveTags />
+      <negativeTags />
+    </consumesTags>
+    <aiSpawnTags __type="TagList">
+      <tags />
+    </aiSpawnTags>
+    <stringVariants __type="MissionStringVariants">
+      <variants />
+    </stringVariants>
+    <missionModules>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/LocationManager/ExpoHalls/ExpoHalls_Security.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamBoolean name="DeactivateSecurity_LBP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/LocationManager/ExpoHalls/ExpoHalls_Elevators.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamInteger name="DestinationToEnableDisable_Int" value="2" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/SecurityDock/SecurityDockTransitAccess.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamTag name="TransitManagerToUse" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags>
+                <Reference value="37412ff9-b910-49c5-aad1-f18a872d62d9" />
+                <Reference value="35973a83-edc1-4dc2-8599-ea1adf9be424" />
+              </positiveTags>
+              <negativeTags />
+            </value>
+          </MissionInitParamTag>
+          <MissionInitParamTag name="DestinationToAffect" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags>
+                <Reference value="37412ff9-b910-49c5-aad1-f18a872d62d9" />
+              </positiveTags>
+              <negativeTags />
+            </value>
+          </MissionInitParamTag>
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+    </missionModules>
+    <missionLimits />
+    <autoSpawnSettings />
+  </locationData>
+</MissionLocationTemplate.Orison_August_Dunlow_SpacePort>

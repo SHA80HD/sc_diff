@@ -1,0 +1,80 @@
+<EntityClassDefinition.WeaponRegenPool_Turret_S1 Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="c181a828-9eb2-42ed-859e-d4bee560f2b3" __path="libs/foundry/records/entities/scitem/weaponregenpools/weaponregenpool_turret_s1.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="WeaponRegenPool" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <ItemControlComponentParams turnedOnByDefault="1" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams>
+        <ItemThrottleParams min="0" max="2" default="1" scalingMinimum="1" __type="ItemThrottleParams">
+          <affectedResources>
+            <Enum value="WeaponRegen" />
+          </affectedResources>
+        </ItemThrottleParams>
+        <ItemThrottleParams min="0" max="2" default="1" scalingMinimum="1" __type="ItemThrottleParams">
+          <affectedResources>
+            <Enum value="WeaponAmmo" />
+          </affectedResources>
+        </ItemThrottleParams>
+      </throttleParams>
+    </ItemControlComponentParams>
+    <SCItemWeaponRegenPoolComponentParams regenFillRate="3000" ammoLoad="20000" respectsCapacitorAssignments="0" capacitorAssignmentInputOutputRegen="c8278d31-df4e-4ed3-ba18-eea09704a077" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputAmmoLoad="ba5037ba-c643-46f9-aaf5-0c04478276ed" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponRegenPoolComponentParams" />
+    <ItemResourceComponentParams isResourceNetworked="1" isRelay="0" isConnectedToRoom="0" wirelessConnection="0" defaultPriority="50" __type="DataForgeComponentParams" __polymorphicType="ItemResourceComponentParams">
+      <states>
+        <ItemResourceState name="Default" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaGeneration useRoomComposition="0" noOverGeneration="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaGeneration">
+              <generation resource="WeaponRegen" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SMicroResourceUnit microResourceUnits="3000" __type="SBaseResourceUnit" __polymorphicType="SMicroResourceUnit" />
+                </resourceAmountPerSecond>
+              </generation>
+              <composition __type="ItemResourceComposition">
+                <values />
+              </composition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+              <dynamicCompositionOverride>
+              </dynamicCompositionOverride>
+            </ItemResourceDeltaGeneration>
+            <ItemResourceDeltaGeneration useRoomComposition="0" noOverGeneration="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaGeneration">
+              <generation resource="WeaponAmmo" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SMicroResourceUnit microResourceUnits="3000" __type="SBaseResourceUnit" __polymorphicType="SMicroResourceUnit" />
+                </resourceAmountPerSecond>
+              </generation>
+              <composition __type="ItemResourceComposition">
+                <values />
+              </composition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+              <dynamicCompositionOverride>
+              </dynamicCompositionOverride>
+            </ItemResourceDeltaGeneration>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+      </states>
+      <controlParameters />
+      <controlBlocks />
+      <signatureParams nominalEM="0" decayRate="0.15" __type="ItemResourceSignatureParams" />
+    </ItemResourceComponentParams>
+  </Components>
+</EntityClassDefinition.WeaponRegenPool_Turret_S1>

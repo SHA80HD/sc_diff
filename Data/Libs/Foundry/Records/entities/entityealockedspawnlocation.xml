@@ -1,0 +1,65 @@
+<EntityClassDefinition.EntityEALockedSpawnLocation Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="4adcc0ce-41e7-486f-9c25-16b28b297937" __path="libs/foundry/records/entities/entityealockedspawnlocation.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SEASpawnLocationParamsDef locationName="@LOC_PLACEHOLDER" locationTextIcon="@LOC_PLACEHOLDER" locationImageIcon="" team="1159b975-b26c-4f6d-bc96-2cc80491e214" phase="0" defaultLocation="0" autoActivate="1" abandonedVehicleCheck="1" abandonedRange="15" abandonedTime="20" delaySpawnsTime="0.5" invisibleLocation="0" unlockReminderTime="300" allowUserRequestSpawn="0" __type="DataForgeComponentParams" __polymorphicType="SEASpawnLocationParamsDef" />
+    <EAUIMarkerBaseComponent ARMarkerConfig="d586d7a3-7df0-490f-aa15-5b77f58abe46" distanceUnits="@LOC_EMPTY" ARMarkerAlpha="1" scaleMarkerByDistance="0" minScaleDistance="10" maxScaleDistance="50" minSize="1" maxSize="10" allowClipping="1" __type="DataForgeComponentParams" __polymorphicType="EAUIMarkerBaseComponent" />
+    <EAPhaseObjectiveComponentDef sortingPosition="0" name="@sm_ui_CTRL_A" phase="0" defaultTeam="00000000-0000-0000-0000-000000000000" scaleMarkerByDistance="1" availableToDefaultTeam="1" percentageString="@ea_ui_SymbolPercentage" removeMarkerOnCapture="0" showMarker="0" canTriggerOvertime="0" onInteractDamageToObjective="0" onInteractDamageRadius="10" gamefeedNeutralizedStatus="@ea_ui_gamefeed_ParamNeutralizedParam" gamefeedCapturedStatus="@ea_ui_gamefeed_ParamCapturedParam" gameTokenName="ControlPoint" gameTokenValue="alpha" affectsPhaseProgress="0" __type="DataForgeComponentParams" __polymorphicType="EAPhaseObjectiveComponentDef">
+      <capturedNotification messagePriority="5" messageDuration="5" message="@ea_ui_cm_UnlockedSpawn" __type="SEACriticalMessageDef" />
+      <lostNotification messagePriority="3" messageDuration="9" message="@sm_ui_CTRL_Lost" __type="SEACriticalMessageDef" />
+      <neutralizedNotification messagePriority="1" messageDuration="5" message="@sm_ui_CTRL_Neutralized" __type="SEACriticalMessageDef" />
+      <objectiveMarkerMessages captureMessage="@ea_ui_objectivestatus_HackTerminal" defendMessage="@ea_ui_objectivestatus_Defend" capturedMessage="@ea_ui_objectivestatus_Captured" lostMessage="@LOC_EMPTY" capturingMessage="@ea_ui_objectivestatus_Hacking" boostCapturingMessage="@ea_ui_objectivestatus_HackingPlus" contestedMessage="@ea_ui_objectivestatus_Contested" resettingMessage="@ea_ui_objectivestatus_Resetting" offlineMessage="@ea_ui_objectivestatus_Offline" __type="SEAObjectiveMarkerStatusMessages" />
+      <objectiveMarkerSettings>
+        <SEAObjectiveMarkerStateSettings state="Default" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Capturing" markerFillProgress="0" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="MultipleCapturing" markerFillProgress="0" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Contesting" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="ReturningToOwner" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+        <SEAObjectiveMarkerStateSettings state="Cooldown" markerFillProgress="1" __type="SEAObjectiveMarkerStateSettings" />
+      </objectiveMarkerSettings>
+      <captureStartedNotification messagePriority="3" messageDuration="9" message="@ea_ui_cm_UnlockingSpawn" __type="SEACriticalMessageDef" />
+      <objectiveAnnouncerParams>
+        <SObjectiveAnnouncerSettingsDef __type="SObjectiveAnnouncerSettingsDef">
+          <beginCapturingObjective>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </beginCapturingObjective>
+          <objectiveGainedLocal>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Captured" globalAnnouncementVO="" teamAnnouncementVO="EA_SpawnLocationUnlocked" __type="SEAAnnouncerParamsDef" />
+          </objectiveGainedLocal>
+          <objectiveGainedRemote>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Captured" globalAnnouncementVO="" teamAnnouncementVO="EA_SpawnLocationUnlocked" __type="SEAAnnouncerParamsDef" />
+          </objectiveGainedRemote>
+          <objectiveLost>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Lost" globalAnnouncementVO="" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </objectiveLost>
+          <objectiveLostNeutral>
+            <SEAAnnouncerParamsDef audioSignalName="EA_Control_Terminal_Lost_Neutral" globalAnnouncementVO="" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </objectiveLostNeutral>
+          <objectiveContested>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </objectiveContested>
+          <finalObjective>
+            <SEAAnnouncerParamsDef audioSignalName="" globalAnnouncementVO="" teamAnnouncementVO="" __type="SEAAnnouncerParamsDef" />
+          </finalObjective>
+        </SObjectiveAnnouncerSettingsDef>
+      </objectiveAnnouncerParams>
+    </EAPhaseObjectiveComponentDef>
+    <EACapturableEntityComponentDef capturableType="LockedSpawn" skipNeutral="0" instantReset="1" allowOwnerChange="0" enableOnCompleteCapture="1" allowTeamAssistBoost="0" defendersAffectInfluence="0" __type="DataForgeComponentParams" __polymorphicType="EACapturableEntityComponentDef">
+      <audioTriggerAmbienceLoop audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerHackingStarted audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Start_Capture" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerHackingStopped audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Capture_Paused" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerHackingInterrupted audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Capture_Paused" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerHackingStartReversal audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerHackingComplete audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Captured" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerAttackerEnter audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Contested" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerAttackerExit audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerDefenderEnter audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Contested" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioTriggerDefenderExit audioTrigger="Play_UI_Game_StarMarine_Control_Terminal_Uncontested" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <audioRtpcControl rtpc="" __type="AudioRtpc" />
+      <audioRtpcCaptureProcess rtpc="SM_Control_Terminal_Hacking_Progress" __type="AudioRtpc" />
+      <audioRtpcCaptureRate rtpc="SM_Control_Terminal_Hacking_Progress" __type="AudioRtpc" />
+      <audioRtpcAttackerCount rtpc="" __type="AudioRtpc" />
+      <audioRtpcDefenderCount rtpc="" __type="AudioRtpc" />
+    </EACapturableEntityComponentDef>
+  </Components>
+</EntityClassDefinition.EntityEALockedSpawnLocation>

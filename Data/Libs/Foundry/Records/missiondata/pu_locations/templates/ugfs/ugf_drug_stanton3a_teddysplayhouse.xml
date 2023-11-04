@@ -1,0 +1,316 @@
+<MissionLocationTemplate.UGF_Drug_Stanton3a_TeddysPlayhouse __type="MissionLocationTemplate" __ref="e6d1b2d8-eb75-4e88-829c-55dc4e3843c2" __path="libs/foundry/records/missiondata/pu_locations/templates/ugfs/ugf_drug_stanton3a_teddysplayhouse.xml">
+  <locationData allowPartialOCStreamingForInit="0" isSecurityNetworkHost="1" defaultSecurityNetworkManifest="fd5d9f84-3cd2-45f6-a304-ff2a654821af" disabled="0" __type="MissionLocationData">
+    <generalTags __type="MissionLocationTags">
+      <tags>
+        <Reference value="c70dbe51-3d1e-47b7-9795-290d3eba1728" />
+        <Reference value="1dcaf9e0-9b99-4c2d-83e3-faba4ef7673a" />
+        <Reference value="72609231-b9fe-4149-a82b-b5fb63fc7d05" />
+        <Reference value="bc928e7d-1e52-416f-86f3-2f4d19025743" />
+        <Reference value="49b648ae-7f30-40d5-82e2-48bc15862475" />
+        <Reference value="cb4d4877-645c-4450-a166-224a129c3d4c" />
+        <Reference value="04a01de0-1419-4f8d-9a8f-6f7a7e6f5410" />
+      </tags>
+    </generalTags>
+    <producesTags __type="TagSearchTerm">
+      <positiveTags>
+        <Reference value="061c87a6-f2fb-4b25-bfcc-4ce9828064b8" />
+      </positiveTags>
+      <negativeTags />
+    </producesTags>
+    <consumesTags __type="TagSearchTerm">
+      <positiveTags />
+      <negativeTags />
+    </consumesTags>
+    <aiSpawnTags __type="TagList">
+      <tags>
+        <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+      </tags>
+    </aiSpawnTags>
+    <stringVariants __type="MissionStringVariants">
+      <variants>
+        <MissionStringVariant tag="18c7e922-c531-4482-bf97-172770b0b221" string="@generic_locations_blank" __type="MissionStringVariant" />
+        <MissionStringVariant tag="0130de18-97e2-4d4c-9bb1-3e7ef5fd0490" string="@mission_location_stanton_0278" __type="MissionStringVariant" />
+        <MissionStringVariant tag="8fd73fe9-94b6-45cd-9d4c-35ce67e86c75" string="@mission_location_stanton_0279" __type="MissionStringVariant" />
+      </variants>
+    </stringVariants>
+    <missionModules>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/Delivery/DeliveryItemPort_Manager.xml" __type="SMissionLocationModule">
+        <missionInputs />
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/TimedItemDispenser/TimedItemDispenser.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamBoolean name="RunOnEventTriggered_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+          <MissionInitParamTag name="ItemAcceptanceTags_BP" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags />
+              <negativeTags />
+            </value>
+          </MissionInitParamTag>
+          <MissionInitParamInteger name="ItemSpawnFrequency_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxItemSpawnFrequency_BP" value="30" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MinAmountOfItems_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxAmountOfItems_BP" value="20" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/EntitySpawnManager.xml" __type="SMissionLocationModule">
+        <missionInputs />
+        <properties>
+          <MissionProperty missionVariableName="BlockEmergentSpawn_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Boolean value="1" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Boolean" />
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="PreCareTags_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Tags __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Tags">
+                <tags __type="TagList">
+                  <tags>
+                    <Reference value="130da163-022e-45a0-8914-38d54fd92053" />
+                  </tags>
+                </tags>
+                <negativeTags __type="TagList">
+                  <tags />
+                </negativeTags>
+                <options />
+              </MissionPropertyValue_Tags>
+            </value>
+          </MissionProperty>
+        </properties>
+      </SMissionLocationModule>
+    </missionModules>
+    <missionLimits>
+      <LocationMissionLimit tag="d54cdc94-b79b-47a9-8d12-4c323350c22c" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="50000dc1-21aa-4fcb-85d1-5429a1ff7691" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="3d752555-3f00-43ef-a8d6-6f0ab8a0bc62" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="9b4baa29-3bef-43c2-8feb-28adc2837f51" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="7fba7fd1-b661-4c27-8a2e-e24eda388d60" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="71ab54b9-727e-49e7-92a7-20f2812c1926" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="6804b0a9-b01d-4c9a-8063-67784bd0f021" cooldown="60" autoConsumeIfPlayerAtLocation="0" playerAtLocationCooldown="60" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="ed27994a-fd00-4cbd-8000-1e45997fad60" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="214f1776-fba7-472b-a4a7-6362a40c08c6" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="ebdb8418-e1ef-48df-9ccd-8b4988ac3694" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="88588c16-522a-4cf9-ab38-67110789f986" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+    </missionLimits>
+    <autoSpawnSettings>
+      <AutoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="2" maxSpawns="-1" minSpawnDelay="180" maxSpawnDelay="300" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+        <positiveCharacterTags __type="TagList">
+          <tags>
+            <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+            <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+            <Reference value="bd6b903f-0d2d-4688-8329-db68c16fb0d1" />
+            <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
+          </tags>
+        </positiveCharacterTags>
+        <negativeCharacterTags __type="TagList">
+          <tags>
+            <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+            <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
+          </tags>
+        </negativeCharacterTags>
+        <inventoryItems />
+        <closetPositiveTags __type="TagList">
+          <tags />
+        </closetPositiveTags>
+        <closetNegativeTags __type="TagList">
+          <tags />
+        </closetNegativeTags>
+        <roomPositiveTags __type="TagList">
+          <tags />
+        </roomPositiveTags>
+        <roomNegativeTags __type="TagList">
+          <tags />
+        </roomNegativeTags>
+      </AutoSpawnSettings>
+      <AutoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="4" maxSpawns="-1" minSpawnDelay="180" maxSpawnDelay="300" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+        <positiveCharacterTags __type="TagList">
+          <tags>
+            <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+            <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+            <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+            <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
+          </tags>
+        </positiveCharacterTags>
+        <negativeCharacterTags __type="TagList">
+          <tags>
+            <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+            <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
+          </tags>
+        </negativeCharacterTags>
+        <inventoryItems />
+        <closetPositiveTags __type="TagList">
+          <tags />
+        </closetPositiveTags>
+        <closetNegativeTags __type="TagList">
+          <tags />
+        </closetNegativeTags>
+        <roomPositiveTags __type="TagList">
+          <tags />
+        </roomPositiveTags>
+        <roomNegativeTags __type="TagList">
+          <tags />
+        </roomNegativeTags>
+      </AutoSpawnSettings>
+      <AutoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="1" maxGroupSize="1" maxConcurrentSpawns="1" maxSpawns="-1" minSpawnDelay="240" maxSpawnDelay="360" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+        <positiveCharacterTags __type="TagList">
+          <tags>
+            <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+            <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+            <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+            <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
+          </tags>
+        </positiveCharacterTags>
+        <negativeCharacterTags __type="TagList">
+          <tags>
+            <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+            <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
+          </tags>
+        </negativeCharacterTags>
+        <inventoryItems />
+        <closetPositiveTags __type="TagList">
+          <tags />
+        </closetPositiveTags>
+        <closetNegativeTags __type="TagList">
+          <tags />
+        </closetNegativeTags>
+        <roomPositiveTags __type="TagList">
+          <tags />
+        </roomPositiveTags>
+        <roomNegativeTags __type="TagList">
+          <tags />
+        </roomNegativeTags>
+      </AutoSpawnSettings>
+      <AutoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="1" maxGroupSize="1" maxConcurrentSpawns="1" maxSpawns="-1" minSpawnDelay="240" maxSpawnDelay="360" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+        <positiveCharacterTags __type="TagList">
+          <tags>
+            <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+            <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+            <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+          </tags>
+        </positiveCharacterTags>
+        <negativeCharacterTags __type="TagList">
+          <tags>
+            <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
+          </tags>
+        </negativeCharacterTags>
+        <inventoryItems />
+        <closetPositiveTags __type="TagList">
+          <tags />
+        </closetPositiveTags>
+        <closetNegativeTags __type="TagList">
+          <tags />
+        </closetNegativeTags>
+        <roomPositiveTags __type="TagList">
+          <tags />
+        </roomPositiveTags>
+        <roomNegativeTags __type="TagList">
+          <tags />
+        </roomNegativeTags>
+      </AutoSpawnSettings>
+      <AutoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+        <positiveCharacterTags __type="TagList">
+          <tags>
+            <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+            <Reference value="dffd6f5e-dea7-48e4-9d23-ec436b6f0153" />
+          </tags>
+        </positiveCharacterTags>
+        <negativeCharacterTags __type="TagList">
+          <tags>
+            <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+          </tags>
+        </negativeCharacterTags>
+        <inventoryItems />
+        <closetPositiveTags __type="TagList">
+          <tags />
+        </closetPositiveTags>
+        <closetNegativeTags __type="TagList">
+          <tags />
+        </closetNegativeTags>
+        <roomPositiveTags __type="TagList">
+          <tags />
+        </roomPositiveTags>
+        <roomNegativeTags __type="TagList">
+          <tags />
+        </roomNegativeTags>
+      </AutoSpawnSettings>
+    </autoSpawnSettings>
+  </locationData>
+</MissionLocationTemplate.UGF_Drug_Stanton3a_TeddysPlayhouse>

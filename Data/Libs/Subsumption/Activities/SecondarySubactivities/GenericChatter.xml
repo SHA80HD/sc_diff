@@ -1,0 +1,232 @@
+<Subsumption>
+  <Subactivity ID="897dacde-ec0d-45bd-8ac6-199a23c8368c" Index="3" Name="GenericChatter" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Priority="130" Resumable="False" FunctionType="SecondarySubactivity" PossibleFunctionID="00000000-0000-0000-0000-000000000000" RelativeProbabilityFunctionID="00000000-0000-0000-0000-000000000000" GridSize="35" CameraScale="0.97" DefaultWidth="0" Cooldown="15">
+    <Tags />
+    <CameraPos X="1616" Y="831" />
+    <DisplayGridSize Width="4000" Height="4000" />
+    <Variables>
+      <Variable ID="5a32d2d1-ee78-47e4-8a54-7ec4810d6b57" Index="0" Name="EventOriginator" Renamable="False" Deletable="False" ReadOnly="True" SiblingLinkage="False" Type="Object" VariableTypeID="d30a0a9e-6850-4acd-ac38-60dcfc8a6c3c" StorageType="Normal" DataSource="Subsumption" Overloadable="False" Exportable="False" LoadOnce="False" Shared="False" Hint="" UpdateMethod="Manual" ParameterType="None" EventParameter="False" Attribute="False" AllowExplicitValues="True" AllowEditing="True" MinValue="0" MaxValue="1" ValueChangePerSecond="0.001">
+        <Tags />
+      </Variable>
+      <Variable ID="0b2d7e82-1df1-4ccc-a675-b121efefff22" Index="1" Name="NearbyCharacters" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Type="Object" VariableTypeID="d30a0a9e-6850-4acd-ac38-60dcfc8a6c3c" StorageType="Normal" DataSource="Subsumption" Overloadable="False" Exportable="False" LoadOnce="False" Shared="False" Hint="" UpdateMethod="Manual" ParameterType="None" EventParameter="False" Attribute="False" AllowExplicitValues="True" AllowEditing="True" MinValue="0" MaxValue="1" ValueChangePerSecond="0.001">
+        <Tags />
+      </Variable>
+      <Variable ID="17b64f73-60ac-4644-87ea-3a6a378e6a59" Index="2" Name="NearestCharacter" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Type="Object" VariableTypeID="d30a0a9e-6850-4acd-ac38-60dcfc8a6c3c" StorageType="Normal" DataSource="Subsumption" Overloadable="False" Exportable="False" LoadOnce="False" Shared="False" Hint="" UpdateMethod="Manual" ParameterType="None" EventParameter="False" Attribute="False" AllowExplicitValues="True" AllowEditing="True" MinValue="0" MaxValue="1" ValueChangePerSecond="0.001">
+        <Tags />
+      </Variable>
+    </Variables>
+    <TermManager Expression="Term1" SearchMode="RangeOnly" SearchDistance="5">
+      <Terms>
+        <Term Name="Term1" MinCount="1" MaxCount="1" UseChannel="">
+          <Tags>
+            <Tag ID="0eb74365-5134-4aaf-9a6b-ae946b97db33" State="Checked" />
+          </Tags>
+        </Term>
+      </Terms>
+    </TermManager>
+    <RequiredEvents />
+    <SecondarySubactivityPermissions />
+    <Comments>
+      <Comment>
+        <ClassType><![CDATA[CosmeticControlTextNode]]></ClassType>
+        <BackgroundColor><![CDATA[4048D1CC]]></BackgroundColor>
+        <DisplayArea X="945" Y="525" Width="256" Height="660" />
+        <HintText />
+        <Sticky><![CDATA[False]]></Sticky>
+        <Text><![CDATA[Sort nearby characters  Apply min range so he doesn't find himself]]></Text>
+        <ForegroundColor><![CDATA[FF000000]]></ForegroundColor>
+        <Font Name="Verdana" Style="Regular" Size="20" DeriveFontHeightFromRect="False" Alignment="LeftTop" />
+      </Comment>
+      <Comment>
+        <ClassType><![CDATA[CosmeticControlTextNode]]></ClassType>
+        <BackgroundColor><![CDATA[4048D1CC]]></BackgroundColor>
+        <DisplayArea X="1960" Y="945" Width="284" Height="302" />
+        <HintText />
+        <Sticky><![CDATA[False]]></Sticky>
+        <Text><![CDATA[Temp check to see if character is stationary nearby or walking away]]></Text>
+        <ForegroundColor><![CDATA[FF000000]]></ForegroundColor>
+        <Font Name="Verdana" Style="Regular" Size="20" DeriveFontHeightFromRect="False" Alignment="LeftTop" />
+      </Comment>
+      <Comment>
+        <ClassType><![CDATA[CosmeticControlTextNode]]></ClassType>
+        <BackgroundColor><![CDATA[4048D1CC]]></BackgroundColor>
+        <DisplayArea X="910" Y="1680" Width="280" Height="128" />
+        <HintText />
+        <Sticky><![CDATA[False]]></Sticky>
+        <Text><![CDATA[Send event to nearest AI so they can look at chatting character]]></Text>
+        <ForegroundColor><![CDATA[FF000000]]></ForegroundColor>
+        <Font Name="Verdana" Style="Regular" Size="20" DeriveFontHeightFromRect="False" Alignment="LeftTop" />
+      </Comment>
+      <Comment>
+        <ClassType><![CDATA[CosmeticControlTextNode]]></ClassType>
+        <BackgroundColor><![CDATA[FFF00000]]></BackgroundColor>
+        <DisplayArea X="1820" Y="1680" Width="335" Height="99" />
+        <HintText />
+        <Sticky><![CDATA[False]]></Sticky>
+        <Text><![CDATA[TEMP setup while waiting for SetNextSecondarySubactivity]]></Text>
+        <ForegroundColor><![CDATA[FF000000]]></ForegroundColor>
+        <Font Name="Verdana" Style="Regular" Size="20" DeriveFontHeightFromRect="False" Alignment="LeftTop" />
+      </Comment>
+    </Comments>
+    <Tasks>
+      <Task ID="831164d7-955c-475e-8af5-851531036e4d" Index="0" Name="Task_000" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="e005de61-7d6e-460f-b963-109bac1a4b56" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="385" />
+        <Links Success="a0b05e4b-dff7-4e7f-b9e2-312d6e4da856" />
+        <Variables />
+      </Task>
+      <Task ID="9dcbcbc6-3fdf-42ac-b543-256b48e88849" Index="1" Name="Task_001" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" FunctionArchetype="ac55bcff-dcb6-484c-afe1-a2eabfca9ad4" CustomWidth="319" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1190" Y="1890" />
+        <Links />
+        <Variables>
+          <Variable ID="8f670630-3203-4056-be4f-599a09285bd2" Value="1061f83c-2764-4ce0-926c-bfd6090b5a31" VariableName="GenericChatter" />
+          <Variable ID="6c8946c7-d704-4801-b662-926e49efc094" Value="eb119c3b-d3a7-4a13-a23e-ddb2170f7902" VariableName="PersonalWildline" />
+          <Variable ID="152e4497-bb4b-41c0-b36f-73cae359dd7c" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+          <Variable ID="bace07c2-7d18-4b79-8fed-3805890ec762" Value="1" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="82cb2eb3-09c3-464b-bb97-54f47656a89e" Index="2" Name="Task_002" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="3eb95cc3-57db-49bd-908b-ab54bccb86d8" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="1505" />
+        <Links Success="9e0a5df0-6544-492f-9c75-7b234a2d7fcf" />
+        <Variables>
+          <Variable ID="f6679a3e-60fb-41d3-9497-1c7dc65a4191" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+          <Variable ID="e7838f7e-226f-4dc3-bd29-450f1702ac89" Value="2.7" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="ff9a9a74-0dfb-458c-a345-5510cae2eb79" Index="3" Name="Task_008" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="a1f5550f-f620-4cfa-bd72-31a8a347bc06" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="735" />
+        <Links Success="b00c5aab-62ec-459c-82ec-8d82471105eb" />
+        <Variables>
+          <Variable ID="19cc4967-6aa5-47f9-a1e7-5857c3832977" Value="0b2d7e82-1df1-4ccc-a675-b121efefff22" VariableName="NearbyCharacters" />
+          <Variable ID="e50c51fe-c531-4ccc-93c6-22e428615366" Value="cfebaab1-d33c-4c4d-a69c-179ba21a8509" SelectionName="Closest" />
+        </Variables>
+      </Task>
+      <Task ID="a0b05e4b-dff7-4e7f-b9e2-312d6e4da856" Index="4" Name="Task_005" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="cc6b4420-f898-47b1-9569-bbd9c283473b" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="525" />
+        <Links Success="ff9a9a74-0dfb-458c-a345-5510cae2eb79" Failure="5f32bd11-ab3d-40a0-ad04-ae7963d8494d" />
+        <Variables>
+          <Variable ID="0e32a612-b5b8-49ed-8c79-fead70a56737" Value="Actor" Type="Explicit">
+            <TermManager Expression="Term1" SearchMode="RangeOnly" SearchDistance="5">
+              <Terms>
+                <Term Name="Term1" MinCount="1" MaxCount="1" UseChannel="">
+                  <Tags>
+                    <Tag ID="0eb74365-5134-4aaf-9a6b-ae946b97db33" State="Checked" />
+                  </Tags>
+                </Term>
+              </Terms>
+            </TermManager>
+          </Variable>
+          <Variable ID="d6fd66f8-4e10-4231-bbe0-1bbdb12686ef" Value="0b2d7e82-1df1-4ccc-a675-b121efefff22" VariableName="NearbyCharacters" />
+          <Variable ID="c36eae38-db0b-4446-8f1c-45c9fa4fce34" Value="0.1" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="b00c5aab-62ec-459c-82ec-8d82471105eb" Index="5" Name="Task_009" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="62a88229-4a6e-4b1b-9860-cb8b0df082c1" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="910" />
+        <Links Success="26ff069d-8969-4084-ab56-66b282921f70" />
+        <Variables>
+          <Variable ID="100c185c-e1fd-448c-ab50-567b443f4a83" Value="0b2d7e82-1df1-4ccc-a675-b121efefff22" VariableName="NearbyCharacters" />
+          <Variable ID="03f4b617-b44e-473d-9a21-2646ac9ee583" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+        </Variables>
+      </Task>
+      <Task ID="0e45dde2-1bab-46c3-a3f0-ac6da863813c" Index="6" Name="Task_010" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="10727d47-62eb-44ba-81f5-c6a045aaca01" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1715" Y="1330" />
+        <Links />
+        <Variables>
+          <Variable ID="99718680-53a4-472b-934e-0323383c02f5" Value="2.5" Type="Explicit" />
+          <Variable ID="3b839d09-09d9-4f03-876f-843cc1882a01" Value="1" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="26ff069d-8969-4084-ab56-66b282921f70" Index="7" Name="Task_004" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="2fd98f9c-faba-4dbb-b366-86e8010f827c" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="1085" />
+        <Links Success="15707f21-1001-4e35-b4eb-105eefdb7176" Failure="d684d982-a816-419b-8bd2-3ffaac23471c" />
+        <Variables>
+          <Variable ID="84be0b03-0f30-4ee0-b208-eb7feb5388b7" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+        </Variables>
+      </Task>
+      <Task ID="15707f21-1001-4e35-b4eb-105eefdb7176" Index="8" Name="Task_003" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="548d3915-d888-4e9f-a525-acf91290b76a" CustomWidth="458" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="875" Y="1295" />
+        <Links />
+        <Variables>
+          <Variable ID="53f744a9-60ed-48e1-a6c8-5e7bc3d03c1d" Value="Nearest character is player so I won't chatter" Type="Explicit" />
+          <Variable ID="29877f4f-d097-4364-a1e3-7130e1758594" Value="2" Type="Explicit" />
+          <Variable ID="afa3376b-ef2d-4dea-af4e-e84ab1cb7ac8" Value="True" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="9e0a5df0-6544-492f-9c75-7b234a2d7fcf" Index="9" Name="Task_006" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="3adc1e40-69ba-4ccf-a203-958a086ed49f" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1225" Y="1680" />
+        <Links Success="9dcbcbc6-3fdf-42ac-b543-256b48e88849" />
+        <Variables>
+          <Variable ID="8ff32fce-f006-4b03-aea1-1548b57113b5" Value="842da37b-4961-4241-8be6-db64f2f16b6f" VariableName="ConverseStart">
+            <Variables />
+          </Variable>
+          <Variable ID="ade09273-8e5f-4089-a578-331a92870d05" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+        </Variables>
+      </Task>
+      <Task ID="c82174ec-e516-4a10-b460-c307a3116645" Index="10" Name="Task_007" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="5b08d83f-290a-4595-9596-03fa4fea6155" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="2030" Y="1330" />
+        <Links Success="03b28748-ae30-42d6-9684-a187b12cb570" />
+        <Variables>
+          <Variable ID="698bbbea-b6e7-4ed9-9313-27f5357c90e8" Value="842da37b-4961-4241-8be6-db64f2f16b6f" VariableName="ConverseStart">
+            <Variables />
+          </Variable>
+          <Variable ID="6ede4ffb-d4fe-4c15-a6ef-754d67b1351a" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+        </Variables>
+      </Task>
+      <Task ID="d684d982-a816-419b-8bd2-3ffaac23471c" Index="11" Name="Task_011" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="07eb4396-00f3-4eca-bbb6-91e601bdd489" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1400" Y="1295" />
+        <Links Success="82cb2eb3-09c3-464b-bb97-54f47656a89e" Failure="4752586f-f176-41f6-940e-9c99afe61d93">
+          <ParallelTasks>
+            <Task ID="0e45dde2-1bab-46c3-a3f0-ac6da863813c" />
+            <Task ID="c82174ec-e516-4a10-b460-c307a3116645" />
+          </ParallelTasks>
+        </Links>
+        <Variables>
+          <Variable ID="7f040c5b-7a08-48f7-bd03-63d6080cceb8" Value="a1785642-c89a-4a07-81e9-5e953cddaebd" SelectionName="Any" />
+          <Variable ID="13727bec-0ac3-4d34-bdad-d25166112415" Value="61f1e35d-f2dd-44d0-ac3e-9039d702b616" SelectionName="Any" />
+        </Variables>
+      </Task>
+      <Task ID="03b28748-ae30-42d6-9684-a187b12cb570" Index="12" Name="Task_012" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="b9a24a0e-c284-48de-9ba0-52e24b3f2169" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="2030" Y="1505" />
+        <Links />
+        <Variables />
+      </Task>
+      <Task ID="34332b64-83fc-4879-9898-0126d2253dcf" Index="13" Name="Task_013" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" FunctionArchetype="8d578fc6-e51f-4e7b-ba6d-3c2b49f2dbba" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1575" Y="1680" />
+        <Links />
+        <Variables>
+          <Variable ID="81c30d1f-2270-42bf-97ea-0d3ab0c33f38" Value="17b64f73-60ac-4644-87ea-3a6a378e6a59" VariableName="NearestCharacter" />
+        </Variables>
+      </Task>
+      <Task ID="4752586f-f176-41f6-940e-9c99afe61d93" Index="14" Name="Task_014" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="10727d47-62eb-44ba-81f5-c6a045aaca01" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1575" Y="1505" />
+        <Links Success="34332b64-83fc-4879-9898-0126d2253dcf" />
+        <Variables>
+          <Variable ID="99718680-53a4-472b-934e-0323383c02f5" Value="1.2" Type="Explicit" />
+          <Variable ID="3b839d09-09d9-4f03-876f-843cc1882a01" Value="1.4" Type="Explicit" />
+        </Variables>
+      </Task>
+      <Task ID="5f32bd11-ab3d-40a0-ad04-ae7963d8494d" Index="15" Name="Task_015" Renamable="True" Deletable="True" ReadOnly="False" SiblingLinkage="False" Archetype="548d3915-d888-4e9f-a525-acf91290b76a" CustomWidth="0" ThreadParentVariable="00000000-0000-0000-0000-000000000000">
+        <Tags />
+        <Position X="1505" Y="735" />
+        <Links />
+        <Variables>
+          <Variable ID="53f744a9-60ed-48e1-a6c8-5e7bc3d03c1d" Value="Failed to find an Actor" Type="Explicit" />
+          <Variable ID="29877f4f-d097-4364-a1e3-7130e1758594" Value="1" Type="Explicit" />
+        </Variables>
+      </Task>
+    </Tasks>
+  </Subactivity>
+</Subsumption>

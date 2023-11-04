@@ -1,0 +1,62 @@
+<TacticalQuery.FindSpawnPoint_Far name="FindSpawnPoint_Far" type="TacticalPointQuery" __type="TacticalQuery" __ref="542c5119-ebf6-4587-a378-93bf0989254f" __path="libs/foundry/records/tacticalquery/tpsqueries/spawning/findspawnpoint_far.xml">
+  <options>
+    <TQSEmbeddedOption __type="TQSOption" __polymorphicType="TQSEmbeddedOption">
+      <requirements __type="TagsDNF">
+        <terms />
+      </requirements>
+      <content __type="TQSOptionContent">
+        <parameters>
+          <TQSInputFloatValue condition="density" value="2000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="maximumDistance" value="15000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </parameters>
+        <generation>
+          <TQSInputFloatValue condition="sphereExcludingAABBs_around_referencePoint" value="15000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </generation>
+        <conditions />
+        <weights>
+          <TQSWeightInputValue condition="distance_to_referencePoint" weight="1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="random" weight="0.1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="objectsDot_to_referencePoint" weight="-0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="a0ded372-b328-411f-8898-9bd5b9cec938" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+        </weights>
+      </content>
+      <optionOverrides />
+    </TQSEmbeddedOption>
+  </options>
+</TacticalQuery.FindSpawnPoint_Far>

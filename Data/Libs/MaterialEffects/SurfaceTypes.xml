@@ -1,0 +1,373 @@
+<SurfaceTypes>
+  <SurfaceType name="NoFriction">
+    <Physics friction="0.0" bouncyness="0" density="900" thickness="0.02" pierceability="10" sound_obstruction="0.10" can_shatter="1" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="carpet">
+    <Physics friction="0.8" bouncyness="0" density="5000" thickness="0.01" pierceability="14" sound_obstruction="0.20" can_shatter="1" specificHeatCapacity="1.36" maximumTemperature="450" />
+    <Fuel isCombustible="1" smokeTemperature="350" combustionTemperature="393" energyDensity="20000" maximumBurnRate="0.4" airFuelRatio="1.06574302" smokeRate="100" combustibility="0.4" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="personal_shield">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="0" sound_obstruction="0.05" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="battle_arena">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="0" sound_obstruction="0.05" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="concrete_dense">
+    <Physics friction="1" bouncyness="0.2" density="2400" pierceability="3" sound_obstruction="0.40" minImpulseDensity="1000.0" plasticity="0.1" resilience="1000.0" toughness="1000000.0" specificHeatCapacity="1.0" maximumTemperature="1500" />
+    <BreakageParticles type="breakage" effect="Physics/breakable_objects.joint_break.concrete" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.concrete" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.concrete" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.joint_break.concrete" count_per_unit="1" count_scale="1" scale="1" />
+    <Fuel isCombustible="0" smokeTemperature="800" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="concrete_thin">
+    <Physics friction="1" bouncyness="0.2" density="2400" thickness="0.1" pierceability="5" sound_obstruction="0.25" specificHeatCapacity="1.0" maximumTemperature="1500" />
+    <BreakageParticles type="breakage" effect="Physics/breakable_objects.joint_break.concrete" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.concrete" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.concrete" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.joint_break.concrete" count_per_unit="1" count_scale="1" scale="1" />
+    <Fuel isCombustible="0" smokeTemperature="800" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="fabric">
+    <Physics friction="0.8" bouncyness="0.05" density="1540" thickness="0.002" pierceability="14" sound_obstruction="0.10" can_shatter="1" specificHeatCapacity="1.36" maximumTemperature="450" />
+    <Fuel isCombustible="1" smokeTemperature="350" combustionTemperature="393" energyDensity="20000" maximumBurnRate="0.4" airFuelRatio="1.06574302" smokeRate="100" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="flesh_human">
+    <Physics friction="0.6" bouncyness="0" density="1060" pierceability="10" sound_obstruction="0.10" can_shatter="1" minImpulseDensity="200000" resilience="3000000" plasticity="0.1" toughness="1000000.0" specificHeatCapacity="3.5" maximumTemperature="700" />
+    <Fuel isCombustible="1" smokeTemperature="343" combustionTemperature="523" energyDensity="38000" maximumBurnRate="0.4" smokeRate="100" combustibility="0.04" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="flesh_vanduul">
+    <Physics friction="0.6" bouncyness="0" density="1500" pierceability="10" sound_obstruction="0.10" can_shatter="1" specificHeatCapacity="3.5" maximumTemperature="700" />
+    <Fuel isCombustible="1" smokeTemperature="343" combustionTemperature="523" energyDensity="38000" maximumBurnRate="0.4" smokeRate="100" combustibility="0.04" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="flesh_banu">
+    <Physics friction="0.6" bouncyness="0" density="1000" pierceability="10" sound_obstruction="0.10" can_shatter="1" specificHeatCapacity="3.5" maximumTemperature="700" />
+    <Fuel isCombustible="1" smokeTemperature="343" combustionTemperature="523" energyDensity="38000" maximumBurnRate="0.4" smokeRate="100" combustibility="0.04" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="flesh_xian">
+    <Physics friction="0.6" bouncyness="0" density="1200" pierceability="10" sound_obstruction="0.10" can_shatter="1" specificHeatCapacity="3.5" maximumTemperature="700" />
+    <Fuel isCombustible="1" smokeTemperature="343" combustionTemperature="523" energyDensity="38000" maximumBurnRate="0.4" smokeRate="100" combustibility="0.04" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="glass_dense" type="glass">
+    <Physics friction="0.6" bouncyness="0.3" density="2500" thickness="0.02" pierceability="0" sound_obstruction="0.15" specificHeatCapacity="0.84" maximumTemperature="1500" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="glass_thin" type="glass">
+    <Physics friction="0.6" bouncyness="0.3" density="2500" thickness="0.01" pierceability="14" sound_obstruction="0.20" specificHeatCapacity="0.84" maximumTemperature="1500" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="glass_breakable_windscreen" type="glass">
+    <Physics friction="0.6" bouncyness="0.3" density="2500" thickness="0.01" pierceability="14" sound_obstruction="0.20" break_energy="2000" breakable_2d="1" can_shatter="1" hit_points="500" hit_radius="0.4" hit_maxdmg="1000" hit_maxhits="1000" specificHeatCapacity="0.84" maximumTemperature="1500" />
+    <breakable_2d rigid_body="0" cell_size="0.2" blast_radius="0.4" max_patch_tris="16" filter_angle="40" vert_size_spread="0.7" shard_density="900" crack_decal_mtl="" max_fracture="0.25" crack_decal_scale="3.5" no_procedural_full_fracture="1" fracture_fx="Physics/glass_shatter.windscreen.heavy_glass" full_fracture_fx="Physics/glass_shatter.windscreen.heavy_glass" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="glass_breakable" type="glass">
+    <Physics friction="0.6" bouncyness="0.3" density="2500" thickness="0.01" pierceability="14" sound_obstruction="0.10" break_energy="2000" breakable_2d="1" can_shatter="1" hit_points="1" hit_radius="0.4" hit_maxdmg="1" hit_maxhits="1" specificHeatCapacity="0.84" maximumTemperature="1500" />
+    <breakable_2d rigid_body="0" cell_size="0.2" blast_radius="0.4" max_patch_tris="16" filter_angle="40" vert_size_spread="0.7" shard_density="900" crack_decal_mtl="" max_fracture="0.25" crack_decal_scale="3.5" no_procedural_full_fracture="1" fracture_fx="Physics/glass_shatter.thin_glass.small" full_fracture_fx="physics/glass_shatter.thin_glass.full_fracture_fx" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <BreakageParticles type="breakage" effect="Physics/glass_shatter.thin_glass.small" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="destroy" effect="Physics/glass_shatter.thin_glass.small" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/glass_shatter.thin_glass.small" />
+    <BreakageParticles type="joint_shatter" effect="Physics/glass_shatter.thin_glass.small" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="ice_dense" type="ice">
+    <Physics friction="0.1" bouncyness="0.1" density="916" pierceability="7" sound_obstruction="0.25" can_shatter="1" specificHeatCapacity="2.108" maximumTemperature="273" />
+    <BreakageParticles type="breakage" effect="Physics/breakable_objects.Shatter.Edges" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.Shatter.destroy" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.generic" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.shatter" />
+    <BreakageParticles type="freeze_vapor" effect="Physics/breakable_objects.shatter.shatter_large" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="freeze_shatter" effect="Physics/breakable_objects.shatter.vapor_human" count_per_unit="1" count_scale="1" scale="1" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/ice.xml" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="ice_thin" type="ice">
+    <Physics friction="0.1" bouncyness="0.1" density="916" thickness="0.01" pierceability="7" sound_obstruction="0.15" can_shatter="1" specificHeatCapacity="2.108" maximumTemperature="273" />
+    <BreakageParticles type="breakage" effect="Physics/breakable_objects.Shatter.Edges" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.Shatter.destroy" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.generic" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.shatter" />
+    <BreakageParticles type="freeze_vapor" effect="Physics/breakable_objects.shatter.shatter_large" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="freeze_shatter" effect="Physics/breakable_objects.shatter.vapor_human" count_per_unit="1" count_scale="1" scale="1" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/ice.xml" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="metal_cuttable">
+    <Physics friction="0.8" bouncyness="0" density="2700" thickness="0.01" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="metal_damageable">
+    <Physics friction="0.8" bouncyness="0.05" density="3700" thickness="0.02" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="10.1" />
+  </SurfaceType>
+  <SurfaceType name="metal_dense">
+    <Physics friction="0.8" bouncyness="0.05" density="7850" thickness="0.05" pierceability="3" sound_obstruction="0.40" minImpulseDensity="3000000" resilience="440000000" plasticity="0.1" toughness="1000000.0" specificHeatCapacity="0.46" maximumTemperature="750" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="0" smokeTemperature="373" combustionTemperature="573" energyDensity="36000" maximumBurnRate="0.2" airFuelRatio="1.06574302" smokeRate="10" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="10.1" />
+  </SurfaceType>
+  <SurfaceType name="metal_hollow">
+    <Physics friction="0.8" bouncyness="0.1" density="2700" thickness="0.01" pierceability="7" sound_obstruction="0.35" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="10.1" />
+  </SurfaceType>
+  <SurfaceType name="metal_thin">
+    <Physics friction="0.8" bouncyness="0.05" density="7850" thickness="0.02" pierceability="3" sound_obstruction="0.40" minImpulseDensity="800000" resilience="440000000" plasticity="0.1" toughness="1000000.0" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="0" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="8.7" />
+  </SurfaceType>
+  <SurfaceType name="metal_shell" type="metal">
+    <Physics friction="0.8" bouncyness="0.2" density="1700" thickness="0.02" pierceability="7" sound_obstruction="0.25" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="metal_ladder">
+    <Physics friction="0.8" bouncyness="0.2" density="2700" thickness="0.01" pierceability="7" sound_obstruction="0.05" specificHeatCapacity="0.46" coolingCoefficient="200.0" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="metal_grate">
+    <Physics friction="0.8" bouncyness="0.2" density="2700" thickness="0.01" pierceability="14" sound_obstruction="0.05" specificHeatCapacity="0.46" coolingCoefficient="800.0" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="0" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="plastic_dense">
+    <Physics friction="0.8" bouncyness="0.21" density="1500" thickness="0.02" pierceability="4" sound_obstruction="0.35" can_shatter="1" specificHeatCapacity="2.302" maximumTemperature="900" />
+    <Fuel isCombustible="1" smokeTemperature="453" combustionTemperature="693" energyDensity="46300" maximumBurnRate="0.2" airFuelRatio="3.42221588" smokeRate="200" combustibility="0.02" damageIgnitionModifier="0" flashIgnitionThreshold="2.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="plastic_hollow">
+    <Physics friction="0.8" bouncyness="0.22" density="1100" thickness="0.01" pierceability="7" sound_obstruction="0.20" can_shatter="1" specificHeatCapacity="2.302" maximumTemperature="900" />
+    <Fuel isCombustible="1" smokeTemperature="403" combustionTemperature="653" energyDensity="46300" maximumBurnRate="0.1" airFuelRatio="1.66524427" smokeRate="200" combustibility="0.02" damageIgnitionModifier="0" flashIgnitionThreshold="2.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="plastic_thin">
+    <Physics friction="0.8" bouncyness="0.25" density="1000" thickness="0.005" pierceability="7" sound_obstruction="0.15" can_shatter="1" specificHeatCapacity="2.302" maximumTemperature="900" />
+    <Fuel isCombustible="1" smokeTemperature="383" combustionTemperature="633" energyDensity="46300" maximumBurnRate="0.1" airFuelRatio="1.66524427" smokeRate="200" combustibility="0.02" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="ceramic" type="rock">
+    <Physics friction="0.7" bouncyness="0.1" density="3700" thickness="0.005" pierceability="5" sound_obstruction="0.30" specificHeatCapacity="0.85" maximumTemperature="1900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="rock_dense">
+    <Physics friction="0.7" bouncyness="0.1" density="3500" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.85" maximumTemperature="900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="2.0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="rubble">
+    <Physics friction="0.5" bouncyness="0.3" density="1200" pierceability="3" sound_obstruction="0.20" specificHeatCapacity="0.85" maximumTemperature="900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="grass">
+    <Physics friction="0.8" bouncyness="0.05" density="100" pierceability="7" sound_obstruction="0.20" can_shatter="1" specificHeatCapacity="3.58" maximumTemperature="1200" />
+    <Fuel isCombustible="1" smokeTemperature="673" combustionTemperature="773" energyDensity="10000" maximumBurnRate="0.1" airFuelRatio="1.06574302" smokeRate="500" combustibility="0.02" damageIgnitionModifier="0" flashIgnitionThreshold="1.0">
+      <FireEffect effectName="master/fire_hazard.Fire.fire_vegetation_1sqM_scalable_01" />
+      <FireLighting fireLightTemperature="15000" />
+    </Fuel>
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="gravel" type="rock">
+    <Physics friction="0.7" bouncyness="0.05" density="1346" pierceability="3" sound_obstruction="0.20" specificHeatCapacity="0.85" maximumTemperature="900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="asteroid_compacted" type="rock">
+    <Physics friction="0.7" bouncyness="0.1" density="5320" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.85" maximumTemperature="900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="asteroid_loose" type="rock">
+    <Physics friction="0.7" bouncyness="0.05" density="2710" pierceability="3" sound_obstruction="0.20" specificHeatCapacity="0.85" maximumTemperature="900" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="rubber_dense">
+    <Physics friction="0.5" bouncyness="0.35" density="1522" thickness="0.02" pierceability="7" sound_obstruction="0.25" can_shatter="1" maximumTemperature="600" />
+    <Fuel isCombustible="1" smokeTemperature="403" combustionTemperature="473" energyDensity="30000" maximumBurnRate="0.1" airFuelRatio="6.5772088" smokeRate="500" combustibility="0.01" damageIgnitionModifier="0" flashIgnitionThreshold="2.0">
+      <FireEffect effectName="master/fire_hazard.Fire.fire_rubber_1sqM_scalable_01" />
+    </Fuel>
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="rubber_thin">
+    <Physics friction="0" elasticity="0.5" density="1522" thickness="0.01" pierceability="8" sound_obstruction="0.15" can_shatter="1" specificHeatCapacity="2.01" maximumTemperature="600" />
+    <Fuel isCombustible="1" smokeTemperature="403" combustionTemperature="473" energyDensity="30000" maximumBurnRate="0.1" airFuelRatio="6.5772088" smokeRate="500" combustibility="0.01" damageIgnitionModifier="0" flashIgnitionThreshold="2.0">
+      <FireEffect effectName="master/fire_hazard.Fire.fire_rubber_1sqM_scalable_01" />
+    </Fuel>
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="snow">
+    <Physics friction="0.5" bouncyness="0" density="200" pierceability="5" sound_obstruction="0.05" can_shatter="1" specificHeatCapacity="2.09" maximumTemperature="253" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/snow.xml" />
+  </SurfaceType>
+  <SurfaceType name="soil">
+    <Physics friction="0.35" bouncyness="0.05" density="1330" pierceability="5" sound_obstruction="0.25" can_shatter="1" specificHeatCapacity="0.8" maximumTemperature="900" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/default.xml" />
+  </SurfaceType>
+  <SurfaceType name="sand">
+    <Physics friction="0.5" bouncyness="0.01" density="1602" pierceability="5" sound_obstruction="0.30" can_shatter="1" specificHeatCapacity="0.8" maximumTemperature="900" />
+    <Gameplay conductivity="0" />
+    <Planet groundSurfaceEffectLibrary="master/planetary/surface_effects/sand.xml" />
+  </SurfaceType>
+  <SurfaceType name="vegetation">
+    <Physics friction="0.5" bouncyness="0" density="300" pierceability="15" sound_obstruction="0.05" can_shatter="1" specificHeatCapacity="3.58" maximumTemperature="800" />
+    <Fuel isCombustible="1" smokeTemperature="473" combustionTemperature="623" energyDensity="13000" maximumBurnRate="0.1" airFuelRatio="1.06574302" smokeRate="500" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="1.0">
+      <FireEffect effectName="master/fire_hazard.Fire.fire_vegetation_1sqM_scalable_01" />
+    </Fuel>
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_water">
+    <Physics friction="1" bouncyness="0" density="1000" pierceability="15" specificHeatCapacity="2.5" maximumTemperature="373" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_no_collide">
+    <Physics no_collide="1" density="0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="wood_dense" type="wood">
+    <Physics friction="0.5" bouncyness="0.05" density="680" pierceability="6" sound_obstruction="0.30" can_shatter="1" minImpulseDensity="500000" resilience="35000000" toughness="100000" specificHeatCapacity="2.5" maximumTemperature="750" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.wood" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.wood" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.joint_break.wood" count_per_unit="1" count_scale="1" scale="1" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="373" combustionTemperature="573" energyDensity="18000" maximumBurnRate="0.2" airFuelRatio="1.06574302" smokeRate="10" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="wood_thin" type="wood">
+    <Physics friction="0.5" bouncyness="0.1" density="680" thickness="0.01" breakable_id="2" pierceability="7" sound_obstruction="0.10" break_energy="7000" hole_size="1.4" hit_points="10" hit_radius="0.4" hit_maxdmg="10" can_shatter="1" minImpulseDensity="500000" resilience="35000000" toughness="100000" specificHeatCapacity="2.0" maximumTemperature="750" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.tree_break.small" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.tree_break.small" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.tree_break.small" count_per_unit="1" count_scale="1" scale="1" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="373" combustionTemperature="573" energyDensity="18000" maximumBurnRate="0.2" airFuelRatio="1.06574302" smokeRate="10" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="2.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="shield_human" type="shield">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="15" sound_obstruction="0.00" coll_types="-float,shield" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="shield_vanduul" type="shield">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="15" sound_obstruction="0.00" coll_types="-float,shield" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="shield_banu" type="shield">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="15" sound_obstruction="0.00" coll_types="-float,shield" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="shield_xian" type="shield">
+    <Physics friction="0.8" bouncyness="0.2" density="0" pierceability="15" sound_obstruction="0.00" coll_types="-float,shield" maximumTemperature="5000" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_player_collider">
+    <Physics friction="0.6" density="0" sound_obstruction="0.00" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_nodraw">
+    <Physics friction="0" bouncyness="0" density="0" pierceability="15" sound_obstruction="0.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_default">
+    <Physics friction="0.7" bouncyness="0.1" density="1175" thickness="0.01" pierceability="0" sound_obstruction="0.25" minImpulseDensity="1000.0" resilience="100000.0" plasticity="0.1" toughness="100000.0" />
+    <BreakageParticles type="breakage" effect="Physics/breakable_objects.Shatter.Edges" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="destroy" effect="Physics/breakable_objects.Shatter.destroy" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.generic" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.shatter" />
+    <BreakageParticles type="freeze_vapor" effect="Physics/breakable_objects.shatter.shatter_large" count_per_unit="1" count_scale="1" scale="1" />
+    <BreakageParticles type="freeze_shatter" effect="Physics/breakable_objects.shatter.vapor" count_per_unit="1" count_scale="1" scale="1" />
+    <Fuel isCombustible="1" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mat_invulnerable" type="default">
+    <Physics friction="1" bouncyness="0" density="1000" pierceability="0" sound_obstruction="0.00" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="15" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="trash">
+    <Physics friction="0.5" bouncyness="0.025" density="1400" pierceability="3" sound_obstruction="0.20" maximumTemperature="700" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="373" combustionTemperature="523" energyDensity="8000" maximumBurnRate="0.2" airFuelRatio="1.0" smokeRate="200" combustibility="0.04" damageIgnitionModifier="0" flashIgnitionThreshold="1.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="mud">
+    <Physics friction="0.5" bouncyness="0.0001" density="1906" pierceability="3" sound_obstruction="0.20" specificHeatCapacity="1.48" />
+    <AI fImpactRadius="2.5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="rubber_bouncy">
+    <Physics friction="1" bouncyness="1" density="1522" thickness="0.01" pierceability="7" sound_obstruction="0.25" can_shatter="1" specificHeatCapacity="2.01" maximumTemperature="600" />
+    <Fuel isCombustible="1" smokeTemperature="403" combustionTemperature="473" energyDensity="30000" maximumBurnRate="0.1" airFuelRatio="6.5772088" smokeRate="500" combustibility="0.01" damageIgnitionModifier="0" flashIgnitionThreshold="1.0">
+      <FireEffect effectName="master/Fire_hazard.Fire.fire_rubber_1sqM_scalable_01" />
+    </Fuel>
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+  <SurfaceType name="aluminium_1cm">
+    <Physics friction="0.8" bouncyness="0.05" density="2700" thickness="0.01" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.87" maximumTemperature="3000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="2000" combustionTemperature="2273" energyDensity="31000" maximumBurnRate="0.1" airFuelRatio="0.88948188" smokeRate="1" combustibility="0.001" damageIgnitionModifier="0" />
+    <Gameplay conductivity="10.1" />
+  </SurfaceType>
+  <SurfaceType name="metal_solid">
+    <Physics friction="0.8" bouncyness="0.05" density="4500" pierceability="3" sound_obstruction="0.40" specificHeatCapacity="0.46" maximumTemperature="2000" />
+    <BreakageParticles type="joint_break" effect="Physics/breakable_objects.joint_break.metal" />
+    <BreakageParticles type="joint_shatter" effect="Physics/breakable_objects.joint_break.metal" />
+    <AI fImpactRadius="5" fImpactSoundRadius="20" fFootStepRadius="20" proneMult="0.2" crouchMult="0.5" movingMult="2.5" />
+    <Fuel isCombustible="1" smokeTemperature="1000" combustionTemperature="1588" energyDensity="5200" maximumBurnRate="0.2" airFuelRatio="0.42976095" smokeRate="1" combustibility="0.01" damageIgnitionModifier="0" />
+    <Gameplay conductivity="10.1" />
+  </SurfaceType>
+  <SurfaceType name="plastic_solid">
+    <Physics friction="0.8" bouncyness="0.25" density="1000" pierceability="7" sound_obstruction="0.15" can_shatter="1" specificHeatCapacity="2.302" maximumTemperature="900" />
+    <Fuel isCombustible="1" smokeTemperature="453" combustionTemperature="693" energyDensity="46300" maximumBurnRate="0.2" airFuelRatio="3.42221588" smokeRate="200" combustibility="0.02" damageIgnitionModifier="0" flashIgnitionThreshold="2.0" />
+    <Gameplay conductivity="0" />
+  </SurfaceType>
+</SurfaceTypes>

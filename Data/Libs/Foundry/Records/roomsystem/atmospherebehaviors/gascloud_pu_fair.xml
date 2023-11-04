@@ -1,0 +1,78 @@
+<AtmosphereBehavior.GasCloud_PU_Fair enableAtmosphericHeating="0" enableActorVectorFields="0" atmosphereEnvironmentTag="c7e827a8-6ede-4f0f-9c5b-8dcedaa462d3" __type="AtmosphereBehavior" __ref="ad400510-99fb-4341-8e49-9a8f1ea9edcc" __path="libs/foundry/records/roomsystem/atmospherebehaviors/gascloud_pu_fair.xml">
+  <vehicleEffects enableEngineTrails="1" enableEngineContrails="1" __type="Behavior_VehicleEffectParams" __polymorphicType="Behavior_AtmosphereVehicleEffectParams">
+    <customVehicleEffects>
+      <Behavior_CustomVehicleEffectsPreset __type="SEntitityEffectSystem_SystemBase" __polymorphicType="Behavior_CustomVehicleEffectsPreset">
+        <particleEffects enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+          <tagEffects>
+            <SEntityEffectSystem_ParticleTagEffect name="Gascloud Contrail (Aerodynamic Wingtip Vortex)" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="0dbde955-2240-40ba-bc92-5f3f19a9daa2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+              <particleEffect path="Spaceships\Contrails\contrail_generic.gascloud.idle_contrail_wing" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+              <attachmentSettings>
+                <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="contrail_*" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                  <offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </offset>
+                </SEntityEffectSystem_Attachment_BoneAttachment>
+              </attachmentSettings>
+              <propertyLinks>
+                <SEntityEffectSystem_ParticlePropertyLink parameterName="af644870-38bd-4156-8ed6-695410a9b195" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                  <modifiers />
+                </SEntityEffectSystem_ParticlePropertyLink>
+                <SEntityEffectSystem_ParticlePropertyLink parameterName="c076bb86-2c75-4162-9b4f-77bee24bf8e2" particleProperty="alpha" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                  <modifiers />
+                </SEntityEffectSystem_ParticlePropertyLink>
+              </propertyLinks>
+            </SEntityEffectSystem_ParticleTagEffect>
+            <SEntityEffectSystem_ParticleTagEffect name="EnviromentVehicleEffect" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="8e874586-caa1-441a-8f7c-26337b000617" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+              <particleEffect path="Environments\GasCloud\environment_vehicle_effects.Generic.Generic_default" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+              <attachmentSettings>
+                <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="8f98a162-5e8e-441b-9104-38af743509aa" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                  <offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </offset>
+                </SEntityEffectSystem_Attachment_EntitySlot>
+              </attachmentSettings>
+              <propertyLinks>
+                <SEntityEffectSystem_ParticlePropertyLink parameterName="8e0eeeeb-75dd-42ee-bf5a-d770d93ede6a" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                  <modifiers>
+                    <SEntityEffectSystem_MultiplierModifier multiplier="1000" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_MultiplierModifier" />
+                    <SEntityEffectSystem_MinMaxModifier minimum="0" maximum="1" __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_MinMaxModifier" />
+                  </modifiers>
+                </SEntityEffectSystem_ParticlePropertyLink>
+                <SEntityEffectSystem_ParticlePropertyLink parameterName="8d44e451-70e3-4eaa-91d0-7e0e4cd1f3f3" particleProperty="emissionSize" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                  <modifiers />
+                </SEntityEffectSystem_ParticlePropertyLink>
+              </propertyLinks>
+            </SEntityEffectSystem_ParticleTagEffect>
+          </tagEffects>
+          <triggerEffects />
+        </particleEffects>
+      </Behavior_CustomVehicleEffectsPreset>
+    </customVehicleEffects>
+    <aerodynamicTrailCalculation>
+      <AerodynamicTrailCalculationPropertyRange type="Pressure" __type="AerodynamicTrailCalculation" __polymorphicType="AerodynamicTrailCalculationPropertyRange">
+        <range minimum="0" maximum="0.003" __type="Range" />
+      </AerodynamicTrailCalculationPropertyRange>
+    </aerodynamicTrailCalculation>
+  </vehicleEffects>
+  <turbulence>
+    <AtmosphereBehavior_TurbulenceParams frequencyMultiplier="2" amplitudeMultiplier="2" vibrationMultiplier="1" __type="AtmosphereBehavior_TurbulenceParams" />
+  </turbulence>
+  <weather>
+    <AtmosphereBehavior_WeatherParams planetCloudCondensationAmount="0" enableSurfaceWaterEffects="1" __type="AtmosphereBehavior_WeatherParams">
+      <planetCloudDensityCondensationRange minimum="1" maximum="1" __type="Range" />
+      <effects>
+        <WeatherEffects_Atmosphere_PropertyValue propertyType="Pressure" __type="WeatherEffects_Atmosphere" __polymorphicType="WeatherEffects_Atmosphere_PropertyValue">
+          <spaceLoopEffect updateStrength="1" updateCount="1" __type="WeatherEffects_SpaceLoopEffect">
+            <effect path="Environments\GasCloud\gascloud_spaceloops.Generic.Spaceloop_Generic_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          </spaceLoopEffect>
+          <interpolationRange minimum="0" maximum="0.003" __type="Range" />
+        </WeatherEffects_Atmosphere_PropertyValue>
+      </effects>
+    </AtmosphereBehavior_WeatherParams>
+  </weather>
+  <atmospherePressureRtpc rtpc="EnvironmentFeedback_GasCloud_Pressure" __type="AudioRtpc" />
+  <atmosphereTemperatureRtpc rtpc="EnvironmentFeedback_GasCloud_Temperature" __type="AudioRtpc" />
+  <atmosphereHumidityRtpc rtpc="EnvironmentFeedback_GasCloud_Humidity" __type="AudioRtpc" />
+</AtmosphereBehavior.GasCloud_PU_Fair>

@@ -1,0 +1,65 @@
+<AudioBreathStyleSuite.Pilot initialStyle="" __type="AudioBreathStyleSuite" __ref="9f4db628-81ed-472a-8a92-b666b910c85c" __path="libs/foundry/records/audio/breathing/breathingstylesuites/audiobreathstylesuite.pilot.xml">
+  <nodes>
+    <AudioBreathStyleNode description="Initial Pilot Breathing Style" style="206c03ba-35e2-497a-a3a3-532c7c9935c3" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleTransitionNode description="Pilot_TO_PilotHighG_WHEN_GForceIsAbove14" whenConditionsAreTrueFor="10" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions>
+        <Reference value="7dc12bbd-447a-41d2-9b04-9e873f4a5a49" />
+      </conditions>
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleNode description="PilotHighG" style="962deb89-120a-4540-93d9-48f405140cbf" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleNode description="PilotRecovery" style="81088b3e-c332-4859-81de-9ebb212d81ad" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleNode description="PilotPassout" style="3bb5a694-aa96-4d7a-811b-98530e804098" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleTransitionNode description="PilotHighG_TO_PilotRecovery_WHEN_GForceIsBelow8" whenConditionsAreTrueFor="3" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions />
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleTransitionNode description="Pilot Has Passed Out" whenConditionsAreTrueFor="0.25" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions>
+        <Reference value="1ea52a4c-0633-4f1e-90d6-b768a6e041d7" />
+      </conditions>
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleNode description="PassedOutHighH" style="d5bc37b3-e017-4061-9e51-92ae7a8b8874" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleTransitionNode description="PilotPassout_TO_PilotPassedOutHighG After 1 second" whenConditionsAreTrueFor="1" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions />
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleNode description="PilotWakeUpHighG" style="7d23f2a0-b42b-4e1d-8b14-631dc2b7b525" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleNode">
+      <transitions>
+        <WeakPointer transitions="" />
+      </transitions>
+    </AudioBreathStyleNode>
+    <AudioBreathStyleTransitionNode description="PassedOutHighG_TO_WakeUpHighG_WHEN_Pilot Wakes Up" whenConditionsAreTrueFor="0.25" onNextInhale="1" onNextExhale="1" immediately="1" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions>
+        <Reference value="0c1f9c12-43bc-4748-a24a-1de11c9daf84" />
+      </conditions>
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleTransitionNode description="WakeUpHighG_TO_Pilot After 1 second" whenConditionsAreTrueFor="1" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions />
+    </AudioBreathStyleTransitionNode>
+    <AudioBreathStyleTransitionNode description="PilotRecovery_TO_Pilot After 6 seconds" whenConditionsAreTrueFor="6" onNextInhale="1" onNextExhale="1" immediately="0" style="" __type="AudioBreathStyleBaseNode" __polymorphicType="AudioBreathStyleTransitionNode">
+      <conditions />
+    </AudioBreathStyleTransitionNode>
+  </nodes>
+</AudioBreathStyleSuite.Pilot>

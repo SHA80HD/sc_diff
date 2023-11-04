@@ -1,0 +1,105 @@
+<MotionGraph.PlayerMotionGraph __type="MotionGraph" __ref="b4850ab2-0217-4edb-ac75-0b35245e846a" __path="libs/foundry/records/motionstatemachine/playermotiongraph.xml">
+  <motionStates>
+    <MotionState type="Move" mannequinTags="" mannequinFragment="MotionMovement" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="Idle" mannequinTags="" mannequinFragment="MotionIdle" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="Turn" mannequinTags="turn" mannequinFragment="MotionIdle" motionTypeFP="Animation" motionTypeTP="Animation" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="1" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="Step" mannequinTags="step" mannequinFragment="MotionIdle" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.5" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.2" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.2" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="Juke" mannequinTags="stop+juke" mannequinFragment="MotionIdle" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="1" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.3" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="MoveToIdle" mannequinTags="stop" mannequinFragment="MotionIdle" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="1" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.2" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="IdleToMove" mannequinTags="start" mannequinFragment="MotionMovement" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0.2" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="InAirIdle" mannequinTags="inAir" mannequinFragment="MotionIdle" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+    <MotionState type="InAirMove" mannequinTags="inAir" mannequinFragment="MotionMovement" motionTypeFP="Entity" motionTypeTP="Entity" motionTypeRemote="Entity" __type="MotionState">
+      <connections>
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+        <MotionConnection waitUntillFinished="0" delaySeconds="0" waitForEvent="" nextState="" __type="MotionConnection" />
+      </connections>
+    </MotionState>
+  </motionStates>
+  <motionSmoothingConfig enabled="1" maxJitterRating="10" jitterSensitivity="2" jitterDetectionThreshold="7.5" jitterDecayDuration="1" speedSmoothingDuration="1.5" __type="MotionSmoothingParams" />
+  <jukeConfig enabled="1" jukeTriggerAngle="100" jukeDetectionDuration="0.1" __type="MotionJukeParams" />
+  <idleToMoveProcParamsForward maxMovementSpeed="3" maxHipTilt="0" maxHipVerticalOffset="0.1" maxHipHorizontalOffset="-0.05" maxSpineBend="0" tiltDuration="0.25" tiltRestorationDuration="0.25" __type="ProceduralIdleToMoveParams" />
+  <idleToMoveProcParamsBack maxMovementSpeed="3" maxHipTilt="0" maxHipVerticalOffset="0.1" maxHipHorizontalOffset="0" maxSpineBend="0" tiltDuration="0.25" tiltRestorationDuration="0.25" __type="ProceduralIdleToMoveParams" />
+  <idleToMoveProcParamsRight maxMovementSpeed="3" maxHipTilt="-11" maxHipVerticalOffset="0.1" maxHipHorizontalOffset="0" maxSpineBend="0" tiltDuration="0.25" tiltRestorationDuration="0.25" __type="ProceduralIdleToMoveParams" />
+  <idleToMoveProcParamsLeft maxMovementSpeed="3" maxHipTilt="-12.5" maxHipVerticalOffset="0.1" maxHipHorizontalOffset="0" maxSpineBend="-11" tiltDuration="0.25" tiltRestorationDuration="0.25" __type="ProceduralIdleToMoveParams" />
+  <turnConfig __type="MotionTurnSetupList">
+    <setupList>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Inspect" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="60" leftYawTrigger="60" turnTriggerOffset="0" targetOffset="1" snapOffset="1" maxTurnSpeed="180" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="BodyDragging" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="15" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="UnarmedCombat" filterByStanceState="Crouch" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="10" leftYawTrigger="10" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="UnarmedCombat" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="10" leftYawTrigger="10" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="180" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Weapon" filterByStanceState="Crouch" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="15" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Weapon" filterByStanceState="Stand" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="60" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="180" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Stand" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Effort" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="15" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="NoWeapon" filterByStanceState="Crouch" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="15" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Carry" filterByStanceState="Crouch" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="15" leftYawTrigger="15" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="90" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+      <MotionTurnSetupFiltered filterName="New Filter" filterByState="Any" filterByMotionSpeed="Any" filterByPoseState="Any" filterByStanceState="Any" filterByAimStanceState="Any" filterByLeanState="Any" filterByHeldItemType="Any" filterBySkeleton="Any" filterByCharacterType="Any" filterByRestrainedState="Any" filterByPlayerCamera="Any" filterByAimingRestriction="Any" filterByLocomotionSet="Any" __type="ActorStateFilter" __polymorphicType="MotionTurnSetupFiltered">
+        <params rightYawTrigger="60" leftYawTrigger="60" turnTriggerOffset="0.5" targetOffset="1" snapOffset="1" maxTurnSpeed="180" delayIdleSeconds="0.2" __type="MotionTurnParams" />
+      </MotionTurnSetupFiltered>
+    </setupList>
+  </turnConfig>
+  <footPinningParams footShiftDuration="0.2" autoRepositionDistance="0.1" animationDuration="0.8" animationWeight="1" animationBlendInDuration="0.3" animationBlendOutDuration="0.5" __type="MotionFootPinningParams" />
+</MotionGraph.PlayerMotionGraph>

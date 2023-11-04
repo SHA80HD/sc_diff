@@ -1,0 +1,86 @@
+<TQSOptionContentRecord.DefaultMannedTurretContent __type="TQSOptionContentRecord" __ref="8f729581-5d09-435a-b508-f51822209e54" __path="libs/foundry/records/tacticalquery/ttsqueries/content/defaultmannedturretcontent.xml">
+  <content __type="TQSOptionContent">
+    <parameters>
+      <TQSInputFloatValue condition="maximumDistance" value="10000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+      <TQSInputFloatValue condition="maximumRecentDamage" value="5000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+    </parameters>
+    <generation>
+      <TQSInputFloatValue condition="perceivedHostileTargets_around_host" value="100000" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputFloatValue>
+    </generation>
+    <conditions>
+      <TQSInputBoolValue condition="isShip" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputBoolValue>
+      <TQSInputBoolValue condition="isAlive" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSInputBoolValue>
+    </conditions>
+    <weights>
+      <TQSWeightInputValue condition="distance_to_host" weight="-105" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="attackerScoreToCapacityRatioExcluding_the_entity" weight="-5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="damageDealtAsAPortionOfHealth_to_host" weight="5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides>
+          <TQSWeightInputValue condition="recentDamageDealt_to_host" weight="5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="7cf30b03-333e-4ad0-927d-c80d095139f8" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+        </overrides>
+      </TQSWeightInputValue>
+      <TQSWeightInputValue condition="isInSeatWeaponRange" weight="100" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputValue>
+      <TQSWeightInputFloatValue condition="max_attackerScoreToCapacityRatioExcluding_the_entity" weight="50" value="0.01" __type="TQSInput" __polymorphicType="TQSWeightInputFloatValue">
+        <requirements __type="TagsDNF">
+          <terms />
+        </requirements>
+        <overrides />
+      </TQSWeightInputFloatValue>
+    </weights>
+  </content>
+</TQSOptionContentRecord.DefaultMannedTurretContent>

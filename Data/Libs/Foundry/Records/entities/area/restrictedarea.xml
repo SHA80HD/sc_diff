@@ -1,0 +1,24 @@
+<EntityClassDefinition.RestrictedArea Category="Default" Icon="Box.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="35af4d50-e7dd-4599-bd92-fd5fe5d0e78e" __path="libs/foundry/records/entities/area/restrictedarea.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <AreaSphereComponentParams __type="DataForgeComponentParams" __polymorphicType="AreaSphereComponentParams" />
+    <RestrictedAreaParams __type="DataForgeComponentParams" __polymorphicType="RestrictedAreaParams">
+      <redoutParams redoutInGroundVehicle="0" redoutInShip="1" timeToMaxRedout="5" maxRedout="0.8" __type="RestrictedAreaRedoutParams" />
+      <autopilotParams minimumSpeed="20" __type="RestrictedAreaAutopilotParams" />
+      <killParams killActorsOnFoot="1" killGroundVehicles="1" killShips="1" despawnObjects="1" despawnDelay="1" __type="RestrictedAreaKillParams">
+        <allowTagsOnLoad />
+      </killParams>
+      <hudMessageParams proximityWarningMinDistance="150" proximityWarningMaxTime="10" proximityWarningDetectionConeAngle="60" autopilotMessage="@dfm_ui_RestrictedAreaAutopilot" proximityMessageTimer="5" nearWarningMessage="@dfm_ui_RestrictedAreaEnter" leaveWarningMessage="@dfm_ui_RestrictedAreaLeave" __type="RestrictedAreaHUDMessageParams">
+        <proximityWarningMessages>
+          <LocID value="@dfm_ui_RestrictedAreaLeft" />
+          <LocID value="@dfm_ui_RestrictedAreaRight" />
+          <LocID value="@dfm_ui_RestrictedAreaAbove" />
+          <LocID value="@dfm_ui_RestrictedAreaBelow" />
+          <LocID value="@dfm_ui_RestrictedAreaAhead" />
+          <LocID value="@dfm_ui_RestrictedAreaBehind" />
+        </proximityWarningMessages>
+      </hudMessageParams>
+    </RestrictedAreaParams>
+  </Components>
+</EntityClassDefinition.RestrictedArea>

@@ -1,0 +1,278 @@
+<EntityClassDefinition.GRIN_STV_Seat_Driver Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="f4fc95a6-52d8-48bf-9f0e-93000be78536" __path="libs/foundry/records/entities/scitem/vehicles/seat/grin_stv_seat_driver.xml">
+  <tags>
+    <Reference value="d0d29c20-f5e2-46f7-9d53-cc90f6ac63f2" />
+    <Reference value="275db83d-5b41-4ebc-bcd7-d325220af86a" />
+  </tags>
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="Seat" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="819545f4-18af-49a6-814e-ca4fd08f56e5" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_Name_TARG_Controller" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="GRIN_STV_Driver_Seat" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences />
+    </SEntityComponentSequencerParams>
+    <SCItemSeatParams availableOperatorModes="1bbe7903-5c68-4407-80fd-60fe9e6edf00" seatType="HOTAS_C_L" controlTemplate="ctrl_Yoke_pedals" transitionTemplate="trans_GRIN_STV" minYaw="-70" maxYaw="70" minPitch="-65" maxPitch="65" setYawPitchLimits="0" userAnimationDatabase="Animations/Mannequin/ADB/SCItems/Vehicles/SCItemSeat/GRIN_ROC_Seat/GRIN_ROC_Seat_Driver_HumanAnims.adb" userScopeContext="SeatUser" userSyncedScopeContext="SyncedEntity" dashboardAnimationDatabase="Animations/Mannequin/ADB/SCItems/Vehicles/SCItemSeat/GRIN_ROC_Seat/GRIN_ROC_Seat_Driver_HumanAnims.adb" dashboardScopeContext="SeatDashboard" vehicleFragmentOverride="" vehicleScopeContext="" useSyncedEnslavement="1" useAnimationBasedTransition="1" supportPlayerAnimatedActions="0" allowRelaxedPose="0" allowDeadOrUnconscious="0" landingView="00000000-0000-0000-0000-000000000000" seatFOV="70a3b7ac-a87b-474f-88bc-51acbb660c40" usableInteraction="null" enterDefaultModeInteraction="null" enterScanModeInteraction="null" enterQuantumModeInteraction="null" fpHeadAdjustmentRecord="00000000-0000-0000-0000-000000000000" lookAheadOverwriteRecord="00000000-0000-0000-0000-000000000000" gforceHeadBobOverwriteRecord="00000000-0000-0000-0000-000000000000" headTrackingPositionLimitOverwriteRecord="00000000-0000-0000-0000-000000000000" armorMoveViewRestrictions="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatParams">
+      <ejection>
+      </ejection>
+      <actorAttachment type="Seat" boneName="pos_driver_sit" stance="Seated" __type="SCSeatActorAttachmentParams" />
+      <views>
+        <Reference value="5be5f08f-1c4a-4e52-bd67-04dbc1664b5d" />
+        <Reference value="1440288b-8eb6-4cfe-b6e2-9c56658725db" />
+        <Reference value="fdbeade6-ba7e-480e-b734-1174e0b68d38" />
+      </views>
+      <QTViews />
+    </SCItemSeatParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="SeatEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_use_driver_seat" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SeatExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_seat" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="OpenDoor" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_open_door" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="CloseDoor" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_close_door" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Driver" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[3]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Exit" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="1" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="Ignore_VisAreas" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Vehicles/GRIN/STV/grin_stv_seat_driver.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants>
+          <SMaterialNodeParams Tags="Paint_STV_Grey" __type="SMaterialNodeParams">
+            <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+            <Palette RootRecord="41a890f6-61dd-48db-8680-23b12207721c" ChildPath="" __type="TintPaletteRef" />
+            <materialVariants />
+          </SMaterialNodeParams>
+          <SMaterialNodeParams Tags="Paint_STV_Green_Black" __type="SMaterialNodeParams">
+            <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+            <Palette RootRecord="007dd7b9-b81a-4407-9cf5-cd1e4b80ed5e" ChildPath="" __type="TintPaletteRef" />
+            <materialVariants />
+          </SMaterialNodeParams>
+          <SMaterialNodeParams Tags="Paint_STV_Silver_Blue" __type="SMaterialNodeParams">
+            <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+            <Palette RootRecord="6051ff21-1718-455b-8df0-b7a2c7dd15aa" ChildPath="" __type="TintPaletteRef" />
+            <materialVariants />
+          </SMaterialNodeParams>
+        </materialVariants>
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="10" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SAnimationControllerParams AnimationDatabase="SCItems\Ships\SCItemSeat\SCItemSeatEmptyAnims.adb" AnimationController="SCItems\Ships\SCItemSeat\SCItemSeatControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+        <AnimationJointControl __type="AnimationJointControl">
+          <variables>
+            <AnimationPlayerInputVariable name="VehicleYaw" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationPlayerInputVariable">
+              <range minimum="-1" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="1" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationPlayerInputVariable>
+            <AnimationPlayerInputVariable name="VehiclePower" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationPlayerInputVariable">
+              <range minimum="-1" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="1" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationPlayerInputVariable>
+          </variables>
+          <movements>
+            <AnimationJointMovement joint="yoke" __type="AnimationJointMovement">
+              <rotations>
+                <AnimationJointLinearRotation variable="AnimationJointControls.AnimationJointControl.variables[0]" fromStartValus="-1" fromEndValus="1" toStartAngle="-30" toEndAngle="30" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearRotation" />
+              </rotations>
+              <translations>
+              </translations>
+            </AnimationJointMovement>
+            <AnimationJointMovement joint="pedal_right" __type="AnimationJointMovement">
+              <rotations>
+                <AnimationJointLinearRotation variable="AnimationJointControls.AnimationJointControl.variables[1]" fromStartValus="0" fromEndValus="1" toStartAngle="5" toEndAngle="15" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearRotation" />
+              </rotations>
+              <translations>
+              </translations>
+            </AnimationJointMovement>
+            <AnimationJointMovement joint="pedal_left" __type="AnimationJointMovement">
+              <rotations>
+                <AnimationJointLinearRotation variable="AnimationJointControls.AnimationJointControl.variables[1]" fromStartValus="-1" fromEndValus="0" toStartAngle="0" toEndAngle="-15" __type="AnimationJointTransform" __polymorphicType="AnimationJointLinearRotation" />
+              </rotations>
+              <translations>
+              </translations>
+            </AnimationJointMovement>
+          </movements>
+          <animations />
+        </AnimationJointControl>
+      </AnimationJointControls>
+      <AnimationControlActorIKs>
+        <AnimationControlActorIK limb="RgtArm05" bone="IK_hand_right_pilot" blendTime="1" alignEndEffector="1" __type="AnimationControlActorIK" />
+        <AnimationControlActorIK limb="LftArm05" bone="IK_hand_left_pilot" blendTime="1" alignEndEffector="1" __type="AnimationControlActorIK" />
+        <AnimationControlActorIK limb="RgtLeg02" bone="IK_foot_right_pilot" blendTime="1" alignEndEffector="1" __type="AnimationControlActorIK" />
+        <AnimationControlActorIK limb="LftLeg02" bone="IK_foot_left_pilot" blendTime="1" alignEndEffector="1" __type="AnimationControlActorIK" />
+      </AnimationControlActorIKs>
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SCItemShipComputerParams definition="f20524fa-d079-4d05-9868-3e477c545982" __type="DataForgeComponentParams" __polymorphicType="SCItemShipComputerParams" />
+    <SCRTTCameraParams onFootCameraView="00000000-0000-0000-0000-000000000000" vehicleCameraView="0820ca6b-045b-461f-bbb5-fce912d82545" defaultCamDistance="0.4" __type="DataForgeComponentParams" __polymorphicType="SCRTTCameraParams" />
+    <SSCItemTargetSelectorComponentParams globalTargetingParams="c7fbc0d8-16dc-4181-9e71-dede73aa84b5" maxPinnedTargets="3" outerAngle="45" innerAngle="5" autoSelectionTimer="0.5" targetableItemTypesRecord="e4e957c1-cb94-4e4f-b937-0703f4efa200" cycleFriendlyTargetInteraction="null" cycleHostileTargetInteraction="null" cycleAllTargetsInteraction="null" cyclePinnedTargetInteraction="null" cycleSubTargetInteraction="null" beginSubTargetingInteraction="null" endSubTargetingInteraction="null" pinTargetInteraction="null" unpinTargetInteraction="null" hudParamsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SSCItemTargetSelectorComponentParams">
+      <arMarkersParams lockedRatioClose="19.8" __type="SARMarkersParams" />
+      <arTrailParams quatLifetime="7" quatDistance="10" maxFadeDistance="50" minFadeDistance="30" startDistance="0" __type="SARTrailParams" />
+    </SSCItemTargetSelectorComponentParams>
+    <UIAudioComponentEntityComponentParams UIAudioDef="e316fd12-4817-4945-a70b-58477ceb6859" useEntityClass="00000000-0000-0000-0000-000000000000" dialogueContext="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIAudioComponentEntityComponentParams">
+      <offset>
+      </offset>
+      <videoAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioPauseTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioResumeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+    </UIAudioComponentEntityComponentParams>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
+    <SHealthComponentParams Health="500" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
+    <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+  </Components>
+</EntityClassDefinition.GRIN_STV_Seat_Driver>

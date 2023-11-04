@@ -1,0 +1,83 @@
+<EntityClassDefinition.HTNK_MISC_Hull_C Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="e88281d2-def8-4137-be27-5e9caaef6bc7" __path="libs/foundry/records/entities/scitem/ships/fueltanks/htnk_misc_hull_c.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="FuelTank" SubType="Fuel" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="flightReady" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@refueling_ui_General_InternalTank" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemFuelTankParams fillRate="10000" drainRate="10000" capacity="4385000" reserveCapacity="0.025" haltFuelBelowLevel="0.01" continueFuelAboveLevel="0.05" openState="null" closedState="null" pumpingState="null" __type="DataForgeComponentParams" __polymorphicType="SCItemFuelTankParams">
+      <fuelFlowLoopStartAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <fuelFlowLoopStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <fuelFillDrainRateAudioRtpc rtpc="" __type="AudioRtpc" />
+      <fuelFillLevelAudioRtpc rtpc="" __type="AudioRtpc" />
+      <fuelReserveFillLevelAudioRtpc rtpc="" __type="AudioRtpc" />
+    </SCItemFuelTankParams>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemResourceComponentParams isResourceNetworked="1" isRelay="1" isConnectedToRoom="0" wirelessConnection="0" defaultPriority="80" __type="DataForgeComponentParams" __polymorphicType="ItemResourceComponentParams">
+      <states>
+        <ItemResourceState name="MoveFuel" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaStorage __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaStorage">
+              <consumption resource="Fuel" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="0.25" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <generation resource="Fuel" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="0.25" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </generation>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values />
+              </consumptionComposition>
+            </ItemResourceDeltaStorage>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+      </states>
+      <controlParameters />
+      <controlBlocks />
+      <signatureParams nominalEM="0" decayRate="0.15" __type="ItemResourceSignatureParams" />
+    </ItemResourceComponentParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports />
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <ResourceContainer mass="0" immutable="0" defaultCompositionFillFactor="1" __type="DataForgeComponentParams" __polymorphicType="ResourceContainer">
+      <capacity>
+        <SStandardCargoUnit standardCargoUnits="5" __type="SBaseCargoUnit" __polymorphicType="SStandardCargoUnit" />
+      </capacity>
+      <inclusiveResources />
+      <exclusiveResources />
+      <inclusiveGroups>
+        <Reference value="3a31ccbf-bb2d-4a26-9b21-2f7d0222f4a6" />
+      </inclusiveGroups>
+      <exclusiveGroups />
+      <defaultComposition>
+        <ResourceContainerDefaultCompositionEntry entry="a11394c9-ad7c-404d-9209-3a5e57bb4aa4" weight="1" __type="ResourceContainerDefaultCompositionEntry" />
+      </defaultComposition>
+    </ResourceContainer>
+  </Components>
+</EntityClassDefinition.HTNK_MISC_Hull_C>

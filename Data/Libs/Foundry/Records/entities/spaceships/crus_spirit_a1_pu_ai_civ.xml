@@ -1,0 +1,2512 @@
+<EntityClassDefinition.CRUS_Spirit_A1_PU_AI_CIV Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="b6cc39fd-7c14-4568-b261-197834e51116" __type="EntityClassDefinition" __ref="cb57bfd0-8eef-4091-b7a0-3fe032998659" __path="libs/foundry/records/entities/spaceships/crus_spirit_a1_pu_ai_civ.xml">
+  <tags>
+    <Reference value="5f12dd31-4ff9-41a5-b5e2-916270351ba9" />
+    <Reference value="546320ee-f027-4b16-ac2c-77186012655f" />
+    <Reference value="32d711ab-2106-43f8-8066-f953ce5db8c4" />
+    <Reference value="a6aa0c63-b9b8-46b2-a6ad-d713dc65486a" />
+  </tags>
+  <StaticEntityClassData>
+    <EntityUIDisplayParams displayDescription="@LOC_UNINITIALIZED" displayThumbnail="" displayImage="" displayIcon="" sortString="" __type="EntityClassStaticDataParams" __polymorphicType="EntityUIDisplayParams">
+      <trackerProperties>
+        <SVehicleEntryTrackerParams __type="SObjectDataBankEntryTrackerParams" __polymorphicType="SVehicleEntryTrackerParams" />
+      </trackerProperties>
+    </EntityUIDisplayParams>
+    <SurfaceMFXEntityParams customEffect="Ships_Collision_Effects_S4" __type="EntityClassStaticDataParams" __polymorphicType="SurfaceMFXEntityParams" />
+    <CollisionMFXEntityParams customEffect="Ships_Collision_Effects_S5" __type="EntityClassStaticDataParams" __polymorphicType="CollisionMFXEntityParams" />
+    <DefaultEntitlementEntityParams entitlementPolicy="8a1fdd48-7896-4774-a110-2466190e1a07" canEntitleThroughWebsite="0" __type="EntityClassStaticDataParams" __polymorphicType="DefaultEntitlementEntityParams" />
+    <WakeMFXEntityParams customEffect="Ships_Wake_Effects" emissionSizeScaleToShipRatio="0.75" distanceOffSurface="0.25" raycastLengthMultiplier="1" sizeScaleMultiplier="0.25" strengthDistanceFalloffThreshold="0.5" velocityToGenerateWake="5" velocityToAchieveMaxWakeStrength="50" __type="EntityClassStaticDataParams" __polymorphicType="WakeMFXEntityParams" />
+    <SEntityInsuranceProperties restoreOnClaim="1" __type="EntityClassStaticDataParams" __polymorphicType="SEntityInsuranceProperties">
+      <shipInsuranceParams shipEntityClassName="CRUS_Spirit_A1" baseWaitTimeMinutes="6.75" mandatoryWaitTimeMinutes="2.25" baseExpeditingFee="3375" __type="ShipInsuranceParams" />
+    </SEntityInsuranceProperties>
+    <EAEntityDataParams inclusionMode="ReadyToInclude" __type="EntityClassStaticDataParams" __polymorphicType="EAEntityDataParams">
+      <inclusionParams __type="EAEntityInclusionParams">
+        <tags __type="TagList">
+          <tags>
+            <Reference value="2efe0a5d-9b0f-484f-be7f-a666686bcb5a" />
+            <Reference value="f07ed549-0968-4475-92bc-344797a30d43" />
+            <Reference value="44e0e86a-1727-40bb-8c8d-06b10efb3bf7" />
+            <Reference value="449df0f9-b23e-4fb1-8a8c-966fef87753c" />
+            <Reference value="b1c08b95-96f2-4361-abda-fa0816dfc355" />
+            <Reference value="ee36241a-d51f-4f47-b464-365e801fa0a6" />
+            <Reference value="de58fe96-d9cf-4a17-966f-c4015dffc4d0" />
+          </tags>
+        </tags>
+      </inclusionParams>
+    </EAEntityDataParams>
+    <SEntityDynamicLocationProperties dynamicallyUpdatePersistanceLocation="1" __type="EntityClassStaticDataParams" __polymorphicType="SEntityDynamicLocationProperties" />
+  </StaticEntityClassData>
+  <Components>
+    <VehicleComponentParams landingSystem="f972ad2a-9fe3-4758-b916-44892300f6e0" manufacturer="63685f47-b0cc-4ebe-8f16-72793a5cd6e0" vehicleDefinition="Scripts/Entities/Vehicles/Implementations/Xml/crus_spirit.xml" modification="" allowSoftDestruction="1" ignoreHostility="0" dogfightEnabled="0" unmoveable="0" isGravlevVehicle="0" vehicleHullDamageNormalizationValue="2500" incomingDamageModifierToAI="1" incomingVehicleDamageModifierFromAI="1" aiDamageModifiers="61d77aed-e544-4d87-b93d-727df588c282" emergencyStatusDamageThreshold="0.25" emergencyStatusChargeThreshold="0.8" crewSize="2" vehicleName="@vehicle_NameCRUS_A1_Spirit" vehicleDescription="@vehicle_DescCRUS_A1_Spirit" vehicleImagePath="" vehicleCareer="@vehicle_focus_combat" vehicleCareerRef="2bf4345e-cf3c-4ecb-91ce-f9daa8ff47f8" vehicleRole="@vehicle_class_bomber" vehicleRoleRef="c6b5d703-1288-4c03-946a-bcd09377c6ce" DashboardCanvasConfig="00000000-0000-0000-0000-000000000000" inventoryContainerParams="4b2dbad4-ca1c-4016-9d1c-7850f565a160" __type="DataForgeComponentParams" __polymorphicType="VehicleComponentParams">
+      <maxBoundingBoxSize x="47.5" y="44" z="10" __type="Vec3" />
+      <cargoEntrySize x="0" y="0" __type="Vec2" />
+      <aiProperties>
+        <VehicleAIPropertiesParams __type="VehicleAIPropertiesParams">
+          <aiTargetingParams shipAttackerScore="1" turretAttackerScore="0.5" __type="VehicleAITargetingParams" />
+        </VehicleAIPropertiesParams>
+      </aiProperties>
+      <objectContainers>
+        <SVehicleObjectContainerParams fileName="ObjectContainers/Ships/CRUS/Spirit/int_front.socpak" guid="f5eb57ea-6c8f-408e-a253-5cf72121a9bd" boneName="crus_spirit" shouldRequestNavMeshRegenerationOnLoad="0" __type="SAttachableObjectContainerData" __polymorphicType="SVehicleObjectContainerParams">
+          <Offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </Offset>
+        </SVehicleObjectContainerParams>
+        <SVehicleObjectContainerParams fileName="ObjectContainers/Ships/CRUS/Spirit/int_middle_a1_bomber.socpak" guid="76b9ca91-7e51-4f23-a1c4-21c234ff8ec6" boneName="crus_spirit" shouldRequestNavMeshRegenerationOnLoad="0" __type="SAttachableObjectContainerData" __polymorphicType="SVehicleObjectContainerParams">
+          <Offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </Offset>
+        </SVehicleObjectContainerParams>
+        <SVehicleObjectContainerParams fileName="ObjectContainers/Ships/CRUS/Spirit/int_rear.socpak" guid="65d93585-9ce9-4d2f-9f20-7067e1eb091d" boneName="crus_spirit" shouldRequestNavMeshRegenerationOnLoad="0" __type="SAttachableObjectContainerData" __polymorphicType="SVehicleObjectContainerParams">
+          <Offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </Offset>
+        </SVehicleObjectContainerParams>
+        <SVehicleObjectContainerParams fileName="ObjectContainers/Ships/CRUS/Spirit/ext_lg.socpak" guid="4e59f48b-b773-4028-a082-fac746392a41" boneName="crus_spirit" shouldRequestNavMeshRegenerationOnLoad="0" __type="SAttachableObjectContainerData" __polymorphicType="SVehicleObjectContainerParams">
+          <Offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </Offset>
+        </SVehicleObjectContainerParams>
+        <SVehicleObjectContainerParams fileName="ObjectContainers/Ships/CRUS/Spirit/ext_lg_a1.socpak" guid="73270fcc-ebfa-4ab9-89b7-9a97ccf0e151" boneName="crus_spirit" shouldRequestNavMeshRegenerationOnLoad="0" __type="SAttachableObjectContainerData" __polymorphicType="SVehicleObjectContainerParams">
+          <Offset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </Offset>
+        </SVehicleObjectContainerParams>
+      </objectContainers>
+      <physicsGrid inheritGravity="0" gridType="Small" cellSize="2" gridPartsOnly="0" voxelDataFile="Objects\Spaceships\Ships\CRUS\spirit\exterior\crus_spirit_local_grid.vvg" __type="SEntityBasePhysicsGridParams" __polymorphicType="SVehiclePhysicsGridParams">
+        <gravity x="0" y="0" z="-9.81" __type="Vec3" />
+        <physicsProxy path="Objects\Spaceships\Ships\CRUS\spirit\exterior\crus_spirit_local_grid.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceCGF" />
+      </physicsGrid>
+      <shieldSDFParams>
+        <SDFSetParams setType="Shield" isoOverride="2.8" surfaceIdName="shield_human" __type="SDFSetParams" />
+      </shieldSDFParams>
+      <experimental delayDestruction="0" __type="SVehicleExperimentalParams" />
+    </VehicleComponentParams>
+    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
+      <loadout>
+        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+          <WearRange>
+          </WearRange>
+          <InventoryItems />
+          <entries>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_paint" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_pilot_seat" entityClassName="CRUS_Spirit_Seat_Pilot" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_pilot_seat_access" entityClassName="CRUS_Spirit_Seat_Access_Pilot" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_pilot_dashboard" entityClassName="CRUS_Spirit_Pilot_Dashboard" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="Radar_Helper" entityClassName="CRUS_Spirit_RADR_Display" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="Display_HUD" entityClassName="Projector_HUD_Generic" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="" entityClassName="" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_copilot_seat" entityClassName="CRUS_Spirit_Seat_Copilot" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_copilot_seat_access" entityClassName="CRUS_Spirit_Seat_Access_Copilot" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_copilot_dashboard" entityClassName="CRUS_Spirit_Copilot_Dashboard" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="" entityClassName="" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_capacitor_assignment" entityClassName="Controller_CapacitorAssignment" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_comms" entityClassName="Controller_Comms" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_cooler" entityClassName="Controller_Cooler" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_energy" entityClassName="Controller_Energy" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_flight" entityClassName="Controller_Flight_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_light" entityClassName="Controller_Light" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_missile" entityClassName="Controller_Missile_Spirit_A1" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_scanner" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_shield" entityClassName="Controller_Shield_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_weapon" entityClassName="Controller_Weapon" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_weapon_copilot" entityClassName="Controller_Weapon" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_regen_pool" entityClassName="WeaponRegenPool_Crew_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_regen_pool_turrets" entityClassName="WeaponRegenPool_Turret_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="landingpad_helper" entityClassName="Default_LandingSystem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cooler" entityClassName="COOL_AEGS_S02_Boreal_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_fuel" entityClassName="HTNK_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_ping" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_power_plant" entityClassName="POWR_AMRS_S02_UltraFlux_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_quantum_drive" entityClassName="QDRV_WETK_S02_Yeager_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_quantum_fuel" entityClassName="QTNK_Crus_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_shield_generator" entityClassName="SHLD_GODI_S02_FullStop_SCItem" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_radar" entityClassName="RADR_CHCO_S02_Surveyor" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_intake_left" entityClassName="INTK_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_intake_right" entityClassName="INTK_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_countermeasure_launcher_left" entityClassName="CRUS_Spirit_CML_Flare" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_countermeasure_launcher_right" entityClassName="CRUS_Spirit_CML_Chaff" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_turret_rear" entityClassName="CRUS_Spirit_SCItem_Remote_Turret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="turret_left" entityClassName="BEHR_LaserCannon_S2" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="turret_right" entityClassName="BEHR_LaserCannon_S2" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_nose" entityClassName="CRUS_Spirit_Nose_Turret" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="hardpoint_left" entityClassName="BEHR_LaserCannon_S3" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="hardpoint_right" entityClassName="BEHR_LaserCannon_S3" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_wing_left" entityClassName="BEHR_LaserCannon_S3" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_wing_right" entityClassName="BEHR_LaserCannon_S3" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_missiles_wing_left" entityClassName="MRCK_S04_BEHR_Dual_S03" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_01_attach" entityClassName="MISL_S03_CS_FSKI_Arrester" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_02_attach" entityClassName="MISL_S03_CS_FSKI_Arrester" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_missiles_wing_right" entityClassName="MRCK_S04_BEHR_Dual_S03" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_01_attach" entityClassName="MISL_S03_CS_FSKI_Arrester" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_02_attach" entityClassName="MISL_S03_CS_FSKI_Arrester" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_bomb_system" entityClassName="BMBRCK_CRUS_Spirit_A1" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+                <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                  <entries>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_01_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_02_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_03_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_04_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_05_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_06_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_07_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_08_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_09_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                    <SItemPortLoadoutEntryParams itemPortName="missile_10_attach" entityClassName="BOMB_S05_FSKI" __type="SItemPortLoadoutEntryParams">
+                      <inventoryContainer>
+                      </inventoryContainer>
+                      <loadout>
+                      </loadout>
+                    </SItemPortLoadoutEntryParams>
+                  </entries>
+                </SItemPortLoadoutManualParams>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_armour" entityClassName="ARMR_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_extinguisher_front" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_extinguisher_rear" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_ramp" entityClassName="CRUS_Spirit_Ramp" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_personal_storage_left" entityClassName="PersonalStorage_CRUS_Spirit_Left" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_personal_storage_right" entityClassName="PersonalStorage_CRUS_Spirit_Right" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_weapon_rack" entityClassName="Weapon_Rack_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_side_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_side_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_aux_rear_left" entityClassName="CRUS_Spirit_Thruster_VTOL_Aux" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_aux_rear_right" entityClassName="CRUS_Spirit_Thruster_VTOL_Aux" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_bottom_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_bottom_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_side_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_side_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_top_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_front_top_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_aux_front_left" entityClassName="CRUS_Spirit_Thruster_VTOL_Aux" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_aux_front_right" entityClassName="CRUS_Spirit_Thruster_VTOL_Aux" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_01_left" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_02_left" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_03_left" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_04_left" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_bottom_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_top_left" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_retro_left" entityClassName="CRUS_Spirit_Thruster_Retro" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_main_left" entityClassName="CRUS_Spirit_Thruster_VTOL_Main" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_01_right" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_02_right" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_03_right" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_04_right" entityClassName="CRUS_Spirit_Thruster_Main_A" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_bottom_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_rear_top_right" entityClassName="CRUS_Spirit_Thruster_Mav" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_retro_right" entityClassName="CRUS_Spirit_Thruster_Retro" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_vtol_main_right" entityClassName="CRUS_Spirit_Thruster_VTOL_Main" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_fuel" entityClassName="Controller_Fuel" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_fuel_port" entityClassName="DockingTube_Fuel_Ports_CRUS_Spirit" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_air_traffic_controller" entityClassName="CRUS_Spirit_ShipATCDataManager" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_controller_door" entityClassName="Controller_Door" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_self_destruct" entityClassName="VHCL_SelfDestruct_45s" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_turret_rear_radar" entityClassName="RADR_CHCO_S02_Surveyor" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cargogrid_left" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cargogrid_right" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_body" entityClassName="CRUS_Spirit_A1_Exterior" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_nose" entityClassName="CRUS_Spirit_A1_Exterior_Nose" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_blankingplate" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_backplate_left" entityClassName="CRUS_Spirit_Thruster_Main_B" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_thruster_main_backplate_right" entityClassName="CRUS_Spirit_Thruster_Main_B" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_fuel_port_ground" entityClassName="Door_Ship_Exterior_CRUS_Spirit_Fuelport" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_fakedoortoggle" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cockpit_flair" entityClassName="" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+          </entries>
+        </SItemPortLoadoutManualParams>
+      </loadout>
+    </SEntityComponentDefaultLoadoutParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="PowerOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_power_on" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="PowerOff" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_power_off" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SEntityComponentHostilityCompositeParams emptyFaction="00000000-0000-0000-0000-000000000000" useOnlyPrimaryChildForHostility="0" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentHostilityCompositeParams">
+      <wantedLevelHostility>
+      </wantedLevelHostility>
+    </SEntityComponentHostilityCompositeParams>
+    <SEntityComponentCrewManifestParams crewManifest="b6e5df43-a37a-4b94-bfce-28f3a56683f5" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentCrewManifestParams" />
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="NOITEM_Vehicle" SubType="Vehicle_Spaceship" Size="4" Grade="1" Manufacturer="63685f47-b0cc-4ebe-8f16-72793a5cd6e0" inheritParentManufacturer="0" Tags="CRUS_Spirit_A1 Ship_Dock_Refuel" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@vehicle_NameCRUS_A1_Spirit" ShortName="@LOC_EMPTY" Description="@vehicle_DescCRUS_A1_Spirit" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemPurchasableParams displayName="@vehicle_NameCRUS_A1_Spirit" displayType="@vehicle_DescCRUS_A1_Spirit" displayThumbnail="" allowTryOn="0" allowQuickBuy="0" tryOnInteractionText="@shop_ui_item_action_preview" defaultAttachToPortName="" interactionPointTemplate="4d750337-0281-4759-8c5f-2f309dec1880" __type="DataForgeComponentParams" __polymorphicType="SCItemPurchasableParams">
+      <Display>
+      </Display>
+      <disabledLoadoutInteractions>
+        <DisabledLoadoutInteraction itemType="FlightController" __type="DisabledLoadoutInteraction">
+          <lockedInteractionNames>
+            <String value="EngineOn" />
+            <String value="EngineOff" />
+          </lockedInteractionNames>
+        </DisabledLoadoutInteraction>
+        <DisabledLoadoutInteraction itemType="SeatDashboard" __type="DisabledLoadoutInteraction">
+          <lockedInteractionNames>
+            <String value="FlightReady" />
+            <String value="Flight_Ready" />
+          </lockedInteractionNames>
+        </DisabledLoadoutInteraction>
+        <DisabledLoadoutInteraction itemType="Seat" __type="DisabledLoadoutInteraction">
+          <lockedInteractionNames>
+            <String value="Ejection" />
+            <String value="ejection" />
+          </lockedInteractionNames>
+        </DisabledLoadoutInteraction>
+      </disabledLoadoutInteractions>
+      <tutorialParams>
+      </tutorialParams>
+      <interactionPoints />
+    </SCItemPurchasableParams>
+    <SARDataComponentParams dataType="ShopItem" rangeMin="1" rangeMax="5" labelMovementType="Fixed" visibleThroughWalls="1" labelZOrientationOffset="0" title1="@LOC_EMPTY" title2="@LOC_EMPTY" subtitle1="@LOC_EMPTY" subtitle2="@LOC_EMPTY" description="@LOC_EMPTY" scaleCapDistance="10" __type="DataForgeComponentParams" __polymorphicType="SARDataComponentParams">
+      <labelAttachOffset x="0" y="0" z="0" __type="Vec3" />
+      <queryOffset x="0" y="0" z="0" __type="Vec3" />
+      <labelScale x="1" y="1" z="1" __type="Vec3" />
+    </SARDataComponentParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects>
+              <SEntityEffectSystem_ParticleTagEffect name="Contrail (Wingtip Vortex)" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="b56ebb1c-06e9-4f51-8ed1-bc7258d2dc5b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Contrails\contrail_generic.contrail.idle_contrail_wing" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="contrail_*" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="af644870-38bd-4156-8ed6-695410a9b195" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="c076bb86-2c75-4162-9b4f-77bee24bf8e2" particleProperty="alpha" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Atmospheric Entry (Front)" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="ba91ec38-d173-4672-bfa0-de6ec45096dc" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Atmospheric_Entry\sdf_atmospheric_entry.Medium.medium_default" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="8f98a162-5e8e-441b-9104-38af743509aa" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="6734810c-a27b-4cc5-9814-d7048fbb02a6" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="8d44e451-70e3-4eaa-91d0-7e0e4cd1f3f3" particleProperty="emissionSize" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="6734810c-a27b-4cc5-9814-d7048fbb02a6" particleProperty="count" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Spooling - Head Wake" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="61d5cb16-dccd-4bab-8aa9-153caae6052b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.Spooling.CRUS_Spirit_QDrive_Spooling_Head" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="74cb7817-ec56-4256-ab11-e2129bdc8a2d" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Spooling - Trail" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="61d5cb16-dccd-4bab-8aa9-153caae6052b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.Spooling.CRUS_Spirit_QDrive_Spooling_Trails" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="contrail_*" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="74cb7817-ec56-4256-ab11-e2129bdc8a2d" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Mid - Wake Head" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="b91e6b01-c903-4ae1-81e2-84886206c8e2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.QT.CRUS_Spirit_QDrive_Head" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="874a42bd-ff59-494f-b295-4f6fbb36b46c" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Mid - Trails" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="b91e6b01-c903-4ae1-81e2-84886206c8e2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.QT.CRUS_Spirit_QDrive_Trails" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Hosted" boneAttachment="contrail_*" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="874a42bd-ff59-494f-b295-4f6fbb36b46c" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Mid - Starfield" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="b91e6b01-c903-4ae1-81e2-84886206c8e2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\Quantum_Drive_Generic.First_Person" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="874a42bd-ff59-494f-b295-4f6fbb36b46c" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Quantum Travel - Interdiction - Loop" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\Quantum_Drive_Generic.all.qdrive_interdict_loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+            </tagEffects>
+            <triggerEffects>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - Start - Flash" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="da5af381-1829-42d0-aa5c-4a676502112b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.QT.CRUS_Spirit_QDrive_Start_Flash" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - Start - Pinch" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="942ad10d-b091-469b-863c-b9e776fd0846" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\Quantum_Drive_Generic.qdrive_pinch" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="48986e79-65f1-4cda-8fc7-51d885db52b8" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers />
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTriggerEffect>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - End - Flash" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="a98eccbc-3c5c-45d0-a3b0-71bea427c585" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.End.CRUS_Spirit_QDrive_End_Flash" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - End - Trail" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="a98eccbc-3c5c-45d0-a3b0-71bea427c585" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\crus_spirit_qt.End.CRUS_Spirit_QDrive_End_Trails" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="contrail_*" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - Interdiction - End" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="0f2d05b6-856c-47f4-ae34-31cfa87b7102" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\Quantum_Drive_Generic.all.qdrive_interdict_flash_end" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+              <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel - Interdiction - End Front" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="0f2d05b6-856c-47f4-ae34-31cfa87b7102" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
+                <particleEffect path="Spaceships\Quantum_Drive\Quantum_Drive_Generic.all.qdrive_interdict_flash_end_front" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="31" z="2" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects>
+              <SEntityEffectSystem_SoundTagEffect name="Q Drive Sustain" enabled="1" multiPosition="0" useDefaultProxy="1" tag="b91e6b01-c903-4ae1-81e2-84886206c8e2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_QDrive_Sustain" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Q Drive Spool" enabled="1" multiPosition="0" useDefaultProxy="1" tag="61d5cb16-dccd-4bab-8aa9-153caae6052b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_QDrive_Spool" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HiTech_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+            </tagEffects>
+            <triggerEffects>
+              <SEntityEffectSystem_SoundTriggerEffect name="Shield Power Up" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="1a1cff8e-42b2-4ae8-9a77-c0d9f507f214" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSSG_Shared_Human_Shield_On" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="Flight System Power On" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="b0ebfa1f-c6b8-479f-bb34-6f797a0f4a2b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSMC_Generic_Cockpit_Control_Power_On" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="Hardpoint_Cockpit_Audio" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="Flight System Power Off" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="20a3e66c-4ee0-4e3e-9181-4d6ecfeb6619" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSMC_Generic_Cockpit_Control_Power_Off" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="Hardpoint_Cockpit_Audio" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="Q Drive Exit Flash" enabled="1" multiPosition="0" useDefaultProxy="1" trigger="a98eccbc-3c5c-45d0-a3b0-71bea427c585" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_QDrive_Exit" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" boneAttachment="Hardpoint_Cockpit_Audio" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_BoneAttachment>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="Q Drive Enter" enabled="1" multiPosition="0" useDefaultProxy="1" trigger="da5af381-1829-42d0-aa5c-4a676502112b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_QDrive_Enter" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="0f2d05b6-856c-47f4-ae34-31cfa87b7102" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_QDrive_Interdiction_Exit" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+          <SEntityEffectSystem_AudioEnvironmentCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_AudioEnvironmentCategory">
+            <tagEffects />
+            <triggerEffects>
+              <SEntityEffectSystem_AudioEnvironmentFeedbackZoneTriggerEffect name="Explosion Debris" enabled="1" zone="da4a1ab8-a3ba-496b-a014-8918f26eca1c" trigger="c7d52ac4-2a9e-4951-b660-e3c34387ebb0" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_AudioEnvironmentFeedbackZoneTriggerEffect">
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+              </SEntityEffectSystem_AudioEnvironmentFeedbackZoneTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_AudioEnvironmentCategory>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <SAtmosphericEffectsComponentParams __type="DataForgeComponentParams" __polymorphicType="SAtmosphericEffectsComponentParams">
+      <atmosphericHeatingSettings enable="1" controlTag="ba91ec38-d173-4672-bfa0-de6ec45096dc" exitTag="00000000-0000-0000-0000-000000000000" strengthParameter="6734810c-a27b-4cc5-9814-d7048fbb02a6" exitStrengthParameter="00000000-0000-0000-0000-000000000000" __type="SAtmosphericHeatingParams" />
+      <atmosphericEffectTestSettings overrideAtmosphericTrails="0" overrideAtmosphericTrailValue="1" overrideAtmosphericHeating="0" overrideAtmosphericHeatingValue="1" __type="SAtmosphericEffectTestsParams" />
+    </SAtmosphericEffectsComponentParams>
+    <SSCItemControllableManagerParams defaultMasterMode="SCM" masterModeSpoolTime="6" __type="DataForgeComponentParams" __polymorphicType="SSCItemControllableManagerParams">
+      <controllerParams>
+      </controllerParams>
+    </SSCItemControllableManagerParams>
+    <SHealthComponentParams Health="1" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SObjectDataBankParams __type="DataForgeComponentParams" __polymorphicType="SObjectDataBankParams" />
+    <SEntityComponentObjectMetadataParams name="@LOC_EMPTY" hasLocalBounds="1" isDynamic="0" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentObjectMetadataParams">
+      <metadata>
+        <SVehicleObjectMetadataParams __type="SObjectMetadataParams" __polymorphicType="SVehicleObjectMetadataParams" />
+      </metadata>
+    </SEntityComponentObjectMetadataParams>
+    <EntityComponentRoomOccupantParams __type="DataForgeComponentParams" __polymorphicType="EntityComponentRoomOccupantParams" />
+    <SSCSignatureSystemParams bindingURLPrefix="Vehicle" scanCustomData="00000000-0000-0000-0000-000000000000" scanDisplayLayoutOverride="00000000-0000-0000-0000-000000000000" isOverridden="0" enableDetectionOnItemPort="0" __type="DataForgeComponentParams" __polymorphicType="SSCSignatureSystemParams">
+      <radarProperties>
+        <SSCRadarContactProperites contactType="e873bbe9-295d-4ab9-96e7-c9f9f204b01b" __type="SSCRadarContactProperites">
+          <baseSignatureParams>
+          </baseSignatureParams>
+          <crossSectionParams>
+            <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
+              <crossSection x="19000" y="3800" z="18200" __type="Vec3" />
+            </SSCSignatureSystemManualCrossSectionParams>
+          </crossSectionParams>
+          <emissionModifierParams>
+          </emissionModifierParams>
+          <scanBounds>
+          </scanBounds>
+        </SSCRadarContactProperites>
+      </radarProperties>
+      <audioParams>
+      </audioParams>
+      <embeddedScanInfo>
+      </embeddedScanInfo>
+      <detectionTags />
+      <overriddenSize x="0" y="0" z="0" __type="Vec3" />
+    </SSCSignatureSystemParams>
+    <SSuperGUIDComponentParams __type="DataForgeComponentParams" __polymorphicType="SSuperGUIDComponentParams" />
+    <AutopilotParams __type="DataForgeComponentParams" __polymorphicType="AutopilotParams" />
+    <ShipAudioComponentParams vibrationModifierTranslation="1" vibrationModifierRotation="1" vibrationModifierLift="1" vibrationModifierDrag="1" expectedCombinedThrusterSize="12" __type="DataForgeComponentParams" __polymorphicType="ShipAudioComponentParams">
+      <landedSweetener audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <contactSweetener audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <shipMovementRealisticStart audioTrigger="Play_SSMS_Spaceship_SimpleProxy_Realistic_Movement_Template_Medium_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <shipMovementRealisticStop audioTrigger="Stop_SSMS_Spaceship_SimpleProxy_Realistic_Movement_Template_Medium_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <shipMovementSoundSimStart audioTrigger="Play_SSMS_Spaceship_SimpleProxy_SoundSim_Movement_Template_Small_03" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <shipMovementSoundSimStop audioTrigger="Stop_SSMS_Spaceship_SimpleProxy_SoundSim_Movement_Template_Small_03" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <offsetRotation x="0" y="0" z="180" __type="Ang3" />
+      <offsetTranslation x="-3" y="0" z="0" __type="Vec3" />
+      <ifcsOutputsToRtpcs>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_FuelRatio" defaultValue="0" calculateOnlyOnPlayerVehicle="1" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Fuel_Ratio" __type="AudioRtpc" />
+              <behavior>
+                <SAverageValue frameCount="60" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Aerodynamics_DragMagnitude" defaultValue="0" calculateOnlyOnPlayerVehicle="1" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Drag" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="50" releaseSlew="50" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Drag_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="10" releaseSlew="10" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Planet_Altitude" defaultValue="100000" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Altitude" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Planet_HeightAboveGround" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Height_Above_Ground" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingWithLerp lerpingFactor="0.1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingWithLerp" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Atmospheric_Wind_Speed_Translational_Non_Normalised" defaultValue="0" calculateOnlyOnPlayerVehicle="1" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Translational_Wind_Speed_Non_Normalised" __type="AudioRtpc" />
+              <behavior>
+                <SAverageValue frameCount="60" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Planet_AtmosphericDensity" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Atmospheric_Density" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingWithLerp lerpingFactor="0.1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingWithLerp" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Translation_Speed_NonNormalized" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_Speed_NonNormalised" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_AfterburnerEnabledScaled" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_AfterburnerEnabled" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.65" releaseSlew="0.65" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_AfterburnerEnabled_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.3" releaseSlew="0.3" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_AfterburnerEnabled_VerySlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.15" releaseSlew="0.15" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Translation_Acceleration_MaxAll" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_Acceleration_MaxAll_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.33" releaseSlew="0.33" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_CruiseDampener" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="1" releaseSlew="0.025" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_CruiseDampener_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="1" releaseSlew="0.005" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_CruiseDampener_Fast" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="1" releaseSlew="0.08" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_Acceleration_MaxAll" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="1" releaseSlew="1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_CapacitorSurge_MaxAll_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SAudioCapacitor capacity="1" chargeSpeed="15" dischargeSpeed="2" inputThreshold="0.001" __type="SRtpcBehaviour" __polymorphicType="SAudioCapacitor">
+                  <behavior>
+                    <SSmoothingTimeBased attackSlew="0.8" releaseSlew="0.8" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+                  </behavior>
+                </SAudioCapacitor>
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Rotation_Speed_MaxAll" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Rotation_Speed_MaxAll" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="1" releaseSlew="1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Rotation_Speed_MaxAll_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.5" releaseSlew="0.5" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Rotation_Speed_MaxAll_VerySlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.3" releaseSlew="0.22" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Rotation_Dampener_All" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.13" releaseSlew="1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Atmospheric_StagnationTemperature" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="EnvironmentFeedback_Atmospheric_StagnationTemperature" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="100" releaseSlew="100" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Translation_Speed" defaultValue="0" calculateOnlyOnPlayerVehicle="1" sendToChildEmitters="1" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_Speed" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_Translation_Acceleration_UpDownSigned" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_Translation_Acceleration_UpDown_Signed_SlowLerp" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.3" releaseSlew="0.3" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+        <IFCSOutputToRtpcList ifcsOutput="Ship_HoverModeAnimationPosition" defaultValue="0" calculateOnlyOnPlayerVehicle="0" sendToChildEmitters="0" __type="IFCSOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="Ship_VTOLEnabled" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="2" releaseSlew="2" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </IFCSOutputToRtpcList>
+      </ifcsOutputsToRtpcs>
+      <shipWideAudioObjects />
+      <shipHealthRtpc rtpc="Ship_Health" __type="AudioRtpc" />
+      <thrustersSpoolStateRtpc rtpc="Ship_Spool_State" __type="AudioRtpc" />
+      <thrusterHealthRtpc rtpc="Thruster_Health_Global_Average" __type="AudioRtpc" />
+      <thrustersTemperatureRatioRtpc rtpc="Ship_Global_Average_Thruster_Temperature" __type="AudioRtpc" />
+      <thrustersOverheatRtpc rtpc="Ship_HasOverheatedThruster" __type="AudioRtpc" />
+      <misfireRtpc rtpc="Ship_ThrusterMisfiring" __type="AudioRtpc" />
+      <techLevelRtpc rtpc="Thruster_Tech_Level" __type="AudioRtpc" />
+      <civilianLowRtpc rtpc="Thruster_Civilian_Low" __type="AudioRtpc" />
+      <civilianMedRtpc rtpc="Thruster_Civilian_Medium" __type="AudioRtpc" />
+      <civilianHighRtpc rtpc="Thruster_Civilian_High" __type="AudioRtpc" />
+      <industrialRtpc rtpc="Thruster_Industrial" __type="AudioRtpc" />
+      <militaryRtpc rtpc="Thruster_Military" __type="AudioRtpc" />
+      <racingRtpc rtpc="Thruster_Racing" __type="AudioRtpc" />
+      <stealthRtpc rtpc="Thruster_Stealth" __type="AudioRtpc" />
+      <degradationRtpc rtpc="Ship_DegradationLevel" __type="AudioRtpc" />
+    </ShipAudioComponentParams>
+    <AudioPassByComponentParams chargeMax="25" dischargeTime="4" chargeThreshold="0.2" minChargeForPassByMusicEvent="10" normalizedSpeed="343" modifier="1.4" minTimeBetweenOneShots="4.5" __type="DataForgeComponentParams" __polymorphicType="AudioPassByComponentParams">
+      <loopStart audioTrigger="Play_SSPB_AEGS_Gladius_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <loopStop audioTrigger="Stop_SSPB_AEGS_Gladius_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <oneShot audioTrigger="Play_SSPB_AEGS_Gladius_PassBy_OneShot" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <timeSinceLastOneShotRtpc rtpc="Ship_PassBy_Time_Since_Last" __type="AudioRtpc" />
+      <shiftRtpc setToAllProxies="0" __type="AudioPassByRtpcParams">
+        <RTPCs>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_PassBy_Shift" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="60" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+        </RTPCs>
+      </shiftRtpc>
+      <shiftChargeRtpc setToAllProxies="0" __type="AudioPassByRtpcParams">
+        <RTPCs>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_PassBy_Shift_Charge" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="10" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+        </RTPCs>
+      </shiftChargeRtpc>
+      <relativeVelocityRtpc setToAllProxies="1" __type="AudioPassByRtpcParams">
+        <RTPCs>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_Relative_Velocity" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="60" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+        </RTPCs>
+      </relativeVelocityRtpc>
+      <relativeVelocityAccelerationRtpc setToAllProxies="1" __type="AudioPassByRtpcParams">
+        <RTPCs>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_Relative_Velocity_Acceleration_FastLerp" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="20" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_Relative_Velocity_Acceleration" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="60" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+          <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+            <rtpc rtpc="Ship_Relative_Velocity_Acceleration_SlowLerp" __type="AudioRtpc" />
+            <behavior>
+              <SAverageValue frameCount="120" __type="SRtpcBehaviour" __polymorphicType="SAverageValue" />
+            </behavior>
+          </AudioRtpcWithBehaviour>
+        </RTPCs>
+      </relativeVelocityAccelerationRtpc>
+    </AudioPassByComponentParams>
+    <VehicleLandingUIParams __type="DataForgeComponentParams" __polymorphicType="VehicleLandingUIParams" />
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="1" inheritModelTagFromHost="0" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="8c534cf7-29f8-495e-a5f8-197f1b0c0fed" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry>
+          <SGeometryNodeParams Tags="Paint_Spirit_Beige_Beige_Blue" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="f7ef059a-d65d-4f81-980d-bf0fd9c35a2b" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Black_Blue_White" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="9ee0713d-997d-417c-9c9f-b819c0e2d563" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Blue_Grey_Beige" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="6f0bd5e8-f140-476b-8df5-80d99c20d136" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Blue_White_Red" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="c137491b-bf9f-420c-91f2-0d37ca247786" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Grey_Grey_Blue" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="82a70983-0829-4fcc-88b9-22f8a88ce301" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Maroon_Beige_Blue" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="5a83b276-65e8-40d0-b4e9-a4569c382309" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Teal_Grey_Grey" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="ae54f19d-95e0-487a-9783-1a5a65b828f0" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_White_Black_Red" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="a34ff249-c0c5-4d30-8e8d-771c25e9ca50" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_White_Blue_Black" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="eadf30ea-9b08-463e-972b-91728ee46de3" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_Yellow_Black_Black" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="473e080f-4165-4c51-b581-9007fac020c5" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_A1_Green_Black_Orange" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit_ext_green_black_orange.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="d1b1f834-5e89-43d2-8b0b-d7304af2533a" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_C1_Red_Black_White" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit_ext_red_black_white.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="d8b974e8-a236-4c9a-8b82-86371f2aac27" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Spirit_E1_Black_Black_Gold" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Spaceships/Ships/CRUS/spirit/exterior/crus_spirit_ext_black_black_gold.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="a2cfdf6a-7fd9-41e4-b2b5-87472f57fda6" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+        </SubGeometry>
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SAnimationControllerParams AnimationDatabase="Spaceships\Ships\CRUS\Spirit\CRUS_Spirit_Anims.adb" AnimationController="Spaceships\Ships\CRUS\Spirit\CRUS_Spirit_ControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags>
+        <String value="CRUS_Spirit" />
+      </Tags>
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="Ship" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <EntityComponentAudioEnvironmentFeedbackParams __type="DataForgeComponentParams" __polymorphicType="EntityComponentAudioEnvironmentFeedbackParams">
+      <audioObjects />
+    </EntityComponentAudioEnvironmentFeedbackParams>
+    <EMPoolParams overrideEmValue="0" __type="DataForgeComponentParams" __polymorphicType="EMPoolParams" />
+    <EntityPhysicalAudioParams minimumImpulseContinuous="10" minimumImpulseTransient="5" minimumVelocityNoImpulse="100" slideThreshold="0.1" rollThreshold="0.1" momentumScale="1" useAABBCentre="0" oneShotTag="7f3a1138-ec2c-4dac-9c5a-2598090c79ec" oneShotCooldown="0.08" dragOnly="0" __type="DataForgeComponentParams" __polymorphicType="EntityPhysicalAudioParams">
+      <collisionTriggers>
+        <PhysicalAudioCollisionTrigger oneShotMinPlayTime="0.12" attachToObject="1" __type="PhysicalAudioCollisionTrigger">
+          <trigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        </PhysicalAudioCollisionTrigger>
+      </collisionTriggers>
+      <slideStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <slideStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickupTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickFromOwnerTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <dropTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <placeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rtpcSlideVelocity rtpc="PhysicalAudio_Velocity_Vehicles" __type="AudioRtpc" />
+      <rtpcMassSelf rtpc="PhysicalAudio_MassSelf_Vehicles" __type="AudioRtpc" />
+      <rtpcMassOther rtpc="PhysicalAudio_MassOther_Vehicles" __type="AudioRtpc" />
+      <rtpcDampening rtpc="PhysicalAudio_Damping" __type="AudioRtpc" />
+      <rtpcRollVelocity rtpc="PhysicalAudio_RollVelocity" __type="AudioRtpc" />
+      <rtpcHealth rtpc="PhysicalAudio_Health" __type="AudioRtpc" />
+      <rtpcMovement rtpc="PhysicalAudio_Movement" __type="AudioRtpc" />
+      <rtpcRotation rtpc="PhysicalAudio_Rotation" __type="AudioRtpc" />
+      <rtpcTimeSinceLastOneshot rtpc="PhysicalAudio_TimeSinceLastOneshot" __type="AudioRtpc" />
+      <rtpcMomentum rtpc="PhysicalAudio_Momentum" __type="AudioRtpc" />
+      <rtpcCarried rtpc="PhysicalAudio_CarryState" __type="AudioRtpc" />
+    </EntityPhysicalAudioParams>
+    <EntityComponentAudioHitListenerParams calculateOnlyWhenPlayerContained="0" hitListenerDefinition="aeefffe0-ed13-4713-adf5-419777ed22c7" __type="DataForgeComponentParams" __polymorphicType="EntityComponentAudioHitListenerParams" />
+    <SEntityAudioControllerParams audioControllerEntityType="Vehicle" randomSeedCount="4" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <AudioPropagationParams audioEnvironment="" physicalOcclusionValueWhenClosed="1" physicalEncapsulationValue="1" __type="DataForgeComponentParams" __polymorphicType="AudioPropagationParams" />
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+        <SItemPortMasterControllerParams __type="SItemPortMasterControllerParams">
+          <Pipes>
+            <SEnergyPipeDefinition Name="MainPower" Klass="Power" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="MainHeat" Klass="Heat" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="MainFuel" Klass="Fuel" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="IntakeFuel" Klass="Fuel" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="QuantumFuel" Klass="Fuel" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="Shield" Klass="Shield" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponRegenCrew" Klass="WeaponRegen" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponRegenTurret" Klass="WeaponRegen" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponAmmoLoadCrew" Klass="WeaponAmmoLoad" __type="SEnergyPipeDefinition" />
+            <SEnergyPipeDefinition Name="WeaponAmmoLoadTurret" Klass="WeaponAmmoLoad" __type="SEnergyPipeDefinition" />
+          </Pipes>
+        </SItemPortMasterControllerParams>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="hardpoint_controller_fuel" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_fuel_port" DisplayName="" PortTags="Ship_Dock_Refuel" RequiredPortTags="" Flags="dockingport1" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="DockingCollar" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="crus_spirit" __type="SItemPortDefHelperNode">
+                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="-4.7" y="12.5" z="2.6" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_air_traffic_controller" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="AirTrafficController" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_cargogrid_left" DisplayName="" PortTags="" RequiredPortTags="" Flags="selfphys uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="CargoGrid" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="-2.3" y="-1.5" z="-0.5" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_cargogrid_right" DisplayName="" PortTags="" RequiredPortTags="" Flags="selfphys uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="CargoGrid" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="2.3" y="-1.5" z="-0.5" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_blankingplate" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Misc" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_fuel_port_ground" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Door" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="-2.1332" y="3.9283" z="-1.627" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="hardpoint_cockpit_flair" DisplayName="port_Flair01" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Flair_Cockpit" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="Flair_Static" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="crus_spirit" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="180" __type="Ang3" />
+                    <Position x="-0.584" y="20.853" z="2.042" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <EntityComponentVibrationVehicleParams vibrationRecord="142d5d0d-a547-4912-9ddc-0c5185635d81" vibrationVehicleRecord="84c05aab-4e57-4e4a-a4ba-edd44deb3ce0" __type="DataForgeComponentParams" __polymorphicType="EntityComponentVibrationVehicleParams" />
+    <AITargetableComponentParams targetableSettings="3cba1a8b-d581-4ec6-b103-c61d5a82d670" __type="DataForgeComponentParams" __polymorphicType="AITargetableComponentParams">
+      <formations />
+    </AITargetableComponentParams>
+    <EntityComponentCommsChannelParams channelJoinType="AutoJoin" channelLeaveTimer="60" channelForceLeaveRange="50" __type="DataForgeComponentParams" __polymorphicType="EntityComponentCommsChannelParams" />
+    <EntityComponentShipCommsChannelParams __type="DataForgeComponentParams" __polymorphicType="EntityComponentShipCommsChannelParams" />
+    <LegalRegistrationComponentParams doNotTriggerCrimesAgainstThis="0" nameplateOverride="" nameplateLocalizedOverride="@LOC_EMPTY" displayNameplateOverPilotName="0" serialOverride="" serialLocalizedOverride="@LOC_EMPTY" serialNumberFormat="c454d7d8-6e61-4d52-887f-ce3e90ac77e9" securityNetworkManifest="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="LegalRegistrationComponentParams" />
+    <RangeEventDispatcherComponentParams __type="DataForgeComponentParams" __polymorphicType="RangeEventDispatcherComponentParams" />
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="RampState" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Closed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Open" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <SLinkedInteractionStateChangedStateModifier nullEntityState="null" __type="SStateModifier" __polymorphicType="SLinkedInteractionStateChangedStateModifier">
+              <context>
+                <SEntityTraversalTargetPathContext targetPath="TraversingTargets[0]" __type="SEntityContextBase" __polymorphicType="SEntityTraversalTargetPathContext" />
+              </context>
+              <onChangeStateTagStates>
+                <SLinkedInteractionStateTags state="StateTypes[0].SInteractionStateType.States[0]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="6bd67663-b803-4f3b-9c9f-42c591b51b93" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[0].SInteractionStateType.States[1]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="5d7b8e59-552f-407f-9df1-8eb582e9c22b" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[0].SInteractionStateType.States[2]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="9057a388-8ac5-40e2-9b0f-657bfab9ff60" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[0].SInteractionStateType.States[3]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="19e014c7-a1cc-4255-b206-94a9d85a3dac" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+              </onChangeStateTagStates>
+            </SLinkedInteractionStateChangedStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="RampLight" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="LightOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="LightOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="609cde5b-b8f8-4f29-8348-828e5ab42b5b" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="LightMoving" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="5661f83d-ce39-4515-834f-51410446871b" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[1].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[1].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[2]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[1].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[1]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[1].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="PowerState" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="PowerOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="d698e9c2-a97e-46ef-8630-63f7abe7f34f" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="PowerOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="e231ea7f-36b1-4a40-bf5d-ee312f4cecaa" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <SLinkedInteractionStateChangedStateModifier nullEntityState="null" __type="SStateModifier" __polymorphicType="SLinkedInteractionStateChangedStateModifier">
+              <context>
+                <SEntityTraversalTargetPathContext targetPath="TraversingTargets[1]" __type="SEntityContextBase" __polymorphicType="SEntityTraversalTargetPathContext" />
+              </context>
+              <onChangeStateTagStates>
+                <SLinkedInteractionStateTags state="StateTypes[2].SInteractionStateType.States[0]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="41f2d4a5-c295-4b4c-a59b-c9a3e98a12e0" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[2].SInteractionStateType.States[1]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="7e6a2f02-480d-4f86-9ee6-b19dbc778f76" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+              </onChangeStateTagStates>
+            </SLinkedInteractionStateChangedStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences />
+    </SEntityComponentSequencerParams>
+    <SurfaceRaindropsComponentParams enable="1" inactiveDuration="25" maximumSpeed="200" __type="DataForgeComponentParams" __polymorphicType="SurfaceRaindropsComponentParams">
+      <surfaceParticleRtt cameraFov="1" aspectRatio="1" sdfTexture="textures/vfx/sdf_textures/abstract/cells_sdf.dds" __type="SurfaceParticleRTTParams">
+        <particleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+      </surfaceParticleRtt>
+      <customEmitters>
+        <SurfaceRaindrops_Emitter linkedToSdf="1" fadeOutDuration="10" enableCloudCondensation="1" __type="SurfaceRaindrops_Emitter">
+          <particleEffect path="master\rtt_effects.water.rain.canopy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          <humidityRange minimum="2" maximum="3" __type="Range" />
+          <temperatureRange minimum="270" maximum="276" __type="Range" />
+        </SurfaceRaindrops_Emitter>
+        <SurfaceRaindrops_Emitter linkedToSdf="1" fadeOutDuration="10" enableCloudCondensation="0" __type="SurfaceRaindrops_Emitter">
+          <particleEffect path="master\rtt_effects.water.slush.canopy" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          <humidityRange minimum="2" maximum="3" __type="Range" />
+          <temperatureRange minimum="276" maximum="270" __type="Range" />
+        </SurfaceRaindrops_Emitter>
+      </customEmitters>
+      <wipeEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+      <acceleration speedMultiplier="0.1" maximumInfluenceSpeed="10" maximumAcceleration="10" helper="" __type="SurfaceRaindrops_Acceleration">
+        <rotationMultiplierSpeedRange minimum="-0.1" maximum="0.1" __type="Range" />
+        <rotationMultiplierAxes x="1" y="1" z="1" __type="Vec3" />
+        <offset __type="QuatT">
+          <Rotation x="110" y="0" z="0" __type="Ang3" />
+          <Position x="-0.75" y="20.5" z="2.25" __type="Vec3" />
+        </offset>
+      </acceleration>
+      <renderNodeLoadoutEntries />
+    </SurfaceRaindropsComponentParams>
+    <SubsumptionMissionLinkComponentParams __type="DataForgeComponentParams" __polymorphicType="SubsumptionMissionLinkComponentParams" />
+    <VehicleHUDMessagingParams __type="DataForgeComponentParams" __polymorphicType="VehicleHUDMessagingParams" />
+    <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
+    <CargoControllerParams cargoDeckLoaded="0" requiredStateForCargoOccupancy="null" StateAnimForCargoOccupancy="null" loadingRate_SecondsPerSCU="1" unloadingRate_SecondsPerSCU="1" __type="DataForgeComponentParams" __polymorphicType="CargoControllerParams">
+      <loadBatchAmount>
+        <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+      </loadBatchAmount>
+      <unloadBatchAmount>
+        <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+      </unloadBatchAmount>
+    </CargoControllerParams>
+    <RParticleFieldNodeComponentParams enableField="1" texture3D="" strengthMult="1" useTransformHelperFile="1" matchSizeFromTexture="0" mergeSDFs="1" mergedVoxelCountScaleFrac="1" __type="DataForgeComponentParams" __polymorphicType="RParticleFieldNodeComponentParams">
+      <size x="1" y="1" z="1" __type="Vec3" />
+      <posOffset x="0" y="0" z="0" __type="Vec3" />
+      <rotOffset x="0" y="0" z="0" __type="Ang3" />
+      <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
+      <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
+    </RParticleFieldNodeComponentParams>
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+      <baseComponent totalScore="2500" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
+    </EAScoringVehicleComponentParamsDef>
+    <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
+    <SCActorCollisionAvoidanceParams passRadiusAgent="0.3" passRadiusObstacleMoving="0.4" passRadiusObstacleStatic="0.5" baseAgentAvoidanceRange="10" baseObstacleAvoidanceRange="20" baseNavmeshEdgeAvoidanceRange="7.5" velocityInfluenceMultiplier="1" timeHorizonScale="1" agentAvoidanceTimeHorizon="1" obstacleAvoidanceTimeHorizon="2" navmeshEdgeAvoidanceTimeHorizon="0.75" alwaysAnObstacle="0" __type="DataForgeComponentParams" __polymorphicType="SCActorCollisionAvoidanceParams">
+      <offsetAgent x="0" y="0" __type="Vec2" />
+      <offsetObstacle x="0" y="0" __type="Vec2" />
+    </SCActorCollisionAvoidanceParams>
+    <ShipStateMonitorComponentParams __type="DataForgeComponentParams" __polymorphicType="ShipStateMonitorComponentParams" />
+    <EntranceDisplayComponentParams entrancesRecord="e11ee660-33e1-4ed3-9403-9cd44a4fba7b" __type="DataForgeComponentParams" __polymorphicType="EntranceDisplayComponentParams" />
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+      <EffectCurve useLUT="0" __type="BezierCurve">
+        <points />
+      </EffectCurve>
+      <DegradationPercentageRTPC rtpc="" __type="AudioRtpc" />
+    </SDegradationParams>
+    <UICanvasDecalDescriptorEntityComponentParams canvas="17ae13b6-b5cb-4eae-b878-1105fef4cf59" __type="DataForgeComponentParams" __polymorphicType="UICanvasDecalDescriptorEntityComponentParams" />
+    <UIBindingsConsumerEntityComponentParams linkToPort="0" __type="DataForgeComponentParams" __polymorphicType="UIBindingsConsumerEntityComponentParams" />
+    <AINavigationDynamicTriggerComponent __type="DataForgeComponentParams" __polymorphicType="AINavigationDynamicTriggerComponent">
+      <adapters>
+        <VehicleNavigationTriggerAdapter minSpeedToBeIgnored="5" __type="NavigationTriggerAdapter" __polymorphicType="VehicleNavigationTriggerAdapter" />
+      </adapters>
+    </AINavigationDynamicTriggerComponent>
+    <SObservableComponentParams defaultEntityObservablePoint="null" defaultAimingObservablePoint="null" __type="DataForgeComponentParams" __polymorphicType="SObservableComponentParams">
+      <perceptionTypes>
+        <Enum value="Vehicle" />
+        <Enum value="Spaceship" />
+      </perceptionTypes>
+      <observablePoints />
+      <observableExtensions />
+    </SObservableComponentParams>
+    <RestrictedAreaHandlerParams __type="DataForgeComponentParams" __polymorphicType="RestrictedAreaHandlerParams" />
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="Ramp" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_ramp" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+        <SEntityTraversingNodeBase name="Dashboard" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_pilot_dashboard" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets>
+        <SEntityTraversingTarget name="Ramp" __type="SEntityTraversingTarget">
+          <paths>
+            <SEntityTraversingTargetPath node="TraversingNodes[0]" __type="SEntityTraversingTargetPath" />
+          </paths>
+        </SEntityTraversingTarget>
+        <SEntityTraversingTarget name="Dashboard" __type="SEntityTraversingTarget">
+          <paths>
+            <SEntityTraversingTargetPath node="TraversingNodes[1]" __type="SEntityTraversingTargetPath" />
+          </paths>
+        </SEntityTraversingTarget>
+      </TraversingTargets>
+    </SEntityTraversingTreeParams>
+  </Components>
+</EntityClassDefinition.CRUS_Spirit_A1_PU_AI_CIV>

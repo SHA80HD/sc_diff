@@ -1,0 +1,91 @@
+<AmmoParams.apar_special_ballistic_02_ammo_rockets spawnType="AllClients" size="0" ammoCategory="" UIIconType="" hitPoints="0" lifetime="3" showtime="0" inheritVelocity="1" bulletType="-1" speed="700" impulseScale="1" noBulletHits="0" quietRemoval="0" whizSoundDistance="100" useInConvergence="1" shotsPerAudioLoop="20" displayName="@LOC_EMPTY" __type="AmmoParams" __ref="31057a9c-8a2d-41e5-a130-1651e34f3541" __path="libs/foundry/records/ammoparams/vehicle/apar_special_ballistic_02_ammo_rockets.xml">
+  <whizSound audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+  <ricochetSound audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+  <projectileLoopStart audioTrigger="Play_WPMR_MISL_S3_FlightLoop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+  <projectileLoopStop audioTrigger="Stop_WPMR_MISL_S3_FlightLoop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+  <trailParticles path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+  <geometryResourceParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Spaceships/Ammo/Missiles/NOVP/Rocket_Venom_S1/NOVP_Rocket_Venom_S1.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+  </geometryResourceParams>
+  <physicsControllerParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityParticlePhysicsControllerParams Mass="3.14" pierceability="15" radius="0.1" thickness="0.005" accThrust="0" airResistance="0" rayCollision="1" traceable="0" singleContact="0" constantOrientation="1" noRoll="1" noSpin="1" noPathAlignment="1" noSelfCollision="1" noImpulse="0" decoupleHeading="1" disableGravity="0" aiNavigationType="Excluded" surfaceIdName="mat_default" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityParticlePhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+        </SEntityParticlePhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+  </physicsControllerParams>
+  <lightPoolParams>
+  </lightPoolParams>
+  <projectileParams>
+    <BulletProjectileParams impactRadius="0" minImpactRadius="0" ignitionChanceOverride="-1" keepAliveOnZeroDamage="1" hitType="bullet" __type="ProjectileParams" __polymorphicType="BulletProjectileParams">
+      <detonationParams>
+        <ProjectileDetonationParams armTime="0" safeDistance="1" destructDelay="0" explodeOnImpact="1" explodeOnFinalImpact="0" explodeOnExpire="1" explodeOnTargetRange="0" __type="ProjectileDetonationParams">
+          <explosionParams friendlyFire="None" minRadius="0.5" maxRadius="4" soundRadius="50" minPhysRadius="2.5" maxPhysRadius="6" angle="0" angleVertical="0" pressure="200" holeSize="0" terrainHoleSize="3" maxblurdist="10" effectScale="1" useRandomScale="0" effectScaleMin="1" effectScaleMax="3" hitType="explosion" customMaterialEffect="" particleStrength="-1" radarContactType="00000000-0000-0000-0000-000000000000" __type="ExplosionParams">
+            <explosionFront x="0" y="0" z="0" __type="Vec3" />
+            <explosionUp x="0" y="0" z="1" __type="Vec3" />
+            <damage>
+              <DamageInfo DamagePhysical="150" DamageEnergy="0" DamageDistortion="0" DamageThermal="0" DamageBiochemical="0" DamageStun="0" __type="DamageBase" __polymorphicType="DamageInfo" />
+            </damage>
+            <flashbangParams>
+            </flashbangParams>
+            <shockwaveParams>
+            </shockwaveParams>
+            <effect path="Spaceships\Ammo\Missiles\novp_rocket_venom_s1_strike_tl_ir.impact.impact_generic" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+            <failedEffect path="Spaceships\Ammo\Missiles\novp_rocket_venom_s1_strike_tl_ir.impact.failed" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+            <sound audioTrigger="Play_WPMR_MISL_S3_Explosion_Hit" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <failedSound audioTrigger="Play_WPMR_MISL_S3_Explosion_Miss" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <materialEffectEntry>
+            </materialEffectEntry>
+            <Offset x="0" y="0" z="0" __type="Vec3" />
+            <Direction x="0" y="0" z="1" __type="Vec3" />
+          </explosionParams>
+        </ProjectileDetonationParams>
+      </detonationParams>
+      <proximityTriggerParams>
+      </proximityTriggerParams>
+      <damage>
+        <DamageInfo DamagePhysical="0" DamageEnergy="0" DamageDistortion="0" DamageThermal="0" DamageBiochemical="0" DamageStun="0" __type="DamageBase" __polymorphicType="DamageInfo" />
+      </damage>
+      <damageDropParams>
+      </damageDropParams>
+      <impulseFalloffParams>
+      </impulseFalloffParams>
+      <pierceabilityParams damageFalloffLevel1="0" damageFalloffLevel2="0" damageFalloffLevel3="0" maxPenetrationThickness="0.5" __type="BulletPierceabilityParams" />
+      <visualParams maxLength="0" meshOffset="0" geometryRadius="1" renderFrequency="1" renderProbability="1" hitEffect="" __type="BulletVisualParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+      </visualParams>
+      <alternateVisualParams>
+      </alternateVisualParams>
+      <electronParams>
+      </electronParams>
+      <additionalProjectilesParams>
+      </additionalProjectilesParams>
+      <hitBehaviors />
+    </BulletProjectileParams>
+  </projectileParams>
+  <radarObjectParams>
+  </radarObjectParams>
+</AmmoParams.apar_special_ballistic_02_ammo_rockets>

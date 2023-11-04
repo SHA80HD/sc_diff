@@ -1,0 +1,475 @@
+<MissionLocationTemplate.SecurityOutpost_Kareah __type="MissionLocationTemplate" __ref="104f9dd7-2d2d-4f28-9dda-4dbecb20325f" __path="libs/foundry/records/missiondata/pu_locations/templates/system/spacestations/securityoutpost_kareah.xml">
+  <locationData allowPartialOCStreamingForInit="0" isSecurityNetworkHost="0" defaultSecurityNetworkManifest="00000000-0000-0000-0000-000000000000" disabled="0" __type="MissionLocationData">
+    <generalTags __type="MissionLocationTags">
+      <tags>
+        <Reference value="f00b6f01-7245-437d-9c41-da6a00e2df43" />
+        <Reference value="3fcd065f-5d40-4ad8-ae12-3868726d0c96" />
+        <Reference value="c7321bb6-6908-49c5-9234-c3a3bcf78cc4" />
+        <Reference value="7c35db3b-6149-4d5c-a92e-4f98f1482873" />
+        <Reference value="c5ca0d5e-1647-4209-860a-69cf5346b6fa" />
+        <Reference value="1701df5a-5f41-4c0b-9bf0-de077ecc3ee1" />
+        <Reference value="a47673ef-8511-490d-90ea-fd171d99b626" />
+        <Reference value="2e415c27-168d-4129-a216-7632f74eb911" />
+      </tags>
+    </generalTags>
+    <producesTags __type="TagSearchTerm">
+      <positiveTags />
+      <negativeTags />
+    </producesTags>
+    <consumesTags __type="TagSearchTerm">
+      <positiveTags />
+      <negativeTags />
+    </consumesTags>
+    <aiSpawnTags __type="TagList">
+      <tags>
+        <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+      </tags>
+    </aiSpawnTags>
+    <stringVariants __type="MissionStringVariants">
+      <variants>
+        <MissionStringVariant tag="18c7e922-c531-4482-bf97-172770b0b221" string="@generic_locations_blank" __type="MissionStringVariant" />
+        <MissionStringVariant tag="0130de18-97e2-4d4c-9bb1-3e7ef5fd0490" string="@mission_location_stanton_0118" __type="MissionStringVariant" />
+        <MissionStringVariant tag="8fd73fe9-94b6-45cd-9d4c-35ce67e86c75" string="@mission_location_stanton_0118_add" __type="MissionStringVariant" />
+        <MissionStringVariant tag="5e22ff70-06a3-4060-8660-9cae8c4bcf52" string="@mission_location_stanton_0119" __type="MissionStringVariant" />
+      </variants>
+    </stringVariants>
+    <missionModules>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/TimedItemDispenser/TimedItemDispenser.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamBoolean name="RunOnEventTriggered_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+          <MissionInitParamInteger name="ItemSpawnFrequency_BP" value="30" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxItemSpawnFrequency_BP" value="60" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MinAmountOfItems_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxAmountOfItems_BP" value="20" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/LocationManager/LocationUnderAttack/LocationUnderAttack.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamInteger name="KilledGuardThreshold_ML_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamBoolean name="CriminalCheck_ML_BP" value="0" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+          <MissionInitParamTag name="NPCTags_ML_BP" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags>
+                <Reference value="d9846151-8bb6-4a18-970a-b6f1ea10c27f" />
+                <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+              </positiveTags>
+              <negativeTags>
+                <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+              </negativeTags>
+            </value>
+          </MissionInitParamTag>
+          <MissionInitParamInteger name="PardonTimer_ML_BP" value="3600" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamBoolean name="SecurityTokenOverride_ML_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+          <MissionInitParamBoolean name="SplitTracking_ML_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+        </missionInputs>
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/LocationManager/KareahManager/KareahManager.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamInteger name="KilledGuardThreshold_ML_BP" value="6" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamTag name="AllowedContrabandTags_ML_BP" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags>
+                <Reference value="09869105-1fb6-4a95-8871-f7ff80074d96" />
+              </positiveTags>
+              <negativeTags>
+                <Reference value="5e11a544-7fea-4160-b2bf-98c6cf9ee9df" />
+              </negativeTags>
+            </value>
+          </MissionInitParamTag>
+          <MissionInitParamInteger name="MinItemSpawnFrequency_ML_BP" value="20" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxItemSpawnFrequency_ML_BP" value="45" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MinAmountOfItems_ML_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxAmountOfItems_ML_BP" value="20" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+        </missionInputs>
+        <properties>
+          <MissionProperty missionVariableName="SecurityChief_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Boss" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="0" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="1" maxGroupSize="1" maxConcurrentSpawns="1" maxSpawns="1" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="27e41a93-a5e1-4bd5-a80f-021704006c7a" />
+                              <Reference value="88a0f166-d26b-4461-83c8-f74795d795e0" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags />
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags />
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                            </tags>
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="SecurityChiefEntourage_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Entourage" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="6" maxGroupSize="6" maxConcurrentSpawns="6" maxSpawns="6" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                              <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+                              <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags />
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                            </tags>
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="GuardsInteriorHeavy_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Interior Guards - Heavy" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="1" maxGroupSize="2" maxConcurrentSpawns="2" maxSpawns="-1" minSpawnDelay="300" maxSpawnDelay="300" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                              <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+                              <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags />
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                            </tags>
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="GuardsInteriorMedium_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Interior Guards - Medium" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="4" maxSpawns="-1" minSpawnDelay="300" maxSpawnDelay="300" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                              <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+                              <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags />
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                            </tags>
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="GuardsInteriorDetective_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Interior Guards - Detective" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="Worker" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="8" maxSpawns="-1" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="37e51a3d-afb0-4f2a-9528-01d9e2db5a76" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                              <Reference value="d3fd337d-d7eb-4a42-99b8-c77d1a93d014" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags />
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                            </tags>
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="GuardsExteriorLarge_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Exterior Guards - Large" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="4" maxGroupSize="4" maxConcurrentSpawns="8" maxSpawns="8" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                              <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+                              <Reference value="bd6b903f-0d2d-4688-8329-db68c16fb0d1" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                              <Reference value="5f7a981f-032f-42fa-87d7-be98c8909b0e" />
+                            </tags>
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags />
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="GuardsExteriorSmall_ML_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_NPC_Group Name="Exterior Guards - Small" __type="SpawnDescription_NPC_Group">
+                    <options>
+                      <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                        <autoSpawnSettings initialActivity="GuardPatrolling" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                          <positiveCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                              <Reference value="b9525e1a-cb92-4899-82f8-608b36e4a6f2" />
+                              <Reference value="bd6b903f-0d2d-4688-8329-db68c16fb0d1" />
+                            </tags>
+                          </positiveCharacterTags>
+                          <negativeCharacterTags __type="TagList">
+                            <tags>
+                              <Reference value="839f52f5-edb7-4c01-a425-428e6df2c0f2" />
+                              <Reference value="095599fd-e608-48a4-8c35-cec7a357f1f6" />
+                            </tags>
+                          </negativeCharacterTags>
+                          <inventoryItems />
+                          <closetPositiveTags __type="TagList">
+                            <tags>
+                              <Reference value="a8fe5e49-3259-40ed-a51d-02bf56a97288" />
+                              <Reference value="047b8ff1-d974-40c7-9899-2cb7360c39ab" />
+                            </tags>
+                          </closetPositiveTags>
+                          <closetNegativeTags __type="TagList">
+                            <tags />
+                          </closetNegativeTags>
+                          <roomPositiveTags __type="TagList">
+                            <tags />
+                          </roomPositiveTags>
+                          <roomNegativeTags __type="TagList">
+                            <tags />
+                          </roomNegativeTags>
+                        </autoSpawnSettings>
+                        <identifierTags __type="TagList">
+                          <tags />
+                        </identifierTags>
+                        <embeddedName>
+                        </embeddedName>
+                      </SpawnDescription_NPCOption>
+                    </options>
+                  </SpawnDescription_NPC_Group>
+                </spawnDescriptions>
+              </MissionPropertyValue_NPCSpawnDescriptions>
+            </value>
+          </MissionProperty>
+        </properties>
+      </SMissionLocationModule>
+    </missionModules>
+    <missionLimits>
+      <LocationMissionLimit tag="2a3d4c60-06cc-4b5a-b805-7269f4c13226" cooldown="180" autoConsumeIfPlayerAtLocation="0" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="6804b0a9-b01d-4c9a-8063-67784bd0f021" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="9a2ba214-8d5d-458d-84c6-fc11fdc5b3b7" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="e6a13cf1-526b-4949-ae2d-d21c2315b5c4" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="02868836-dc05-4873-a34c-31a47c4939f7" cooldown="180" autoConsumeIfPlayerAtLocation="0" playerAtLocationCooldown="180" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+    </missionLimits>
+    <autoSpawnSettings />
+  </locationData>
+</MissionLocationTemplate.SecurityOutpost_Kareah>

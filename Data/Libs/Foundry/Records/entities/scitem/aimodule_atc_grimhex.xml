@@ -1,0 +1,80 @@
+<EntityClassDefinition.AImodule_ATC_GrimHex Category="Default" Icon="Default.bmp" Invisible="1" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="5b953a44-0ab7-44f4-b101-8ff2bb370c48" __path="libs/foundry/records/entities/scitem/aimodule_atc_grimhex.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="AIModule" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemAIModuleParams availableOperatorModes="6327f46c-cb16-450f-8242-5b8e7793c9c6" communicationConfigName="" automaticallyEnableItems="1" useGameRulesActivation="0" __type="DataForgeComponentParams" __polymorphicType="SCItemAIModuleParams" />
+    <SCItemUserParams __type="DataForgeComponentParams" __polymorphicType="SCItemUserParams" />
+    <SAnimationControllerParams AnimationDatabase="SCItems\ATC\SCItem_ATC_Anims.adb" AnimationController="SCItems\ATC\SCItem_ATC_ControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="ATC" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/tech_helpers/atc_aimodule/atc_aimodule.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <AudioListenerParams primaryListener="0" inputRadius="5" outputRadius="0.5" enabled="0" entityExclusive="0" bus="ListenerBus" __type="DataForgeComponentParams" __polymorphicType="AudioListenerParams" />
+    <SEntityAudioControllerParams audioControllerEntityType="Communication" randomSeedCount="0" fullLODDistance="5000" fullToLowLODDistance="5000" offToLowLODDistance="5000" offLODDistance="5000" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SubsumptionEventReceiverComponentParams __type="DataForgeComponentParams" __polymorphicType="SubsumptionEventReceiverComponentParams" />
+    <SubsumptionComponentParams subsumptionMastergraph="AIModuleMastergraph" subsumptionActivity="ATC_Controller" __type="DataForgeComponentParams" __polymorphicType="SubsumptionComponentParams">
+      <mastergraphStateOverrides />
+    </SubsumptionComponentParams>
+    <SCItemCommsComponentParams setup="201bfe98-d5f6-499a-bd02-0076c73ddc19" __type="DataForgeComponentParams" __polymorphicType="SCItemCommsComponentParams" />
+    <SRadarSenseComponentParams __type="DataForgeComponentParams" __polymorphicType="SRadarSenseComponentParams" />
+    <AttentionTargetComponentParams attackerScore="1" __type="DataForgeComponentParams" __polymorphicType="AttentionTargetComponentParams" />
+    <SCommunicationUserComponentParams voiceBundle="00000000-0000-0000-0000-000000000000" voiceSingle="00000000-0000-0000-0000-000000000000" communicationConfig="e3e2a197-16a5-41a7-bedd-94e1822933b3" contextualDialog="" __type="DataForgeComponentParams" __polymorphicType="SCommunicationUserComponentParams" />
+    <SEntityPerceptionComponentParams ignoreHostiles="0" perceptionProfile="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SEntityPerceptionComponentParams" />
+    <AISeatOperatorComponentParams __type="DataForgeComponentParams" __polymorphicType="AISeatOperatorComponentParams" />
+    <ItemControlComponentParams turnedOnByDefault="1" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
+    <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
+    <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+  </Components>
+</EntityClassDefinition.AImodule_ATC_GrimHex>
