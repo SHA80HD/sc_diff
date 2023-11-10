@@ -1,3 +1,6 @@
+# Legal
+This site is not endorsed by or affiliated with the Cloud Imperium or Roberts Space Industries group of companies. All game content and materials are copyright Cloud Imperium Rights LLC and Cloud Imperium Rights Ltd.. Star Citizen®, Squadron 42®, Roberts Space Industries®, and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC. All rights reserved.
+
 # Viewing Diffs
 GitHub limits diff sizes on the website. You have to use an external application to view the full diff.
 
