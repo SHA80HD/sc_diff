@@ -1,4 +1,4 @@
-<Vehicle name="DRAK_Vulture" displayname="DRAK Vulture" subType="Vehicle_Spaceship" size="2" requiredTags="" requiredItemTags="" landingOffset="0,-2.4,-5.0" itemPortTags="DRAK_Vulture_Base" id="modVehicle" HudPaletteScheme="DRAK">
+<Vehicle name="DRAK_Vulture" displayname="DRAK Vulture" subType="Vehicle_Spaceship" size="2" requiredTags="" requiredItemTags="" landingOffset="0,-2.4,-4.0" itemPortTags="DRAK_Vulture_Base" id="modVehicle" HudPaletteScheme="DRAK">
   <DamageTech resolution="512.0, 512.0" />
   <Physics pushable="0" dampingFreefall="0">
     <Buoyancy waterDensity="15" waterResistance="250" />
@@ -402,12 +402,12 @@
                     <ControllerDef controllableTags="pilotSeat">
                       <UserDef>
                         <Observerables>
-                          <Observerable itemType="FlightController" screensDefault="Flight_HUD, Screen_Arm_Left_RTT" screensAvail="Flight_HUD, VS_Left0, Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT, Screen_Annunciator_RTT" />
-                          <Observerable itemType="Seat" screensDefault="Screen_Arm_Right_RTT" screensAvail="VS_Right0, Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
+                          <Observerable itemType="FlightController" screensDefault="Flight_HUD, Screen_Upper_Left_RTT" screensAvail="Flight_HUD, VS_Left0, Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT, Screen_Annunciator_RTT" />
+                          <Observerable itemType="Seat" screensDefault="Screen_Upper_Right_RTT" screensAvail="VS_Right0, Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
                           <Observerable itemType="QuantumDrive" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="Radar" screensDefault="Screen_Radar_RTT" screensAvail="Screen_Radar_RTT" />
-                          <Observerable itemType="EnergyController" screensDefault="Screen_Upper_Left_RTT" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
-                          <Observerable itemType="ShieldController" screensDefault="Screen_Upper_Right_RTT" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
+                          <Observerable itemType="EnergyController" screensDefault="Screen_Arm_Left_RTT" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
+                          <Observerable itemType="ShieldController" screensDefault="Screen_Arm_Right_RTT" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
                           <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="Screen_Upper_Left_RTT, Screen_Upper_Right_RTT, Screen_Arm_Left_RTT, Screen_Arm_Right_RTT" primaryCommsScreen="Screen_Upper_Right_RTT" />
@@ -482,9 +482,12 @@
                       <UsableDef>
                         <PriorityGroups>
                           <PriorityGroup itemType="ToolArm" />
+                          <PriorityGroup itemType="SalvageFieldEmitter" />
                           <PriorityGroup itemType="SalvageFillerStation" />
+                          <PriorityGroup itemType="SalvageGrinder" />
                           <PriorityGroup itemType="SalvageModifier" />
                           <PriorityGroup itemType="SalvageHead" />
+                          <PriorityGroup itemType="SalvageInternalStorage" />
                         </PriorityGroups>
                       </UsableDef>
                     </ControllerDef>

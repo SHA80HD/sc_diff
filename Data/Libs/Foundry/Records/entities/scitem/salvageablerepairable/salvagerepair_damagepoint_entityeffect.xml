@@ -1,0 +1,278 @@
+<EntityClassDefinition.SalvageRepair_DamagePoint_EntityEffect Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="1626f51a-b0b5-41c2-9a1c-83cb3c9d8444" __path="libs/foundry/records/entities/scitem/salvageablerepairable/salvagerepair_damagepoint_entityeffect.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="UNDEFINED" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="DamageThresholdState" bindingsMethod="None" DefaultState="StateTypes[0].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Uninitialized" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[0].SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="OverThreshold" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[0].SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="UnderThreshold" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="FlowState" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="FlowActive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="StateTypes[1].SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="StateTypes[1].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="FlowInactive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="StateTypes[1].SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="StateTypes[1].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="EffectState" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="EffectOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="4b2a7fcd-3acc-48d6-b482-9f9521b8266e" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="EffectOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="dede0c7f-cac6-4a36-b1b7-2e2744fccfa4" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[2]" />
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates />
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="ThresholdState_Initiaize" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SetThresholdState_Under" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SetThresholdState_Over" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SetFlowState_Active" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SetFlowState_Inactive" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SFlowGraphProxyParams flowgraphPath="Libs/FlowgraphModules/FlowgraphProxy/SalvageRepair/FG_SalvageRepair_DamagePoint.xml" __type="DataForgeComponentParams" __polymorphicType="SFlowGraphProxyParams" />
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects>
+              <SEntityEffectSystem_ParticleTagEffect name="HasDamaged" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="4b2a7fcd-3acc-48d6-b482-9f9521b8266e" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Environments\Generic\Generic_Steam_FX.Steam_JET.steam_jet_1x2_loop_3" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="NoDamage" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="dede0c7f-cac6-4a36-b1b7-2e2744fccfa4" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_ParticleTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+  </Components>
+</EntityClassDefinition.SalvageRepair_DamagePoint_EntityEffect>

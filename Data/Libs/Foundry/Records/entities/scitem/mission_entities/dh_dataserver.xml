@@ -108,7 +108,6 @@
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
-                <SStateAutoChange NextState="StateTypes[0].SInteractionStateType.States[0]" Delay="1" __type="SStateAutoChange" />
               </StateAutoChange>
               <Interactions />
               <interactionPoints />
@@ -124,7 +123,6 @@
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
-                <SStateAutoChange NextState="StateTypes[0].SInteractionStateType.States[0]" Delay="1" __type="SStateAutoChange" />
               </StateAutoChange>
               <Interactions />
               <interactionPoints />
@@ -256,7 +254,9 @@
         <SInteractionStateType StateTypeName="TemperatureStates" bindingsMethod="States" DefaultState="StateTypes[2].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
             <SInteractionState StateName="Healthy" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
+              <enterStateEffectTags>
+                <Reference value="03228d89-5cf3-42cd-9ece-936d37cd6da2" />
+              </enterStateEffectTags>
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
@@ -275,7 +275,9 @@
               </entityTags>
             </SInteractionState>
             <SInteractionState StateName="Warning_AutoDown" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
+              <enterStateEffectTags>
+                <Reference value="8abeb901-b67d-4563-8b84-33d155112d1e" />
+              </enterStateEffectTags>
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
@@ -341,7 +343,9 @@
               </entityTags>
             </SInteractionState>
             <SInteractionState StateName="Temp_DestroyedByOverheat" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
+              <enterStateEffectTags>
+                <Reference value="23f0be4c-4334-4cc0-a589-20f4adc1348d" />
+              </enterStateEffectTags>
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
@@ -419,8 +423,23 @@
           </States>
           <StateModifiers />
         </SInteractionStateType>
-        <SInteractionStateType StateTypeName="KeypadScreen" bindingsMethod="States" DefaultState="StateTypes[4].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+        <SInteractionStateType StateTypeName="KeypadScreen" bindingsMethod="States" DefaultState="StateTypes[4].SInteractionStateType.States[1]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
+            <SInteractionState StateName="NoKeypad" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
             <SInteractionState StateName="Main" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
@@ -441,7 +460,7 @@
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
-                <SStateAutoChange NextState="StateTypes[4].SInteractionStateType.States[3]" Delay="2" __type="SStateAutoChange" />
+                <SStateAutoChange NextState="StateTypes[4].SInteractionStateType.States[4]" Delay="0.01" __type="SStateAutoChange" />
               </StateAutoChange>
               <Interactions />
               <interactionPoints />
@@ -457,7 +476,7 @@
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
-                <SStateAutoChange NextState="StateTypes[4].SInteractionStateType.States[3]" Delay="2" __type="SStateAutoChange" />
+                <SStateAutoChange NextState="StateTypes[4].SInteractionStateType.States[5]" Delay="3" __type="SStateAutoChange" />
               </StateAutoChange>
               <Interactions />
               <interactionPoints />
@@ -468,7 +487,22 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="Reset" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="Reset_Success" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Reset_Fail" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
@@ -485,8 +519,7 @@
             </SInteractionState>
           </States>
           <StateModifiers>
-            <SKeypadStateModifier keycode="-1" onKeycodeSuccessState="StateTypes[4].SInteractionStateType.States[1]" onKeycodeFailState="StateTypes[4].SInteractionStateType.States[2]" __type="SStateModifier" __polymorphicType="SKeypadStateModifier" />
-            <SKeypadStateModifier keycode="-1" onKeycodeSuccessState="StateTypes[0].SInteractionStateType.States[3]" onKeycodeFailState="StateTypes[0].SInteractionStateType.States[2]" __type="SStateModifier" __polymorphicType="SKeypadStateModifier" />
+            <SKeypadStateModifier keycode="-1" onKeycodeSuccessState="StateTypes[4].SInteractionStateType.States[4]" onKeycodeFailState="StateTypes[4].SInteractionStateType.States[3]" __type="SStateModifier" __polymorphicType="SKeypadStateModifier" />
             <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
               <aggregateStateParams>
                 <AggregateStateParams state="StateTypes[0].SInteractionStateType.States[2]" __type="AggregateStateParams">
@@ -499,6 +532,216 @@
                   <aggregateStates>
                     <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[3]" />
                     <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="SoundsServerOverheating" bindingsMethod="States" DefaultState="StateTypes[5].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="ServerOverheating_Idle" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ServerOverheating_Audio" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="8abeb901-b67d-4563-8b84-33d155112d1e" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[5].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[2].SInteractionStateType.States[1]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[5].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[5].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[2].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="SoundsServerCriticalTemp" bindingsMethod="States" DefaultState="StateTypes[6].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="ServerCriticalTemp_Idle" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ServerCriticalTemp_Audio" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="8400fc15-093f-4b63-b271-dd7505d9b2c2" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[6].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[2].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[6].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[6].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[2].SInteractionStateType.States[4]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="Sounds_ServerDestroyed" bindingsMethod="States" DefaultState="StateTypes[7].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="ServerDestroyed_Idle" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ServerDestroyed_Audio" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="23f0be4c-4334-4cc0-a589-20f4adc1348d" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[7].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[2].SInteractionStateType.States[4]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="Sounds_ServerCollingEnabled" bindingsMethod="States" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="ServerCoolingEnabled_Idle" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ServerCoolingEnabled_Audio" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="4126ceba-58e3-4265-95c7-8bedf81e451d" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[8].SInteractionStateType.States[0]" Delay="3.5" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[8].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[2]" />
                   </aggregateStates>
                 </AggregateStateParams>
               </aggregateStateParams>
@@ -684,18 +927,16 @@
     <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
     <UIBindingsConsumerEntityComponentParams linkToPort="0" __type="DataForgeComponentParams" __polymorphicType="UIBindingsConsumerEntityComponentParams" />
     <KeypadParams codeLength="4" repeatKey="1" repeatKeyInCode="1" randomCode="0" attemptsUntilCodeReset="-1" resetCodeOnSuccess="0" autoSuccessOnEnterKey="0" autoFailOnInputLength="0" __type="DataForgeComponentParams" __polymorphicType="KeypadParams">
-      <validCodes>
-        <Int32 value="1111" />
-      </validCodes>
+      <validCodes />
       <interactionSetup>
       </interactionSetup>
     </KeypadParams>
     <UserVariablesComponentParams AlwaysUseDefaultValues="1" __type="DataForgeComponentParams" __polymorphicType="UserVariablesComponentParams">
       <floats>
-        <FloatUserVariable name="Time_ToWarning" defaultValue="45" __type="FloatUserVariable">
+        <FloatUserVariable name="Time_ToWarning" defaultValue="5" __type="FloatUserVariable">
           <tasks />
         </FloatUserVariable>
-        <FloatUserVariable name="Time_ToCritical" defaultValue="45" __type="FloatUserVariable">
+        <FloatUserVariable name="Time_ToCritical" defaultValue="30" __type="FloatUserVariable">
           <tasks />
         </FloatUserVariable>
         <FloatUserVariable name="tempStateCritical" defaultValue="0" __type="FloatUserVariable">
@@ -705,6 +946,12 @@
           <tasks />
         </FloatUserVariable>
         <FloatUserVariable name="tempStateHealthy" defaultValue="0.5" __type="FloatUserVariable">
+          <tasks />
+        </FloatUserVariable>
+        <FloatUserVariable name="Time_ToDestroyed" defaultValue="60" __type="FloatUserVariable">
+          <tasks />
+        </FloatUserVariable>
+        <FloatUserVariable name="Time_ToHealthy" defaultValue="5" __type="FloatUserVariable">
           <tasks />
         </FloatUserVariable>
       </floats>
@@ -732,6 +979,9 @@
         <BoolUserVariable name="Intruded" defaultValue="1" __type="BoolUserVariable">
           <tasks />
         </BoolUserVariable>
+        <BoolUserVariable name="CloseKeypadButton" defaultValue="1" __type="BoolUserVariable">
+          <tasks />
+        </BoolUserVariable>
       </bools>
       <strings />
       <locStrings>
@@ -740,10 +990,17 @@
     </UserVariablesComponentParams>
     <SCInteractionStateGameplayTriggerComponentParams __type="DataForgeComponentParams" __polymorphicType="SCInteractionStateGameplayTriggerComponentParams">
       <onInteractionStateChangeTriggers>
-        <SOnInteractionStateChangeTriggers targetState="StateTypes[4].SInteractionStateType.States[3]" __type="SOnInteractionStateChangeTriggers">
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[4].SInteractionStateType.States[5]" __type="SOnInteractionStateChangeTriggers">
           <gameplayTriggers>
             <SResetKeypadInputGameplayTrigger __type="SBaseInteractionGameplayTrigger" __polymorphicType="SResetKeypadInputGameplayTrigger" />
             <SChangeInteractionStateGameplayTrigger targetState="StateTypes[4].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[0].SInteractionStateType.States[2]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[4].SInteractionStateType.States[4]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <SResetKeypadInputGameplayTrigger __type="SBaseInteractionGameplayTrigger" __polymorphicType="SResetKeypadInputGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[0].SInteractionStateType.States[3]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
           </gameplayTriggers>
         </SOnInteractionStateChangeTriggers>
         <SOnInteractionStateChangeTriggers targetState="StateTypes[1].SInteractionStateType.States[3]" __type="SOnInteractionStateChangeTriggers">
@@ -759,6 +1016,16 @@
         <SOnInteractionStateChangeTriggers targetState="StateTypes[2].SInteractionStateType.States[4]" __type="SOnInteractionStateChangeTriggers">
           <gameplayTriggers>
             <SChangeInteractionStateGameplayTrigger targetState="StateTypes[0].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[0].SInteractionStateType.States[6]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[4].SInteractionStateType.States[1]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[4].SInteractionStateType.States[0]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[0].SInteractionStateType.States[2]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
           </gameplayTriggers>
         </SOnInteractionStateChangeTriggers>
       </onInteractionStateChangeTriggers>
@@ -787,6 +1054,11 @@
     <SEntityComponentObjectMetadataParams name="@DataHeist_ServerName_006" hasLocalBounds="1" isDynamic="0" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentObjectMetadataParams">
       <metadata />
     </SEntityComponentObjectMetadataParams>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
     <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
       <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
         <particleEffects>
@@ -797,7 +1069,7 @@
           <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
             <tagEffects>
               <SEntityEffectSystem_SoundTagEffect name="Overheating" enabled="1" multiPosition="0" useDefaultProxy="0" tag="8abeb901-b67d-4563-8b84-33d155112d1e" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_TEMP_UI_Neutral_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <soundEffect audioTrigger="Play_PU_DATAHEISTSV01_F_WarningServerOverheating" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
                     <offset __type="QuatT">
@@ -809,7 +1081,7 @@
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="TempCritical" enabled="1" multiPosition="0" useDefaultProxy="0" tag="8400fc15-093f-4b63-b271-dd7505d9b2c2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_TEMP_Alarm_High_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <soundEffect audioTrigger="Play_PU_DATAHEISTSV01_F_WarningServerTemperature" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
                     <offset __type="QuatT">
@@ -821,7 +1093,7 @@
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Destroyed" enabled="1" multiPosition="0" useDefaultProxy="0" tag="23f0be4c-4334-4cc0-a589-20f4adc1348d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_TEMP_UI_Error_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <soundEffect audioTrigger="Play_PU_DATAHEISTSV01_F_AttentionServerOffline" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
                     <offset __type="QuatT">
@@ -832,8 +1104,68 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="TempCritical_AlarmStop" enabled="1" multiPosition="0" useDefaultProxy="0" tag="23f0be4c-4334-4cc0-a589-20f4adc1348d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Stop_TEMP_Alarm_High_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <SEntityEffectSystem_SoundTagEffect name="CoolingEnabled" enabled="1" multiPosition="0" useDefaultProxy="0" tag="4126ceba-58e3-4265-95c7-8bedf81e451d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_PU_DATAHEISTSV01_F_ServerCoolingEnabled" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Overheating Alarm" enabled="1" multiPosition="0" useDefaultProxy="0" tag="8abeb901-b67d-4563-8b84-33d155112d1e" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_ENVP_PU_DataHeist_Alarm_ServerOverheating_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="TempCritical Alarm" enabled="1" multiPosition="0" useDefaultProxy="0" tag="8400fc15-093f-4b63-b271-dd7505d9b2c2" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Play_ENVP_PU_DataHeist_Alarm_ServerTemperatureCritical_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Stop Overheating Alarm CoolingEnabled" enabled="1" multiPosition="0" useDefaultProxy="0" tag="4126ceba-58e3-4265-95c7-8bedf81e451d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Stop_ENVP_PU_DataHeist_Alarm_ServerOverheating_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Stop Overheating Alarm TempCritical" enabled="1" multiPosition="0" useDefaultProxy="0" tag="4126ceba-58e3-4265-95c7-8bedf81e451d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Stop_ENVP_PU_DataHeist_Alarm_ServerOverheating_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTagEffect>
+              <SEntityEffectSystem_SoundTagEffect name="Stop TempCritical Alarm ServerDestroyed" enabled="1" multiPosition="0" useDefaultProxy="0" tag="23f0be4c-4334-4cc0-a589-20f4adc1348d" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+                <soundEffect audioTrigger="Stop_ENVP_PU_DataHeist_Alarm_ServerTemperatureCritical_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
                     <offset __type="QuatT">
@@ -851,6 +1183,87 @@
         <audioEnvironmentEffects>
         </audioEnvironmentEffects>
         <lightEffects>
+          <EntityEffectSystem_LightCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="EntityEffectSystem_LightCategory">
+            <tagEffects>
+              <EntityEffectSystem_LightTagEffect name="TemperatureGood" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.01" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="0" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="03228d89-5cf3-42cd-9ece-936d37cd6da2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="0.001517635" g="1" b="0.01298303" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_lightlink_1" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="TemperatureOverheating" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.01" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="0" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="8abeb901-b67d-4563-8b84-33d155112d1e" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="1" g="0.3231432" b="0.001517635" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_lightlink_1" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="TemperatureCritical" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.01" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="0" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="8400fc15-093f-4b63-b271-dd7505d9b2c2" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="0.6795425" g="0.000910581" b="0.000910581" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_lightlink_1" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+              <EntityEffectSystem_LightTagEffect name="Destroyed" enabled="1" useTemperature="0" colorTemperature="6500" diffuseMultiplier="0.01" viewDistanceRatio="100" castShadow="0" shadowQualityCap="Full" maxShadowCastDistance="0" ambient="0" softBulb="0" fakeLight="1" affectsFog="0" affectThisAreaOnly="0" holographic="0" visibleThirdPerson="1" visibleFirstPerson="1" visibleShadows="1" lightImportance="Standard" tag="23f0be4c-4334-4cc0-a589-20f4adc1348d" __type="SEntityEffectSystem_Effect" __polymorphicType="EntityEffectSystem_LightTagEffect">
+                <color r="0.2345506" g="0.000910581" b="0.000910581" __type="RGB" />
+                <lightType>
+                  <EntityEffectSystem_LightType_PointLight radius="4" attenuationBulbSize="0" __type="EntityEffectSystem_LightType" __polymorphicType="EntityEffectSystem_LightType_PointLight" />
+                </lightType>
+                <lightLink>
+                  <EntityEffectSystem_LightLink subMeshName="mesh_lightlink_1" linkIgnoresColor="0" __type="EntityEffectSystem_LightLink" />
+                </lightLink>
+                <flare flareEnabled="0" flare="" flareFOV="360" flareScale="1" attachToSun="0" __type="LightFlareParams" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </EntityEffectSystem_LightTagEffect>
+            </tagEffects>
+            <triggerEffects />
+          </EntityEffectSystem_LightCategory>
         </lightEffects>
         <uiOwnerEffects>
         </uiOwnerEffects>
@@ -861,5 +1274,12 @@
       <tagsToEnableOnLoad />
       <triggersToEnableOnLoad />
     </SEntityComponentEffects>
+    <SObjectiveMarkerLocationParams __type="DataForgeComponentParams" __polymorphicType="SObjectiveMarkerLocationParams">
+      <locations>
+        <ObjectiveMarkerLocation name="Marker" attachMarker="0" boneName="" useBoundingBoxCenter="0" __type="ObjectiveMarkerLocation">
+          <offset x="0" y="0" z="1.5" __type="Vec3" />
+        </ObjectiveMarkerLocation>
+      </locations>
+    </SObjectiveMarkerLocationParams>
   </Components>
 </EntityClassDefinition.DH_DataServer>

@@ -43,7 +43,7 @@
         <materialVariants />
       </Material>
     </SGeometryResourceParams>
-    <SCItemTurretParams rotationStyle="SingleAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="1" miningOperatorMode="0" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="da01cefe-07b3-4533-aac4-09d4c624dc2e" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
+    <SCItemTurretParams rotationStyle="SingleAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="1" switchToCachedOperatorModeOnExit="1" operatorModeOnEnter="Turret" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="da01cefe-07b3-4533-aac4-09d4c624dc2e" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
       <recenterTask>
       </recenterTask>
       <resumeControlTask>
@@ -257,7 +257,7 @@
       <masterController>
       </masterController>
       <Ports>
-        <SItemPortDef Name="turret_left" DisplayName="port_NameTurretGunSlot01" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="2" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+        <SItemPortDef Name="turret_left" DisplayName="port_NameTurretGunSlot01" PortTags="" RequiredPortTags="" Flags="" MinSize="2" MaxSize="2" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
           <Tags />
           <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
           <AttachmentPoints />
@@ -266,10 +266,8 @@
           <Connections />
           <DisabledPortLinks />
           <Types>
-            <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
-              <SubTypes>
-                <Enum value="Gun" />
-              </SubTypes>
+            <SItemPortDefTypes Type="TractorBeam" __type="SItemPortDefTypes">
+              <SubTypes />
             </SItemPortDefTypes>
           </Types>
           <Extension>
@@ -279,7 +277,7 @@
               <Helper Tags="" __type="SItemPortDefHelperNode">
                 <Helper Name="turret_left" ItemOffsetHelperName="" __type="SItemPortDefHelper">
                   <Offset __type="QuatT">
-                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Rotation x="0" y="0" z="-180" __type="Ang3" />
                     <Position x="0" y="0" z="0" __type="Vec3" />
                   </Offset>
                   <SimulationParams>

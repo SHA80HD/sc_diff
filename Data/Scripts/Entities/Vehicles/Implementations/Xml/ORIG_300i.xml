@@ -275,6 +275,7 @@
                       <Observerable itemType="Radar" screensAvail="NotUsed_Radar" />
                       <Observerable itemType="Scanner" screensAvail="NotUsed_Scanner" />
                       <Observerable itemType="LandingSystem" screensDefault="Screen_Flight_HUD" screensAvail="Screen_Flight_HUD" />
+                      <Observerable itemType="SalvageController" screensDefault="" screensAvail="Flight_HUD" />
                     </Observerables>
                     <PriorityGroups>
                       <PriorityGroup itemType="EnergyController" />
@@ -297,6 +298,7 @@
                       <PriorityGroup itemType="Display" />
                       <PriorityGroup itemType="Scanner" />
                       <PriorityGroup itemType="Ping" />
+                      <PriorityGroup itemType="SalvageController" />
                       <PriorityGroup itemType="Seat" defaultPriority="no_control">
                         <tags tag="pilotSeat">
                           <Priority value="exclusive_control" />
@@ -351,6 +353,23 @@
                     <PriorityGroups>
                       <PriorityGroup itemType="MainThruster" defaultPriority="exclusive_control" />
                       <PriorityGroup itemType="ManneuverThruster" defaultPriority="exclusive_control" />
+                    </PriorityGroups>
+                  </UsableDef>
+                </ControllerDef>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_controller_salvage" class="ItemPort">
+              <ItemPort minsize="1" maxsize="1" flags="invisible uneditable">
+                <Types>
+                  <Type type="SalvageController" />
+                </Types>
+                <ControllerDef>
+                  <UsableDef>
+                    <PriorityGroups>
+                      <PriorityGroup itemType="ToolArm" />
+                      <PriorityGroup itemType="SalvageModifier" />
+                      <PriorityGroup itemType="SalvageHead" />
+                      <PriorityGroup itemType="TractorBeam" />
                     </PriorityGroups>
                   </UsableDef>
                 </ControllerDef>
@@ -1312,7 +1331,7 @@
               </ItemPort>
             </Part>
             <Part name="hardpoint_tractor" class="ItemPort">
-              <ItemPort minSize="3" maxSize="4" flags="uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1" id="modPart_hardpoint_tractor">
+              <ItemPort minSize="3" maxSize="4" flags="$uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1" id="modPart_hardpoint_tractor">
                 <Types>
                   <Type type="Turret" subtypes="GunTurret" />
                 </Types>

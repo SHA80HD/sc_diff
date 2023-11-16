@@ -3,6 +3,7 @@
     <Reference value="1c0b7774-b2b6-4d24-bbe6-29b8bb6ac952" />
     <Reference value="05622fda-b78a-4b64-8bb9-d3cb7b5bff04" />
     <Reference value="6b1cce6a-8ef0-4401-9136-5aff1a7f38cc" />
+    <Reference value="84f261a5-335f-48c0-a70e-5c58d3a65ca5" />
   </tags>
   <StaticEntityClassData />
   <Components>
@@ -47,22 +48,6 @@
     <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
       <Interactable __type="SInteractableParams">
         <SharedInteractions>
-          <SSharedInteractionParams Name="Idle_Guard" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
-            <QueryTags>
-              <Reference value="05622fda-b78a-4b64-8bb9-d3cb7b5bff04" />
-            </QueryTags>
-            <conditionList>
-            </conditionList>
-            <playerAnimatedInteractionBase>
-            </playerAnimatedInteractionBase>
-          </SSharedInteractionParams>
-          <SSharedInteractionParams Name="OpenGuardDoor" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
-            <QueryTags />
-            <conditionList>
-            </conditionList>
-            <playerAnimatedInteractionBase>
-            </playerAnimatedInteractionBase>
-          </SSharedInteractionParams>
           <SSharedInteractionParams Name="UnlockGuardDoor" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
             <QueryTags />
             <conditionList>
@@ -92,7 +77,7 @@
             <PlayerAnimatedInteractionParams>
             </PlayerAnimatedInteractionParams>
             <Interactions>
-              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
@@ -105,11 +90,11 @@
     </SEntityInteractableParams>
     <SActorUsableParams archetype="9f9721fa-fdcb-47d8-b548-0a6ccda38720" fragmentTag="guard_spot" isExterior="0" allowDeadOrUnconscious="0" __type="DataForgeComponentParams" __polymorphicType="SActorUsableParams">
       <useSlots>
-        <UsableUseSlot name="Guard Centre" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+        <UsableUseSlot name="Guard Centre" available="1" useSlotReenablePoint="UsableDelink" stance="Stand" additionalFragmentTags="" isScoochable="0" alignWithGravity="1" syncAnimationWithUser="0" __type="UsableUseSlot">
           <useChannelInstances>
-            <UsableUseChannelInstance useChannelArchetype="35fc5ece-6501-4971-804b-c9e8c03920b2" interaction="Interactable.SharedInteractions[0]" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+            <UsableUseChannelInstance useChannelArchetype="35fc5ece-6501-4971-804b-c9e8c03920b2" interaction="Interactable.SharedInteractions" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
               <alignmentSlots>
-                <WeakPointer alignmentSlots="alignmentSlots" />
+                <WeakPointer alignmentSlots="alignmentSlots[0]" />
               </alignmentSlots>
               <conditionList>
               </conditionList>
@@ -128,11 +113,13 @@
             <Rotation x="0" y="0" z="0" __type="Ang3" />
             <Position x="0" y="0" z="0" __type="Vec3" />
           </relativeTransform>
-          <optionalGameTags />
+          <optionalGameTags>
+            <Reference value="82ec07b7-0ec6-4db1-9892-981d790c0cee" />
+          </optionalGameTags>
         </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="Guard_Centre" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_Propless" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot name="Guard_Centre" available="1" canPlayerUse="0" fragmentTag="" slottedFragmentTag="" helperName="$anchor_Propless" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="FeetLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints>
             <WeakPointer interactionPoints="Interactable.InteractionPoints" />
           </interactionPoints>
@@ -154,8 +141,54 @@
             </idlePoseOverrides>
           </usableIdleParams>
         </PointAlignmentSlot>
+        <PointAlignmentSlot name="TalkSlot_Left" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="Talk_Slot_Left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="-140" __type="Ang3" />
+            <Position x="-1" y="1" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot name="TalkSlot_Right" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="Talk_Slot_Right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="140" __type="Ang3" />
+            <Position x="1" y="1" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
       </alignmentSlots>
-      <slottingSetups />
+      <slottingSetups>
+        <UsableSlottingSetup fragmentTagsForSlot="" __type="UsableSlottingSetup">
+          <routingElement>
+            <UsableSlottingAlignmentSlot alignmentSlot="alignmentSlots[0]" __type="UsableSlottingReferenceElementBase" __polymorphicType="UsableSlottingAlignmentSlot" />
+          </routingElement>
+          <orderedAlignmentSlotsToBeOverriden />
+          <useSlots>
+            <WeakPointer useSlots="0" />
+          </useSlots>
+        </UsableSlottingSetup>
+      </slottingSetups>
       <views />
       <abilityLocks />
       <usableSequencerTasks />

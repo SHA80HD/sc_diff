@@ -1,0 +1,509 @@
+<EntityClassDefinition.TMBL_Storm_Main_Turret Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="e1e59a86-ec92-4c20-a33c-e5a2834af2c4" __path="libs/foundry/records/entities/scitem/vehicles/turret/tmbl_storm_turret/tmbl_storm_main_turret.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="Turret" SubType="TopTurret" Size="3" Grade="1" Manufacturer="bb1024bc-b82e-491c-820c-36662c36feb3" inheritParentManufacturer="0" Tags="TMBL_Storm" RequiredTags="TMBL_Storm" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_NameTMBL_Storm_Turret" ShortName="@item_DescTMBL_Storm_Turret" Description="@item_Desc_Turret_Remote" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Activate Remote Camera" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_use_remote_turret" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Turret_Gyro_Mode" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_turret_gyro" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Turret_Sensitivity_Increase" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_turret_sensitivity_increase" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Turret_Sensitivity_Decrease" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_turret_sensitivity_decrease" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Turret_Sensitivity_Reset" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_turret_sensitivity_reset" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="TurretDeploy" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_shuttle_called" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="TurretRetract" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="TurretRetractedLimit" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="setLimiterTagTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+        <SReplicatedSequencerDefSequenceParams name="TurretDeployedLimit" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="setLimiterTagTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="1" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/Vehicles/TMBL/storm/TMBL_Storm_Turret.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry>
+          <SGeometryNodeParams Tags="Paint_Storm_Green_Green_Camo" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Vehicles/TMBL/storm/TMBL_Storm_Turret.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/storm/tmbl_storm_forest_camo.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Storm_White_White_Camo" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Vehicles/TMBL/storm/TMBL_Storm_Turret.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/storm/tmbl_storm_snow_camo.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Storm_White_Grey_TwoTone" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Vehicles/TMBL/storm/TMBL_Storm_Turret.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/storm/tmbl_storm_white_grey_camo.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Storm_Dark_Camo" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Vehicles/TMBL/storm/TMBL_Storm_Turret.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/storm/tmbl_storm_dark_camo.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+        </SubGeometry>
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="80" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="1" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+        <AnimationJointControl __type="AnimationJointControl">
+          <variables>
+            <AnimationFloatVariable name="VAR_TurretDeploy" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="2" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+          </variables>
+          <movements />
+          <animations>
+            <AnimationMovement variable="AnimationJointControls.AnimationJointControl.variables" animationName="turret_deploy" layerId="31" __type="AnimationMovement" />
+          </animations>
+        </AnimationJointControl>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SCItemTurretParams rotationStyle="SingleAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="1" switchToCachedOperatorModeOnExit="1" operatorModeOnEnter="Turret" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="da01cefe-07b3-4533-aac4-09d4c624dc2e" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
+      <recenterTask>
+      </recenterTask>
+      <resumeControlTask>
+      </resumeControlTask>
+      <setMovementTagTasks />
+      <setLimiterTagTasks>
+        <SSequencerTurretSetLimiterTagTaskParams limiterTag="83cb9619-a31b-4ad0-a136-5c2ed5f9d0a1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerTurretSetLimiterTagTaskParams" />
+        <SSequencerTurretSetLimiterTagTaskParams limiterTag="0aa1bfd7-d5dd-429f-901f-06102c853eec" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerTurretSetLimiterTagTaskParams" />
+      </setLimiterTagTasks>
+      <movementTagNames />
+      <movementList>
+        <SCItemTurretJointMovementParams movementTag="00000000-0000-0000-0000-000000000000" jointName="turret_yaw" slavedOnly="0" restrictTargetAngles="0" __type="SCItemTurretMovementParams" __polymorphicType="SCItemTurretJointMovementParams">
+          <pitchAxis>
+          </pitchAxis>
+          <rollAxis>
+          </rollAxis>
+          <yawAxis>
+            <SCItemTurretJointMovementAxisParams enableIKRotationalSpeed="1" speed="100" acceleration="250" accelerationDecay="12" __type="SCItemTurretJointMovementAxisParams">
+              <audioRtpcMoveToTarget rtpc="Turret_Manned_Yaw" __type="AudioRtpc" />
+              <audioRtpcMoveToTargetDistance rtpc="Turret_Movement_Axis_Speed" __type="AudioRtpc" />
+              <startRotateAudioTrigger audioTrigger="Play_WPHT_Turret_Storm_Tank_Rotation_Yaw" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <stopRotateAudioTrigger audioTrigger="Stop_WPHT_Turret_Nova_Tank_Rotation_Yaw" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <angleLimits>
+                <SCItemTurretStandardAngleLimitParams LowestAngle="-180" HighestAngle="180" __type="SCItemTurretAngleLimitParams" __polymorphicType="SCItemTurretStandardAngleLimitParams">
+                  <limitOverwrites />
+                </SCItemTurretStandardAngleLimitParams>
+              </angleLimits>
+            </SCItemTurretJointMovementAxisParams>
+          </yawAxis>
+        </SCItemTurretJointMovementParams>
+        <SCItemTurretJointMovementParams movementTag="00000000-0000-0000-0000-000000000000" jointName="turret_pitch" slavedOnly="0" restrictTargetAngles="0" __type="SCItemTurretMovementParams" __polymorphicType="SCItemTurretJointMovementParams">
+          <pitchAxis>
+            <SCItemTurretJointMovementAxisParams enableIKRotationalSpeed="1" speed="100" acceleration="250" accelerationDecay="12" __type="SCItemTurretJointMovementAxisParams">
+              <audioRtpcMoveToTarget rtpc="Turret_Manned_Pitch" __type="AudioRtpc" />
+              <audioRtpcMoveToTargetDistance rtpc="Turret_Movement_Axis_Speed" __type="AudioRtpc" />
+              <startRotateAudioTrigger audioTrigger="Play_WPHT_Turret_Storm_Tank_Rotation_Pitch" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <stopRotateAudioTrigger audioTrigger="Stop_WPHT_Turret_Nova_Tank_Rotation_Pitch" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <angleLimits>
+                <SCItemTurretCustomAngleLimitParams RelativeJointName="turret_yaw" __type="SCItemTurretAngleLimitParams" __polymorphicType="SCItemTurretCustomAngleLimitParams">
+                  <AngleLimits>
+                    <SCItemTurretCustomAngleLimit TurretRotation="0" LowestAngle="-25" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="35" LowestAngle="-20" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="90" LowestAngle="-20" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="130" LowestAngle="-10" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="140" LowestAngle="-15" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="160" LowestAngle="-15" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="165" LowestAngle="-25" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="180" LowestAngle="-26" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="195" LowestAngle="-25" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="200" LowestAngle="-15" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="220" LowestAngle="-15" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="230" LowestAngle="-10" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="270" LowestAngle="-20" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="325" LowestAngle="-20" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                    <SCItemTurretCustomAngleLimit TurretRotation="360" LowestAngle="-25" HighestAngle="40" __type="SCItemTurretCustomAngleLimit" />
+                  </AngleLimits>
+                  <limitOverwrites>
+                    <SCItemTurretCustomAngleLimitTagOverwriteParams limiterTag="83cb9619-a31b-4ad0-a136-5c2ed5f9d0a1" __type="SCItemTurretCustomAngleLimitTagOverwriteParams">
+                      <AngleLimits>
+                        <SCItemTurretCustomAngleLimit TurretRotation="0" LowestAngle="-15" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="35" LowestAngle="-10" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="90" LowestAngle="-10" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="130" LowestAngle="0" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="140" LowestAngle="-5" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="160" LowestAngle="-5" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="165" LowestAngle="-15" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="180" LowestAngle="-16" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="195" LowestAngle="-15" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="200" LowestAngle="-5" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="220" LowestAngle="-5" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="230" LowestAngle="0" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="270" LowestAngle="-10" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="325" LowestAngle="-10" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                        <SCItemTurretCustomAngleLimit TurretRotation="360" LowestAngle="-15" HighestAngle="24" __type="SCItemTurretCustomAngleLimit" />
+                      </AngleLimits>
+                    </SCItemTurretCustomAngleLimitTagOverwriteParams>
+                  </limitOverwrites>
+                </SCItemTurretCustomAngleLimitParams>
+              </angleLimits>
+            </SCItemTurretJointMovementAxisParams>
+          </pitchAxis>
+          <rollAxis>
+          </rollAxis>
+          <yawAxis>
+          </yawAxis>
+        </SCItemTurretJointMovementParams>
+      </movementList>
+      <maxSpeedPerGimbalMode>
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+        <Single value="0" />
+      </maxSpeedPerGimbalMode>
+      <weaponModifierInterpolationFactor>
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+        <Single value="1" />
+      </weaponModifierInterpolationFactor>
+      <gyroStabilize>
+        <SCItemTurretGyroParams defaultGyroStabilize="1" toggleGyroStabilizeModeInteraction="Interactable.SharedInteractions[1]" __type="SCItemTurretGyroParams" />
+      </gyroStabilize>
+      <remoteTurret>
+        <SCItemTurretRemoteParams remoteCamera="608a959e-18eb-4533-8610-09e31841d08a" interaction="Interactable.SharedInteractions[0]" turretOnlyUsableInRemoteCamera="0" __type="SCItemTurretRemoteParams" />
+      </remoteTurret>
+      <turretSensitivity increaseSensitivityInteraction="Interactable.SharedInteractions[2]" decreaseSensitivityInteraction="Interactable.SharedInteractions[3]" resetSensitivityInteraction="Interactable.SharedInteractions[4]" sensitivityDelta="0.1" __type="SCItemTurretSensitivityParams" />
+      <audioRtpcHealthRatio rtpc="Turret_Health" __type="AudioRtpc" />
+    </SCItemTurretParams>
+    <EntityComponentPowerConnection PowerBase="0" PowerDraw="1" TimeToReachDrawRequest="0" SafeguardPriority="0" DisplayedInPoweredItemList="0" IsThrottleable="0" IsOverclockable="0" OverclockThresholdMin="0" OverclockThresholdMax="0" OverpowerPerformance="0" OverclockPerformance="0" PowerToEM="0" DecayRateOfEM="0.15" WarningDelayTime="0.3" WarningDisplayTime="8" MisfireItemTypeLocID="@LOC_PLACEHOLDER" __type="DataForgeComponentParams" __polymorphicType="EntityComponentPowerConnection">
+      <MisfireGenerationParams>
+      </MisfireGenerationParams>
+      <MisfireEvents __type="SMisfireEvents">
+        <MinorMisfires />
+        <MajorMisfires />
+        <CriticalMisfires />
+      </MisfireEvents>
+    </EntityComponentPowerConnection>
+    <EntityComponentHeatConnection TemperatureToIR="6" StartIRTemperature="250" OverpowerHeat="0" OverclockThresholdMinHeat="0" OverclockThresholdMaxHeat="0" ThermalEnergyBase="10" ThermalEnergyDraw="20" ThermalConductivity="3" SpecificHeatCapacity="13" Mass="200" SurfaceArea="50" StartCoolingTemperature="300" MaxCoolingRate="1" MaxTemperature="450" OverheatTemperature="370" RecoveryTemperature="350" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
+    <SCItemShipComputerParams definition="f136d430-3c79-4123-8747-e84a76fe8364" __type="DataForgeComponentParams" __polymorphicType="SCItemShipComputerParams" />
+    <UIAudioComponentEntityComponentParams UIAudioDef="907e5334-88e2-47a4-840a-eeefdbc64121" useEntityClass="00000000-0000-0000-0000-000000000000" dialogueContext="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIAudioComponentEntityComponentParams">
+      <offset>
+      </offset>
+      <videoAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioPauseTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <videoAudioResumeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+    </UIAudioComponentEntityComponentParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="hardpoint_primary_weapon" DisplayName="port_NameTurretGunSlot01" PortTags="TMBL_Storm" RequiredPortTags="TMBL_Storm" Flags="uneditable" MinSize="3" MaxSize="3" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="Gun" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_primary_weapon" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <RParticleFieldNodeComponentParams enableField="1" texture3D="" strengthMult="1" useTransformHelperFile="1" matchSizeFromTexture="0" mergeSDFs="0" mergedVoxelCountScaleFrac="1" __type="DataForgeComponentParams" __polymorphicType="RParticleFieldNodeComponentParams">
+      <size x="1" y="1" z="1" __type="Vec3" />
+      <posOffset x="0" y="0" z="0" __type="Vec3" />
+      <rotOffset x="0" y="0" z="0" __type="Ang3" />
+      <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
+      <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
+    </RParticleFieldNodeComponentParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <SHealthComponentParams Health="1000" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
+    <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+    <SCItemAimableControllerParams DefaultToGimbal="0" hudParamsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SCItemAimableControllerParams" />
+    <SCItemAimableComponentParams __type="DataForgeComponentParams" __polymorphicType="SCItemAimableComponentParams" />
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="TurretStates" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="TurretRetractedState" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[0]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+                <SetItemportActiveEvent enable="1" __type="EventDispatcher" __polymorphicType="SetItemportActiveEvent">
+                  <itemPorts>
+                    <String value="hardpoint_primary_weapon" />
+                  </itemPorts>
+                </SetItemportActiveEvent>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[5]" NextState="StateTypes.SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags>
+                  <Reference value="9a0672b8-16f1-429f-ba12-54647cb725e6" />
+                </tags>
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="TurretDeployedState" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[1]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+                <SetItemportActiveEvent enable="1" __type="EventDispatcher" __polymorphicType="SetItemportActiveEvent">
+                  <itemPorts>
+                    <String value="hardpoint_primary_weapon" />
+                  </itemPorts>
+                </SetItemportActiveEvent>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[6]" NextState="StateTypes.SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags>
+                  <Reference value="12fa999c-b114-4ae7-8f96-711222f0f17a" />
+                </tags>
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <PowerConnectionStateModifier off="StateTypes.SInteractionStateType.States[0]" normal="StateTypes.SInteractionStateType.States[1]" warning="null" failed="null" __type="SStateModifier" __polymorphicType="PowerConnectionStateModifier">
+              <context>
+                <AttachableStateModifierContext_Self __type="AttachableStateModifierContextBase" __polymorphicType="AttachableStateModifierContext_Self" />
+              </context>
+            </PowerConnectionStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+  </Components>
+</EntityClassDefinition.TMBL_Storm_Main_Turret>

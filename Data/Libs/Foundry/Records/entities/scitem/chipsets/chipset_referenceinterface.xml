@@ -1,0 +1,124 @@
+<EntityClassDefinition.ChipSet_ReferenceInterface Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="a503e639-1f45-4986-bad7-8ff26122000d" __path="libs/foundry/records/entities/scitem/chipsets/chipset_referenceinterface.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Register" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="8979afe3-2d6e-4a91-8e66-d377051c1826" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Deactivate" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="EntityLinkedShip" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeEntityLink entityTag="00000000-0000-0000-0000-000000000000" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeEntityLink" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="DoorState_Relay" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_door_state_relay" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes />
+              <nextNodes>
+                <SEntityTraversingNodeBase name="FindDoorInterfaceByTag" __type="SEntityTraversingNodeBase">
+                  <id>
+                  </id>
+                  <entityTraversingType>
+                    <SEntityTraversingNodeTypeInteractionLink entityTag="1d4ec7e5-0785-4b62-92d9-dc3dc90de8cf" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeInteractionLink" />
+                  </entityTraversingType>
+                  <executeNodes />
+                  <nextNodes>
+                    <SEntityTraversingNodeBase name="EntityLinkedDoor" __type="SEntityTraversingNodeBase">
+                      <id>
+                      </id>
+                      <entityTraversingType>
+                        <SEntityTraversingNodeTypeEntityLink entityTag="00000000-0000-0000-0000-000000000000" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeEntityLink" />
+                      </entityTraversingType>
+                      <executeNodes />
+                      <nextNodes />
+                    </SEntityTraversingNodeBase>
+                  </nextNodes>
+                </SEntityTraversingNodeBase>
+              </nextNodes>
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets>
+        <SEntityTraversingTarget name="ReferenceTarget" __type="SEntityTraversingTarget">
+          <paths>
+            <SEntityTraversingTargetPath node="TraversingNodes.SEntityTraversingNodeBase.nextNodes.SEntityTraversingNodeBase.nextNodes.SEntityTraversingNodeBase.nextNodes" __type="SEntityTraversingTargetPath" />
+          </paths>
+        </SEntityTraversingTarget>
+      </TraversingTargets>
+    </SEntityTraversingTreeParams>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="UNDEFINED" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+  </Components>
+</EntityClassDefinition.ChipSet_ReferenceInterface>

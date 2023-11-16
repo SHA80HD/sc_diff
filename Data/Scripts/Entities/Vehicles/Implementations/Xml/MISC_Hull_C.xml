@@ -972,7 +972,7 @@
               </ItemPort>
             </Part>
             <Part name="hardpoint_turret_tractor_beam_top_front" class="ItemPort">
-              <ItemPort minSize="4" maxSize="4" flags="uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
+              <ItemPort minSize="4" maxSize="4" flags="$uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
                 <Types>
                   <Type type="Turret" subtypes="GunTurret" />
                 </Types>
@@ -999,24 +999,34 @@
                 <ControllerDef controllableTags="tractorSeatRadar" />
               </ItemPort>
             </Part>
-            <Part name="hardpoint_controller_turret_tractor" class="ItemPort">
+            <Part name="hardpoint_salvage_controller_turret_tractor" class="ItemPort">
+              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
+                <Types>
+                  <Type type="SalvageController" />
+                </Types>
+                <ControllerDef controllableTags="tractorSeat">
+                  <UsableDef>
+                    <ConditionalPriorities>
+                      <ConditionalPriority itemType="TractorBeam" defaultPriority="no_control" priorityWhenConditionMet="exclusive_control">
+                        <Condition_And>
+                          <Condition_Tag tag="tractorSeat" />
+                          <Condition_AllowedByTurret />
+                        </Condition_And>
+                      </ConditionalPriority>
+                    </ConditionalPriorities>
+                  </UsableDef>
+                </ControllerDef>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_aimable_controller_turret_tractor" class="ItemPort">
               <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
                 <Types>
                   <Type type="WeaponController" />
                 </Types>
-                <Connections>
-                  <Connection pipeClass="Power" pipe="MainPower" />
-                  <Connection pipeClass="Heat" pipe="MainHeat" />
-                </Connections>
                 <ControllerDef controllableTags="tractorSeat">
                   <UsableDef>
                     <PriorityGroups>
                       <PriorityGroup itemType="Turret" defaultPriority="no_control">
-                        <tags tag="tractorSeat">
-                          <Priority value="exclusive_control" />
-                        </tags>
-                      </PriorityGroup>
-                      <PriorityGroup itemType="WeaponGun" defaultPriority="no_control">
                         <tags tag="tractorSeat">
                           <Priority value="exclusive_control" />
                         </tags>
@@ -1027,7 +1037,7 @@
               </ItemPort>
             </Part>
             <Part name="hardpoint_turret_tractor_beam_bottom_front" class="ItemPort">
-              <ItemPort minSize="4" maxSize="4" flags="uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
+              <ItemPort minSize="4" maxSize="4" flags="$uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
                 <Types>
                   <Type type="Turret" subtypes="GunTurret" />
                 </Types>
@@ -1782,7 +1792,7 @@
                           </ItemPort>
                         </Part>
                         <Part name="hardpoint_turret_tractor_beam_bottom_rear" class="ItemPort">
-                          <ItemPort minSize="4" maxSize="4" flags="uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
+                          <ItemPort minSize="4" maxSize="4" flags="$uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
                             <Types>
                               <Type type="Turret" subtypes="GunTurret" />
                             </Types>
@@ -1810,7 +1820,7 @@
                           </ItemPort>
                         </Part>
                         <Part name="hardpoint_turret_tractor_beam_top_rear" class="ItemPort">
-                          <ItemPort minSize="4" maxSize="4" flags="uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
+                          <ItemPort minSize="4" maxSize="4" flags="$uneditable" display_name="port_NameTurret03" displayPos="275,260" displayTop="1">
                             <Types>
                               <Type type="Turret" subtypes="GunTurret" />
                             </Types>
@@ -2082,6 +2092,7 @@
                       <Observerable itemType="MissileController" screensDefault="" screensAvail="" />
                       <Observerable itemType="CommsController" screensDefault="" screensAvail="Tractor_Display, SS_Left, SS_Right" primaryCommsScreen="Tractor_Display" />
                       <Observerable itemType="Radar" screensDefault="Radar" screensAvail="Radar" />
+                      <Observerable itemType="SalvageController" screensDefault="" screensAvail="Tractor_Display, SS_Left, SS_Right" />
                     </Observerables>
                     <PriorityGroups>
                       <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
@@ -2109,6 +2120,11 @@
                         </tags>
                       </PriorityGroup>
                       <PriorityGroup itemType="Turret" defaultPriority="no_control">
+                        <tags tag="tractorSeat">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
+                      <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
                         <tags tag="tractorSeat">
                           <Priority value="exclusive_control" />
                         </tags>

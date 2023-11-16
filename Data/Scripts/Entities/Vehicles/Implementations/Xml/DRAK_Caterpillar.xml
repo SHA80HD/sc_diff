@@ -67,7 +67,7 @@
     <Pipe name="WeaponAmmoLoadTurret" class="WeaponAmmoLoad" />
   </Pipes>
   <Parts id="xmlParts">
-    <Part name="DRAK_Caterpillar" class="Animated" mass="1660063.0" disablePhysics="0" scopeContext="Ship">
+    <Part name="DRAK_Caterpillar" class="Animated" mass="960063.0" disablePhysics="0" scopeContext="Ship">
       <Animated />
       <Parts>
         <Part name="Body" class="AnimatedJoint" damageMax="26100" detachRatio="0" detachBaseForce="0,-6,6" detachRandomForce="0,0.1,0.5" detachRandomRotation="9, 7, 5" detachProbability="1" detachNetworkSync="1">
@@ -280,12 +280,18 @@
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="ScreenDisplay" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="ScreenDisplay" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="ScreenDisplay" />
+                          <Observerable itemType="SalvageController" screensDefault="" screensAvail="ScreenDisplay" />
                         </Observerables>
                         <PriorityGroups>
                           <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="CoolerController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
+                            <tags tag="TractorBeamRightSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
                             <tags tag="TractorBeamRightSeat">
                               <Priority value="exclusive_control" />
                             </tags>
@@ -332,8 +338,26 @@
                     </ControllerDef>
                   </ItemPort>
                 </Part>
+                <Part name="hardpoint_controller_salvage_right" class="ItemPort">
+                  <ItemPort minsize="1" maxsize="1" flags="invisible uneditable">
+                    <Types>
+                      <Type type="SalvageController" />
+                    </Types>
+                    <ControllerDef controllableTags="TractorBeamRightSeat">
+                      <UsableDef>
+                        <PriorityGroups>
+                          <PriorityGroup itemType="TractorBeam" defaultPriority="no_control">
+                            <tags tag="TractorBeamRightSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                        </PriorityGroups>
+                      </UsableDef>
+                    </ControllerDef>
+                  </ItemPort>
+                </Part>
                 <Part name="hardpoint_tractorbeam_right" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="4" flags="uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1">
+                  <ItemPort minSize="1" maxSize="4" flags="$uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1">
                     <Types>
                       <Type type="Turret" subtypes="GunTurret" />
                     </Types>
@@ -1529,12 +1553,18 @@
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="ScreenDisplay" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="ScreenDisplay" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="ScreenDisplay" />
+                          <Observerable itemType="SalvageController" screensDefault="" screensAvail="ScreenDisplay" />
                         </Observerables>
                         <PriorityGroups>
                           <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="CoolerController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
+                            <tags tag="TractorBeamLeftSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
                             <tags tag="TractorBeamLeftSeat">
                               <Priority value="exclusive_control" />
                             </tags>
@@ -1581,8 +1611,26 @@
                     </ControllerDef>
                   </ItemPort>
                 </Part>
+                <Part name="hardpoint_controller_salvage_left" class="ItemPort">
+                  <ItemPort minsize="1" maxsize="1" flags="invisible uneditable">
+                    <Types>
+                      <Type type="SalvageController" />
+                    </Types>
+                    <ControllerDef controllableTags="TractorBeamLeftSeat">
+                      <UsableDef>
+                        <PriorityGroups>
+                          <PriorityGroup itemType="TractorBeam" defaultPriority="no_control">
+                            <tags tag="TractorBeamLeftSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                        </PriorityGroups>
+                      </UsableDef>
+                    </ControllerDef>
+                  </ItemPort>
+                </Part>
                 <Part name="hardpoint_tractorbeam_left" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="4" flags="uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1">
+                  <ItemPort minSize="1" maxSize="4" flags="$uneditable" display_name="port_NameTurret01" displayPos="275,260" displayTop="1">
                     <Types>
                       <Type type="Turret" subtypes="GunTurret" />
                     </Types>

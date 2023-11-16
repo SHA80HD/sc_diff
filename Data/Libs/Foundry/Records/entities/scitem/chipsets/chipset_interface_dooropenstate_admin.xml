@@ -1,0 +1,331 @@
+<EntityClassDefinition.ChipSet_Interface_DoorOpenState_Admin Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="b3d127ec-dc32-4340-8e28-f70e85462262" __path="libs/foundry/records/entities/scitem/chipsets/chipset_interface_dooropenstate_admin.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SCommentEntityParams text="[ChipSet_Interface]   &#xA;________________________________&#xA;" size="1.5" minScale="0.25" hidden="1" maxDistance="3" charsPerLine="30" fixed="0" __type="DataForgeComponentParams" __polymorphicType="SCommentEntityParams">
+      <color r="255" g="128" b="0" __type="SRGB8" />
+    </SCommentEntityParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Activate" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="5ed0ade9-51ed-4bed-835c-ada7fbd38738" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Deactivate" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="61cc8167-9013-4534-b4fc-3d7f60e752b7" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences />
+    </SEntityComponentSequencerParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="EntityLink" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeEntityLink entityTag="00000000-0000-0000-0000-000000000000" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeEntityLink" />
+          </entityTraversingType>
+          <executeNodes>
+            <SEntityTraversingNodeExecuteLinkAllTaggedInteractions __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SEntityTraversingNodeExecuteLinkAllTaggedInteractions" />
+          </executeNodes>
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets>
+        <SEntityTraversingTarget name="FindTarget" __type="SEntityTraversingTarget">
+          <paths>
+            <SEntityTraversingTargetPath node="TraversingNodes" __type="SEntityTraversingTargetPath" />
+          </paths>
+        </SEntityTraversingTarget>
+      </TraversingTargets>
+    </SEntityTraversingTreeParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="InterfaceDisplayState" bindingsMethod="States" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="InterfaceButton_On" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="InterfaceButton_Off" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="InterfaceButton_Busy" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="InterfaceButton_Error" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[0].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[0].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[2]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[0].SInteractionStateType.States[3]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[4]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[0].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates />
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="DoorOpenState" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="DoorOpened" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="DoorOpening" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="DoorClosed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="DoorClosing" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="NoDoor" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <SLinkedInteractionStateChangedStateModifier nullEntityState="StateTypes[1].SInteractionStateType.States[4]" __type="SStateModifier" __polymorphicType="SLinkedInteractionStateChangedStateModifier">
+              <context>
+                <SEntityTraversalTargetPathContext targetPath="TraversingTargets" __type="SEntityContextBase" __polymorphicType="SEntityTraversalTargetPathContext" />
+              </context>
+              <onChangeStateTagStates>
+                <SLinkedInteractionStateTags state="StateTypes[1].SInteractionStateType.States[0]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="9057a388-8ac5-40e2-9b0f-657bfab9ff60" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[1].SInteractionStateType.States[1]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="5d7b8e59-552f-407f-9df1-8eb582e9c22b" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[1].SInteractionStateType.States[2]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="6bd67663-b803-4f3b-9c9f-42c591b51b93" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes[1].SInteractionStateType.States[3]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="19e014c7-a1cc-4255-b206-94a9d85a3dac" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+              </onChangeStateTagStates>
+            </SLinkedInteractionStateChangedStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
+    <UIBindingsInteractionsComponentParams interactionDistance="50" __type="DataForgeComponentParams" __polymorphicType="UIBindingsInteractionsComponentParams" />
+    <UserVariablesComponentParams AlwaysUseDefaultValues="0" __type="DataForgeComponentParams" __polymorphicType="UserVariablesComponentParams">
+      <floats />
+      <ints>
+        <IntUserVariable name="uv_NotLoggedIn_LockIcon" defaultValue="0" __type="IntUserVariable">
+          <tasks />
+        </IntUserVariable>
+        <IntUserVariable name="uv_LoggedIn_LockIcon" defaultValue="1" __type="IntUserVariable">
+          <tasks />
+        </IntUserVariable>
+      </ints>
+      <bools>
+        <BoolUserVariable name="uv_HideAdminIcon" defaultValue="0" __type="BoolUserVariable">
+          <tasks />
+        </BoolUserVariable>
+      </bools>
+      <strings>
+        <StringUserVariable name="uv_URL_Icon_On" defaultValue="UI/Textures/Vector/General/CommonIcons/icon_common_door_open_new.svg" __type="StringUserVariable">
+          <recordRefValue>
+          </recordRefValue>
+          <tasks />
+        </StringUserVariable>
+        <StringUserVariable name="uv_URL_Icon_Off" defaultValue="UI/Textures/Vector/General/CommonIcons/icon_common_door_closed.svg" __type="StringUserVariable">
+          <recordRefValue>
+          </recordRefValue>
+          <tasks />
+        </StringUserVariable>
+      </strings>
+      <locStrings>
+        <LocStringUserVariable name="uv_tooltip_OnText" defaultValue="@security_access_panel_action_doors_close_tooltip" __type="LocStringUserVariable" />
+        <LocStringUserVariable name="uv_tooltip_OffText" defaultValue="@security_access_panel_action_doors_open_tooltip" __type="LocStringUserVariable" />
+        <LocStringUserVariable name="uv_button_text_on" defaultValue="@security_access_panel_action_doors" __type="LocStringUserVariable" />
+        <LocStringUserVariable name="uv_button_text_off" defaultValue="@security_access_panel_action_doors" __type="LocStringUserVariable" />
+        <LocStringUserVariable name="InterfaceLocation" defaultValue="@LOC_EMPTY" __type="LocStringUserVariable" />
+      </locStrings>
+    </UserVariablesComponentParams>
+    <SFlowGraphProxyParams flowgraphPath="" __type="DataForgeComponentParams" __polymorphicType="SFlowGraphProxyParams" />
+  </Components>
+</EntityClassDefinition.ChipSet_Interface_DoorOpenState_Admin>

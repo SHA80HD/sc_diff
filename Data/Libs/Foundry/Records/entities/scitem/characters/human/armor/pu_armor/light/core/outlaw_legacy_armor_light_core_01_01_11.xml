@@ -95,7 +95,7 @@
               <SGeometryNodeParams Tags="inventoryStoredEntity" ScaleMultiplier="1" __type="SGeometryNodeParams">
                 <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
                   <Geometry path="Objects/Characters/Human/female_v2/armor/outlaw/f_outlaw_legacy_light_core_01_prop.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
-                  <Material path="objects/characters/human/male_v7/armor/outlaw/mtl_var/m_outlaw_legacy_light_armor_01_01_01/m_outlaw_legacy_light_armor_01_01_11.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+                  <Material path="Objects/Characters/Human/male_v7/armor/outlaw/m_outlaw_legacy_light_core_01_01_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
                   <SimulationGeometry>
                   </SimulationGeometry>
                   <Palette RootRecord="d73f40a7-4ade-4f69-aacb-f524dac6ff2a" ChildPath="" __type="TintPaletteRef" />
@@ -208,6 +208,11 @@
                 <Enum value="Medium" />
               </SubTypes>
             </SItemPortDefTypes>
+            <SItemPortDefTypes Type="WeaponPersonal" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="Gadget" />
+              </SubTypes>
+            </SItemPortDefTypes>
           </Types>
           <Extension>
             <SItemPortDefExtensionFPS SelectTag="backRight" __type="SItemPortDefExtensionBase" __polymorphicType="SItemPortDefExtensionFPS" />
@@ -232,15 +237,15 @@
                 </Helper>
                 <SubHelpers>
                   <SItemPortDefHelperNode Tags="shouldered" __type="SItemPortDefHelperNode">
-                    <Helper Name="wep_stocked_attach_3_override" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                    <Helper Name="wep_stocked_attach_3_override" ItemOffsetHelperName="attach_offset_left_01" __type="SItemPortDefHelper">
                       <Offset __type="QuatT">
-                        <Rotation x="-172.8" y="-0.000189" z="-1E-05" __type="Ang3" />
-                        <Position x="0" y="-0.022151" z="0.175343" __type="Vec3" />
+                        <Rotation x="0" y="0" z="0" __type="Ang3" />
+                        <Position x="0" y="0" z="0" __type="Vec3" />
                       </Offset>
                       <SimulationParams>
                         <SSimulationParamsPendulumHalfCone UseSimulation="1" UseDebugSetup="0" UseDebugText="0" UseRedirect="0" SimFPS="10" Mass="8" Gravity="45" Damping="8.5" JointSpring="1.5" ConeAngle="25" HingeRotation="90" ProjectionType="PS1_ShortarcRotation" __type="SSimulationParamsBase" __polymorphicType="SSimulationParamsPendulumHalfCone">
                           <PivotOffset x="0" y="0" z="-0.04" __type="Vec3" />
-                          <SimulationAxis x="0" y="0.5" z="0" __type="Vec3" />
+                          <SimulationAxis x="0" y="0" z="-0.5" __type="Vec3" />
                           <SpringTarget x="0" y="0" __type="Vec2" />
                           <Capsule x="0.3" y="0.06" __type="Vec2" />
                           <AvailableCollisionProxies />

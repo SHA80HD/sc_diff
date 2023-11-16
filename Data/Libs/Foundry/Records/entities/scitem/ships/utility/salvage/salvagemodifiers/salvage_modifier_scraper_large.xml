@@ -116,7 +116,7 @@
     </ItemControlComponentParams>
     <EntityComponentAttachableModifierParams activationMethod="ActivateOnDemand" activationInteraction="null" deactivationInteraction="null" charges="0" canInterrupt="0" isInterruptible="1" icon="" __type="DataForgeComponentParams" __polymorphicType="EntityComponentAttachableModifierParams">
       <modifiers>
-        <ItemWeaponModifiersParams fireActionIndex="0" showInUI="0" __type="BaseItemModifierParams" __polymorphicType="ItemWeaponModifiersParams">
+        <ItemWeaponModifiersParams fireActionIndex="0" setFireActionOnEnable="1" showInUI="0" __type="BaseItemModifierParams" __polymorphicType="ItemWeaponModifiersParams">
           <modifierLifetime>
           </modifierLifetime>
           <weaponModifier __type="SWeaponModifierParams">
@@ -127,6 +127,11 @@
                   <maxMultiplier x="1" y="1" __type="Vec2" />
                   <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
                   <shotKickMultiplier x="1" y="1" __type="Vec2" />
+                  <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                    <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                    <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                    <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+                  </curveRecoil>
                 </aimRecoilModifier>
                 <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
                   <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -139,8 +144,16 @@
                     <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                     <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
                   </rotationModifiers>
-                  <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-                  <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                  <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                    <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                    <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                    <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+                  </positionDecayModifiers>
+                  <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                    <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                    <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                    <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+                  </rotationDecayModifiers>
                 </curveRecoil>
                 <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
                   <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -164,18 +177,20 @@
           </modifierLifetime>
           <strengthOverride>
           </strengthOverride>
-          <beamEffects hitEffectName="salvage_vehicle_large" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+          <beamEffects hitEffectName="salvage_vehicle_large" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+            <beamSizeSwitch switch="" __type="AudioSwitch" />
             <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <beamLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <beamStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <beamActiveRTPC rtpc="" __type="AudioRtpc" />
             <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
             <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <beamImpactStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <beamImpactStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
             <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
             <beamEffects>
-              <SBeamEffectParams helper="muzzle_out" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
+              <SBeamEffectParams helper="muzzle_out" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
                 <particleEffect path="Gadgets\salvage_tool.vehicle.beam.vehicle_salvage_large_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                 <thirdPersonParticleEffect path="Gadgets\salvage_tool.vehicle.beam.vehicle_salvage_large_3rd" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                 <tintColor>

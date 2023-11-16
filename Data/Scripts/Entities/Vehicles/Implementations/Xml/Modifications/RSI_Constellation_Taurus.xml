@@ -1171,6 +1171,8 @@
                           <Observerable itemType="Radar" screensDefault="Screen_Radar" screensAvail="Screen_Radar" />
                           <Observerable itemType="TurretBase" componentTag="Engine.Components.SCItemSeat" screensDefault="Screen_Turret_HUD" screensAvail="Screen_Turret_HUD" />
                           <Observerable itemType="TurretBase" componentTag="Engine.Components.SCItemWeaponController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
+                          <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
+                          <Observerable itemType="SalvageController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
                           <Observerable itemType="EnergyController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
                           <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Right_Top, Screen_Right_Bottom" />
@@ -1202,6 +1204,11 @@
                             </tags>
                           </PriorityGroup>
                           <PriorityGroup itemType="WeaponGun" defaultPriority="no_control">
+                            <tags tag="LowerTurret">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="TractorBeam" defaultPriority="no_control">
                             <tags tag="LowerTurret">
                               <Priority value="exclusive_control" />
                             </tags>

@@ -454,7 +454,7 @@
         <MFDs />
       </MFDParams>
     </SCItemSeatDashboardParams>
-    <SCItemTurretParams rotationStyle="MultiAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="1" miningOperatorMode="0" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="da01cefe-07b3-4533-aac4-09d4c624dc2e" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
+    <SCItemTurretParams rotationStyle="MultiAxis" toggleTurretPositionInteraction="null" defaultMovementTag="00000000-0000-0000-0000-000000000000" healthModifierRecord="00000000-0000-0000-0000-000000000000" powerRequirement="1" switchToCachedOperatorModeOnExit="1" operatorModeOnEnter="Turret" jointConvergence="" fixedAssistRadiusInner="1" fixedAssistRadiusOuter="6" intoxicationModifierRef="da01cefe-07b3-4533-aac4-09d4c624dc2e" hudParamsOverride="00000000-0000-0000-0000-000000000000" autoDeployHelmetTargetingMode="1" __type="DataForgeComponentParams" __polymorphicType="SCItemTurretParams">
       <recenterTask>
       </recenterTask>
       <resumeControlTask>
@@ -524,7 +524,7 @@
       <turretSensitivity increaseSensitivityInteraction="Interactable.SharedInteractions[2]" decreaseSensitivityInteraction="Interactable.SharedInteractions[0]" resetSensitivityInteraction="Interactable.SharedInteractions[0]" sensitivityDelta="0.2" __type="SCItemTurretSensitivityParams" />
       <audioRtpcHealthRatio rtpc="Turret_Health" __type="AudioRtpc" />
     </SCItemTurretParams>
-    <SCItemSeatParams availableOperatorModes="f59125e4-fa25-457d-a593-9b8fb963e53e" seatType="HOTAS_C_L" controlTemplate="ctrl_Turret_Constellation_lower" transitionTemplate="trans_turret_Constellation_lower" minYaw="-45" maxYaw="45" minPitch="-45" maxPitch="80" setYawPitchLimits="0" userAnimationDatabase="Animations\Mannequin\ADB\SCItems\Ships\SCItemSeat\RSI_Constellation_Seat\RSI_Constellation_Seat_Turret_Lower_HumanAnims.adb" userScopeContext="SeatUser" userSyncedScopeContext="SyncedEntity" dashboardAnimationDatabase="" dashboardScopeContext="SeatDashboard" vehicleFragmentOverride="" vehicleScopeContext="" useSyncedEnslavement="1" useAnimationBasedTransition="1" supportPlayerAnimatedActions="0" allowRelaxedPose="0" allowDeadOrUnconscious="0" landingView="00000000-0000-0000-0000-000000000000" seatFOV="00000000-0000-0000-0000-000000000000" usableInteraction="null" enterDefaultModeInteraction="null" enterScanModeInteraction="null" enterQuantumModeInteraction="null" fpHeadAdjustmentRecord="00000000-0000-0000-0000-000000000000" lookAheadOverwriteRecord="00000000-0000-0000-0000-000000000000" gforceHeadBobOverwriteRecord="00000000-0000-0000-0000-000000000000" headTrackingPositionLimitOverwriteRecord="00000000-0000-0000-0000-000000000000" armorMoveViewRestrictions="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatParams">
+    <SCItemSeatParams availableOperatorModes="810c1631-c72e-4cad-b4f3-bd2abec326e4" seatType="HOTAS_C_L" controlTemplate="ctrl_Turret_Constellation_lower" transitionTemplate="trans_turret_Constellation_lower" minYaw="-45" maxYaw="45" minPitch="-45" maxPitch="80" setYawPitchLimits="0" userAnimationDatabase="Animations\Mannequin\ADB\SCItems\Ships\SCItemSeat\RSI_Constellation_Seat\RSI_Constellation_Seat_Turret_Lower_HumanAnims.adb" userScopeContext="SeatUser" userSyncedScopeContext="SyncedEntity" dashboardAnimationDatabase="" dashboardScopeContext="SeatDashboard" vehicleFragmentOverride="" vehicleScopeContext="" useSyncedEnslavement="1" useAnimationBasedTransition="1" supportPlayerAnimatedActions="0" allowRelaxedPose="0" allowDeadOrUnconscious="0" landingView="00000000-0000-0000-0000-000000000000" seatFOV="00000000-0000-0000-0000-000000000000" usableInteraction="null" enterDefaultModeInteraction="null" enterScanModeInteraction="null" enterQuantumModeInteraction="null" fpHeadAdjustmentRecord="00000000-0000-0000-0000-000000000000" lookAheadOverwriteRecord="00000000-0000-0000-0000-000000000000" gforceHeadBobOverwriteRecord="00000000-0000-0000-0000-000000000000" headTrackingPositionLimitOverwriteRecord="00000000-0000-0000-0000-000000000000" armorMoveViewRestrictions="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatParams">
       <ejection>
       </ejection>
       <actorAttachment type="Seat" boneName="pos_turret_sit" stance="Seated" __type="SCSeatActorAttachmentParams" />
@@ -687,10 +687,8 @@
           <Connections />
           <DisabledPortLinks />
           <Types>
-            <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
-              <SubTypes>
-                <Enum value="Gun" />
-              </SubTypes>
+            <SItemPortDefTypes Type="TractorBeam" __type="SItemPortDefTypes">
+              <SubTypes />
             </SItemPortDefTypes>
           </Types>
           <Extension>
@@ -778,5 +776,22 @@
     <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
     <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
     <SCItemAimableComponentParams __type="DataForgeComponentParams" __polymorphicType="SCItemAimableComponentParams" />
+    <SCItemSalvageControllerParams sensorRaycastArmingDistance="0" numSupportedSalvageHeads="1" __type="DataForgeComponentParams" __polymorphicType="SCItemSalvageControllerParams">
+      <armParams>
+      </armParams>
+      <scrapingParams>
+      </scrapingParams>
+      <structuralParams>
+      </structuralParams>
+      <cargoParams>
+      </cargoParams>
+      <tractorParams>
+        <SSalvageTractorParams towingController="0" __type="SSalvageTractorParams" />
+      </tractorParams>
+      <salvageAudioParams __type="SSalvageAudioParams">
+        <salvageCargoFilledAudioTrigger audioTrigger="Play_SSSE_Salvage_Cargo_Filled" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <switchSalvageModifierAudioTrigger audioTrigger="Play_SSSE_Salvage_Beam_Switching_Heads" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      </salvageAudioParams>
+    </SCItemSalvageControllerParams>
   </Components>
 </EntityClassDefinition.RSI_Constellation_Taurus_Turret_Lower>

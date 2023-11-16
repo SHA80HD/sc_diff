@@ -25,7 +25,15 @@
       </entityAttachParams>
     </SAttachableComponentParams>
     <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
-      <sequences />
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="RetractLandingGearSeq" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
     </SEntityComponentSequencerParams>
     <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
       <vehicleItemPortInteractionLinks />
@@ -165,6 +173,13 @@
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
           <SSharedInteractionParams Name="CloseAccessPoints" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_close" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="1" Linkable="0" LockedByLinks="1" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="RetractLandingGear" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
             <QueryTags />
             <conditionList>
             </conditionList>
@@ -334,8 +349,42 @@
             </PlayerAnimatedInteractionParams>
             <Interactions />
           </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_landing_gear" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="0.25" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                    <boneNames>
+                      <String value="switch_landing_gear" />
+                    </boneNames>
+                  </SBonesHighlightNode>
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions />
+          </SInteractionPointParams>
         </InteractionPoints>
-        <interactionTasks />
+        <interactionTasks>
+          <SSequencerInteractionTask interaction="RetractLandingGear" triggerType="Self" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerInteractionTask" />
+        </interactionTasks>
         <actionHandlerTasks />
         <itemActionTasks />
         <menuTitle>
@@ -358,7 +407,7 @@
       <seatInteractions closeIP="Interactable.InteractionPoints[3]" openIP="Interactable.InteractionPoints[3]" exitIP="Interactable.InteractionPoints[0]" ejectionIP="null" cycleHUDIP="null" __type="SDashboardSeatInteractionParams" />
       <powerInteractions powerIP="Interactable.InteractionPoints[2]" __type="SDashboardPowerInteractionParams" />
       <engineInteractions engineIP="Interactable.InteractionPoints[1]" __type="SDashboardEngineInteractionParams" />
-      <systemInteractions doorsIP="Interactable.InteractionPoints[3]" landingIP="null" cargoIP="null" __type="SDashboardSystemInteractionParams" />
+      <systemInteractions doorsIP="Interactable.InteractionPoints[3]" landingIP="Interactable.InteractionPoints[6]" cargoIP="null" __type="SDashboardSystemInteractionParams" />
       <weaponInteractions weaponIP="null" turretIP="null" remoteCameraIP="null" __type="SDashboardWeaponInteractionParams" />
       <consumableInteractions consumableIP="null" __type="SDashboardConsumableInteractionParams" />
       <quantumInterdictionInteractions quantumInterdictionIP="null" toggleJammingIP="null" __type="SDashboardQuantumInterdictionParams" />
@@ -640,5 +689,34 @@
     <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
     <SDialogueComponentParams __type="DataForgeComponentParams" __polymorphicType="SDialogueComponentParams" />
     <SAudioProxyParams __type="DataForgeComponentParams" __polymorphicType="SAudioProxyParams" />
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes />
+    </SInteractionStateMachineParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="Ship" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeParentEntity __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeParentEntity" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="LandingGear" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="landingpad_helper" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes>
+                <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="RetractLandingGear" localInteraction="Interactable.SharedInteractions[3]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+              </executeNodes>
+              <nextNodes />
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets />
+    </SEntityTraversingTreeParams>
   </Components>
 </EntityClassDefinition.MISC_Reliant_SCItem_Seat_Pilot>

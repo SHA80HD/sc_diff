@@ -4,7 +4,7 @@
     <DefaultEntitlementEntityParams entitlementPolicy="6df1749c-48ea-43e5-bae5-8084d9fe5aca" canEntitleThroughWebsite="1" __type="EntityClassStaticDataParams" __polymorphicType="DefaultEntitlementEntityParams" />
   </StaticEntityClassData>
   <Components>
-    <EntityComponentPowerConnection PowerBase="1250" PowerDraw="1500" TimeToReachDrawRequest="0" SafeguardPriority="20" DisplayedInPoweredItemList="1" IsThrottleable="0" IsOverclockable="0" OverclockThresholdMin="0.25" OverclockThresholdMax="0.53" OverpowerPerformance="0.3" OverclockPerformance="0.24" PowerToEM="2" DecayRateOfEM="0.15" WarningDelayTime="0.3" WarningDisplayTime="8" MisfireItemTypeLocID="@LOC_PLACEHOLDER" __type="DataForgeComponentParams" __polymorphicType="EntityComponentPowerConnection">
+    <EntityComponentPowerConnection PowerBase="1250" PowerDraw="1500" TimeToReachDrawRequest="0" SafeguardPriority="20" DisplayedInPoweredItemList="1" IsThrottleable="0" IsOverclockable="0" OverclockThresholdMin="0.25" OverclockThresholdMax="0.53" OverpowerPerformance="0.3" OverclockPerformance="0.24" PowerToEM="1.95" DecayRateOfEM="0.15" WarningDelayTime="0.3" WarningDisplayTime="8" MisfireItemTypeLocID="@LOC_PLACEHOLDER" __type="DataForgeComponentParams" __polymorphicType="EntityComponentPowerConnection">
       <MisfireGenerationParams>
       </MisfireGenerationParams>
       <MisfireEvents __type="SMisfireEvents">
@@ -13,7 +13,7 @@
         <CriticalMisfires />
       </MisfireEvents>
     </EntityComponentPowerConnection>
-    <EntityComponentHeatConnection TemperatureToIR="6" StartIRTemperature="250" OverpowerHeat="0" OverclockThresholdMinHeat="0" OverclockThresholdMaxHeat="0" ThermalEnergyBase="10" ThermalEnergyDraw="20" ThermalConductivity="3" SpecificHeatCapacity="13" Mass="200" SurfaceArea="50" StartCoolingTemperature="300" MaxCoolingRate="1" MaxTemperature="450" OverheatTemperature="370" RecoveryTemperature="350" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
+    <EntityComponentHeatConnection TemperatureToIR="12" StartIRTemperature="250" OverpowerHeat="0" OverclockThresholdMinHeat="0" OverclockThresholdMaxHeat="0" ThermalEnergyBase="10" ThermalEnergyDraw="20" ThermalConductivity="3" SpecificHeatCapacity="13" Mass="200" SurfaceArea="50" StartCoolingTemperature="300" MaxCoolingRate="1" MaxTemperature="450" OverheatTemperature="370" RecoveryTemperature="350" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
     <SHealthComponentParams Health="8000" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="0" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
       <DamageResistances>
         <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
@@ -84,6 +84,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -96,8 +101,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -121,6 +134,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -133,8 +151,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -158,6 +184,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -170,8 +201,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -195,6 +234,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -207,8 +251,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -232,6 +284,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -244,8 +301,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -304,18 +369,20 @@
           <timeSinceLastFireRTPC rtpc="Mining_Laser_Cooldown" __type="AudioRtpc" />
           <fireEffects />
           <beamGroup>
-            <SBeamGroupParams hitEffectName="Mining_Laser" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="MiningLaserThrottle" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+            <SBeamGroupParams hitEffectName="Mining_Laser" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="MiningLaserThrottle" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+              <beamSizeSwitch switch="" __type="AudioSwitch" />
               <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamLoopAudioTrigger audioTrigger="Play_MVML_Mining_Laser_GRIN_Roc_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamActiveRTPC rtpc="" __type="AudioRtpc" />
               <beamModifierRTPC rtpc="Grin_Roc_Mineable_Laser_Throttle" __type="AudioRtpc" />
               <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStartTrigger audioTrigger="Play_MVML_Mining_Laser_GRIN_Roc_Beam_Impact" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <targetAttractionRTPC rtpc="Beam_Target_Attraction" __type="AudioRtpc" />
               <beamEffects>
-                <SBeamEffectParams helper="muzzle_out" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="0" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_out" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="0" useMultiSpline="1" multiSplineOffset="1" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Fracture_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
@@ -342,39 +409,41 @@
           <timeSinceLastFireRTPC rtpc="Mining_Laser_Cooldown" __type="AudioRtpc" />
           <particleEffects />
           <beamGroups>
-            <SBeamGroupParams hitEffectName="TractorBeam_Laser" tractorBeam="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+            <SBeamGroupParams hitEffectName="TractorBeam_Laser" tractorBeam="1" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+              <beamSizeSwitch switch="" __type="AudioSwitch" />
               <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamLoopAudioTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamStopAudioTrigger audioTrigger="Stop_MVML_Grin_Roc_Tractor_Beam_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamActiveRTPC rtpc="" __type="AudioRtpc" />
               <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
               <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStartTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Impact_Start" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStopTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Impact_Stop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <targetAttractionRTPC rtpc="Beam_Target_Attraction" __type="AudioRtpc" />
               <beamEffects>
-                <SBeamEffectParams helper="muzzle_out_central" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_out_central" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Tractor_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="muzzle_out1" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_out1" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="muzzle_out2" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_out2" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="muzzle_out3" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_out3" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>

@@ -1,0 +1,89 @@
+<EntityClassDefinition.Seat_rdy_rm_prop_chair_a Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="0360cc8c-b770-4b88-a5c2-3f5109207332" __path="libs/foundry/records/entities/scitem/usables/seat_rdy_rm_prop_chair_a.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks>
+        <SSequencerSkeletonAnimationTaskParams animationName="translate" layerId="1" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+      </AnimationTasks>
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="activity" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="inactive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Sitting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[2]" Delay="3" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Seated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="StateTypes.SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SSequencerDefSequenceParams name="Sitting" interaction="null" __type="SSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
+  </Components>
+</EntityClassDefinition.Seat_rdy_rm_prop_chair_a>

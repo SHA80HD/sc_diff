@@ -111,7 +111,7 @@
   <hostility>
     <SPUHostility __type="DataForgeComponentParams" __polymorphicType="SPUHostility">
       <playerHostilityParams nonTargetedHostilityThresholdMultiplier="5" criminalHostilityThresholdMultiplier="0.5" criminalWantedLevelThreshold="3" changeHostilityOnFriendlyFire="1" hostilityTimerMinSeconds="30" hostilityTimerMaxSeconds="180" hostilityTimerIncreaseStep="10" __type="PlayerHostilityParams">
-        <accidentalFireAIActorParams damagePercentageThreshold="80" cooldownDamageHalflife="240" sustainedFireThreshold="4" cooldownSustainedFireHalflife="60" __type="PlayerHostilityAccidentalFireParams" />
+        <accidentalFireAIActorParams damagePercentageThreshold="80" cooldownDamageHalflife="240" sustainedFireThreshold="2" cooldownSustainedFireHalflife="240" __type="PlayerHostilityAccidentalFireParams" />
         <accidentalFirePlayerActorParams damagePercentageThreshold="2" cooldownDamageHalflife="240" sustainedFireThreshold="2" cooldownSustainedFireHalflife="60" __type="PlayerHostilityAccidentalFireParams" />
         <accidentalFireAIShipParams damagePercentageThreshold="2" cooldownDamageHalflife="240" sustainedFireThreshold="5" cooldownSustainedFireHalflife="60" __type="PlayerHostilityAccidentalFireParams" />
         <accidentalFirePlayerShipParams damagePercentageThreshold="1" cooldownDamageHalflife="240" sustainedFireThreshold="2" cooldownSustainedFireHalflife="60" __type="PlayerHostilityAccidentalFireParams" />
@@ -129,6 +129,9 @@
           <Reference value="d7589432-efde-4e46-bb68-2303badca585" />
           <Reference value="8d2e0e7f-3ca7-447a-aff8-086a60653b6a" />
           <Reference value="a4a0b04b-9b64-4243-bfcc-a8cbc9f386af" />
+          <Reference value="6f3699dd-123e-4f1a-82da-51207b073fe0" />
+          <Reference value="0926252d-651c-45c3-b818-12cc358d76f8" />
+          <Reference value="363481e7-cada-4a7a-8ff1-3136ef86ebe3" />
         </securityNetworkFactions>
       </playerHostilityParams>
       <rammingParams minimumHitSpeedHostilityThreshold="10" minimumHitSpeedCrimeThreshold="20" singleBlameThreshold="1.2" sharedResponsibilityThreshold="100" collisionGracePeriodSeconds="2" vehicleActorCollisionSpeedThreshold="9" __type="RammingTrackerParams" />
@@ -146,7 +149,7 @@
           <Reference value="41081ea5-8d59-4786-a2fc-259b62cbcb71" />
         </escapedPrisonerMissions>
       </bountyParams>
-      <lawSystemSettings autoPayInfractionFines="0" earlyFineMultiplier="0.5" meritsToCredit="16" meritsToSentenceMinute="60" meritSentenceLimit="100000" meritSentenceCurveStart="50000" maxMeritsValue="-1" removalTimeMaxSeconds="60" removalTimeMinSeconds="4" meritsToRemovalTimeSeconds="450" defaultPressChargesNotificationTime="20" arrestTimeMinSeconds="60" arrestTimeMaxSeconds="180" arrestTimeIncreaseStep="10" arrestSearchAreaInVehicle="12000" arrestSearchAreaOnFoot="250" criminalRecordJournalEntry="ea17b191-a2a3-4ac2-a493-d7f8aeef93e2" firstCrimeStatJournalEntry="4296760c-30fb-4940-ab6f-a991104bdf73" resistArrestInfraction="d90ac7d6-fd83-43ba-a425-a8744a0e8c7b" evadeArrestInfraction="cedc5901-f39c-4b3b-960f-6863f5226e11" gracePeriodAfterUndocking="7" trespassWarningSeconds="7" trespassRevokeWarningSeconds="900" trespassGoodRevokeBeforeShowingInSeconds="10" __type="LawSystemGlobalSettings">
+      <lawSystemSettings autoPayInfractionFines="0" earlyFineMultiplier="0.5" meritsToCredit="16" meritsToSentenceMinute="60" meritSentenceLimit="100000" meritSentenceCurveStart="50000" maxMeritsValue="-1" removalTimeMaxSeconds="60" removalTimeMinSeconds="4" meritsToRemovalTimeSeconds="450" defaultPressChargesNotificationTime="20" arrestTimeMinSeconds="60" arrestTimeMaxSeconds="180" arrestTimeIncreaseStep="10" arrestSearchAreaInVehicle="12000" arrestSearchAreaOnFoot="250" criminalRecordJournalEntry="ea17b191-a2a3-4ac2-a493-d7f8aeef93e2" firstCrimeStatJournalEntry="4296760c-30fb-4940-ab6f-a991104bdf73" resistArrestInfraction="d90ac7d6-fd83-43ba-a425-a8744a0e8c7b" evadeArrestInfraction="cedc5901-f39c-4b3b-960f-6863f5226e11" gracePeriodAfterUndocking="7" trespassWarningSeconds="7" trespassWarningSecondsInPrivateProperty="7" trespassRevokeWarningSeconds="900" privateShipSecurityManifest="ba758b9d-b341-43a8-8d0d-04ea359f84d8" trespassGoodRevokeBeforeShowingInSeconds="10" __type="LawSystemGlobalSettings">
         <crimeStatThresholds __type="CrimeStatThresholds">
           <meritThresholds>
             <Int32 value="1" />
@@ -205,6 +208,11 @@
             <tags />
           </taskOutputTags>
         </arrestedInfraction>
+        <trespassingInfraction infraction="f7261635-6569-445a-98bd-5bef6ad21f5a" __type="ScanEvaluationInfractionSettings">
+          <taskOutputTags __type="TagList">
+            <tags />
+          </taskOutputTags>
+        </trespassingInfraction>
         <controlledSubstancePossessionInfractions>
           <ScanEvaluationInfractionSettings infraction="223317fb-e4d4-4eec-81f2-d27d2ecd8394" __type="ScanEvaluationInfractionSettings">
             <taskOutputTags __type="TagList">
@@ -300,7 +308,7 @@
   <statsRecording>
   </statsRecording>
   <subsumptionMissionModule>
-    <SSubsumptionMission startOnIntialCountdown="0" __type="DataForgeComponentParams" __polymorphicType="SSubsumptionMission">
+    <SSubsumptionMission startOnIntialCountdown="0" defaultNPCSkillDefinition="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SSubsumptionMission">
       <spawningTagFilter __type="TagList">
         <tags>
           <Reference value="c08564a2-68d2-4eb1-903b-e3c3ecf12ac1" />

@@ -161,7 +161,6 @@
             </PlayerAnimatedInteractionParams>
             <Interactions>
               <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@input_key_keyboard_insert" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@usable_eject" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
@@ -498,7 +497,7 @@
                 <Enum value="RemovableChip" />
               </itemTypes>
               <itemSubTypes>
-                <Enum value="Credit" />
+                <Enum value="SystemAccess" />
               </itemSubTypes>
             </SItemPortStateModifier>
             <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
@@ -638,7 +637,7 @@
                 <Enum value="RemovableChip" />
               </itemTypes>
               <itemSubTypes>
-                <Enum value="Credit" />
+                <Enum value="SystemAccess" />
               </itemSubTypes>
             </SItemPortStateModifier>
           </StateModifiers>
@@ -1237,7 +1236,7 @@
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
-                <SStateAutoChange NextState="StateTypes[8].SInteractionStateType.States[2]" Delay="0.01" __type="SStateAutoChange" />
+                <SStateAutoChange NextState="StateTypes[8].SInteractionStateType.States[2]" Delay="4.3" __type="SStateAutoChange" />
               </StateAutoChange>
               <Interactions />
               <interactionPoints />
@@ -1437,7 +1436,7 @@
       <masterController>
       </masterController>
       <Ports>
-        <SItemPortDef Name="$slot_credit_chip01" DisplayName="$slot_credit_chip01" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+        <SItemPortDef Name="$slot_credit_chip01" DisplayName="$slot_credit_chip01" PortTags="HackingSlot" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
           <Tags />
           <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
           <AttachmentPoints />
@@ -1448,7 +1447,7 @@
           <Types>
             <SItemPortDefTypes Type="RemovableChip" __type="SItemPortDefTypes">
               <SubTypes>
-                <Enum value="Credit" />
+                <Enum value="SystemAccess" />
               </SubTypes>
             </SItemPortDefTypes>
             <SItemPortDefTypes Type="FPS_Consumable" __type="SItemPortDefTypes">
@@ -1612,7 +1611,7 @@
         </SOnInteractionStateChangeTriggers>
         <SOnInteractionStateChangeTriggers targetState="StateTypes[0].SInteractionStateType.States[14]" __type="SOnInteractionStateChangeTriggers">
           <gameplayTriggers>
-            <SDestroyAttachedItemGameplayTrigger itemPort="Ports" damageAttachedItem="0" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SDestroyAttachedItemGameplayTrigger">
+            <SDestroyAttachedItemGameplayTrigger itemPort="Ports" damageAttachedItem="1" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SDestroyAttachedItemGameplayTrigger">
               <itemTypes />
               <itemSubTypes />
             </SDestroyAttachedItemGameplayTrigger>
@@ -1620,10 +1619,23 @@
         </SOnInteractionStateChangeTriggers>
         <SOnInteractionStateChangeTriggers targetState="StateTypes[0].SInteractionStateType.States[13]" __type="SOnInteractionStateChangeTriggers">
           <gameplayTriggers>
-            <SDestroyAttachedItemGameplayTrigger itemPort="null" damageAttachedItem="0" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SDestroyAttachedItemGameplayTrigger">
+            <SDestroyAttachedItemGameplayTrigger itemPort="Ports" damageAttachedItem="0" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SDestroyAttachedItemGameplayTrigger">
               <itemTypes />
               <itemSubTypes />
             </SDestroyAttachedItemGameplayTrigger>
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[2].SInteractionStateType.States[6]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <SDestroyAttachedItemGameplayTrigger itemPort="Ports" damageAttachedItem="0" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SDestroyAttachedItemGameplayTrigger">
+              <itemTypes />
+              <itemSubTypes />
+            </SDestroyAttachedItemGameplayTrigger>
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[5].SInteractionStateType.States[1]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[6].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[8].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[1].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[7].SInteractionStateType.States[0]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
           </gameplayTriggers>
         </SOnInteractionStateChangeTriggers>
       </onInteractionStateChangeTriggers>
@@ -1636,7 +1648,7 @@
       </onInteractionSuccessTriggers>
       <onInteractionFailedTriggers />
     </SCInteractionStateGameplayTriggerComponentParams>
-    <HackableParams baseDuration="60" baseErrorChance="1" numErrorChecks="3" maxPauseDuration="90" updateProgressDeltaTime="1" resetAfterHackSuccess="1" __type="DataForgeComponentParams" __polymorphicType="HackableParams">
+    <HackableParams baseDuration="60" baseErrorChance="1" numErrorChecks="3" maxPauseDuration="90" updateProgressDeltaTime="0.01" resetAfterHackSuccess="1" __type="DataForgeComponentParams" __polymorphicType="HackableParams">
       <audioTriggerProgressLoopStart audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <audioTriggerProgressLoopStop audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <audioTriggerStart audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -1665,7 +1677,11 @@
           <tasks />
         </IntUserVariable>
       </ints>
-      <bools />
+      <bools>
+        <BoolUserVariable name="IntrusionActive" defaultValue="0" __type="BoolUserVariable">
+          <tasks />
+        </BoolUserVariable>
+      </bools>
       <strings>
         <StringUserVariable name="IP_Connection" defaultValue="@DataHeist_IP_BitZero_B" __type="StringUserVariable">
           <recordRefValue>

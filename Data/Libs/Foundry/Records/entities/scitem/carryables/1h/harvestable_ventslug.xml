@@ -56,7 +56,7 @@
       <entityAttachParams>
       </entityAttachParams>
     </SAttachableComponentParams>
-    <SEntityComponentCarryableParams carryInteraction="Interactable.SharedInteractions[0]" placeInteraction="Interactable.SharedInteractions[2]" dropInteraction="Interactable.SharedInteractions[0]" equipToItemportInteraction="null" offHandEquipToItemportInteraction="null" storeInteraction="Interactable.SharedInteractions[3]" offHandStoreInteraction="null" holdReadyInteraction="null" equipWearableInteraction="null" inspectInteraction="Interactable.SharedInteractions[1]" flipInteraction="null" swapAttachmentsInteraction="null" attachToHeldItemInteraction="null" enslavementAnimationDatabase="" interactionPointToMoveOnEquip="null" ikInteractionsRecord="00000000-0000-0000-0000-000000000000" canBeCarriedInProne="1" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentCarryableParams">
+    <SEntityComponentCarryableParams carryInteraction="Interactable.SharedInteractions[0]" placeInteraction="Interactable.SharedInteractions[2]" dropInteraction="Interactable.SharedInteractions[6]" equipToItemportInteraction="null" offHandEquipToItemportInteraction="null" storeInteraction="Interactable.SharedInteractions[3]" offHandStoreInteraction="null" holdReadyInteraction="null" equipWearableInteraction="null" inspectInteraction="Interactable.SharedInteractions[1]" flipInteraction="null" swapAttachmentsInteraction="null" attachToHeldItemInteraction="null" enslavementAnimationDatabase="" interactionPointToMoveOnEquip="null" ikInteractionsRecord="00000000-0000-0000-0000-000000000000" canBeCarriedInProne="1" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentCarryableParams">
       <carryableStatesParams settledState="StateTypes.SInteractionStateType.States[0]" carriedState="StateTypes.SInteractionStateType.States[1]" equippedToSuitState="StateTypes.SInteractionStateType.States[2]" inspectingState="StateTypes.SInteractionStateType.States[3]" droppedState="StateTypes.SInteractionStateType.States[4]" offeredState="StateTypes.SInteractionStateType.States[5]" heldReadyState="null" equippedWornState="null" storedState="StateTypes.SInteractionStateType.States[6]" hangingOnOutfitHangerState="null" __type="SCarryableStatesParams" />
       <interactionPointOffsets __type="SCarryableInteractionPointOffsets">
         <interactionOffsetEquipped __type="QuatT">
@@ -76,7 +76,7 @@
         <grips>
           <SCarryableGrip carryStyleID="1H_Standard" canBeUsedBy="All" handMode="RightHand" gripAction="None" __type="SCarryableGrip">
             <handGrip gripID="" optionalHelper="$grip_right_1" __type="SGrip">
-              <gripShapeParameters gripShape="gs_cylinder" dimension="1" wristRotation="0" __type="SGripShapeParams" />
+              <gripShapeParameters gripShape="gs_cylinder_02" dimension="1" wristRotation="0" __type="SGripShapeParams" />
               <offset __type="QuatT">
                 <Rotation x="0" y="0" z="0" __type="Ang3" />
                 <Position x="0" y="0" z="0" __type="Vec3" />
@@ -210,6 +210,20 @@
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Drop" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_drop" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="901b0193-5e7c-4a9b-9dc6-0a5af5420e51" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
         </SharedInteractions>
         <InteractionPoints>
           <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="1" longRangeIP="0" HighlightOnRayHitEntity="1" HelperName="HighlightOnRayHitEntity" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="TopBoundingBoxZSurface" Radius="2" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
@@ -233,7 +247,7 @@
             </PlayerAnimatedInteractionParams>
             <Interactions>
               <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[6]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[2]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[3]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
@@ -299,6 +313,7 @@
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[6]" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -320,6 +335,7 @@
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[6]" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -368,6 +384,7 @@
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[6]" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">

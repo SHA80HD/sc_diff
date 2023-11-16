@@ -1,6 +1,6 @@
 <MissionBrokerEntry.PU_Defend_Lawful_Stanton4_H notForRelease="0" owner="300dcbf0-d201-465b-a7be-af7e15a0a512" missionModule="Libs/Subsumption/Missions/PU/Missions/InfiltrateAndDefend/PU_Defend.xml" title="@mtps_UGF_defend_title_001" titleHUD="@LOC_UNINITIALIZED" description="@mtps_UGF_defend_desc_001" missionGiver="@mtps_from" commsChannelName="@LOC_UNINITIALIZED" type="62f92440-202a-43d3-9cb8-b917d4e4a102" localityAvailable="00000000-0000-0000-0000-000000000000" locationMissionAvailable="5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57" notifyOnAvailable="0" showAsOffer="0" missionBuyInAmount="0" refundBuyInOnWithdraw="0" hasCompleteButton="0" handlesAbandonRequest="0" missionModulePerPlayer="0" maxInstances="3" maxPlayersPerInstance="1" maxInstancesPerPlayer="1" canBeShared="1" onceOnly="0" tutorial="0" displayAlliedMarkers="1" availableInPrison="0" failIfSentToPrison="1" failIfBecameCriminal="1" failIfLeavePrison="0" requestOnly="0" respawnTime="0" respawnTimeVariation="0" instanceHasLifeTime="1" showLifeTimeInMobiGlas="0" instanceLifeTime="15" instanceLifeTimeVariation="0" canReacceptAfterAbandoning="0" abandonedCooldownTime="10" abandonedCooldownTimeVariation="5" canReacceptAfterFailing="0" hasPersonalCooldown="1" personalCooldownTime="5" personalCooldownTimeVariation="5" moduleHandlesOwnShutdown="0" linkedMission="00000000-0000-0000-0000-000000000000" lawfulMission="1" missionGiverRecord="bfb177af-0724-47b6-b49e-62cf85300484" invitationMission="00000000-0000-0000-0000-000000000000" missionGiverFragmentTags="" __type="MissionBrokerEntry" __ref="4116fe08-45f9-446d-8ca2-1927ebe74f28" __path="libs/foundry/records/missionbroker/pu_missions/infiltrateanddefend/pu_defend_lawful_stanton4_h.xml">
   <availableDateSchedule />
-  <missionReward reward="75000" max="0" plusBonuses="1" currencyType="UEC" reputationBonus="00000000-0000-0000-0000-000000000000" __type="MissionReward" />
+  <missionReward reward="45000" max="0" plusBonuses="1" currencyType="UEC" reputationBonus="00000000-0000-0000-0000-000000000000" __type="MissionReward" />
   <missionResultReputationRewards>
     <SReputationAmountListParams __type="SReputationAmountListParams">
       <reputationAmounts>
@@ -99,13 +99,56 @@
       <value>
         <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
           <spawnDescriptions>
-            <SpawnDescription_NPC_Group Name="Defenders" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="PrivSec - Sentry - 4" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="1" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="4" maxGroupSize="4" maxConcurrentSpawns="8" maxSpawns="8" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                        <Reference value="0c77a223-f79b-459e-8177-31548c682e23" />
+                      </tags>
+                    </positiveCharacterTags>
+                    <negativeCharacterTags __type="TagList">
+                      <tags>
+                        <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+                        <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+                        <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                      </tags>
+                    </negativeCharacterTags>
+                    <inventoryItems />
+                    <closetPositiveTags __type="TagList">
+                      <tags />
+                    </closetPositiveTags>
+                    <closetNegativeTags __type="TagList">
+                      <tags />
+                    </closetNegativeTags>
+                    <roomPositiveTags __type="TagList">
+                      <tags />
+                    </roomPositiveTags>
+                    <roomNegativeTags __type="TagList">
+                      <tags />
+                    </roomNegativeTags>
+                  </autoSpawnSettings>
+                  <identifierTags __type="TagList">
+                    <tags>
+                      <Reference value="9878bc41-7585-4bd2-bc49-8862580b1b3b" />
+                    </tags>
+                  </identifierTags>
+                  <embeddedName>
+                  </embeddedName>
+                </SpawnDescription_NPCOption>
+              </options>
+            </SpawnDescription_NPC_Group>
+            <SpawnDescription_NPC_Group Name="PriveSec (Medium) - Aggressive - 4" __type="SpawnDescription_NPC_Group">
+              <options>
+                <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="1" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="1" isCritical="0" __type="AutoSpawnSettings">
+                    <positiveCharacterTags __type="TagList">
+                      <tags>
+                        <Reference value="12292169-1592-4550-ae34-750db47ad0d7" />
+                        <Reference value="341f903a-6de1-4270-a9d9-09f1befad7e6" />
+                        <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
@@ -145,7 +188,7 @@
       <value>
         <MissionPropertyValue_Integer __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Integer">
           <options>
-            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="500" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
+            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="4000" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
               <dependentProperties />
             </MissionPropertyValueOption_Integer>
           </options>
@@ -235,15 +278,16 @@
       <value>
         <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
           <spawnDescriptions>
-            <SpawnDescription_NPC_Group Name="Light" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="Medium - Sentry - 4" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="2" maxSpawns="2" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
                         <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
-                        <Reference value="bd6b903f-0d2d-4688-8329-db68c16fb0d1" />
+                        <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                        <Reference value="0c77a223-f79b-459e-8177-31548c682e23" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
@@ -276,15 +320,16 @@
                 </SpawnDescription_NPCOption>
               </options>
             </SpawnDescription_NPC_Group>
-            <SpawnDescription_NPC_Group Name="Medium" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="Medium - Aggressive - 4" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
                         <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
                         <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                        <Reference value="341f903a-6de1-4270-a9d9-09f1befad7e6" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
@@ -325,7 +370,7 @@
       <value>
         <MissionPropertyValue_Integer __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Integer">
           <options>
-            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="6" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
+            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="8" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
               <dependentProperties />
             </MissionPropertyValueOption_Integer>
           </options>
@@ -336,15 +381,58 @@
       <value>
         <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
           <spawnDescriptions>
-            <SpawnDescription_NPC_Group Name="Medium" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="Medium - Sentry - 4" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="6" maxSpawns="6" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
                         <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
                         <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                        <Reference value="0c77a223-f79b-459e-8177-31548c682e23" />
+                      </tags>
+                    </positiveCharacterTags>
+                    <negativeCharacterTags __type="TagList">
+                      <tags>
+                        <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+                        <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
+                      </tags>
+                    </negativeCharacterTags>
+                    <inventoryItems />
+                    <closetPositiveTags __type="TagList">
+                      <tags />
+                    </closetPositiveTags>
+                    <closetNegativeTags __type="TagList">
+                      <tags />
+                    </closetNegativeTags>
+                    <roomPositiveTags __type="TagList">
+                      <tags />
+                    </roomPositiveTags>
+                    <roomNegativeTags __type="TagList">
+                      <tags />
+                    </roomNegativeTags>
+                  </autoSpawnSettings>
+                  <identifierTags __type="TagList">
+                    <tags>
+                      <Reference value="6a7d46fa-68cc-4c1e-9e4d-73af17c3f3ea" />
+                    </tags>
+                  </identifierTags>
+                  <embeddedName>
+                  </embeddedName>
+                </SpawnDescription_NPCOption>
+              </options>
+            </SpawnDescription_NPC_Group>
+            <SpawnDescription_NPC_Group Name="Heavy - Aggressive - 4" __type="SpawnDescription_NPC_Group">
+              <options>
+                <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="4" maxSpawns="4" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                    <positiveCharacterTags __type="TagList">
+                      <tags>
+                        <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+                        <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
+                        <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+                        <Reference value="341f903a-6de1-4270-a9d9-09f1befad7e6" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
@@ -385,7 +473,7 @@
       <value>
         <MissionPropertyValue_Integer __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Integer">
           <options>
-            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="6" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
+            <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="8" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
               <dependentProperties />
             </MissionPropertyValueOption_Integer>
           </options>
@@ -396,15 +484,16 @@
       <value>
         <MissionPropertyValue_NPCSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_NPCSpawnDescriptions">
           <spawnDescriptions>
-            <SpawnDescription_NPC_Group Name="Hard" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="Heavy - Aggressive - 6" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="2" maxSpawns="2" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="2" maxConcurrentSpawns="6" maxSpawns="6" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
                         <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
                         <Reference value="ead9956c-0d00-4e7a-96f3-3b56f1386486" />
+                        <Reference value="341f903a-6de1-4270-a9d9-09f1befad7e6" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
@@ -437,20 +526,20 @@
                 </SpawnDescription_NPCOption>
               </options>
             </SpawnDescription_NPC_Group>
-            <SpawnDescription_NPC_Group Name="Medium" __type="SpawnDescription_NPC_Group">
+            <SpawnDescription_NPC_Group Name="Boss - Adv Aggressive - 2" __type="SpawnDescription_NPC_Group">
               <options>
                 <SpawnDescription_NPCOption priority="-1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" __type="SpawnDescription_NPCOption">
-                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="2" maxGroupSize="4" maxConcurrentSpawns="6" maxSpawns="6" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
+                  <autoSpawnSettings initialActivity="" excludeShipCrew="1" excludeSpawnGender="Female" minGroupSize="1" maxGroupSize="1" maxConcurrentSpawns="2" maxSpawns="2" minSpawnDelay="-1" maxSpawnDelay="-1" missionAlliedMarker="0" isCritical="0" __type="AutoSpawnSettings">
                     <positiveCharacterTags __type="TagList">
                       <tags>
                         <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
                         <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
-                        <Reference value="50fccfb5-157f-401a-adaf-97406524f713" />
+                        <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
+                        <Reference value="f41d6c8f-f966-4755-a691-c811c078b68b" />
                       </tags>
                     </positiveCharacterTags>
                     <negativeCharacterTags __type="TagList">
                       <tags>
-                        <Reference value="016e2011-25c3-4a96-979d-8def1ab62003" />
                         <Reference value="e3c67968-fe82-4edb-bf5b-48956e2cf4d5" />
                       </tags>
                     </negativeCharacterTags>

@@ -12,18 +12,26 @@
         <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
         <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
       </rotationModifiers>
-      <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-      <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+      <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+        <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+        <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+        <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+      </positionDecayModifiers>
+      <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+        <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+        <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+        <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+      </rotationDecayModifiers>
     </curveRecoil>
   </actorProceduralHandsRecoilModifiers>
   <actorProceduralAimRecoilModifiers pull_left_percentage="1" random_pitch="0.5" random_yaw="0.5" decay="0.6" end_decay="0.5" recoil_time="1" delay="1" __type="SActorProceduralAimRecoilModifiers">
     <max x="0.7" y="0.7" __type="Vec2" />
     <shot_kick_first x="0.5" y="0.5" __type="Vec2" />
     <shot_kick x="0.5" y="0.5" __type="Vec2" />
-    <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
-      <minLimitsModifier x="1" y="1" __type="Vec2" />
-      <maxLimitsModifier x="1" y="1" __type="Vec2" />
-      <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+    <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+      <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+      <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+      <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
     </curveRecoil>
   </actorProceduralAimRecoilModifiers>
   <actorProceduralBodyRecoilModifiers hipsPushForce="1" hipsDampStrength="1" hipsDampStrengthEnd="1" spinePushForceFirst="1" spinePushForce="1" spineDampStrength="1" spineDampStrengthEnd="1" __type="SActorProceduralBodyRecoilModifiers" />

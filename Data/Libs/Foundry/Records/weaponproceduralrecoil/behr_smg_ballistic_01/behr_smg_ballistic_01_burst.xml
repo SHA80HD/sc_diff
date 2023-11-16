@@ -2,6 +2,8 @@
   <weaponProceduralHandsRecoil decay="5" endDecay="6" fireRecoilTime="0.02" fireRecoilStrengthFirst="0.8" fireRecoilStrength="1" angleRecoilStrength="0" useRandomRotation="0" randomness="0.1" randomnessBackPush="0" frontalOscillationRotation="0.3" frontalOscillationStrength="22" frontalOscillationDecay="5" frontalOscillationRandomness="1" __type="SWeaponProceduralHandsRecoilConfigDef">
     <rotation x="1" y="1" z="0" __type="Ang3" />
     <curveRecoil totalRecoilTime="0" limitTransitionTime="0" minDecayTime="0" maxDecayTime="0" __type="SWeaponProceduralHandsRecoilCurveConfigDef">
+      <positionRecoilTimeModifiers x="1" y="1" z="1" __type="Vec3" />
+      <rotationRecoilTimeModifiers x="1" y="1" z="1" __type="Vec3" />
       <positionCurves xMaxValue="0" yMaxValue="0" zMaxValue="0" __type="SXYZCurvesWithMaxValues">
         <minLimits x="0" y="0" z="0" __type="Vec3" />
         <maxLimits x="0" y="0" z="0" __type="Vec3" />
@@ -17,33 +19,44 @@
         <noiseParams xNoise="0" canInvertXCurve="0" yNoise="0" canInvertYCurve="0" zNoise="0" canInvertZCurve="0" __type="SHandsRecoilCurveNoiseParams" />
       </rotationCurves>
       <positionDecay __type="SDecayTimesAndCurves">
-        <decayTimeMultipliers x="0" y="0" z="0" __type="Vec3" />
-        <decayCurveMaxValues x="0" y="0" z="0" __type="Vec3" />
+        <decayTimeMultipliers x="1" y="1" z="1" __type="Vec3" />
+        <decayCurveMaxValues __type="SDecayCurveMaxValues">
+          <xMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+          <yMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+          <zMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+        </decayCurveMaxValues>
         <decayCurves>
         </decayCurves>
       </positionDecay>
       <rotationDecay __type="SDecayTimesAndCurves">
-        <decayTimeMultipliers x="0" y="0" z="0" __type="Vec3" />
-        <decayCurveMaxValues x="0" y="0" z="0" __type="Vec3" />
+        <decayTimeMultipliers x="1" y="1" z="1" __type="Vec3" />
+        <decayCurveMaxValues __type="SDecayCurveMaxValues">
+          <xMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+          <yMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+          <zMaxValueParams maxValue="0" minScalingFactor="0" useDecayScaling="1" useWeaponOrientation="1" __type="SDecayCurveMaxValueParams" />
+        </decayCurveMaxValues>
         <decayCurves>
         </decayCurves>
       </rotationDecay>
+      <rotationOffset x="0" y="0" z="0" __type="Vec3" />
+      <timeModifier>
+      </timeModifier>
     </curveRecoil>
   </weaponProceduralHandsRecoil>
   <weaponProceduralAimRecoil pull_left_percentage="0.5" random_pitch="0" random_yaw="0" decay="10" end_decay="8" recoil_time="0" delay="0" __type="SWeaponProceduralAimRecoilConfigDef">
     <max x="1" y="18" __type="Vec2" />
     <shot_kick_first x="0.08" y="2.2" __type="Vec2" />
     <shot_kick x="0.15" y="2.2" __type="Vec2" />
-    <curveAimRecoil yawMaxDegrees="0" pitchMaxDegrees="0" maxFireTime="0" recoilSmoothTime="0" decayStartTime="0" minDecayTime="0" maxDecayTime="0" __type="SWeaponProceduralAimRecoilCurveConfigDef">
-      <minLimits x="-15" y="-15" __type="Vec2" />
-      <maxLimits x="15" y="15" __type="Vec2" />
-      <yawPitchCurves>
-      </yawPitchCurves>
-      <yawPitchDecayCurves>
-      </yawPitchDecayCurves>
-      <noiseCurves yawNoiseMaxValue="0" pitchNoiseMaxValue="0" __type="SAimRecoilNoiseCurves">
-        <yawPitchNoiseCurves>
-        </yawPitchNoiseCurves>
+    <curveAimRecoil yawMaxDegrees="0" pitchMaxDegrees="0" rollMaxDegrees="0" maxFireTime="0" recoilSmoothTime="0" decayStartTime="0" minDecayTime="0" maxDecayTime="0" __type="SWeaponProceduralAimRecoilCurveConfigDef">
+      <minLimits x="-15" y="-15" z="0" __type="Vec3" />
+      <maxLimits x="15" y="15" z="0" __type="Vec3" />
+      <yawPitchRollCurves>
+      </yawPitchRollCurves>
+      <yawPitchRollDecayCurves>
+      </yawPitchRollDecayCurves>
+      <noiseCurves yawNoiseMaxValue="0" pitchNoiseMaxValue="0" rollNoiseMaxValue="0" __type="SAimRecoilNoiseCurves">
+        <yawPitchRollNoiseCurves>
+        </yawPitchRollNoiseCurves>
       </noiseCurves>
     </curveAimRecoil>
   </weaponProceduralAimRecoil>

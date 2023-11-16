@@ -185,14 +185,14 @@
         </SInteractionStateType>
         <SInteractionStateType StateTypeName="CargoMain" bindingsMethod="States" DefaultState="StateTypes[1].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
-            <SInteractionState StateName="Open" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[0]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="Open" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
               </StateAutoChange>
               <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[1].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[1].SInteractionStateType.States[3]" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -202,15 +202,47 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="Closed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[1]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="Closed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
               <StateAutoChange>
               </StateAutoChange>
               <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes[1].SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes[1].SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
               </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="sequences[0]" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[1].SInteractionStateType.States[0]" Delay="1" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="sequences[1]" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes[1].SInteractionStateType.States[1]" Delay="1" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
               <interactionPoints />
               <stateTags __type="TagList">
                 <tags />
@@ -221,7 +253,7 @@
             </SInteractionState>
           </States>
           <StateModifiers>
-            <SKeypadStateModifier keycode="-1" onKeycodeSuccessState="StateTypes[1].SInteractionStateType.States[0]" onKeycodeFailState="null" __type="SStateModifier" __polymorphicType="SKeypadStateModifier" />
+            <SKeypadStateModifier keycode="-1" onKeycodeSuccessState="StateTypes[1].SInteractionStateType.States[2]" onKeycodeFailState="StateTypes[1].SInteractionStateType.States[1]" __type="SStateModifier" __polymorphicType="SKeypadStateModifier" />
           </StateModifiers>
         </SInteractionStateType>
       </StateTypes>

@@ -107,6 +107,19 @@
             </DamageBehavior>
           </DamageBehaviors>
           <Parts>
+            <Part name="hardpoint_claw" class="ItemPort">
+              <ItemPort minsize="1" maxsize="1" flags="$uneditable" portTags="salvageMount" requiredTags="" display_name="" defaultWeaponGroup="1">
+                <Types>
+                  <Type type="ToolArm" />
+                </Types>
+                <Pitch min="-45" max="45" />
+                <Yaw min="-90" max="90" />
+                <Connections>
+                  <Connection pipeClass="Power" pipe="MainPower" />
+                  <Connection pipeClass="Heat" pipe="MainHeat" />
+                </Connections>
+              </ItemPort>
+            </Part>
             <Part name="hardpoint_thruster_retro_front_left" class="ItemPort">
               <ItemPort minSize="3" maxSize="3" flags="retro uneditable left" requiredTags="" display_name="port_NameThrustRetroFL">
                 <Types>
@@ -214,6 +227,7 @@
                       <Observerable itemType="CommsController" screensDefault="" screensAvail="SupportScreenLeft, SupportScreenRight, OwnShipMFD, TargetingMFD" primaryCommsScreen="TargetingMFD" />
                       <Observerable itemType="CapacitorAssignmentController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                       <Observerable itemType="LandingSystem" screensDefault="Screen_Flight_HUD" screensAvail="Screen_Flight_HUD" />
+                      <Observerable itemType="SalvageController" screensDefault="" screensAvail="Flight_HUD" />
                     </Observerables>
                     <PriorityGroups>
                       <PriorityGroup itemType="EnergyController">
@@ -222,6 +236,11 @@
                         </tags>
                       </PriorityGroup>
                       <PriorityGroup itemType="CommsController" />
+                      <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
+                        <tags tag="pilotSeat">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
                       <PriorityGroup itemType="DoorController" />
                       <PriorityGroup itemType="LightController" defaultPriority="no_control">
                         <tags tag="pilotseat_light">
@@ -2060,11 +2079,6 @@
                 <ControllerDef controllableTags="TBeamLeftSeat">
                   <UsableDef>
                     <PriorityGroups>
-                      <PriorityGroup itemType="ToolArm" defaultPriority="no_control">
-                        <tags tag="TBeamLeftSeat">
-                          <Priority value="exclusive_control" />
-                        </tags>
-                      </PriorityGroup>
                       <PriorityGroup itemType="SalvageFillerStation" defaultPriority="no_control">
                         <tags tag="TBeamLeftSeat">
                           <Priority value="exclusive_control" />
@@ -2080,6 +2094,7 @@
                           <Priority value="exclusive_control" />
                         </tags>
                       </PriorityGroup>
+                      <PriorityGroup itemType="SalvageInternalStorage" />
                     </PriorityGroups>
                   </UsableDef>
                 </ControllerDef>
@@ -2093,11 +2108,6 @@
                 <ControllerDef controllableTags="TBeamRightSeat">
                   <UsableDef>
                     <PriorityGroups>
-                      <PriorityGroup itemType="ToolArm" defaultPriority="no_control">
-                        <tags tag="TBeamRightSeat">
-                          <Priority value="exclusive_control" />
-                        </tags>
-                      </PriorityGroup>
                       <PriorityGroup itemType="SalvageFillerStation" defaultPriority="no_control">
                         <tags tag="TBeamRightSeat">
                           <Priority value="exclusive_control" />
@@ -2113,6 +2123,7 @@
                           <Priority value="exclusive_control" />
                         </tags>
                       </PriorityGroup>
+                      <PriorityGroup itemType="SalvageInternalStorage" />
                     </PriorityGroups>
                   </UsableDef>
                 </ControllerDef>
@@ -2167,6 +2178,22 @@
                           <Priority value="exclusive_control" />
                         </tags>
                       </PriorityGroup>
+                    </PriorityGroups>
+                  </UsableDef>
+                </ControllerDef>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_controller_salvage_arm" class="ItemPort">
+              <ItemPort minsize="1" maxsize="1" flags="invisible uneditable">
+                <Types>
+                  <Type type="SalvageController" />
+                </Types>
+                <ControllerDef controllableTags="pilotseat">
+                  <UsableDef>
+                    <PriorityGroups>
+                      <PriorityGroup itemType="ToolArm" />
+                      <PriorityGroup itemType="SalvageFieldEmitter" />
+                      <PriorityGroup itemType="SalvageInternalStorage" />
                     </PriorityGroups>
                   </UsableDef>
                 </ControllerDef>

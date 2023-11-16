@@ -1,0 +1,486 @@
+<EntityClassDefinition.Door_Single_DerelictFreelancer_SideDoor_Pumpable Category="Default" Icon="door.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="574ccaed-3a1c-4033-9551-86bb405f1a00" __path="libs/foundry/records/entities/scitem/doors/door_single_derelictfreelancer_sidedoor_pumpable.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Hidden_PumpOpen" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@LOC_UNINITIALIZED" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Hidden_PumpClose" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@LOC_UNINITIALIZED" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="EscapePodDoorAnim" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="DoorClosed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="DoorOpened" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[8]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo20%Prep" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[3]" Delay="0.8" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo20%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.175" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[4]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[4]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo40%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.35" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[5]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[6]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo60%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.525" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[6]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[6]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo70%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.7" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[7]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[7]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Opening_AnimTo100%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[1]" Delay="0.2" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo100%Prep" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[9]" Delay="0.8" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo100%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[10]" Delay="0.2" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[10]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo70%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.7" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[11]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[11]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo60%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.525" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[12]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[12]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo40%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.35" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[13]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="StateTypes.SInteractionStateType.States[13]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Closing_AnimTo20%" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables" value="0.175" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[0]" Delay="1.33" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/spaceships/ships/misc/s42/04c_addons/misc_freelancer_max_sidedoor.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SAnimationControllerParams AnimationDatabase="SCItems\Doors\SCItem_Door_Anims.adb" AnimationController="SCItems\Doors\SCItem_Door_ControllerDefs.xml" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts>
+        <SAnimationScopeContext scopeContext="SCItemDoor" type="Self" __type="SAnimationScopeContext" />
+      </ScopeContexts>
+      <AnimationJointControls>
+        <AnimationJointControl __type="AnimationJointControl">
+          <variables>
+            <AnimationFloatVariable name="DoorPump" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="2" type="Deceleration" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+          </variables>
+          <movements />
+          <animations>
+            <AnimationMovement variable="AnimationJointControls.AnimationJointControl.variables" animationName="misc_freelancer_max_sidedoor_open" layerId="25" __type="AnimationMovement" />
+          </animations>
+        </AnimationJointControl>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks />
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SEntityAudioControllerParams audioControllerEntityType="None" randomSeedCount="0" fullLODDistance="9000" fullToLowLODDistance="9050" offToLowLODDistance="10000" offLODDistance="10050" occlusionAttenuationScaler="0.5" __type="DataForgeComponentParams" __polymorphicType="SEntityAudioControllerParams">
+      <tags __type="TagList">
+        <tags />
+      </tags>
+    </SEntityAudioControllerParams>
+    <SEntityComponentRoomConnectorParams orientationMode="AutoDetectWidest" enableConnectorBridging="1" apertureAnimateTime="0.85" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentRoomConnectorParams">
+      <defaultAreaBounds x="2" y="1" z="2" __type="Vec3" />
+      <boundsOffset x="0" y="0" z="0" __type="Vec3" />
+      <densityClassOverwrites>
+      </densityClassOverwrites>
+    </SEntityComponentRoomConnectorParams>
+    <SAreaComponentParams __type="DataForgeComponentParams" __polymorphicType="SAreaComponentParams">
+      <densityClassOverwrites>
+      </densityClassOverwrites>
+    </SAreaComponentParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="OpenDoor" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeZoneHostVehicle RootVehicle="0" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeZoneHostVehicle" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="Open" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="interior_Bridge_Escape_Pod" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes />
+              <nextNodes>
+                <SEntityTraversingNodeBase name="OpenInternal" __type="SEntityTraversingNodeBase">
+                  <id>
+                  </id>
+                  <entityTraversingType>
+                    <SEntityTraversingNodeTypeChildTag filterTag="65c060b9-cf53-4706-93e7-9184a27cc9c1" recursive="1" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeChildTag" />
+                  </entityTraversingType>
+                  <executeNodes>
+                    <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="Open" localInteraction="Interactable.SharedInteractions[0]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+                  </executeNodes>
+                  <nextNodes />
+                </SEntityTraversingNodeBase>
+              </nextNodes>
+            </SEntityTraversingNodeBase>
+            <SEntityTraversingNodeBase name="Close" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="interior_Bridge_Escape_Pod" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes />
+              <nextNodes>
+                <SEntityTraversingNodeBase name="CloseInternal" __type="SEntityTraversingNodeBase">
+                  <id>
+                  </id>
+                  <entityTraversingType>
+                    <SEntityTraversingNodeTypeChildTag filterTag="65c060b9-cf53-4706-93e7-9184a27cc9c1" recursive="1" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeChildTag" />
+                  </entityTraversingType>
+                  <executeNodes>
+                    <SInteractionLinkExecuteCreateInteractionLinkNode linkedInteractionName="Close" localInteraction="Interactable.SharedInteractions[1]" __type="SEntityTraversingExecuteNodeBase" __polymorphicType="SInteractionLinkExecuteCreateInteractionLinkNode" />
+                  </executeNodes>
+                  <nextNodes />
+                </SEntityTraversingNodeBase>
+              </nextNodes>
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets />
+    </SEntityTraversingTreeParams>
+    <EntityComponentRoomOccupantParams __type="DataForgeComponentParams" __polymorphicType="EntityComponentRoomOccupantParams" />
+  </Components>
+</EntityClassDefinition.Door_Single_DerelictFreelancer_SideDoor_Pumpable>

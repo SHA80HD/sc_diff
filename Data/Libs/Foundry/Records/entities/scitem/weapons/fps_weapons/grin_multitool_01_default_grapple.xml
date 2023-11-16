@@ -619,13 +619,19 @@
               </StateAutoChange>
               <Interactions>
                 <SInteractionStateTransition Interaction="Interactable.SharedInteractions[9]" NextState="StateTypes[0].SInteractionStateType.States[7]" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
                 <tags />
               </stateTags>
               <entityTags __type="TagList">
-                <tags />
+                <tags>
+                  <Reference value="00000000-0000-0000-0000-000000000000" />
+                </tags>
               </entityTags>
             </SInteractionState>
             <SInteractionState StateName="VendorInspecting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
@@ -1059,6 +1065,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1071,8 +1082,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1096,6 +1115,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1108,8 +1132,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1133,6 +1165,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1145,8 +1182,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1170,6 +1215,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1182,8 +1232,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1207,6 +1265,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1219,8 +1282,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1381,18 +1452,20 @@
                     </SWeaponParticleEffectParams>
                   </fireEffects>
                   <beamGroup>
-                    <SBeamGroupParams hitEffectName="multitool" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                    <SBeamGroupParams hitEffectName="multitool" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                      <beamSizeSwitch switch="" __type="AudioSwitch" />
                       <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamActiveRTPC rtpc="" __type="AudioRtpc" />
                       <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
                       <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                      <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
                       <beamEffects>
-                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                           <particleEffect path="Gadgets\Grin_Multitool.ALL.multitool_beam1" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
@@ -1441,32 +1514,34 @@
                     </SWeaponParticleEffectParams>
                   </fireEffects>
                   <beamGroup>
-                    <SBeamGroupParams hitEffectName="Mining_Laser_FPS" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="MiningLaserThrottle" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                    <SBeamGroupParams hitEffectName="Mining_Laser_FPS" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="MiningLaserThrottle" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                      <beamSizeSwitch switch="" __type="AudioSwitch" />
                       <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamLoopAudioTrigger audioTrigger="Play_WPGT_Local_GRIN_Gadget_MultiTool_FPS_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamStopAudioTrigger audioTrigger="Stop_WPGT_Local_GRIN_Gadget_MultiTool_FPS_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamActiveRTPC rtpc="" __type="AudioRtpc" />
                       <beamModifierRTPC rtpc="Grin_Multitool_Laser_Throttle" __type="AudioRtpc" />
                       <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                      <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStartTrigger audioTrigger="Play_WPGT_Local_GRIN_Gadget_MultiTool_FPS_Mining_Beam_Impact" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStopTrigger audioTrigger="Stop_WPGT_Local_GRIN_Gadget_MultiTool_FPS_Mining_Beam_Impact" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
                       <beamEffects>
-                        <SBeamEffectParams helper="weapon_term_01" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="weapon_term_01" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" useMultiSpline="1" multiSplineOffset="1" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
                           <particleEffect path="mining\fps_mining_laser.FPS_Mining_Weapon_VFX.Fracture_Beam_GPU" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
                           </tintColor>
                           <particleAudioParams />
                         </SBeamEffectParams>
-                        <SBeamEffectParams helper="weapon_term_02" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="weapon_term_02" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" useMultiSpline="1" multiSplineOffset="1" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
                           <particleEffect path="mining\fps_mining_laser.FPS_Mining_Weapon_VFX.Fracture_Beam_GPU" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
                           </tintColor>
                           <particleAudioParams />
                         </SBeamEffectParams>
-                        <SBeamEffectParams helper="weapon_term_03" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="weapon_term_03" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" useMultiSpline="1" multiSplineOffset="1" modifierSource="MiningLaserThrottle" __type="SBeamEffectParams">
                           <particleEffect path="mining\fps_mining_laser.FPS_Mining_Weapon_VFX.Fracture_Beam_GPU" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
@@ -1488,7 +1563,7 @@
                 </SWeaponConditionHasTags>
               </condition>
               <weaponAction>
-                <SWeaponActionFireTractorBeamParams name="Detach" localisedName="@ui_weapons_multi_detaching" entityTag="748f644e-db12-46c8-973c-dd5f071202f6" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" fireHelper="muzzle_flash" toggle="1" minForce="0" maxForce="80000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="100" fullStrengthDistance="7.5" maxAngle="40" maxVolume="800" tetherBreakTime="1" safeRangeForceFactor="0.9" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="1" shouldFireInHangars="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="1" maxEnergyDraw="10" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" hitRadius="0.1" ignoreActorStandingOnEntityTag="00000000-0000-0000-0000-000000000000" ignoreVolumeTag="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
+                <SWeaponActionFireTractorBeamParams name="Detach" localisedName="@ui_weapons_multi_detaching" entityTag="748f644e-db12-46c8-973c-dd5f071202f6" uiBindingsTag="7a374641-f24a-48cc-9f12-78f2d837bbcf" aiShootingMode="Rapid" fireHelper="muzzle_flash" toggle="1" minForce="500" maxForce="270000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="60" fullStrengthDistance="3" maxAngle="40" maxVolume="800" volumeForceCoefficient="0.3" tetherBreakTime="1" safeRangeValueFactor="0.9" maxPlayerLookRotationScale="0.15" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="1" shouldFireInHangars="1" shouldTractorSelf="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="1" maxEnergyDraw="10" hitType="ElectricArc" recoil="70881ee1-0786-4ec1-840b-9b25893a0f1a" recoilGrappling="0deeb8c6-96aa-4ce7-9c57-731452101578" recoilInterval="0.15" hitRadius="0.1" ignoreActorStandingOnEntityTag="00000000-0000-0000-0000-000000000000" ignoreVolumeTag="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
                   <mannequinTag tag="" __type="SMannequinTagParams" />
                   <entityTags __type="TagList">
                     <tags />
@@ -1496,11 +1571,12 @@
                   <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                   <selectableCondition>
                   </selectableCondition>
+                  <entityTagBlacklist />
                   <actorStatusBuff>
                   </actorStatusBuff>
                   <inputParams distanceChangePerAction="0.1" distanceAccelerationTimePeriod="0.1" distanceAccelerationFactor="10" __type="SWeaponActionFireTractorBeamInputParams" />
                   <movementParams minAcceleration="0.1" maxAcceleration="20" minSpeed="5" maxSpeed="10" accelerationFactor="5" enterPushPullThreshold="0.5" exitPushPullThreshold="0.1" rotationSingleAxisDeadzone="10" __type="SWeaponActionFireTractorBeamMovementParams" />
-                  <attachDetachParams minAlignmentValidHolo="0.85" minOutlineWidth="1" maxOutlineWidth="1" outlineOpacity="0.3" holoOpacity="0.6" detachAccelerationPopAmount="10" detachAimRange="1.5" detachForceModifier="1.2" attachHoloDefaultRange="0.7" attachHoloRangeModifier="0.5" requiredPortTagsCarryable="TimeCage MissionQuestItem QuantumCage DamageCage" isDetachMode="1" __type="SWeaponActionFireTractorBeamAttachDetachParams">
+                  <attachDetachParams minAlignmentValidHolo="0.85" minOutlineWidth="0.35" maxOutlineWidth="1" outlineOpacity="0.3" holoOpacity="0.6" detachAccelerationPopAmount="10" detachAimRange="1.5" detachForceModifier="1.2" attachHoloDefaultRange="0.7" attachHoloRangeModifier="0.5" requiredPortTagsCarryable="TimeCage MissionQuestItem QuantumCage DamageCage" isDetachMode="1" __type="SWeaponActionFireTractorBeamAttachDetachParams">
                     <validHoloColor r="0.001" g="0.68" b="0.02" __type="RGB" />
                     <warningHoloColor r="0.9" g="0.66" b="0.1" __type="RGB" />
                     <invalidHoloColor r="0.6" g="0.05" b="0.15" __type="RGB" />
@@ -1567,12 +1643,66 @@
                       <SItemPortDefTypes Type="SalvageModifier" __type="SItemPortDefTypes">
                         <SubTypes />
                       </SItemPortDefTypes>
-                      <SItemPortDefTypes Type="Cargo" __type="SItemPortDefTypes">
-                        <SubTypes>
-                          <Enum value="Cargo" />
-                        </SubTypes>
+                      <SItemPortDefTypes Type="TractorBeam" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="TowingBeam" __type="SItemPortDefTypes">
+                        <SubTypes />
                       </SItemPortDefTypes>
                     </allowedDetachTypes>
+                    <displayPortSizeTypes>
+                      <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Cooler" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="PowerPlant" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="QuantumDrive" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Missile" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Shield" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="WeaponDefensive" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Battery" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Bomb" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="FuelTank" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="ExternalFuelTank" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="SalvageHead" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="MiningModifier" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="WeaponMining" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="Turret" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="DockingCollar" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                      <SItemPortDefTypes Type="SalvageModifier" __type="SItemPortDefTypes">
+                        <SubTypes />
+                      </SItemPortDefTypes>
+                    </displayPortSizeTypes>
                     <portFlagBlacklist>
                       <String value="uneditable" />
                       <String value="salvageMount" />
@@ -1584,15 +1714,21 @@
                       <Reference value="8c71c1ea-dd41-45c4-9fc1-7880740552b7" />
                     </entityTagBlacklist>
                   </attachDetachParams>
-                  <rotationParams degreesPerAction="7.5" maxAngularAcceleration="40" maxAngularVelocity="5" degreesPerActionScrollWheel="1000" __type="SWeaponActionFireTractorBeamRotationParams" />
-                  <grappleParams positiveAccelerationLimit="10" negativeAccelerationLimit="-10" maxSpeed="50" coastSpeed="10" lookOrientationInfluenceFactor="0" __type="SWeaponActionFireTractorBeamGrappleParams" />
-                  <vehicleParams aggregatedShields="0" shieldToForceRatio="1" maxShield="100" impactRadius="1" thrusterPassModifierLinear="0.5" thrusterPassModifierAngular="0.3" __type="SWeaponActionFireTractorBeamVehicleBased" />
+                  <rotationParams degreesPerAction="7.5" maxAngularAcceleration="40" maxAngularVelocity="5" degreesPerActionScrollWheel="1000" forceFractionRotation="0.001" __type="SWeaponActionFireTractorBeamRotationParams" />
+                  <grappleParams positiveAccelerationLimit="10" negativeAccelerationLimit="-10" maxSpeed="50" coastSpeed="10" lookOrientationInfluenceFactor="0.35" __type="SWeaponActionFireTractorBeamGrappleParams" />
+                  <vehicleParams aggregatedShields="0" shieldToForceRatio="1" maxShield="1" impactRadius="1" thrusterPassModifierLinear="0.5" thrusterPassModifierAngular="0.3" __type="SWeaponActionFireTractorBeamVehicleBased" />
+                  <multitractorParams leadBeamDeadzoneBlendStart="1.5" leadBeamDeadzoneEnd="3.5" followBeamDeadzoneBlendStart="3" followBeamDeadzoneEnd="8" followBeamDeadzoneAlignment="0.8" followBeamDeadzoneMisalignment="-0.7" enterLeadForceThresholdModifier="-0.1" beamAlignmentSlopeCoefficient="1.2" __type="SWeaponActionFireTractorBeamMultitractorParams" />
+                  <towingBeamParams>
+                  </towingBeamParams>
                   <fireFragment fragment="firing" forceWeaponController="0" __type="SFragmentParams" />
                   <stopFireFragment fragment="stop_firing" forceWeaponController="0" __type="SFragmentParams" />
                   <shootTargetFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
                   <startFireOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <stopFireOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                   <startFireLoopAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Nozzle_Start_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                  <stopFireAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Nozzle_Stop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <stopFireLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <beamBrokenOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                  <beamAttachedOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                   <dryFireAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                   <startRotationModeAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Rotation_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                   <stopRotationModeAudioTrigger audioTrigger="Stop_WPGT_GRIN_MultiTool_TractorBeam_Beam_Rotation_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -1604,6 +1740,8 @@
                   <tractorBeamSpeedRTPC rtpc="Tractor_Beam_Speed" __type="AudioRtpc" />
                   <rotationModeAmountRTPC rtpc="Tractor_Beam_Rotation_Amount" __type="AudioRtpc" />
                   <tetherWarningStateRTPC rtpc="Tractor_Beam_Tether_Warning" __type="AudioRtpc" />
+                  <tractorBeamNormDistanceRTPC rtpc="" __type="AudioRtpc" />
+                  <tractorBeamNormForceRTPC rtpc="" __type="AudioRtpc" />
                   <fireEffects>
                     <SWeaponParticleEffectParams helper="muzzle_flash" triggerTag="00000000-0000-0000-0000-000000000000" modifierSource="None" delay="0" scale="1" retriggerOnViewModeChange="0" __type="SWeaponParticleEffectParams">
                       <firstPerson path="tractorbeam\fps_tractorbeam.FPS_Tractor_Beam.Muzzleflash_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
@@ -1612,19 +1750,21 @@
                   </fireEffects>
                   <shootTargetEffects />
                   <beamGroup>
-                    <SBeamGroupParams hitEffectName="tractor_beam_fps" tractorBeam="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="WeaponState" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                    <SBeamGroupParams hitEffectName="tractor_beam_fps" tractorBeam="1" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="WeaponState" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                      <beamSizeSwitch switch="" __type="AudioSwitch" />
                       <beamAudioOneShot audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Start_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamLoopAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamStopAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Stop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamActiveRTPC rtpc="" __type="AudioRtpc" />
                       <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
                       <beamImpactStartTriggerOneShot audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Start_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                      <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStartTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStopTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Stop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <targetAttractionRTPC rtpc="Beam_Target_Attraction" __type="AudioRtpc" />
                       <beamEffects>
-                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" modifierSource="WeaponState" __type="SBeamEffectParams">
-                          <particleEffect path="tractorbeam\fps_tractorbeam.FPS_Tractor_Beam.Tractor_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="WeaponState" __type="SBeamEffectParams">
+                          <particleEffect path="Gadgets\tractor_beam.fps.beam_only" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
                           </tintColor>
@@ -1633,7 +1773,7 @@
                       </beamEffects>
                     </SBeamGroupParams>
                   </beamGroup>
-                  <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="1" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
+                  <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="1" scaleImpactToObject="1" beamEffectBlendRange="0.8" beamEffectBlendCoeff="2" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
                   <updateCondition>
                     <SWeaponConditionAll __type="SWeaponConditionBase" __polymorphicType="SWeaponConditionAll">
                       <conditions>
@@ -1658,7 +1798,7 @@
                 </SWeaponConditionHasTags>
               </condition>
               <weaponAction>
-                <SWeaponActionFireHealingBeamParams name="Heal" localisedName="@ui_weapons_multi_healing" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" healingMode="Target" fireHelper="muzzle_flash" toggle="0" maxDistance="1.5" maxSensorDistance="20" medicalAmmoType="Medical" mSCUPerSec="8" ammoPerMSCU="1" wearPerSec="0" batteryAmmoType="Primary" batteryDrainPerSec="1" autoDosageTargetBDLModifier="0.75" healingBreakTime="0.1" maxDoseForAutoAdjustment="5" hitType="ElectricArc" globalActorStatusParams="412a3dc8-b655-4c77-9aff-a81d23a38fc6" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireHealingBeamParams">
+                <SWeaponActionFireHealingBeamParams name="Heal" localisedName="@ui_weapons_multi_healing" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" healingMode="Target" fireHelper="muzzle_flash" toggle="0" maxDistance="1.5" maxSensorDistance="20" medicalAmmoType="Medical" mSCUPerSec="8" ammoPerMSCU="1" wearPerSec="0" batteryAmmoType="Primary" batteryDrainPerSec="1" autoDosageTargetBDLModifier="0.75" healingBreakTime="0.1" maxDoseForAutoAdjustment="5" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" globalActorStatusParams="412a3dc8-b655-4c77-9aff-a81d23a38fc6" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireHealingBeamParams">
                   <mannequinTag tag="" __type="SMannequinTagParams" />
                   <entityTags __type="TagList">
                     <tags />
@@ -1686,18 +1826,20 @@
                     </SWeaponParticleEffectParams>
                   </fireEffects>
                   <beamGroup>
-                    <SBeamGroupParams hitEffectName="multitool" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                    <SBeamGroupParams hitEffectName="multitool" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+                      <beamSizeSwitch switch="" __type="AudioSwitch" />
                       <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamLoopAudioTrigger audioTrigger="Play_WPGT_GRIN_Healing_Tool_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamStopAudioTrigger audioTrigger="Play_WPGT_GRIN_Healing_Tool_Stop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamActiveRTPC rtpc="" __type="AudioRtpc" />
                       <beamModifierRTPC rtpc="MedGun_Target_Player_Health" __type="AudioRtpc" />
                       <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                      <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
                       <beamEffects>
-                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" modifierSource="Power" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="0" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                           <particleEffect path="Gadgets\Grin_Multitool.ALL.healing_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
@@ -1729,7 +1871,7 @@
                 </SWeaponConditionHasTags>
               </condition>
               <weaponAction>
-                <SWeaponActionFireSalvageRepairParams name="Salvage" localisedName="@ui_weapons_multi_salvage" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" salvageRepairMode="Salvage" fireHelper="muzzle_flash" toggle="1" salvageCanFireOnFull="0" salvageRepairAmmoType="Salvage" batteryAmmoType="Primary" minEnergyDraw="1" maxEnergyDraw="1" materialEfficiency="0.8" maxVehicleDamageRatio="0.9" repairedMaterialRatio="1" maxHealthRepairRate="10" healthToAmmoRatio="0.5" heatPerSecond="0" wearPerSecond="0" hitRadius="0" materialGatheringGracePeriod="0.35" aimPointThicknessDamageThreshold="1" rampUpTime="4" rampDownTime="0.25" damageThreshold="0" hitType="ElectricArc" ignoreSkiplist="0" shouldDryFireInGreenZones="1" highlightTargetPart="1" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSalvageRepairParams">
+                <SWeaponActionFireSalvageRepairParams name="Salvage" localisedName="@ui_weapons_multi_salvage" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" salvageRepairMode="Salvage" fireHelper="muzzle_flash" toggle="1" salvageCanFireOnFull="0" salvageRepairAmmoType="Salvage" batteryAmmoType="Primary" minEnergyDraw="1" maxEnergyDraw="1" materialEfficiency="0.8" maxVehicleDamageRatio="0.9" repairedMaterialRatio="1" maxHealthRepairRate="10" healthToAmmoRatio="0.5" heatPerSecond="0" wearPerSecond="0" hitRadius="0" materialGatheringGracePeriod="0.35" aimPointThicknessDamageThreshold="1" rampUpTime="4" rampDownTime="0.25" damageThreshold="0" hitType="ElectricArc" ignoreSkiplist="0" shouldDryFireInGreenZones="1" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" highlightTargetPart="1" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSalvageRepairParams">
                   <mannequinTag tag="" __type="SMannequinTagParams" />
                   <entityTags __type="TagList">
                     <tags />
@@ -1770,18 +1912,20 @@
                     </SWeaponParticleEffectParams>
                   </fireEffects>
                   <beamGroup>
-                    <SBeamGroupParams hitEffectName="salvage_fps" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+                    <SBeamGroupParams hitEffectName="salvage_fps" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+                      <beamSizeSwitch switch="" __type="AudioSwitch" />
                       <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamActiveRTPC rtpc="" __type="AudioRtpc" />
                       <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
                       <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                      <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStartTrigger audioTrigger="Play_WPFI_GRIN_Salvage_Gun_Salvage_Impact_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <beamImpactStopTrigger audioTrigger="Play_WPFI_GRIN_Salvage_Gun_Salvage_Impact_Extinguish" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                       <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
                       <beamEffects>
-                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
+                        <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
                           <particleEffect path="Gadgets\salvage_tool.fps.beam.salvage_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <thirdPersonParticleEffect path="Gadgets\salvage_tool.fps.beam.salvage_3rd" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                           <tintColor>
@@ -1811,7 +1955,7 @@
           <defaultWeaponAction>
           </defaultWeaponAction>
         </SWeaponActionConditionParams>
-        <SWeaponActionFireHealingBeamParams name="Self Heal" localisedName="@ui_weapons_multi_healing" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" healingMode="Self" fireHelper="muzzle_flash" toggle="0" maxDistance="10" maxSensorDistance="20" medicalAmmoType="Medical" mSCUPerSec="8" ammoPerMSCU="1" wearPerSec="0" batteryAmmoType="Primary" batteryDrainPerSec="1" autoDosageTargetBDLModifier="0.75" healingBreakTime="0.1" maxDoseForAutoAdjustment="5" hitType="ElectricArc" globalActorStatusParams="412a3dc8-b655-4c77-9aff-a81d23a38fc6" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireHealingBeamParams">
+        <SWeaponActionFireHealingBeamParams name="Self Heal" localisedName="@ui_weapons_multi_healing" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" healingMode="Self" fireHelper="muzzle_flash" toggle="0" maxDistance="10" maxSensorDistance="20" medicalAmmoType="Medical" mSCUPerSec="8" ammoPerMSCU="1" wearPerSec="0" batteryAmmoType="Primary" batteryDrainPerSec="1" autoDosageTargetBDLModifier="0.75" healingBreakTime="0.1" maxDoseForAutoAdjustment="5" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" globalActorStatusParams="412a3dc8-b655-4c77-9aff-a81d23a38fc6" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireHealingBeamParams">
           <mannequinTag tag="" __type="SMannequinTagParams" />
           <entityTags __type="TagList">
             <tags />
@@ -1864,7 +2008,7 @@
             <Enum value="Jump" />
           </abilityTypesToHideCards>
         </SWeaponActionFireHealingBeamParams>
-        <SWeaponActionFireSalvageRepairParams name="Repair" localisedName="@ui_weapons_multi_repair" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" salvageRepairMode="Repair" fireHelper="muzzle_flash" toggle="1" salvageCanFireOnFull="0" salvageRepairAmmoType="Salvage" batteryAmmoType="Primary" minEnergyDraw="1" maxEnergyDraw="1" materialEfficiency="1" maxVehicleDamageRatio="1" repairedMaterialRatio="1" maxHealthRepairRate="100" healthToAmmoRatio="0.1" heatPerSecond="0" wearPerSecond="0" hitRadius="0" materialGatheringGracePeriod="0.2" aimPointThicknessDamageThreshold="1" rampUpTime="0.5" rampDownTime="0.1" damageThreshold="0" hitType="ElectricArc" ignoreSkiplist="0" shouldDryFireInGreenZones="1" highlightTargetPart="1" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSalvageRepairParams">
+        <SWeaponActionFireSalvageRepairParams name="Repair" localisedName="@ui_weapons_multi_repair" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" salvageRepairMode="Repair" fireHelper="muzzle_flash" toggle="1" salvageCanFireOnFull="0" salvageRepairAmmoType="Salvage" batteryAmmoType="Primary" minEnergyDraw="1" maxEnergyDraw="1" materialEfficiency="1" maxVehicleDamageRatio="1" repairedMaterialRatio="1" maxHealthRepairRate="100" healthToAmmoRatio="0.1" heatPerSecond="0" wearPerSecond="0" hitRadius="0" materialGatheringGracePeriod="0.2" aimPointThicknessDamageThreshold="1" rampUpTime="0.5" rampDownTime="0.1" damageThreshold="0" hitType="ElectricArc" ignoreSkiplist="0" shouldDryFireInGreenZones="1" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" highlightTargetPart="1" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSalvageRepairParams">
           <mannequinTag tag="repair" __type="SMannequinTagParams" />
           <entityTags __type="TagList">
             <tags />
@@ -1915,18 +2059,20 @@
             </SWeaponParticleEffectParams>
           </fireEffects>
           <beamGroup>
-            <SBeamGroupParams hitEffectName="repair" tractorBeam="0" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+            <SBeamGroupParams hitEffectName="repair" tractorBeam="0" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="SalvageRepair" __type="SBeamGroupParams">
+              <beamSizeSwitch switch="" __type="AudioSwitch" />
               <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamStopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamActiveRTPC rtpc="" __type="AudioRtpc" />
               <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
               <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStartTrigger audioTrigger="Play_WPFI_GRIN_Salvage_Gun_Repair_Impact_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStopTrigger audioTrigger="Play_WPFI_GRIN_Salvage_Gun_Repair_Impact_Extinguish" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <targetAttractionRTPC rtpc="" __type="AudioRtpc" />
               <beamEffects>
-                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="SalvageRepair" __type="SBeamEffectParams">
                   <particleEffect path="Gadgets\salvage_tool.fps.beam.repair_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="Gadgets\salvage_tool.fps.beam.repair_3rd" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
@@ -1976,39 +2122,41 @@
           <timeSinceLastFireRTPC rtpc="Mining_Laser_Cooldown" __type="AudioRtpc" />
           <particleEffects />
           <beamGroups>
-            <SBeamGroupParams hitEffectName="TractorBeam_Laser" tractorBeam="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+            <SBeamGroupParams hitEffectName="TractorBeam_Laser" tractorBeam="1" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="Power" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+              <beamSizeSwitch switch="" __type="AudioSwitch" />
               <beamAudioOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamLoopAudioTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamStopAudioTrigger audioTrigger="Stop_MVML_Grin_Roc_Tractor_Beam_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamActiveRTPC rtpc="" __type="AudioRtpc" />
               <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
               <beamImpactStartTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStartTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Impact_Start" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStopTrigger audioTrigger="Play_MVML_Grin_Roc_Tractor_Beam_Impact_Stop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <targetAttractionRTPC rtpc="Beam_Target_Attraction" __type="AudioRtpc" />
               <beamEffects>
-                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Tractor_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="weapon_term_01" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="weapon_term_01" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="weapon_term_02" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="weapon_term_02" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
                   <particleAudioParams />
                 </SBeamEffectParams>
-                <SBeamEffectParams helper="weapon_term_03" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" modifierSource="Power" __type="SBeamEffectParams">
+                <SBeamEffectParams helper="weapon_term_03" killParticlesOnDeactivate="0" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="Power" __type="SBeamEffectParams">
                   <particleEffect path="mining\grin_roc_mining.Gather_laser_beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
@@ -2019,7 +2167,7 @@
             </SBeamGroupParams>
           </beamGroups>
         </SWeaponActionGatheringBeamParams>
-        <SWeaponActionFireTractorBeamParams name="TractorBeam" localisedName="@ui_weapons_multi_tractor" entityTag="748f644e-db12-46c8-973c-dd5f071202f6" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Rapid" fireHelper="muzzle_flash" toggle="0" minForce="0" maxForce="80000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="100" fullStrengthDistance="7.5" maxAngle="40" maxVolume="800" tetherBreakTime="1" safeRangeForceFactor="0.9" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="1" shouldFireInHangars="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="0" maxEnergyDraw="0" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" hitRadius="0.005" ignoreActorStandingOnEntityTag="00000000-0000-0000-0000-000000000000" ignoreVolumeTag="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
+        <SWeaponActionFireTractorBeamParams name="TractorBeam" localisedName="@ui_weapons_multi_tractor" entityTag="748f644e-db12-46c8-973c-dd5f071202f6" uiBindingsTag="b2a1c68c-3555-4191-84b6-bfdb6991abd9" aiShootingMode="Rapid" fireHelper="muzzle_flash" toggle="0" minForce="500" maxForce="270000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="60" fullStrengthDistance="3" maxAngle="40" maxVolume="800" volumeForceCoefficient="0.3" tetherBreakTime="1" safeRangeValueFactor="0.85" maxPlayerLookRotationScale="0.15" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="1" shouldFireInHangars="1" shouldTractorSelf="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="0" maxEnergyDraw="0" hitType="ElectricArc" recoil="70881ee1-0786-4ec1-840b-9b25893a0f1a" recoilGrappling="0deeb8c6-96aa-4ce7-9c57-731452101578" recoilInterval="0.15" hitRadius="0.005" ignoreActorStandingOnEntityTag="12265e51-55bf-49b6-a317-a2373f887787" ignoreVolumeTag="00a107b3-1473-434f-916b-196bedee164d" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
           <mannequinTag tag="" __type="SMannequinTagParams" />
           <entityTags __type="TagList">
             <tags />
@@ -2037,11 +2185,12 @@
               </conditions>
             </SWeaponConditionAll>
           </selectableCondition>
+          <entityTagBlacklist />
           <actorStatusBuff>
           </actorStatusBuff>
           <inputParams distanceChangePerAction="0.1" distanceAccelerationTimePeriod="0.1" distanceAccelerationFactor="10" __type="SWeaponActionFireTractorBeamInputParams" />
           <movementParams minAcceleration="0.1" maxAcceleration="20" minSpeed="5" maxSpeed="10" accelerationFactor="5" enterPushPullThreshold="0.5" exitPushPullThreshold="0.1" rotationSingleAxisDeadzone="10" __type="SWeaponActionFireTractorBeamMovementParams" />
-          <attachDetachParams minAlignmentValidHolo="0.85" minOutlineWidth="1" maxOutlineWidth="1" outlineOpacity="0.3" holoOpacity="0.6" detachAccelerationPopAmount="10" detachAimRange="1.5" detachForceModifier="1.2" attachHoloDefaultRange="0.7" attachHoloRangeModifier="0.5" requiredPortTagsCarryable="TimeCage MissionQuestItem QuantumCage DamageCage" isDetachMode="0" __type="SWeaponActionFireTractorBeamAttachDetachParams">
+          <attachDetachParams minAlignmentValidHolo="0.85" minOutlineWidth="0.35" maxOutlineWidth="1" outlineOpacity="0.3" holoOpacity="0.6" detachAccelerationPopAmount="10" detachAimRange="1.5" detachForceModifier="1.2" attachHoloDefaultRange="0.7" attachHoloRangeModifier="0.5" requiredPortTagsCarryable="TimeCage MissionQuestItem QuantumCage DamageCage" isDetachMode="0" __type="SWeaponActionFireTractorBeamAttachDetachParams">
             <validHoloColor r="0.001" g="0.68" b="0.02" __type="RGB" />
             <warningHoloColor r="0.9" g="0.66" b="0.1" __type="RGB" />
             <invalidHoloColor r="0.6" g="0.05" b="0.15" __type="RGB" />
@@ -2108,12 +2257,66 @@
               <SItemPortDefTypes Type="SalvageModifier" __type="SItemPortDefTypes">
                 <SubTypes />
               </SItemPortDefTypes>
-              <SItemPortDefTypes Type="Cargo" __type="SItemPortDefTypes">
-                <SubTypes>
-                  <Enum value="Cargo" />
-                </SubTypes>
+              <SItemPortDefTypes Type="TractorBeam" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="TowingBeam" __type="SItemPortDefTypes">
+                <SubTypes />
               </SItemPortDefTypes>
             </allowedDetachTypes>
+            <displayPortSizeTypes>
+              <SItemPortDefTypes Type="WeaponGun" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Cooler" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="PowerPlant" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="QuantumDrive" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Missile" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Shield" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="WeaponDefensive" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Battery" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Bomb" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="FuelTank" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="ExternalFuelTank" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="SalvageHead" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="MiningModifier" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="WeaponMining" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="Turret" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="DockingCollar" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+              <SItemPortDefTypes Type="SalvageModifier" __type="SItemPortDefTypes">
+                <SubTypes />
+              </SItemPortDefTypes>
+            </displayPortSizeTypes>
             <portFlagBlacklist>
               <String value="uneditable" />
               <String value="salvageMount" />
@@ -2125,15 +2328,21 @@
               <Reference value="8c71c1ea-dd41-45c4-9fc1-7880740552b7" />
             </entityTagBlacklist>
           </attachDetachParams>
-          <rotationParams degreesPerAction="7.5" maxAngularAcceleration="40" maxAngularVelocity="2.5" degreesPerActionScrollWheel="1000" __type="SWeaponActionFireTractorBeamRotationParams" />
-          <grappleParams positiveAccelerationLimit="5" negativeAccelerationLimit="-5" maxSpeed="50" coastSpeed="10" lookOrientationInfluenceFactor="0" __type="SWeaponActionFireTractorBeamGrappleParams" />
-          <vehicleParams aggregatedShields="0" shieldToForceRatio="1" maxShield="100" impactRadius="1" thrusterPassModifierLinear="0.5" thrusterPassModifierAngular="0.3" __type="SWeaponActionFireTractorBeamVehicleBased" />
+          <rotationParams degreesPerAction="7.5" maxAngularAcceleration="40" maxAngularVelocity="2.5" degreesPerActionScrollWheel="1000" forceFractionRotation="0.001" __type="SWeaponActionFireTractorBeamRotationParams" />
+          <grappleParams positiveAccelerationLimit="5" negativeAccelerationLimit="-5" maxSpeed="50" coastSpeed="10" lookOrientationInfluenceFactor="0.35" __type="SWeaponActionFireTractorBeamGrappleParams" />
+          <vehicleParams aggregatedShields="0" shieldToForceRatio="1" maxShield="1" impactRadius="1" thrusterPassModifierLinear="0.5" thrusterPassModifierAngular="0.3" __type="SWeaponActionFireTractorBeamVehicleBased" />
+          <multitractorParams leadBeamDeadzoneBlendStart="1.5" leadBeamDeadzoneEnd="3.5" followBeamDeadzoneBlendStart="3" followBeamDeadzoneEnd="8" followBeamDeadzoneAlignment="0.8" followBeamDeadzoneMisalignment="-0.7" enterLeadForceThresholdModifier="-0.1" beamAlignmentSlopeCoefficient="1.2" __type="SWeaponActionFireTractorBeamMultitractorParams" />
+          <towingBeamParams>
+          </towingBeamParams>
           <fireFragment fragment="firing" forceWeaponController="0" __type="SFragmentParams" />
           <stopFireFragment fragment="stop_firing" forceWeaponController="0" __type="SFragmentParams" />
           <shootTargetFragment fragment="" forceWeaponController="0" __type="SFragmentParams" />
           <startFireOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <stopFireOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <startFireLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-          <stopFireAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <stopFireLoopAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <beamBrokenOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <beamAttachedOneShotAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <dryFireAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <startRotationModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <stopRotationModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -2145,6 +2354,8 @@
           <tractorBeamSpeedRTPC rtpc="Tractor_Beam_Speed" __type="AudioRtpc" />
           <rotationModeAmountRTPC rtpc="Tractor_Beam_Rotation_Amount" __type="AudioRtpc" />
           <tetherWarningStateRTPC rtpc="Tractor_Beam_Tether_Warning" __type="AudioRtpc" />
+          <tractorBeamNormDistanceRTPC rtpc="" __type="AudioRtpc" />
+          <tractorBeamNormForceRTPC rtpc="" __type="AudioRtpc" />
           <fireEffects>
             <SWeaponParticleEffectParams helper="muzzle_flash" triggerTag="00000000-0000-0000-0000-000000000000" modifierSource="None" delay="0" scale="1" retriggerOnViewModeChange="0" __type="SWeaponParticleEffectParams">
               <firstPerson path="tractorbeam\fps_tractorbeam.FPS_Tractor_Beam.Muzzleflash_1st" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
@@ -2153,19 +2364,21 @@
           </fireEffects>
           <shootTargetEffects />
           <beamGroup>
-            <SBeamGroupParams hitEffectName="tractor_beam_fps" tractorBeam="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="WeaponState" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+            <SBeamGroupParams hitEffectName="tractor_beam_fps" tractorBeam="1" skipListIncludeOwner="1" useADSHelper="0" detachOnActivate="0" immediateRaycast="0" beamModifierRTPCSource="WeaponState" beamImpactModifierSource="WeaponState" __type="SBeamGroupParams">
+              <beamSizeSwitch switch="" __type="AudioSwitch" />
               <beamAudioOneShot audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Start_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamLoopAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamStopAudioTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Beam_Stop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamActiveRTPC rtpc="" __type="AudioRtpc" />
               <beamModifierRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
               <beamImpactStartTriggerOneShot audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Start_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+              <beamImpactStopTriggerOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStartTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Loop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <beamImpactStopTrigger audioTrigger="Play_WPGT_GRIN_MultiTool_TractorBeam_Object_Stop_01" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
               <targetAttractionRTPC rtpc="Beam_Target_Attraction" __type="AudioRtpc" />
               <beamEffects>
-                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" modifierSource="WeaponState" __type="SBeamEffectParams">
-                  <particleEffect path="tractorbeam\fps_tractorbeam.FPS_Tractor_Beam.Tractor_Beam" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <SBeamEffectParams helper="muzzle_flash" killParticlesOnDeactivate="1" startPointStrength="0" endPointStrength="1" useMultiSpline="1" multiSplineOffset="1" modifierSource="WeaponState" __type="SBeamEffectParams">
+                  <particleEffect path="Gadgets\tractor_beam.fps.beam_only" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <thirdPersonParticleEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
                   <tintColor>
                   </tintColor>
@@ -2174,7 +2387,7 @@
               </beamEffects>
             </SBeamGroupParams>
           </beamGroup>
-          <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="1" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
+          <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="1" scaleImpactToObject="1" beamEffectBlendRange="0.8" beamEffectBlendCoeff="2" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
           <updateCondition>
             <SWeaponConditionAll __type="SWeaponConditionBase" __polymorphicType="SWeaponConditionAll">
               <conditions>
@@ -2259,19 +2472,19 @@
           </WearRange>
           <InventoryItems />
           <entries>
-            <SItemPortLoadoutEntryParams itemPortName="grapple_attach" entityClassName="grin_multitool_01_grapple" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="grapple_attach" entityClassName="grin_multitool_01_grapple" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="weapon_action_attachment" entityClassName="" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="weapon_action_attachment" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="module_attach" entityClassName="" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="module_attach" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
@@ -2450,11 +2663,6 @@
                 <Enum value="Magazine" />
               </SubTypes>
             </SItemPortDefTypes>
-            <SItemPortDefTypes Type="" __type="SItemPortDefTypes">
-              <SubTypes>
-                <Enum value="" />
-              </SubTypes>
-            </SItemPortDefTypes>
           </Types>
           <Extension>
           </Extension>
@@ -2572,14 +2780,14 @@
         </groups>
       </contactGroups>
       <signatureDetection>
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
-        <SCItemRadarSignatureDetection sensitivity="0" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="1" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
+        <SCItemRadarSignatureDetection sensitivity="0" groundSensitivity="1" piercing="0.25" permitPassiveDetection="1" permitActiveDetection="1" __type="SCItemRadarSignatureDetection" />
       </signatureDetection>
       <pingProperties cooldownTime="2.5" __type="SCItemRadarPingProperties" />
     </SCItemRadarComponentParams>

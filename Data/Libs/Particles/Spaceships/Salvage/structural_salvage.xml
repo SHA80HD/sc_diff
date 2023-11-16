@@ -1,0 +1,87 @@
+<ParticleLibrary Name="structural_salvage" SandboxVersion="1.0.133.60491" ParticleVersion="48">
+  <Particles Name="SDF_Shields.SDF_Tester">
+    <Params Inheritance="System" Count="525000" ParticleSystem="RParticleGPU" ParticleLifeTime="10" EmissionSize="x=50,y=50,z=50" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/glows/glow2.tif" TextureAnimation="FirstFrameIntervalStart=1,FirstFrameIntervalEnd=1" SoftParticleV2="FadeThickness=5.9,DepthOffset=0,CurveController=0.502732" Color="(x=0.00303527,y=0.37626216,z=0.8962695)" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="322.70898" Speed="0" SDF_Glue="true,GlueDistance=1" Size="0.33" SortOffset="-5.2" />
+  </Particles>
+  <Particles Name="SDF_Shields.SDF_Glow_Tester">
+    <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" ParticleLifeTime="1.5,EmitterStrength=(v=0.663;t=1,v=1)" Texture="" Alpha="Random=0.207048" Color="Random=(RandomHue=true),ExternalTinting=1" Geometry="objects/default/primitive_sphere.cgf" SDFVolumeMesh="true,Intensity=100,SurfaceController=25,DepthController=4.79642,CenterController=0.01" DiffuseLighting="0" Reflectiveness="0" Speed="0" Size="310" Facing="Free" MaxDistanceLOD="1250" SortBoundsScale="-1" HalfRes="true" />
+  </Particles>
+  <Particles Name="SDF_Shields.Impact_Generic">
+    <Params Inheritance="System" PlanetarySpacing="0" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="4" ApplyTo="Emitter" Texture="" TextureAnimation="NumFramesU=1,NumFramesV=1,TilingMode=Clamp" Color="ExternalTinting=1" MeshShaping="FreezeTime=0" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="1000" Speed="0" CurlNoise="Amplitude=(x=10)" SDF_Glue="true" Size="0" RandomAngles="y=360" Facing="Free" OrientToVelocity="true" ForceUpdateShader="true" />
+    <Childs>
+      <Particles Name="mesh_decal_shockwave">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="3,Random=0.105195,EmitterStrength=(v=0.27,flags=32;t=1,v=1,flags=4)" EmissionRotation="x=90" Texture="" TextureSharpness="1" HeatMax="2.27027" TextureAnimation="FirstFrameIntervalEnd=1,FrameBlend=true,TilingMode=Clamp" Alpha="0.806763,ParticleAge=(;t=0.03,v=1;t=0.294,v=1;t=1)" AlphaErosion="1,ParticleAge=(;t=1,v=1,flags=4),EdgeHardness=0.481928" Color="ExternalTinting=1" Material="Materials/VFX/SDF_Shields/Shockwave_disipation" Geometry="objects/vfx/mesheffects/particle_transparent_meshes/sdf_shield_meshes/sdf_shield_mesh_hp.cgf" MeshShaping="true,NeighbourStrength=0.1,MaxThresh=0.060241,StartTime=0,FreezeTime=0" DiffuseLighting="0" Reflectiveness="0" Speed="0" CurlNoise="Amplitude=(x=0),SpatialFrequency=(x=0,y=0,z=0)" SDF_Attraction="PullStrength=100,PullRangeStart=5,AttractionSurfaceCenter=0" SDF_Glue="true" Size="0.5,Random=0.1,ParticleAge=(v=0.525,flags=32;t=1,v=1,flags=4)" Facing="Free" OrientToVelocity="true" ChildInitialOrientation="ParentOrientation" SortBoundsScale="2" ForceUpdateShader="true" ExplicitPush="true" />
+      </Particles>
+      <Particles Name="glow_impact">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" ParticleLifeTime="2.5,EmitterStrength=(v=0.27,flags=32;t=1,v=1)" Alpha="0.02,ParticleAge=(v=1,flags=32;t=0.196,v=0.27;t=1)" Color="Random=(RandomHue=true),ExternalTinting=1" Material="Materials/VFX/SDF_Shields/volume_glow_generic" Geometry="objects/default/primitive_sphere.cgf" SDFVolumeMesh="true,Intensity=4,SurfaceController=(1,ParticleAge=(;t=0.298,v=0.78;t=1,v=1)),CenterController=(0,ParticleAge=(v=1;t=0.396,v=0.357;t=1,v=0.19))" DiffuseLighting="0" Reflectiveness="0" Size="0.5,EmitterStrength=(v=0.067,flags=32;t=1,v=1),ParticleAge=(v=0.745,flags=32;t=1,v=1)" Facing="Free" MaxDistanceLOD="5000" SortBoundsScale="1" HalfRes="true" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="SDF_Shields.Impact_Vanduul_Generic">
+    <Params Inheritance="System" Count="500" PlanetarySpacing="0" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="4" ApplyTo="Emitter" Texture="" TextureAnimation="NumFramesU=1,NumFramesV=1,TilingMode=Clamp" Color="ExternalTinting=1" MeshShaping="FreezeTime=0,DebugDraw=true" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="1000" Speed="0" CurlNoise="Amplitude=(x=10)" SDF_Glue="true" Size="0" RandomAngles="y=360" Facing="Free" ForceUpdateShader="true" ExplicitPush="true" />
+    <Childs>
+      <Particles Name="glow_impact">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="1.5,EmitterStrength=(v=0.51,flags=32;t=1,v=1,flags=4)" Texture="" Alpha="EmitterStrength=(v=0.24,flags=32;t=1,v=1,flags=4),ParticleAge=(v=1,flags=32;t=1)" AlphaErosion="ParticleAge=(;t=0.082,v=1;t=0.3,v=1;t=1)" Color="Random=(RandomHue=true),ExternalTinting=1" Material="Materials/VFX/sdf_shields/glow_vanduul" Geometry="objects/default/primitive_sphere.cgf" MeshShaping="MaxThresh=0.06,FreezeTime=0.5" SDFVolumeMesh="true,Intensity=10,SurfaceController=2,DepthController=-0.25,CenterController=1" DiffuseLighting="0" Reflectiveness="0" Speed="0" Size="1.5,EmitterStrength=(v=0.255,flags=32;t=1,v=1),ParticleAge=(v=0.24,flags=32;t=1,v=1,flags=4)" Facing="Free" MaxDistanceLOD="5000" SortBoundsScale="1" ExplicitPush="true" AllocSize="46" />
+      </Particles>
+      <Particles Name="lattice_mesh">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="3,Random=0.105195,EmitterStrength=(v=0.27,flags=32;t=1,v=1,flags=4)" EmissionRotation="x=90" Texture="" TextureSharpness="1" HeatMax="2.27027" TextureAnimation="FirstFrameIntervalEnd=1,FrameBlend=true,TilingMode=Clamp" Alpha="ParticleAge=(;t=0.03,v=1;t=0.294,v=1;t=1)" AlphaErosion="1,ParticleAge=(;t=1,v=1,flags=4),EdgeHardness=0.481928" Color="ExternalTinting=1" Material="materials/vfx/sdf_shields/shield_vanduul" Geometry="objects/vfx/mesheffects/particle_transparent_meshes/sdf_shield_meshes/sdf_shield_mesh_hp.cgf" MeshShaping="true,NeighbourStrength=0.1,MaxThresh=0.060241,StartTime=0,FreezeTime=0" DiffuseLighting="0" Reflectiveness="0" Speed="0" CurlNoise="Amplitude=(x=0),SpatialFrequency=(x=0,y=0,z=0)" SDF_Attraction="PullStrength=100,PullRangeStart=5,AttractionSurfaceCenter=0" SDF_Glue="true" Size="0.5,Random=0.1,ParticleAge=(v=0.525,flags=32;t=1,v=1,flags=4)" Facing="Free" OrientToVelocity="true" ChildInitialOrientation="ParentOrientation" SortBoundsScale="2" ForceUpdateShader="true" ExplicitPush="true" AllocSize="49808" />
+      </Particles>
+      <Particles Name="mesh_lightning">
+        <Params Enabled="false" Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="2.5,Random=0.132743,EmitterStrength=(v=0.51,flags=32;t=1,v=1,flags=4)" EmissionRotation="x=90" Texture="" TextureSharpness="1" HeatMax="5" TextureAnimation="NumFramesU=2,NumFramesV=8,AnimCurve=(flags=32;t=1,v=1),Loop=true,FirstFrameIntervalEnd=1,TexScrollingV=(1,ParticleAge=(v=1;t=1,flags=4)),ScrollLifetimeRate=true,TexOffset=((y=0.63))" RibbonTexTiling="0" Alpha="EmitterStrength=(v=0.373;t=1,v=1),ParticleAge=(t=0.024;t=0.294,v=1,flags=36;t=1)" AlphaErosion="0.5,ParticleAge=(;t=1,v=1,flags=4),EdgeHardness=1" Color="ExternalTinting=1" Material="Materials/VFX/sdf_shields/shockwave_disipation_lightning_vanduul_bent" Geometry="objects/vfx/mesheffects/particle_transparent_meshes/sdf_shield_meshes/disc_hp_bent.cgf" MeshShaping="true,NeighbourStrength=0.1,MaxThresh=0.06,StartTime=0,FreezeTime=0.25" DiffuseLighting="0" Reflectiveness="0" Speed="0" CurlNoise="Amplitude=(x=0),SpatialFrequency=(x=0,y=0,z=0)" SDF_Attraction="PullStrength=100,PullRangeStart=5,AttractionSurfaceCenter=0" SDF_Glue="true" Size="3,EmitterStrength=(v=0.153,flags=32;t=1,v=1)" Facing="Free" OrientToVelocity="true" ChildInitialOrientation="EntityOrientation" ResponsiveAA="true" SortBoundsScale="-7" ExplicitPush="true" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Resonate.target_resonate">
+    <Params Enabled="false" Inheritance="System" PlanetarySpacing="0" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="4" ApplyTo="Emitter" Texture="" TextureAnimation="NumFramesU=1,NumFramesV=1,TilingMode=Clamp" Color="ExternalTinting=1" MeshShaping="FreezeTime=0" DiffuseLighting="0" Reflectiveness="0" EmissiveLighting="1000" Speed="0" CurlNoise="Amplitude=(x=10)" SDF_Glue="true" Size="0" RandomAngles="y=360" Facing="Free" OrientToVelocity="true" ForceUpdateShader="true" ExplicitPush="true" />
+    <Childs>
+      <Particles Name="mesh_decal_shockwave">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="3,Random=0.105195,EmitterStrength=(v=0.27,flags=32;t=1,v=1,flags=4)" EmissionRotation="x=90" Texture="" TextureSharpness="1" HeatMax="2.27027" TextureAnimation="FirstFrameIntervalEnd=1,FrameBlend=true,TilingMode=Clamp" Alpha="0.806763,ParticleAge=(;t=0.03,v=1;t=0.294,v=1;t=1)" AlphaErosion="1,ParticleAge=(;t=1,v=1,flags=4),EdgeHardness=0.481928" Color="ExternalTinting=1" Material="Materials/VFX/SDF_Shields/Shockwave_disipation" Geometry="objects/vfx/mesheffects/particle_transparent_meshes/sdf_shield_meshes/sdf_shield_mesh_hp.cgf" MeshShaping="true,NeighbourStrength=0.1,MaxThresh=0.060241,StartTime=0,FreezeTime=0" DiffuseLighting="0" Reflectiveness="0" Speed="0" CurlNoise="Amplitude=(x=0),SpatialFrequency=(x=0,y=0,z=0)" SDF_Attraction="PullStrength=100,PullRangeStart=5,AttractionSurfaceCenter=0" SDF_Glue="true" Size="0.5,Random=0.1,ParticleAge=(v=0.525,flags=32;t=1,v=1,flags=4)" Facing="Free" OrientToVelocity="true" ChildInitialOrientation="ParentOrientation" SortBoundsScale="2" ForceUpdateShader="true" ExplicitPush="true" />
+      </Particles>
+      <Particles Name="glow_impact">
+        <Params Inheritance="System" Spawn="FromParentBirth" ParticleSystem="RParticleGPU" ParticleLifeTime="2.5,EmitterStrength=(v=0.27,flags=32;t=1,v=1)" Alpha="0.02,ParticleAge=(v=1,flags=32;t=0.196,v=0.27;t=1)" Color="Random=(RandomHue=true),ExternalTinting=1" Material="Materials/VFX/SDF_Shields/volume_glow_generic" Geometry="objects/default/primitive_sphere.cgf" SDFVolumeMesh="true,Intensity=4,SurfaceController=(1,ParticleAge=(;t=0.298,v=0.78;t=1,v=1)),CenterController=(0,ParticleAge=(v=1;t=0.396,v=0.357;t=1,v=0.19))" DiffuseLighting="0" Reflectiveness="0" Size="0.5,EmitterStrength=(v=0.067,flags=32;t=1,v=1),ParticleAge=(v=0.745,flags=32;t=1,v=1)" Facing="Free" MaxDistanceLOD="5000" SortBoundsScale="1" HalfRes="true" />
+      </Particles>
+      <Particles Name="debug_target_resonate">
+        <Params Inheritance="System" Count="5000,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" EmissionSize="x=5,y=5,z=5" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/smoke/smoke_wispy_5x5_dif.tif" NormalTexture="textures/vfx/smoke/smoke_wispy_5x5_ddn.tif" FlowTexture="textures/vfx/smoke/smoke_wispy_5x5_vector_0.0547.tif" FlowMapIntensity="0.0547" TextureAnimation="NumFramesU=5,NumFramesV=5,FrameBlend=true" SoftParticleV2="FadeThickness=5.9,DepthOffset=0,CurveController=0.502732" Color="EmitterStrength=(v=(y=0.855,z=1);t=0.5,v=(y=1,z=0.082);t=0.996,v=(x=0.23,z=1))" Refraction="true,Strength=1" Reflectiveness="0" EmissiveLighting="200" Speed="0" SDF_Glue="true,GlueDistance=1" Size="0.33" AllocSize="5001" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Resonate.source_resonate">
+    <Params Enabled="false" Inheritance="System" Count="3,ScaleWithEmissionSizeScale=true" ParticleSystem="RParticleGPU" EmissionSize="x=1,z=1" EmissionScaling="true" Texture="textures/vfx/smoke/smoke_stringy.tif" NormalTexture="textures/vfx/smoke/smoke_stringy_ddn.tif" FlowTexture="textures/vfx/smoke/smoke_stringy_vec_0.04.tif" FlowMapIntensity="0.04" TextureAnimation="NumFramesU=8,NumFramesV=8,FrameBlend=true" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true,FadeThickness=0.5,DepthOffset=0.25" Alpha="0" AlphaErosion="0.01" Refraction="true,Strength=(0.3,ParticleAge=(;t=0.2,v=1;t=0.796,v=1;t=1)),Blur=0.5" Speed="0.4" Size="4,ParticleAge=(v=0.32,flags=32;t=1,v=1)" RotationRate="(y=-20)" RandomRotationRate="y=20" AllocSize="3" />
+    <Childs>
+      <Particles Name="debug_source_resonate">
+        <Params Inheritance="System" Count="100,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" EmissionSize="x=1,z=1" EmissionScaling="true" BlendType="Additive" Texture="textures/vfx/smoke/smoke_wispy_5x5_dif.tif" NormalTexture="textures/vfx/smoke/smoke_wispy_5x5_ddn.tif" FlowTexture="textures/vfx/smoke/smoke_wispy_5x5_vector_0.0547.tif" FlowMapIntensity="0.0547" TextureAnimation="NumFramesU=5,NumFramesV=5,FrameBlend=true" Alpha="0.100952" Color="EmitterStrength=(v=(y=0.855,z=1);t=0.5,v=(y=1,z=0.082);t=0.996,v=(x=0.23,z=1))" Refraction="true,Strength=1" Reflectiveness="0" EmissiveLighting="200" Speed="0" Size="5,EmitterStrength=(v=0.137,flags=32;t=1,v=1,flags=4)" AllocSize="101" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Break.target_break">
+    <Params Enabled="false" Inheritance="System" ParticleSystem="RParticleGPU" />
+    <Childs>
+      <Particles Name="debug_target_break">
+        <Params Inheritance="System" Count="20,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" ParticleLifeTime="5" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmitOffsetDir="true" EmissionScaling="true" VelDirFromShape="true" Texture="textures/vfx/smoke/smoke_wispy_5x5_dif.tif" NormalTexture="textures/vfx/smoke/smoke_wispy_5x5_ddn.tif" FlowTexture="textures/vfx/smoke/smoke_wispy_5x5_vector_0.0547.tif" FlowMapIntensity="0.0547" TextureAnimation="NumFramesU=5,NumFramesV=5,FrameBlend=true" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true,FadeThickness=1,DepthOffset=0.5" Alpha="ParticleAge=(;t=0.208,v=1;t=0.8,v=1;t=1)" Color="EmitterStrength=(v=(x=1);t=1,v=(y=1))" EmissiveLighting="300" Size="50,EmitterStrength=(v=0.118,flags=32;t=1,v=1,flags=4),ParticleAge=(v=0.68,flags=32;t=1,v=1)" RandomAngles="y=360" AllocSize="20" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Disintegration.source_disintegration_beam">
+    <Params Enabled="false" Inheritance="System" ParticleSystem="RParticleGPU" />
+    <Childs>
+      <Particles Name="debug_source_disintegration_beam">
+        <Params Inheritance="System" Count="2000,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" ParticleLifeTime="10" EmissionSize="x=1,z=1" EmitAngle="70,EmitterStrength=(flags=32;t=1,v=1,flags=4)" EmissionScaling="true" VerticalSpread="70,EmitterStrength=(flags=32;t=1,v=1,flags=4)" BlendType="Additive" Texture="textures/vfx/glows/glow5_lowres.tif" Alpha="ParticleAge=(;t=0.094,v=1;t=0.89,v=1;t=1)" Color="EmitterStrength=(v=(y=0.855,z=1);t=0.5,v=(y=1,z=0.082);t=0.996,v=(x=0.23,z=1))" Reflectiveness="0" EmissiveLighting="200" Speed="25,EmitterStrength=(v=0.19,flags=32;t=1,v=1,flags=4)" Drag="0.1" Size="5,EmitterStrength=(v=0.137,flags=32;t=1,v=1,flags=4),ParticleAge=(v=1;t=1)" AllocSize="2002" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Dissolve.target_dissolve">
+    <Params Enabled="false" Inheritance="System" Count="10,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" EmissionSize="x=1,y=1,z=1" EmissionDistribution="1" EmitOffsetDir="true" EmissionScaling="true" VelDirFromShape="true" />
+    <Childs>
+      <Particles Name="debug_target_dissolve">
+        <Params Inheritance="System" Count="20,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" Continuous="false" ParticleLifeTime="3" EmissionSize="x=1,y=1,z=1" EmissionRoundness="1" EmitOffsetDir="true" EmissionScaling="true" VelDirFromShape="true" EmissiveLighting="200" Speed="10" Drag="0.5" VectorField="true,StrengthMultiplier=(ParticleAge=(v=1;t=0.35,v=0.204;t=1)),ReadOutsideField=true" OrientToVelocity="true" SDFc="true" ColliderElevationDist="0.5" Behaviour="Kill" AllocSize="20" />
+      </Particles>
+    </Childs>
+  </Particles>
+  <Particles Name="Dissolve.source_dissolve_field">
+    <Params Enabled="false" Inheritance="System" ParticleSystem="RParticleGPU" Texture="textures/vfx/glows/glow_rays_3x3_diff.tif" TextureAnimation="NumFramesU=3,NumFramesV=3" />
+    <Childs>
+      <Particles Name="debug_source_dissolve_field">
+        <Params Comment="Z-Up" Inheritance="System" Count="20,ScaleWithEmissionSizeScale=true,MaximumCountScale=100" ParticleSystem="RParticleGPU" EmissionSize="x=1,y=1,z=1" EmissionScaling="true" EmissionRotation="z=90" BlendType="Additive" Texture="textures/vfx/glows/glow_rays_3x3_diff.tif" TextureAnimation="NumFramesU=3,NumFramesV=3,FrameBlend=true" RandomFlipU="true" RandomFlipV="true" SoftParticleV2="true,FadeThickness=0.5,DepthOffset=0.25" Alpha="0.2" Color="(x=0.24620135,y=0)" EmissiveLighting="50" Speed="0" Drag="100" Size="40,EmitterStrength=(v=0.1,flags=32;t=1,v=1,flags=4)" InitAngles="y=90" Facing="CameraX" OrientToInitialVelocity="true" AllocSize="20" />
+      </Particles>
+    </Childs>
+  </Particles>
+</ParticleLibrary>

@@ -7,7 +7,7 @@
       </ModelTag>
       <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
         <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
-          <Geometry path="Objects/Spaceships/Ships/ANVL/Carrack/Interior/Captains_Dorm/crk_captains_dorm_Seat.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Geometry path="Objects/Spaceships/Ships/ANVL/Carrack/Interior/Captains_Dorm/crk_captains_dorm_Seat.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
           <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
           <SimulationGeometry>
           </SimulationGeometry>
@@ -68,7 +68,7 @@
           </SSharedInteractionParams>
         </SharedInteractions>
         <InteractionPoints>
-          <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_enter" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+          <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_enter" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
             <Tags />
             <HighlightBehaviors />
             <AdditionalCollisionBones />
@@ -366,5 +366,88 @@
         </specializedDataEntry>
       </specializedData>
     </SActorUsableParams>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks>
+        <SSequencerSkeletonAnimationTaskParams animationName="extend" layerId="1" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+      </AnimationTasks>
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="activity" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="inactive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Sitting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+                <SStateAutoChange NextState="StateTypes.SInteractionStateType.States[2]" Delay="3" __type="SStateAutoChange" />
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Seated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes.SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SSequencerDefSequenceParams name="Sitting" interaction="Interactable.SharedInteractions[0]" __type="SSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
   </Components>
 </EntityClassDefinition.Seat_Chair_Carrack_Captains>

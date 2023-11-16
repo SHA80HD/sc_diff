@@ -423,6 +423,16 @@
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="iae2023" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/fps_weapons/weapons_v7/gmni/rifle/s71/brfl_fps_gmni_s71.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="840dca88-c387-4809-910e-743e382be433" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
         </SubGeometry>
       </Geometry>
       <Material Tags="" __type="SMaterialNodeParams">
@@ -1008,6 +1018,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1020,8 +1035,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1045,6 +1068,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1057,8 +1085,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1082,6 +1118,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1094,8 +1135,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1119,6 +1168,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1131,8 +1185,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1156,6 +1218,11 @@
               <maxMultiplier x="1" y="1" __type="Vec2" />
               <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
               <shotKickMultiplier x="1" y="1" __type="Vec2" />
+              <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+              </curveRecoil>
             </aimRecoilModifier>
             <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
               <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1168,8 +1235,16 @@
                 <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                 <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
               </rotationModifiers>
-              <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-              <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+              <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </positionDecayModifiers>
+              <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+              </rotationDecayModifiers>
             </curveRecoil>
             <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
               <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1215,6 +1290,11 @@
                     <maxMultiplier x="1" y="1" __type="Vec2" />
                     <shotKickFirstMultiplier x="1" y="1" __type="Vec2" />
                     <shotKickMultiplier x="1" y="1" __type="Vec2" />
+                    <curveRecoil yawMaxDegreesModifier="1" pitchMaxDegreesModifier="1" rollMaxDegreesModifier="1" maxFireTimeModifier="1" recoilSmoothTimeModifier="1" decayStartTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralAimRecoilCurveModifiersDef">
+                      <minLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                      <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
+                      <noiseCurvesModifier yawNoiseMaxValueModifier="1" pitchNoiseMaxValueModifier="1" rollNoiseMaxValueModifier="1" __type="SActorProceduralAimRecoilCurveNoiseModifiersDef" />
+                    </curveRecoil>
                   </aimRecoilModifier>
                   <curveRecoil recoilTimeModifier="1" minDecayTimeModifier="1" maxDecayTimeModifier="1" __type="SActorProceduralHandsRecoilCurveModifiersDef">
                     <positionModifiers xMaxValueModifier="1" yMaxValueModifier="1" zMaxValueModifier="1" __type="SXYZCurvesWithMaxValuesModifer">
@@ -1227,8 +1307,16 @@
                       <maxLimitsModifier x="1" y="1" z="1" __type="Vec3" />
                       <noiseModifier xNoiseModifier="1" yNoiseModifier="1" zNoiseModifier="1" __type="SHandsRecoilCurveNoiseModifer" />
                     </rotationModifiers>
-                    <positionDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
-                    <rotationDecayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                    <positionDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                      <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                      <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                      <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+                    </positionDecayModifiers>
+                    <rotationDecayModifiers __type="SActorProceduralHandsRecoilCurveDecayModifiersDef">
+                      <decayTimeMultiplierModifier x="1" y="1" z="1" __type="Vec3" />
+                      <decayMaxValueModifier x="1" y="1" z="1" __type="Vec3" />
+                      <decayMinScalingFactorModifier x="1" y="1" z="1" __type="Vec3" />
+                    </rotationDecayModifiers>
                   </curveRecoil>
                   <curveRecoilHead headRecoilTimeModifier="1" frequencyModifier="1" smoothingSpeedModifier="1" __type="SWeaponProceduralHeadRecoilCurveModifierDef">
                     <positionModifier __type="SHeadRecoilNoiseModifier">
@@ -1395,25 +1483,25 @@
           </WearRange>
           <InventoryItems />
           <entries>
-            <SItemPortLoadoutEntryParams itemPortName="magazine_attach" entityClassName="gmni_rifle_ballistic_01_mag" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="magazine_attach" entityClassName="gmni_rifle_ballistic_01_mag" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="optics_attach" entityClassName="gmni_optics_tsco_x4_s2" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="optics_attach" entityClassName="gmni_optics_tsco_x4_s2" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="barrel_attach" entityClassName="" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="barrel_attach" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="underbarrel_attach" entityClassName="" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="underbarrel_attach" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>

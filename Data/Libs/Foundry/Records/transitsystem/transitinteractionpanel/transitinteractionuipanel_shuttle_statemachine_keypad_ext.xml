@@ -111,7 +111,7 @@
     <TransitPeripheralParams __type="DataForgeComponentParams" __polymorphicType="TransitPeripheralParams" />
     <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
       <StateTypes>
-        <SInteractionStateType StateTypeName="ActivationStateMachine" bindingsMethod="States" DefaultState="StateTypes[0].SInteractionStateType.States[2]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+        <SInteractionStateType StateTypeName="ActivationStateMachine" bindingsMethod="States" DefaultState="StateTypes[0].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
             <SInteractionState StateName="NeedsReboot" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
@@ -120,7 +120,7 @@
               <StateAutoChange>
               </StateAutoChange>
               <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -572,18 +572,6 @@
         <specializedDataEntry />
       </specializedData>
     </SActorUsableParams>
-    <SCInteractionStateGameplayTriggerComponentParams __type="DataForgeComponentParams" __polymorphicType="SCInteractionStateGameplayTriggerComponentParams">
-      <onInteractionStateChangeTriggers>
-        <SOnInteractionStateChangeTriggers targetState="StateTypes[1].SInteractionStateType.States[4]" __type="SOnInteractionStateChangeTriggers">
-          <gameplayTriggers>
-            <SResetKeypadInputGameplayTrigger __type="SBaseInteractionGameplayTrigger" __polymorphicType="SResetKeypadInputGameplayTrigger" />
-            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[1].SInteractionStateType.States[1]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
-          </gameplayTriggers>
-        </SOnInteractionStateChangeTriggers>
-      </onInteractionStateChangeTriggers>
-      <onInteractionSuccessTriggers />
-      <onInteractionFailedTriggers />
-    </SCInteractionStateGameplayTriggerComponentParams>
     <KeypadParams codeLength="4" repeatKey="1" repeatKeyInCode="1" randomCode="1" attemptsUntilCodeReset="-1" resetCodeOnSuccess="0" autoSuccessOnEnterKey="0" autoFailOnInputLength="0" __type="DataForgeComponentParams" __polymorphicType="KeypadParams">
       <validCodes />
       <interactionSetup>
@@ -615,5 +603,17 @@
         </SecurityNetworkVariableEffects>
       </variableEffects>
     </SecurityNetworkMemberComponentParams>
+    <SCInteractionStateGameplayTriggerComponentParams __type="DataForgeComponentParams" __polymorphicType="SCInteractionStateGameplayTriggerComponentParams">
+      <onInteractionStateChangeTriggers>
+        <SOnInteractionStateChangeTriggers targetState="StateTypes[1].SInteractionStateType.States[4]" __type="SOnInteractionStateChangeTriggers">
+          <gameplayTriggers>
+            <SResetKeypadInputGameplayTrigger __type="SBaseInteractionGameplayTrigger" __polymorphicType="SResetKeypadInputGameplayTrigger" />
+            <SChangeInteractionStateGameplayTrigger targetState="StateTypes[1].SInteractionStateType.States[1]" __type="SBaseInteractionGameplayTrigger" __polymorphicType="SChangeInteractionStateGameplayTrigger" />
+          </gameplayTriggers>
+        </SOnInteractionStateChangeTriggers>
+      </onInteractionStateChangeTriggers>
+      <onInteractionSuccessTriggers />
+      <onInteractionFailedTriggers />
+    </SCInteractionStateGameplayTriggerComponentParams>
   </Components>
 </EntityClassDefinition.TransitInteractionUIPanel_Shuttle_Statemachine_Keypad_Ext>

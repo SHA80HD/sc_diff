@@ -48,9 +48,10 @@
         </IndividualPortRefillData>
       </portRefillData>
       <prerequisite>
+        <SpawnerPrerequisite_InteractionState state="StateTypes.SInteractionStateType.States[0]" __type="BaseSpawnerPrerequisite" __polymorphicType="SpawnerPrerequisite_InteractionState" />
       </prerequisite>
       <entitiesToSpawn>
-        <SSpawnEntity entity="36822ee4-6af9-4831-aa34-bd9357d70959" attachToItemPort="0" itemPortName="$slot_1" vehicleSpawnFlightReady="0" vehicleSpawnDeployLandingGears="0" infiniteMissiles="1" triggerAreas="0" __type="SSpawnEntity">
+        <SSpawnEntity entity="36822ee4-6af9-4831-aa34-bd9357d70959" attachToItemPort="0" itemPortName="$slot_1" vehicleSpawnFlightReady="0" vehicleSpawnDeployLandingGears="0" infiniteMissiles="1" triggerAreas="1" __type="SSpawnEntity">
           <spawnOffset x="0" y="0" z="0" __type="Vec3" />
         </SSpawnEntity>
       </entitiesToSpawn>
@@ -101,5 +102,79 @@
       <InternalResourceLinks />
       <InternalHardpointLinks />
     </SItemPortContainerComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions />
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="RespawnState" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="RespawnEnabled" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="RespawnDisabled" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SecurityNetworkMemberComponentParams hostilityRulesTag="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SecurityNetworkMemberComponentParams">
+      <variableEffects>
+        <SecurityNetworkVariableEffects __type="SecurityNetworkVariableEffects">
+          <variableValue tag="6c295146-495e-4896-b739-b000901660e6" __type="SecurityNetworkVariable">
+            <value>
+              <SecurityNetworkVariableValue_Bool value="0" __type="SecurityNetworkVariableValue_Base" __polymorphicType="SecurityNetworkVariableValue_Bool" />
+            </value>
+          </variableValue>
+          <effects>
+            <SecurityNetworkVariableEffect_SetInteractionState state="StateTypes.SInteractionStateType.States[1]" __type="SecurityNetworkVariableEffect_Base" __polymorphicType="SecurityNetworkVariableEffect_SetInteractionState" />
+          </effects>
+        </SecurityNetworkVariableEffects>
+        <SecurityNetworkVariableEffects __type="SecurityNetworkVariableEffects">
+          <variableValue tag="6c295146-495e-4896-b739-b000901660e6" __type="SecurityNetworkVariable">
+            <value>
+              <SecurityNetworkVariableValue_Bool value="1" __type="SecurityNetworkVariableValue_Base" __polymorphicType="SecurityNetworkVariableValue_Bool" />
+            </value>
+          </variableValue>
+          <effects>
+            <SecurityNetworkVariableEffect_SetInteractionState state="StateTypes.SInteractionStateType.States[0]" __type="SecurityNetworkVariableEffect_Base" __polymorphicType="SecurityNetworkVariableEffect_SetInteractionState" />
+          </effects>
+        </SecurityNetworkVariableEffects>
+      </variableEffects>
+    </SecurityNetworkMemberComponentParams>
   </Components>
 </EntityClassDefinition.InvisibleItemPort_S5_Turret_Missile_PSec_NoRespawn>

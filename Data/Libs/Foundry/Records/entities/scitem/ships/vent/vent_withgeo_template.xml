@@ -1,0 +1,225 @@
+<EntityClassDefinition.VENT_withGeo_template Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="ede5998f-3a6b-4cdd-ab50-245543243c34" __path="libs/foundry/records/entities/scitem/ships/vent/vent_withgeo_template.xml">
+  <tags />
+  <StaticEntityClassData>
+    <SResourceNetworItemType resourceNetworkItemType="Vent" __type="EntityClassStaticDataParams" __polymorphicType="SResourceNetworItemType" />
+  </StaticEntityClassData>
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="LifeSupportVent" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SCentiCargoUnit centiSCU="1" __type="SBaseCargoUnit" __polymorphicType="SCentiCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="100" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <ItemResourceComponentParams isResourceNetworked="1" isRelay="0" isConnectedToRoom="1" wirelessConnection="0" defaultPriority="9" __type="DataForgeComponentParams" __polymorphicType="ItemResourceComponentParams">
+      <states>
+        <ItemResourceState name="Scrub" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaConversion minimumConsumptionFraction="0" useRoomComposition="1" noOverGeneration="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaConversion">
+              <consumption resource="Gas" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="2" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <generation resource="Gas" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="2" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </generation>
+              <generatedComposition __type="ItemResourceComposition">
+                <values />
+              </generatedComposition>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values>
+                  <ItemResourceCompositionValue containerResource="00000000-0000-0000-0000-000000000000" ratio="0.25" __type="ItemResourceCompositionValue" />
+                  <ItemResourceCompositionValue containerResource="00000000-0000-0000-0000-000000000000" ratio="0.75" __type="ItemResourceCompositionValue" />
+                </values>
+              </consumptionComposition>
+              <dynamicConversionModifier>
+              </dynamicConversionModifier>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+            </ItemResourceDeltaConversion>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+        <ItemResourceState name="Vent" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaGeneration useRoomComposition="1" noOverGeneration="1" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaGeneration">
+              <generation resource="Gas" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="1" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </generation>
+              <composition __type="ItemResourceComposition">
+                <values />
+              </composition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+              <dynamicCompositionOverride>
+              </dynamicCompositionOverride>
+            </ItemResourceDeltaGeneration>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+        <ItemResourceState name="Fill" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaConsumption minimumConsumptionFraction="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaConsumption">
+              <consumption resource="Gas" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="1" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values>
+                  <ItemResourceCompositionValue containerResource="00000000-0000-0000-0000-000000000000" ratio="0.25" __type="ItemResourceCompositionValue" />
+                  <ItemResourceCompositionValue containerResource="00000000-0000-0000-0000-000000000000" ratio="0.75" __type="ItemResourceCompositionValue" />
+                </values>
+              </consumptionComposition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+            </ItemResourceDeltaConsumption>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+        <ItemResourceState name="Heat" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaConsumption minimumConsumptionFraction="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaConsumption">
+              <consumption resource="Power" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="1" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values />
+              </consumptionComposition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+            </ItemResourceDeltaConsumption>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+        <ItemResourceState name="Cool" __type="ItemResourceState">
+          <deltas>
+            <ItemResourceDeltaConsumption minimumConsumptionFraction="0" __type="ItemResourceDeltaBase" __polymorphicType="ItemResourceDeltaConsumption">
+              <consumption resource="Cold" __type="ItemResourceDeltaAmount">
+                <resourceAmountPerSecond>
+                  <SStandardResourceUnit standardResourceUnits="1" __type="SBaseResourceUnit" __polymorphicType="SStandardResourceUnit" />
+                </resourceAmountPerSecond>
+              </consumption>
+              <consumptionComposition __type="ItemResourceComposition">
+                <values />
+              </consumptionComposition>
+              <dynamicAmountOverride>
+              </dynamicAmountOverride>
+            </ItemResourceDeltaConsumption>
+          </deltas>
+          <linkedInteractionStates />
+        </ItemResourceState>
+        <ItemResourceState name="Neutral" __type="ItemResourceState">
+          <deltas />
+          <linkedInteractionStates />
+        </ItemResourceState>
+      </states>
+      <controlParameters>
+        <ItemResourceControlParameterUIParameter name="PressurePriority" limitMin="0" limitMax="1" initValue="0.33" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterUIParameter name="TemperaturePriority" limitMin="0" limitMax="1" initValue="0.33" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterUIParameter name="ScrubbingPriority" limitMin="0" limitMax="1" initValue="0.33" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterUIParameter name="PressureExpectedVal" limitMin="0" limitMax="2" initValue="1" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterUIParameter name="TemperatureExpectedVal" limitMin="250" limitMax="300" initValue="294" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterUIParameter name="ScrubbingExpectedVal" limitMin="0" limitMax="5" initValue="0.1" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterUIParameter" />
+        <ItemResourceControlParameterRNParameter parameter="Pressure" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterRNParameter" />
+        <ItemResourceControlParameterRNParameter parameter="Temperature" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterRNParameter" />
+        <ItemResourceControlParameterRNParameter parameter="CarbonDioxide" __type="ItemResourceControlParameterBase" __polymorphicType="ItemResourceControlParameterRNParameter" />
+      </controlParameters>
+      <controlBlocks>
+        <ItemResourceControlBlock name="main" startState="states[2]" __type="ItemResourceControlBlock">
+          <controlOutputs />
+          <controlConditions>
+            <ItemResourceControlConditionLifeSupport heatingState="states[3]" coolingState="states[4]" pressurisingState="states[2]" ventingState="states[1]" scrubbingState="states[0]" neutralState="states[5]" pressurePriority="controlParameters[0]" temperaturePriority="controlParameters[1]" scrubbingPriority="controlParameters[2]" pressureExpected="controlParameters[3]" temperatureExpected="controlParameters[4]" scrubbingRatioExpected="null" pressureCurrent="controlParameters[0]" temperatureCurrent="controlParameters[1]" scrubbingRatioCurrent="null" consistency="0" deviationTemperature="0.3" deviationPressure="0.1" deviationScrubbingRatio="0.001" __type="ItemResourceControlConditionBase" __polymorphicType="ItemResourceControlConditionLifeSupport" />
+          </controlConditions>
+          <linkedInteractionStatesReceive />
+        </ItemResourceControlBlock>
+        <ItemResourceControlBlock name="vent" startState="states[1]" __type="ItemResourceControlBlock">
+          <controlOutputs>
+            <ItemResourceControlOutputState outputState="states[5]" __type="ItemResourceControlOutputBase" __polymorphicType="ItemResourceControlOutputState" />
+          </controlOutputs>
+          <controlConditions>
+            <ItemResourceControlConditionLimit controlOutput="controlBlocks[1].ItemResourceControlBlock.controlOutputs" controlParameter="controlParameters[0]" limitMax="10" limitMin="0.01" __type="ItemResourceControlConditionBase" __polymorphicType="ItemResourceControlConditionLimit" />
+          </controlConditions>
+          <linkedInteractionStatesReceive />
+        </ItemResourceControlBlock>
+        <ItemResourceControlBlock name="fill" startState="states[2]" __type="ItemResourceControlBlock">
+          <controlOutputs>
+            <ItemResourceControlOutputControlBlock outputControlBlock="controlBlocks[0]" __type="ItemResourceControlOutputBase" __polymorphicType="ItemResourceControlOutputControlBlock" />
+          </controlOutputs>
+          <controlConditions>
+            <ItemResourceControlConditionLimitParameter controlOutput="controlBlocks[2].ItemResourceControlBlock.controlOutputs" controlParameter="controlParameters[0]" limitParameter="controlParameters[3]" min="0" __type="ItemResourceControlConditionBase" __polymorphicType="ItemResourceControlConditionLimitParameter" />
+          </controlConditions>
+          <linkedInteractionStatesReceive />
+        </ItemResourceControlBlock>
+      </controlBlocks>
+      <signatureParams nominalEM="0" decayRate="0.15" __type="ItemResourceSignatureParams" />
+    </ItemResourceComponentParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports />
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+    <ItemControlComponentParams turnedOnByDefault="1" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="objects/buildingsets/human/lowtech/prop/storage/tank/tank_gas_1_005x005x005_b.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry />
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+  </Components>
+</EntityClassDefinition.VENT_withGeo_template>
