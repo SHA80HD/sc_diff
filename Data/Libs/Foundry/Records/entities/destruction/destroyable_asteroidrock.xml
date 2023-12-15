@@ -1,0 +1,184 @@
+<EntityClassDefinition.Destroyable_AsteroidRock Category="Destruction" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="edb7833d-5359-4f9c-973f-d9400b33844e" __path="libs/foundry/records/entities/destruction/destroyable_asteroidrock.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="12" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/default/primitive_sphere.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="Materials/dev/red_wall_a1.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry>
+          <SGeometryNodeParams Tags="Destroyed" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+        </SubGeometry>
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SHealthComponentParams Health="1000" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="0" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="1" DestroyedGeometryTag="Destroyed" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="0" IsRepairable="0" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates>
+        <HealthDamageState geometryTag="Destroyed" effectTrigger="e9f7b15d-ce42-4887-8550-803f73c28fd1" effectTag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="HealthDamageState" />
+      </HealthLevelStates>
+      <DeathExplosionParams>
+        <ExplosionParams friendlyFire="None" minRadius="20" maxRadius="100" soundRadius="50" minPhysRadius="50" maxPhysRadius="100" angle="0" angleVertical="0" pressure="200" holeSize="0" terrainHoleSize="3" maxblurdist="10" effectScale="2" useRandomScale="0" effectScaleMin="1" effectScaleMax="1" hitType="explosion" customMaterialEffect="" particleStrength="-1" radarContactType="00000000-0000-0000-0000-000000000000" __type="ExplosionParams">
+          <explosionFront x="0" y="0" z="0" __type="Vec3" />
+          <explosionUp x="0" y="0" z="1" __type="Vec3" />
+          <damage>
+            <DamageInfo DamagePhysical="0" DamageEnergy="0" DamageDistortion="0" DamageThermal="0" DamageBiochemical="0" DamageStun="0" __type="DamageBase" __polymorphicType="DamageInfo" />
+          </damage>
+          <flashbangParams>
+          </flashbangParams>
+          <shockwaveParams>
+            <ShockwaveParams primitiveType="Sphere" halfHeight="50" detonationSpeed="500" peakPressure="-1" duration="1" durationScale="1.15" density="1" resistance="1" __type="ShockwaveParams">
+              <axis x="0" y="0" z="1" __type="Vec3" />
+            </ShockwaveParams>
+          </shockwaveParams>
+          <effect path="Environments\Generic\Generic_Explosions.LT_EXPLOSIONS.lt_explosion_single_16m3_once_1" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          <failedEffect path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+          <sound audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <failedSound audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <materialEffectEntry>
+          </materialEffectEntry>
+          <Offset x="0" y="0" z="0" __type="Vec3" />
+          <Direction x="0" y="0" z="1" __type="Vec3" />
+        </ExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="0" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="0" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+    </SEntityPhysicsControllerParams>
+    <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
+      <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
+        <particleEffects>
+          <SEntityEffectSystem_ParticleCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_ParticleCategory">
+            <tagEffects />
+            <triggerEffects />
+          </SEntityEffectSystem_ParticleCategory>
+        </particleEffects>
+        <materialEffects>
+        </materialEffects>
+        <soundEffects>
+          <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
+            <tagEffects />
+            <triggerEffects>
+              <SEntityEffectSystem_SoundTriggerEffect name="OnDestroyed" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="e9f7b15d-ce42-4887-8550-803f73c28fd1" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+            </triggerEffects>
+          </SEntityEffectSystem_SoundCategory>
+        </soundEffects>
+        <audioEnvironmentEffects>
+        </audioEnvironmentEffects>
+        <lightEffects>
+        </lightEffects>
+        <uiOwnerEffects>
+        </uiOwnerEffects>
+        <sequencerTags />
+      </entityEffects>
+      <staticValues />
+      <staticColors />
+      <tagsToEnableOnLoad />
+      <triggersToEnableOnLoad />
+    </SEntityComponentEffects>
+    <BreakableComponentParams forceEntities="0" networkSynced="0" explodeImpulse="0" impulseRelativeToScale="0" particleLifetime="10" pieceSpawnPlanetCheckRadius="0.25" numPiecesOverride="0" __type="DataForgeComponentParams" __polymorphicType="BreakableComponentParams">
+      <entityClassOverride>
+      </entityClassOverride>
+    </BreakableComponentParams>
+    <AITargetableComponentParams targetableSettings="c2966440-e8ea-4c57-81a0-3ae37280be13" __type="DataForgeComponentParams" __polymorphicType="AITargetableComponentParams">
+      <formations />
+    </AITargetableComponentParams>
+    <SSCSignatureSystemParams bindingURLPrefix="" scanCustomData="00000000-0000-0000-0000-000000000000" scanDisplayLayoutOverride="00000000-0000-0000-0000-000000000000" isOverridden="0" enableDetectionOnItemPort="0" __type="DataForgeComponentParams" __polymorphicType="SSCSignatureSystemParams">
+      <radarProperties>
+        <SSCRadarContactProperites contactType="197080ef-ca4d-49d2-9d00-58baa1cd56dd" __type="SSCRadarContactProperites">
+          <baseSignatureParams>
+            <SSCSignatureSystemBaseSignatureParams __type="SSCSignatureParamsBase" __polymorphicType="SSCSignatureSystemBaseSignatureParams">
+              <signatures>
+                <Single value="20000" />
+                <Single value="20000" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+              </signatures>
+              <taggedSignatures />
+            </SSCSignatureSystemBaseSignatureParams>
+          </baseSignatureParams>
+          <crossSectionParams>
+          </crossSectionParams>
+          <emissionModifierParams>
+          </emissionModifierParams>
+          <scanBounds>
+          </scanBounds>
+        </SSCRadarContactProperites>
+      </radarProperties>
+      <audioParams>
+      </audioParams>
+      <embeddedScanInfo>
+      </embeddedScanInfo>
+      <detectionTags />
+      <overriddenSize x="0" y="0" z="0" __type="Vec3" />
+    </SSCSignatureSystemParams>
+    <SEntityComponentHostilityParams faction="613d6726-1ec2-476c-9691-281db3b90797" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentHostilityParams">
+      <wantedLevelHostility>
+      </wantedLevelHostility>
+    </SEntityComponentHostilityParams>
+  </Components>
+</EntityClassDefinition.Destroyable_AsteroidRock>

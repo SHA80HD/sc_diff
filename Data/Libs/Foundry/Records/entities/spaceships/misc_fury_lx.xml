@@ -32,7 +32,7 @@
     <SEntityDynamicLocationProperties dynamicallyUpdatePersistanceLocation="1" __type="EntityClassStaticDataParams" __polymorphicType="SEntityDynamicLocationProperties" />
   </StaticEntityClassData>
   <Components>
-    <VehicleComponentParams landingSystem="7e040c95-e942-4d89-ac6f-ec9d0723f1c4" manufacturer="cdf6ea1e-7de3-4b58-bf9d-13c5fbafc49a" vehicleDefinition="Scripts/Entities/Vehicles/Implementations/Xml/MISC_Fury_LX.xml" modification="" allowSoftDestruction="1" ignoreHostility="0" dogfightEnabled="1" unmoveable="0" isGravlevVehicle="0" vehicleHullDamageNormalizationValue="2500" incomingDamageModifierToAI="1" incomingVehicleDamageModifierFromAI="1" aiDamageModifiers="61d77aed-e544-4d87-b93d-727df588c282" emergencyStatusDamageThreshold="0.25" emergencyStatusChargeThreshold="0.8" crewSize="1" vehicleName="@vehicle_NameMisc_Fury_LX" vehicleDescription="@vehicle_DescMisc_Fury_LX" vehicleImagePath="" vehicleCareer="@item_ShipFocus_Racing" vehicleCareerRef="0f148cb8-74eb-45fa-bd77-82a756fa4b36" vehicleRole="@vehicle_class_racing" vehicleRoleRef="42c95b15-5e41-4c2d-a342-8df0aa82ae3b" DashboardCanvasConfig="00000000-0000-0000-0000-000000000000" inventoryContainerParams="04555ac1-dfc1-4181-b847-dcd62f5147da" __type="DataForgeComponentParams" __polymorphicType="VehicleComponentParams">
+    <VehicleComponentParams landingSystem="7e040c95-e942-4d89-ac6f-ec9d0723f1c4" manufacturer="cdf6ea1e-7de3-4b58-bf9d-13c5fbafc49a" vehicleDefinition="Scripts/Entities/Vehicles/Implementations/Xml/MISC_Fury_LX.xml" modification="" allowSoftDestruction="1" ignoreHostility="0" dogfightEnabled="1" unmoveable="0" isGravlevVehicle="0" vehicleHullDamageNormalizationValue="2500" incomingDamageModifierToAI="1" incomingVehicleDamageModifierFromAI="1" aiDamageModifiers="61d77aed-e544-4d87-b93d-727df588c282" emergencyStatusDamageThreshold="0.25" emergencyStatusChargeThreshold="0.8" crewSize="1" vehicleName="@vehicle_NameMisc_Fury_LX" vehicleDescription="@vehicle_DescMisc_Fury_LX" vehicleImagePath="" vehicleCareer="@vehicle_focus_competition" vehicleCareerRef="0f148cb8-74eb-45fa-bd77-82a756fa4b36" vehicleRole="@vehicle_class_racing" vehicleRoleRef="42c95b15-5e41-4c2d-a342-8df0aa82ae3b" DashboardCanvasConfig="00000000-0000-0000-0000-000000000000" inventoryContainerParams="04555ac1-dfc1-4181-b847-dcd62f5147da" __type="DataForgeComponentParams" __polymorphicType="VehicleComponentParams">
       <maxBoundingBoxSize x="5.4" y="7" z="3" __type="Vec3" />
       <cargoEntrySize x="0" y="0" __type="Vec2" />
       <aiProperties>
@@ -652,18 +652,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HighTech_Medium" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -740,6 +728,18 @@
               </SEntityEffectSystem_SoundTriggerEffect>
               <SEntityEffectSystem_SoundTriggerEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="0f2d05b6-856c-47f4-ae34-31cfa87b7102" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction_Exit" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HighTech_Medium" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
                     <offset __type="QuatT">
@@ -2117,6 +2117,16 @@
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_FuryLX_StellaFortuna2954_Green" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects/Spaceships/Ships/MISC/Fury/MISC_Fury_LX.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="8d6f8e71-3649-4440-8d15-5e1e920eba51" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
         </SubGeometry>
       </Geometry>
       <Material Tags="" __type="SMaterialNodeParams">
@@ -2859,7 +2869,7 @@
       <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="500" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
@@ -2869,7 +2879,7 @@
     </SCActorCollisionAvoidanceParams>
     <ShipStateMonitorComponentParams __type="DataForgeComponentParams" __polymorphicType="ShipStateMonitorComponentParams" />
     <EntranceDisplayComponentParams entrancesRecord="3e63d0d6-d6e8-451a-a2d9-3c58f1694fb1" __type="DataForgeComponentParams" __polymorphicType="EntranceDisplayComponentParams" />
-    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>

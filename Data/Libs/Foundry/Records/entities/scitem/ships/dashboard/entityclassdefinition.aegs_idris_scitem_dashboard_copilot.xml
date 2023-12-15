@@ -34,7 +34,16 @@
       <uiDescription>
         <SCItemSeatDashboardUIDesc markerConfig="00000000-0000-0000-0000-000000000000" playCommsOnLens="0" showTargetOnLens="0" __type="SCItemSeatDashboardUIDesc">
           <Screens>
-            <SCItemSeatDashboardScreen Name="Screen_Central_MFD" GeomName="screen_lower" MaterialOverride="" __type="SCItemSeatDashboardScreen">
+            <SCItemSeatDashboardScreen Name="Flight_HUD" GeomName="Screen_UI_HUD" MaterialOverride="" __type="SCItemSeatDashboardScreen">
+              <Style Template="" Type="HeadUpDisplay" __type="SCItemSeatDashboardScreenStyle" />
+              <Position Helper="" Scale="1" __type="SCItemSeatDashboardScreenPos">
+                <Offset __type="QuatT">
+                  <Rotation x="0" y="0" z="0" __type="Ang3" />
+                  <Position x="0" y="0" z="0" __type="Vec3" />
+                </Offset>
+              </Position>
+            </SCItemSeatDashboardScreen>
+            <SCItemSeatDashboardScreen Name="Screen_Central_MFD" GeomName="screen_main" MaterialOverride="" __type="SCItemSeatDashboardScreen">
               <Style Template="Background" Type="MFD_16_9" __type="SCItemSeatDashboardScreenStyle" />
               <Position Helper="" Scale="0.85" __type="SCItemSeatDashboardScreenPos">
                 <Offset __type="QuatT">
@@ -495,6 +504,70 @@
           <linkedItemPorts>
             <WeakPointer linkedItemPorts="0" />
           </linkedItemPorts>
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="Display_HUD" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="UI_Helper" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="-90" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="radar_helper" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="Display" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="UI_Helper" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
           <itemPortRules />
           <detachDirection x="0" y="0" z="-1" __type="Vec3" />
         </SItemPortDef>

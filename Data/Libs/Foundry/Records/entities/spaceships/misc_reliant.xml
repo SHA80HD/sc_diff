@@ -1017,18 +1017,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_Base_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -1115,6 +1103,18 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_Base_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
             </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
@@ -1191,7 +1191,7 @@
           </baseSignatureParams>
           <crossSectionParams>
             <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
-              <crossSection x="1400" y="10000" z="5000" __type="Vec3" />
+              <crossSection x="1601" y="11438" z="5719" __type="Vec3" />
             </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
@@ -2409,8 +2409,8 @@
       <mergedPaddingFrac x="0" y="0" z="2.35" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
-      <baseComponent totalScore="800" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+      <baseComponent totalScore="1000" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
     <SCActorCollisionAvoidanceParams passRadiusAgent="0.3" passRadiusObstacleMoving="0.75" passRadiusObstacleStatic="0.5" baseAgentAvoidanceRange="10" baseObstacleAvoidanceRange="20" baseNavmeshEdgeAvoidanceRange="7.5" velocityInfluenceMultiplier="1" timeHorizonScale="1" agentAvoidanceTimeHorizon="1" obstacleAvoidanceTimeHorizon="2" navmeshEdgeAvoidanceTimeHorizon="0.75" alwaysAnObstacle="0" __type="DataForgeComponentParams" __polymorphicType="SCActorCollisionAvoidanceParams">

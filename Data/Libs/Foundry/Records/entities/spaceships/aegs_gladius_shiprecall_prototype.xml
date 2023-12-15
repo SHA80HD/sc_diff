@@ -926,18 +926,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HiTech_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -1024,6 +1012,18 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HiTech_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
             </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
@@ -1100,7 +1100,7 @@
           </baseSignatureParams>
           <crossSectionParams>
             <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
-              <crossSection x="8000" y="2000" z="10000" __type="Vec3" />
+              <crossSection x="6923" y="1731" z="8654" __type="Vec3" />
             </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
@@ -2196,7 +2196,7 @@
       <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="2000" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
@@ -2206,7 +2206,7 @@
     </SCActorCollisionAvoidanceParams>
     <ShipStateMonitorComponentParams __type="DataForgeComponentParams" __polymorphicType="ShipStateMonitorComponentParams" />
     <EntranceDisplayComponentParams entrancesRecord="a30e696b-baf0-4390-bdf2-86ef4b31a5cd" __type="DataForgeComponentParams" __polymorphicType="EntranceDisplayComponentParams" />
-    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>
@@ -4445,7 +4445,7 @@
         </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="air_intake+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:airintake_dataport_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="3a8cf861-be4a-4d0a-a4f5-2b77eb9ddc48" name="" available="1" canPlayerUse="1" fragmentTag="air_intake+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:airintake_dataport_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4463,7 +4463,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="air_intake+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:airintake_dataport_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="12239aa5-5443-496d-bfe1-cd94270f8311" name="" available="1" canPlayerUse="1" fragmentTag="air_intake+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:airintake_dataport_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4481,7 +4481,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="engine+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:engine" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="88afddcb-3f24-48a1-8613-a69694f2abde" name="" available="1" canPlayerUse="1" fragmentTag="engine+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:engine" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4499,7 +4499,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="fin+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fin_front_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="95208b4d-eb1d-47b2-ac69-1f3d395db0bb" name="" available="1" canPlayerUse="1" fragmentTag="fin+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fin_front_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4517,7 +4517,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="fin+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:fin_front_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="3bb6b2ec-dbac-4112-8856-806ddc39d143" name="" available="1" canPlayerUse="1" fragmentTag="fin+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:fin_front_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4535,7 +4535,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="thruster+align_slot_01+front" slottedFragmentTag="" helperName="gladius_anchor:thruster_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="eba490b4-0fa5-4230-ba53-7468d060be4f" name="" available="1" canPlayerUse="1" fragmentTag="thruster+align_slot_01+front" slottedFragmentTag="" helperName="gladius_anchor:thruster_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4553,7 +4553,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="thruster+align_slot_02+front" slottedFragmentTag="" helperName="gladius_anchor:thruster_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="4489b77e-62f0-43db-8913-e6ccc66693e8" name="" available="1" canPlayerUse="1" fragmentTag="thruster+align_slot_02+front" slottedFragmentTag="" helperName="gladius_anchor:thruster_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4571,7 +4571,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="fuel_port+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fuel_port_maintenancepanel_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="f302b598-67cd-4279-a909-feeb240ddb71" name="" available="1" canPlayerUse="1" fragmentTag="fuel_port+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fuel_port_maintenancepanel_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4589,7 +4589,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:hull_left_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="cf00d8bc-86fe-482b-90b0-9edc8647a419" name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:hull_left_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4607,7 +4607,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:hull_right_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="3c6bd66f-dcf8-4617-b425-666db4c9c738" name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:hull_right_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4625,7 +4625,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_front_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="0086ea41-31f3-4453-94d6-134994202840" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_front_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4643,7 +4643,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_front_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="961b18ce-bd7a-47fa-8992-f3d05a4e6350" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_front_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4661,7 +4661,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="cf6151e7-86f9-4696-a752-cd6865c48d3a" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4679,7 +4679,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_04" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="76d7b95b-4b1e-47f1-8b47-8b06700c604c" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_04" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4697,7 +4697,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fuel_port_maintenancepanel_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="68a2161e-c85a-450b-bbd9-ce442a4b3730" name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:fuel_port_maintenancepanel_base_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4715,7 +4715,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:maintenancepanel_center_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="f75efff0-4ef2-4110-9827-0b02d8fb1e52" name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:maintenancepanel_center_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4733,7 +4733,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:maintenancepanel_left_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="53e0534e-2ad8-4c17-bdb2-874081f611e5" name="" available="1" canPlayerUse="1" fragmentTag="maintenance_panel+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:maintenancepanel_left_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4751,7 +4751,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backleft" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="8e71df81-c7e2-45d7-8db3-3668aa20e205" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backleft" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4769,7 +4769,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backmid" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="960c2af0-6913-4ab9-bfe3-208de21cb776" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backmid" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4787,7 +4787,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backright" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="9cab8271-e404-4415-aed2-370073b65aa5" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_backright" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4805,7 +4805,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_frontleft" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="84256f86-4de8-4eb8-b6dd-527ab6d5b5c8" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_frontleft" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4823,7 +4823,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_frontright" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="63a33c89-2e11-4f0d-82f3-9d74b8354e0b" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_frontright" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4841,7 +4841,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:rudder_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="9c52bb76-90f2-4795-b2b4-51a405159b93" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:rudder_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4859,7 +4859,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:rudder_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="87860cdb-52a2-41b9-802f-5f42aacb573c" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:rudder_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4877,7 +4877,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="tail_wing+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:tailwing_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="be70967c-82d9-4402-9b76-3e6e71b73996" name="" available="1" canPlayerUse="1" fragmentTag="tail_wing+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:tailwing_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4895,7 +4895,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="tail_wing+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:tailwing_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="da227c4e-f0ca-4d5b-b1f9-f9cc403c0116" name="" available="1" canPlayerUse="1" fragmentTag="tail_wing+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:tailwing_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4913,7 +4913,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_leftwing_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="30f033d9-0c75-475e-bf6e-7f9e899f7923" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_leftwing_dorsal" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4931,7 +4931,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:wingtip_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="b2e62902-a0b1-4665-bcbd-1e96ecb1c3bc" name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:wingtip_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4949,7 +4949,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:wingtip_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="77194720-8fea-49d6-b2a2-d850561d3f3c" name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:wingtip_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4967,7 +4967,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:missile_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="92d54e50-b832-499f-8666-2d4ab6912772" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:missile_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -4985,7 +4985,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:missile_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="183a8f39-3394-431d-b1db-4a2d4ac679a8" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:missile_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5003,7 +5003,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="fcf32496-5d00-4dd2-b01b-e8cc23ce2957" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_port_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5021,7 +5021,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="7e88adca-c3ec-4085-92c5-d753846fc562" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_starboard_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5039,7 +5039,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="f4f0ef10-aed6-4095-96e1-c3f0080b8006" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_01" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5057,7 +5057,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="b546c714-7163-44ba-9990-e2fe93bfdb7d" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5075,7 +5075,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_03" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="d9d508c3-bfff-46cb-a751-c94c06cd3e3d" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_03" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5093,7 +5093,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_04" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="e20f3225-7adc-4d31-9b76-20a64bd06edc" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:weapon_nose_04" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags>
             <Reference value="dbdc40cd-073a-41ea-954f-04ba4d0c83fe" />
@@ -5113,7 +5113,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:nose_starboard" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="ab6395c4-7a92-4d0e-ba09-d9ea8ef69e5d" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:nose_starboard" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5131,7 +5131,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:nose_port" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="063b5a3b-0ca6-4ef3-9eb3-b9a6fbfc31db" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:nose_port" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5149,7 +5149,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:tailwing_starboard_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="eb63b278-f0ce-4d74-903c-f09ac0ef41b4" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:tailwing_starboard_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5167,7 +5167,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:tailwing_port_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="2a8b7c30-bd23-48db-9b0d-7138f9048628" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:tailwing_port_02" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5185,7 +5185,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_dorsal_mid" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="bddb943c-2962-40e2-bdcb-587b019717a6" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_dorsal_mid" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5203,7 +5203,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_mid_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="b5d99ae5-3096-4106-bc85-69111bfb077a" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_mid_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5221,7 +5221,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_port_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="225c1d2e-1386-4146-839c-b6dcef5b6f6f" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_port_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5239,7 +5239,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_starboard_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="21097041-a5a6-41d9-812b-ef659ab93ef9" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:hull_rear_starboard_ventral" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5257,7 +5257,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_back_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="0024c26a-a182-402b-880a-5368116001f9" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_back_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5275,7 +5275,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_back_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="413b56de-34a3-4cfc-acd2-ee6276c4f8a6" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_back_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5293,7 +5293,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_thruster_main_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="53491261-5113-43a3-a3f7-e68b3f4b73e2" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_thruster_main_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5311,7 +5311,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_thruster_main_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="4ffc429d-7b93-4e26-a227-5162ff751954" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:distant_thruster_main_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5329,7 +5329,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:hull_left_base_ventral_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="cde98687-0209-47dc-ab30-b11880d124d2" name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:hull_left_base_ventral_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5347,7 +5347,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:hull_right_base_ventral_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="ef23d177-b8cc-44a0-8daf-13ed78e832bf" name="" available="1" canPlayerUse="1" fragmentTag="hull+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:hull_right_base_ventral_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5365,7 +5365,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="37f4f4f2-03b9-4390-aba6-7e93d7c509b7" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_03" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5383,7 +5383,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_04" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="54cc3a32-9564-4a06-ba8d-0f99cd10d6c3" name="" available="1" canPlayerUse="1" fragmentTag="landing_gear+align_slot_04" slottedFragmentTag="" helperName="gladius_anchor:landing_gear_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5401,7 +5401,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:wingtip_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="a763d715-8713-4d41-9bce-b9167a00181d" name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_01" slottedFragmentTag="" helperName="gladius_anchor:wingtip_left_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5419,7 +5419,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:wingtip_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="8d459607-ca72-4e34-b457-0cd969909b4e" name="" available="1" canPlayerUse="1" fragmentTag="wing_tip+align_slot_02" slottedFragmentTag="" helperName="gladius_anchor:wingtip_right_touch" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5437,7 +5437,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_retro_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="e8ef3b98-2767-48e6-b2fb-f737c0d72d1d" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_retro_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -5455,7 +5455,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_retro_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="1b898379-cac7-49d9-a882-af2cfb2ba506" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="gladius_anchor:thruster_retro_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">

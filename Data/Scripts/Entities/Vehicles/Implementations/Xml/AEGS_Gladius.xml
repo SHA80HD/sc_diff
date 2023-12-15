@@ -129,7 +129,7 @@
             </Connections>
           </ItemPort>
         </Part>
-        <Part name="Body" class="AnimatedJoint" damageMax="2500" detachRatio="1" detachBaseForce="0.0,-2.5,-1.8" detachRandomForce="0.0,1.5,0.8" detachRandomRotation="12.5, 11.2, -13.3" detachProbability="1" id="modPart_body">
+        <Part name="Body" class="AnimatedJoint" damageMax="2000" detachRatio="1" detachBaseForce="0.0,-2.5,-1.8" detachRandomForce="0.0,1.5,0.8" detachRandomRotation="12.5, 11.2, -13.3" detachProbability="1" id="modPart_body">
           <Effects>
             <DetachFx joint="Body" squibPhysical="40" squibEnergy="40" squibRadius=".5" pos_offset="2.67029e-007,5.55583,-1.28398" rot_offset="0.0,1.0,0.0" helperID="Body_SQUIB_.5m090" effect="" />
             <DetachFx joint="Body" squibPhysical="40" squibEnergy="40" squibRadius=".5" pos_offset="7.4625e-007,5.55592,1.01618" rot_offset="0.0,1.0,0.0" helperID="Body_SQUIB_.5m098" effect="" />
@@ -982,7 +982,7 @@
                 </ControllerDef>
               </ItemPort>
             </Part>
-            <Part name="Nose" class="AnimatedJoint" damageMax="2000" detachRatio="0" detachBaseForce="0.0,2.5,2.15" detachRandomForce="0.0,1.5,2.4" detachRandomRotation="-12.5, 11.2, 13.3" detachProbability="0" id="modPart_nose">
+            <Part name="Nose" class="AnimatedJoint" damageMax="2000" detachRatio="1" detachBaseForce="0.0,2.5,2.15" detachRandomForce="0.0,1.5,2.4" detachRandomRotation="-12.5, 11.2, 13.3" detachProbability="1" id="modPart_nose">
               <Effects>
                 <DetachFx joint="Nose" effect="Damage/LT_Damage/LT_Explode_FX.LT_Explode.lt_explode_2m_Fireless" pos_offset="0.71947,-2.69791,0.606574" rot_offset="0.758284,-0.382151,-0.528174" helperID="Nose_PFX_DebrisFX_lt_explode_2m_Fireless030" />
                 <DetachFx joint="Nose" effect="Damage/LT_Damage/LT_Explode_FX.LT_Explode.lt_explode_2m_Fireless" pos_offset="-1.19613,-2.69791,-0.652421" rot_offset="0.758284,-0.382151,-0.528174" helperID="Nose_PFX_DebrisFX_lt_explode_2m_Fireless031" />
@@ -995,6 +995,25 @@
                 <DetachFx joint="Nose" effect="Damage/Sparks_FX.Sparks_ALL.sparks_2m_loop_fixed" pos_offset="0.0490332,-2.94812,0.191758" rot_offset="0.0998808,-0.971839,0.213432" helperID="Nose_PFX_DebrisFX_sparks_2m_loop_fixed004" />
                 <DetachFx joint="Nose" effect="Damage/Sparks_FX.Sparks_ALL.sparks_2m_loop_fixed" pos_offset="-0.577882,-2.55643,0.231451" rot_offset="-0.219007,-0.910885,-0.34975" helperID="Nose_PFX_DebrisFX_sparks_2m_loop_fixed005" />
               </Effects>
+              <DamageBehaviors>
+                <DamageBehavior class="DetachPart" damageRatioMin="1">
+                  <DetachPart>
+                    <Part name="Rudder_Right" probability=".4" />
+                    <Part name="Rudder_Left" probability=".4" />
+                    <Part name="WingLeft_Tip" probability=".4" />
+                    <Part name="WingRight_Tip" probability=".4" />
+                    <Part name="WingLeft" probability=".7" />
+                    <Part name="WingRight" probability=".7" />
+                    <Part name="FrontWing_Left" probability=".4" />
+                    <Part name="FrontWing_Right" probability=".4" />
+                    <Part name="Nose" probability="1" />
+                    <Part name="Body" probability="1" />
+                  </DetachPart>
+                </DamageBehavior>
+                <DamageBehavior class="Group" damageRatioMin="1">
+                  <Group name="Destroy" />
+                </DamageBehavior>
+              </DamageBehaviors>
               <Parts>
                 <Part name="LadderBehindBottom" class="AnimatedJoint" />
                 <Part name="LadderBehindTop" class="AnimatedJoint" />

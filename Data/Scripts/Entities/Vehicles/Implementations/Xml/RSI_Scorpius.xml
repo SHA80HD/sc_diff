@@ -130,8 +130,6 @@
             </DamageBehavior>
           </DamageBehaviors>
           <Parts>
-            <Part name="Canopy_Front" class="AnimatedJoint" detachTag="EjectCanopy" damageMax="80" detachRatio="0" detachBaseForce="2,2,3" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
-            <Part name="Canopy_Rear" class="AnimatedJoint" detachTag="EjectCanopyCopilot" damageMax="80" detachRatio="0" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
             <Part name="Tail" class="AnimatedJoint" damageMax="6500" detachRatio="0" detachBaseForce="0,-4,-3" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="10,25,15" detachProbability="1" id="modPart_Tail">
               <Effects>
                 <DetachFx joint="Tail" squibPhysical="40" squibEnergy="40" squibRadius="1.5" pos_offset="-2.49859,2.26444,0.0793246" rot_offset="0.0,1.0,0.0" helperID="Tail_SQUIB_1.5m016" effect="" />
@@ -290,7 +288,7 @@
                     </Connections>
                   </ItemPort>
                 </Part>
-                <Part name="hardpoint_remote_turret_controller" class="ItemPort" requiredTags="RSI_Scorpius_Turret">
+                <Part name="hardpoint_remote_turret_controller" class="ItemPort" requiredTags="RSI_Scorpius_Turret" skipPart="0" id="modPart_Remote_Turret">
                   <ItemPort minSize="1" maxSize="1" flags="invisible uneditable" id="">
                     <Types>
                       <Type type="WeaponController" />
@@ -299,21 +297,19 @@
                       <Connection pipeClass="Power" pipe="MainPower" />
                       <Connection pipeClass="Heat" pipe="MainHeat" />
                     </Connections>
-                    <ControllerDef controllableTags="remote_turret">
+                    <ControllerDef controllableTags="remote_turret" id="modPart_turret_control_1">
                       <UsableDef>
                         <PriorityGroups>
                           <PriorityGroup itemType="Turret" defaultPriority="no_control">
-                            <tags tag="remote_turret">
-                              <Priority value="exclusive_control" />
+                            <tags tag="remote_turret" id="modPart_turret_control_2">
+                              <Priority value="exclusive_control" id="modPart_turret_control_4" />
                             </tags>
                           </PriorityGroup>
                           <PriorityGroup itemType="WeaponGun" defaultPriority="no_control">
-                            <tags tag="remote_turret">
-                              <Priority value="exclusive_control" />
+                            <tags tag="remote_turret" id="modPart_turret_control_3">
+                              <Priority value="exclusive_control" id="modPart_turret_control_5" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="" id="modPart_QuantumController1" />
-                          <PriorityGroup itemType="" id="modPart_QuantumController2" />
                         </PriorityGroups>
                       </UsableDef>
                     </ControllerDef>
@@ -464,6 +460,7 @@
                                 <Yaw min="-45" max="15" />
                               </ItemPort>
                             </Part>
+                            <Part name="contrail_001" class="ItemPort" />
                           </Parts>
                         </Part>
                       </Parts>
@@ -473,6 +470,7 @@
                         <DetachFx joint="Wing_Retractor_Top_Right" effect="Damage/LT_Damage/LT_Explode_FX.LT_Explode.lt_explode_50cm_once_fixed" pos_offset="0.207225,3.24973,0.0554955" rot_offset="-0.142348,-0.892357,0.428295" helperID="Wing_Retractor_Top_Right_PFX_DebrisFX_lt_explode_50cm_once_fixed_014" />
                       </Effects>
                     </Part>
+                    <Part name="$physics_proxy_Wing_Mechanism_Top_Right_31" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
                   </Parts>
                 </Part>
                 <Part name="Wing_Mechanism_Bottom_Right" class="AnimatedJoint" damageMax="3500" detachRatio="0" detachBaseForce="2.5,-1,1.5" detachRandomForce="0.0, 0.5, 0.5" detachRandomRotation="-10,25,0.3" detachProbability="1">
@@ -587,10 +585,12 @@
                                 <Yaw min="-45" max="15" />
                               </ItemPort>
                             </Part>
+                            <Part name="contrail_003" class="ItemPort" />
                           </Parts>
                         </Part>
                       </Parts>
                     </Part>
+                    <Part name="$physics_proxy_Wing_Mechanism_Bottom_Right_28" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
                   </Parts>
                 </Part>
                 <Part name="Wing_Mechanism_Bottom_Left" class="AnimatedJoint" damageMax="3500" detachRatio="0" detachBaseForce="2.5,-1,-1.5" detachRandomForce="0.0, 0.5, 0.5" detachRandomRotation="10,-25,0.3" detachProbability="1">
@@ -705,10 +705,12 @@
                                 <Yaw min="-45" max="15" />
                               </ItemPort>
                             </Part>
+                            <Part name="contrail_002" class="ItemPort" />
                           </Parts>
                         </Part>
                       </Parts>
                     </Part>
+                    <Part name="$physics_proxy_Wing_Mechanism_Bottom_Left_28" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
                   </Parts>
                 </Part>
                 <Part name="Wing_Mechanism_Top_Left" class="AnimatedJoint" damageMax="3500" detachRatio="1" detachBaseForce="-2.5,-1,1.5" detachRandomForce="0.0, 0.5, 0.5" detachRandomRotation="10,-25,0.3" detachProbability="1">
@@ -825,10 +827,12 @@
                                 <Yaw min="-45" max="15" />
                               </ItemPort>
                             </Part>
+                            <Part name="contrail_004" class="ItemPort" />
                           </Parts>
                         </Part>
                       </Parts>
                     </Part>
+                    <Part name="$physics_proxy_Wing_Mechanism_Top_Left_30" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
                   </Parts>
                 </Part>
                 <Part name="hardpoint_powerplant_right" class="ItemPort">
@@ -973,8 +977,78 @@
                         <ControllerDef controllableTags="remote_turret" />
                       </ItemPort>
                     </Part>
+                    <Part name="_PFX_DebrisFX_lt_explode_10cm_once_fixed_004" class="ItemPort" />
                   </Parts>
                 </Part>
+                <Part name="hardpoint_turret_missile_camera" class="ItemPort" skipPart="1" id="modPart_missile_camera">
+                  <ItemPort minSize="4" maxSize="4" flags="$uneditable" requiredTags="RSI_Scorpius" portTags="RSI_Scorpius" display_name="port_NameTurret02">
+                    <Types>
+                      <Type type="Turret" subtypes="GunTurret" />
+                    </Types>
+                    <Connections>
+                      <Connection pipeClass="Power" pipe="MainPower" />
+                      <Connection pipeClass="Heat" pipe="MainHeat" />
+                      <Connection pipeClass="WeaponRegen" pipe="WeaponRegenTurret" />
+                      <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadTurret" />
+                    </Connections>
+                    <ControllerDef controllableTags="remote_turret" />
+                  </ItemPort>
+                </Part>
+                <Part name="hardpoint_controller_turret_missile_weapon" class="ItemPort" skipPart="1" id="modPart_QuantumController">
+                  <ItemPort minsize="1" maxsize="1" flags="invisible uneditable">
+                    <Types>
+                      <Type type="WeaponController" />
+                    </Types>
+                    <Connections>
+                      <Connection pipeClass="Power" pipe="MainPower" />
+                      <Connection pipeClass="Heat" pipe="MainHeat" />
+                    </Connections>
+                    <ControllerDef controllableTags="remote_turret2" id="modPart_missile_control_1">
+                      <UsableDef>
+                        <PriorityGroups>
+                          <PriorityGroup itemType="Turret" defaultPriority="no_control" id="modPart_missile_control_2">
+                            <tags tag="remote_turret2" id="modPart_missile_control_3">
+                              <Priority value="no_control" id="modPart_missile_control_4" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="EMP" />
+                          <PriorityGroup itemType="QuantumInterdictionGenerator" />
+                          <PriorityGroup itemType="WeaponGun" defaultPriority="no_control">
+                            <tags tag="remote_turret2" id="modPart_missile_control_5">
+                              <Priority value="no_control" id="modPart_missile_control_6" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="WeaponDefensive" defaultPriority="no_control" />
+                        </PriorityGroups>
+                      </UsableDef>
+                    </ControllerDef>
+                  </ItemPort>
+                </Part>
+                <Part name="$physics_proxy_Tail_87" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_88" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_89" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_90" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_91" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_92" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_93" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_94" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_95" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_96" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_97" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_98" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_99" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_100" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_101" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_102" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_103" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_104" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_105" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_106" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_107" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_108" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_109" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_110" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+                <Part name="$physics_proxy_Tail_111" class="AnimatedJoint" damageMax="1" detachRatio="1" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
               </Parts>
             </Part>
             <Part name="hardpoint_personal_inventory_gunner" class="ItemPort">
@@ -1413,6 +1487,8 @@
                 </Connections>
               </ItemPort>
             </Part>
+            <Part name="Canopy_Front" class="AnimatedJoint" detachTag="EjectCanopy" damageMax="80" detachRatio="0" detachBaseForce="2,2,3" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
+            <Part name="Canopy_Rear" class="AnimatedJoint" detachTag="EjectCanopyCopilot" damageMax="80" detachRatio="0" detachBaseForce="0,1,0" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="0.5,0,0.3" detachProbability="1" />
             <Part name="hardpoint_seat_gunner" class="ItemPort">
               <ItemPort minSize="1" maxSize="3" flags="seat uneditable $EjectCanopyCopilot" id="">
                 <Types>
@@ -1425,6 +1501,7 @@
                 <ControllerDef controllableTags="remote_turret">
                   <UserDef>
                     <Observerables>
+                      <Observerable itemType="MissileController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                       <Observerable itemType="EnergyController" screensDefault="" screensAvail="Screen_Console" />
                       <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Console" />
                       <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Console" />
@@ -1433,6 +1510,7 @@
                       <Observerable itemType="Radar" screensAvail="NotUsed_Radar" />
                     </Observerables>
                     <PriorityGroups>
+                      <PriorityGroup itemType="MissileController" defaultPriority="observe_only" id="modPart_Missile_Control_Gunner" />
                       <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
                       <PriorityGroup itemType="CoolerController" defaultPriority="observe_only" />
                       <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
@@ -1511,7 +1589,7 @@
                           <Priority value="exclusive_control" />
                         </tags>
                       </PriorityGroup>
-                      <PriorityGroup itemType="MissileController" defaultPriority="1" />
+                      <PriorityGroup itemType="MissileController" defaultPriority="exclusive_control" id="modPart_Missile_Control_Pilot" />
                       <PriorityGroup itemType="FlightController" defaultPriority="exclusive_control" />
                       <PriorityGroup itemType="QuantumDrive" />
                       <PriorityGroup itemType="Scanner" />
@@ -1622,12 +1700,27 @@
         <Elem idRef="modPart_Spine4" name="pipeClass" value="Heat" />
         <Elem idRef="modPart_Spine4" name="pipe" value="MainHeat" />
         <Elem idRef="modPart_Spine5" name="controllableTags" value="remote_turret" />
-        <Elem idRef="modPart_QuantumController1" name="itemType" value="EMP" />
-        <Elem idRef="modPart_QuantumController2" name="itemType" value="QuantumInterdictionGenerator" />
+        <Elem idRef="modPart_QuantumController" name="skipPart" value="0" />
         <Elem idRef="modPart_Cover4" name="type" value="PowerPlant" />
         <Elem idRef="modPart_Cover5" name="pipe" value="MainPower" />
         <Elem idRef="modPart_Cover6" name="pipeClass" value="Heat" />
         <Elem idRef="modPart_Paint" name="portTags" value="Paint_Scorpius" />
+        <Elem idRef="modPart_QuantumController" name="skipPart" value="0" />
+        <Elem idRef="modPart_Remote_Turret" name="skipPart" value="1" />
+        <Elem idRef="modPart_turret_control_1" name="controllableTags" value="remote_turret2" />
+        <Elem idRef="modPart_turret_control_2" name="controllableTags" value="remote_turret2" />
+        <Elem idRef="modPart_turret_control_3" name="controllableTags" value="remote_turret2" />
+        <Elem idRef="modPart_turret_control_4" name="value" value="no_control" />
+        <Elem idRef="modPart_turret_control_5" name="value" value="no_control" />
+        <Elem idRef="modPart_missile_camera" name="skipPart" value="0" />
+        <Elem idRef="modPart_missile_control_1" name="controllableTags" value="remote_turret" />
+        <Elem idRef="modPart_missile_control_2" name="defaultPriority" value="2" />
+        <Elem idRef="modPart_missile_control_3" name="tag" value="remote_turret" />
+        <Elem idRef="modPart_missile_control_4" name="value" value="exclusive_control" />
+        <Elem idRef="modPart_missile_control_5" name="tag" value="remote_turret" />
+        <Elem idRef="modPart_missile_control_6" name="value" value="exclusive_control" />
+        <Elem idRef="modPart_Missile_Control_Gunner" name="defaultPriority" value="2" />
+        <Elem idRef="modPart_Missile_Control_Pilot" name="defaultPriority" value="1" />
       </Elems>
     </Modification>
   </Modifications>

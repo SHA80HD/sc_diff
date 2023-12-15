@@ -44,13 +44,29 @@
     </aiSpawnTags>
     <stringVariants __type="MissionStringVariants">
       <variants>
-        <MissionStringVariant tag="0130de18-97e2-4d4c-9bb1-3e7ef5fd0490" string="@mission_location_pyro_060" __type="MissionStringVariant" />
+        <MissionStringVariant tag="0130de18-97e2-4d4c-9bb1-3e7ef5fd0490" string="@mission_location_pyro_060_alt_02" __type="MissionStringVariant" />
         <MissionStringVariant tag="8fd73fe9-94b6-45cd-9d4c-35ce67e86c75" string="@mission_location_pyro_060i" __type="MissionStringVariant" />
       </variants>
     </stringVariants>
     <missionModules>
       <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/Delivery/DeliveryItemPort_Manager.xml" __type="SMissionLocationModule">
         <missionInputs />
+        <properties />
+      </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/Modules/TimedItemDispenser/TimedItemDispenser.xml" __type="SMissionLocationModule">
+        <missionInputs>
+          <MissionInitParamBoolean name="RunOnEventTriggered_BP" value="1" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamBoolean" />
+          <MissionInitParamTag name="ItemAcceptanceTags_BP" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamTag">
+            <value __type="TagSearchTerm">
+              <positiveTags />
+              <negativeTags />
+            </value>
+          </MissionInitParamTag>
+          <MissionInitParamInteger name="ItemSpawnFrequency_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxItemSpawnFrequency_BP" value="30" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MinAmountOfItems_BP" value="15" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+          <MissionInitParamInteger name="MaxAmountOfItems_BP" value="20" __type="AbstractMissionInitParam" __polymorphicType="MissionInitParamInteger" />
+        </missionInputs>
         <properties />
       </SMissionLocationModule>
     </missionModules>

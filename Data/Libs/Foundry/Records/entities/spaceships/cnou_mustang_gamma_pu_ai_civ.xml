@@ -854,18 +854,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HiTech_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -952,6 +940,18 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HiTech_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
             </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
@@ -1028,7 +1028,7 @@
           </baseSignatureParams>
           <crossSectionParams>
             <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
-              <crossSection x="8300" y="2500" z="10000" __type="Vec3" />
+              <crossSection x="7105" y="2140" z="8560" __type="Vec3" />
             </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
@@ -1997,7 +1997,7 @@
       <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="700" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
@@ -2162,7 +2162,7 @@
         </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:cockpit_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="7f42c7a2-c485-4e38-b4d3-17dc2650e692" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:cockpit_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -2180,7 +2180,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:cockpit_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="1f29bcc6-cd4f-4095-aa12-cd35e7a655d3" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:cockpit_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -2198,7 +2198,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:hull_base_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="f5845b15-8e2a-4c61-9887-6081eb7392dd" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:hull_base_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -2216,7 +2216,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:landing_gear_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="5c1ee262-05bf-4cd3-8496-73e89ddef1bf" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:landing_gear_left" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -2234,7 +2234,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:landing_gear_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="b22e5d0b-877f-4628-93d8-c5b1b86ecc9a" name="" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="mustang_anchor:landing_gear_right" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">

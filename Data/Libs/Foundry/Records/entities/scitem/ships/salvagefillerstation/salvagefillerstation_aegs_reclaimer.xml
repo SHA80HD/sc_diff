@@ -395,11 +395,12 @@
       <AnimationTasks>
         <SSequencerSkeletonAnimationTaskParams animationName="door_open" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
         <SSequencerSkeletonAnimationTaskParams animationName="door_close" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="compacter_operate" layerId="1" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
         <SSequencerSkeletonAnimationTaskParams animationName="cargo_door_open" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
         <SSequencerSkeletonAnimationTaskParams animationName="cargo_door_close" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
         <SSequencerSkeletonAnimationTaskParams animationName="conveyor_operate" layerId="3" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
         <SSequencerSkeletonAnimationTaskParams animationName="conveyor_reset" layerId="3" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+        <SSequencerSkeletonAnimationTaskParams animationName="cargo_big_door_open" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+        <SSequencerSkeletonAnimationTaskParams animationName="cargo_big_door_close" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
       </AnimationTasks>
       <defaultAnimation>
       </defaultAnimation>
@@ -555,7 +556,7 @@
           <itemPortRules />
           <detachDirection x="0" y="0" z="-1" __type="Vec3" />
         </SItemPortDef>
-        <SItemPortDef Name="port_controls_screen" DisplayName="" PortTags="FillerStationControlsScreen" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+        <SItemPortDef Name="hardpoint_control_compacter" DisplayName="" PortTags="FillerStationControlsScreen" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
           <Tags />
           <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
           <AttachmentPoints />
@@ -567,20 +568,19 @@
           <Extension>
           </Extension>
           <AttachmentImplementation>
-            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
-              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
               <Helper Tags="" __type="SItemPortDefHelperNode">
-                <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                <Helper Name="hardpoint_control_compacter" ItemOffsetHelperName="" __type="SItemPortDefHelper">
                   <Offset __type="QuatT">
-                    <Rotation x="0" y="0" z="-45" __type="Ang3" />
-                    <Position x="-1.25" y="-0.95" z="0.8" __type="Vec3" />
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
                   </Offset>
                   <SimulationParams>
                   </SimulationParams>
                 </Helper>
                 <SubHelpers />
               </Helper>
-            </SItemPortDefAttachmentImplementationEntity>
+            </SItemPortDefAttachmentImplementationBone>
           </AttachmentImplementation>
           <linkedItemPorts />
           <itemPortRules />
@@ -618,39 +618,34 @@
         </SReplicatedSequencerDefSequenceParams>
         <SReplicatedSequencerDefSequenceParams name="EjectionSequence" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
           <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[2]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[6]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks />
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[3]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[4]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[2]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[5]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[3]" />
+                <WeakPointer dependentTasks="AnimationTasks[6]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
             <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[5]" />
+                <WeakPointer dependentTasks="AnimationTasks[4]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
           </taskEntries>
         </SReplicatedSequencerDefSequenceParams>
         <SReplicatedSequencerDefSequenceParams name="ResetSequence" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
           <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[4]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[7]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks />
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[6]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[5]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[4]" />
+                <WeakPointer dependentTasks="AnimationTasks[7]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
             <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[6]" />
+                <WeakPointer dependentTasks="AnimationTasks[5]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
           </taskEntries>
@@ -664,7 +659,7 @@
           </WearRange>
           <InventoryItems />
           <entries>
-            <SItemPortLoadoutEntryParams itemPortName="port_controls_screen" entityClassName="Salvage_Fillerstation_Screen_Template" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_control_compacter" entityClassName="Salvage_Fillerstation_Screen_Template" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
@@ -681,9 +676,7 @@
       <outputEntityPorts>
         <WeakPointer outputEntityPorts="Ports[0]" />
       </outputEntityPorts>
-      <containerPorts>
-        <CrafterContainerPort port="Ports[1]" mode="Input" __type="CrafterContainerPort" />
-      </containerPorts>
+      <containerPorts />
       <itemInteractions>
         <CrafterInteractions goToIdleInteraction="Interactable.SharedInteractions[1]" goToBusyInteraction="Interactable.SharedInteractions[0]" idleStateTag="62c5ad8c-7217-4bea-8f63-8a6af9d38e2b" busyStateTag="7d1ba1db-cbde-4263-be64-d90ae323ebb8" __type="CrafterInteractions" />
       </itemInteractions>

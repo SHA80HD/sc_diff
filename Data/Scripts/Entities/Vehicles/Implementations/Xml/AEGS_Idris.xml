@@ -771,6 +771,30 @@
                 </ControllerDef>
               </ItemPort>
             </Part>
+            <Part name="hardpoint_controller_weapon_missiles" class="ItemPort">
+              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
+                <Types>
+                  <Type type="WeaponController" />
+                </Types>
+                <Connections>
+                  <Connection pipeClass="Power" pipe="MainPower" />
+                  <Connection pipeClass="Heat" pipe="MainHeat" />
+                </Connections>
+                <ControllerDef controllableTags="WeaponsSeat">
+                  <UsableDef>
+                    <PriorityGroups>
+                      <PriorityGroup itemType="Turret" defaultPriority="no_control">
+                        <tags tag="WeaponsSeat">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
+                      <PriorityGroup itemType="WeaponGun" defaultPriority="no_control" />
+                      <PriorityGroup itemType="WeaponDefensive" defaultPriority="no_control" />
+                    </PriorityGroups>
+                  </UsableDef>
+                </ControllerDef>
+              </ItemPort>
+            </Part>
             <Part name="hardpoint_landingpad_03" class="ItemPort">
               <ItemPort minSize="1" maxSize="9999" flags="selfphys" display_name="LandingPad03" />
             </Part>
@@ -1322,7 +1346,6 @@
                           <PriorityGroup itemType="CoolerController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="WeaponController" defaultPriority="observe_only" />
-                          <PriorityGroup itemType="QuantumDrive" defaultPriority="observe_only" />
                           <PriorityGroup itemType="CommsController" defaultPriority="observe_only" />
                         </PriorityGroups>
                       </UserDef>
@@ -1830,32 +1853,30 @@
                           <Observerable itemType="MissileController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="FlightController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
-                          <Observerable itemType="QuantumDrive" screensDefault="" screensAvail="Screen_Upper_MFD" />
-                          <Observerable itemType="Seat" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="Display" screensDefault="" screensAvail="" />
+                          <Observerable itemType="QuantumDrive" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="LandingSystem" screensDefault="" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="Display" screensDefault="" screensAvail="NotUsed_Radar" />
+                          <Observerable itemType="Radar" screensDefault="" screensAvail="NotUsed_Radar" />
                         </Observerables>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="9" />
-                          <PriorityGroup itemType="CoolerController" defaultPriority="2" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="1" />
-                          <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
-                            <tags tag="MainWeaponsControl">
-                              <Priority value="1" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="1" />
+                          <PriorityGroup itemType="CoolerController" defaultPriority="1" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="2" />
+                          <PriorityGroup itemType="FlightController" defaultPriority="2" />
+                          <PriorityGroup itemType="CommsController" defaultPriority="2" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="LandingSystem" defaultPriority="2" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="2" />
+                          <PriorityGroup itemType="Radar" defaultPriority="no_control">
+                            <tags tag="CopilotSeat">
+                              <Priority value="exclusive_control" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="FlightController" defaultPriority="2" />
-                          <PriorityGroup itemType="MissileController" defaultPriority="2" />
-                          <PriorityGroup itemType="CommsController" defaultPriority="1" />
-                          <PriorityGroup itemType="QuantumDrive" defaultPriority="observe_only" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="LandingSystem" defaultPriority="1" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="Radar" defaultPriority="2" />
-                          <PriorityGroup itemType="AIModule" />
-                          <PriorityGroup itemType="SelfDestruct" />
-                          <PriorityGroup itemType="LandingSystem" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="SelfDestruct" defaultPriority="2" />
+                          <PriorityGroup itemType="Display" defaultPriority="2" />
+                          <PriorityGroup itemType="LandingSystem" defaultPriority="2" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="CopilotSeat">
                               <Priority value="exclusive_control" />
@@ -1912,22 +1933,21 @@
                     <ControllerDef controllableTags="CaptainSeat">
                       <UserDef>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="11" />
-                          <PriorityGroup itemType="CoolerController" defaultPriority="4" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="6" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="Radar" defaultPriority="6" />
-                          <PriorityGroup itemType="AIModule" />
-                          <PriorityGroup itemType="SelfDestruct" />
-                          <PriorityGroup itemType="DoorController" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="CoolerController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Radar" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="SelfDestruct" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="CaptainSeat">
                               <Priority value="exclusive_control" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="SeatDashboard" />
                         </PriorityGroups>
                       </UserDef>
                       <UsableDef>
@@ -1996,51 +2016,52 @@
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="MissileController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="FlightController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
-                          <Observerable itemType="QuantumDrive" screensDefault="" screensAvail="Screen_Upper_MFD" />
+                          <Observerable itemType="QuantumDrive" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="Seat" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="Display" screensDefault="" screensAvail="" />
                           <Observerable itemType="LandingSystem" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="CapacitorAssignmentController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                           <Observerable itemType="Radar" screensAvail="NotUsed_Radar" />
+                          <Observerable itemType="Display" screensDefault="" screensAvail="NotUsed_Radar" />
                         </Observerables>
                         <PriorityGroups>
                           <PriorityGroup itemType="EnergyController">
                             <tags tag="energy_controller">
-                              <Priority value="1" />
-                            </tags>
-                          </PriorityGroup>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="10" />
-                          <PriorityGroup itemType="CoolerController" defaultPriority="3" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="2" />
-                          <PriorityGroup itemType="CommsController" defaultPriority="2" />
-                          <PriorityGroup itemType="MissileController" defaultPriority="1" />
-                          <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
-                            <tags tag="MainWeaponsControl">
                               <Priority value="2" />
                             </tags>
                           </PriorityGroup>
+                          <PriorityGroup itemType="EnergyController" defaultPriority="2" />
+                          <PriorityGroup itemType="CoolerController" defaultPriority="2" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="1" />
+                          <PriorityGroup itemType="CommsController" defaultPriority="1" />
+                          <PriorityGroup itemType="MissileController" defaultPriority="no_control" />
+                          <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
+                            <tags tag="MainWeaponsControl">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
                           <PriorityGroup itemType="FlightController" defaultPriority="3" />
-                          <PriorityGroup itemType="QuantumDrive" defaultPriority="5" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="DoorController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
+                          <PriorityGroup itemType="QuantumDrive" defaultPriority="3" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="3" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="3" />
                           <PriorityGroup itemType="Radar" defaultPriority="no_control">
                             <tags tag="pilotSeat">
                               <Priority value="exclusive_control" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="AIModule" />
-                          <PriorityGroup itemType="SelfDestruct" />
-                          <PriorityGroup itemType="LandingSystem" defaultPriority="2" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="SelfDestruct" defaultPriority="3" />
+                          <PriorityGroup itemType="Display" defaultPriority="3" />
+                          <PriorityGroup itemType="LandingSystem" defaultPriority="3" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="pilotSeat">
                               <Priority value="exclusive_control" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="CapacitorAssignmentController" />
+                          <PriorityGroup itemType="CapacitorAssignmentController" defaultPriority="observe_only" />
                         </PriorityGroups>
                       </UserDef>
                       <UsableDef>
@@ -2085,6 +2106,30 @@
                     </Connections>
                   </ItemPort>
                 </Part>
+                <Part name="hardpoint_radar_copilot" class="ItemPort">
+                  <ItemPort minSize="3" maxSize="3" flags="invisible uneditable" display_name="port_NameRadar">
+                    <Types>
+                      <Type type="Radar" subtypes="ShortRangeRadar,MidRangeRadar" />
+                    </Types>
+                    <ControllerDef controllableTags="CopilotSeat" />
+                    <Connections>
+                      <Connection pipeClass="Power" pipe="MainPower" />
+                      <Connection pipeClass="Heat" pipe="MainHeat" />
+                    </Connections>
+                  </ItemPort>
+                </Part>
+                <Part name="hardpoint_radar_weapons" class="ItemPort">
+                  <ItemPort minSize="3" maxSize="3" flags="invisible uneditable" display_name="port_NameRadar">
+                    <Types>
+                      <Type type="Radar" subtypes="ShortRangeRadar,MidRangeRadar" />
+                    </Types>
+                    <ControllerDef controllableTags="WeaponsSeat" />
+                    <Connections>
+                      <Connection pipeClass="Power" pipe="MainPower" />
+                      <Connection pipeClass="Heat" pipe="MainHeat" />
+                    </Connections>
+                  </ItemPort>
+                </Part>
                 <Part name="hardpoint_seat_bridge_mid_left" class="ItemPort">
                   <ItemPort minSize="1" maxSize="1" flags="uneditable" display_name="port_NameSeatComms">
                     <Types>
@@ -2097,22 +2142,21 @@
                     <ControllerDef controllableTags="CommsSeat">
                       <UserDef>
                         <Observerables>
+                          <Observerable itemType="CommsController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="EnergyController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="CommsController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
                         </Observerables>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="6" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="DoorController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="Radar" defaultPriority="5" />
-                          <PriorityGroup itemType="AIModule" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Radar" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
                           <PriorityGroup itemType="CommsController" defaultPriority="3" />
-                          <PriorityGroup itemType="DoorController" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="CommsSeat">
                               <Priority value="exclusive_control" />
@@ -2164,27 +2208,30 @@
                         <Observerables>
                           <Observerable itemType="EnergyController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="ShieldController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="WeaponController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
-                          <Observerable itemType="MissileController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
+                          <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="WeaponController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="MissileController" visorScreen="" screensDefault="" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="Radar" screensDefault="radar" screensAvail="radar" />
                         </Observerables>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="7" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="4" />
-                          <PriorityGroup itemType="MissileController" defaultPriority="3" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
                           <PriorityGroup itemType="WeaponController" defaultPriority="no_control">
-                            <tags tag="MainWeaponsControl">
-                              <Priority value="3" />
+                            <tags tag="WeaponsSeat">
+                              <Priority value="exclusive_control" />
                             </tags>
                           </PriorityGroup>
-                          <PriorityGroup itemType="FlightController" defaultPriority="1" />
-                          <PriorityGroup itemType="QuantumDrive" defaultPriority="observe_only" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="DoorController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="Radar" defaultPriority="4" />
-                          <PriorityGroup itemType="AIModule" />
+                          <PriorityGroup itemType="MissileController" defaultPriority="no_control">
+                            <tags tag="WeaponsSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="Radar" defaultPriority="no_control">
+                            <tags tag="WeaponsSeat">
+                              <Priority value="exclusive_control" />
+                            </tags>
+                          </PriorityGroup>
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="WeaponsSeat">
                               <Priority value="exclusive_control" />
@@ -2234,21 +2281,21 @@
                     <ControllerDef controllableTags="ScienceSeat">
                       <UserDef>
                         <Observerables>
-                          <Observerable itemType="EnergyController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
-                          <Observerable itemType="CoolerController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="EnergyController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="ShieldController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Central_MFD" />
                         </Observerables>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="5" />
-                          <PriorityGroup itemType="CoolerController" defaultPriority="1" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="3" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="DoorController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="Radar" defaultPriority="1" />
-                          <PriorityGroup itemType="AIModule" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="3" />
+                          <PriorityGroup itemType="CoolerController" defaultPriority="3" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Radar" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="ScienceSeat">
                               <Priority value="exclusive_control" />
@@ -2298,19 +2345,19 @@
                     <ControllerDef controllableTags="ShieldsSeat">
                       <UserDef>
                         <Observerables>
-                          <Observerable itemType="EnergyController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
+                          <Observerable itemType="EnergyController" screensDefault="" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="CoolerController" screensDefault="" screensAvail="Screen_Central_MFD" />
-                          <Observerable itemType="ShieldController" screensDefault="Screen_Upper_MFD" screensAvail="Screen_Upper_MFD" />
+                          <Observerable itemType="ShieldController" screensDefault="Screen_Central_MFD" screensAvail="Screen_Central_MFD" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Central_MFD" />
                         </Observerables>
                         <PriorityGroups>
-                          <PriorityGroup itemType="EnergyController" defaultPriority="8" />
-                          <PriorityGroup itemType="ShieldController" defaultPriority="5" />
-                          <PriorityGroup itemType="LightController" />
-                          <PriorityGroup itemType="DoorController" />
-                          <PriorityGroup itemType="Avionics" />
-                          <PriorityGroup itemType="QuantumFuelTank" />
-                          <PriorityGroup itemType="AIModule" />
+                          <PriorityGroup itemType="EnergyController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="ShieldController" defaultPriority="3" />
+                          <PriorityGroup itemType="LightController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="DoorController" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="Avionics" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="QuantumFuelTank" defaultPriority="observe_only" />
+                          <PriorityGroup itemType="AIModule" defaultPriority="observe_only" />
                           <PriorityGroup itemType="Seat" defaultPriority="no_control">
                             <tags tag="ShieldsSeat">
                               <Priority value="exclusive_control" />
@@ -2784,35 +2831,6 @@
                   </ItemPort>
                 </Part>
                 <Part name="antennas_glow" class="AnimatedJoint" damageMax="200" />
-                <Part name="hardpoint_weapon_regen_pool" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="1" flags="invisible uneditable" display_name="Weapon Regen Pool">
-                    <Types>
-                      <Type type="WeaponRegenPool" />
-                    </Types>
-                    <Connections>
-                      <Connection pipeClass="WeaponRegen" pipe="WeaponRegenCrew" />
-                      <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadCrew" />
-                    </Connections>
-                  </ItemPort>
-                </Part>
-                <Part name="hardpoint_controller_capacitor_assignment" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
-                    <Types>
-                      <Type type="CapacitorAssignmentController" />
-                    </Types>
-                  </ItemPort>
-                </Part>
-                <Part name="hardpoint_weapon_regen_pool_turrets" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="1" flags="invisible uneditable" display_name="Weapon Regen Pool">
-                    <Types>
-                      <Type type="WeaponRegenPool" />
-                    </Types>
-                    <Connections>
-                      <Connection pipeClass="WeaponRegen" pipe="WeaponRegenTurret" />
-                      <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadTurret" />
-                    </Connections>
-                  </ItemPort>
-                </Part>
               </Parts>
             </Part>
             <Part name="hardpoint_missile_launcher" class="ItemPort">
@@ -2824,7 +2842,7 @@
                   <Connection pipeClass="Power" pipe="MainPower" />
                   <Connection pipeClass="Heat" pipe="MainHeat" />
                 </Connections>
-                <ControllerDef controllableTags="MainWeaponsControl" />
+                <ControllerDef controllableTags="WeaponsSeat" />
               </ItemPort>
             </Part>
             <Part name="Idris_Thruster_Main_01_RearLeft" class="AnimatedJoint" damageMax="50000" detachRatio="1" detachBaseForce="-2,0,-8" detachRandomForce="0.5, 0.5, 0.5" detachRandomRotation="-12.5, -11.2, 23.3" detachProbability="1">
@@ -3601,6 +3619,22 @@
                 <Types>
                   <Type type="MissileController" />
                 </Types>
+                <ControllerDef controllableTags="WeaponsSeat">
+                  <UsableDef>
+                    <PriorityGroups>
+                      <PriorityGroup itemType="MissileLauncher" defaultPriority="no_control">
+                        <tags tag="WeaponsSeat">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
+                      <PriorityGroup itemType="Missile" defaultPriority="no_control">
+                        <tags tag="WeaponsSeat">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
+                    </PriorityGroups>
+                  </UsableDef>
+                </ControllerDef>
               </ItemPort>
             </Part>
             <Part name="hardpoint_docking_collar_mpuv" class="ItemPort">
@@ -3615,6 +3649,68 @@
                 <Types>
                   <Type type="AirTrafficController" />
                 </Types>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_mpuv_dock_door" class="ItemPort" />
+            <Part name="hardpoint_weapon_regen_pool" class="ItemPort">
+              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable" display_name="Weapon Regen Pool">
+                <Types>
+                  <Type type="WeaponRegenPool" />
+                </Types>
+                <Connections>
+                  <Connection pipeClass="WeaponRegen" pipe="WeaponRegenCrew" />
+                  <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadCrew" />
+                </Connections>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_weapon_regen_pool_turrets" class="ItemPort">
+              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable" display_name="Weapon Regen Pool">
+                <Types>
+                  <Type type="WeaponRegenPool" />
+                </Types>
+                <Connections>
+                  <Connection pipeClass="WeaponRegen" pipe="WeaponRegenTurret" />
+                  <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadTurret" />
+                </Connections>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_controller_capacitor_assignment" class="ItemPort">
+              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
+                <Types>
+                  <Type type="CapacitorAssignmentController" />
+                </Types>
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_camera_turret_lower" class="ItemPort">
+              <ItemPort minSize="4" maxSize="4" flags="$uneditable" requiredTags="Idris_Base" portTags="Idris_Base" display_name="port_NameTurret01">
+                <Types>
+                  <Type type="Turret" subtypes="GunTurret" />
+                </Types>
+                <Pitch min="-90" max="90" />
+                <Yaw min="-180" max="180" />
+                <Connections>
+                  <Connection pipeClass="Power" pipe="MainPower" />
+                  <Connection pipeClass="Heat" pipe="MainHeat" />
+                  <Connection pipeClass="WeaponRegen" pipe="WeaponRegenTurret" />
+                  <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadTurret" />
+                </Connections>
+                <ControllerDef controllableTags="WeaponsSeat" />
+              </ItemPort>
+            </Part>
+            <Part name="hardpoint_camera_turret_upper" class="ItemPort">
+              <ItemPort minSize="4" maxSize="4" flags="$uneditable" requiredTags="Idris_Base" portTags="Idris_Base" display_name="port_NameTurret02">
+                <Types>
+                  <Type type="Turret" subtypes="GunTurret" />
+                </Types>
+                <Pitch min="-90" max="90" />
+                <Yaw min="-180" max="180" />
+                <Connections>
+                  <Connection pipeClass="Power" pipe="MainPower" />
+                  <Connection pipeClass="Heat" pipe="MainHeat" />
+                  <Connection pipeClass="WeaponRegen" pipe="WeaponRegenTurret" />
+                  <Connection pipeClass="WeaponAmmoLoad" pipe="WeaponAmmoLoadTurret" />
+                </Connections>
+                <ControllerDef controllableTags="WeaponsSeat" />
               </ItemPort>
             </Part>
           </Parts>

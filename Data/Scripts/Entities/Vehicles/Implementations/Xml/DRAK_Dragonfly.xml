@@ -63,7 +63,6 @@
     <Pipe name="MainHeat" class="Heat" />
     <Pipe name="MainFuel" class="Fuel" />
     <Pipe name="IntakeFuel" class="Fuel" />
-    <Pipe name="Shield" class="Shield" />
     <Pipe name="WeaponRegenCrew" class="WeaponRegen" />
     <Pipe name="WeaponAmmoLoadCrew" class="WeaponAmmoLoad" />
     <Pipe name="WeaponRegenTurret" class="WeaponRegen" />
@@ -340,18 +339,6 @@
                 </Connections>
               </ItemPort>
             </Part>
-            <Part name="hardpoint_shield_generator" class="ItemPort">
-              <ItemPort minSize="0" maxSize="0" flags="" display_name="port_NameShieldGen01">
-                <Types>
-                  <Type type="Shield" subtypes="" />
-                </Types>
-                <Connections>
-                  <Connection pipeClass="Power" pipe="MainPower" />
-                  <Connection pipeClass="Heat" pipe="MainHeat" />
-                  <Connection pipeClass="Shield" pipe="Shield" />
-                </Connections>
-              </ItemPort>
-            </Part>
             <Part name="Radar_Helper" class="ItemPort">
               <ItemPort minSize="1" maxSize="1" flags="start_hidden uneditable" display_name="UI">
                 <Types>
@@ -466,25 +453,6 @@
                       <PriorityGroup itemType="Turret" />
                       <PriorityGroup itemType="WeaponGun" />
                       <PriorityGroup itemType="WeaponDefensive" />
-                    </PriorityGroups>
-                  </UsableDef>
-                </ControllerDef>
-              </ItemPort>
-            </Part>
-            <Part name="hardpoint_controller_shield" class="ItemPort">
-              <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
-                <Types>
-                  <Type type="ShieldController" />
-                </Types>
-                <Connections>
-                  <Connection pipeClass="Power" pipe="MainPower" />
-                  <Connection pipeClass="Heat" pipe="MainHeat" />
-                  <Connection pipeClass="Shield" pipe="Shield" />
-                </Connections>
-                <ControllerDef>
-                  <UsableDef>
-                    <PriorityGroups>
-                      <PriorityGroup itemType="Shield" />
                     </PriorityGroups>
                   </UsableDef>
                 </ControllerDef>
@@ -628,7 +596,6 @@
                         <Observerables>
                           <Observerable itemType="EnergyController" screensDefault="OwnShipMFD" screensAvail="AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
                           <Observerable itemType="CoolerController" screensDefault="AnnunciatorLeft" screensAvail="AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
-                          <Observerable itemType="ShieldController" screensDefault="SupportScreenRight" screensAvail="AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
                           <Observerable itemType="WeaponController" screensDefault="SupportScreenLeft" screensAvail="AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
                           <Observerable itemType="FlightController" screensDefault="Flight_HUD" screensAvail="Flight_HUD, VS_Left0, AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
                           <Observerable itemType="Seat" screensDefault="VS_Right0" screensAvail="VS_Right0, AnnunciatorLeft, AnnunciatorRight, SupportScreenRight, SupportScreenLeft, OwnShipMFD" />
@@ -645,7 +612,6 @@
                           </PriorityGroup>
                           <PriorityGroup itemType="CommsController" />
                           <PriorityGroup itemType="CoolerController" />
-                          <PriorityGroup itemType="ShieldController" />
                           <PriorityGroup itemType="WeaponController" />
                           <PriorityGroup itemType="FlightController" />
                           <PriorityGroup itemType="LightController" />

@@ -559,17 +559,13 @@
             </ControlHint_DisplayInfoSet>
           </hintDisplayInfoSet>
         </ControlHintDef>
-        <ControlHintDef description="Salvage Mode - BEAM TOGGLE" __type="ControlHintDef">
+        <ControlHintDef description="Salvage Mode - ENGAGE TOOL - CYCLE TOOL" __type="ControlHintDef">
           <condition>
             <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
               <conditions>
                 <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
-                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
-                  <conditions>
-                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
-                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
-                  </conditions>
-                </ControlHintCondition_AND>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
               </conditions>
             </ControlHintCondition_AND>
           </condition>
@@ -579,7 +575,18 @@
             <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
               <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_beamtoggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
                 <actions>
-                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_weapons:v_attack_group1" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_toggle_fire_focused" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_cyclemodifiers" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_cycle_modifiers_focused" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
                 </actions>
               </overrideHint>
               <gamepadHint>
@@ -1136,6 +1143,93 @@
             </ControlHint_DisplayInfoSet>
           </hintDisplayInfoSet>
         </ControlHintDef>
+        <ControlHintDef description="Salvage Mode - FOCUS TOOL" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+                <ControlHintCondition_VehicleSalvage state="SupportsFocusHeads" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSalvage" />
+                <ControlHintCondition_VehicleSalvage state="SupportsFocusStructural" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSalvage" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_focus_fracture" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_focus_fracture" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_focus_left" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_focus_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_focus_all" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_focus_all_heads" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_focus_right" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_focus_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
+        <ControlHintDef description="Salvage Mode Available &amp;amp; Power On - TOGGLE SALVAGE MODE" __type="ControlHintDef">
+          <condition>
+            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
+              <conditions>
+                <ControlHintCondition_VehicleAvailableOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleAvailableOperatorMode" />
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
+              </conditions>
+            </ControlHintCondition_AND>
+          </condition>
+          <alwaysDisplayCondition>
+          </alwaysDisplayCondition>
+          <hintDisplayInfoSet>
+            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
+              <overrideHint overrideName="0" name="@ui_controlhint_ships_salvage_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+                <actions>
+                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_salvage_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                </actions>
+              </overrideHint>
+              <gamepadHint>
+              </gamepadHint>
+              <joystickHint>
+              </joystickHint>
+            </ControlHint_DisplayInfoSet>
+          </hintDisplayInfoSet>
+        </ControlHintDef>
         <ControlHintDef description="Locked Target: Hostile or Attacker - Ship Has Missiles - Ship in SCM OR - Missile OM + No Missiles - MISSILE MODE" __type="ControlHintDef">
           <condition>
             <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
@@ -1284,36 +1378,6 @@
               <overrideHint overrideName="1" name="@ui_controlhint_ships_locktarget_cycle_attackers_fwd" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
                 <actions>
                   <ControlHints_ActionInput activationMode="Default" actionName="spaceship_targeting_advanced:v_target_cycle_attacker_fwd" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
-                </actions>
-              </overrideHint>
-              <gamepadHint>
-              </gamepadHint>
-              <joystickHint>
-              </joystickHint>
-            </ControlHint_DisplayInfoSet>
-          </hintDisplayInfoSet>
-        </ControlHintDef>
-        <ControlHintDef description="Salvage Mode - GIMBAL TOGGLE" __type="ControlHintDef">
-          <condition>
-            <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
-              <conditions>
-                <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
-                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
-                  <conditions>
-                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
-                    <ControlHintCondition_VehicleMainThrustersState mainThrustersState="On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleMainThrustersState" />
-                  </conditions>
-                </ControlHintCondition_AND>
-              </conditions>
-            </ControlHintCondition_AND>
-          </condition>
-          <alwaysDisplayCondition>
-          </alwaysDisplayCondition>
-          <hintDisplayInfoSet>
-            <ControlHint_DisplayInfoSet alwaysShowIfBound="0" __type="ControlHint_DisplayInfoSet">
-              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_gimbal" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
-                <actions>
-                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_toggle_gimbal_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
                 </actions>
               </overrideHint>
               <gamepadHint>
@@ -1827,16 +1891,13 @@
             </ControlHint_DisplayInfoSet>
           </hintDisplayInfoSet>
         </ControlHintDef>
-        <ControlHintDef description="Salvage Mode - CYCLE MODIFIERS" __type="ControlHintDef">
+        <ControlHintDef description="Salvage Mode - CONVERGENCE SCROLL - CONVERGENCE AXIS" __type="ControlHintDef">
           <condition>
             <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
               <conditions>
                 <ControlHintCondition_VehicleOperatorMode operatorMode="Salvage" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleOperatorMode" />
-                <ControlHintCondition_AND __type="ControlHintCondition" __polymorphicType="ControlHintCondition_AND">
-                  <conditions>
-                    <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
-                  </conditions>
-                </ControlHintCondition_AND>
+                <ControlHintCondition_VehicleSystems systems="Power_On" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSystems" />
+                <ControlHintCondition_VehicleSalvage state="SupportsHeadsBeamSpacing" __type="ControlHintCondition" __polymorphicType="ControlHintCondition_VehicleSalvage" />
               </conditions>
             </ControlHintCondition_AND>
           </condition>
@@ -1844,10 +1905,9 @@
           </alwaysDisplayCondition>
           <hintDisplayInfoSet>
             <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
-              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_cyclemodifiers" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
+              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_beam_axis_scroll" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
                 <actions>
-                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_cycle_modifiers_left" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
-                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_cycle_modifiers_right" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
+                  <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_beam_spacing_rel" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
                 </actions>
               </overrideHint>
               <gamepadHint>
@@ -1859,17 +1919,6 @@
               <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_beam_axis_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
                 <actions>
                   <ControlHints_ActionInput activationMode="Default" actionName="spaceship_salvage:v_salvage_toggle_beam_spacing_axis" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
-                </actions>
-              </overrideHint>
-              <gamepadHint>
-              </gamepadHint>
-              <joystickHint>
-              </joystickHint>
-            </ControlHint_DisplayInfoSet>
-            <ControlHint_DisplayInfoSet alwaysShowIfBound="1" __type="ControlHint_DisplayInfoSet">
-              <overrideHint overrideName="1" name="@ui_controlhint_ships_salvage_mode_toggle" includeSeparator="0" separatorInputName="@LOC_EMPTY" separatorIconPath="" __type="ControlHints_HintDisplayInfo" __polymorphicType="ControlHints_HintDisplayInfoAction">
-                <actions>
-                  <ControlHints_ActionInput activationMode="Default" actionName="seat_general:v_toggle_salvage_mode" __type="ControlHints_Input" __polymorphicType="ControlHints_ActionInput" />
                 </actions>
               </overrideHint>
               <gamepadHint>

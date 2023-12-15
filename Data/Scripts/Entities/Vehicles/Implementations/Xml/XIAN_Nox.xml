@@ -50,7 +50,6 @@
     <Pipe name="MainFuel" class="Fuel" />
     <Pipe name="IntakeFuel" class="Fuel" />
     <Pipe name="QuantumFuel" class="Fuel" />
-    <Pipe name="Shield" class="Shield" />
     <Pipe name="WeaponRegenCrew" class="WeaponRegen" />
     <Pipe name="WeaponAmmoLoadCrew" class="WeaponAmmoLoad" />
     <Pipe name="WeaponRegenTurret" class="WeaponRegen" />
@@ -393,7 +392,6 @@
                           <Observerable itemType="FlightController" screensDefault="Screen_Left" screensAvail="Screen_Flight_HUD, VS_Left0, Screen_Left, Screen_Right, Screen_Center, Annunciator" />
                           <Observerable itemType="Seat" screensDefault="Screen_Right" screensAvail="VS_Right0, Screen_Left, Screen_Right, Screen_Center" />
                           <Observerable itemType="EnergyController" screensDefault="Screen_Flight_HUD" screensAvail="Screen_Left, Screen_Right, Screen_Center" />
-                          <Observerable itemType="ShieldController" screensDefault="VS_Right0" screensAvail="Screen_Left, Screen_Right, Screen_Center" />
                           <Observerable itemType="CoolerController" screensDefault="Screen_Center" screensAvail="Screen_Left, Screen_Right, Screen_Center" />
                           <Observerable itemType="WeaponController" screensDefault="" screensAvail="Screen_Left, Screen_Right, Screen_Center" />
                           <Observerable itemType="CommsController" screensDefault="" screensAvail="Screen_Left, Screen_Right, Screen_Center" primaryCommsScreen="Screen_Right" />
@@ -409,7 +407,6 @@
                             </tags>
                           </PriorityGroup>
                           <PriorityGroup itemType="CoolerController" />
-                          <PriorityGroup itemType="ShieldController" />
                           <PriorityGroup itemType="WeaponController" />
                           <PriorityGroup itemType="FlightController" />
                           <PriorityGroup itemType="CommsController" />
@@ -778,25 +775,6 @@
                     </ControllerDef>
                   </ItemPort>
                 </Part>
-                <Part name="hardpoint_controller_shield" class="ItemPort">
-                  <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
-                    <Types>
-                      <Type type="ShieldController" />
-                    </Types>
-                    <Connections>
-                      <Connection pipeClass="Power" pipe="MainPower" />
-                      <Connection pipeClass="Heat" pipe="MainHeat" />
-                      <Connection pipeClass="Shield" pipe="Shield" />
-                    </Connections>
-                    <ControllerDef>
-                      <UsableDef>
-                        <PriorityGroups>
-                          <PriorityGroup itemType="Shield" />
-                        </PriorityGroups>
-                      </UsableDef>
-                    </ControllerDef>
-                  </ItemPort>
-                </Part>
                 <Part name="hardpoint_controller_flight" class="ItemPort">
                   <ItemPort minSize="1" maxSize="1" flags="invisible uneditable">
                     <Types>
@@ -927,18 +905,6 @@
                 </Types>
                 <Connections>
                   <Connection pipeClass="Power" pipe="MainPower" />
-                </Connections>
-              </ItemPort>
-            </Part>
-            <Part name="hardpoint_shield_generator_left" class="ItemPort">
-              <ItemPort minSize="0" maxSize="0" flags="invisible" display_name="port_NameShieldGen01">
-                <Types>
-                  <Type type="Shield" subtypes="" />
-                </Types>
-                <Connections>
-                  <Connection pipeClass="Power" pipe="MainPower" />
-                  <Connection pipeClass="Heat" pipe="MainHeat" />
-                  <Connection pipeClass="Shield" pipe="Shield" />
                 </Connections>
               </ItemPort>
             </Part>

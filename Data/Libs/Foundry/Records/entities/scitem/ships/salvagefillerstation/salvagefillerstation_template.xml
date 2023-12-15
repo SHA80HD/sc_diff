@@ -153,7 +153,7 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="DispenserOpening" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[0]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="DispenserOpening" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
@@ -189,7 +189,7 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="DispenserClosing" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[1]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="DispenserClosing" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
@@ -230,7 +230,7 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="ConveyorDeploying" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[2]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="ConveyorDeploying" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags>
                 <Reference value="03228d89-5cf3-42cd-9ece-936d37cd6da2" />
               </enterStateEffectTags>
@@ -268,7 +268,7 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="ConveyorRetracting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[3]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="ConveyorRetracting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
               <EnterEventDispatchers />
@@ -381,15 +381,7 @@
       <AnimationJointControls>
       </AnimationJointControls>
       <AnimationControlActorIKs />
-      <AnimationTasks>
-        <SSequencerSkeletonAnimationTaskParams animationName="door_open" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="door_close" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="compacter_operate" layerId="1" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="cargo_door_open" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="cargo_door_close" layerId="2" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="conveyor_operate" layerId="3" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-        <SSequencerSkeletonAnimationTaskParams animationName="conveyor_reset" layerId="3" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
-      </AnimationTasks>
+      <AnimationTasks />
       <defaultAnimation>
       </defaultAnimation>
     </SAnimationControllerParams>
@@ -544,7 +536,7 @@
                 <Helper Name="" ItemOffsetHelperName="" __type="SItemPortDefHelper">
                   <Offset __type="QuatT">
                     <Rotation x="0" y="0" z="45" __type="Ang3" />
-                    <Position x="0.95" y="-1.25" z="0.8" __type="Vec3" />
+                    <Position x="0.912" y="-1.2" z="1" __type="Vec3" />
                   </Offset>
                   <SimulationParams>
                   </SimulationParams>
@@ -562,71 +554,7 @@
       <InternalHardpointLinks />
     </SItemPortContainerComponentParams>
     <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
-      <sequences>
-        <SReplicatedSequencerDefSequenceParams name="OpenDispenser" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
-          <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks />
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[2]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[0]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-          </taskEntries>
-        </SReplicatedSequencerDefSequenceParams>
-        <SReplicatedSequencerDefSequenceParams name="CloseDispenser" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
-          <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks />
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[3]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[1]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-          </taskEntries>
-        </SReplicatedSequencerDefSequenceParams>
-        <SReplicatedSequencerDefSequenceParams name="EjectionSequence" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
-          <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[2]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks />
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[3]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[2]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[5]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[3]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[5]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-          </taskEntries>
-        </SReplicatedSequencerDefSequenceParams>
-        <SReplicatedSequencerDefSequenceParams name="ResetSequence" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
-          <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[4]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks />
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="AnimationTasks[6]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[4]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
-              <dependentTasks>
-                <WeakPointer dependentTasks="AnimationTasks[6]" />
-              </dependentTasks>
-            </SSequencerSequenceTaskEntryParams>
-          </taskEntries>
-        </SReplicatedSequencerDefSequenceParams>
-      </sequences>
+      <sequences />
     </SEntityComponentSequencerParams>
     <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
       <loadout>
@@ -652,9 +580,7 @@
       <outputEntityPorts>
         <WeakPointer outputEntityPorts="Ports[0]" />
       </outputEntityPorts>
-      <containerPorts>
-        <CrafterContainerPort port="Ports[1]" mode="Input" __type="CrafterContainerPort" />
-      </containerPorts>
+      <containerPorts />
       <itemInteractions>
         <CrafterInteractions goToIdleInteraction="Interactable.SharedInteractions[1]" goToBusyInteraction="Interactable.SharedInteractions[0]" idleStateTag="62c5ad8c-7217-4bea-8f63-8a6af9d38e2b" busyStateTag="7d1ba1db-cbde-4263-be64-d90ae323ebb8" __type="CrafterInteractions" />
       </itemInteractions>

@@ -290,7 +290,7 @@
       <DeathGasComposition />
       <InteractionLocks />
     </SHealthComponentParams>
-    <SDegradationParams MaxLifetimeHours="6.85" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="1" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="6.85" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="1" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points>
           <Vec2 x="-0.599739" y="-0.04465957" __type="Vec2" />
@@ -632,5 +632,49 @@
       <controlBlocks />
       <signatureParams nominalEM="0" decayRate="0.15" __type="ItemResourceSignatureParams" />
     </ItemResourceComponentParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="hardpoint_Jump_Drive" DisplayName="" PortTags="uneditable" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="1" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="JumpDrive" __type="SItemPortDefTypes">
+              <SubTypes>
+                <Enum value="JumpDrive" />
+              </SubTypes>
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_Jump_Drive" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0.5" z="0.5" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
   </Components>
 </EntityClassDefinition.QDRV_WETK_S01_VK00_SCItem>

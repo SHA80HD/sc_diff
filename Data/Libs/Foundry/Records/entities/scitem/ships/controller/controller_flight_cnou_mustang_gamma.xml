@@ -140,12 +140,20 @@
       <vehicleItemPortInteractionLinks />
       <linkPlugs />
     </SInteractionLinkParams>
-    <IFCSParams scmSpeed="241" boostSpeedForward="290" boostSpeedBackward="230" maxSpeed="1341" attitudeLimiterEnabled="0" trichordingLimiterEnabled="0" torqueDistanceThreshold="-1" torqueImbalanceMultiplier="0.35" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1" precisionMinDistance="5" precisionMaxDistance="50" precisionLandingMultiplier="0.7" linearAccelDecay="3" angularAccelDecay="11.3" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
+    <IFCSParams scmSpeed="241" boostSpeedForward="290" boostSpeedBackward="230" maxSpeed="1341" attitudeLimiterEnabled="0" linearLimiterType="NormalizedUniform" torqueDistanceThreshold="-1" torqueImbalanceMultiplier="0.35" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1" precisionMinDistance="5" precisionMaxDistance="50" precisionLandingMultiplier="0.7" linearAccelDecay="3" angularAccelDecay="11.3" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
       <maxAngularVelocity x="54" y="245" z="54" __type="Vec3" />
-      <afterburner afterburnAccelMultiplierControlSurface="2" afterburnerSpoolUpTime="0.15" afterburnerCapacitorThresholdRatio="0.25" capacitorMax="1800" capacitorAfterburnerIdleCost="20" capacitorAfterburnerLinearCost="1" capacitorAfterburnerAngularCost="0.1" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="100" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="cfd100b7-0353-4d81-a943-db23dc3ff573" __type="AfterburnerParams">
+      <afterburner usePerDirectionModifiers="0" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0.15" afterburnerRampUpTime="0" afterburnerRampDownTime="0" afterburnerCapacitorThresholdRatio="0.25" capacitorMax="1800" capacitorAfterburnerIdleCost="20" capacitorAfterburnerLinearCost="1" capacitorAfterburnerAngularCost="0.1" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="100" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="cfd100b7-0353-4d81-a943-db23dc3ff573" __type="AfterburnerParams">
         <afterburnAccelMultiplier x="2.5" y="1.3" z="1.5" __type="Vec3" />
+        <afterburnAccelMultiplierPositive x="2" y="2" z="2" __type="Vec3" />
+        <afterburnAccelMultiplierNegative x="2" y="2" z="2" __type="Vec3" />
         <afterburnAngAccelMultiplier x="2" y="2" z="2" __type="Vec3" />
+        <afterburnAngVelocityMultiplier x="1" y="1" z="1" __type="Vec3" />
       </afterburner>
+      <thrusterTypesForAngularControl>
+        <Bool value="1" />
+        <Bool value="0" />
+        <Bool value="0" />
+      </thrusterTypesForAngularControl>
       <aeroSurfaces>
         <AeroSurface name="HorizontalFuselage" flatPlateSurface="1" liftLevelFlight="0" peakLift="1.1" minLift="0.6" negativeAoAMultiplier="1" flatPlateMultiplier="0.5" criticalAngle="16" fullyStalledAngle="20" detachParentPartName="" transformParentPartName="" __type="AeroSurface">
           <offset x="0" y="0" z="0" __type="Vec3" />
@@ -209,7 +217,7 @@
       <positiveLinearScale x="1" y="1" z="1.25" __type="Vec3" />
       <negativeLinearScale x="1" y="1" z="0.6" __type="Vec3" />
       <positiveAngularScale x="0.3" y="0.3" z="0.75" __type="Vec3" />
-      <negativeAngularScale x="0.3" y="0.3" z="0.75" __type="Vec3" />
+      <negativeAngularScale x="0.72" y="0.3" z="0.75" __type="Vec3" />
       <aeroParams peakTorqueScaleSpeed="300" controlTorqueForSpeedCurveMax="480" forwardBackThrustMultiplier="0.4" zeroGLiftMultiplier="0.2" zeroGDragMultiplier="2" zeroGTorqueMultiplier="0.05" maxAtmosphereDensity="1" pitchAnimationVariable="pitchDeflection" yawAnimationVariable="yawDeflection" rollAnimationVariable="rollDeflection" __type="AeroParams">
         <controlTorque x="250" y="180" z="200" __type="Vec3" />
         <dampingTorque x="300" y="80" z="250" __type="Vec3" />

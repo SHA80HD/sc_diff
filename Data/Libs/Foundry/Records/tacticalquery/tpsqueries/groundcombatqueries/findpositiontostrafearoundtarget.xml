@@ -6,19 +6,13 @@
       </requirements>
       <content __type="TQSOptionContent">
         <parameters>
-          <TQSInputFloatValue condition="height" value="10" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="minimumRangeForMeasure" value="7.5" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSInputFloatValue>
-          <TQSInputFloatValue condition="minimumRangeForMeasure" value="6" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
-            <requirements __type="TagsDNF">
-              <terms />
-            </requirements>
-            <overrides />
-          </TQSInputFloatValue>
-          <TQSInputFloatValue condition="maximumRangeForMeasure" value="15" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="maximumRangeForMeasure" value="17.5" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -30,9 +24,15 @@
             </requirements>
             <overrides />
           </TQSInputFloatValue>
+          <TQSInputFloatValue condition="height" value="10" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
         </parameters>
         <generation>
-          <TQSInputFloatValue condition="grid_around_puppet" value="25" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="grid_around_puppet" value="10" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -46,7 +46,7 @@
             </requirements>
             <overrides />
           </TQSInputBoolValue>
-          <TQSInputFloatValue condition="min_distance_to_attentionTarget" value="6" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="min_distance_to_attentionTarget" value="3.3" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -58,12 +58,6 @@
             </requirements>
             <overrides />
           </TQSInputBoolValue>
-          <TQSInputFloatValue condition="max_distance_from_puppet" value="17" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
-            <requirements __type="TagsDNF">
-              <terms />
-            </requirements>
-            <overrides />
-          </TQSInputFloatValue>
           <TQSInputFloatValue condition="min_distance_from_puppet" value="3" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
@@ -83,12 +77,125 @@
             </requirements>
             <overrides />
           </TQSInputBoolValue>
-          <TQSInputBoolValue condition="otherSide_of_attentionTarget" value="0" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+        </conditions>
+        <weights>
+          <TQSWeightInputValue condition="random" weight="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="ringAround_the_attentionTarget" weight="0.75" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="distance_from_attentionTarget" weight="-0.35" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="directness_to_attentionTarget" weight="0.1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="distance_from_puppet" weight="-0.25" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputValue condition="heightRelativeAbs_from_attentionTarget" weight="-3" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputValue>
+          <TQSWeightInputFloatValue condition="min_objectsDot_from_attentionTarget" weight="1" value="-0.3" __type="TQSInput" __polymorphicType="TQSWeightInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputFloatValue>
+          <TQSWeightInputFloatValue condition="max_objectsDot_from_attentionTarget" weight="1" value="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSWeightInputFloatValue>
+        </weights>
+      </content>
+      <optionOverrides />
+    </TQSEmbeddedOption>
+    <TQSEmbeddedOption __type="TQSOption" __polymorphicType="TQSEmbeddedOption">
+      <requirements __type="TagsDNF">
+        <terms />
+      </requirements>
+      <content __type="TQSOptionContent">
+        <parameters>
+          <TQSInputFloatValue condition="height" value="20" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="minimumRangeForMeasure" value="9" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="maximumRangeForMeasure" value="30" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+          <TQSInputFloatValue condition="density" value="2" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </parameters>
+        <generation>
+          <TQSInputFloatValue condition="grid_around_puppet" value="24" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
+        </generation>
+        <conditions>
+          <TQSInputBoolValue condition="isPointReachable_from_puppet" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSInputBoolValue>
+          <TQSInputBoolValue condition="isInside_of_area" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+            <requirements __type="TagsDNF">
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="8cfd65e2-1ab6-476f-8765-59ec700b09f7" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
+            </requirements>
+            <overrides />
+          </TQSInputBoolValue>
+          <TQSInputFloatValue condition="min_distance_to_attentionTarget" value="5" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
         </conditions>
         <weights>
           <TQSWeightInputValue condition="random" weight="0.1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
@@ -97,13 +204,7 @@
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="ringAround_the_attentionTarget" weight="0.3" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
-            <requirements __type="TagsDNF">
-              <terms />
-            </requirements>
-            <overrides />
-          </TQSWeightInputValue>
-          <TQSWeightInputValue condition="distance_from_attentionTarget" weight="0.15" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="distance_from_attentionTarget" weight="-3" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -115,13 +216,13 @@
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="distance_from_puppet" weight="0.15" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="distance_from_puppet" weight="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="heightRelative_from_attentionTarget" weight="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="heightRelativeAbs_from_attentionTarget" weight="-1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -137,25 +238,25 @@
       </requirements>
       <content __type="TQSOptionContent">
         <parameters>
-          <TQSInputFloatValue condition="height" value="10" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="height" value="30" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSInputFloatValue>
-          <TQSInputFloatValue condition="minimumRangeForMeasure" value="6" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="minimumRangeForMeasure" value="9" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSInputFloatValue>
-          <TQSInputFloatValue condition="maximumRangeForMeasure" value="15" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="maximumRangeForMeasure" value="30" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSInputFloatValue>
-          <TQSInputFloatValue condition="density" value="3" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="density" value="0.8" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -163,7 +264,7 @@
           </TQSInputFloatValue>
         </parameters>
         <generation>
-          <TQSInputFloatValue condition="grid_around_puppet" value="25" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+          <TQSInputFloatValue condition="grid_around_puppet" value="8" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -177,27 +278,34 @@
             </requirements>
             <overrides />
           </TQSInputBoolValue>
-          <TQSInputBoolValue condition="canShoot_to_attentionTarget" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
+          <TQSInputBoolValue condition="isInside_of_area" value="1" __type="TQSInput" __polymorphicType="TQSInputBoolValue">
             <requirements __type="TagsDNF">
-              <terms />
+              <terms>
+                <TagsDNFTerm __type="TagsDNFTerm">
+                  <positiveTags>
+                    <Reference value="8cfd65e2-1ab6-476f-8765-59ec700b09f7" />
+                  </positiveTags>
+                  <negativeTags />
+                </TagsDNFTerm>
+              </terms>
             </requirements>
             <overrides />
           </TQSInputBoolValue>
+          <TQSInputFloatValue condition="min_distance_to_attentionTarget" value="2" __type="TQSInput" __polymorphicType="TQSInputFloatValue">
+            <requirements __type="TagsDNF">
+              <terms />
+            </requirements>
+            <overrides />
+          </TQSInputFloatValue>
         </conditions>
         <weights>
-          <TQSWeightInputValue condition="random" weight="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="random" weight="0.2" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="ringAround_the_attentionTarget" weight="0.3" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
-            <requirements __type="TagsDNF">
-              <terms />
-            </requirements>
-            <overrides />
-          </TQSWeightInputValue>
-          <TQSWeightInputValue condition="distance_from_attentionTarget" weight="-0.75" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="distance_from_attentionTarget" weight="-3" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
@@ -209,13 +317,13 @@
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="distance_from_puppet" weight="0.15" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="distance_from_puppet" weight="0.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>
             <overrides />
           </TQSWeightInputValue>
-          <TQSWeightInputValue condition="heightRelative_from_attentionTarget" weight="1.5" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
+          <TQSWeightInputValue condition="heightRelativeAbs_from_attentionTarget" weight="-1" __type="TQSInput" __polymorphicType="TQSWeightInputValue">
             <requirements __type="TagsDNF">
               <terms />
             </requirements>

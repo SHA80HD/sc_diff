@@ -35,10 +35,12 @@
     </SEntityPhysicsControllerParams>
     <SSpawnerParams spawnOnGameStart="1" spawnWithinPlayerRange="0" startActive="1" groupIndex="0" faction="00000000-0000-0000-0000-000000000000" onRequestSpawn="0" spawnInMovement="0" __type="DataForgeComponentParams" __polymorphicType="SSpawnerParams">
       <spawnRules>
-        <SSpawnOnTimer timeBetweenSpawns="0" maxEntities="1" maxLifetimeEntities="0" dontOverlap="1" startTimerOnDone="0" __type="SSpawnRules" __polymorphicType="SSpawnOnTimer" />
+        <SSpawnOnStreamIn __type="SSpawnRules" __polymorphicType="SSpawnOnStreamIn" />
       </spawnRules>
-      <despawnRules despawnDelaySeconds="10" __type="SDespawnRules">
-        <rules />
+      <despawnRules despawnDelaySeconds="0" __type="SDespawnRules">
+        <rules>
+          <SDespawnRule_OnStreamOut ruleDelaySeconds="0" __type="SDespawnRule" __polymorphicType="SDespawnRule_OnStreamOut" />
+        </rules>
       </despawnRules>
       <portRefillData>
         <IndividualPortRefillData __type="BasePortRefillData" __polymorphicType="IndividualPortRefillData">

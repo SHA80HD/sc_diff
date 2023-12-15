@@ -58,7 +58,7 @@
       <maskedRetriggerSetup>
       </maskedRetriggerSetup>
     </ActorStatData>
-    <ActorStatData statType="HealthPool" initialValue="150" minimumStatValue="0" maximumStatValue="150" decayRate="0" baseDecayCooldown="0" initialCooldown="0" cooldownType="Time" decayToCurrentStatus="0" mutuallyExclusiveStatuses="0" remoteClientPredicted="1" __type="ActorStatData">
+    <ActorStatData statType="HealthPool" initialValue="100" minimumStatValue="0" maximumStatValue="100" decayRate="0" baseDecayCooldown="0" initialCooldown="0" cooldownType="Time" decayToCurrentStatus="0" mutuallyExclusiveStatuses="0" remoteClientPredicted="1" __type="ActorStatData">
       <linkedStats>
         <LinkedStat linkedStat="DownedDamage" __type="LinkedStatBase" __polymorphicType="LinkedStat">
           <linkedStatSetup __type="LinkedStatSetupBase" __polymorphicType="LinkedStatSetup">
@@ -95,7 +95,7 @@
             </ActorStatusData>
             <ActorStatusData actorStatusType="Hurt" __type="ActorStatusData">
               <statusTrigger>
-                <DefaultStatusTrigger triggerMinThreshold="0" triggerMaxThreshold="63" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
+                <DefaultStatusTrigger triggerMinThreshold="0" triggerMaxThreshold="90" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
                   <fortitudeLevelModifier>
                   </fortitudeLevelModifier>
                 </DefaultStatusTrigger>
@@ -309,53 +309,7 @@
       <linkedStats />
       <effectSetup>
         <StatusEffectSetup __type="StatusEffectSetupBase" __polymorphicType="StatusEffectSetup">
-          <actorStatuses>
-            <ActorStatusData actorStatusType="PoorAtmosphereQuality" __type="ActorStatusData">
-              <statusTrigger>
-                <DefaultStatusTrigger triggerMinThreshold="0" triggerMaxThreshold="0.95" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
-                  <fortitudeLevelModifier>
-                  </fortitudeLevelModifier>
-                </DefaultStatusTrigger>
-              </statusTrigger>
-              <statusEffectTriggers>
-                <StatusEffectTrigger statusEffectType="StaminaPool" triggerMinThreshold="0.2" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="0.825" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="StaminaRegen" triggerMinThreshold="0.2" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="0.825" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="Wheezing" triggerMinThreshold="0.2" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="0.333" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-              </statusEffectTriggers>
-            </ActorStatusData>
-            <ActorStatusData actorStatusType="Intoxicated" __type="ActorStatusData">
-              <statusTrigger>
-                <DefaultStatusTrigger triggerMinThreshold="0.4" triggerMaxThreshold="1" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
-                  <fortitudeLevelModifier>
-                  </fortitudeLevelModifier>
-                </DefaultStatusTrigger>
-              </statusTrigger>
-              <statusEffectTriggers>
-                <StatusEffectTrigger statusEffectType="HeadacheAudio" triggerMinThreshold="0.7" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="PassOutUnconscious" triggerMinThreshold="0.7" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-              </statusEffectTriggers>
-            </ActorStatusData>
-          </actorStatuses>
+          <actorStatuses />
         </StatusEffectSetup>
       </effectSetup>
       <maskedRetriggerSetup>
@@ -365,58 +319,7 @@
       <linkedStats />
       <effectSetup>
         <StatusEffectSetup __type="StatusEffectSetupBase" __polymorphicType="StatusEffectSetup">
-          <actorStatuses>
-            <ActorStatusData actorStatusType="PoorAtmosphereQuality" __type="ActorStatusData">
-              <statusTrigger>
-                <DefaultStatusTrigger triggerMinThreshold="0" triggerMaxThreshold="0.95" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
-                  <fortitudeLevelModifier>
-                  </fortitudeLevelModifier>
-                </DefaultStatusTrigger>
-              </statusTrigger>
-              <statusEffectTriggers>
-                <StatusEffectTrigger statusEffectType="Wheezing" triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-              </statusEffectTriggers>
-            </ActorStatusData>
-            <ActorStatusData actorStatusType="Intoxicated" __type="ActorStatusData">
-              <statusTrigger>
-                <DefaultStatusTrigger triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusTriggerBase" __polymorphicType="DefaultStatusTrigger">
-                  <fortitudeLevelModifier>
-                  </fortitudeLevelModifier>
-                </DefaultStatusTrigger>
-              </statusTrigger>
-              <statusEffectTriggers>
-                <StatusEffectTrigger statusEffectType="CoughBlood" triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="LightSensitivity" triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="DrunkLocomotion" triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="1" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="HeadacheAudio" triggerMinThreshold="0.1" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="10" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-                <StatusEffectTrigger statusEffectType="PassOutUnconscious" triggerMinThreshold="0.3" triggerMaxThreshold="1" __type="StatusEffectTrigger">
-                  <value>
-                    <StatusEffectValueAbsolute value="5" __type="StatusEffectValue" __polymorphicType="StatusEffectValueAbsolute" />
-                  </value>
-                </StatusEffectTrigger>
-              </statusEffectTriggers>
-            </ActorStatusData>
-          </actorStatuses>
+          <actorStatuses />
         </StatusEffectSetup>
       </effectSetup>
       <maskedRetriggerSetup>

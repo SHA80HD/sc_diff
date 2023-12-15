@@ -43,22 +43,50 @@
     </SCItemSeatParams>
     <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
       <Interactable __type="SInteractableParams">
-        <SharedInteractions />
+        <SharedInteractions>
+          <SSharedInteractionParams Name="SeatEnter" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_use_passenger_seat" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="SeatExit" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_exit_seat" DisplayType="Show" GenericCursor="MultiAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
         <InteractionPoints>
-          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Exit" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Passenger" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
             <Tags />
-            <HighlightBehaviors>
-              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
-                <HighlightBehaviorNodeParams>
-                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
-                    <boneNames>
-                      <String value="Exit_Button" />
-                    </boneNames>
-                  </SBonesHighlightNode>
-                </HighlightBehaviorNodeParams>
-                <nextNodes />
-              </SHighlightBehaviorNode>
-            </HighlightBehaviors>
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_SeatAccess_Exit" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
             <AdditionalCollisionBones />
             <Offset __type="QuatT">
               <Rotation x="0" y="0" z="90" __type="Ang3" />
@@ -75,7 +103,9 @@
             </Primitive>
             <PlayerAnimatedInteractionParams>
             </PlayerAnimatedInteractionParams>
-            <Interactions />
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
         <interactionTasks />
@@ -121,6 +151,16 @@
             <Palette RootRecord="6051ff21-1718-455b-8df0-b7a2c7dd15aa" ChildPath="" __type="TintPaletteRef" />
             <materialVariants />
           </SMaterialNodeParams>
+          <SMaterialNodeParams Tags="Paint_STV_Racing_Yellow_White_Grey_Stripes" __type="SMaterialNodeParams">
+            <Material path="Objects/Vehicles/GRIN/STV/Materials/grin_stv_racing_yellow_white_grey_stripes.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+            <Palette RootRecord="a8629d75-0500-4d72-ab9a-56115e64d0e6" ChildPath="" __type="TintPaletteRef" />
+            <materialVariants />
+          </SMaterialNodeParams>
+          <SMaterialNodeParams Tags="Paint_STV_Racing_Blue_Blue_Blue_TigerStripes" __type="SMaterialNodeParams">
+            <Material path="Objects/Vehicles/GRIN/STV/Materials/grin_stv_racing_blue_blue_blue_tigerstripes.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+            <Palette RootRecord="e39e86ad-ee54-4fd2-bbed-2991653d9e46" ChildPath="" __type="TintPaletteRef" />
+            <materialVariants />
+          </SMaterialNodeParams>
         </materialVariants>
       </Material>
     </SGeometryResourceParams>
@@ -163,7 +203,7 @@
     </SEntityComponentSequencerParams>
     <SCItemSeatDashboardParams canTogglePowerForObservedItems="0" PowerOnline="1" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatDashboardParams">
       <dashboardInteractions flightReady="null" powerOn="null" powerOff="null" saveQuitInteraction="null" atcOpenDoorsInteraction="null" atcCloseDoorsInteraction="null" ejectCargo="null" hasSimpleStartupSequence="0" __type="SDashboardInteractionParams" />
-      <seatInteractions closeIP="null" openIP="null" exitIP="Interactable.InteractionPoints" ejectionIP="null" cycleHUDIP="null" __type="SDashboardSeatInteractionParams" />
+      <seatInteractions closeIP="null" openIP="null" exitIP="Interactable.InteractionPoints[1]" ejectionIP="null" cycleHUDIP="null" __type="SDashboardSeatInteractionParams" />
       <powerInteractions powerIP="null" __type="SDashboardPowerInteractionParams" />
       <engineInteractions engineIP="null" __type="SDashboardEngineInteractionParams" />
       <systemInteractions doorsIP="null" landingIP="null" cargoIP="null" __type="SDashboardSystemInteractionParams" />

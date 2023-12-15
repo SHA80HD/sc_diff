@@ -426,83 +426,34 @@
       <rtpcMomentum rtpc="PhysicalAudio_Momentum" __type="AudioRtpc" />
       <rtpcCarried rtpc="PhysicalAudio_CarryState" __type="AudioRtpc" />
     </EntityPhysicalAudioParams>
-    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
-      <StateTypes>
-        <SInteractionStateType StateTypeName="Bed" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
-          <States>
-            <SInteractionState StateName="Inactive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[5]" NextState="null" __type="SInteractionStateTransition" />
-              </Interactions>
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
-            <SInteractionState StateName="LyingDown" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="null" __type="SInteractionStateTransition" />
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="null" __type="SInteractionStateTransition" />
-              </Interactions>
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
-            <SInteractionState StateName="EnteringBed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions />
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
-            <SInteractionState StateName="ExitingBed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="sequences[2]" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions />
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
-          </States>
-          <StateModifiers>
-            <UsableStateModifier useChannel="useSlots.UsableUseSlot.useChannelInstances" onStartUsing="StateTypes.SInteractionStateType.States[2]" onIdle="StateTypes.SInteractionStateType.States[1]" onStopUsing="StateTypes.SInteractionStateType.States[3]" onDormant="StateTypes.SInteractionStateType.States[0]" __type="SStateModifier" __polymorphicType="UsableStateModifier" />
-          </StateModifiers>
-        </SInteractionStateType>
-      </StateTypes>
-    </SInteractionStateMachineParams>
+    <SHealthComponentParams Health="50" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="Destroyed" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <AINavigationDynamicTriggerComponent __type="DataForgeComponentParams" __polymorphicType="AINavigationDynamicTriggerComponent">
+      <adapters>
+        <DynamicObjectNavigationTriggerAdapter minSpeedToBeIgnored="0.1" allowNavMeshCutout="0" optionalCostConfig="00000000-0000-0000-0000-000000000000" __type="NavigationTriggerAdapter" __polymorphicType="DynamicObjectNavigationTriggerAdapter">
+          <shapeConfig>
+            <BoundingBoxTraversalCostShapeConfig __type="TraversalCostShapeConfig" __polymorphicType="BoundingBoxTraversalCostShapeConfig" />
+          </shapeConfig>
+        </DynamicObjectNavigationTriggerAdapter>
+      </adapters>
+    </AINavigationDynamicTriggerComponent>
     <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
       <sequences>
         <SReplicatedSequencerDefSequenceParams name="BedDownEmpty" interaction="Interactable.SharedInteractions[6]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
@@ -619,7 +570,7 @@
         </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="Bed" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_bed" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="FeetLink" stance="ProneBack" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="314ba8bb-1c54-4945-8fc1-3d0b4447f93d" name="Bed" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_bed" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="FeetLink" stance="ProneBack" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints>
             <WeakPointer interactionPoints="Interactable.InteractionPoints[2]" />
             <WeakPointer interactionPoints="Interactable.InteractionPoints[3]" />
@@ -665,5 +616,82 @@
         <SDragDropUsableUserConfig useChannelArchetype="ac0496d4-954c-44af-b1b0-4254a2501092" interactionDragOut="Interactable.SharedInteractions[4]" interactionDropIn="Interactable.SharedInteractions[5]" __type="SDragDropUsableUserConfig" />
       </dragDropUserConfigs>
     </SCEntityComponentDragDropUsableUserParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="Bed" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Inactive" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[5]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="LyingDown" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="EnteringBed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="ExitingBed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="sequences[2]" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <UsableStateModifier useChannel="useSlots.UsableUseSlot.useChannelInstances" onStartUsing="null" onIdle="null" onStopUsing="null" onDormant="null" __type="SStateModifier" __polymorphicType="UsableStateModifier" />
+          </StateModifiers>
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
   </Components>
 </EntityClassDefinition.ActorMovable_Gurney_Lowtech_Hospital_1_a>

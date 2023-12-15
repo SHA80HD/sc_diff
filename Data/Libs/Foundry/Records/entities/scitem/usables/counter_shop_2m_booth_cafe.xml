@@ -1,6 +1,5 @@
 <EntityClassDefinition.Counter_Shop_2m_booth_cafe Category="Default" Icon="Usable.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="c83ceffc-00d4-4f7f-83ec-647c4dd83b90" __path="libs/foundry/records/entities/scitem/usables/counter_shop_2m_booth_cafe.xml">
   <tags>
-    <Reference value="0cdba0b7-8087-467a-81c5-bae055f98c48" />
     <Reference value="6878db42-b452-474c-9e5a-5c66bb021e20" />
     <Reference value="f87b5fc1-8c19-4843-9148-9ee722f3428c" />
   </tags>
@@ -63,22 +62,26 @@
         </menuTitle>
       </Interactable>
     </SEntityInteractableParams>
-    <SActorUsableParams archetype="e5319031-d1cb-4be8-a818-85d8811755c9" fragmentTag="counter" isExterior="0" allowDeadOrUnconscious="0" __type="DataForgeComponentParams" __polymorphicType="SActorUsableParams">
+    <SActorUsableParams archetype="e5319031-d1cb-4be8-a818-85d8811755c9" fragmentTag="counter_bar" isExterior="0" allowDeadOrUnconscious="0" __type="DataForgeComponentParams" __polymorphicType="SActorUsableParams">
       <useSlots>
         <UsableUseSlot name="Counter" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="1" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
           <useChannelInstances>
             <UsableUseChannelInstance useChannelArchetype="05fae299-91e4-4804-a682-63ba41ff20a4" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
               <alignmentSlots>
-                <WeakPointer alignmentSlots="0" />
+                <WeakPointer alignmentSlots="alignmentSlots" />
               </alignmentSlots>
               <conditionList>
               </conditionList>
               <useChannelInstancesToEnable />
               <useChannelInstancesToDisable />
-              <tagsToAddOnEnter />
+              <tagsToAddOnEnter>
+                <Reference value="6cc02d8d-4236-4095-b3bd-f5bcdab23791" />
+              </tagsToAddOnEnter>
               <tagsToRemoveOnEnter />
               <tagsToAddOnExit />
-              <tagsToRemoveOnExit />
+              <tagsToRemoveOnExit>
+                <Reference value="6cc02d8d-4236-4095-b3bd-f5bcdab23791" />
+              </tagsToRemoveOnExit>
               <availableActionGroups />
             </UsableUseChannelInstance>
             <UsableUseChannelInstance useChannelArchetype="b4e88aa9-096f-4773-9fab-f5acde7dc15e" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="1" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
@@ -176,21 +179,7 @@
         </UsableUseSlot>
         <UsableUseSlot name="Vendor" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="1" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
           <useChannelInstances>
-            <UsableUseChannelInstance useChannelArchetype="de504ec1-cb3b-487c-a3e0-6d155fad59ae" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
-              <alignmentSlots>
-                <WeakPointer alignmentSlots="alignmentSlots" />
-              </alignmentSlots>
-              <conditionList>
-              </conditionList>
-              <useChannelInstancesToEnable />
-              <useChannelInstancesToDisable />
-              <tagsToAddOnEnter />
-              <tagsToRemoveOnEnter />
-              <tagsToAddOnExit />
-              <tagsToRemoveOnExit />
-              <availableActionGroups />
-            </UsableUseChannelInstance>
-            <UsableUseChannelInstance useChannelArchetype="e63a0408-c00e-412e-a21a-055585bba5a9" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+            <UsableUseChannelInstance useChannelArchetype="04db59c1-9230-491f-bb77-18dc11e600df" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
               <alignmentSlots>
                 <WeakPointer alignmentSlots="alignmentSlots" />
               </alignmentSlots>
@@ -285,9 +274,78 @@
             <Reference value="a9458917-1e63-4bc1-bdec-b5b781f81279" />
           </optionalGameTags>
         </UsableUseSlot>
+        <UsableUseSlot name="Patron" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="1" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="4edfd15e-44f6-4ee8-8de5-6351b03f4300" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="1" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="857bd0e3-717d-4849-95d4-14c67ca491ed" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="37dd039c-08b7-4bb2-b7ae-455000536cb9" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="1" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="95c7dee2-4ca1-4a9c-abb2-15f3d11a5194" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts />
+          <useSlotsToDisable />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags>
+            <Reference value="02bcd562-293f-421f-8b47-876503eeb13a" />
+          </optionalGameTags>
+        </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="" available="1" canPlayerUse="1" fragmentTag="back" slottedFragmentTag="" helperName="$anchor_keeper_1" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="b80bb629-2fab-46b5-8a3a-fb8b8db83f6c" name="" available="1" canPlayerUse="1" fragmentTag="back" slottedFragmentTag="" helperName="$anchor_keeper_2" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="FeetLink" stance="Stand" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -307,6 +365,30 @@
             </idlePoseOverrides>
           </usableIdleParams>
         </PointAlignmentSlot>
+        <AreaAlignmentSlot id="fa9c4a74-0197-4f08-a196-023e31a05d2b" name="" available="1" canPlayerUse="1" fragmentTag="front" slottedFragmentTag="" helperName="$anchor_patron_2" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="FeetLink" stance="Stand" useHandIK="0" useADIK="0" maxAmount="1" interactionOnEnter="null" __type="AlignmentSlotBase" __polymorphicType="AreaAlignmentSlot">
+          <interactionPoints />
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="OnTakenPlaceAtCounter" additionalTags="" eventTriggerMask="OnlyPlayer" holsterWeapon="1" enterInteraction="null" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="OnLeaveCounter" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="1" exitOnMovement="0" exitOnJump="0" exitOnDamageTaken="0" exitInteraction="null" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+          <areaTypeParams>
+            <BoxAreaAlignmentSlotTypeParams __type="AreaAlignmentSlotTypeParams" __polymorphicType="BoxAreaAlignmentSlotTypeParams">
+              <min x="-2" y="-0.5" z="0" __type="Vec3" />
+              <max x="1" y="1" z="2" __type="Vec3" />
+            </BoxAreaAlignmentSlotTypeParams>
+          </areaTypeParams>
+        </AreaAlignmentSlot>
       </alignmentSlots>
       <slottingSetups>
         <UsableSlottingSetup fragmentTagsForSlot="" __type="UsableSlottingSetup">

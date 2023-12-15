@@ -18,7 +18,7 @@
   <Components>
     <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
       <PhysType>
-        <SEntityRigidPhysicsControllerParams Mass="1" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+        <SEntityRigidPhysicsControllerParams Mass="800" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
           <breakableParams>
           </breakableParams>
           <gameCollisionClass>
@@ -36,7 +36,7 @@
       </PhysType>
     </SEntityPhysicsControllerParams>
     <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
-      <AttachDef Type="Cargo" SubType="Cargo" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+      <AttachDef Type="InventoryContainer" SubType="Cargo" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
         <Localization Name="@Item_NameSTOR_opencontainer_8SCU" ShortName="@Item_NameSTOR_opencontainer_8SCU" Description="@Item_DescSTOR_opencontainer_shared" __type="SCItemLocalization">
           <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
             <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -45,11 +45,11 @@
         </Localization>
         <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
         <inventoryOccupancyVolume>
-          <SStandardCargoUnit standardCargoUnits="0" __type="SBaseCargoUnit" __polymorphicType="SStandardCargoUnit" />
+          <SStandardCargoUnit standardCargoUnits="8" __type="SBaseCargoUnit" __polymorphicType="SStandardCargoUnit" />
         </inventoryOccupancyVolume>
-        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensions x="2.5" y="2.5" z="2.5" __type="Vec3" />
         <inventoryOccupancyDimensionsUIOverride>
-          <Vec3 x="0.75" y="0.75" z="0.75" __type="Vec3" />
+          <Vec3 x="1" y="1" z="1" __type="Vec3" />
         </inventoryOccupancyDimensionsUIOverride>
       </AttachDef>
       <entityAttachParams>
@@ -72,9 +72,37 @@
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Drop" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_drop" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="8ad7ee9f-9bb5-4a06-86ee-ebc4439d3b15" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Place" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_place" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="c13e010a-f049-4cd3-b21d-334245672113" />
+                </presetList>
+                <conditionParams />
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
         </SharedInteractions>
         <InteractionPoints>
-          <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="root" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="2" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+          <SInteractionPointParams FirstInteractionPrimary="0" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="1" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="root" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="2" UseHorizontalDistance="1" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
             <Tags />
             <HighlightBehaviors />
             <AdditionalCollisionBones />
@@ -94,9 +122,9 @@
             <PlayerAnimatedInteractionParams>
             </PlayerAnimatedInteractionParams>
             <Interactions>
-              <SInteractionParams Interaction="Interactable.SharedInteractions" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[2]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
@@ -143,7 +171,7 @@
               <StateAutoChange>
               </StateAutoChange>
               <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -160,8 +188,8 @@
               <StateAutoChange>
               </StateAutoChange>
               <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="null" __type="SInteractionStateTransition" />
               </Interactions>
               <interactionPoints />
               <stateTags __type="TagList">
@@ -279,6 +307,6 @@
       <rtpcMomentum rtpc="PhysicalAudio_Momentum" __type="AudioRtpc" />
       <rtpcCarried rtpc="PhysicalAudio_CarryState" __type="AudioRtpc" />
     </EntityPhysicalAudioParams>
-    <SCItemInventoryContainerComponentParams openInventoryInteraction="Interactable.SharedInteractions" containerParams="7a42ef19-2ab2-4974-9b8b-ac7482c1ac22" canAutoStoreRestrictedItems="0" __type="DataForgeComponentParams" __polymorphicType="SCItemInventoryContainerComponentParams" />
+    <SCItemInventoryContainerComponentParams openInventoryInteraction="Interactable.SharedInteractions[0]" containerParams="7a42ef19-2ab2-4974-9b8b-ac7482c1ac22" canAutoStoreRestrictedItems="0" __type="DataForgeComponentParams" __polymorphicType="SCItemInventoryContainerComponentParams" />
   </Components>
 </EntityClassDefinition.Carryable_TBO_InventoryContainer_8SCU>

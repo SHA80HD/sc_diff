@@ -26,7 +26,7 @@
       </ModelTag>
       <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
         <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
-          <Geometry path="Objects/buildingsets/human/lowtech/prop/utilitarian/cargo/cargo_rack_slot_1_a.cgf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Geometry path="Objects/buildingsets/human/lowtech/prop/utilitarian/cargo/cargo_rack_slot_1_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
           <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
           <SimulationGeometry>
           </SimulationGeometry>
@@ -96,7 +96,7 @@
           </WearRange>
           <InventoryItems />
           <entries>
-            <SItemPortLoadoutEntryParams itemPortName="$slot_01" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="$slot_01" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Metal_Steel" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
@@ -178,7 +178,7 @@
       <StateTypes>
         <SInteractionStateType StateTypeName="led_slot_01" bindingsMethod="None" DefaultState="StateTypes.SInteractionStateType.States[1]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
-            <SInteractionState StateName="led_slot_01_activated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="led_slot_01_activated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[0]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags>
                 <Reference value="33129b2d-d5d2-408b-aacf-342ab92258fb" />
               </enterStateEffectTags>
@@ -199,7 +199,7 @@
                 <tags />
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="led_slot_01_deactivated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+            <SInteractionState StateName="led_slot_01_deactivated" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[1]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags>
                 <Reference value="a1f4a441-bb9a-4d0c-9c71-46eaeea6e8ac" />
               </enterStateEffectTags>
@@ -243,7 +243,7 @@
       </Interactable>
     </SEntityInteractableParams>
     <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
-      <AttachDef Type="Cargo" SubType="Cargo" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+      <AttachDef Type="UNDEFINED" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
         <Localization Name="@ui_ItemsAvailable" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
           <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
             <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -261,5 +261,36 @@
       <entityAttachParams>
       </entityAttachParams>
     </SAttachableComponentParams>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks>
+        <SSequencerSkeletonAnimationTaskParams animationName="extend" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+        <SSequencerSkeletonAnimationTaskParams animationName="retract" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+      </AnimationTasks>
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="extend" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+        <SReplicatedSequencerDefSequenceParams name="retract" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
   </Components>
 </EntityClassDefinition.ugf_cargo_rack_slot_1_empty_a>

@@ -33,7 +33,7 @@
       <DeathGasComposition />
       <InteractionLocks />
     </SHealthComponentParams>
-    <SDegradationParams MaxLifetimeHours="100" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="1" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="100" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="1" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points>
           <Vec2 x="0" y="0" __type="Vec2" />
@@ -72,7 +72,7 @@
       <entityAttachParams>
       </entityAttachParams>
     </SAttachableComponentParams>
-    <SCItemWeaponComponentParams ammoContainerRecord="00000000-0000-0000-0000-000000000000" ShouldIgnorePrimaryAmmoContainer="0" geometryTags="" supplementaryFireTime="0" proceduralAnimationRecord="00000000-0000-0000-0000-000000000000" actorProceduralRecoilConfig="00000000-0000-0000-0000-000000000000" autoAimMuzzleAngleOverwrite="-1" aimableAnglesRecord="886b4b9a-c8d7-4da7-96e8-c6423fb9cacf" gimbalModeModifierRecord="d2357515-cf1a-4064-8552-52e0e24b5cd9" useAdsHelper="1" isAllowedInGreenZones="1" uncollapseOnTurnedOn="0" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponComponentParams">
+    <SCItemWeaponComponentParams ammoContainerRecord="00000000-0000-0000-0000-000000000000" ShouldIgnorePrimaryAmmoContainer="0" geometryTags="" supplementaryFireTime="0" proceduralAnimationRecord="00000000-0000-0000-0000-000000000000" actorProceduralRecoilConfig="00000000-0000-0000-0000-000000000000" autoAimMuzzleAngleOverwrite="-1" aimableAnglesRecord="886b4b9a-c8d7-4da7-96e8-c6423fb9cacf" gimbalModeModifierRecord="d2357515-cf1a-4064-8552-52e0e24b5cd9" useAdsHelper="1" isAllowedInGreenZones="1" uncollapseOnTurnedOn="0" allowFiringDuringFiremodeSwitch="1" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponComponentParams">
       <secondaryAmmoContainers />
       <defaultAdsCameraOffset x="0" y="0" z="0" __type="Vec3" />
       <onAttachParams />
@@ -351,7 +351,7 @@
       <aimAction>
       </aimAction>
       <fireActions>
-        <SWeaponActionFireTractorBeamParams name="TractorBeam" localisedName="@item_Name_Tractor_Beam" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="2e97ef2b-db28-4bba-a37f-e52978fc3f61" aiShootingMode="Single" fireHelper="emittor" toggle="0" minForce="1500" maxForce="500000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="135" fullStrengthDistance="68" maxAngle="80" maxVolume="5000" volumeForceCoefficient="0.3" tetherBreakTime="2.25" safeRangeValueFactor="0.85" maxPlayerLookRotationScale="1" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="0" shouldFireInHangars="1" shouldTractorSelf="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="0" maxEnergyDraw="0" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilGrappling="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" hitRadius="0.1" ignoreActorStandingOnEntityTag="00000000-0000-0000-0000-000000000000" ignoreVolumeTag="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
+        <SWeaponActionFireTractorBeamParams name="TractorBeam" localisedName="@item_Name_Tractor_Beam" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="2e97ef2b-db28-4bba-a37f-e52978fc3f61" aiShootingMode="Single" fireHelper="emittor" toggle="0" minForce="1500" maxForce="500000" additionalForceDuringZeroGHandholding="0" minDistance="0.5" maxDistance="135" fullStrengthDistance="68" maxAngle="80" maxVolume="300000" volumeForceCoefficient="0.3" tetherBreakTime="2.25" safeRangeValueFactor="0.85" maxPlayerLookRotationScale="1" allowScrollingIntoBreakingRange="1" shouldDryFireInGreenZones="0" shouldFireInHangars="1" shouldTractorSelf="1" heatPerSecond="0" wearPerSecond="0" ammoType="Primary" minEnergyDraw="0" maxEnergyDraw="0" hitType="ElectricArc" recoil="00000000-0000-0000-0000-000000000000" recoilGrappling="00000000-0000-0000-0000-000000000000" recoilInterval="0.5" hitRadius="0.1" ignoreActorStandingOnEntityTag="00000000-0000-0000-0000-000000000000" ignoreVolumeTag="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireTractorBeamParams">
           <mannequinTag tag="" __type="SMannequinTagParams" />
           <entityTags __type="TagList">
             <tags />
@@ -458,7 +458,7 @@
               <Reference value="8c71c1ea-dd41-45c4-9fc1-7880740552b7" />
             </entityTagBlacklist>
           </attachDetachParams>
-          <rotationParams degreesPerAction="10" maxAngularAcceleration="30" maxAngularVelocity="2.5" degreesPerActionScrollWheel="1000" forceFractionRotation="0.1" __type="SWeaponActionFireTractorBeamRotationParams" />
+          <rotationParams degreesPerAction="10" maxAngularAcceleration="30" maxAngularVelocity="2.5" degreesPerActionScrollWheel="1000" forceFractionRotation="0.001" __type="SWeaponActionFireTractorBeamRotationParams" />
           <grappleParams positiveAccelerationLimit="10" negativeAccelerationLimit="-10" maxSpeed="50" coastSpeed="10" lookOrientationInfluenceFactor="0" __type="SWeaponActionFireTractorBeamGrappleParams" />
           <vehicleParams aggregatedShields="0" shieldToForceRatio="1" maxShield="1" impactRadius="1" thrusterPassModifierLinear="0.7" thrusterPassModifierAngular="0.45" __type="SWeaponActionFireTractorBeamVehicleBased" />
           <multitractorParams leadBeamDeadzoneBlendStart="1.5" leadBeamDeadzoneEnd="3.5" followBeamDeadzoneBlendStart="3" followBeamDeadzoneEnd="8" followBeamDeadzoneAlignment="0.8" followBeamDeadzoneMisalignment="-0.7" enterLeadForceThresholdModifier="-0.1" beamAlignmentSlopeCoefficient="1.2" __type="SWeaponActionFireTractorBeamMultitractorParams" />
@@ -517,7 +517,7 @@
               </beamEffects>
             </SBeamGroupParams>
           </beamGroup>
-          <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0.1" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="1" scaleImpactToObject="0" beamEffectBlendRange="0.8" beamEffectBlendCoeff="2" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
+          <beamStrengthValues noTarget="0" stable="1" unstable="0.5" breaking="0.1" impactInvalidTarget="0" impactControllingTarget="1" impactGrapple="1" impactSizeScale="0.2" scaleImpactToObject="0" beamEffectBlendRange="0.8" beamEffectBlendCoeff="2" __type="SWeaponActionFireTractorBeamStrengthValueParams" />
           <updateCondition>
           </updateCondition>
         </SWeaponActionFireTractorBeamParams>
@@ -605,7 +605,7 @@
     </SCItemPurchasableParams>
     <SEntityPhysicsControllerParams __type="DataForgeComponentParams" __polymorphicType="SEntityPhysicsControllerParams">
       <PhysType>
-        <SEntityRigidPhysicsControllerParams Mass="100" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+        <SEntityRigidPhysicsControllerParams Mass="0" maxLoggedCollisions="1" Damping="0.01" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
           <breakableParams>
           </breakableParams>
           <gameCollisionClass>

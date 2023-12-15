@@ -1,0 +1,1258 @@
+<EntityClassDefinition.ActorMovable_Trolley_Hover_cargo_2_b_ugf Category="ActorMovable" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="6806e86f-6517-46b4-82a7-b747f77cf212" __type="EntityClassDefinition" __ref="e5d86fb3-7d97-48f7-b54c-ff46888adb34" __path="libs/foundry/records/entities/scitem/actormovables/actormovable_trolley_hover_cargo_2_b_ugf.xml">
+  <tags>
+    <Reference value="5c5fa754-3ab1-4102-a70b-c661d2ec99d1" />
+  </tags>
+  <StaticEntityClassData />
+  <Components>
+    <SEntityHoverPhysicsControllerComponentParams __type="DataForgeComponentParams" __polymorphicType="SEntityHoverPhysicsControllerComponentParams">
+      <PhysType>
+        <SEntityRigidPhysicsControllerParams Mass="70" maxLoggedCollisions="1" Damping="0" DampingFreefall="0.05" PushableByPlayers="1" NeverAffectTriggers="0" UseManualGridTransition="0" aiNavigationType="Included" Kinematic="0" EnableCrossGridChecks="0" Resting="0" physicalizeAllSlots="1" __type="SEntityBasePhysicsControllerParams" __polymorphicType="SEntityRigidPhysicsControllerParams">
+          <breakableParams>
+          </breakableParams>
+          <gameCollisionClass>
+          </gameCollisionClass>
+          <grid>
+          </grid>
+          <buoyancyParams>
+          </buoyancyParams>
+          <temperature enable="0" initialTemperature="-1" internalTemperatureGeneration="0" __type="EntityTemperature">
+            <signatureParams enable="0" minimumTemperatureForIR="250" temperatureToIR="6" __type="EntityTemperatureSignature" />
+            <itemResourceParams minOperatingTemperature="0" minCoolingTemperature="300" enableOverheat="0" overheatTemperature="450" overheatWarningTemperature="370" overheatRecoveryTemperature="350" __type="EntityTemperatureItemResource" />
+            <misfireTemperatureRange minimum="370" maximum="600" __type="Range" />
+          </temperature>
+        </SEntityRigidPhysicsControllerParams>
+      </PhysType>
+      <hover interactionActivate="Interactable.SharedInteractions[2]" interactionDeactivate="Interactable.SharedInteractions[3]" activateHoverByDefault="1" activateHoverOnGripAttached="0" deactivateHoverOnGripDetached="0" blendInDuration="2" blendOutDuration="2" powerOffDesiredHoverHeight="0.02" maxHoverMass="250" maxRotationalAdjustmentTorque="369" basePlaneHalfWidth="1" basePlaneHalfLength="2.5" __type="SEntityHoverPhysicsControllerParams">
+        <basePlaneOriginOffset x="0" y="-1.2" z="0.02" __type="Vec3" />
+        <hoverPhysicsIdle desiredHoverHeight="0.4" desiredHoverMinHeight="0.35" alignToSurface="1" alignToSurfaceMaxAngle="34" alignToSurfaceEasingStartAngle="5" alignToSurfaceEasingEndAngle="10" maxGroundSearchDepth="6" maxClimbHeight="0.5" desiredMaxFallSpeed="16" desiredFallSpeedEasingStartDepth="6" desiredFallSpeedEasingPower="1" desiredMaxRaiseSpeed="4" desiredRaiseSpeedEasingStartHeight="1" desiredRaiseSpeedEasingPower="0.5" desiredMaxRotationalAdjustmentSpeed="180" desiredAngularSpeedEasingStartAngle="45" desiredAngularSpeedEasingPower="1" lateralMoveStopMaxSpeed="16.9" yawStopMaxSpeed="6969" __type="SEntityHoverPhysicsPartialParams" />
+        <hoverPhysicsGripAttached desiredHoverHeight="0.4" desiredHoverMinHeight="0.35" alignToSurface="1" alignToSurfaceMaxAngle="35" alignToSurfaceEasingStartAngle="5" alignToSurfaceEasingEndAngle="10" maxGroundSearchDepth="3" maxClimbHeight="0.5" desiredMaxFallSpeed="8" desiredFallSpeedEasingStartDepth="1" desiredFallSpeedEasingPower="1" desiredMaxRaiseSpeed="8" desiredRaiseSpeedEasingStartHeight="1" desiredRaiseSpeedEasingPower="1" desiredMaxRotationalAdjustmentSpeed="180" desiredAngularSpeedEasingStartAngle="5" desiredAngularSpeedEasingPower="1" lateralMoveStopMaxSpeed="0" yawStopMaxSpeed="0" __type="SEntityHoverPhysicsPartialParams" />
+      </hover>
+    </SEntityHoverPhysicsControllerComponentParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="Grip" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_grip" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+              <InteractionConditionList __type="InteractionConditionList">
+                <presetList>
+                  <Reference value="b0774a40-4a84-408c-bbe8-b1827a2d5e27" />
+                </presetList>
+                <conditionParams>
+                  <InteractionConditionHoverPowerStageEqual powerStage="PoweredOn" __type="InteractionConditionParams" __polymorphicType="InteractionConditionHoverPowerStageEqual">
+                    <conditionDisplay>
+                      <ConditionDisplayParams exclusiveDisplay="1" __type="ConditionDisplayParams">
+                        <blockedText>
+                          <BlockedTextParams blockedText="@ui_interactor_power_off" __type="BlockedTextParams" />
+                        </blockedText>
+                        <blockedCursor>
+                          <BlockedCursorParams blockedCursor="Invalid" __type="BlockedCursorParams" />
+                        </blockedCursor>
+                        <blockedColor>
+                          <BlockedColorParams selectedColor="c6688c07-0987-4e85-82b7-04458356db8a" unselectedColor="902844b1-8817-4b46-8770-045beee67ce0" applyImmediately="0" __type="BlockedColorParams" />
+                        </blockedColor>
+                        <blockedHint>
+                        </blockedHint>
+                        <autoStoreOption>
+                        </autoStoreOption>
+                        <blockedInteractionAttemptMonologue>
+                        </blockedInteractionAttemptMonologue>
+                      </ConditionDisplayParams>
+                    </conditionDisplay>
+                  </InteractionConditionHoverPowerStageEqual>
+                </conditionParams>
+                <conditionToHideParams />
+              </InteractionConditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="Release" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_release" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="TurnHoverOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_activate" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="TurnHoverOff" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_deactivate" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DeployHandle_1" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ea_ui_spawning_Deploy" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="RetractHandle_1" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_retract" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_1" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.25" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.5" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0.0875" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="80" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_2" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.25" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.5" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0.0875" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="80" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_toggle_hover_1" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[2]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[3]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_3" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.25" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.5" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0.0875" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="80" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_4" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="1.25" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.5" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0.0875" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="80" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="1" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[1]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="0" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="mesh_interaction_toggle_handle_1" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+            <Tags />
+            <HighlightBehaviors />
+            <AdditionalCollisionBones />
+            <Offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </Offset>
+            <InteractionPromptOffset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0" y="0" z="0" __type="Vec3" />
+            </InteractionPromptOffset>
+            <AngleConstraint angleRange="181" viewAngleLimit="181" __type="SAngleConstraint">
+              <forwardDirOffset x="0" y="0" z="0" __type="Vec3" />
+            </AngleConstraint>
+            <Primitive>
+            </Primitive>
+            <PlayerAnimatedInteractionParams>
+            </PlayerAnimatedInteractionParams>
+            <Interactions>
+              <SInteractionParams Interaction="Interactable.SharedInteractions[4]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions[5]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+            </Interactions>
+          </SInteractionPointParams>
+        </InteractionPoints>
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SGeometryResourceParams cacheResources="0" rootOverridePaint="0" inheritModelTagFromHost="1" __type="DataForgeComponentParams" __polymorphicType="SGeometryResourceParams">
+      <ModelTag>
+      </ModelTag>
+      <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+          <Geometry path="Objects/buildingsets/human/lowtech/prop/utilitarian/trolley/trolley_hover_cargo_2_a.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+          <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+          <SimulationGeometry>
+          </SimulationGeometry>
+          <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        </Geometry>
+        <SubGeometry>
+          <SGeometryNodeParams Tags="Destroyed" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="0" VisFP="0" VisShadow="0" VisSecondaryViews="0" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+        </SubGeometry>
+      </Geometry>
+      <Material Tags="" __type="SMaterialNodeParams">
+        <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+        <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+        <materialVariants />
+      </Material>
+    </SGeometryResourceParams>
+    <SPersistentComponentParams __type="DataForgeComponentParams" __polymorphicType="SPersistentComponentParams" />
+    <SCEntityActorMovableParams moveInteraction="Interactable.SharedInteractions[0]" exitInteraction="Interactable.SharedInteractions[1]" limits="a5700edb-d607-4c07-9a51-dcda907d7029" IntroFragmentId="ActorMovable" IntroFragTag="IntroHorizontal" OutroFragmentId="ActorMovable" OutroFragTag="OutroHorizontal" __type="DataForgeComponentParams" __polymorphicType="SCEntityActorMovableParams">
+      <grips>
+        <SMovableGrip gripName="1" canBeUsedBy="All" handMode="RightHand" width="0" AllowStrafe="1" AllowPush="1" AllowPull="1" interactionPoint="Interactable.InteractionPoints[0]" __type="SMovableGrip">
+          <handGrip gripID="RightHand" optionalHelper="$grip_right_1" __type="SGrip">
+            <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+            <offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0.015" y="0" z="0" __type="Vec3" />
+            </offset>
+          </handGrip>
+          <offHandGrip>
+            <SGrip gripID="LeftHand" optionalHelper="$grip_left_1" __type="SGrip">
+              <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+              <offset __type="QuatT">
+                <Rotation x="0" y="0" z="0" __type="Ang3" />
+                <Position x="-0.015" y="0" z="0" __type="Vec3" />
+              </offset>
+            </SGrip>
+          </offHandGrip>
+          <userOffset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </userOffset>
+        </SMovableGrip>
+        <SMovableGrip gripName="2" canBeUsedBy="All" handMode="RightHand" width="0" AllowStrafe="1" AllowPush="1" AllowPull="1" interactionPoint="Interactable.InteractionPoints[1]" __type="SMovableGrip">
+          <handGrip gripID="RightHand" optionalHelper="$grip_right_2" __type="SGrip">
+            <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+            <offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0.015" y="0" z="0" __type="Vec3" />
+            </offset>
+          </handGrip>
+          <offHandGrip>
+            <SGrip gripID="LeftHand" optionalHelper="$grip_left_2" __type="SGrip">
+              <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+              <offset __type="QuatT">
+                <Rotation x="0" y="0" z="0" __type="Ang3" />
+                <Position x="-0.015" y="0" z="0" __type="Vec3" />
+              </offset>
+            </SGrip>
+          </offHandGrip>
+          <userOffset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </userOffset>
+        </SMovableGrip>
+        <SMovableGrip gripName="3" canBeUsedBy="All" handMode="RightHand" width="0" AllowStrafe="1" AllowPush="1" AllowPull="1" interactionPoint="Interactable.InteractionPoints[3]" __type="SMovableGrip">
+          <handGrip gripID="RightHand" optionalHelper="$grip_right_3" __type="SGrip">
+            <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+            <offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0.015" y="0" z="0" __type="Vec3" />
+            </offset>
+          </handGrip>
+          <offHandGrip>
+            <SGrip gripID="LeftHand" optionalHelper="$grip_left_3" __type="SGrip">
+              <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+              <offset __type="QuatT">
+                <Rotation x="0" y="0" z="0" __type="Ang3" />
+                <Position x="-0.015" y="0" z="0" __type="Vec3" />
+              </offset>
+            </SGrip>
+          </offHandGrip>
+          <userOffset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </userOffset>
+        </SMovableGrip>
+        <SMovableGrip gripName="4" canBeUsedBy="All" handMode="RightHand" width="0" AllowStrafe="1" AllowPush="1" AllowPull="1" interactionPoint="Interactable.InteractionPoints[4]" __type="SMovableGrip">
+          <handGrip gripID="RightHand" optionalHelper="$grip_right_4" __type="SGrip">
+            <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+            <offset __type="QuatT">
+              <Rotation x="0" y="0" z="0" __type="Ang3" />
+              <Position x="0.015" y="0" z="0" __type="Vec3" />
+            </offset>
+          </handGrip>
+          <offHandGrip>
+            <SGrip gripID="LeftHand" optionalHelper="$grip_left_4" __type="SGrip">
+              <gripShapeParameters gripShape="gs_horizontal" dimension="8" wristRotation="0" __type="SGripShapeParams" />
+              <offset __type="QuatT">
+                <Rotation x="0" y="0" z="0" __type="Ang3" />
+                <Position x="-0.015" y="0" z="0" __type="Vec3" />
+              </offset>
+            </SGrip>
+          </offHandGrip>
+          <userOffset __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </userOffset>
+        </SMovableGrip>
+      </grips>
+    </SCEntityActorMovableParams>
+    <EntityPhysicalAudioParams minimumImpulseContinuous="40" minimumImpulseTransient="1000" minimumVelocityNoImpulse="100" slideThreshold="0.1" rollThreshold="0.1" momentumScale="1" useAABBCentre="0" oneShotTag="0d401f6c-38a4-4c52-bb02-26059dd8d98a" oneShotCooldown="0.2" dragOnly="0" __type="DataForgeComponentParams" __polymorphicType="EntityPhysicalAudioParams">
+      <collisionTriggers>
+        <PhysicalAudioCollisionTrigger oneShotMinPlayTime="0.25" attachToObject="0" __type="PhysicalAudioCollisionTrigger">
+          <trigger audioTrigger="Play_PHOB_Physics_Objects_Wheeled_Trolley_Small_Impacts" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        </PhysicalAudioCollisionTrigger>
+      </collisionTriggers>
+      <slideStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <slideStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStartTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rollStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStartTrigger audioTrigger="Play_PHOB_Physics_Objects_Wheeled_Trolley_Small_Rolling" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <movementStopTrigger audioTrigger="Stop_PHOB_Physics_Objects_Wheeled_Trolley_Small_Rolling" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickupTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <pickFromOwnerTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <dropTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <placeTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <rtpcSlideVelocity rtpc="PhysicalAudio_Velocity" __type="AudioRtpc" />
+      <rtpcMassSelf rtpc="PhysicalAudio_MassSelf" __type="AudioRtpc" />
+      <rtpcMassOther rtpc="PhysicalAudio_MassOther" __type="AudioRtpc" />
+      <rtpcDampening rtpc="PhysicalAudio_Damping" __type="AudioRtpc" />
+      <rtpcRollVelocity rtpc="PhysicalAudio_RollVelocity" __type="AudioRtpc" />
+      <rtpcHealth rtpc="PhysicalAudio_Health" __type="AudioRtpc" />
+      <rtpcMovement rtpc="PhysicalAudio_Movement" __type="AudioRtpc" />
+      <rtpcRotation rtpc="PhysicalAudio_Rotation" __type="AudioRtpc" />
+      <rtpcTimeSinceLastOneshot rtpc="PhysicalAudio_TimeSinceLastOneshot" __type="AudioRtpc" />
+      <rtpcMomentum rtpc="PhysicalAudio_Momentum" __type="AudioRtpc" />
+      <rtpcCarried rtpc="PhysicalAudio_CarryState" __type="AudioRtpc" />
+    </EntityPhysicalAudioParams>
+    <SHealthComponentParams Health="50" SerializedDamageMapPath="" ClientOnly="0" UnlockInteractionsOnDeath="0" PushDamageUpPartsHeirarchyWhenDead="1" DetachFromItemPortOnDeath="0" DetachFromEntityOnDeath="0" PropagateExplosionDamageToChildren="0" UseDirtShaderForDamage="0" DestroyedGeometryTag="Destroyed" ExplodedGeometryTag="" DebrisGeometryTag="" ExplosionDelayTime="0" ExplosionRandomDelayRange="0" ExplosionBone="" IsSalvagable="1" IsRepairable="1" __type="DataForgeComponentParams" __polymorphicType="SHealthComponentParams">
+      <DamageResistances>
+        <DamageResistance __type="DamageResistanceBase" __polymorphicType="DamageResistance">
+          <PhysicalResistance Multiplier="1" Threshold="0" __type="DamageResistanceEntry" />
+          <EnergyResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <DistortionResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <ThermalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <BiochemicalResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+          <StunResistance Multiplier="0" Threshold="0" __type="DamageResistanceEntry" />
+        </DamageResistance>
+      </DamageResistances>
+      <InitialDamage>
+      </InitialDamage>
+      <HealthLevelStates />
+      <DeathExplosionParams>
+      </DeathExplosionParams>
+      <DeathGasComposition />
+      <InteractionLocks />
+    </SHealthComponentParams>
+    <SActorUsableParams archetype="f5752731-b3c0-4ca4-8dc7-9a058afa0371" fragmentTag="" isExterior="0" allowDeadOrUnconscious="0" __type="DataForgeComponentParams" __polymorphicType="SActorUsableParams">
+      <useSlots>
+        <UsableUseSlot name="Handle" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="0" syncAnimationWithUser="0" __type="UsableUseSlot">
+          <useChannelInstances>
+            <UsableUseChannelInstance useChannelArchetype="98f57d83-2c9b-44a8-8deb-41fc6fd244ac" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[0]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="98f57d83-2c9b-44a8-8deb-41fc6fd244ac" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[1]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="98f57d83-2c9b-44a8-8deb-41fc6fd244ac" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[2]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+            <UsableUseChannelInstance useChannelArchetype="98f57d83-2c9b-44a8-8deb-41fc6fd244ac" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="1" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+              <alignmentSlots>
+                <WeakPointer alignmentSlots="alignmentSlots[3]" />
+              </alignmentSlots>
+              <conditionList>
+              </conditionList>
+              <useChannelInstancesToEnable />
+              <useChannelInstancesToDisable />
+              <tagsToAddOnEnter />
+              <tagsToRemoveOnEnter />
+              <tagsToAddOnExit />
+              <tagsToRemoveOnExit />
+              <availableActionGroups />
+            </UsableUseChannelInstance>
+          </useChannelInstances>
+          <usableItemPorts />
+          <useSlotsToDisable />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="0" z="0" __type="Vec3" />
+          </relativeTransform>
+          <optionalGameTags />
+        </UsableUseSlot>
+      </useSlots>
+      <alignmentSlots>
+        <PointAlignmentSlot id="7791eb5b-4413-4ce8-9b27-b11d956d9411" name="Handle" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_console" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="1" useADIK="1" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints>
+            <WeakPointer interactionPoints="Interactable.InteractionPoints[0]" />
+          </interactionPoints>
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="0" __type="Ang3" />
+            <Position x="0" y="-2.2" z="-0.3" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="Interactable.SharedInteractions[0]" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="0" exitOnMovement="0" exitOnJump="1" exitOnDamageTaken="0" exitInteraction="Interactable.SharedInteractions[1]" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot id="6cc9bc83-201d-41cd-9b38-961da04190ed" name="Handle2" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_console" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="1" useADIK="1" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints>
+            <WeakPointer interactionPoints="Interactable.InteractionPoints[1]" />
+          </interactionPoints>
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="180" __type="Ang3" />
+            <Position x="0" y="2.2" z="-0.3" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="Interactable.SharedInteractions[0]" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="0" exitOnMovement="0" exitOnJump="1" exitOnDamageTaken="0" exitInteraction="Interactable.SharedInteractions[1]" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot id="87abef87-c623-43c4-a602-0e76e2f4163e" name="Handle3" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_console" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="1" useADIK="1" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints>
+            <WeakPointer interactionPoints="Interactable.InteractionPoints[3]" />
+          </interactionPoints>
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="180" __type="Ang3" />
+            <Position x="0" y="2.2" z="-0.3" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="Interactable.SharedInteractions[0]" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="0" exitOnMovement="0" exitOnJump="1" exitOnDamageTaken="0" exitInteraction="Interactable.SharedInteractions[1]" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+        <PointAlignmentSlot id="353d1f43-e00b-4c75-a706-f2acd4cf79e5" name="Handle4" available="1" canPlayerUse="1" fragmentTag="" slottedFragmentTag="" helperName="$anchor_console" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Stand" useHandIK="1" useADIK="1" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+          <interactionPoints>
+            <WeakPointer interactionPoints="Interactable.InteractionPoints[4]" />
+          </interactionPoints>
+          <optionalGameTags />
+          <relativeTransform __type="QuatT">
+            <Rotation x="0" y="0" z="180" __type="Ang3" />
+            <Position x="0" y="2.2" z="-0.3" __type="Vec3" />
+          </relativeTransform>
+          <viewParams viewLimitYawMin="-45" viewLimitYawMax="45" viewLimitPitchMin="-45" viewLimitPitchMax="45" __type="SUsableViewParams" />
+          <enterParams aiSignal="UseStart" additionalTags="" eventTriggerMask="AIAndPlayer" holsterWeapon="1" enterInteraction="Interactable.SharedInteractions[0]" __type="SUsableTransitionParams" __polymorphicType="SUsableEnterTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </enterParams>
+          <exitParams aiSignal="UseEnd" additionalTags="" eventTriggerMask="AIAndPlayer" inputExit="0" exitOnMovement="0" exitOnJump="1" exitOnDamageTaken="0" exitInteraction="Interactable.SharedInteractions[1]" exitSequence="null" __type="SUsableTransitionParams" __polymorphicType="SUsableExitTransitionParams">
+            <transitionAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </exitParams>
+          <usableIdleParams __type="SUsableIdleParams">
+            <idlePoseOverrides />
+          </usableIdleParams>
+        </PointAlignmentSlot>
+      </alignmentSlots>
+      <slottingSetups />
+      <views />
+      <abilityLocks />
+      <usableSequencerTasks />
+      <specializedData __type="SSpecializedData">
+        <specializedDataEntry />
+      </specializedData>
+    </SActorUsableParams>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="Cargo" SubType="Cargo" Size="1" Grade="1" Manufacturer="00000000-0000-0000-0000-000000000000" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@LOC_PLACEHOLDER" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SSCSignatureSystemParams bindingURLPrefix="" scanCustomData="00000000-0000-0000-0000-000000000000" scanDisplayLayoutOverride="00000000-0000-0000-0000-000000000000" isOverridden="0" enableDetectionOnItemPort="0" __type="DataForgeComponentParams" __polymorphicType="SSCSignatureSystemParams">
+      <radarProperties>
+        <SSCRadarContactProperites contactType="d7fd8fa4-1591-46c4-b2fa-e15de9b1f05b" __type="SSCRadarContactProperites">
+          <baseSignatureParams>
+            <SSCSignatureSystemBaseSignatureParams __type="SSCSignatureParamsBase" __polymorphicType="SSCSignatureSystemBaseSignatureParams">
+              <signatures>
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="0" />
+                <Single value="30" />
+              </signatures>
+              <taggedSignatures />
+            </SSCSignatureSystemBaseSignatureParams>
+          </baseSignatureParams>
+          <crossSectionParams>
+          </crossSectionParams>
+          <emissionModifierParams>
+          </emissionModifierParams>
+          <scanBounds>
+          </scanBounds>
+        </SSCRadarContactProperites>
+      </radarProperties>
+      <audioParams>
+      </audioParams>
+      <embeddedScanInfo>
+      </embeddedScanInfo>
+      <detectionTags />
+      <overriddenSize x="0" y="0" z="0" __type="Vec3" />
+    </SSCSignatureSystemParams>
+    <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
+      <StateTypes>
+        <SInteractionStateType StateTypeName="Hovering" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="On" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[0]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Off" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences[1]" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="PoweringOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="PoweringOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <StateModifierHoverPowerStage poweredOff="StateTypes[0].SInteractionStateType.States[1]" poweringOff="StateTypes[0].SInteractionStateType.States[2]" poweringOn="StateTypes[0].SInteractionStateType.States[3]" poweredOn="StateTypes[0].SInteractionStateType.States[0]" __type="SStateModifier" __polymorphicType="StateModifierHoverPowerStage" />
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="GrippedByActor" bindingsMethod="None" DefaultState="StateTypes[1].SInteractionStateType.States[0]" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="NotGripped" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Gripped" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <SStateModifierMovableMover hasMoverState="StateTypes[1].SInteractionStateType.States[1]" noMoverState="StateTypes[1].SInteractionStateType.States[0]" __type="SStateModifier" __polymorphicType="SStateModifierMovableMover" />
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="CanGrip - Aggregate" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Yes" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[0]" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="No" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[1]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[2]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="CanControlHovering - Aggregate" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="CanTurnOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="CanTurnOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="CannotControlHovering" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers>
+            <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
+              <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[3].SInteractionStateType.States[0]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[3].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[0]" />
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[3].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[2]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[3].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[3].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+              </aggregateStateParams>
+            </AggregateStateModifier>
+          </StateModifiers>
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="DeployHandle_1" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="Deployed_1" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[4]" NextState="StateTypes[4].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints>
+                <WeakPointer interactionPoints="Interactable.InteractionPoints[5]" />
+              </interactionPoints>
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="Retract_1" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[5]" NextState="StateTypes[4].SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints>
+                <WeakPointer interactionPoints="Interactable.InteractionPoints[5]" />
+              </interactionPoints>
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
+    </SInteractionStateMachineParams>
+    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
+      <loadout>
+        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
+          <WearRange>
+          </WearRange>
+          <InventoryItems />
+          <entries>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_cargogrid" entityClassName="CargoGrid_ActorMovable_Trolley_Hover_TEMPLATE_ugf" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem01" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Organic_Prota" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem02" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Organic_Prota" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem03" entityClassName="" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem04" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Organic_Prota" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem05" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Organic_Prota" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="$slot_subitem06" entityClassName="Carryable_TBO_FL_1SCU_Commodity_Organic_Prota" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+          </entries>
+        </SItemPortLoadoutManualParams>
+      </loadout>
+    </SEntityComponentDefaultLoadoutParams>
+    <AINavigationDynamicTriggerComponent __type="DataForgeComponentParams" __polymorphicType="AINavigationDynamicTriggerComponent">
+      <adapters>
+        <DynamicObjectNavigationTriggerAdapter minSpeedToBeIgnored="0.1" allowNavMeshCutout="0" optionalCostConfig="00000000-0000-0000-0000-000000000000" __type="NavigationTriggerAdapter" __polymorphicType="DynamicObjectNavigationTriggerAdapter">
+          <shapeConfig>
+            <BoundingBoxTraversalCostShapeConfig __type="TraversalCostShapeConfig" __polymorphicType="BoundingBoxTraversalCostShapeConfig" />
+          </shapeConfig>
+        </DynamicObjectNavigationTriggerAdapter>
+      </adapters>
+    </AINavigationDynamicTriggerComponent>
+    <SAnimationControllerParams AnimationDatabase="" AnimationController="" __type="DataForgeComponentParams" __polymorphicType="SAnimationControllerParams">
+      <Tags />
+      <ScopeContexts />
+      <AnimationJointControls>
+      </AnimationJointControls>
+      <AnimationControlActorIKs />
+      <AnimationTasks>
+        <SSequencerSkeletonAnimationTaskParams animationName="deploy" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+        <SSequencerSkeletonAnimationTaskParams animationName="retract" layerId="0" looping="0" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+      </AnimationTasks>
+      <defaultAnimation>
+      </defaultAnimation>
+    </SAnimationControllerParams>
+    <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="deploy_1" interaction="Interactable.SharedInteractions[4]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[0]" postDelay="0" haltOnFailure="0" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+        <SReplicatedSequencerDefSequenceParams name="retract_1" interaction="Interactable.SharedInteractions[5]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks[1]" postDelay="0" haltOnFailure="0" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
+    </SEntityComponentSequencerParams>
+    <SItemPortContainerComponentParams PortFlags="" PortTags="" RequiredItemTags="" __type="DataForgeComponentParams" __polymorphicType="SItemPortContainerComponentParams">
+      <masterController>
+      </masterController>
+      <Ports>
+        <SItemPortDef Name="hardpoint_cargogrid" DisplayName="" PortTags="" RequiredPortTags="" Flags="uneditable" MinSize="1" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types>
+            <SItemPortDefTypes Type="CargoGrid" __type="SItemPortDefTypes">
+              <SubTypes />
+            </SItemPortDefTypes>
+          </Types>
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationEntity usePhysicalAttachment="0" useEntityAttachment="1" useExteriorAttachment="0" usePhysicalParent="0" useLogicalAttachment="0" hangarPort="0" __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationEntity">
+              <constraintParams damping="0" noSelfCollisions="1" maxPullForce="0" maxBendTorque="0" constrainToLine="0" constrainToPlane="0" constrainFully="1" useWorldConstraintPosition="0" noRotation="1" xMin="0" xMax="0" yzMax="0" constraintHelper="" constraintMaintainOrientation="0" __type="SAttachmentConstraintParams" />
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="hardpoint_cargo_grid" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationEntity>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem01" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="1" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem01" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem02" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem02" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem03" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem03" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem04" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem04" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem05" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem05" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+        <SItemPortDef Name="$slot_subitem06" DisplayName="" PortTags="" RequiredPortTags="" Flags="" MinSize="0" MaxSize="0" InteractionPointSize="-1" DefaultWeaponGroup="UNDEFINED" controllableTag="" resourceLinkToParent="0" useHelperAsInteractionPointName="0" __type="SItemPortDef">
+          <Tags />
+          <InteractionPointOffset x="0" y="0" z="0" __type="Vec3" />
+          <AttachmentPoints />
+          <control>
+          </control>
+          <Connections />
+          <DisabledPortLinks />
+          <Types />
+          <Extension>
+          </Extension>
+          <AttachmentImplementation>
+            <SItemPortDefAttachmentImplementationBone __type="SItemPortDefAttachmentImplementationBase" __polymorphicType="SItemPortDefAttachmentImplementationBone">
+              <Helper Tags="" __type="SItemPortDefHelperNode">
+                <Helper Name="$slot_subitem06" ItemOffsetHelperName="" __type="SItemPortDefHelper">
+                  <Offset __type="QuatT">
+                    <Rotation x="0" y="0" z="0" __type="Ang3" />
+                    <Position x="0" y="0" z="0" __type="Vec3" />
+                  </Offset>
+                  <SimulationParams>
+                  </SimulationParams>
+                </Helper>
+                <SubHelpers />
+              </Helper>
+            </SItemPortDefAttachmentImplementationBone>
+          </AttachmentImplementation>
+          <linkedItemPorts />
+          <itemPortRules />
+          <detachDirection x="0" y="0" z="-1" __type="Vec3" />
+        </SItemPortDef>
+      </Ports>
+      <InternalResourceLinks />
+      <InternalHardpointLinks />
+    </SItemPortContainerComponentParams>
+  </Components>
+</EntityClassDefinition.ActorMovable_Trolley_Hover_cargo_2_b_ugf>

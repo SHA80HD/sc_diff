@@ -62,7 +62,7 @@
       </entityAttachParams>
     </SAttachableComponentParams>
     <SEntityComponentCarryableParams carryInteraction="Interactable.SharedInteractions[6]" placeInteraction="Interactable.SharedInteractions[8]" dropInteraction="Interactable.SharedInteractions[5]" equipToItemportInteraction="Interactable.SharedInteractions[1]" offHandEquipToItemportInteraction="Interactable.SharedInteractions[2]" storeInteraction="Interactable.SharedInteractions[3]" offHandStoreInteraction="Interactable.SharedInteractions[4]" holdReadyInteraction="Interactable.SharedInteractions[0]" equipWearableInteraction="null" inspectInteraction="Interactable.SharedInteractions[7]" flipInteraction="null" swapAttachmentsInteraction="Interactable.SharedInteractions[11]" attachToHeldItemInteraction="null" enslavementAnimationDatabase="animations/mannequin/adb/players/items/weapons/ksar_shotgun_energy_01.adb" interactionPointToMoveOnEquip="Interactable.InteractionPoints[0]" ikInteractionsRecord="21a36d61-d392-46bc-831d-9947485fcd81" canBeCarriedInProne="1" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentCarryableParams">
-      <carryableStatesParams settledState="StateTypes[0].SInteractionStateType.States[0]" carriedState="StateTypes[0].SInteractionStateType.States[1]" equippedToSuitState="StateTypes[0].SInteractionStateType.States[2]" inspectingState="StateTypes[0].SInteractionStateType.States[3]" droppedState="StateTypes[0].SInteractionStateType.States[4]" offeredState="null" heldReadyState="StateTypes[0].SInteractionStateType.States[5]" equippedWornState="null" storedState="StateTypes[0].SInteractionStateType.States[8]" hangingOnOutfitHangerState="null" __type="SCarryableStatesParams" />
+      <carryableStatesParams settledState="StateTypes[0].SInteractionStateType.States[0]" carriedState="StateTypes[0].SInteractionStateType.States[1]" equippedToSuitState="StateTypes[0].SInteractionStateType.States[2]" inspectingState="StateTypes[0].SInteractionStateType.States[3]" droppedState="StateTypes[0].SInteractionStateType.States[4]" offeredState="null" heldReadyState="StateTypes[0].SInteractionStateType.States[5]" equippedWornState="null" storedState="null" hangingOnOutfitHangerState="null" __type="SCarryableStatesParams" />
       <interactionPointOffsets __type="SCarryableInteractionPointOffsets">
         <interactionOffsetEquipped __type="QuatT">
           <Rotation x="0" y="0" z="0" __type="Ang3" />
@@ -88,7 +88,7 @@
               </offset>
             </handGrip>
             <offHandGrip>
-              <SGrip gripID="BarrelGrip" optionalHelper="L_IKGripTarget" __type="SGrip">
+              <SGrip gripID="BarrelGrip" optionalHelper="L_IkGripTarget" __type="SGrip">
                 <gripShapeParameters gripShape="gs_none" dimension="0" wristRotation="0" __type="SGripShapeParams" />
                 <offset __type="QuatT">
                   <Rotation x="0" y="0" z="0" __type="Ang3" />
@@ -118,11 +118,12 @@
       <carryableTasks>
         <SSequencerMoveToAnimateCarryableTaskParams fragmentId="Take" fragTag="" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerMoveToAnimateCarryableTaskParams" />
         <SSequencerBespokeTakeCarryableTaskParams fragmentId="Take" fragTag="" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerBespokeTakeCarryableTaskParams" />
-        <SSequencerSetInteractionStateCarryableTaskParams state="StateTypes[0].SInteractionStateType.States[7]" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSetInteractionStateCarryableTaskParams" />
         <SSequencerMoveToAnimateCarryableTaskParams fragmentId="Place" fragTag="" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerMoveToAnimateCarryableTaskParams" />
         <SSequencerBespokePlaceCarryableTaskParams fragmentId="Place" fragTag="" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerBespokePlaceCarryableTaskParams" />
-        <SSequencerFirstSelectCarryableTaskParams __type="SSequencerDefTaskParams" __polymorphicType="SSequencerFirstSelectCarryableTaskParams" />
         <SSequencerSetInteractionStateCarryableTaskParams state="StateTypes[0].SInteractionStateType.States[0]" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSetInteractionStateCarryableTaskParams" />
+        <SSequencerMoveToAnimateCarryableTaskParams fragmentId="Take" fragTag="first_select" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerMoveToAnimateCarryableTaskParams" />
+        <SSequencerBespokeTakeCarryableTaskParams fragmentId="Take" fragTag="first_select" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerBespokeTakeCarryableTaskParams" />
+        <SSequencerFirstSelectCarryableTaskParams __type="SSequencerDefTaskParams" __polymorphicType="SSequencerFirstSelectCarryableTaskParams" />
       </carryableTasks>
       <throwableParams reticle="none" faceUpWhenSettled="0" allowHologramTiltRotation="0" placementRange="3" placementRangeHysteresis="0.5" yawOffset="0" applyBoundingBoxPlacementOffset="0" combatThrowable="0" __type="SThrowableParams">
         <throwModes>
@@ -283,14 +284,14 @@
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
-          <SSharedInteractionParams Name="VendorInspect" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@innerthought_inspect" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+          <SSharedInteractionParams Name="ChakmaFirstSelectTake" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_pickup" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
             <QueryTags />
             <conditionList>
             </conditionList>
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
-          <SSharedInteractionParams Name="VendorReturn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@Armory_Return" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+          <SSharedInteractionParams Name="ChakmaTake" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@interaction_pickup" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
             <QueryTags />
             <conditionList>
             </conditionList>
@@ -324,7 +325,14 @@
             <Tags>
               <Reference value="758266cd-be99-4915-9013-dec85cd6d6a7" />
             </Tags>
-            <HighlightBehaviors />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SEntityandAttachmentsHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SEntityandAttachmentsHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
             <AdditionalCollisionBones />
             <Offset __type="QuatT">
               <Rotation x="0" y="0" z="0" __type="Ang3" />
@@ -351,16 +359,23 @@
               <SInteractionParams Interaction="Interactable.SharedInteractions[5]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[7]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[8]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[9]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[10]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[11]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
           <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="1" HelperName="HighlightOnRayHitEntity_WeaponRack" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="NearestBoundingBoxIgnoreFurthestSurfaces" Radius="1.85" UseHorizontalDistance="1" MaxCursorScreenDistance="0.75" ShowInnerThoughtsOffScreen="1" OnlySelectableInLookDir="1" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
             <Tags>
               <Reference value="758266cd-be99-4915-9013-dec85cd6d6a7" />
             </Tags>
-            <HighlightBehaviors />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SEntityandAttachmentsHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SEntityandAttachmentsHighlightNode" />
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
             <AdditionalCollisionBones />
             <Offset __type="QuatT">
               <Rotation x="0" y="0" z="0" __type="Ang3" />
@@ -387,13 +402,15 @@
               <SInteractionParams Interaction="Interactable.SharedInteractions[5]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[7]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[8]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[9]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
-              <SInteractionParams Interaction="Interactable.SharedInteractions[10]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[11]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
-        <interactionTasks />
+        <interactionTasks>
+          <SSequencerInteractionTask interaction="Customize" triggerType="Self" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerInteractionTask" />
+        </interactionTasks>
         <actionHandlerTasks />
         <itemActionTasks />
         <menuTitle>
@@ -414,79 +431,89 @@
         </Geometry>
         <SubGeometry>
           <SGeometryNodeParams Tags="Black01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_black_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Black02" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_black_02.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Gold01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_gold_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Green01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_green_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Tan01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_tan_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="White02" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_white_02.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Cen01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_centurion_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
-              <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
           <SGeometryNodeParams Tags="Imp01" ScaleMultiplier="1" __type="SGeometryNodeParams">
-            <Geometry Slot="Main" MaterialAttachments="body,parts,stock" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+            <Geometry Slot="Main" MaterialAttachments="body,parts" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
               <Geometry path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator.cdf" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
               <Material path="Objects/fps_weapons/weapons_v7/ksar/shotgun/devastator/psgn_fps_ksar_devastator_mat_imperator_01.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="6a66a3f4-5e42-4e9d-be85-a5f363a822e1" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
               <SimulationGeometry>
               </SimulationGeometry>
               <Palette RootRecord="00000000-0000-0000-0000-000000000000" ChildPath="" __type="TintPaletteRef" />
@@ -642,42 +669,6 @@
                 </tags>
               </entityTags>
             </SInteractionState>
-            <SInteractionState StateName="VendorSettled" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[9]" NextState="StateTypes[0].SInteractionStateType.States[7]" __type="SInteractionStateTransition" />
-              </Interactions>
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
-            <SInteractionState StateName="VendorInspecting" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags />
-              <exitStateEffectTags />
-              <EnterEventDispatchers />
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions>
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[10]" NextState="StateTypes[0].SInteractionStateType.States[6]" __type="SInteractionStateTransition" />
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[6]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
-                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[1]" NextState="StateTypes[0].SInteractionStateType.States[2]" __type="SInteractionStateTransition" />
-              </Interactions>
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags />
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
             <SInteractionState StateName="Stored" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags />
               <exitStateEffectTags />
@@ -698,6 +689,48 @@
               <entityTags __type="TagList">
                 <tags>
                   <Reference value="158faf59-73f2-42e6-a7cf-a55c3e46040d" />
+                </tags>
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+                <SInteractionStateTransition Interaction="null" NextState="null" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags>
+                  <Reference value="00000000-0000-0000-0000-000000000000" />
                 </tags>
               </entityTags>
             </SInteractionState>
@@ -777,18 +810,70 @@
                 <tags />
               </entityTags>
             </SInteractionState>
+            <SInteractionState StateName="NoInteractionPoint" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers />
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
           </States>
           <StateModifiers>
             <AggregateStateModifier __type="SStateModifier" __polymorphicType="AggregateStateModifier">
               <aggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[4]" />
+                  </aggregateStates>
+                </AggregateStateParams>
                 <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[0]" __type="AggregateStateParams">
                   <aggregateStates>
                     <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[0]" />
                   </aggregateStates>
                 </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[2]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[2]" />
+                  </aggregateStates>
+                </AggregateStateParams>
                 <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
                   <aggregateStates>
                     <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[0]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[1]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[3]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[5]" />
+                  </aggregateStates>
+                </AggregateStateParams>
+                <AggregateStateParams state="StateTypes[2].SInteractionStateType.States[1]" __type="AggregateStateParams">
+                  <aggregateStates>
+                    <WeakPointer aggregateStates="StateTypes[1].SInteractionStateType.States[1]" />
+                    <WeakPointer aggregateStates="StateTypes[0].SInteractionStateType.States[6]" />
                   </aggregateStates>
                 </AggregateStateParams>
               </aggregateStateParams>
@@ -868,7 +953,7 @@
         </UsableUseSlot>
         <UsableUseSlot name="Loot" available="1" useSlotReenablePoint="UsableDelink" stance="Unset" additionalFragmentTags="" isScoochable="0" alignWithGravity="1" syncAnimationWithUser="0" __type="UsableUseSlot">
           <useChannelInstances>
-            <UsableUseChannelInstance useChannelArchetype="987e1845-e90d-4be1-9c73-9168725a292f" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="0" isAvailableWhenHoldingTheUsable="0" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
+            <UsableUseChannelInstance useChannelArchetype="987e1845-e90d-4be1-9c73-9168725a292f" interaction="null" stance="Unset" isEnabled="1" isAvailableOnlyForRouting="1" isAvailableWhenHoldingTheUsable="0" shouldValidateExitAnimations="1" fragmentTag="" preparationSequence="null" __type="UsableUseChannelInstance">
               <alignmentSlots>
                 <WeakPointer alignmentSlots="alignmentSlots[0]" />
                 <WeakPointer alignmentSlots="alignmentSlots[1]" />
@@ -900,7 +985,7 @@
         </UsableUseSlot>
       </useSlots>
       <alignmentSlots>
-        <PointAlignmentSlot name="BodyPoint0" available="1" canPlayerUse="0" fragmentTag="" slottedFragmentTag="" helperName="" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="7034bc23-2587-4cd5-abf2-31c56c3ae565" name="BodyPoint0" available="1" canPlayerUse="0" fragmentTag="" slottedFragmentTag="" helperName="" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -918,7 +1003,7 @@
             <idlePoseOverrides />
           </usableIdleParams>
         </PointAlignmentSlot>
-        <PointAlignmentSlot name="BodyPoint1" available="1" canPlayerUse="0" fragmentTag="" slottedFragmentTag="" helperName="" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
+        <PointAlignmentSlot id="1b6714ce-f6de-4a31-a3e3-4f6c0a9ef272" name="BodyPoint1" available="1" canPlayerUse="0" fragmentTag="" slottedFragmentTag="" helperName="" entityRelativeRotation="0" entityRelativeTranslation="0" linkMode="NoLink" stance="Crouch" useHandIK="0" useADIK="0" __type="AlignmentSlotBase" __polymorphicType="PointAlignmentSlot">
           <interactionPoints />
           <optionalGameTags />
           <relativeTransform __type="QuatT">
@@ -957,36 +1042,51 @@
     </SCItemPurchasableParams>
     <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
       <sequences>
-        <SReplicatedSequencerDefSequenceParams name="ChakmaInspect" interaction="Interactable.SharedInteractions[9]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+        <SReplicatedSequencerDefSequenceParams name="ChakmaFirstSelectTake" interaction="Interactable.SharedInteractions[9]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
           <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="null" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks />
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="carryableTasks[2]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="carryableTasks[0]" />
+                <WeakPointer dependentTasks="0" />
+              </dependentTasks>
+            </SSequencerSequenceTaskEntryParams>
+            <SSequencerSequenceTaskEntryParams task="carryableTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks>
+                <WeakPointer dependentTasks="carryableTasks[2]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
             <SSequencerSequenceTaskEntryParams task="carryableTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="carryableTasks" />
+                <WeakPointer dependentTasks="carryableTasks[1]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
                 <WeakPointer dependentTasks="carryableTasks" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
           </taskEntries>
         </SReplicatedSequencerDefSequenceParams>
-        <SReplicatedSequencerDefSequenceParams name="ChakmaReturn" interaction="Interactable.SharedInteractions[10]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+        <SReplicatedSequencerDefSequenceParams name="ChakmaBespokeTake" interaction="Interactable.SharedInteractions[10]" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
           <taskEntries>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="null" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks />
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="carryableTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
-                <WeakPointer dependentTasks="carryableTasks[1]" />
+                <WeakPointer dependentTasks="0" />
+              </dependentTasks>
+            </SSequencerSequenceTaskEntryParams>
+            <SSequencerSequenceTaskEntryParams task="carryableTasks[0]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks>
+                <WeakPointer dependentTasks="carryableTasks[0]" />
+              </dependentTasks>
+            </SSequencerSequenceTaskEntryParams>
+            <SSequencerSequenceTaskEntryParams task="Interactable.interactionTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks>
+                <WeakPointer dependentTasks="carryableTasks[0]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
           </taskEntries>
@@ -1001,7 +1101,7 @@
                 <WeakPointer dependentTasks="carryableTasks[1]" />
               </dependentTasks>
             </SSequencerSequenceTaskEntryParams>
-            <SSequencerSequenceTaskEntryParams task="carryableTasks[1]" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+            <SSequencerSequenceTaskEntryParams task="carryableTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
               <dependentTasks>
                 <WeakPointer dependentTasks="carryableTasks" />
               </dependentTasks>
@@ -1023,9 +1123,9 @@
       <defaultAnimation>
       </defaultAnimation>
     </SAnimationControllerParams>
-    <SCItemWeaponComponentParams ammoContainerRecord="86eec5f7-3dd0-40f2-a433-3dc143c0d231" ShouldIgnorePrimaryAmmoContainer="0" geometryTags="Black02" supplementaryFireTime="0" proceduralAnimationRecord="65b7f4dd-735b-4a23-a410-4838c949d5a5" actorProceduralRecoilConfig="00000000-0000-0000-0000-000000000000" autoAimMuzzleAngleOverwrite="-1" aimableAnglesRecord="00000000-0000-0000-0000-000000000000" gimbalModeModifierRecord="00000000-0000-0000-0000-000000000000" useAdsHelper="1" isAllowedInGreenZones="0" uncollapseOnTurnedOn="0" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponComponentParams">
+    <SCItemWeaponComponentParams ammoContainerRecord="86eec5f7-3dd0-40f2-a433-3dc143c0d231" ShouldIgnorePrimaryAmmoContainer="0" geometryTags="Black02" supplementaryFireTime="0" proceduralAnimationRecord="65b7f4dd-735b-4a23-a410-4838c949d5a5" actorProceduralRecoilConfig="00000000-0000-0000-0000-000000000000" autoAimMuzzleAngleOverwrite="-1" aimableAnglesRecord="00000000-0000-0000-0000-000000000000" gimbalModeModifierRecord="00000000-0000-0000-0000-000000000000" useAdsHelper="1" isAllowedInGreenZones="0" uncollapseOnTurnedOn="0" allowFiringDuringFiremodeSwitch="1" __type="DataForgeComponentParams" __polymorphicType="SCItemWeaponComponentParams">
       <secondaryAmmoContainers />
-      <defaultAdsCameraOffset x="0" y="-0.13" z="0" __type="Vec3" />
+      <defaultAdsCameraOffset x="0" y="-0.15" z="0" __type="Vec3" />
       <onAttachParams />
       <reticleParams defaultReticle="none" adsReticle="none" __type="SWeaponReticleParams" />
       <weaponAIData idealCombatRange="50" CombatRangeCategory="Medium" baseAccuracy="1" impactRadiusForFriendlyFire="0" canShootWhenObstructed="0" __type="SWeaponAIDataParams">
@@ -1063,7 +1163,7 @@
         </shootingTimeAccuracyData>
         <aiFiringActionParams />
       </weaponAIData>
-      <connectionParams powerActiveCooldown="1" heatRateOnline="25" lockOnOnverheat="0" maxGlow="100" glowTag="00000000-0000-0000-0000-000000000000" heatReduceWhenOverheatIsFixed="100000" __type="SWeaponConnectionParams">
+      <connectionParams powerActiveCooldown="1" heatRateOnline="25" lockOnOnverheat="1" maxGlow="100" glowTag="00000000-0000-0000-0000-000000000000" heatReduceWhenOverheatIsFixed="100000" __type="SWeaponConnectionParams">
         <noPowerStats fireRate="0" fireRateMultiplier="0" damageMultiplier="1" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="1" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
           <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1" __type="SRecoilModifier">
             <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
@@ -1317,13 +1417,13 @@
         <rangedHeatStats />
         <overheatLockedStats>
         </overheatLockedStats>
-        <overheatTag tag="" __type="SMannequinTagParams" />
+        <overheatTag tag="Overheated" __type="SMannequinTagParams" />
         <overheatEffects />
       </connectionParams>
       <weaponRegenConsumerParams>
       </weaponRegenConsumerParams>
       <aimAction>
-        <SWeaponActionAimSimpleParams name="" localisedName="@LOC_PLACEHOLDER" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Single" zoomScale="1.2" zoomTime="0.175" toggleZoomOverride="0" __type="SWeaponActionParams" __polymorphicType="SWeaponActionAimSimpleParams">
+        <SWeaponActionAimSimpleParams name="" localisedName="@LOC_PLACEHOLDER" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="00000000-0000-0000-0000-000000000000" aiShootingMode="Single" zoomScale="1.2" zoomTime="0.25" toggleZoomOverride="0" __type="SWeaponActionParams" __polymorphicType="SWeaponActionAimSimpleParams">
           <mannequinTag tag="" __type="SMannequinTagParams" />
           <entityTags __type="TagList">
             <tags />
@@ -1395,8 +1495,8 @@
             <SMannequinTagParams tag="ADS" __type="SMannequinTagParams" />
           </mannequinTags>
           <aimRTPC rtpc="Weapon_ADS" __type="AudioRtpc" />
-          <aimStart audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-          <aimStop audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <aimStart audioTrigger="Play_WPFA_Handling_BEHR_Shotgun_BR2_ADS_Raise" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <aimStop audioTrigger="Play_WPFA_Handling_BEHR_Shotgun_BR2_ADS_Lower" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <timeSinceLastAimStartRtpc rtpc="Weapon_ADS_TimeSinceLastRaise" __type="AudioRtpc" />
           <timeSinceLastAimStopRtpc rtpc="Weapon_ADS_TimeSinceLastDrop" __type="AudioRtpc" />
         </SWeaponActionAimSimpleParams>
@@ -1407,12 +1507,12 @@
           <entityTags __type="TagList">
             <tags />
           </entityTags>
-          <switchFireModeAudioTrigger audioTrigger="Play_WPFA_Handling_BEHR_Rifle_P8AR_FiremodeSwitch_Single" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
           <selectableCondition>
           </selectableCondition>
           <chargingBuff>
           </chargingBuff>
-          <maxChargeModifier fireRate="0" fireRateMultiplier="1" damageMultiplier="1.3" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="8" burstShots="0" ammoCost="0" ammoCostMultiplier="3" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
+          <maxChargeModifier fireRate="0" fireRateMultiplier="1" damageMultiplier="2" damageOverTimeMultiplier="1" projectileSpeedMultiplier="1" pellets="0" burstShots="0" ammoCost="0" ammoCostMultiplier="3" heatGenerationMultiplier="1" soundRadiusMultiplier="1" chargeTimeMultiplier="1" useAlternateProjectileVisuals="0" useAugmentedRealityProjectiles="0" __type="SWeaponStats">
             <recoilModifier decayMultiplier="1" endDecayMultiplier="1" fireRecoilTimeMultiplier="1" fireRecoilStrengthFirstMultiplier="1" fireRecoilStrengthMultiplier="1" angleRecoilStrengthMultiplier="1" randomnessMultiplier="1" randomnessBackPushMultiplier="1" frontalOscillationRotationMultiplier="1" frontalOscillationStrengthMultiplier="1" frontalOscillationDecayMultiplier="1" frontalOscillationRandomnessMultiplier="1" animatedRecoilMultiplier="1.2" __type="SRecoilModifier">
               <headRotationMultiplier x="1" y="1" z="1" __type="Vec3" />
               <aimRecoilModifier randomPitchMultiplier="1" randomYawMultiplier="1" decayMultiplier="1" endDecayMultiplier="1" __type="SAimRecoilModifier">
@@ -1463,7 +1563,7 @@
             <salvageModifier salvageSpeedMultiplier="1" radiusMultiplier="1" extractionEfficiency="1" __type="SSalvageModifier" />
           </maxChargeModifier>
           <weaponAction>
-            <SWeaponActionFireSingleParams name="Single" localisedName="@FireMode_Single" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="7484099b-acb0-433a-afad-bc40bb5d2b2f" aiShootingMode="Single" fireRate="60" heatPerShot="0" wearPerShot="0" recoil="af4471e4-b8b5-44f4-8972-39c80a6b7c73" misfire="00000000-0000-0000-0000-000000000000" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSingleParams">
+            <SWeaponActionFireSingleParams name="Single" localisedName="@FireMode_Single" entityTag="00000000-0000-0000-0000-000000000000" uiBindingsTag="7484099b-acb0-433a-afad-bc40bb5d2b2f" aiShootingMode="Single" fireRate="60" heatPerShot="0" wearPerShot="0.17" recoil="af4471e4-b8b5-44f4-8972-39c80a6b7c73" misfire="c07084a6-7555-412c-93e3-7c341a72c421" __type="SWeaponActionParams" __polymorphicType="SWeaponActionFireSingleParams">
               <mannequinTag tag="" __type="SMannequinTagParams" />
               <entityTags __type="TagList">
                 <tags />
@@ -1472,8 +1572,8 @@
               <selectableCondition>
               </selectableCondition>
               <launchParams>
-                <SProjectileLauncher fireHelper="weapon_term_internal_01" muzzleHelper="muzzle_flash" ammoCost="1" pelletCount="12" damageMultiplier="1" soundRadius="50" projectileType="Primary" __type="SLauncherBase" __polymorphicType="SProjectileLauncher">
-                  <spreadParams min="6.5" max="11" firstAttack="3.2" attack="3.2" decay="3" __type="SSpreadParams" />
+                <SProjectileLauncher fireHelper="weapon_term_internal_01" muzzleHelper="muzzle_flash" ammoCost="1" pelletCount="6" damageMultiplier="1" soundRadius="50" projectileType="Primary" __type="SLauncherBase" __polymorphicType="SProjectileLauncher">
+                  <spreadParams min="4" max="5.5" firstAttack="2.5" attack="2.5" decay="3" __type="SSpreadParams" />
                 </SProjectileLauncher>
               </launchParams>
               <fireFragment fragment="fire" forceWeaponController="0" __type="SFragmentParams" />
@@ -1598,7 +1698,7 @@
       <audioParams visorAudioAvailable="0" __type="SWeaponAudioParams">
         <ammoCountRTPC rtpc="Ammo_Count_Normalised" __type="AudioRtpc" />
         <weaponPowerRTPC rtpc="Weapon_Power_Level" __type="AudioRtpc" />
-        <switchFireModeAudioTrigger audioTrigger="Play_WPFA_Handling_BEHR_Rifle_P8AR_FiremodeSwitch_Single" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <switchFireModeAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
         <weaponHeatRTPC rtpc="Weapon_Heat_Level" __type="AudioRtpc" />
         <overheatAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
         <overheatEndAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -1955,7 +2055,7 @@
       <vehicleItemPortInteractionLinks />
       <linkPlugs />
     </SInteractionLinkParams>
-    <SDegradationParams MaxLifetimeHours="0" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="0" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>
@@ -1981,5 +2081,6 @@
     </UIBuildingBlocksEntityComponentParams>
     <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
     <UIBindingsConsumerEntityComponentParams linkToPort="0" __type="DataForgeComponentParams" __polymorphicType="UIBindingsConsumerEntityComponentParams" />
+    <EntityComponentHeatConnection TemperatureToIR="6" StartIRTemperature="250" OverpowerHeat="0" OverclockThresholdMinHeat="0" OverclockThresholdMaxHeat="0" ThermalEnergyBase="10" ThermalEnergyDraw="20" ThermalConductivity="3" SpecificHeatCapacity="13" Mass="200" SurfaceArea="50" StartCoolingTemperature="300" MaxCoolingRate="1" MaxTemperature="450" OverheatTemperature="370" RecoveryTemperature="350" MinTemperature="0" MisfireMinTemperature="370" MisfireMaxTemperature="600" __type="DataForgeComponentParams" __polymorphicType="EntityComponentHeatConnection" />
   </Components>
 </EntityClassDefinition.ksar_shotgun_energy_01_black02>

@@ -21,6 +21,8 @@
           <tags>
             <Reference value="fe312631-b27e-440b-be63-4ae901944f40" />
             <Reference value="f07ed549-0968-4475-92bc-344797a30d43" />
+            <Reference value="63d01b81-de09-4ed0-a27e-b108a6f6a75c" />
+            <Reference value="7c5e713b-067a-4739-a051-a15b6e53f734" />
           </tags>
         </tags>
       </inclusionParams>
@@ -28,7 +30,7 @@
     <SEntityDynamicLocationProperties dynamicallyUpdatePersistanceLocation="1" __type="EntityClassStaticDataParams" __polymorphicType="SEntityDynamicLocationProperties" />
   </StaticEntityClassData>
   <Components>
-    <VehicleComponentParams landingSystem="8afb6390-3aca-4edf-8b18-35ef0b4e8241" manufacturer="ec227ef3-fb08-4897-abdb-579eb4e87c25" vehicleDefinition="Scripts/Entities/Vehicles/Implementations/Xml/CNOU_HoverQuad.xml" modification="" allowSoftDestruction="1" ignoreHostility="0" dogfightEnabled="1" unmoveable="0" isGravlevVehicle="1" vehicleHullDamageNormalizationValue="2500" incomingDamageModifierToAI="1" incomingVehicleDamageModifierFromAI="1" aiDamageModifiers="61d77aed-e544-4d87-b93d-727df588c282" emergencyStatusDamageThreshold="0.07" emergencyStatusChargeThreshold="0.8" crewSize="1" vehicleName="@vehicle_NameCNOU_HoverQuad" vehicleDescription="@vehicle_DescCNOU_HoverQuad" vehicleImagePath="" vehicleCareer="@item_ShipClass_PersonalTransport" vehicleCareerRef="605f6ca1-9eae-4d78-9f7f-71288d44dada" vehicleRole="@item_ShipClass_PersonalTransport" vehicleRoleRef="e23c9136-14ab-4814-8c99-50973444f9c4" DashboardCanvasConfig="00000000-0000-0000-0000-000000000000" inventoryContainerParams="07b72e0c-74a4-4f62-81b5-da31c2afcb86" __type="DataForgeComponentParams" __polymorphicType="VehicleComponentParams">
+    <VehicleComponentParams landingSystem="8afb6390-3aca-4edf-8b18-35ef0b4e8241" manufacturer="ec227ef3-fb08-4897-abdb-579eb4e87c25" vehicleDefinition="Scripts/Entities/Vehicles/Implementations/Xml/CNOU_HoverQuad.xml" modification="" allowSoftDestruction="1" ignoreHostility="0" dogfightEnabled="1" unmoveable="0" isGravlevVehicle="1" vehicleHullDamageNormalizationValue="2500" incomingDamageModifierToAI="1" incomingVehicleDamageModifierFromAI="1" aiDamageModifiers="61d77aed-e544-4d87-b93d-727df588c282" emergencyStatusDamageThreshold="0.07" emergencyStatusChargeThreshold="0.8" crewSize="1" vehicleName="@vehicle_NameCNOU_HoverQuad" vehicleDescription="@vehicle_DescCNOU_HoverQuad" vehicleImagePath="" vehicleCareer="@item_ShipClass_PersonalTransport" vehicleCareerRef="605f6ca1-9eae-4d78-9f7f-71288d44dada" vehicleRole="@item_ShipFocus_Transport" vehicleRoleRef="e23c9136-14ab-4814-8c99-50973444f9c4" DashboardCanvasConfig="00000000-0000-0000-0000-000000000000" inventoryContainerParams="07b72e0c-74a4-4f62-81b5-da31c2afcb86" __type="DataForgeComponentParams" __polymorphicType="VehicleComponentParams">
       <maxBoundingBoxSize x="1.32" y="1.45" z="5.15" __type="Vec3" />
       <cargoEntrySize x="0" y="0" __type="Vec2" />
       <aiProperties>
@@ -562,18 +564,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_VGDM_CNOU_Hover_Quad_Deathmask" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -660,6 +650,18 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_VGDM_CNOU_Hover_Quad_Deathmask" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
             </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
@@ -735,7 +737,9 @@
           <baseSignatureParams>
           </baseSignatureParams>
           <crossSectionParams>
-            <SSCSignatureSystemSDFCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemSDFCrossSectionParams" />
+            <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
+              <crossSection x="205" y="148" z="247" __type="Vec3" />
+            </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
           </emissionModifierParams>
@@ -1914,7 +1918,7 @@
       <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="350" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
@@ -1924,7 +1928,7 @@
     </SCActorCollisionAvoidanceParams>
     <ShipStateMonitorComponentParams __type="DataForgeComponentParams" __polymorphicType="ShipStateMonitorComponentParams" />
     <EntranceDisplayComponentParams entrancesRecord="29e124d9-0760-4b92-b7cd-3d01910042fc" __type="DataForgeComponentParams" __polymorphicType="EntranceDisplayComponentParams" />
-    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>

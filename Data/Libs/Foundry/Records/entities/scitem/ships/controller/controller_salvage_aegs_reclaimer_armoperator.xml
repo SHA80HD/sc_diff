@@ -21,21 +21,25 @@
       <entityAttachParams>
       </entityAttachParams>
     </SAttachableComponentParams>
-    <SCItemSalvageControllerParams sensorRaycastArmingDistance="0" numSupportedSalvageHeads="1" __type="DataForgeComponentParams" __polymorphicType="SCItemSalvageControllerParams">
+    <SCItemSalvageControllerParams sensorRaycastArmingDistance="0" numSupportedSalvageHeads="0" __type="DataForgeComponentParams" __polymorphicType="SCItemSalvageControllerParams">
       <armParams>
       </armParams>
       <scrapingParams>
       </scrapingParams>
       <structuralParams>
-        <SSalvageStructuralParams fractureTimePerCubicMetre="0.05" minFracturableVolume="1" maxFracturableVolume="1E+12" disintegrationRate="1" disintegrationEfficiency="0.1" disintegrationResourceType="98aa6a70-80e7-41d7-9128-9692053d57a2" __type="SSalvageStructuralParams">
+        <SSalvageStructuralParams numFieldSupportersRequired="0" fractureTimePerRadiusMetre="1.2" minFracturableRadius="1" maxFracturableRadius="300" minDisintegratableRadius="0" maxDisintegratableRadius="300" disintegrationTimePerRadiusMetre="2.5" disintegrationSCUPerCubicMetre="0.0045" disintegrationResourceType="98aa6a70-80e7-41d7-9128-9692053d57a2" startGrinderInteraction="" stopGrinderInteraction="" fieldAlignmentSpeedMultiplierEnabledFracture="1" fieldAlignmentSpeedMultiplierEnabledDisintegration="1" fieldAlignmentYieldMultiplierEnabledDisintegration="1" fieldAlignmentFalloffDistanceForward="50" fieldAlignmentFalloffDistanceRadial="40" fieldAlignmentSweetSpotForwardFactor="0.25" fieldAlignmentMaxSpeedMultiplier="4" fieldAlignmentMaxYieldMultiplier="1.5" fieldAlignmentBaselineFactor="0.5" __type="SSalvageStructuralParams">
           <fieldEmitterArea __type="SSalvageAreaBoxParams">
-            <extents x="20" y="40" z="20" __type="Vec3" />
-            <offset x="0" y="20" z="0" __type="Vec3" />
+            <extents x="50" y="80" z="50" __type="Vec3" />
+            <offset x="0" y="40" z="0" __type="Vec3" />
           </fieldEmitterArea>
+          <vectorFieldAreaVFX __type="SSalvageAreaBoxParams">
+            <extents x="30" y="80" z="30" __type="Vec3" />
+            <offset x="0" y="35" z="0" __type="Vec3" />
+          </vectorFieldAreaVFX>
         </SSalvageStructuralParams>
       </structuralParams>
       <cargoParams>
-        <SSalvageCargoParams cargoBoxEntityClass="2e50dde5-30d4-4faa-af8f-8e5aa8004b96" conveyorRetractedStateTag="6c5b34e9-9bd5-43a1-ba09-32b668edde34" conveyorDeployedStateTag="c789bbfb-1fff-408b-b55c-e260eee33cdf" tryEjectCargoBoxInteration="TryEjectCargoBox" ejectCargoBoxInteration="EjectCargoBox" conveyorResetInteration="ConveyorReset" cargoTabLocString="@salvage_HUD_Cargo" createTabLocString="@salvage_FillerStation_Create" extractionRateUpdateInterval="0.5" extractionRateAveragingInterval="1" __type="SSalvageCargoParams">
+        <SSalvageCargoParams conveyorRetractedStateTag="6c5b34e9-9bd5-43a1-ba09-32b668edde34" conveyorDeployedStateTag="c789bbfb-1fff-408b-b55c-e260eee33cdf" ejectCargoBoxInteration="EjectCargoBox" conveyorResetInteration="ConveyorReset" cargoTabLocString="@salvage_HUD_Cargo" createTabLocString="@salvage_FillerStation_Create" extractionRateUpdateInterval="0.5" extractionRateAveragingInterval="1" minCargoBoxSize="1" maxCargoBoxSize="1" boxFillingTimePerSCU="1" __type="SSalvageCargoParams">
           <obstructionArea __type="SSalvageAreaBoxParams">
             <extents x="2.8" y="1.4" z="1.4" __type="Vec3" />
             <offset x="-2.8" y="0" z="0.2" __type="Vec3" />
@@ -47,6 +51,34 @@
       <salvageAudioParams __type="SSalvageAudioParams">
         <salvageCargoFilledAudioTrigger audioTrigger="Play_SSSE_Salvage_Cargo_Filled" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
         <switchSalvageModifierAudioTrigger audioTrigger="Play_SSSE_Salvage_Beam_Switching_Heads" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+        <structuralAudio>
+          <SSalvageStructuralAudioParams targetAuxProxyLifetime="5" isGatheringMaterialHoldTime="2" __type="SSalvageStructuralAudioParams">
+            <sourcePlayResonanceFieldOneshot audioTrigger="Play_SSSE_Structural_Salvage_Vulture_Resonate_Field_On" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourcePlayResonanceField audioTrigger="Play_SSSE_Structural_Salvage_Vulture_Resonate_Field_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourceStopResonanceField audioTrigger="Stop_SSSE_Structural_Salvage_Vulture_Resonate_Field_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourcePlayDisintegrationFieldOneshot audioTrigger="Play_SSSE_Structural_Salvage_Vulture_Disintegrate_Field_On" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourcePlayDisintegrationField audioTrigger="Play_SSSE_Structural_Salvage_Vulture_Disintegrate_Field_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourceStopDisintegrationField audioTrigger="Stop_SSSE_Structural_Salvage_Vulture_Disintegrate_Field_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourcePlayVacuum audioTrigger="Play_SSSE_Structural_Salvage_Vulture_Vacuum_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourceStopVacuum audioTrigger="Stop_SSSE_Structural_Salvage_Vulture_Vacuum_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourcePlayGrinding audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourceStopGrinding audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetPlayResonanceStress audioTrigger="Play_SSSE_Structural_Salvage_Shared_Resonance_Stress_Object_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetStopResonanceStress audioTrigger="Stop_SSSE_Structural_Salvage_Shared_Resonance_Stress_Object_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetPlayDisintegrationStress audioTrigger="Play_SSSE_Structural_Salvage_Shared_Disintegration_Stress_Object_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetStopDisintegrationStress audioTrigger="Stop_SSSE_Structural_Salvage_Shared_Disintegration_Stress_Object_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetPlayResonanceBreakOneshot audioTrigger="Play_SSSE_Structural_Salvage_Shared_Breaking_Object_Resonance" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <targetPlayDisintegrationBreakOneshot audioTrigger="Play_SSSE_Structural_Salvage_Shared_Breaking_Object_Disintegration" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <sourceAverageResonanceStrengthRtpc rtpc="GP_Structural_Salvage_Resonance_Progress_Source" __type="AudioRtpc" />
+            <targetResonanceStrengthRtpc rtpc="GP_Structural_Salvage_Resonance_Progress_Target" __type="AudioRtpc" />
+            <sourceAverageDisintegrationStrengthRtpc rtpc="GP_Structural_Salvage_Disintegration_Progress_Source" __type="AudioRtpc" />
+            <targetDisintegrationStrengthRtpc rtpc="GP_Structural_Salvage_Disintegration_Progress_Target" __type="AudioRtpc" />
+            <sourceIsGatheringMaterialRtpc rtpc="GP_Structural_Salvage_Is_Gathering_Material" __type="AudioRtpc" />
+            <targetSizeRtpc rtpc="GP_Structural_Salvage_Target_Size" __type="AudioRtpc" />
+            <targetValueRtpc rtpc="GP_Structural_Salvage_Target_Value" __type="AudioRtpc" />
+            <selectedFieldRtpc rtpc="GP_Structural_Salvage_Selected_Field" __type="AudioRtpc" />
+          </SSalvageStructuralAudioParams>
+        </structuralAudio>
       </salvageAudioParams>
     </SCItemSalvageControllerParams>
     <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">

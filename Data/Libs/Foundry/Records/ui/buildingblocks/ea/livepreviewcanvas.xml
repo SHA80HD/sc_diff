@@ -19,7 +19,7 @@
   <previewScenes />
   <staticVariables />
   <scene>
-    <BuildingBlocks_WidgetRuntimeImage name="LivePreview" rendererType="Primitive" parent="null" previewScene="" previewSceneFlattened="null" isActive="0" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" inheritsFadeOverflowAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" pickableTag="00000000-0000-0000-0000-000000000000" imageSource="CommsCall" materialName="materials/default_rtt.mtl" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetRuntimeImage">
+    <BuildingBlocks_WidgetRuntimeImage name="LivePreview" rendererType="Primitive" parent="null" previewScene="" previewSceneFlattened="null" isActive="1" canBeVirtual="1" affectsLayout="1" affectsAutosize="1" exportNode="1" autoScalingMethod="None" inheritsScale="1" inheritsRotation="1" inheritsTranslation="1" inheritsAlpha="1" alpha="1" layer="5" focusIndex="-1" hoverCursor="Auto" enableHeldCursor="0" heldCursor="Auto" pickableTag="00000000-0000-0000-0000-000000000000" imageSource="CommsCall" materialName="materials/default_rtt.mtl" __type="BuildingBlocks_WidgetBase" __polymorphicType="BuildingBlocks_WidgetRuntimeImage">
       <styleTags />
       <rendererPolicy>
         <BuildingBlocks_FlashRendererPolicy useFlashRenderThreadUpdate="0" transformFrom3D="0" __type="BuildingBlocks_RendererPolicyBase" __polymorphicType="BuildingBlocks_FlashRendererPolicy" />
@@ -30,7 +30,7 @@
       </primitiveSettings>
       <position x="0" y="0" z="0" __type="Vec3" />
       <positionOffset x="0" y="0" z="0" __type="Vec3" />
-      <orientation x="0" y="0" z="0" __type="Deg3" />
+      <orientation x="0" y="-30" z="0" __type="Deg3" />
       <orientationOffset x="0" y="0" z="0" __type="Deg3" />
       <scale x="1" y="1" z="1" __type="Vec3" />
       <sizing enableMinWidth="0" enableMinHeight="0" enableMaxWidth="0" enableMaxHeight="0" __type="BuildingBlocks_Size">
@@ -132,9 +132,16 @@
   </scene>
   <library />
   <operations>
-    <BuildingBlocks_BindingsBooleanVariable binding="previewActive" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanVariable">
+    <BuildingBlocks_BindingsIntegerVariable binding="easpawnscreen/spawnlocationsarray/[easpawnscreen/spawnlocationselectedindex]/LocationType" inheritsNamespace="1" isPulled="0" isWatched="0" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsIntegerVariable">
       <path />
-    </BuildingBlocks_BindingsBooleanVariable>
+    </BuildingBlocks_BindingsIntegerVariable>
+    <BuildingBlocks_BindingsBooleanFromIntegerSwitch defaultValue="0" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanFromIntegerSwitch">
+      <exceptions>
+        <Int64 value="2" />
+        <Int64 value="3" />
+        <Int64 value="4" />
+      </exceptions>
+    </BuildingBlocks_BindingsBooleanFromIntegerSwitch>
     <BuildingBlocks_BindingsBooleanField widget="" field="IsActive" input="" __type="BuildingBlocks_Node" __polymorphicType="BuildingBlocks_BindingsBooleanField" />
   </operations>
 </BuildingBlocks_Canvas.LivePreviewCanvas>

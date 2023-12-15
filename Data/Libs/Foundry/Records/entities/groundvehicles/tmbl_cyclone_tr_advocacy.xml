@@ -337,8 +337,9 @@
         </materialEffects>
         <soundEffects>
           <SEntityEffectSystem_SoundCategory enabled="1" allowMultipleTags="1" __type="SEntityEffectSystem_Category" __polymorphicType="SEntityEffectSystem_SoundCategory">
-            <tagEffects>
-              <SEntityEffectSystem_SoundTagEffect name="Death Explosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
+            <tagEffects />
+            <triggerEffects>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
                 <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_Base_Light" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
                   <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
@@ -349,9 +350,8 @@
                   </SEntityEffectSystem_Attachment_EntitySlot>
                 </attachmentSettings>
                 <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
-            </tagEffects>
-            <triggerEffects />
+              </SEntityEffectSystem_SoundTriggerEffect>
+            </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
         <audioEnvironmentEffects>
@@ -408,7 +408,7 @@
           </baseSignatureParams>
           <crossSectionParams>
             <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
-              <crossSection x="3605" y="1913" z="4083" __type="Vec3" />
+              <crossSection x="1802" y="956" z="2041" __type="Vec3" />
             </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
@@ -510,6 +510,26 @@
               <SimulationGeometry>
               </SimulationGeometry>
               <Palette RootRecord="7d183405-631b-4765-8bfc-cd6a82ce04a4" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Cyclone_Racing_Yellow_White_Grey_Stripes" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects\Vehicles\TMBL\Cyclone\TMBL_Cyclone.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/Cyclone/tmbl_cyclone_racing_yellow_white_grey_stripes.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="8add5886-aa50-4ba6-be97-f09536cca318" ChildPath="" __type="TintPaletteRef" />
+            </Geometry>
+            <SubGeometry />
+          </SGeometryNodeParams>
+          <SGeometryNodeParams Tags="Paint_Cyclone_Racing_Blue_Blue_Blue_TigerStripes" ScaleMultiplier="1" __type="SGeometryNodeParams">
+            <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="0" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0" Dirt="0" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+              <Geometry path="Objects\Vehicles\TMBL\Cyclone\TMBL_Cyclone.cga" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
+              <Material path="Objects/Vehicles/TMBL/Cyclone/tmbl_cyclone_racing_blue_blue_blue_tigerstripes.mtl" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
+              <SimulationGeometry>
+              </SimulationGeometry>
+              <Palette RootRecord="d5119be1-6b9d-4046-99b7-c4ba511b3570" ChildPath="" __type="TintPaletteRef" />
             </Geometry>
             <SubGeometry />
           </SGeometryNodeParams>
@@ -663,7 +683,7 @@
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
     <EntityComponentAudioHitListenerParams calculateOnlyWhenPlayerContained="0" hitListenerDefinition="aeefffe0-ed13-4713-adf5-419777ed22c7" __type="DataForgeComponentParams" __polymorphicType="EntityComponentAudioHitListenerParams" />
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="300" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SubsumptionMissionLinkComponentParams __type="DataForgeComponentParams" __polymorphicType="SubsumptionMissionLinkComponentParams" />
@@ -671,7 +691,7 @@
     <EntityComponentShipCommsChannelParams __type="DataForgeComponentParams" __polymorphicType="EntityComponentShipCommsChannelParams" />
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
     <LegalRegistrationComponentParams doNotTriggerCrimesAgainstThis="0" nameplateOverride="" nameplateLocalizedOverride="@LOC_EMPTY" displayNameplateOverPilotName="0" serialOverride="" serialLocalizedOverride="@LOC_EMPTY" serialNumberFormat="c454d7d8-6e61-4d52-887f-ce3e90ac77e9" securityNetworkManifest="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="LegalRegistrationComponentParams" />
-    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>

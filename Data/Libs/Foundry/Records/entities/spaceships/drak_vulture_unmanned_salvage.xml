@@ -615,7 +615,7 @@
                 </SItemPortLoadoutManualParams>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="hardpoint_refill_station" entityClassName="SalvageFillerStation_DRAK_Vulture" entityClassReference="00000000-0000-0000-0000-000000000000" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_refill_station" entityClassName="" entityClassReference="d32fe366-2c38-472d-b9ab-48b45963e04b" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
@@ -639,7 +639,19 @@
               <loadout>
               </loadout>
             </SItemPortLoadoutEntryParams>
-            <SItemPortLoadoutEntryParams itemPortName="hardpoint_internal_storage" entityClassName="" entityClassReference="01bbe184-3534-40b7-9311-735ae5844fd6" __type="SItemPortLoadoutEntryParams">
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_internal_storage" entityClassName="" entityClassReference="0d226a98-1a05-4e49-bde5-11fff0f8f88f" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_salvage_dummy_left" entityClassName="SalvageFieldSupporter" entityClassReference="224884e8-0a84-44fb-8144-222d8cf50b4c" __type="SItemPortLoadoutEntryParams">
+              <inventoryContainer>
+              </inventoryContainer>
+              <loadout>
+              </loadout>
+            </SItemPortLoadoutEntryParams>
+            <SItemPortLoadoutEntryParams itemPortName="hardpoint_salvage_dummy_right" entityClassName="SalvageFieldSupporter" entityClassReference="224884e8-0a84-44fb-8144-222d8cf50b4c" __type="SItemPortLoadoutEntryParams">
               <inventoryContainer>
               </inventoryContainer>
               <loadout>
@@ -660,6 +672,20 @@
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
           <SSharedInteractionParams Name="PowerOff" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_power_off" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="StartGrinder" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="StopGrinder" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Hide" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
             <QueryTags />
             <conditionList>
             </conditionList>
@@ -924,6 +950,66 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Structural Salvage - Source Resonate" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="9ca62d02-4f1e-4435-a45d-d33daee4cb42" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Salvage\structural_salvage.Resonate.Vulture.vulture_source_resonate" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneListAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneListAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                    <boneAttachments>
+                      <String value="VFX_L_Arm" />
+                      <String value="VFX_R_Arm" />
+                    </boneAttachments>
+                  </SEntityEffectSystem_Attachment_BoneListAttachment>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="00000000-0000-0000-0000-000000000000" particleProperty="emissionSize" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideVectorValueModifier __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideVectorValueModifier">
+                        <overrideValues x="5" y="1" z="1" __type="Vec3" />
+                      </SEntityEffectSystem_OverrideVectorValueModifier>
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="912640ba-0b26-42d6-a6b6-be3e8ad5348d" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
+              <SEntityEffectSystem_ParticleTagEffect name="Structural Salvage - Source Disintegrate Field" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" tag="de301e19-2161-4f71-8dc0-d2c7c8343fbd" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTagEffect">
+                <particleEffect path="Spaceships\Salvage\structural_salvage.Disintegrate.Vulture.vulture_source_disintegrate" __type="GlobalResourceBase" __polymorphicType="GlobalResourceParticle" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_BoneListAttachment offsetParameter="00000000-0000-0000-0000-000000000000" attachmentZone="Host" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_BoneListAttachment">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                    <boneAttachments>
+                      <String value="VFX_L_Arm" />
+                      <String value="VFX_R_Arm" />
+                    </boneAttachments>
+                  </SEntityEffectSystem_Attachment_BoneListAttachment>
+                </attachmentSettings>
+                <propertyLinks>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="00000000-0000-0000-0000-000000000000" particleProperty="emissionSize" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                      <SEntityEffectSystem_OverrideVectorValueModifier __type="SEntityEffectSystem_PropertyModifier" __polymorphicType="SEntityEffectSystem_OverrideVectorValueModifier">
+                        <overrideValues x="5" y="1" z="1" __type="Vec3" />
+                      </SEntityEffectSystem_OverrideVectorValueModifier>
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="912640ba-0b26-42d6-a6b6-be3e8ad5348d" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                  <SEntityEffectSystem_ParticlePropertyLink parameterName="00000000-0000-0000-0000-000000000000" particleProperty="strength" __type="SEntityEffectSystem_PropertyLink" __polymorphicType="SEntityEffectSystem_ParticlePropertyLink">
+                    <modifiers>
+                    </modifiers>
+                  </SEntityEffectSystem_ParticlePropertyLink>
+                </propertyLinks>
+              </SEntityEffectSystem_ParticleTagEffect>
             </tagEffects>
             <triggerEffects>
               <SEntityEffectSystem_ParticleTriggerEffect name="Quantum Travel (Start)" enabled="1" primed="0" holographic="0" updateEntityBounds="0" clipToVisArea="Local" gpuVisAreaCullingMode="Default" trigger="da5af381-1829-42d0-aa5c-4a676502112b" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_ParticleTriggerEffect">
@@ -1034,18 +1120,6 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTagEffect>
-              <SEntityEffectSystem_SoundTagEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" tag="fb112c65-9c41-417e-89f4-e74d3b29e6de" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
-                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HighTech_Medium" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-                <attachmentSettings>
-                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
-                    <offset __type="QuatT">
-                      <Rotation x="0" y="0" z="0" __type="Ang3" />
-                      <Position x="0" y="0" z="0" __type="Vec3" />
-                    </offset>
-                  </SEntityEffectSystem_Attachment_EntitySlot>
-                </attachmentSettings>
-                <propertyLinks />
-              </SEntityEffectSystem_SoundTagEffect>
               <SEntityEffectSystem_SoundTagEffect name="Interdiction" enabled="1" multiPosition="0" useDefaultProxy="0" tag="d43c12ff-1e92-4e58-bda2-684a93eabf22" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTagEffect">
                 <soundEffect audioTrigger="Play_QDrive_Interdiction" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
                 <attachmentSettings>
@@ -1132,6 +1206,18 @@
                 </attachmentSettings>
                 <propertyLinks />
               </SEntityEffectSystem_SoundTriggerEffect>
+              <SEntityEffectSystem_SoundTriggerEffect name="ShipExplosion" enabled="1" multiPosition="0" useDefaultProxy="0" trigger="d01ee89c-4358-4004-bb97-04552840efb3" __type="SEntityEffectSystem_Effect" __polymorphicType="SEntityEffectSystem_SoundTriggerEffect">
+                <soundEffect audioTrigger="Play_SSDM_Shared_Explosion_HighTech_Medium" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+                <attachmentSettings>
+                  <SEntityEffectSystem_Attachment_EntitySlot offsetParameter="00000000-0000-0000-0000-000000000000" __type="SEntityEffectSystem_Attachment" __polymorphicType="SEntityEffectSystem_Attachment_EntitySlot">
+                    <offset __type="QuatT">
+                      <Rotation x="0" y="0" z="0" __type="Ang3" />
+                      <Position x="0" y="0" z="0" __type="Vec3" />
+                    </offset>
+                  </SEntityEffectSystem_Attachment_EntitySlot>
+                </attachmentSettings>
+                <propertyLinks />
+              </SEntityEffectSystem_SoundTriggerEffect>
             </triggerEffects>
           </SEntityEffectSystem_SoundCategory>
         </soundEffects>
@@ -1208,7 +1294,7 @@
           </baseSignatureParams>
           <crossSectionParams>
             <SSCSignatureSystemManualCrossSectionParams __type="SSCSignatureSystemCrossSectionParams" __polymorphicType="SSCSignatureSystemManualCrossSectionParams">
-              <crossSection x="7200" y="4000" z="15000" __type="Vec3" />
+              <crossSection x="6009" y="3339" z="12520" __type="Vec3" />
             </SSCSignatureSystemManualCrossSectionParams>
           </crossSectionParams>
           <emissionModifierParams>
@@ -1972,9 +2058,28 @@
         <SAnimationScopeContext scopeContext="Ship" type="Self" __type="SAnimationScopeContext" />
       </ScopeContexts>
       <AnimationJointControls>
+        <AnimationJointControl __type="AnimationJointControl">
+          <variables>
+            <AnimationFloatVariable name="GrinderProgressOpen" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="2" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+            <AnimationFloatVariable name="GrinderProgressClose" defaultValue="0" __type="AnimationVariable" __polymorphicType="AnimationFloatVariable">
+              <range minimum="0" maximum="1" __type="Range" />
+              <defaultInterpolation timeRange="2" type="Linear" __type="AnimationVariableInterpolation" />
+            </AnimationFloatVariable>
+          </variables>
+          <movements />
+          <animations>
+            <AnimationMovement variable="AnimationJointControls.AnimationJointControl.variables[0]" animationName="drak_vulture_grinder_open" layerId="25" __type="AnimationMovement" />
+            <AnimationMovement variable="AnimationJointControls.AnimationJointControl.variables[1]" animationName="drak_vulture_grinder_close" layerId="26" __type="AnimationMovement" />
+          </animations>
+        </AnimationJointControl>
       </AnimationJointControls>
       <AnimationControlActorIKs />
-      <AnimationTasks />
+      <AnimationTasks>
+        <SSequencerSkeletonAnimationTaskParams animationName="drak_vulture_grinder_loop" layerId="1" looping="1" playbackSpeed="1" __type="SSequencerDefTaskParams" __polymorphicType="SSequencerSkeletonAnimationTaskParams" />
+      </AnimationTasks>
       <defaultAnimation>
       </defaultAnimation>
     </SAnimationControllerParams>
@@ -2242,10 +2347,97 @@
     <LegalRegistrationComponentParams doNotTriggerCrimesAgainstThis="0" nameplateOverride="" nameplateLocalizedOverride="@LOC_EMPTY" displayNameplateOverPilotName="0" serialOverride="" serialLocalizedOverride="@LOC_EMPTY" serialNumberFormat="c454d7d8-6e61-4d52-887f-ce3e90ac77e9" securityNetworkManifest="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="LegalRegistrationComponentParams" />
     <RangeEventDispatcherComponentParams __type="DataForgeComponentParams" __polymorphicType="RangeEventDispatcherComponentParams" />
     <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
-      <StateTypes />
+      <StateTypes>
+        <SInteractionStateType StateTypeName="Grinder" bindingsMethod="None" DefaultState="StateTypes[0].SInteractionStateType.States[0]" asopReset="1" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="GrinderClosed" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[0]" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[1]" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[2]" NextState="StateTypes[0].SInteractionStateType.States[1]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+            <SInteractionState StateName="GrinderOpen" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="sequences" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[0]" value="1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[1]" value="0" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions>
+                <SInteractionStateTransition Interaction="Interactable.SharedInteractions[3]" NextState="StateTypes[0].SInteractionStateType.States[0]" __type="SInteractionStateTransition" />
+              </Interactions>
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+        <SInteractionStateType StateTypeName="" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
+          <States>
+            <SInteractionState StateName="" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags />
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags />
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
+          </States>
+          <StateModifiers />
+        </SInteractionStateType>
+      </StateTypes>
     </SInteractionStateMachineParams>
     <SEntityComponentSequencerParams resetSequence="null" __type="DataForgeComponentParams" __polymorphicType="SEntityComponentSequencerParams">
-      <sequences />
+      <sequences>
+        <SReplicatedSequencerDefSequenceParams name="PlayGrinder" interaction="null" __type="SSequencerDefSequenceParams" __polymorphicType="SReplicatedSequencerDefSequenceParams">
+          <taskEntries>
+            <SSequencerSequenceTaskEntryParams task="AnimationTasks" postDelay="0" haltOnFailure="1" __type="SSequencerSequenceTaskEntryParams">
+              <dependentTasks />
+            </SSequencerSequenceTaskEntryParams>
+          </taskEntries>
+        </SReplicatedSequencerDefSequenceParams>
+      </sequences>
     </SEntityComponentSequencerParams>
     <SurfaceRaindropsComponentParams enable="1" inactiveDuration="25" maximumSpeed="200" __type="DataForgeComponentParams" __polymorphicType="SurfaceRaindropsComponentParams">
       <surfaceParticleRtt cameraFov="1" aspectRatio="1" sdfTexture="textures/vfx/sdf_textures/abstract/cells_sdf.dds" __type="SurfaceParticleRTTParams">
@@ -2292,7 +2484,7 @@
       <mergedPaddingFrac x="0" y="0" z="0" __type="Vec3" />
       <debugDraw drawBoundingBox="0" drawAdvanced="0" densityPerMeter="0" density="1" minMagnitude="0" maxMagnitude="0" arrowScale="1" renderThreshold="0" renderTolerance="0" renderInverted="0" __type="RParticleFieldNodeDebugParams" />
     </RParticleFieldNodeComponentParams>
-    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
+    <EAScoringVehicleComponentParamsDef partDetachedBonus="50" componentDistortionScore="50" totalDistortionScoreAward="500" distortionDisablePercentage="0.8" __type="DataForgeComponentParams" __polymorphicType="EAScoringVehicleComponentParamsDef">
       <baseComponent totalScore="1400" timeSinceLastHitForAssist="60" awardKill="20" awardKillAssist="10" __type="DataForgeComponentParams" __polymorphicType="EAScoringComponentParamsDef" />
     </EAScoringVehicleComponentParamsDef>
     <SGreenZoneObedienceComponentParams __type="DataForgeComponentParams" __polymorphicType="SGreenZoneObedienceComponentParams" />
@@ -2302,7 +2494,7 @@
     </SCActorCollisionAvoidanceParams>
     <ShipStateMonitorComponentParams __type="DataForgeComponentParams" __polymorphicType="ShipStateMonitorComponentParams" />
     <EntranceDisplayComponentParams entrancesRecord="0c293259-5c75-4d8f-b8a3-fdfc5a968b29" __type="DataForgeComponentParams" __polymorphicType="EntranceDisplayComponentParams" />
-    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
+    <SDegradationParams MaxLifetimeHours="25" InitialAgeRatio="0" InitialUsageRatio="0" BasePowerMultiplier="0" DrawPowerMultiplier="0" AtmosphereMultiplier="1.5" DegradationAccumulationThreshold="1" DamageConversionRate="2" DegradeOnlyWhenAttached="0" StopDegradingWhenAttached="0" StopDegradingIfDestroyed="0" PortTags="" RequiredPortTags="" __type="DataForgeComponentParams" __polymorphicType="SDegradationParams">
       <EffectCurve useLUT="0" __type="BezierCurve">
         <points />
       </EffectCurve>

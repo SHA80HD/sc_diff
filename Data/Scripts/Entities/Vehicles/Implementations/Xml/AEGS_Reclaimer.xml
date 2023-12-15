@@ -114,10 +114,7 @@
                 </Types>
                 <Pitch min="-45" max="45" />
                 <Yaw min="-90" max="90" />
-                <Connections>
-                  <Connection pipeClass="Power" pipe="MainPower" />
-                  <Connection pipeClass="Heat" pipe="MainHeat" />
-                </Connections>
+                <ControllerDef controllableTags="MainSalvageArm" />
               </ItemPort>
             </Part>
             <Part name="hardpoint_thruster_retro_front_left" class="ItemPort">
@@ -227,7 +224,6 @@
                       <Observerable itemType="CommsController" screensDefault="" screensAvail="SupportScreenLeft, SupportScreenRight, OwnShipMFD, TargetingMFD" primaryCommsScreen="TargetingMFD" />
                       <Observerable itemType="CapacitorAssignmentController" visorScreen="" screensDefault="" screensAvail="Flight_HUD" />
                       <Observerable itemType="LandingSystem" screensDefault="Screen_Flight_HUD" screensAvail="Screen_Flight_HUD" />
-                      <Observerable itemType="SalvageController" screensDefault="" screensAvail="Flight_HUD" />
                     </Observerables>
                     <PriorityGroups>
                       <PriorityGroup itemType="EnergyController">
@@ -236,11 +232,6 @@
                         </tags>
                       </PriorityGroup>
                       <PriorityGroup itemType="CommsController" />
-                      <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
-                        <tags tag="pilotSeat">
-                          <Priority value="exclusive_control" />
-                        </tags>
-                      </PriorityGroup>
                       <PriorityGroup itemType="DoorController" />
                       <PriorityGroup itemType="LightController" defaultPriority="no_control">
                         <tags tag="pilotseat_light">
@@ -706,6 +697,7 @@
                       <Observerable itemType="ShieldController" screensDefault="" screensAvail="Support_Screen, CrewStationMFD" />
                       <Observerable itemType="WeaponController" screensDefault="" screensAvail="Support_Screen, CrewStationMFD" />
                       <Observerable itemType="CommsController" screensDefault="" screensAvail="Support_Screen, CrewStationMFD" />
+                      <Observerable itemType="SalvageController" screensDefault="" screensAvail="Support_Screen, CrewStationMFD" />
                     </Observerables>
                     <PriorityGroups>
                       <PriorityGroup itemType="EnergyController">
@@ -722,6 +714,11 @@
                       </PriorityGroup>
                       <PriorityGroup itemType="CommsController" defaultPriority="observe_only" />
                       <PriorityGroup itemType="Display" defaultPriority="observe_only" />
+                      <PriorityGroup itemType="SalvageController" defaultPriority="no_control">
+                        <tags tag="MainSalvageArm">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
                     </PriorityGroups>
                   </UserDef>
                   <UsableDef>
@@ -2188,10 +2185,14 @@
                 <Types>
                   <Type type="SalvageController" />
                 </Types>
-                <ControllerDef controllableTags="pilotseat">
+                <ControllerDef controllableTags="MainSalvageArm">
                   <UsableDef>
                     <PriorityGroups>
-                      <PriorityGroup itemType="ToolArm" />
+                      <PriorityGroup itemType="ToolArm" defaultPriority="no_control">
+                        <tags tag="MainSalvageArm">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
                       <PriorityGroup itemType="SalvageFieldEmitter" />
                       <PriorityGroup itemType="SalvageInternalStorage" />
                     </PriorityGroups>
