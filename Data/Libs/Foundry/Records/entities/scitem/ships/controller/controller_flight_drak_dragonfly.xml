@@ -140,14 +140,24 @@
       <vehicleItemPortInteractionLinks />
       <linkPlugs />
     </SInteractionLinkParams>
-    <IFCSParams scmSpeed="85" boostSpeedForward="290" boostSpeedBackward="230" maxSpeed="500" attitudeLimiterEnabled="0" linearLimiterType="NormalizedUniform" torqueDistanceThreshold="0.5" torqueImbalanceMultiplier="1" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1" precisionMinDistance="5" precisionMaxDistance="90" precisionLandingMultiplier="1" linearAccelDecay="3" angularAccelDecay="7" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="367b3a16-0a17-46f9-8476-4418ea21f929" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
+    <IFCSParams scmSpeed="85" boostSpeedForward="290" boostSpeedBackward="230" maxSpeed="500" pitchYawLimiterType="NormalizedUniform" linearLimiterType="NormalizedUniform" torqueDistanceThreshold="0.5" torqueImbalanceMultiplier="1" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1" precisionMinDistance="5" precisionMaxDistance="90" precisionLandingMultiplier="1" linearAccelDecay="3" angularAccelDecay="7" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="367b3a16-0a17-46f9-8476-4418ea21f929" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
       <maxAngularVelocity x="72" y="137" z="72" __type="Vec3" />
-      <afterburner usePerDirectionModifiers="0" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0.15" afterburnerRampUpTime="0" afterburnerRampDownTime="0" afterburnerCapacitorThresholdRatio="0.25" capacitorMax="1200" capacitorAfterburnerIdleCost="20" capacitorAfterburnerLinearCost="1" capacitorAfterburnerAngularCost="0.2" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="70" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="cfd100b7-0353-4d81-a943-db23dc3ff573" __type="AfterburnerParams">
+      <afterburner usePerDirectionModifiers="0" afterburnerAngCapacitorScaling="0" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0.15" afterburnerRampUpTime="0" afterburnerRampDownTime="0" afterburnerCapacitorThresholdRatio="0.25" capacitorMax="1200" capacitorAfterburnerIdleCost="20" capacitorAfterburnerLinearCost="1" capacitorAfterburnerAngularCost="0.2" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="70" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="cfd100b7-0353-4d81-a943-db23dc3ff573" __type="AfterburnerParams">
         <afterburnAccelMultiplier x="2" y="2" z="2" __type="Vec3" />
         <afterburnAccelMultiplierPositive x="2" y="2" z="2" __type="Vec3" />
         <afterburnAccelMultiplierNegative x="2" y="2" z="2" __type="Vec3" />
         <afterburnAngAccelMultiplier x="1" y="1" z="1" __type="Vec3" />
         <afterburnAngVelocityMultiplier x="1" y="1" z="1" __type="Vec3" />
+        <afterburnerAngCapacitorScalingCurve useLUT="1" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.3942605" y="0.2420407" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1.19397" y="1.105421" __type="Vec2" />
+          </points>
+        </afterburnerAngCapacitorScalingCurve>
       </afterburner>
       <thrusterTypesForAngularControl>
         <Bool value="1" />
@@ -166,9 +176,9 @@
         </points>
       </precisionAccelCurve>
       <positiveLinearScale x="1" y="1" z="1" __type="Vec3" />
-      <negativeLinearScale x="1" y="1.12499" z="0.75" __type="Vec3" />
-      <positiveAngularScale x="0.25" y="0.08" z="0.45" __type="Vec3" />
-      <negativeAngularScale x="0.25" y="0.08" z="0.45" __type="Vec3" />
+      <negativeLinearScale x="1" y="1" z="0.715" __type="Vec3" />
+      <positiveAngularScale x="0.27" y="0.082" z="0.45" __type="Vec3" />
+      <negativeAngularScale x="0.27" y="0.082" z="0.45" __type="Vec3" />
       <aeroParams peakTorqueScaleSpeed="300" controlTorqueForSpeedCurveMax="480" forwardBackThrustMultiplier="0.4" zeroGLiftMultiplier="0.2" zeroGDragMultiplier="2" zeroGTorqueMultiplier="0.05" maxAtmosphereDensity="1" pitchAnimationVariable="pitchDeflection" yawAnimationVariable="yawDeflection" rollAnimationVariable="rollDeflection" __type="AeroParams">
         <controlTorque x="250" y="180" z="200" __type="Vec3" />
         <dampingTorque x="300" y="80" z="250" __type="Vec3" />
@@ -199,7 +209,9 @@
     <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
     <SEntityComponentAnnunciatorParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentAnnunciatorParams" />
     <GravlevParams __type="DataForgeComponentParams" __polymorphicType="GravlevParams">
-      <hoverPlane width="1.4" length="6" heightOffset="-0.5" testHeight="20" __type="HoverPlane" />
+      <hoverPlane width="1.4" length="6" __type="HoverPlane">
+        <offset x="0" y="0" z="-0.8" __type="Vec3" />
+      </hoverPlane>
       <springs undampedFrequency="2" dampingRatio="1" forceBlendOutDelay="5" forceBlendInRate="0.5" forceBlendOutRate="0.8" bumpStop="0.95" __type="SuspensionSprings">
         <compressionForceCurve useLUT="0" __type="BezierCurve">
           <points>
@@ -212,32 +224,35 @@
           </points>
         </compressionForceCurve>
       </springs>
-      <height desiredHoverHeight="3" maxStrafeOffset="3" minStrafeOffset="-2" maxHoverHeight="1" speedAtMaxHoverHeight="85" __type="HoverHeight" />
-      <tilting strafeBankFactor="0.35" forwardBackTiltFactor="0.17" turnBankFactor="3.1" __type="HoverTilting">
+      <height desiredHoverHeight="3" hoverHeightOffsetAcceleration="3.75" hoverHeightOffsetMaxSpeed="7" maxExtraHoverHeight="2" __type="HoverHeight">
+        <hoverHeightOffsetRange minimum="-2" maximum="3" __type="Range" />
+        <speedRangeForExtraHeight minimum="70" maximum="140" __type="Range" />
+      </height>
+      <tilting strafeBankFactor="0.35" forwardBackTiltFactor="0.14" turnBankFactor="2" __type="HoverTilting">
         <bankPerSpeedCurve useLUT="0" __type="BezierCurve">
           <points>
             <Vec2 x="-0.2590362" y="0.3021277" __type="Vec2" />
             <Vec2 x="0" y="0.3" __type="Vec2" />
             <Vec2 x="0.2590362" y="0.2978723" __type="Vec2" />
-            <Vec2 x="0.2891566" y="0.7297872" __type="Vec2" />
-            <Vec2 x="0.3373494" y="1.006383" __type="Vec2" />
-            <Vec2 x="0.3855422" y="1.282979" __type="Vec2" />
+            <Vec2 x="0.9536681" y="0.7194458" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1.050054" y="1.272638" __type="Vec2" />
           </points>
         </bankPerSpeedCurve>
       </tilting>
       <collisions antiSpinThreshold="400" linearCollisionDamp="0.1" angularCollisionDamp="5" __type="HoverCollisions" />
-      <handling turnFriction="80" selfRightingAccelBoost="2" hoverMaxSpeed="195" airControlMultiplier="0.7" antiFallMultiplier="5" heightChangeSpeed="1.5" lateralStrafeMultiplier="1" __type="HoverHandling">
+      <handling turnFriction="55" selfRightingAccelBoost="2" hoverMaxSpeed="195" airControlMultiplier="0.7" antiFallMultiplier="5" lateralStrafeMultiplier="2" __type="HoverHandling">
         <maxSpeedMultiplierByHeight useLUT="0" __type="BezierCurve">
           <points>
-            <Vec2 x="-0.389" y="1.056" __type="Vec2" />
+            <Vec2 x="-0.1251099" y="1.066625" __type="Vec2" />
             <Vec2 x="0" y="1" __type="Vec2" />
-            <Vec2 x="0.05" y="0.85" __type="Vec2" />
-            <Vec2 x="0.1" y="0.7" __type="Vec2" />
-            <Vec2 x="0.2" y="0.55" __type="Vec2" />
-            <Vec2 x="0.5" y="0.44" __type="Vec2" />
-            <Vec2 x="1" y="0.32" __type="Vec2" />
-            <Vec2 x="1" y="0.32" __type="Vec2" />
-            <Vec2 x="1.25" y="0.3" __type="Vec2" />
+            <Vec2 x="0.1251099" y="0.933375" __type="Vec2" />
+            <Vec2 x="0.06798659" y="0.8984531" __type="Vec2" />
+            <Vec2 x="0.2" y="0.72" __type="Vec2" />
+            <Vec2 x="0.3320134" y="0.5415469" __type="Vec2" />
+            <Vec2 x="0.6348258" y="0.4700781" __type="Vec2" />
+            <Vec2 x="1" y="0.39" __type="Vec2" />
+            <Vec2 x="1.365174" y="0.3099219" __type="Vec2" />
           </points>
         </maxSpeedMultiplierByHeight>
         <turnFrictionMultiplierByHeight useLUT="0" __type="BezierCurve">

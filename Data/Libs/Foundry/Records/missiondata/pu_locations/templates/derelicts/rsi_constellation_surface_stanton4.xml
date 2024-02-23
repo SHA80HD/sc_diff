@@ -29,6 +29,101 @@
         <missionInputs />
         <properties />
       </SMissionLocationModule>
+      <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/LocationDefence/ShipLocationDefence.xml" __type="SMissionLocationModule">
+        <missionInputs />
+        <properties>
+          <MissionProperty missionVariableName="WaveSpawnDescriptions_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_ShipSpawnDescriptions __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_ShipSpawnDescriptions">
+                <spawnDescriptions>
+                  <SpawnDescription_ShipGroup Name="Location Defence" __type="SpawnDescription_ShipGroup">
+                    <embeddedName>
+                    </embeddedName>
+                    <ships>
+                      <SpawnDescription_ShipOptions __type="SpawnDescription_ShipOptions">
+                        <options>
+                          <SpawnDescription_Ship concurrentAmount="3" includeLocationAISpawnTags="0" nameProperty="null" weight="1" initialDamageSettings="00000000-0000-0000-0000-000000000000" __type="SpawnDescription_Ship">
+                            <tags __type="TagList">
+                              <tags>
+                                <Reference value="dfe438a4-43d9-44c9-9780-b18b4e1d0521" />
+                                <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+                                <Reference value="f9e10d57-6c91-4228-8d40-a9d56b7483c6" />
+                              </tags>
+                            </tags>
+                            <negativeTags __type="TagList">
+                              <tags />
+                            </negativeTags>
+                            <markupTags __type="TagList">
+                              <tags />
+                            </markupTags>
+                            <entityTags __type="TagList">
+                              <tags />
+                            </entityTags>
+                          </SpawnDescription_Ship>
+                        </options>
+                      </SpawnDescription_ShipOptions>
+                      <SpawnDescription_ShipOptions __type="SpawnDescription_ShipOptions">
+                        <options>
+                          <SpawnDescription_Ship concurrentAmount="1" includeLocationAISpawnTags="0" nameProperty="null" weight="1" initialDamageSettings="00000000-0000-0000-0000-000000000000" __type="SpawnDescription_Ship">
+                            <tags __type="TagList">
+                              <tags>
+                                <Reference value="896817b1-aa6c-4dfd-b193-a6039c1c8a26" />
+                                <Reference value="ecfb92fe-5d2d-4fef-aa8f-2f09fcf42b6f" />
+                                <Reference value="f9e10d57-6c91-4228-8d40-a9d56b7483c6" />
+                              </tags>
+                            </tags>
+                            <negativeTags __type="TagList">
+                              <tags />
+                            </negativeTags>
+                            <markupTags __type="TagList">
+                              <tags />
+                            </markupTags>
+                            <entityTags __type="TagList">
+                              <tags />
+                            </entityTags>
+                          </SpawnDescription_Ship>
+                        </options>
+                      </SpawnDescription_ShipOptions>
+                    </ships>
+                  </SpawnDescription_ShipGroup>
+                </spawnDescriptions>
+              </MissionPropertyValue_ShipSpawnDescriptions>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="SpawnWaveOnStream_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Boolean value="1" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Boolean" />
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="ContinuousWaves_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Boolean value="0" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Boolean" />
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="TimeBetweenWave_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Float __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Float">
+                <options>
+                  <MissionPropertyValueOption_Float textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="240" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Float">
+                    <dependentProperties />
+                  </MissionPropertyValueOption_Float>
+                </options>
+              </MissionPropertyValue_Float>
+            </value>
+          </MissionProperty>
+          <MissionProperty missionVariableName="MaxShips_BP" extendedTextToken="" __type="MissionProperty">
+            <value>
+              <MissionPropertyValue_Integer __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Integer">
+                <options>
+                  <MissionPropertyValueOption_Integer textId="@LOC_UNINITIALIZED" weighting="1" DEBUG_forceChooseThisOption="0" value="5" variation="0" __type="BaseMissionPropertyValueOption" __polymorphicType="MissionPropertyValueOption_Integer">
+                    <dependentProperties />
+                  </MissionPropertyValueOption_Integer>
+                </options>
+              </MissionPropertyValue_Integer>
+            </value>
+          </MissionProperty>
+        </properties>
+      </SMissionLocationModule>
       <SMissionLocationModule missionModule="Libs/Subsumption/Missions/PU/PU_MissionModules/LocationManager/Delivery/DeliveryItemPort_Manager.xml" __type="SMissionLocationModule">
         <missionInputs />
         <properties />
@@ -100,6 +195,14 @@
         </dependentChildTags>
       </LocationMissionLimit>
       <LocationMissionLimit tag="6804b0a9-b01d-4c9a-8063-67784bd0f021" cooldown="60" autoConsumeIfPlayerAtLocation="0" playerAtLocationCooldown="60" maxMissionInstances="1" __type="LocationMissionLimit">
+        <dependentParentTags __type="TagList">
+          <tags />
+        </dependentParentTags>
+        <dependentChildTags __type="TagList">
+          <tags />
+        </dependentChildTags>
+      </LocationMissionLimit>
+      <LocationMissionLimit tag="ba11ceb7-24ba-4d72-96be-99efdf5fb01d" cooldown="180" autoConsumeIfPlayerAtLocation="1" playerAtLocationCooldown="180" maxMissionInstances="2" __type="LocationMissionLimit">
         <dependentParentTags __type="TagList">
           <tags />
         </dependentParentTags>

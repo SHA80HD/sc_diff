@@ -21,8 +21,8 @@
       <entityAttachParams>
       </entityAttachParams>
     </SAttachableComponentParams>
-    <SCItemSeatDashboardParams canTogglePowerForObservedItems="0" PowerOnline="1" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatDashboardParams">
-      <dashboardInteractions flightReady="Interactable.SharedInteractions[0]" powerOn="null" powerOff="null" saveQuitInteraction="null" atcOpenDoorsInteraction="null" atcCloseDoorsInteraction="null" ejectCargo="null" hasSimpleStartupSequence="1" __type="SDashboardInteractionParams" />
+    <SCItemSeatDashboardParams canTogglePowerForObservedItems="1" PowerOnline="1" __type="DataForgeComponentParams" __polymorphicType="SCItemSeatDashboardParams">
+      <dashboardInteractions flightReady="Interactable.SharedInteractions" powerOn="null" powerOff="null" saveQuitInteraction="null" atcOpenDoorsInteraction="null" atcCloseDoorsInteraction="null" ejectCargo="null" hasSimpleStartupSequence="1" __type="SDashboardInteractionParams" />
       <seatInteractions closeIP="null" openIP="null" exitIP="null" ejectionIP="null" cycleHUDIP="null" __type="SDashboardSeatInteractionParams" />
       <powerInteractions powerIP="Interactable.InteractionPoints[1]" __type="SDashboardPowerInteractionParams" />
       <engineInteractions engineIP="Interactable.InteractionPoints[2]" __type="SDashboardEngineInteractionParams" />
@@ -96,25 +96,22 @@
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
-          <SSharedInteractionParams Name="PowerOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
-            <QueryTags />
-            <conditionList>
-            </conditionList>
-            <playerAnimatedInteractionBase>
-            </playerAnimatedInteractionBase>
-          </SSharedInteractionParams>
-          <SSharedInteractionParams Name="EngineOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
-            <QueryTags />
-            <conditionList>
-            </conditionList>
-            <playerAnimatedInteractionBase>
-            </playerAnimatedInteractionBase>
-          </SSharedInteractionParams>
         </SharedInteractions>
         <InteractionPoints>
-          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="0" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Flight_Ready" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="0.2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
+          <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Flight_Ready" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="0.2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
             <Tags />
-            <HighlightBehaviors />
+            <HighlightBehaviors>
+              <SHighlightBehaviorNode __type="SHighlightBehaviorNode">
+                <HighlightBehaviorNodeParams>
+                  <SBonesHighlightNode __type="SHighlightBehaviorNodeParams" __polymorphicType="SBonesHighlightNode">
+                    <boneNames>
+                      <String value="touchscreen_glass" />
+                    </boneNames>
+                  </SBonesHighlightNode>
+                </HighlightBehaviorNodeParams>
+                <nextNodes />
+              </SHighlightBehaviorNode>
+            </HighlightBehaviors>
             <AdditionalCollisionBones />
             <Offset __type="QuatT">
               <Rotation x="0" y="0" z="0" __type="Ang3" />
@@ -132,7 +129,7 @@
             <PlayerAnimatedInteractionParams>
             </PlayerAnimatedInteractionParams>
             <Interactions>
-              <SInteractionParams Interaction="Interactable.SharedInteractions[0]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="Interactable.SharedInteractions" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
           <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="1" ApplyToEntireSkeleton="0" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="$IP_Power" TextJustification="Middle" TextOrientation="FixedRotation" TextScale="0.2" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="1.6" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="0" ShowInteractionTextAtCursorPos="0" __type="SInteractionPointParams">
@@ -392,7 +389,7 @@
       <DeathGasComposition />
       <InteractionLocks />
     </SHealthComponentParams>
-    <SDistortionParams DecayDelay="1.5" DecayRate="50" Maximum="1500" WarningRatio="0.75" RecoveryRatio="0.7" PowerRatioAtMaxDistortion="0" PowerChangeOnlyAtMaxDistortion="0" __type="DataForgeComponentParams" __polymorphicType="SDistortionParams" />
+    <SDistortionParams DecayDelay="0" DecayRate="200" Maximum="2000" WarningRatio="0.75" RecoveryRatio="0" PowerRatioAtMaxDistortion="0" PowerChangeOnlyAtMaxDistortion="0" __type="DataForgeComponentParams" __polymorphicType="SDistortionParams" />
     <SEntityComponentEffects __type="DataForgeComponentParams" __polymorphicType="SEntityComponentEffects">
       <entityEffects __type="SEntitityEffectSystem_SystemBase" __polymorphicType="SEntitityEffectSystem_System">
         <particleEffects>
@@ -434,7 +431,7 @@
       <triggersToEnableOnLoad />
     </SEntityComponentEffects>
     <EMPoolParams overrideEmValue="0" __type="DataForgeComponentParams" __polymorphicType="EMPoolParams" />
-    <UIAudioComponentEntityComponentParams UIAudioDef="c9925b17-edf1-421e-9669-6f8d86948e3f" useEntityClass="00000000-0000-0000-0000-000000000000" dialogueContext="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIAudioComponentEntityComponentParams">
+    <UIAudioComponentEntityComponentParams UIAudioDef="c208e190-742b-42b7-90c6-a303a87f094f" useEntityClass="00000000-0000-0000-0000-000000000000" dialogueContext="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="UIAudioComponentEntityComponentParams">
       <offset>
       </offset>
       <videoAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
@@ -443,7 +440,26 @@
     </UIAudioComponentEntityComponentParams>
     <SCItemUIViewOwnerParams element="00000000-0000-0000-0000-000000000000" loadDistance="100" dashboardCanvasConfig="ffd1c0af-0288-4121-8dcd-ef6a464a6055" __type="DataForgeComponentParams" __polymorphicType="SCItemUIViewOwnerParams" />
     <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
-      <TraversingNodes />
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="Weapon Controller" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeUserControl listenedForItemComponent="d6a35dff-52be-47a0-9adc-344c3efa726a" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeUserControl" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+        <SEntityTraversingNodeBase name="Light Controller" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeUserControl listenedForItemComponent="5b803369-07d1-470f-996a-9372ca50e617" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeUserControl" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes />
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
       <TraversingTargets />
     </SEntityTraversingTreeParams>
     <SInteractionStateMachineParams __type="DataForgeComponentParams" __polymorphicType="SInteractionStateMachineParams">
@@ -598,7 +614,7 @@
             </SInteractionState>
           </States>
           <StateModifiers>
-            <PowerConnectionStateModifier off="null" normal="null" warning="null" failed="null" __type="SStateModifier" __polymorphicType="PowerConnectionStateModifier">
+            <PowerConnectionStateModifier off="StateTypes[2].SInteractionStateType.States[1]" normal="StateTypes[2].SInteractionStateType.States[1]" warning="null" failed="null" __type="SStateModifier" __polymorphicType="PowerConnectionStateModifier">
               <context>
                 <AttachableStateModifierContext_Self __type="AttachableStateModifierContextBase" __polymorphicType="AttachableStateModifierContext_Self" />
               </context>
@@ -607,30 +623,6 @@
         </SInteractionStateType>
         <SInteractionStateType StateTypeName="BUTTON_FlightControllerPower_Switch" bindingsMethod="None" DefaultState="null" asopReset="0" networkAuthority="Server" __type="SInteractionStateType">
           <States>
-            <SInteractionState StateName="FlightControllerPowerOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
-              <enterStateEffectTags>
-                <Reference value="ed6e03c8-d7e7-47ae-9fee-dd6ea6491c51" />
-              </enterStateEffectTags>
-              <exitStateEffectTags />
-              <EnterEventDispatchers>
-                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[2]" value="-1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
-                  <overrideInterpolation>
-                  </overrideInterpolation>
-                </AnimationSetVariable>
-              </EnterEventDispatchers>
-              <StateAutoChange>
-              </StateAutoChange>
-              <Interactions />
-              <interactionPoints />
-              <stateTags __type="TagList">
-                <tags>
-                  <Reference value="cb3e12cd-1013-4780-819a-949cbf7d0268" />
-                </tags>
-              </stateTags>
-              <entityTags __type="TagList">
-                <tags />
-              </entityTags>
-            </SInteractionState>
             <SInteractionState StateName="FlightControllerPowerOn" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
               <enterStateEffectTags>
                 <Reference value="a85cba47-a1da-4cee-ae56-d08c8b997165" />
@@ -655,11 +647,35 @@
                 <tags />
               </entityTags>
             </SInteractionState>
+            <SInteractionState StateName="FlightControllerPowerOff" EnterStateEffectGroup="" ExitStateEffectGroup="" EnterStatePlaySequence="null" ExitStatePlaySequence="null" enterGeometryTags="" __type="SInteractionState">
+              <enterStateEffectTags>
+                <Reference value="ed6e03c8-d7e7-47ae-9fee-dd6ea6491c51" />
+              </enterStateEffectTags>
+              <exitStateEffectTags />
+              <EnterEventDispatchers>
+                <AnimationSetVariable variable="AnimationJointControls.AnimationJointControl.variables[2]" value="-1" __type="EventDispatcher" __polymorphicType="AnimationSetVariable">
+                  <overrideInterpolation>
+                  </overrideInterpolation>
+                </AnimationSetVariable>
+              </EnterEventDispatchers>
+              <StateAutoChange>
+              </StateAutoChange>
+              <Interactions />
+              <interactionPoints />
+              <stateTags __type="TagList">
+                <tags>
+                  <Reference value="cb3e12cd-1013-4780-819a-949cbf7d0268" />
+                </tags>
+              </stateTags>
+              <entityTags __type="TagList">
+                <tags />
+              </entityTags>
+            </SInteractionState>
           </States>
           <StateModifiers>
             <FlightControllerStateModifier __type="SStateModifier" __polymorphicType="FlightControllerStateModifier">
               <engineStates>
-                <FlightControllerEnableStates enabled="StateTypes[3].SInteractionStateType.States[1]" disabled="StateTypes[3].SInteractionStateType.States[0]" __type="FlightControllerEnableStates" />
+                <FlightControllerEnableStates enabled="StateTypes[3].SInteractionStateType.States[0]" disabled="StateTypes[3].SInteractionStateType.States[1]" __type="FlightControllerEnableStates" />
               </engineStates>
               <coupledModeStates>
               </coupledModeStates>
@@ -763,15 +779,5 @@
     <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
     <UIBindingsVendorEntityComponentParams namespace="" __type="DataForgeComponentParams" __polymorphicType="UIBindingsVendorEntityComponentParams" />
     <UIBindingsConsumerEntityComponentParams linkToPort="0" __type="DataForgeComponentParams" __polymorphicType="UIBindingsConsumerEntityComponentParams" />
-    <SEntityComponentDefaultLoadoutParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentDefaultLoadoutParams">
-      <loadout>
-        <SItemPortLoadoutManualParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutManualParams">
-          <WearRange>
-          </WearRange>
-          <InventoryItems />
-          <entries />
-        </SItemPortLoadoutManualParams>
-      </loadout>
-    </SEntityComponentDefaultLoadoutParams>
   </Components>
 </EntityClassDefinition.ORIG_X1_SCItem_Dashboard_Pilot>

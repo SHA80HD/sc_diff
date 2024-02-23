@@ -1,0 +1,273 @@
+<EntityClassDefinition.Controller_Flight_ORIG_X1_Velocity Category="Default" Icon="Default.bmp" Invisible="0" BBoxSelection="0" entityDensityClass="00000000-0000-0000-0000-000000000000" __type="EntityClassDefinition" __ref="fe4016c4-d716-4c52-9618-3755c5d7f1c6" __path="libs/foundry/records/entities/scitem/ships/controller/controller_flight_orig_x1_velocity.xml">
+  <tags />
+  <StaticEntityClassData />
+  <Components>
+    <SAttachableComponentParams attachToTileItemPort="NoConnection" __type="DataForgeComponentParams" __polymorphicType="SAttachableComponentParams">
+      <AttachDef Type="FlightController" SubType="UNDEFINED" Size="1" Grade="1" Manufacturer="1e47a9ec-a3f0-431d-be0e-377712e1ed84" inheritParentManufacturer="0" Tags="" RequiredTags="" DisplayType="" ignoredAttachAxis="None" __type="SItemDefinition">
+        <Localization Name="@item_Name_FLGT_Controller" ShortName="@LOC_EMPTY" Description="@LOC_EMPTY" __type="SCItemLocalization">
+          <displayFeatures LogoSimplifiedWhite="" FrontendBackground="" History="@LOC_EMPTY" Callout1="@LOC_EMPTY" Callout2="@LOC_EMPTY" Callout3="@LOC_EMPTY" UIPriority="0" __type="SCExtendedLocalizationLevelParams">
+            <locationAudioPlayTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+            <locationAudioStopTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+          </displayFeatures>
+        </Localization>
+        <mannequinTags mannequinClassTag="" mannequinTypeTag="" mannequinBaseTag="" __type="SCItemMannequinTags" />
+        <inventoryOccupancyVolume>
+          <SMicroCargoUnit microSCU="1" __type="SBaseCargoUnit" __polymorphicType="SMicroCargoUnit" />
+        </inventoryOccupancyVolume>
+        <inventoryOccupancyDimensions x="0.15" y="0.15" z="0.15" __type="Vec3" />
+        <inventoryOccupancyDimensionsUIOverride>
+        </inventoryOccupancyDimensionsUIOverride>
+      </AttachDef>
+      <entityAttachParams>
+      </entityAttachParams>
+    </SAttachableComponentParams>
+    <SCItemFlightControllerParams engineOnInteraction="Interactable.SharedInteractions[0]" engineOffInteraction="Interactable.SharedInteractions[1]" enableCoupledModeInteraction="Interactable.SharedInteractions[3]" disableCoupledModeInteraction="Interactable.SharedInteractions[2]" enableGSafetyInteraction="Interactable.SharedInteractions[4]" disableGSafetyInteraction="Interactable.SharedInteractions[5]" enableESPInteraction="Interactable.SharedInteractions[6]" disableESPInteraction="Interactable.SharedInteractions[7]" enableCruiseControlInteraction="Interactable.SharedInteractions[8]" disableCruiseControlInteraction="Interactable.SharedInteractions[9]" enableVTOLInteraction="Interactable.SharedInteractions[10]" disableVTOLInteraction="Interactable.SharedInteractions[11]" enableProximityAssistInteraction="Interactable.SharedInteractions[12]" disableProximityAssistInteraction="Interactable.SharedInteractions[13]" deployTransformInteraction="null" retractTransformInteraction="null" cycleTransformInteraction="null" fuelWarningDisplayTime="8" passiveRefuelWarningThresholdPercentage="80" hoverAnimPlaybackDuration="2" hoverAnimPlayInLandingMode="0" PowerOnEffectTag="b0ebfa1f-c6b8-479f-bb34-6f797a0f4a2b" PowerOffEffectTag="20a3e66c-4ee0-4e3e-9181-4d6ecfeb6619" hudParamsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="SCItemFlightControllerParams">
+      <ShipRecall>
+        <ShipRecallParams HoverHeightAtDestination="30" ForwardOffset="20" ObstructionDetectionRange="1.2" DefaultPlatformDetectionRange="50" MinimumRecallDistance="400" BrakingDistanceOffset="30" AIModuleTag="e7d2667c-96c9-4e3d-9f8b-533c982ba5a7" __type="ShipRecallParams" />
+      </ShipRecall>
+    </SCItemFlightControllerParams>
+    <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
+      <Interactable __type="SInteractableParams">
+        <SharedInteractions>
+          <SSharedInteractionParams Name="EngineOn" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_engine_on" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EngineOff" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_engine_off" DisplayType="Show" GenericCursor="Button" FocusModeOnly="0" Sendable="0" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableDecoupled" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@PIT_Decoupled" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableDecoupled" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_Decoupled_Enable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableGSafe" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_GSafe_Enable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableGSafe" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_GSafe_Disable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableESP" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_ESP_Enable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableESP" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_ESP_Disable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableCruise" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_CruiseControl_Enable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableCruise" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@vehicle_interactor_CruiseControl_Disable" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableVTOL" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_CIToggleVTOL" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableVTOL" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@ui_interactor_IFCS_flight_mode_TEMP" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="EnableProximityAssist" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@pause_OptionsFlightProximityAssist" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+          <SSharedInteractionParams Name="DisableProximityAssist" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@dfm_ui_PlanetProximityWarning" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="1" Linkable="1" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
+        </SharedInteractions>
+        <InteractionPoints />
+        <interactionTasks />
+        <actionHandlerTasks />
+        <itemActionTasks />
+        <menuTitle>
+        </menuTitle>
+      </Interactable>
+    </SEntityInteractableParams>
+    <SInteractionLinkParams __type="DataForgeComponentParams" __polymorphicType="SInteractionLinkParams">
+      <vehicleItemPortInteractionLinks />
+      <linkPlugs />
+    </SInteractionLinkParams>
+    <IFCSParams scmSpeed="80" boostSpeedForward="290" boostSpeedBackward="230" maxSpeed="585" pitchYawLimiterType="NormalizedUniform" linearLimiterType="NormalizedUniform" torqueDistanceThreshold="0.2" torqueImbalanceMultiplier="1" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1" precisionMinDistance="5" precisionMaxDistance="90" precisionLandingMultiplier="1" linearAccelDecay="3" angularAccelDecay="7" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="367b3a16-0a17-46f9-8476-4418ea21f929" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
+      <maxAngularVelocity x="89" y="141" z="89" __type="Vec3" />
+      <afterburner usePerDirectionModifiers="0" afterburnerAngCapacitorScaling="0" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0.15" afterburnerRampUpTime="0" afterburnerRampDownTime="0" afterburnerCapacitorThresholdRatio="0.25" capacitorMax="1300" capacitorAfterburnerIdleCost="20" capacitorAfterburnerLinearCost="1" capacitorAfterburnerAngularCost="0.2" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="70" capacitorAssignmentInputOutputRegen="c9c06f4a-542f-4d08-8d9a-377bc14d5313" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="cfd100b7-0353-4d81-a943-db23dc3ff573" __type="AfterburnerParams">
+        <afterburnAccelMultiplier x="2" y="2" z="2" __type="Vec3" />
+        <afterburnAccelMultiplierPositive x="2" y="2" z="2" __type="Vec3" />
+        <afterburnAccelMultiplierNegative x="2" y="2" z="2" __type="Vec3" />
+        <afterburnAngAccelMultiplier x="1" y="1" z="1" __type="Vec3" />
+        <afterburnAngVelocityMultiplier x="1" y="1" z="1" __type="Vec3" />
+        <afterburnerAngCapacitorScalingCurve useLUT="1" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.3942605" y="0.2420407" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1.19397" y="1.105421" __type="Vec2" />
+          </points>
+        </afterburnerAngCapacitorScalingCurve>
+      </afterburner>
+      <thrusterTypesForAngularControl>
+        <Bool value="1" />
+        <Bool value="0" />
+        <Bool value="0" />
+      </thrusterTypesForAngularControl>
+      <aeroSurfaces />
+      <precisionAccelCurve useLUT="0" __type="BezierCurve">
+        <points>
+          <Vec2 x="-0.05751223" y="0.1107046" __type="Vec2" />
+          <Vec2 x="0" y="1" __type="Vec2" />
+          <Vec2 x="0.3" y="1" __type="Vec2" />
+          <Vec2 x="0.7" y="1" __type="Vec2" />
+          <Vec2 x="1" y="1" __type="Vec2" />
+          <Vec2 x="1.644598" y="1.281043" __type="Vec2" />
+        </points>
+      </precisionAccelCurve>
+      <positiveLinearScale x="1" y="1" z="1.33" __type="Vec3" />
+      <negativeLinearScale x="1" y="1" z="1.33" __type="Vec3" />
+      <positiveAngularScale x="0.086" y="0.144" z="0.132" __type="Vec3" />
+      <negativeAngularScale x="0.074" y="0.144" z="0.132" __type="Vec3" />
+      <aeroParams peakTorqueScaleSpeed="300" controlTorqueForSpeedCurveMax="480" forwardBackThrustMultiplier="0.4" zeroGLiftMultiplier="0.2" zeroGDragMultiplier="2" zeroGTorqueMultiplier="0.05" maxAtmosphereDensity="1" pitchAnimationVariable="pitchDeflection" yawAnimationVariable="yawDeflection" rollAnimationVariable="rollDeflection" __type="AeroParams">
+        <controlTorque x="250" y="180" z="200" __type="Vec3" />
+        <dampingTorque x="300" y="80" z="250" __type="Vec3" />
+        <stabilityTorque x="200" y="0" z="700" __type="Vec3" />
+        <liftCurve multiplier="3000" flatPlateSurface="0" liftLevelFlight="0" peakLift="1.1" minLift="0.6" negativeAoAMultiplier="1" flatPlateMultiplier="1" criticalAngle="16" fullyStalledAngle="20" __type="AerodynamicCurveParams" />
+        <sideLiftCurve multiplier="400" flatPlateSurface="0" liftLevelFlight="0" peakLift="1.1" minLift="0.6" negativeAoAMultiplier="1" flatPlateMultiplier="1" criticalAngle="16" fullyStalledAngle="20" __type="AerodynamicCurveParams" />
+        <controlTorqueForSpeedCurve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.3505789" y="0.9997675" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.3505789" y="1.000232" __type="Vec2" />
+            <Vec2 x="0.4900929" y="0.9969474" __type="Vec2" />
+            <Vec2 x="0.7133152" y="1.000232" __type="Vec2" />
+            <Vec2 x="0.9365376" y="1.003518" __type="Vec2" />
+            <Vec2 x="0.970641" y="0.5633262" __type="Vec2" />
+            <Vec2 x="1" y="0.1" __type="Vec2" />
+            <Vec2 x="1.029359" y="-0.3633262" __type="Vec2" />
+          </points>
+        </controlTorqueForSpeedCurve>
+        <drag multiplier="30" dragForwardLevelFlight="0.025" dragMaximum="1" dragReverseFlight="0.025" __type="DragCurveParams" />
+        <angularThrustAtmosphericMultiplier x="1" y="1" z="1" __type="Vec3" />
+        <angularVelocityAtmosphericMultiplier x="1" y="1" z="1" __type="Vec3" />
+      </aeroParams>
+    </IFCSParams>
+    <ItemControlComponentParams turnedOnByDefault="0" __type="DataForgeComponentParams" __polymorphicType="ItemControlComponentParams">
+      <throttleParams />
+    </ItemControlComponentParams>
+    <ItemControllerComponentParams operatorModeDefinitionsOverride="00000000-0000-0000-0000-000000000000" __type="DataForgeComponentParams" __polymorphicType="ItemControllerComponentParams" />
+    <GravlevParams __type="DataForgeComponentParams" __polymorphicType="GravlevParams">
+      <hoverPlane width="2.2" length="5.4" __type="HoverPlane">
+        <offset x="0" y="0" z="-1" __type="Vec3" />
+      </hoverPlane>
+      <springs undampedFrequency="2.75" dampingRatio="1" forceBlendOutDelay="5" forceBlendInRate="0.25" forceBlendOutRate="0.5" bumpStop="0.95" __type="SuspensionSprings">
+        <compressionForceCurve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.6704308" y="-0.03800933" __type="Vec2" />
+            <Vec2 x="0.00903231" y="0.003793744" __type="Vec2" />
+            <Vec2 x="0.6884954" y="0.04559682" __type="Vec2" />
+            <Vec2 x="0.6325138" y="1.149913" __type="Vec2" />
+            <Vec2 x="0.964" y="1.551" __type="Vec2" />
+            <Vec2 x="1.368047" y="1.984934" __type="Vec2" />
+          </points>
+        </compressionForceCurve>
+      </springs>
+      <height desiredHoverHeight="3" hoverHeightOffsetAcceleration="3.75" hoverHeightOffsetMaxSpeed="7" maxExtraHoverHeight="2.5" __type="HoverHeight">
+        <hoverHeightOffsetRange minimum="-2" maximum="3" __type="Range" />
+        <speedRangeForExtraHeight minimum="60" maximum="135" __type="Range" />
+      </height>
+      <tilting strafeBankFactor="0.32" forwardBackTiltFactor="0.06" turnBankFactor="3" __type="HoverTilting">
+        <bankPerSpeedCurve useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.2590362" y="0.3021277" __type="Vec2" />
+            <Vec2 x="0" y="0.3" __type="Vec2" />
+            <Vec2 x="0.2590362" y="0.2978723" __type="Vec2" />
+            <Vec2 x="0.3111442" y="0.887547" __type="Vec2" />
+            <Vec2 x="0.5677069" y="1" __type="Vec2" />
+            <Vec2 x="0.8242695" y="1.112453" __type="Vec2" />
+          </points>
+        </bankPerSpeedCurve>
+      </tilting>
+      <collisions antiSpinThreshold="400" linearCollisionDamp="0.1" angularCollisionDamp="5" __type="HoverCollisions" />
+      <handling turnFriction="80" selfRightingAccelBoost="2" hoverMaxSpeed="216" airControlMultiplier="0.7" antiFallMultiplier="5" lateralStrafeMultiplier="3" __type="HoverHandling">
+        <maxSpeedMultiplierByHeight useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.2203334" y="1.010778" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.2203334" y="0.9892219" __type="Vec2" />
+            <Vec2 x="0.4736927" y="0.597369" __type="Vec2" />
+            <Vec2 x="0.6" y="0.52" __type="Vec2" />
+            <Vec2 x="0.7263073" y="0.442631" __type="Vec2" />
+            <Vec2 x="0.8267145" y="0.3883892" __type="Vec2" />
+            <Vec2 x="1" y="0.37" __type="Vec2" />
+            <Vec2 x="1.173285" y="0.3516108" __type="Vec2" />
+          </points>
+        </maxSpeedMultiplierByHeight>
+        <turnFrictionMultiplierByHeight useLUT="0" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.2951807" y="1.104255" __type="Vec2" />
+            <Vec2 x="0" y="1" __type="Vec2" />
+            <Vec2 x="0.2951807" y="0.8957447" __type="Vec2" />
+            <Vec2 x="0.6053846" y="0.6482735" __type="Vec2" />
+            <Vec2 x="1" y="0.65" __type="Vec2" />
+            <Vec2 x="1.394615" y="0.6517265" __type="Vec2" />
+          </points>
+        </turnFrictionMultiplierByHeight>
+      </handling>
+      <hoverHeightRtpc rtpc="" __type="AudioRtpc" />
+      <hoverHeightDifferentialRtpc rtpc="" __type="AudioRtpc" />
+    </GravlevParams>
+    <SEntityComponentAnnunciatorParams __type="DataForgeComponentParams" __polymorphicType="SEntityComponentAnnunciatorParams" />
+  </Components>
+</EntityClassDefinition.Controller_Flight_ORIG_X1_Velocity>

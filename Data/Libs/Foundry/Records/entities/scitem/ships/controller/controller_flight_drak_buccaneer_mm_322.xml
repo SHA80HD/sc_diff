@@ -140,14 +140,24 @@
       <vehicleItemPortInteractionLinks />
       <linkPlugs />
     </SInteractionLinkParams>
-    <IFCSParams scmSpeed="240" boostSpeedForward="600" boostSpeedBackward="260" maxSpeed="1400" attitudeLimiterEnabled="1" linearLimiterType="NormalizedUniformWithMaxRadius" torqueDistanceThreshold="-1" torqueImbalanceMultiplier="0.15" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1.2" precisionMinDistance="5" precisionMaxDistance="70" precisionLandingMultiplier="0.7" linearAccelDecay="3" angularAccelDecay="10.25" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
+    <IFCSParams scmSpeed="240" boostSpeedForward="600" boostSpeedBackward="260" maxSpeed="1400" pitchYawLimiterType="Ellipsoid" linearLimiterType="NormalizedUniformWithMaxRadius" torqueDistanceThreshold="-1" torqueImbalanceMultiplier="0.15" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="1.2" precisionMinDistance="5" precisionMaxDistance="70" precisionLandingMultiplier="0.7" linearAccelDecay="3" angularAccelDecay="10.25" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
       <maxAngularVelocity x="50" y="160" z="42" __type="Vec3" />
-      <afterburner usePerDirectionModifiers="1" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0" afterburnerRampUpTime="0.6" afterburnerRampDownTime="0.4" afterburnerCapacitorThresholdRatio="0.1" capacitorMax="33" capacitorAfterburnerIdleCost="1" capacitorAfterburnerLinearCost="0" capacitorAfterburnerAngularCost="0" capacitorRegenDelayAfterUse="2.5" capacitorRegenPerSec="0.5" capacitorAssignmentInputOutputRegen="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="6bb5a702-af02-4b5e-b308-5c89d2268379" __type="AfterburnerParams">
+      <afterburner usePerDirectionModifiers="1" afterburnerAngCapacitorScaling="1" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0" afterburnerRampUpTime="0.6" afterburnerRampDownTime="0.3" afterburnerCapacitorThresholdRatio="0.1" capacitorMax="25" capacitorAfterburnerIdleCost="1" capacitorAfterburnerLinearCost="0" capacitorAfterburnerAngularCost="0" capacitorRegenDelayAfterUse="0.75" capacitorRegenPerSec="0.75" capacitorAssignmentInputOutputRegen="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputRegenNavMode="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputUsage="6bb5a702-af02-4b5e-b308-5c89d2268379" __type="AfterburnerParams">
         <afterburnAccelMultiplier x="1.8" y="1.8" z="1.8" __type="Vec3" />
         <afterburnAccelMultiplierPositive x="1.35" y="1.7" z="1.35" __type="Vec3" />
         <afterburnAccelMultiplierNegative x="1.35" y="1.3" z="1.35" __type="Vec3" />
-        <afterburnAngAccelMultiplier x="1.1" y="1.1" z="1.1" __type="Vec3" />
+        <afterburnAngAccelMultiplier x="1.2" y="1.2" z="1.2" __type="Vec3" />
         <afterburnAngVelocityMultiplier x="1.2" y="1.2" z="1.2" __type="Vec3" />
+        <afterburnerAngCapacitorScalingCurve useLUT="1" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.3942605" y="0.2420407" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1.19397" y="1.105421" __type="Vec2" />
+          </points>
+        </afterburnerAngCapacitorScalingCurve>
       </afterburner>
       <thrusterTypesForAngularControl>
         <Bool value="1" />

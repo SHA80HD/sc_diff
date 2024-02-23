@@ -331,7 +331,6 @@
                       <PriorityGroup itemType="Radar" />
                       <PriorityGroup itemType="SelfDestruct" />
                       <PriorityGroup itemType="Avionics" />
-                      <PriorityGroup itemType="SeatDashboard" />
                       <PriorityGroup itemType="Display" />
                       <PriorityGroup itemType="Seat" defaultPriority="no_control">
                         <tags tag="pilotSeat">
@@ -343,7 +342,11 @@
                   </UserDef>
                   <UsableDef>
                     <PriorityGroups>
-                      <PriorityGroup itemType="SeatDashboard" defaultPriority="exclusive_control" />
+                      <PriorityGroup itemType="SeatDashboard" defaultPriority="no_control">
+                        <tags tag="pilotDashboard">
+                          <Priority value="exclusive_control" />
+                        </tags>
+                      </PriorityGroup>
                       <PriorityGroup itemType="Seat" defaultPriority="no_control">
                         <tags tag="pilotSeat">
                           <Priority value="exclusive_control" />
@@ -697,7 +700,7 @@
               </Parts>
             </Part>
             <Part name="hardpoint_dashboard" class="ItemPort">
-              <ItemPort minsize="1" maxsize="1" flags="uneditable">
+              <ItemPort minSize="1" maxSize="4" flags="">
                 <Types>
                   <Type type="SeatDashboard" />
                 </Types>
@@ -705,7 +708,7 @@
                   <Connection pipeClass="Power" pipe="MainPower" />
                   <Connection pipeClass="Heat" pipe="MainHeat" />
                 </Connections>
-                <ControllerDef controllableTags="pilotSeat">
+                <ControllerDef controllableTags="pilotDashboard">
                   <UsableDef>
                     <PriorityGroups>
                       <PriorityGroup itemType="Display" />

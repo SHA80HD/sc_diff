@@ -140,14 +140,24 @@
       <vehicleItemPortInteractionLinks />
       <linkPlugs />
     </SInteractionLinkParams>
-    <IFCSParams scmSpeed="210" boostSpeedForward="420" boostSpeedBackward="220" maxSpeed="1200" attitudeLimiterEnabled="1" linearLimiterType="NormalizedUniformWithMaxRadius" torqueDistanceThreshold="2" torqueImbalanceMultiplier="1" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="0.9" precisionMinDistance="5" precisionMaxDistance="70" precisionLandingMultiplier="0.7" linearAccelDecay="1.25" angularAccelDecay="8.5" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
-      <maxAngularVelocity x="43" y="120" z="38" __type="Vec3" />
-      <afterburner usePerDirectionModifiers="1" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0" afterburnerRampUpTime="1" afterburnerRampDownTime="0.5" afterburnerCapacitorThresholdRatio="0.1" capacitorMax="25" capacitorAfterburnerIdleCost="1" capacitorAfterburnerLinearCost="0" capacitorAfterburnerAngularCost="0" capacitorRegenDelayAfterUse="2" capacitorRegenPerSec="0.5" capacitorAssignmentInputOutputRegen="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputRegenNavMode="35a73c92-bcb9-42f0-9521-8ae7a4874c20" capacitorAssignmentInputOutputUsage="6bb5a702-af02-4b5e-b308-5c89d2268379" __type="AfterburnerParams">
+    <IFCSParams scmSpeed="210" boostSpeedForward="450" boostSpeedBackward="220" maxSpeed="1100" pitchYawLimiterType="Ellipsoid" linearLimiterType="NormalizedUniformWithMaxRadius" torqueDistanceThreshold="2" torqueImbalanceMultiplier="1" refreshCachesOnLandingMode="0" liftMultiplier="7" dragMultiplier="5" turbulenceAmplitude="10" groundTurbulenceAmplitude="0.9" precisionMinDistance="5" precisionMaxDistance="70" precisionLandingMultiplier="0.7" linearAccelDecay="3" angularAccelDecay="9" scmMaxDragMultiplier="4" thrusterImbalanceMessage="@dfm_ui_UnexpectedTorqueImbalance" intoxicationModifierRef="802adf13-525f-4365-934a-a7b28153b664" __type="DataForgeComponentParams" __polymorphicType="IFCSParams">
+      <maxAngularVelocity x="38" y="120" z="32" __type="Vec3" />
+      <afterburner usePerDirectionModifiers="1" afterburnerAngCapacitorScaling="1" afterburnAccelMultiplierControlSurface="2" afterburnerPreDelayTime="0" afterburnerRampUpTime="0.7" afterburnerRampDownTime="0.35" afterburnerCapacitorThresholdRatio="0.1" capacitorMax="20" capacitorAfterburnerIdleCost="1" capacitorAfterburnerLinearCost="0" capacitorAfterburnerAngularCost="0" capacitorRegenDelayAfterUse="1" capacitorRegenPerSec="0.75" capacitorAssignmentInputOutputRegen="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputRegenNavMode="f381647d-1e21-4dd2-b63b-567f012deeda" capacitorAssignmentInputOutputUsage="822703ac-f458-433e-af38-352232852175" __type="AfterburnerParams">
         <afterburnAccelMultiplier x="1.8" y="1.8" z="1.8" __type="Vec3" />
         <afterburnAccelMultiplierPositive x="1.35" y="1.5" z="1.3" __type="Vec3" />
         <afterburnAccelMultiplierNegative x="1.35" y="1.428" z="1.375" __type="Vec3" />
         <afterburnAngAccelMultiplier x="1.2" y="1.2" z="1.2" __type="Vec3" />
-        <afterburnAngVelocityMultiplier x="1.3" y="1.3" z="1.3" __type="Vec3" />
+        <afterburnAngVelocityMultiplier x="1.2" y="1.2" z="1.2" __type="Vec3" />
+        <afterburnerAngCapacitorScalingCurve useLUT="1" __type="BezierCurve">
+          <points>
+            <Vec2 x="-0.3942605" y="0.2420407" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="0" y="0.5" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1" y="1" __type="Vec2" />
+            <Vec2 x="1.19397" y="1.105421" __type="Vec2" />
+          </points>
+        </afterburnerAngCapacitorScalingCurve>
       </afterburner>
       <thrusterTypesForAngularControl>
         <Bool value="1" />
@@ -199,7 +209,7 @@
         </AeroSurface>
         <AeroSurface name="drag" flatPlateSurface="1" liftLevelFlight="0" peakLift="1.1" minLift="0.6" negativeAoAMultiplier="1" flatPlateMultiplier="1" criticalAngle="16" fullyStalledAngle="20" detachParentPartName="" transformParentPartName="" __type="AeroSurface">
           <offset x="0" y="1.1" z="0" __type="Vec3" />
-          <size x="9" y="5" __type="Vec2" />
+          <size x="12" y="10" __type="Vec2" />
           <orientation x="90" y="0" z="0" __type="Vec3" />
           <torqueMultiplier x="1" y="1" z="1" __type="Vec3" />
         </AeroSurface>

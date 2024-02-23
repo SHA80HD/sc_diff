@@ -9,6 +9,7 @@
     <Reference value="47b62b0f-e75b-4f8c-aadd-3326dce01228" />
     <Reference value="3625097f-099c-4052-a38f-2ceb8a01d17b" />
     <Reference value="003c9fbf-0b12-4b01-9850-468d2cdd1a75" />
+    <Reference value="c08564a2-68d2-4eb1-903b-e3c3ecf12ac1" />
     <Reference value="19c456c3-073c-4f21-b68c-112fa323aec8" />
     <Reference value="fd711fe0-ddc3-41dc-a1c4-5c6a37126071" />
   </tags>
@@ -32,7 +33,9 @@
         <SItemPortLoadoutOutfitParams __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutOutfitParams">
           <WearRange>
           </WearRange>
-          <InventoryItems />
+          <InventoryItems>
+            <SLoadoutInventoryItem entityClassName="" entityClassReference="7d50411f-088c-4c99-b85a-a6eaf95504c3" amount="1" __type="SLoadoutInventoryItem" />
+          </InventoryItems>
           <BaseLoadout>
             <SItemPortLoadoutXMLParams loadoutPath="scripts/loadouts/Character/Human/Body/NPC/Civilian/body_22.xml" __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutXMLParams">
               <WearRange>
@@ -49,7 +52,12 @@
                   </WearRange>
                   <InventoryItems />
                 </SItemPortLoadoutXMLParams>
-                <SItemPortLoadoutXMLParams loadoutPath="scripts/loadouts/character/human/weapon/behrrifleballistic01.xml" __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutXMLParams">
+                <SItemPortLoadoutXMLParams loadoutPath="Scripts/Loadouts/Character/Human/Weapon/BehrLmgBallistic01_Mags.xml" __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutXMLParams">
+                  <WearRange>
+                  </WearRange>
+                  <InventoryItems />
+                </SItemPortLoadoutXMLParams>
+                <SItemPortLoadoutXMLParams loadoutPath="Scripts/Loadouts/Character/Human/Utility/medpack_01.xml" __type="SItemPortLoadoutBaseParams" __polymorphicType="SItemPortLoadoutXMLParams">
                   <WearRange>
                   </WearRange>
                   <InventoryItems />
@@ -64,7 +72,7 @@
       <ModelTag>
       </ModelTag>
       <Geometry Tags="" ScaleMultiplier="1" __type="SGeometryNodeParams">
-        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="1" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0.5" Dirt="0.5" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
+        <Geometry Slot="Main" MaterialAttachments="" ProxyCDFPath="" ModifiersPath="" AttachFlags="0" DeformerType="Standard" ProtosBShapeExclude="0" VisTP="1" VisFP="1" VisShadow="1" VisSecondaryViews="1" WrinkleMap="1" EnableDecalProjection="0" BBoxJoint="" BBoxRadius="0" Wear="0.3" Dirt="0.3" Interference="0" Damage="0" RenderLayer="Default" VisAreaMode="AABB_Center" SunShadowMode="Upto_400m" viewDistRatio="00000000-0000-0000-0000-000000000000" LodRatio="100" __type="SGeometryDataParams">
           <Geometry path="objects/characters/human/male_v7/export/bhm_skeleton_v7.chr" __type="GlobalResourceBase" __polymorphicType="GlobalResourceGeometry" />
           <Material path="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceMaterial" />
           <SimulationGeometry>
@@ -199,7 +207,9 @@
           <relativePositionOffset x="0" y="0" z="0" __type="Vec3" />
         </SObservablePointDef>
       </observablePoints>
-      <observableExtensions />
+      <observableExtensions>
+        <ActorObservableExtender __type="IObservableExtender" __polymorphicType="ActorObservableExtender" />
+      </observableExtensions>
     </SObservableComponentParams>
     <SCommunicationUserComponentParams voiceBundle="81ab2739-a6d1-4e7f-82c2-42c5b9d637c9" voiceSingle="00000000-0000-0000-0000-000000000000" communicationConfig="00000000-0000-0000-0000-000000000000" contextualDialog="" __type="DataForgeComponentParams" __polymorphicType="SCommunicationUserComponentParams" />
     <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
@@ -338,6 +348,13 @@
             <playerAnimatedInteractionBase>
             </playerAnimatedInteractionBase>
           </SSharedInteractionParams>
+          <SSharedInteractionParams Name="" RoomTag="00000000-0000-0000-0000-000000000000" UsableTag="00000000-0000-0000-0000-000000000000" LinkingTag="00000000-0000-0000-0000-000000000000" DisplayName="@usable_use" DisplayType="Show" GenericCursor="SingleAction" FocusModeOnly="0" Sendable="0" Linkable="0" LockedByLinks="0" RequiresAuthorizedUser="0" available="1" InheritsConditionDisplaysThroughLinks="0" __type="SSharedInteractionParams">
+            <QueryTags />
+            <conditionList>
+            </conditionList>
+            <playerAnimatedInteractionBase>
+            </playerAnimatedInteractionBase>
+          </SSharedInteractionParams>
         </SharedInteractions>
         <InteractionPoints>
           <SInteractionPointParams FirstInteractionPrimary="1" UseHelperLocation="1" ShowHighlight="0" ApplyToEntireSkeleton="1" longRangeIP="0" HighlightOnRayHitEntity="0" HelperName="Spine3" TextJustification="Middle" TextOrientation="RotateToPlayer" TextScale="1" InteractionPromptScale="1" InteractionPromptLabelVerticalOffset="70" InteractionPromptBound="EntityRoot" Radius="2.4" UseHorizontalDistance="0" MaxCursorScreenDistance="2" ShowInnerThoughtsOffScreen="0" OnlySelectableInLookDir="1" ShowInteractionTextAtCursorPos="1" __type="SInteractionPointParams">
@@ -369,6 +386,7 @@
               <SInteractionParams Interaction="Interactable.SharedInteractions[12]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[14]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
               <SInteractionParams Interaction="Interactable.SharedInteractions[15]" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
+              <SInteractionParams Interaction="null" DisplayName="@LOC_EMPTY" IsPrimary="0" __type="SInteractionParams" />
             </Interactions>
           </SInteractionPointParams>
         </InteractionPoints>
@@ -975,6 +993,7 @@
                 <WeakPointer linkInteractions="Interactable.SharedInteractions[14]" />
                 <WeakPointer linkInteractions="Interactable.SharedInteractions[12]" />
                 <WeakPointer linkInteractions="Interactable.SharedInteractions[15]" />
+                <WeakPointer linkInteractions="0" />
               </linkInteractions>
             </STaggedInverseInteractionLinkExecuteCreateInteractionLinkNode>
           </executeNodes>
@@ -1031,7 +1050,7 @@
       </usableGroupCoordinatorData>
     </SubsumptionDataComponentParams>
     <SubsumptionAssignmentComponentParams __type="DataForgeComponentParams" __polymorphicType="SubsumptionAssignmentComponentParams" />
-    <SAISkillsComponentParams skills="067224d6-3d6d-40b1-85a9-43b5479b5f9b" profile="b42c7300-2787-4e4d-97de-521bd78d4f6c" __type="DataForgeComponentParams" __polymorphicType="SAISkillsComponentParams" />
+    <SAISkillsComponentParams skills="ecfa9b88-26c0-436e-b686-b9cfe1c083f3" profile="b42c7300-2787-4e4d-97de-521bd78d4f6c" __type="DataForgeComponentParams" __polymorphicType="SAISkillsComponentParams" />
     <SCoverSystemComponentParams distanceToCover="0.5" agentRadius="0.5" inCoverRadius="0.1" effectiveCoverHeight="1.1" effectiveHighCoverHeight="2" postureData="1ade7aa5-be4c-40a7-b011-4009ab6f33a2" __type="DataForgeComponentParams" __polymorphicType="SCoverSystemComponentParams" />
     <SVisionComponentParams visualFieldProfile="8beaf529-8eec-4ed3-83da-28cd7b02bacf" filterProfile="e8b699d3-7319-4f85-94a4-f42b6e092465" __type="DataForgeComponentParams" __polymorphicType="SVisionComponentParams" />
     <SRadarSenseComponentParams __type="DataForgeComponentParams" __polymorphicType="SRadarSenseComponentParams" />

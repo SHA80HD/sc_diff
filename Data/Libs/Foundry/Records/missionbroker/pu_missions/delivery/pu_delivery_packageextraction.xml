@@ -1,4 +1,5 @@
-<MissionBrokerEntry.PU_Delivery_PackageExtraction notForRelease="1" owner="300dcbf0-d201-465b-a7be-af7e15a0a512" missionModule="Libs/Subsumption/Missions/PU/Missions/Deliveries/PackageExtraction.xml" title="@LOC_UNINITIALIZED" titleHUD="@LOC_UNINITIALIZED" description="@LOC_UNINITIALIZED" missionGiver="@Crusader_from" commsChannelName="@LOC_UNINITIALIZED" type="8abbd704-6207-4ca4-9cd4-d9f0362cec64" localityAvailable="00000000-0000-0000-0000-000000000000" locationMissionAvailable="567f92d7-d34c-42fa-b57b-f1939d4c5f5b" notifyOnAvailable="0" showAsOffer="0" missionBuyInAmount="0" refundBuyInOnWithdraw="0" hasCompleteButton="0" handlesAbandonRequest="0" missionModulePerPlayer="0" maxInstances="1" maxPlayersPerInstance="-1" maxInstancesPerPlayer="-1" canBeShared="1" onceOnly="0" tutorial="0" displayAlliedMarkers="0" availableInPrison="0" failIfSentToPrison="1" failIfBecameCriminal="1" failIfLeavePrison="0" requestOnly="0" respawnTime="5" respawnTimeVariation="2" instanceHasLifeTime="1" showLifeTimeInMobiGlas="1" instanceLifeTime="5" instanceLifeTimeVariation="2" canReacceptAfterAbandoning="0" abandonedCooldownTime="1" abandonedCooldownTimeVariation="1" canReacceptAfterFailing="0" hasPersonalCooldown="0" personalCooldownTime="1" personalCooldownTimeVariation="1" moduleHandlesOwnShutdown="0" linkedMission="00000000-0000-0000-0000-000000000000" lawfulMission="1" missionGiverRecord="00000000-0000-0000-0000-000000000000" invitationMission="00000000-0000-0000-0000-000000000000" missionGiverFragmentTags="" __type="MissionBrokerEntry" __ref="f61442a2-0ca2-465b-981c-9770abdbb28c" __path="libs/foundry/records/missionbroker/pu_missions/delivery/pu_delivery_packageextraction.xml">
+<MissionBrokerEntry.PU_Delivery_PackageExtraction notForRelease="1" owner="300dcbf0-d201-465b-a7be-af7e15a0a512" missionModule="Libs/Subsumption/Missions/PU/Missions/Deliveries/PackageExtraction.xml" title="@LOC_UNINITIALIZED" titleHUD="@LOC_UNINITIALIZED" description="@LOC_UNINITIALIZED" missionGiver="@Crusader_from" commsChannelName="@LOC_UNINITIALIZED" type="8abbd704-6207-4ca4-9cd4-d9f0362cec64" localityAvailable="00000000-0000-0000-0000-000000000000" locationMissionAvailable="567f92d7-d34c-42fa-b57b-f1939d4c5f5b" initiallyActive="1" notifyOnAvailable="0" showAsOffer="0" missionBuyInAmount="0" refundBuyInOnWithdraw="0" hasCompleteButton="0" handlesAbandonRequest="0" missionModulePerPlayer="0" maxInstances="1" maxPlayersPerInstance="-1" maxInstancesPerPlayer="-1" canBeShared="1" onceOnly="0" tutorial="0" displayAlliedMarkers="0" availableInPrison="0" failIfSentToPrison="1" failIfBecameCriminal="1" failIfLeavePrison="0" requestOnly="0" respawnTime="5" respawnTimeVariation="2" instanceHasLifeTime="1" showLifeTimeInMobiGlas="1" instanceLifeTime="5" instanceLifeTimeVariation="2" canReacceptAfterAbandoning="0" abandonedCooldownTime="1" abandonedCooldownTimeVariation="1" canReacceptAfterFailing="0" hasPersonalCooldown="0" personalCooldownTime="1" personalCooldownTimeVariation="1" moduleHandlesOwnShutdown="0" linkedMission="00000000-0000-0000-0000-000000000000" lawfulMission="1" missionGiverRecord="00000000-0000-0000-0000-000000000000" invitationMission="00000000-0000-0000-0000-000000000000" missionGiverFragmentTags="" __type="MissionBrokerEntry" __ref="f61442a2-0ca2-465b-981c-9770abdbb28c" __path="libs/foundry/records/missionbroker/pu_missions/delivery/pu_delivery_packageextraction.xml">
+  <associatedMissions />
   <availableDateSchedule />
   <missionReward reward="0" max="0" plusBonuses="1" currencyType="UEC" reputationBonus="14d6becd-fe1a-4896-a9a6-7ed6f2977d76" __type="MissionReward" />
   <missionResultReputationRewards>
@@ -27,6 +28,8 @@
   <completionTags __type="TagList">
     <tags />
   </completionTags>
+  <missionCompletePerk>
+  </missionCompletePerk>
   <modifiers>
     <MissionModifier_SecurityClearance clearanceToken="f7e743e0-bde2-45cd-8ec4-fd1a4694f5ae" locationProperty="" __type="BaseMissionModifier" __polymorphicType="MissionModifier_SecurityClearance" />
     <MissionModifier_SecurityClearance clearanceToken="7e49d2fa-2cb8-455d-b440-b9287c228c2a" locationProperty="null" __type="BaseMissionModifier" __polymorphicType="MissionModifier_SecurityClearance" />
@@ -54,7 +57,7 @@
   <properties>
     <MissionProperty missionVariableName="MissionLocation_BP" extendedTextToken="PickUpLocation" __type="MissionProperty">
       <value>
-        <MissionPropertyValue_Location minLocationsToFind="1" maxLocationsToFind="1" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
+        <MissionPropertyValue_Location minLocationsToFind="1" maxLocationsToFind="1" resourcePriority="Contract" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
           <matchConditions>
             <DataSetMatchCondition_TagSearch tagType="General" __type="BaseDataSetMatchCondition" __polymorphicType="DataSetMatchCondition_TagSearch">
               <tagSearch>
@@ -79,7 +82,7 @@
     </MissionProperty>
     <MissionProperty missionVariableName="DropOffLocation_BP" extendedTextToken="DropOffLocation" __type="MissionProperty">
       <value>
-        <MissionPropertyValue_Location minLocationsToFind="1" maxLocationsToFind="1" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
+        <MissionPropertyValue_Location minLocationsToFind="1" maxLocationsToFind="1" resourcePriority="Contract" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
           <matchConditions>
             <DataSetMatchCondition_TagSearch tagType="General" __type="BaseDataSetMatchCondition" __polymorphicType="DataSetMatchCondition_TagSearch">
               <tagSearch>
@@ -909,7 +912,7 @@
     </MissionProperty>
     <MissionProperty missionVariableName="MissionLocationIslandClearance" extendedTextToken="" __type="MissionProperty">
       <value>
-        <MissionPropertyValue_Location minLocationsToFind="4" maxLocationsToFind="4" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
+        <MissionPropertyValue_Location minLocationsToFind="4" maxLocationsToFind="4" resourcePriority="Contract" __type="BaseMissionPropertyValue" __polymorphicType="MissionPropertyValue_Location">
           <matchConditions>
             <DataSetMatchCondition_TagSearch tagType="General" __type="BaseDataSetMatchCondition" __polymorphicType="DataSetMatchCondition_TagSearch">
               <tagSearch>

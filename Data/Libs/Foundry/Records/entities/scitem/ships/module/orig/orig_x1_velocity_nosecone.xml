@@ -175,11 +175,27 @@
             </SInteractionState>
           </States>
           <StateModifiers>
-            <PowerConnectionStateModifier off="StateTypes.SInteractionStateType.States[0]" normal="StateTypes.SInteractionStateType.States[1]" warning="StateTypes.SInteractionStateType.States[1]" failed="StateTypes.SInteractionStateType.States[0]" __type="SStateModifier" __polymorphicType="PowerConnectionStateModifier">
+            <SLinkedInteractionStateChangedStateModifier nullEntityState="null" __type="SStateModifier" __polymorphicType="SLinkedInteractionStateChangedStateModifier">
               <context>
-                <AttachableStateModifierContext_Sibling itemType="PowerPlant" __type="AttachableStateModifierContextBase" __polymorphicType="AttachableStateModifierContext_Sibling" />
+                <SEntityTraversalTargetPathContext targetPath="TraversingTargets" __type="SEntityContextBase" __polymorphicType="SEntityTraversalTargetPathContext" />
               </context>
-            </PowerConnectionStateModifier>
+              <onChangeStateTagStates>
+                <SLinkedInteractionStateTags state="StateTypes.SInteractionStateType.States[0]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="1d093119-511b-4417-8ff0-81ba0386fd38" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+                <SLinkedInteractionStateTags state="StateTypes.SInteractionStateType.States[1]" __type="SLinkedInteractionStateTags">
+                  <stateTags __type="TagList">
+                    <tags>
+                      <Reference value="db58d3f6-0a41-408b-9b67-1938fa4b4491" />
+                    </tags>
+                  </stateTags>
+                </SLinkedInteractionStateTags>
+              </onChangeStateTagStates>
+            </SLinkedInteractionStateChangedStateModifier>
           </StateModifiers>
         </SInteractionStateType>
       </StateTypes>
@@ -195,5 +211,35 @@
       <InternalResourceLinks />
       <InternalHardpointLinks />
     </SItemPortContainerComponentParams>
+    <SEntityTraversingTreeParams __type="DataForgeComponentParams" __polymorphicType="SEntityTraversingTreeParams">
+      <TraversingNodes>
+        <SEntityTraversingNodeBase name="ORIG_X1" __type="SEntityTraversingNodeBase">
+          <id>
+          </id>
+          <entityTraversingType>
+            <SEntityTraversingNodeTypeParentEntity __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeParentEntity" />
+          </entityTraversingType>
+          <executeNodes />
+          <nextNodes>
+            <SEntityTraversingNodeBase name="Dashboard" __type="SEntityTraversingNodeBase">
+              <id>
+              </id>
+              <entityTraversingType>
+                <SEntityTraversingNodeTypeItemPort itemPortName="hardpoint_dashboard" __type="SEntityTraversingNodeTypeParams" __polymorphicType="SEntityTraversingNodeTypeItemPort" />
+              </entityTraversingType>
+              <executeNodes />
+              <nextNodes />
+            </SEntityTraversingNodeBase>
+          </nextNodes>
+        </SEntityTraversingNodeBase>
+      </TraversingNodes>
+      <TraversingTargets>
+        <SEntityTraversingTarget name="Dashboard" __type="SEntityTraversingTarget">
+          <paths>
+            <SEntityTraversingTargetPath node="TraversingNodes.SEntityTraversingNodeBase.nextNodes" __type="SEntityTraversingTargetPath" />
+          </paths>
+        </SEntityTraversingTarget>
+      </TraversingTargets>
+    </SEntityTraversingTreeParams>
   </Components>
 </EntityClassDefinition.ORIG_X1_Velocity_NoseCone>

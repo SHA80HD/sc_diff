@@ -203,7 +203,9 @@
           <relativePositionOffset x="0" y="0" z="0" __type="Vec3" />
         </SObservablePointDef>
       </observablePoints>
-      <observableExtensions />
+      <observableExtensions>
+        <ActorObservableExtender __type="IObservableExtender" __polymorphicType="ActorObservableExtender" />
+      </observableExtensions>
     </SObservableComponentParams>
     <SCommunicationUserComponentParams voiceBundle="00000000-0000-0000-0000-000000000000" voiceSingle="00000000-0000-0000-0000-000000000000" communicationConfig="00000000-0000-0000-0000-000000000000" contextualDialog="" __type="DataForgeComponentParams" __polymorphicType="SCommunicationUserComponentParams" />
     <SEntityInteractableParams __type="DataForgeComponentParams" __polymorphicType="SEntityInteractableParams">
@@ -1458,7 +1460,8 @@
         <SEAActionItemMessageDef messagePriority="1" message="@dfm_ui_Time_To_Respawn_msg" __type="SEAActionItemMessageDef" />
         <SEAActionItemMessageDef messagePriority="1" message="@LOC_EMPTY" __type="SEAActionItemMessageDef" />
         <SEAActionItemMessageDef messagePriority="3" message="@ea_ui_PressKEYWhenReady" __type="SEAActionItemMessageDef" />
-        <SEAActionItemMessageDef messagePriority="4" message="@ea_ui_StatePlayersNotReady" __type="SEAActionItemMessageDef" />
+        <SEAActionItemMessageDef messagePriority="4" message="@ea_ui_PressKEYWhenReady_ForceReady" __type="SEAActionItemMessageDef" />
+        <SEAActionItemMessageDef messagePriority="5" message="@ea_ui_StatePlayersNotReady" __type="SEAActionItemMessageDef" />
       </Messages>
     </SEAActionItemMessageParams>
     <EAScoringActorComponentParamsDef __type="DataForgeComponentParams" __polymorphicType="EAScoringActorComponentParamsDef">
@@ -1669,11 +1672,11 @@
             <Enum value="EA_Control" />
           </validGameModes>
           <stats>
-            <SScoreboardStat name="@ui_Score" statType="TotalScore" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ea_ui_objectivestatus_Captured" statType="ObjectivePoints" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Kills" statType="Kills" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Deaths" statType="Deaths" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" isGreaterValueBetter="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Score" statType="TotalScore" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ea_ui_objectivestatus_Captured" statType="ObjectivePoints" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Kills" statType="Kills" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Deaths" statType="Deaths" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
           </stats>
         </SScoreboard>
         <SScoreboard debugName="Racing" __type="SScoreboard">
@@ -1683,10 +1686,11 @@
             <Enum value="EA_ExperimentalMode_9" />
           </validGameModes>
           <stats>
-            <SScoreboardStat name="@ui_Laps" statType="CompletedLaps" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_leaderboards_FastestLap" statType="FastestLapTime" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Score" statType="TotalScore" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_leaderboards_Deaths" statType="Deaths" isGreaterValueBetter="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@dfm_ac_ui_MessageInvalid" statType="RacePosition" greaterValueBetter="0" visible="0" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Laps" statType="CompletedLaps" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_leaderboards_FastestLap" statType="FastestLapTime" greaterValueBetter="0" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Score" statType="TotalScore" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_leaderboards_Deaths" statType="Deaths" greaterValueBetter="0" visible="1" __type="SScoreboardStat" />
           </stats>
         </SScoreboard>
         <SScoreboard debugName="Standard Deathmatch" __type="SScoreboard">
@@ -1713,10 +1717,10 @@
             <Enum value="EA_ExperimentalMode_12" />
           </validGameModes>
           <stats>
-            <SScoreboardStat name="@ui_Score" statType="TotalScore" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Kills" statType="Kills" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Deaths" statType="Deaths" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" isGreaterValueBetter="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Score" statType="TotalScore" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Kills" statType="Kills" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Deaths" statType="Deaths" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
           </stats>
         </SScoreboard>
         <SScoreboard debugName="GunGame" __type="SScoreboard">
@@ -1724,11 +1728,11 @@
             <Enum value="EA_FPSGunGame" />
           </validGameModes>
           <stats>
-            <SScoreboardStat name="@ui_label_level" statType="GunGameLevel" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Score" statType="TotalScore" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Kills" statType="Kills" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@ui_Deaths" statType="Deaths" isGreaterValueBetter="1" __type="SScoreboardStat" />
-            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" isGreaterValueBetter="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_label_level" statType="GunGameLevel" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Score" statType="TotalScore" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Kills" statType="Kills" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@ui_Deaths" statType="Deaths" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
+            <SScoreboardStat name="@dfm_ui_KillAssist" statType="Assists" greaterValueBetter="1" visible="1" __type="SScoreboardStat" />
           </stats>
         </SScoreboard>
       </scoreboards>
