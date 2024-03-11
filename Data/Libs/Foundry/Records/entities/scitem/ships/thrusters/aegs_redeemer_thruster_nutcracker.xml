@@ -473,6 +473,28 @@
             </AudioRtpcWithBehaviour>
           </RTPCs>
         </ThrusterOutputToRtpcList>
+        <ThrusterOutputToRtpcList thrusterOutput="FireStrengthSmoothed" calculateOnlyOnPlayerVehicle="0" __type="ThrusterOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Usage" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Usage_Slow_Lerp" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Temperature_Faked" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.0055" releaseSlew="0.008" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </ThrusterOutputToRtpcList>
       </thrustersOutputsToRtpcs>
       <thrusterDegradationRtpc rtpc="Thruster_DegradationLevel" __type="AudioRtpc" />
       <offsetRotation x="0" y="0" z="0" __type="Ang3" />

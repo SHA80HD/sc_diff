@@ -222,9 +222,9 @@
       <triggersToEnableOnLoad />
     </SEntityComponentEffects>
     <ThrusterAudioComponentParams spoolTime="7" avoidSpoolOneshotsOnLowRankShips="1" avoidAfterburnerOneShotsOnLowRankShips="1" thrusterFireStartedThreshold="0.5" avoidThrusterFireOneShotsOnLowRankShips="1" avoidMisfireOneShotsOnLowRankShips="1" isMultiposition="0" boneName="" updateLocalPosition="0" vibrationModifier="1.35" __type="DataForgeComponentParams" __polymorphicType="ThrusterAudioComponentParams">
-      <manufacturerAudioSwitch switch="" __type="AudioSwitch" />
-      <sizeAudioSwitch switch="" __type="AudioSwitch" />
-      <classAudioSwitch switch="" __type="AudioSwitch" />
+      <manufacturerAudioSwitch switch="SW_Spaceship_Manufacturer:ANVL" __type="AudioSwitch" />
+      <sizeAudioSwitch switch="SW_Thrusters_Size:Small" __type="AudioSwitch" />
+      <classAudioSwitch switch="SW_Thrusters_Class:MIL" __type="AudioSwitch" />
       <masterModeSpoolingStartedAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <masterModeSpoolingFinishedAudioTrigger audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <properties audioSize="1" techLevel="1" civilianLow="0" civilianMed="0" civilianHigh="0" industrial="0" military="0" racing="0" stealth="0" groupTag="06709d15-2909-4d88-8f8b-c71643524188" __type="AudioThrusterProperties">
@@ -235,25 +235,25 @@
       <spoolUpStarted audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <spoolUpCompleted audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <spoolDownStarted audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-      <spoolDownCompleted audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <spoolDownCompleted audioTrigger="Play_SSTS_ANVL_Hornet_Mk2_MAV_Turn_On" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastOneshotAtSpoolBegin rtpc="" __type="AudioRtpc" />
       <timeSinceLastOneshotAtSpoolEnd rtpc="" __type="AudioRtpc" />
       <spoolRTPC rtpc="Thruster_Spool_State" __type="AudioRtpc" />
-      <thrusterLoopStart audioTrigger="Play_SSTM_Generic_Shared_Mav_Thruster_02_Run" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-      <thrusterLoopStop audioTrigger="Stop_SSTM_Generic_Shared_Mav_Thruster_02_Run" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-      <afterburnerEnabledOneShot audioTrigger="Play_SSTM_Generic_Shared_Mav_Thruster_02_Afterburn_OneShot_Start" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <thrusterLoopStart audioTrigger="Play_SSTB_ANVL_Hornet_Mk2_MAV_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <thrusterLoopStop audioTrigger="Play_SSTB_ANVL_Hornet_Mk2_MAV_Off_LP" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <afterburnerEnabledOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastAfterburnerEnabledRtpc rtpc="Thruster_Time_Since_Last_Afterburner_Start" __type="AudioRtpc" />
-      <afterburnerDisabledOneShot audioTrigger="Play_SSTM_Generic_Shared_Mav_Thruster_02_Afterburn_OneShot_End" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <afterburnerDisabledOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastAfterburnerDisabledRtpc rtpc="Thruster_Time_Since_Last_Afterburner_End" __type="AudioRtpc" />
       <thrusterOnOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastThrusterOnRtpc rtpc="Thruster_Time_Since_Last_ThrusterOneshot_Start" __type="AudioRtpc" />
       <thrusterOffOneShot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastThrusterOffRtpc rtpc="Thruster_Time_Since_Last_ThrusterOneshot_End" __type="AudioRtpc" />
-      <misfireLoopStart audioTrigger="Play_SSMF_TP_Small_Generic_Shared_Misfire_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-      <misfireLoopStop audioTrigger="Stop_SSMF_TP_Small_Generic_Shared_Misfire_Loop" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
-      <misfireOnOneshot audioTrigger="Play_SSMF_TP_Small_Generic_Shared_Misfire_OneShot_Start" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <misfireLoopStart audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <misfireLoopStop audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <misfireOnOneshot audioTrigger="Play_SSTS_ANVL_Hornet_Mk2_MAV_Generic_Misfire" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastMisfireOnRtpc rtpc="" __type="AudioRtpc" />
-      <misfireOffOneshot audioTrigger="Play_SSMF_TP_Small_Generic_Shared_Misfire_OneShot_End" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
+      <misfireOffOneshot audioTrigger="" __type="GlobalResourceBase" __polymorphicType="GlobalResourceAudio" />
       <timeSinceLastMisfireOffRtpc rtpc="" __type="AudioRtpc" />
       <thrustersOutputsToRtpcs>
         <ThrusterOutputToRtpcList thrusterOutput="FireStrength" calculateOnlyOnPlayerVehicle="0" __type="ThrusterOutputToRtpcList">
@@ -406,6 +406,28 @@
               <rtpc rtpc="Thruster_PowerRatio" __type="AudioRtpc" />
               <behavior>
                 <SSmoothingWithLerp lerpingFactor="0.1" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingWithLerp" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+          </RTPCs>
+        </ThrusterOutputToRtpcList>
+        <ThrusterOutputToRtpcList thrusterOutput="FireStrengthSmoothed" calculateOnlyOnPlayerVehicle="0" __type="ThrusterOutputToRtpcList">
+          <RTPCs>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Usage" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Usage_Slow_Lerp" __type="AudioRtpc" />
+              <behavior>
+                <SRtpcBehaviour __type="SRtpcBehaviour" />
+              </behavior>
+            </AudioRtpcWithBehaviour>
+            <AudioRtpcWithBehaviour __type="AudioRtpcWithBehaviour">
+              <rtpc rtpc="GP_Thrusters_Temperature_Faked" __type="AudioRtpc" />
+              <behavior>
+                <SSmoothingTimeBased attackSlew="0.0055" releaseSlew="0.008" clampedBelow="0.001" __type="SRtpcBehaviour" __polymorphicType="SSmoothingTimeBased" />
               </behavior>
             </AudioRtpcWithBehaviour>
           </RTPCs>
